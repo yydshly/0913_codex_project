@@ -8,7 +8,7 @@
 
 首页提供**摘要、顺序索引、项目图片和演示入口**；完整笔记、代码与运行说明保存在各子项目中。
 
-[项目索引](#项目索引) · [项目预览](#项目预览) · [新增项目指南](docs/adding-projects.md) · [研究模板](templates/project/README.md) · [网页演示说明](docs/deployment.md)
+[项目索引](#项目索引) · [项目预览](#项目预览) · [在线目录](https://yydshly.github.io/0913_codex_project/) · [新增项目指南](docs/adding-projects.md) · [研究模板](templates/project/README.md) · [网页演示说明](docs/deployment.md)
 
 ## 项目索引
 
@@ -17,7 +17,7 @@
 <!-- PROJECT_INDEX_START -->
 | 编号 | 研究项目 | 摘要 / 关注点 | 原始仓库 | 进度 | 在线演示 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 001 | [PaperRoute](projects/001-paperroute/README.md) | 浏览器 3D 送报、障碍反馈与七日进程；AI 辅助常规迭代案例，可复用技术价值有限 | [sketchymedia/Paperroute](https://github.com/sketchymedia/Paperroute)（404，开源待核实） | 已总结 | — |
+| 001 | [PaperRoute](projects/001-paperroute/README.md) | 浏览器 3D 送报、障碍反馈与七日进程；AI 辅助常规迭代案例，可复用技术价值有限 | [sketchymedia/Paperroute](https://github.com/sketchymedia/Paperroute)（404，开源待核实） | 已总结 | [研究汇总](https://yydshly.github.io/0913_codex_project/001-paperroute/research.html) · [研究原型](https://yydshly.github.io/0913_codex_project/001-paperroute/) |
 <!-- PROJECT_INDEX_END -->
 
 进度：`待研究` → `研究中` → `已复现` → `已总结`；暂时停止的项目标为 `暂缓`。演示未上线时填写 `—`。
@@ -33,7 +33,7 @@
 
 *2026-09-13 官网画廊截图；画面由上游提供，非本项目实际游玩截图。*
 
-[研究汇总](projects/001-paperroute/README.md) · [原始仓库线索](https://github.com/sketchymedia/Paperroute) · [原版游戏](https://www.paperroute.lol/play/) · [运行研究原型](projects/001-paperroute/app/README.md) · [实践指南](projects/001-paperroute/practical-guide.md)
+[研究汇总](projects/001-paperroute/README.md) · [在线研究页](https://yydshly.github.io/0913_codex_project/001-paperroute/research.html) · [试玩研究原型](https://yydshly.github.io/0913_codex_project/001-paperroute/) · [原始仓库线索](https://github.com/sketchymedia/Paperroute) · [原版游戏](https://www.paperroute.lol/play/) · [实践指南](projects/001-paperroute/practical-guide.md)
 <!-- PROJECT_PREVIEWS_END -->
 
 ## 仓库结构

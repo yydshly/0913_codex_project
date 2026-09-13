@@ -8,7 +8,7 @@ PaperRoute 是一款浏览器 3D 骑车送报游戏，官网介绍骑行投递�
 
 *2026-09-13 截取的[官网画廊](https://www.paperroute.lol/#gallery-title)，画面由上游提供。用于展示原作能力，不代表本项目已实测这些流程。*
 
-**本项目现已提供独立实现的本地 3D 送报游戏，以及[中文研究展示](app/research.html)。** [运行游戏](app/README.md)后可以实际骑行、投报、躲避障碍并完成跨日挑战。本地游戏是简化原型，不是原站源码或精确复刻。下文的上游观察与本地实现分开记录；上游完整玩法仍未实测，开源状态待核实。
+**现已上线[中文研究汇总](https://yydshly.github.io/0913_codex_project/001-paperroute/research.html)和[独立可玩原型](https://yydshly.github.io/0913_codex_project/001-paperroute/)。** 原型可以实际骑行、投报、躲避障碍并进行跨日挑战，也可按[运行说明](app/README.md)在本地启动。原型为独立简化实现，不是原站源码或精确复刻。下文的上游观察与本地实现分开记录；上游完整玩法仍未实测，开源状态待核实。
 
 | 项目 | 内容 |
 | :--- | :--- |
@@ -24,7 +24,7 @@ PaperRoute 是一款浏览器 3D 骑车送报游戏，官网介绍骑行投递�
 | 研究优先级 | 低：保留为作品案例；如后续公开源码、完整任务记录或效率对照，再评估深入研究 |
 | 技术线索 | 作者资料提及 Astra、Blender、Three.js、Supabase、Vercel；具体版本及当前配置待核实 |
 | 上游体验 | [游戏入口](https://www.paperroute.lol/play/)，本次可加载，进入游戏前展示邮箱与 X 用户名表单 |
-| 本仓库在线演示 | 尚未部署 |
+| 本仓库在线演示 | [研究页](https://yydshly.github.io/0913_codex_project/001-paperroute/research.html) · [可玩原型](https://yydshly.github.io/0913_codex_project/001-paperroute/)，GitHub Pages，2026-09-13 实际访问通过 |
 
 [返回总索引](../../README.md#项目索引) · [拆解与实践指南](practical-guide.md) · [证据与研究笔记](notes.md) · [图片来源](assets/README.md) · [游戏运行说明](app/README.md) · [研究展示源码](app/research.html)
 
@@ -142,7 +142,7 @@ flowchart LR
 - [ ] 在具备体验条件后验证完整玩法、移动输入和成绩流程。
 - [ ] 获取可复现条件后再补充本地依赖、运行命令和性能结果。
 
-已在 `app/` 完成可玩的 3D 送报原型，并将原中文展示保留为 `research.html`。游戏需通过 HTTP 预览访问，详见[运行说明](app/README.md)。本地规则已测试，浏览器已观察成功投递；这不等于上游源码复现或上游七日通关。尚未发布本仓库在线演示。
+已在 `app/` 完成独立 3D 送报原型，并保留中文研究页 `research.html`。两者已部署到 GitHub Pages。本地规则已测试，线上浏览器已观察成功投递、暂停与恢复；这不等于上游源码复现或上游七日通关。完整环境、发布版本与边界见[运行说明](app/README.md)和[发布记录](notes.md)。
 
 ## 来源与许可
 

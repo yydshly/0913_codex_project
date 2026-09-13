@@ -25,3 +25,12 @@
 ## 本地游戏实际效果
 
 [07-local-gameplay.jpg](07-local-gameplay.jpg) 为 2026-09-13 在本地 3D 游戏中真实投递成功后的截图：送达 1/10、得分 100、剩余 15 份报纸和 3 条生命。画面来自本项目独立程序化实现的街道、自行车、角色与信箱，未使用上游游戏模型，未经重绘。截图保存于当前浏览器视口，不代表跨设备或性能测试。
+
+## GitHub Pages 发布验证
+
+2026-09-13，首次发布提交 `764ffe8afd53b695d4c8e26b119b99edfbec2a69`，在内置浏览器约 1280 × 720 视口捕获，未经重绘：
+
+| 文件 | 来源 | 内容与边界 |
+| :--- | :--- | :--- |
+| [08-published-conclusion.jpg](08-published-conclusion.jpg) | [线上研究结论](https://yydshly.github.io/0913_codex_project/001-paperroute/research.html#meaning) | 能力、常规迭代、对我们的价值和复用边界；属于本项目的研究页面 |
+| [09-published-gameplay.jpg](09-published-gameplay.jpg) | [线上研究原型](https://yydshly.github.io/0913_codex_project/001-paperroute/) | 成功送达 1/10、得分 100、剩余 15 份报纸；属于独立简化原型，不是原版游戏 |

@@ -117,4 +117,12 @@ PaperRoute 的主要能力是浏览器 3D 送报、障碍反馈、七日进程�
 
 Windows / Node.js 环境重新安装锁定依赖成功，6 项现有规则测试通过，全站构建成功，36 个发布资源引用与锚点检查通过，`git diff --check` 通过。规则测试仍不等于原站实测、真机测试或完整性能验证。
 
-线上可用性与最终部署版本在发布成功后另行补充。
+### 首次上线结果
+
+提交 `764ffe8afd53b695d4c8e26b119b99edfbec2a69` 已推送至 `main`，[GitHub Actions 运行 34756435613](https://github.com/yydshly/0913_codex_project/actions/runs/34756435613) 的构建与部署成功。发布地址为[项目目录](https://yydshly.github.io/0913_codex_project/)、[研究汇总](https://yydshly.github.io/0913_codex_project/001-paperroute/research.html)及[独立原型](https://yydshly.github.io/0913_codex_project/001-paperroute/)。
+
+逐项请求了 15 个线上 HTML、样式、脚本、图片和库文件，均返回 HTTP 200，SHA-256 与本地构建一致，JavaScript 模块 MIME 类型正确。检查了 15 个 Markdown 文件（模板示例不纳入链接验证），66 个本地文档链接目标存在。
+
+浏览器实际验证目录摘要与能力图片、研究页跳转、能力页签切换和结论锚点；线上游戏加载 3D 场景后可以开始、慢行、投报、暂停和恢复。一次实际投递后显示送达 1/10、得分 100、库存 15、3 条生命。保存 `08-published-conclusion.jpg` 与 `09-published-gameplay.jpg`，文件头已核对为 JPEG。视口约 1280 × 720；未扩大为真机触屏、长期性能或完整七日通关验证。
+
+在确认线上访问与操作后，补充根索引及项目文档的正式链接，并提交发布实拍与记录。后续部署状态见[工作流历史](https://github.com/yydshly/0913_codex_project/actions/workflows/pages.yml)。
