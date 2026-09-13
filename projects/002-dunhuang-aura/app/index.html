@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#201e19">
+  <meta name="description" content="敦煌美术风格与出图流程说明书；可复用配色、构图、提示词和修图要求，未新增绘图能力，质量与效率增益未验证。">
+  <title>002 · Dunhuang Aura｜风格规范与后续参考价值</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="masthead"><a class="brand" href="#main">研究与实践 <span> / 002</span></a><nav aria-label="页面导航"><a href="#value">参考价值</a><a href="#generated-gallery">看实验</a><a href="#workbench">试一试</a><a href="extensions.html">扩展方向</a><a href="studio.html">制作活动图</a><a href="products.html">产品落地</a><a href="https://github.com/govin-ai/dunhuang-aura-skill">上游仓库 ↗</a></nav></header>
+  <main id="main">
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow">DUNHUANG AURA / 研究结论</p><h1>一份美术说明书，<br>一套可参考的出图流程。</h1><p class="lead">整理敦煌配色、构图、文字与修改要求，供外部图像模型使用。<br>可借鉴美术规范和提示词组织；没有新增绘图能力，效果增益尚未验证。</p><a class="primary" href="#value">了解后续参考价值 <span>↗</span></a></div>
+      <div class="hero-aside"><span class="seal">敦<br>煌</span><p>矿物色 · 壁画肌理<br>现代产品 · 空间层次</p><p class="edition">结论归档 2026.09.14<br>版本 4b8ff65 · MIT</p></div>
+      <figure class="hero-figure"><a href="../assets/generated-tea-panorama.png" aria-label="查看本次生成的茶品牌横幅原图"><img src="../assets/generated-tea-panorama.png" width="1983" height="793" alt="本次生成的无字茶品牌横幅：左侧彩陶瓶、右侧绿盖茶叶罐和茶杯，中间洞口与水面形成景深" fetchpriority="high"></a><figcaption><span>A / 本次生成 · 茶品牌无字横幅 · 1983 × 793，约 5:2</span><span>内置 imagegen 出图 · 依据上游规则组织提示词</span></figcaption></figure>
+    </section>
+    <div class="section" style="padding-top:24px;padding-bottom:24px"><a href="extensions.html" style="font-size:16px">研究延伸：六个扩展方向与效果（调整过原规则，不是上游内置能力）</a></div>
+    <section class="section generated-gallery" id="generated-gallery" aria-labelledby="generated-title">
+      <div class="section-heading"><p class="eyebrow">实际作品 / 2026.09.13</p><h2 id="generated-title">从生成到局部修改，直接看结果。</h2><p>三次文生图、一次参考图编辑，每次保留首轮结果。图片均为本次实际生成，未裁切、未后期加字；产品是虚构设计。网页展示已生成文件，表单不实时出图。</p></div>
+      <div class="result-note"><strong>A · 宽幅构图</strong><p>上方茶品牌图满足左右视觉重点、中间通道和无字要求。左侧陶瓶体量较大，可能分散茶叶罐的注意力；需要商品导向更强时，可继续调整主次。</p><a href="../experiments/tea-panorama.txt">查看这张图的实际提示词</a></div>
+      <div class="gallery-heading"><div><p class="eyebrow">B → D / 香氛广告与局部编辑</p><h3>只删掉红色飘带，会发生什么？</h3></div><p>编辑目标：保留瓶子、台座、镜头和光线，只删除飘带并补全背景。</p></div>
+      <div class="edit-pair"><figure><a href="../assets/generated-fragrance-portrait.png" aria-label="查看原始香氛广告大图"><img src="../assets/generated-fragrance-portrait.png" width="1122" height="1402" alt="本次生成的原始香氛广告：磨砂琥珀色瓶、青铜盖、矿物山形壁画与红色飘带" loading="lazy"></a><figcaption><strong>B / 初次生成</strong><span>1122 × 1402，约 4:5 · 无文字</span><a href="../experiments/fragrance-portrait.txt">生成提示词</a></figcaption></figure><figure><a href="../assets/edited-fragrance-no-ribbon.png" aria-label="查看删除飘带后的香氛广告大图"><img src="../assets/edited-fragrance-no-ribbon.png" width="1122" height="1402" alt="本次编辑的香氛广告：红色飘带已删除，瓶子、台座和光线大体保留，壁画背景被补全" loading="lazy"></a><figcaption><strong>D / 删除飘带后</strong><span>1122 × 1402，约 4:5 · 无文字</span><a href="../experiments/fragrance-remove-ribbon.txt">编辑提示词</a></figcaption></figure></div>
+      <p class="result-note">实际观察：红色飘带已移除，瓶子位置、外形和暖光大体保持；壁画颗粒、山形边缘和部分石材细节也被重绘。因此这次编辑有效，但不能称为像素级保真。</p>
+      <div class="gallery-heading"><div><p class="eyebrow">C / 中文标题封面</p><h3>把“千年壁色”直接生成在图片里。</h3></div><p>标题要求：准确四字，左侧两行呈现，无其他文案。</p></div>
+      <figure class="cover-result"><a href="../assets/generated-exhibition-cover.png" aria-label="查看千年壁色展览封面原图"><img src="../assets/generated-exhibition-cover.png" width="1983" height="793" alt="本次生成的千年壁色封面：左侧准确中文四字，右侧青绿矿物山形、壁画拱门和红色飘带" loading="lazy"></a><figcaption><strong>C / 本次直接生成，未后期排字</strong><span>1983 × 793，约 5:2</span><a href="../experiments/exhibition-cover.txt">实际提示词</a></figcaption></figure>
+      <p class="result-note">实际观察：“千年壁色”四字正确且只出现一次，留白与右侧场景分工清楚。但字体有明显衬线笔意，未完全遵循提示词中的“无衬线字体”。</p>
+      <p class="footnote">这些图片展示了在本次外部图像工具下的实际表现。输出尺寸未达到提示词指定的目标像素，比例也只是接近值；未人工改尺寸。没有“同一模型有无 Skill”的对照，不能据此量化 Skill 本身的提升。</p>
+    </section>
+    <section class="section" id="effect" aria-labelledby="effect-title">
+      <div class="section-heading"><p class="eyebrow">01 / 先看懂风格</p><h2 id="effect-title">敦煌的视觉元素，现代广告的表达。</h2><p>“敦煌风”在现代设计中指从石窟艺术提取颜色、纹样与材料感。这个库选择其中一部分，用来搭建产品展示场景。</p></div>
+      <div class="style-grid"><article><span class="small-number">A / COLOR</span><h3>矿物配色</h3><div class="swatches" aria-label="本库建议的示意色：炭黑、沙白、朱砂、石绿、石青、赭金"><i style="--swatch:#201e19"></i><i style="--swatch:#dfc9a3"></i><i style="--swatch:#a74732"></i><i style="--swatch:#3a7467"></i><i style="--swatch:#305e7c"></i><i style="--swatch:#b5813e"></i></div><p>暗底、沙色壁面与红绿蓝飘带。色块为规则示意，并非从样张测量的颜色占比。</p></article><article><span class="small-number">B / MATERIAL</span><h3>材料与光线</h3><p>粗糙岩壁、斑驳画面，衬托陶瓷与玻璃；暖光和倒影加强产品的体积感。</p></article><article><span class="small-number">C / COMPOSITION</span><h3>前、中、后三层</h3><p>前景是产品，中景是壁画面板，远处是洞窟或山体。飘带连接两侧视觉重点。</p></article></div>
+      <details class="upstream-reference"><summary>查看上游自带样张与原始观察</summary><figure><img src="../assets/upstream-dunhuang-panorama.png" width="1983" height="793" alt="上游自带样张：彩陶、护肤品和手机组成金光较强的洞窟商业视觉" loading="lazy"><figcaption>作者提供，1983 × 793；与本次新生成图片分开记录。</figcaption></figure><p>金光较强、莲花重复较多，体现了结果与“克制用金、减少装饰”规则间的距离。该图不能作为本次输入的输出或质量对照。</p></details>
+    </section>
+    <section class="workbench section" id="workbench" aria-labelledby="workbench-title">
+      <div class="section-heading"><p class="eyebrow">02 / 亲手试一试</p><h2 id="workbench-title">一句需求，怎样变成制作说明？</h2><p>改变用途、主体或装饰密度，观察提示词如何变化。本演示由本研究编写，依据上游规则拼装文字，不调用 AI，不生成图片。</p></div>
+      <noscript><p class="notice">请启用 JavaScript 体验提示词展开；原始样张和研究说明仍可直接阅读。</p></noscript>
+      <div class="workbench-grid"><form id="brief-form" class="controls"><label for="use-case">你想做什么？</label><select id="use-case"><option value="panorama">无字横幅 · 5:2</option><option value="product">单品广告 · 4:5</option><option value="editorial">带标题封面 · 5:2</option></select><label for="subject">画面的产品主体</label><input id="subject" value="一只茶叶罐" maxlength="80" autocomplete="off"><div id="title-field" hidden><label for="headline">需要准确呈现的标题</label><input id="headline" value="一盏茶，千年色" maxlength="60" autocomplete="off"></div><label for="density">装饰密度</label><select id="density"><option value="restrained">克制 · 让产品更突出</option><option value="rich">丰富 · 强调场景氛围</option></select><div class="brief-box"><span class="small-number">你的简单需求</span><p id="simple-brief"></p></div><p class="control-note">产品必须完全保真时，应提供原图并采用编辑或合成；仅描述名称无法锁定外形。</p></form>
+      <div class="prompt-panel"><div class="prompt-header"><span class="small-number">展开后的绘图提示词</span><span id="mode-badge" class="badge"></span></div><label class="visually-hidden" for="prompt-output">可复制和编辑的完整提示词</label><textarea id="prompt-output" spellcheck="false"></textarea><div class="prompt-actions"><button type="button" id="copy-prompt">复制提示词</button><button type="button" id="download-prompt" class="secondary">下载 TXT</button><span id="feedback" role="status" aria-live="polite"></span></div><p class="control-note">可以直接编辑上方文字；更改左侧选项会重新展开。复制或下载后，交给支持生成 / 编辑图片的工具使用。</p></div></div>
+      <div class="constraint-strip" aria-label="提示词补充的要求"><span>用途与比例</span><span>主体与位置</span><span>材质与光线</span><span>文字状态</span><span>保留项与禁止项</span></div>
+    </section>
+    <section class="section" aria-labelledby="mechanism-title"><div class="section-heading"><p class="eyebrow">03 / 它实际做了什么</p><h2 id="mechanism-title">规则指导出图，检查贯穿前后。</h2></div><ol class="flow"><li><span>01</span><h3>整理需求</h3><p>确定比例、产品、用途，以及是否需要文字。</p><small>Skill：任务说明</small></li><li><span>02</span><h3>展开提示词</h3><p>加入构图、配色和限制；Python 脚本检查词项是否齐全。</p><small>Skill + 关键词检查</small></li><li><span>03</span><h3>生成或编辑</h3><p>由宿主接入的图像模型执行。仓库未提供模型或服务。</p><small>外部图像工具</small></li><li><span>04</span><h3>看图再修改</h3><p>检查多余文字、物体变形、构图与光线；有问题再局部修正。</p><small>人工 / 具备视觉能力的智能体</small></li></ol><p class="footnote">自带脚本只读取提示词文本。它不查看图片，也不验证中文是否生成正确、产品是否变形或图片是否美观。</p></section>
+    <section class="section" id="value" aria-labelledby="value-title"><div class="section-heading"><p class="eyebrow">04 / 值不值得使用</p><h2 id="value-title">价值在经验复用，效果需要验证。</h2></div><div class="value-grid"><article><span class="value-label">适合拿来用</span><h3>把设计要求说清楚</h3><p>适合不熟悉绘图提示词的人，以及需要反复制作同风格封面、品牌提案、产品氛围图的团队。复用规则可以减少需求遗漏，让修改要求更具体。</p></article><article><span class="value-label">需要看清边界</span><h3>没有新增绘图能力</h3><p>没有自研模型、训练程序或渲染算法。两项上游测试仅验证提示词检查器；没有同模型的有无 Skill 对照实验，无法量化质量或效率提升。</p></article><article><span class="value-label">后续怎样参考</span><h3>有对应任务时再取用</h3><p>敦煌主题封面、产品氛围图或系列提案，可以借用其规则结构。真实商品保真、准确排版和交付审核需要额外工程实现；本研究的工具与海报不属于上游能力。</p></article></div><div class="verdict"><span>研究判断</span><p>已总结并归档，暂不继续扩展。后续遇到特定风格任务时，参考它如何组织配色、构图、文字限制和修改保留项；不把它当作通用设计引擎或质量保证。是否更好看、更稳定、更省时间，仍需对照验证。</p></div><p class="footnote">后续慢光、PaperRoute、OpenMAIC 三张新版海报主要来自独立产品理解与图像模型创作，未严格沿用此 Skill，不能作为其有效证据。<a href="studio.html#generation-note">查看各轮制作方式与归因说明</a>。</p></section>
+    <section class="section evidence" aria-labelledby="evidence-title"><div><p class="eyebrow">05 / 证据与来源</p><h2 id="evidence-title">样张、代码和结论分开记录。</h2><p>已阅读上游核心说明、检查脚本和参考文档，查看原始样张，运行自带两项测试并通过。本次新增三张实际生成图片与一次参考图编辑，逐张记录结果；没有进行多模型或批量效果评测。</p><p>敦煌石窟艺术跨越多个时代，本库的黑金洞窟与产品舞台是现代演绎。默认排除佛像、菩萨和飞天人物，不代表敦煌艺术的全部面貌。</p></div><ul class="sources"><li><a href="https://github.com/govin-ai/dunhuang-aura-skill/tree/4b8ff65b99729a002072108467ae5b3f99fed939">上游固定版本 ↗</a><span>MIT · Govin · 2026</span></li><li><a href="https://github.com/govin-ai/dunhuang-aura-skill/blob/4b8ff65b99729a002072108467ae5b3f99fed939/references/style-system.md">风格规范与色板 ↗</a><span>构图、材质、光线与装饰规则</span></li><li><a href="https://github.com/govin-ai/dunhuang-aura-skill/blob/4b8ff65b99729a002072108467ae5b3f99fed939/scripts/check_prompt.py">提示词检查器 ↗</a><span>关键词与正则表达式检查</span></li><li><a href="https://skytyz.dha.ac.cn/CN/Y2022/V1/I1/47">敦煌研究院：壁画颜料研究 ↗</a><span>历史背景参考</span></li><li><a href="./UPSTREAM-LICENSE.txt">随附上游 MIT 许可</a><span>原始样张与引用规则的来源说明见项目文档</span></li></ul></section>
+  </main>
+  <footer><span>002 · DUNHUANG AURA / 独立研究演示</span><a href="#main">回到顶部 ↑</a><span>研究已归档 · 增益未验证</span></footer>
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+  {
+    "file": "case-slowlight-studio.png",
+    "source": "E:\\0906_codexgpt6_project\\artifacts\\m2\\delivery\\sunset-guided.png",
+    "source_checkout": "8bb315a7a61cf99007177943de1ba4a3c73ab21c",
+    "sha256": "b90aa3c94b7781ab8638c882bb83b099b6dc34ce020d06840b82975d775a5902",
+    "copied_on": "2026-09-13",
+    "note": "原样复制；checkout 为读取时版本，不声称是截图拍摄时版本"
+  },
+  {
+    "file": "case-paperroute-gameplay.jpg",
+    "source": "projects\\001-paperroute\\assets\\09-published-gameplay.jpg",
+    "source_checkout": "0050cd06469e96390a50c52e9f140db76d2bc9ac",
+    "sha256": "19c2ce15ca8373e63ffa64fad3796bffd8ba087997bb07232a50357655159ec3",
+    "copied_on": "2026-09-13",
+    "note": "原样复制；checkout 为读取时版本，不声称是截图拍摄时版本"
+  },
+  {
+    "file": "case-openmaic-classroom.png",
+    "source": "F:\\codex_project\\0912_codex_project\\projects\\005-openmaic\\assets\\official-solar-system.png",
+    "source_checkout": "80f02323bb43502e73235e69fbdba52d4ee93ac6",
+    "sha256": "3b9450d398ff672a825e2013e712735a2751dd585318cd1894e92241ccf52975",
+    "copied_on": "2026-09-13",
+    "note": "原样复制；checkout 为读取时版本，不声称是截图拍摄时版本"
+  }
+]

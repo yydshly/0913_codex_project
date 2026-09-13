@@ -1,0 +1,8 @@
+Use case: ads-marketing
+Asset type: text-free 5:2 commercial cover
+Composition: a large ceramic vessel on the left, an open reflective path through the center, and a product bottle plus phone on the right. Use foreground, middle depth, and background architecture.
+Palette: charcoal cave black, sand mineral white, cinnabar, malachite, lapis, restrained ochre gold.
+Materials: weathered rock, mural plaster, ceramic, glass, and reflective dark stone.
+Lighting: warm key light, controlled shadows, and coherent reflections.
+Constraints: no text, letters, numbers, labels, logos, QR codes, watermarks, or religious figures.
+Avoid generic AI purple, robot heads, cyberpunk neon, centered symmetry, and excessive gold.

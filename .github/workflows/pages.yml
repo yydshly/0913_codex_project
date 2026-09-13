@@ -28,6 +28,10 @@ jobs:
         run: npm ci --prefix projects/001-paperroute/app
       - name: Verify game rules
         run: node --test projects/001-paperroute/app/game-state.test.mjs
+      - name: Verify material layout and upstream prompt checker
+        run: |
+          node --test projects/002-dunhuang-aura/app/studio-layout.test.mjs
+          python3 -m unittest discover -s projects/002-dunhuang-aura/app/validator/tests -v
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Build all static projects

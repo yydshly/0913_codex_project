@@ -1,0 +1,44 @@
+[
+  {
+    "product": "slowlight",
+    "file": "redesign-slowlight-v2.png",
+    "tool": "built-in imagegen",
+    "date": "2026-09-13",
+    "source_generated_file": "exec-ece709b1-ec26-483e-90ae-56fb0640bc7f.png",
+    "width": 1122,
+    "height": 1402,
+    "prompt": "redesign-slowlight-v2.txt",
+    "sha256": "fbc70ad0c625d9414d5213be5b72bbe0a217506a0e40c56c885864835ca61d4b",
+    "model": "tool did not report",
+    "seed": "tool did not report",
+    "status": "AI promotional concept; not a software output or exact screenshot edit"
+  },
+  {
+    "product": "paperroute",
+    "file": "redesign-paperroute-v2.png",
+    "tool": "built-in imagegen",
+    "date": "2026-09-13",
+    "source_generated_file": "exec-6f0dc4da-b6ed-4566-800e-4749e3d01ef8.png",
+    "width": 1122,
+    "height": 1402,
+    "prompt": "redesign-paperroute-v2.txt",
+    "sha256": "19c8dbdf37a531bfbd4df06093d255a68556b43b2d50dbd9e17a11361b34f232",
+    "model": "tool did not report",
+    "seed": "tool did not report",
+    "status": "AI promotional concept; not a software output or exact screenshot edit"
+  },
+  {
+    "product": "openmaic",
+    "file": "redesign-openmaic-v2.png",
+    "tool": "built-in imagegen",
+    "date": "2026-09-13",
+    "source_generated_file": "exec-726ced06-af0f-45b7-9ed5-e722f8b0b494.png",
+    "width": 1122,
+    "height": 1402,
+    "prompt": "redesign-openmaic-v2.txt",
+    "sha256": "15d32b3c0f848d279ecdc28858002c1cb7bcede147b779252934a8f18befd3c9",
+    "model": "tool did not report",
+    "seed": "tool did not report",
+    "status": "AI promotional concept; not a software output or exact screenshot edit"
+  }
+]

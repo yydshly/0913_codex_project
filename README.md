@@ -18,6 +18,7 @@
 | 编号 | 研究项目 | 摘要 / 关注点 | 原始网页 | 进度 | 在线演示 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | 001 | [PaperRoute](projects/001-paperroute/README.md) | 浏览器 3D 送报、障碍反馈与七日进程；AI 辅助常规迭代案例，可复用技术价值有限 | [PaperRoute 官网](https://www.paperroute.lol/) | 已总结 | [研究汇总](https://yydshly.github.io/0913_codex_project/001-paperroute/research.html) · [研究原型](https://yydshly.github.io/0913_codex_project/001-paperroute/) |
+| 002 | [Dunhuang Aura](projects/002-dunhuang-aura/README.md) | 敦煌美术风格与出图流程说明书；可复用配色、构图、提示词和修图要求，未新增绘图能力，质量与效率增益未验证 | [govin-ai/dunhuang-aura-skill](https://github.com/govin-ai/dunhuang-aura-skill) | 已总结 | — |
 <!-- PROJECT_INDEX_END -->
 
 进度：`待研究` → `研究中` → `已复现` → `已总结`；暂时停止的项目标为 `暂缓`。演示未上线时填写 `—`。
@@ -34,6 +35,15 @@
 *2026-09-13 官网画廊截图；画面由上游提供，非本项目实际游玩截图。*
 
 [研究汇总](projects/001-paperroute/README.md) · [在线研究页](https://yydshly.github.io/0913_codex_project/001-paperroute/research.html) · [试玩研究原型](https://yydshly.github.io/0913_codex_project/001-paperroute/) · [原始网页](https://www.paperroute.lol/) · [原版游戏](https://www.paperroute.lol/play/) · [实践指南](projects/001-paperroute/practical-guide.md)
+### 002 · Dunhuang Aura
+
+**本质是敦煌主题的美术指导与制作流程，不是绘图模型。** 后续可参考它如何整理配色、构图、文字限制和修改保留项，作为特定风格任务的说明模板。技术创新较低，质量与效率增益未验证；暂作为美术规范和提示词组织参考归档，不继续扩展。
+
+![002 Dunhuang Aura 本次生成效果：左侧彩陶瓶、右侧茶叶罐和茶杯，中央水面与洞窟形成景深](projects/002-dunhuang-aura/assets/generated-tea-panorama.png)
+
+*本次依据上游规则调用 imagegen 生成，1983 × 793，约 5:2。子项目另附香氛广告、中文标题封面和删除飘带的修图对照；未做同模型有无 Skill 的评测。*
+
+[研究汇总](projects/002-dunhuang-aura/README.md) · [本地演示运行说明](projects/002-dunhuang-aura/app/README.md) · [原始仓库](https://github.com/govin-ai/dunhuang-aura-skill) · [实验记录](projects/002-dunhuang-aura/notes.md) · [六个扩展方向](projects/002-dunhuang-aura/experiments/extensions.md) · [产品落地意义](projects/002-dunhuang-aura/product-opportunities.md) · [物料工作台源码](projects/002-dunhuang-aura/app/studio.html)
 <!-- PROJECT_PREVIEWS_END -->
 
 ## 仓库结构

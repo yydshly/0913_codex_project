@@ -1,0 +1,99 @@
+[
+  {
+    "id": "tea-panorama",
+    "operation": "generate",
+    "tool": "built-in imagegen",
+    "date": "2026-09-13",
+    "upstreamRuleCommit": "4b8ff65b99729a002072108467ae5b3f99fed939",
+    "modelVersion": null,
+    "seed": null,
+    "quality": null,
+    "attempts": 1,
+    "promptFile": "tea-panorama.txt",
+    "outputFile": "../assets/generated-tea-panorama.png",
+    "requestedSize": [
+      2560,
+      1024
+    ],
+    "requestedRatio": "5:2",
+    "actualSize": [
+      1983,
+      793
+    ],
+    "inputImage": null,
+    "postProcessing": "none",
+    "originalToolFile": "exec-66c86e8e-c0b8-46a3-9eb0-fc6a37d7378d.png"
+  },
+  {
+    "id": "fragrance-portrait",
+    "operation": "generate",
+    "tool": "built-in imagegen",
+    "date": "2026-09-13",
+    "upstreamRuleCommit": "4b8ff65b99729a002072108467ae5b3f99fed939",
+    "modelVersion": null,
+    "seed": null,
+    "quality": null,
+    "attempts": 1,
+    "promptFile": "fragrance-portrait.txt",
+    "outputFile": "../assets/generated-fragrance-portrait.png",
+    "requestedSize": [
+      1024,
+      1280
+    ],
+    "requestedRatio": "4:5",
+    "actualSize": [
+      1122,
+      1402
+    ],
+    "inputImage": null,
+    "postProcessing": "none",
+    "originalToolFile": "exec-beded499-ba78-4958-8094-5d3815fbf081.png"
+  },
+  {
+    "id": "exhibition-cover",
+    "operation": "generate",
+    "tool": "built-in imagegen",
+    "date": "2026-09-13",
+    "upstreamRuleCommit": "4b8ff65b99729a002072108467ae5b3f99fed939",
+    "modelVersion": null,
+    "seed": null,
+    "quality": null,
+    "attempts": 1,
+    "promptFile": "exhibition-cover.txt",
+    "outputFile": "../assets/generated-exhibition-cover.png",
+    "requestedSize": [
+      2560,
+      1024
+    ],
+    "requestedRatio": "5:2",
+    "actualSize": [
+      1983,
+      793
+    ],
+    "inputImage": null,
+    "postProcessing": "none",
+    "originalToolFile": "exec-4741558f-3797-447e-a715-b737eef32efe.png"
+  },
+  {
+    "id": "fragrance-remove-ribbon",
+    "operation": "edit",
+    "tool": "built-in imagegen",
+    "date": "2026-09-13",
+    "upstreamRuleCommit": "4b8ff65b99729a002072108467ae5b3f99fed939",
+    "modelVersion": null,
+    "seed": null,
+    "quality": null,
+    "attempts": 1,
+    "promptFile": "fragrance-remove-ribbon.txt",
+    "outputFile": "../assets/edited-fragrance-no-ribbon.png",
+    "requestedSize": null,
+    "requestedRatio": "preserve-original",
+    "actualSize": [
+      1122,
+      1402
+    ],
+    "inputImage": "../assets/generated-fragrance-portrait.png",
+    "postProcessing": "none",
+    "originalToolFile": "exec-4e67527c-0836-4dc8-a169-321fb772e0c5.png"
+  }
+]

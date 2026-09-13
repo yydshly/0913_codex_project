@@ -1,0 +1,122 @@
+[
+  {
+    "id": "extension-light-tea",
+    "date": "2026-09-13",
+    "tool": "built-in imagegen",
+    "operation": "generate",
+    "attempts": 1,
+    "modelVersion": null,
+    "seed": null,
+    "inputImages": [],
+    "requestedRatio": "3:2",
+    "actualSize": [
+      1536,
+      1024
+    ],
+    "postProcessing": "none",
+    "scope": "research extension overriding upstream default rules, not an upstream built-in mode",
+    "promptFile": "extension-light-tea.txt",
+    "outputFile": "../assets/extension-light-tea.png",
+    "originalToolFile": "exec-26e351c5-378e-4cc7-9efa-d0fca767ade4.png"
+  },
+  {
+    "id": "extension-mural-packaging",
+    "date": "2026-09-13",
+    "tool": "built-in imagegen",
+    "operation": "generate",
+    "attempts": 1,
+    "modelVersion": null,
+    "seed": null,
+    "inputImages": [],
+    "requestedRatio": "3:2",
+    "actualSize": [
+      1536,
+      1024
+    ],
+    "postProcessing": "none",
+    "scope": "research extension overriding upstream default rules, not an upstream built-in mode",
+    "promptFile": "extension-mural-packaging.txt",
+    "outputFile": "../assets/extension-mural-packaging.png",
+    "originalToolFile": "exec-89282efd-ad34-465c-be3d-260b0257f6ca.png"
+  },
+  {
+    "id": "extension-caisson-poster",
+    "date": "2026-09-13",
+    "tool": "built-in imagegen",
+    "operation": "generate",
+    "attempts": 1,
+    "modelVersion": null,
+    "seed": null,
+    "inputImages": [],
+    "requestedRatio": "4:5",
+    "actualSize": [
+      1122,
+      1402
+    ],
+    "postProcessing": "none",
+    "scope": "research extension overriding upstream default rules, not an upstream built-in mode",
+    "promptFile": "extension-caisson-poster.txt",
+    "outputFile": "../assets/extension-caisson-poster.png",
+    "originalToolFile": "exec-3e028a5e-6a54-4a3b-ac66-cb49d0d3e68e.png"
+  },
+  {
+    "id": "extension-textile-accessories",
+    "date": "2026-09-13",
+    "tool": "built-in imagegen",
+    "operation": "generate",
+    "attempts": 1,
+    "modelVersion": null,
+    "seed": null,
+    "inputImages": [],
+    "requestedRatio": "3:2",
+    "actualSize": [
+      1536,
+      1024
+    ],
+    "postProcessing": "none",
+    "scope": "research extension overriding upstream default rules, not an upstream built-in mode",
+    "promptFile": "extension-textile-accessories.txt",
+    "outputFile": "../assets/extension-textile-accessories.png",
+    "originalToolFile": "exec-859b0040-6def-4034-b103-d3ff9b7fffa7.png"
+  },
+  {
+    "id": "extension-tea-interior",
+    "date": "2026-09-13",
+    "tool": "built-in imagegen",
+    "operation": "generate",
+    "attempts": 1,
+    "modelVersion": null,
+    "seed": null,
+    "inputImages": [],
+    "requestedRatio": "3:2",
+    "actualSize": [
+      1536,
+      1024
+    ],
+    "postProcessing": "none",
+    "scope": "research extension overriding upstream default rules, not an upstream built-in mode",
+    "promptFile": "extension-tea-interior.txt",
+    "outputFile": "../assets/extension-tea-interior.png",
+    "originalToolFile": "exec-394d3992-1f02-4681-8a96-2147f5d8104a.png"
+  },
+  {
+    "id": "extension-editorial-stationery",
+    "date": "2026-09-13",
+    "tool": "built-in imagegen",
+    "operation": "generate",
+    "attempts": 1,
+    "modelVersion": null,
+    "seed": null,
+    "inputImages": [],
+    "requestedRatio": "3:2",
+    "actualSize": [
+      1536,
+      1024
+    ],
+    "postProcessing": "none",
+    "scope": "research extension overriding upstream default rules, not an upstream built-in mode",
+    "promptFile": "extension-editorial-stationery.txt",
+    "outputFile": "../assets/extension-editorial-stationery.png",
+    "originalToolFile": "exec-9fcfabda-3f2f-4e78-9c35-62a396e6f07d.png"
+  }
+]

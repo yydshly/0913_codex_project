@@ -38,6 +38,12 @@ node scripts/check-site.mjs
 
 ## 自动发布
 
+### 002 · Dunhuang Aura 研究归档与发布
+
+`projects/002-dunhuang-aura/app/` 为无第三方依赖的静态演示，根构建脚本会自动执行其 `build.mjs`，汇总到 `site/002-dunhuang-aura/`。原图、样式、脚本与 MIT 许可使用相对路径随构建复制，静态导航按编号加入入口。
+
+2026-09-14 用户授权归档、提交和发布。摘要聚焦库的美术规范与流程参考价值，研究延伸和 Skill 效果归因分别标明。本地 9 项 Node 测试、2 项上游 Python 测试、两项目构建及 139 处站内引用检查通过；发布状态等待远端部署确认。上游 Python 检查器属于研究复核与 CI 验证，不是网页运行依赖。
+
 工作流由 `main` 分支推送或手动运行触发，执行依赖安装、规则测试、全站构建、资源检查、artifact 上传和 Pages 部署。Pages 的构建来源设为 GitHub Actions，部署任务使用 `github-pages` environment，权限为 `pages: write` 与 `id-token: write`。
 
 构建输出来自每次干净的 Actions checkout，包含全部已配置项目，避免只部署新项目导致旧演示丢失。本地汇总会覆盖同名文件；若删除了源码资源，应检查输出没有过期文件，正式发布以干净的 CI 构建为准。

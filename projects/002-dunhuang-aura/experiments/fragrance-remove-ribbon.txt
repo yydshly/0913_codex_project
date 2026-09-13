@@ -1,0 +1,5 @@
+Use case: precise-object-edit
+Edit target: the supplied original fragrance advertising image.
+Primary change: remove the entire cinnabar red ribbon from the scene. Reconstruct the mural and cave stone hidden behind every segment of the ribbon using the adjacent mineral paint, texture and lighting. This is a targeted removal, not a restyling.
+Preserve unchanged: the exact perfume bottle silhouette, cap dimensions and bronze material, frosted amber glass, neck, location, scale, plinth, camera angle, mountain mural shapes and blue-green palette, upper circular caisson, rock arrangement, existing warm upper-left light, contact shadow, exposure and original portrait aspect ratio.
+Constraints: no red ribbon anywhere after editing; no added decoration; absolutely no text, letters, numbers, logos, labels or watermarks. Keep the original product and scene as closely as possible, do not zoom or crop. Return finished edited artwork only.

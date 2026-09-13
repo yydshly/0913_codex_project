@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>品牌物料工作台 · Dunhuang Aura</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="studio.css"></head>
+<body>
+<a class="skip" href="#main">跳到工作台</a>
+<header class="masthead"><a class="brand" href="index.html">Dunhuang Aura <span>/ 品牌物料工作台</span></a><nav aria-label="页面导航"><a href="products.html">产品意义</a><a href="extensions.html">风格实验</a></nav></header>
+<main id="main">
+  <section class="studio-intro"><p class="eyebrow">按产品特色重新设计 / 第二版</p><h1>绘画的质感，游戏的动感，学习的好奇心。</h1><p>三张独立设计的宣传概念图。点击图片查看完整原图；这些画面由 AI 创作，不是产品实测截图。</p></section>
+  <aside id="generation-note" class="generation-note" aria-labelledby="generation-note-title">
+    <h2 id="generation-note-title">这三张图，能说明 Skill 的效果吗？</h2>
+    <p><strong>不能。这轮主要由 AI 助手理解产品特色、重新编写设计提示词，再调用图像大模型生成；没有严格按照 Dunhuang Aura Skill 制作。</strong></p>
+    <p>慢光的油画与日落、PaperRoute 的报纸刊头与骑行、OpenMAIC 的星空与实验，都来自对产品的设计判断。Skill 的敦煌配色、壁画肌理、洞窟构图等核心要求，在这三张中已基本没有沿用。它们展示的是“产品理解 + AI 视觉创作”，不能证明该 Skill 提升了效果。</p>
+    <details><summary>查看各轮演示的区别，以及怎样验证 Skill 的增益</summary>
+      <ul>
+        <li><strong>前面的敦煌商业图：</strong>参考了 Skill 的风格、构图和文字规则，实际画面仍由外部图像模型生成。</li>
+        <li><strong>六组扩展效果：</strong>在原规则基础上做了场景调整、覆盖部分默认要求，属于本研究的扩展探索，不是上游自带模式。</li>
+        <li><strong>本轮三张新版海报：</strong>按产品特点重新确定设计方向，没有严格沿用 Skill；原产品画面仅作为参考，生成结果不代表软件实测能力。</li>
+        <li><strong>下方基础排版工具：</strong>由本研究编写的固定模板合成截图与文字，不调用图像模型，也不执行上游 Skill。</li>
+      </ul>
+      <p><strong>目前没有严格对照实验。</strong>若要验证 Skill 的增益，需要固定同一产品素材、同一绘图模型与生成设置，对比普通提示词和加入 Skill 规则的提示词；两组都进行多次生成、保留全部结果，按事先确定的风格一致性、商品保真、文字准确性和可用程度评价，避免只挑最好的一张。当前内置工具未提供具体模型版本和 seed，因此尚不能声称这些控制条件已满足。</p>
+    </details>
+  </aside>
+  <section id="redesign" class="redesign-grid" aria-label="按产品特色设计的三张新版海报">
+    <figure><a href="../assets/redesign-slowlight-v2.png" target="_blank" rel="noopener"><img src="../assets/redesign-slowlight-v2.png" width="1122" height="1402" alt="慢光新版宣传概念：朱红与群青厚涂的日落，配以大幅宋体标题与画笔"></a><figcaption><h2>慢光 / 让颜料成为主角</h2><p>放大落笔、混色与日落的感受，用画布肌理和宋体传递安静的创作体验。</p><a href="../assets/redesign-slowlight-v2.png" download>下载原图</a> · <a href="../experiments/redesign-slowlight-v2.txt">设计提示词</a></figcaption></figure>
+    <figure><a href="../assets/redesign-paperroute-v2.png" target="_blank" rel="noopener"><img src="../assets/redesign-paperroute-v2.png" width="1122" height="1402" alt="PaperRoute 新版宣传概念：报纸刊头、骑车投递的低多边形角色、晨光街区与信箱"></a><figcaption><h2>PaperRoute / 把投递动作放大</h2><p>报纸刊头建立识别，斜向街道和抛出的报纸表现玩法，黄绿与红色保持轻快。</p><a href="../assets/redesign-paperroute-v2.png" download>下载原图</a> · <a href="../experiments/redesign-paperroute-v2.txt">设计提示词</a></figcaption></figure>
+    <figure><a href="../assets/redesign-openmaic-v2.png" target="_blank" rel="noopener"><img src="../assets/redesign-openmaic-v2.png" width="1122" height="1402" alt="OpenMAIC 新版宣传概念：深蓝星空中的太阳和地球，围绕观察、提问、验证组织教学信息"></a><figcaption><h2>OpenMAIC / 让知识可探索</h2><p>用轨道实验串起观察、提问与验证，深蓝背景突出知识对象和操作线索。</p><a href="../assets/redesign-openmaic-v2.png" download>下载原图</a> · <a href="../experiments/redesign-openmaic-v2.txt">设计提示词</a></figcaption></figure>
+  </section>
+  <section class="studio-intro"><h2>基础排版工具</h2><p>下面保留上一版截图合成工具，用于修改文案和验证尺寸；它不会生成上方的新版海报。</p></section>
+  <section class="case-picker" aria-label="选择产品案例"><div id="case-list"></div><div class="case-brief" aria-live="polite"><p id="case-scenario"></p><p id="case-evidence"></p><p id="case-lesson"></p><a id="case-source" target="_blank" rel="noopener">查看原产品</a></div></section>
+  <div class="studio-workspace">
+    <form id="brief" class="studio-controls" autocomplete="off">
+      <h2>制作资料</h2>
+      <label for="product">01 / 替换产品图片</label><input id="product" type="file" accept="image/png,image/jpeg,image/webp"><p class="hint">软件可用实际界面截图，实物建议透明底 PNG。保留完整原图，不自动抠图。支持 PNG、JPG、WebP，最大 15 MB、4000 万像素。</p>
+      <label for="layout-mode">素材类型</label><select id="layout-mode"><option value="screen">软件界面 · 横向展开</option><option value="product">实物商品 · 居中陈列</option></select>
+      <p id="asset-status" class="asset-status" role="status">正在载入案例…</p><button id="demo" class="secondary" type="button">恢复当前案例资料</button>
+      <label for="brand">02 / 品牌名称</label><input id="brand" value="山野茶 · 春日茶事" maxlength="24">
+      <label for="headline">活动标题</label><textarea id="headline" rows="2" maxlength="32">把春天，泡进日常</textarea>
+      <label for="subtitle">活动说明</label><textarea id="subtitle" rows="2" maxlength="64">春茶新作 · 一杯山野清香</textarea>
+      <label for="cta">引导语</label><input id="cta" maxlength="24" value="打开画室，试着画一幅">
+      <label for="style">03 / 视觉风格</label><select id="style"><option value="mineral">浅矿青绿 · 清淡留白</option><option value="cinnabar">砂岩朱砂 · 温暖节庆</option><option value="ink">雾蓝简洁 · 界面优先</option></select>
+      <label for="scale">商品大小 <output id="scale-value" for="scale">90%</output></label><input id="scale" type="range" min="55" max="100" value="90">
+      <p class="hint">背景为固定模板：两套借鉴敦煌实验配色，一套简洁雾蓝；本页不调用 AI 生图。图片不会上传到服务器，刷新后需重新选择。</p>
+    </form>
+    <section class="studio-results" aria-label="三种尺寸的实时预览"><div class="results-heading"><div><p class="eyebrow">LIVE PREVIEW / 实时排版</p><h2>一份资料，三张成品</h2></div><span id="render-status" role="status" aria-live="polite">准备中</span></div><p class="hint">以下为本演示固定规格，不代表任何平台的最新上传要求。导出前请确认原商品背景、文字和清晰度。</p><div id="previews"></div><p id="export-status" role="status" aria-live="polite"></p></section>
+  </div>
+  <section class="studio-learning"><p class="eyebrow">这一步验证什么</p><h2>把不稳定的出图，拆成可控的交付步骤。</h2><div><article><h3>商品由素材保证</h3><p>只等比缩放和摆放，避免生成模型改动包装。低清素材不会因导出大图而变清晰。</p></article><article><h3>信息由排版保证</h3><p>标题与说明按画布换行，超出区域时阻止导出。字体使用本机中文字体，跨设备字形可能不同。</p></article><article><h3>价值由真实使用验证</h3><p>这版可用三个历史产品案例制作模拟推广图。品牌标识上传、项目保存、审批和 AI 背景仍待实现；节省工时与付费需求尚未验证。</p></article></div></section>
+</main><footer><span>002 · 本机制作原型 · 活动与推广文案为模拟</span><a href="products.html">查看落地路线与边界</a></footer><script type="module" src="studio.mjs"></script>
+</body></html>

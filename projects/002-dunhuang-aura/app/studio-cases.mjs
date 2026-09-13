@@ -1,0 +1,32 @@
+export const cases = [
+  {
+    id: 'slowlight', name: '慢光 · 数字油画室', category: '作品体验招募',
+    asset: '../assets/case-slowlight-studio.png', alt: '慢光旅行日落引导的历史实测截图，显示真实画作与颜料面板',
+    brand: '慢光 / 数字油画室', headline: '留一点时间\n画一场日落', subtitle: '四步旅行日落引导 · 画笔混色 · 签名导出', cta: '打开画室，试着画一幅', style: 'cinnabar',
+    scenario: '模拟任务：邀请第一次接触慢光的人完成旅行日落体验，制作文章横幅、招募海报和分享方图。',
+    evidence: '素材：你此前项目的 M2 旅行日落实测截图。文案为本次模拟；不代表正式招募或付费承诺。',
+    lesson: '适配点：砂岩与朱砂呼应画室和日落。重点保留实际笔触与画布，不把作品重绘成更好的宣传样片。',
+    url: 'https://yydshly.github.io/0906_codexgpt6_project/', sourceLabel: '进入慢光画室',
+    stamp: '模拟推广 · 慢光历史实测画面',
+  },
+  {
+    id: 'paperroute', name: 'PaperRoute · 研究原型', category: '游戏试玩邀请',
+    asset: '../assets/case-paperroute-gameplay.jpg', alt: '独立制作的 PaperRoute 游戏原型实测截图，显示骑车送报和成功投递',
+    brand: 'PaperRoute / 晨间送报', headline: '骑上车\n送出今天第一份报纸', subtitle: '骑行、投递、躲避障碍 · 独立制作的研究原型', cta: '进入街区，开始试玩', style: 'mineral',
+    scenario: '模拟任务：为你已经做出的送报游戏原型制作试玩邀请，让读者知道能玩什么，再进入实际游戏。',
+    evidence: '素材：本仓库 001 原型的线上实测截图。不是 PaperRoute 上游原版截图，也不是官方推广。',
+    lesson: '适配点：青绿能衔接游戏街区。厚重壁画会压过玩法，所以仅保留配色与轻量背景。',
+    url: 'https://yydshly.github.io/0913_codex_project/001-paperroute/', sourceLabel: '进入研究版游戏',
+    stamp: '模拟推广 · 独立研究原型画面',
+  },
+  {
+    id: 'openmaic', name: 'OpenMAIC · 互动课堂', category: '课堂体验介绍',
+    asset: '../assets/case-openmaic-classroom.png', alt: 'OpenMAIC 官方太阳系交互课堂样例截图，非本次生成或本地实测',
+    brand: 'OpenMAIC / 互动课堂研究', headline: '知识不只用来读\n也可以动手试', subtitle: '从课件讲解，到交互实验与课堂提问', cta: '查看课堂案例与实现边界', style: 'ink',
+    scenario: '模拟任务：把你研究过的互动课堂介绍给老师或学习者，用课程画面解释“能操作的课堂”是什么。',
+    evidence: '素材：上游固定版本的太阳系官方样例，MIT。你做过的欧姆定律案例是另一份演示，不能混称同一实测结果。',
+    lesson: '适配点：采用雾蓝简洁版，优先让课堂界面可读。敦煌风不应成为每个软件产品的强制外观。',
+    url: 'https://yydshly.github.io/0912_codex_project/005-openmaic/', sourceLabel: '查看课堂研究与案例',
+    stamp: '模拟推广 · OpenMAIC 官方样例',
+  },
+];
