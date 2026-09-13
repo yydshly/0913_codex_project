@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="晨间送报：可直接试玩的 3D 骑车投递游戏。转向、投报、避开街道障碍，完成连续七天的路线。">
+<meta name="theme-color" content="#bad7ca"><title>晨间送报 · PaperRoute 可玩研究版</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232d6549'/%3E%3Cpath d='M8 7h16v18H8z' fill='%23f8f2de'/%3E%3Cpath d='M11 11h10M11 15h10M11 19h6' stroke='%232d6549' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="game.css">
+</head>
+<body>
+<canvas id="world" tabindex="0" aria-label="3D 送报游戏场景。方向键或 A D 转向，空格投报，P 暂停。"></canvas>
+<header class="topbar"><div class="brand">PaperRoute<small>晨间送报 · 可玩研究版</small></div><div class="utilities"><a href="research.html">研究介绍 ↗</a><button id="sound-button" type="button" aria-pressed="false">音效：关</button><button id="pause-button" type="button" disabled>暂停 P</button></div></header>
+<div class="hud" aria-label="游戏状态"><div class="hud-cell"><span>今日投递</span><strong id="delivery-value">0 / 10</strong></div><div class="hud-cell"><span>本周得分</span><strong id="score-value">00000</strong></div><div class="hud-cell"><span>剩余生命</span><strong class="hearts" id="lives-value" aria-label="3 条生命">♥♥♥</strong></div></div>
+<aside class="route-status"><span class="day-label" id="day-value">星期一 · 第 1 / 7 天</span><strong id="next-stop">左侧 · 下一个信箱 55 m</strong><div class="route-track" role="progressbar" aria-label="路线进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="route-progress"></span></div><div class="inventory"><span id="paper-value">报纸 16 份</span><span id="speed-value">0 km/h</span></div></aside>
+<div id="target-hint" class="target-hint" hidden>靠近亮起的信箱，按空格投递</div><div id="toast" class="toast" role="status" aria-live="polite"></div><div id="hit-flash"></div>
+<div class="riding-help" id="riding-help" hidden>拖动画面转向 · 点击投报 · P 暂停</div>
+<div class="controls" id="controls" hidden aria-label="触屏和鼠标操作"><button id="left-button" type="button" aria-label="驶向左侧">← 左侧<span class="key">A / ←</span></button><button id="brake-button" type="button" aria-pressed="false">慢行<span class="key">S / ↓</span></button><button id="throw-button" type="button" class="throw">投报纸<span class="key">SPACE 空格</span></button><button id="sprint-button" type="button" aria-pressed="false">加速<span class="key">W / ↑</span></button><button id="right-button" type="button" aria-label="驶向右侧">右侧 →<span class="key">D / →</span></button></div>
+<p class="credit">独立实现的游戏原型 · 灵感来自 PaperRoute · 场景与规则为本项目制作</p>
+<section class="layer" id="start-layer" aria-labelledby="start-title"><div class="newspaper"><div class="edition"><span>THE MORNING EDITION</span><span>星期一 · 06:15</span></div><div class="paper-brand">The Morning Post</div><div class="rule"></div><h1 id="start-title">小镇醒了，<br>你的路线开始了。</h1><p class="subtitle">骑上单车，把今天的报纸送到街坊手里。</p><div class="brief-stats"><div><strong>7</strong><span>个清晨</span></div><div><strong>10</strong><span>位订户</span></div><div><strong>3</strong><span>条生命</span></div></div><p class="instruction"><b>← → / A D</b> 转向，<b>空格</b> 投报。<br>驶向有旗子的信箱；提示变绿时投递。<br><b>↑ ↓</b> 加速、慢行。避开汽车、坑洞和小狗。</p><button type="button" class="primary" id="start-button" disabled>正在准备街区…</button><p class="version-note">本项目独立制作的可玩原型，无需登录。<br>美术与规则为简化实现，不是原站游戏源码。</p></div></section>
+<section class="layer" id="pause-layer" hidden aria-labelledby="pause-title"><div class="newspaper pause-card"><div class="edition"><span>ROUTE PAUSED</span><span>稍作休息</span></div><h2 id="pause-title">报纸可以等一等。</h2><p class="subtitle">路线已暂停，回来继续这一段。</p><button type="button" id="resume-button" class="primary">继续骑行 →</button><button type="button" id="restart-pause" class="secondary">重新开始这一周</button></div></section>
+<section class="layer" id="result-layer" hidden aria-labelledby="result-title"><div class="newspaper"><div class="edition"><span>THE EVENING EDITION</span><span id="result-day">星期一</span></div><div class="paper-brand">The Morning Post</div><div class="rule"></div><h2 id="result-title">明天，又是一条路线。</h2><span class="result-grade" id="result-grade">A</span><div class="brief-stats"><div><strong id="result-delivered">0</strong><span>今日送达</span></div><div><strong id="result-missed">0</strong><span>错过订户</span></div><div><strong id="result-score">0</strong><span>本周得分</span></div></div><p class="result-copy" id="result-copy"></p><button id="next-button" type="button" class="primary">开始下一天 →</button><button id="restart-button" type="button" class="secondary">重新开始这一周</button></div></section>
+<section class="layer" id="error-layer" hidden><div class="newspaper"><h2>街区暂时无法显示</h2><p class="error-copy" id="error-copy">请使用支持 WebGL 2 的浏览器并启用硬件加速。</p><button type="button" class="primary" onclick="location.reload()">重新加载</button><p class="version-note"><a href="research.html">先查看研究介绍</a></p></div></section>
+<noscript><div class="noscript">这款游戏需要 JavaScript。请在浏览器中启用后重新加载，或阅读<a href="research.html">研究介绍</a>。</div></noscript>
+<script type="module">
+import('./game.js').catch(error => {
+ document.querySelector('#start-layer').hidden=true;
+ document.querySelector('#error-layer').hidden=false;
+ document.querySelector('#error-copy').textContent='游戏资源加载失败。请刷新页面，或使用支持 WebGL 2 的浏览器重试。';
+ console.error(error);
+});
+</script>
+</body></html>

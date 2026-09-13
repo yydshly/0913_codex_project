@@ -1,45 +1,49 @@
-# 多项目网页演示约定
+# 多项目网页部署
 
-目前只初始化研究仓库，尚未发布演示或启用自动部署。
+本仓库使用 GitHub Actions 构建并部署 GitHub Pages。导航页为 `site/index.html`，各项目使用稳定编号子路径。首轮部署正在准备；以实际成功访问后的记录为上线依据。
 
-## 发布结构
-
-GitHub Pages 每个仓库提供一个站点，可在该站点下使用不同子路径展示多个项目。它托管静态 HTML、CSS 和 JavaScript；需要持续运行的后端服务应另行部署。参见 [GitHub Pages 官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)。
-
-本仓库预留以下目录结构；下列路径是规划示例，尚不是已上线页面：
+## 源码与发布输出
 
 ```text
-projects/001-project-slug/app/     # 第一个演示的源码与构建配置
-projects/002-another-project/app/  # 第二个演示的源码与构建配置
-
-site/                            # 将来作为 Pages 发布根目录
-├── index.html                   # 演示导航页，首个演示就绪时添加
-├── .nojekyll                    # 已预留，避免静态资源被 Jekyll 处理
-├── 001-project-slug/             # 第一个项目构建后的静态文件
-│   └── index.html
-└── 002-another-project/
-    └── index.html
+projects/001-paperroute/app/      # 独立应用与依赖
+scripts/build-site.mjs           # 按编号汇总可构建的项目
+scripts/check-site.mjs           # 检查发布资源、锚点和子路径兼容性
+site/
+├── index.html                  # 提交的静态导航页
+├── .nojekyll
+└── 001-paperroute/              # 构建生成，Git 忽略
+    ├── index.html              # 独立研究原型
+    ├── research.html           # 能力、价值与研究结论
+    ├── assets/                 # 随构建复制的真实观察截图
+    └── vendor/                 # Three.js 模块与许可证
+.github/workflows/pages.yml
 ```
 
-默认站点根路径规划为 `https://yydshly.github.io/0913_codex_project/`，项目演示位于其下的 `001-project-slug/` 等路径。未上线前不要将这些规划地址加入首页的“在线演示”列。
+应用源码保留在各自 `app/`。不提交依赖目录、完整上游仓库或重复的构建产物。研究截图原件保存在对应项目 `assets/`。
 
-## 首个演示就绪时
+## 本地验证
 
-1. 在对应项目的 `app/` 内建立应用，记录安装、开发和构建命令。
-2. 配置应用资源基路径为 `/0913_codex_project/NNN-project-slug/`，或使用经过验证的相对资源路径。
-3. 将静态构建结果汇总到 `site/NNN-project-slug/`，创建 `site/index.html` 导航页。
-4. 为仓库添加 GitHub Actions 发布工作流，并在 **Settings → Pages → Build and deployment** 中选择 **GitHub Actions**。
-5. 工作流构建需要发布的各项目，将完整 `site/` 目录上传为一个 Pages artifact，再部署到 GitHub Pages。
-6. 实际检查导航、图片、资源加载和刷新页面后，将可访问的演示链接写入项目 README 与首页索引。
+仓库根目录执行：
 
-配置工作流时参照 [GitHub 官方自定义工作流文档](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)，按当时的环境选择 Actions 版本和应用运行时。
+```powershell
+npm ci --prefix projects/001-paperroute/app
+node --test projects/001-paperroute/app/game-state.test.mjs
+node scripts/build-site.mjs
+node scripts/check-site.mjs
+```
 
-## 多项目维护
+各项目继续自行管理依赖。新增可发布项目时，在工作流中加入其安装与必要验证步骤；汇总脚本按编号查找 `app/build.mjs` 并复制其 `dist/`。含有 `index.html` 的构建结果才会发布，无构建入口的研究项目跳过。
 
-- 发布时必须包含所有已上线项目，避免只上传新项目导致旧演示消失。
-- 每个项目独立管理依赖和构建命令，发布目录使用相同的固定编号。
-- 单页应用可使用 hash 路由；使用路径路由时，必须验证 GitHub Pages 下的深层链接与刷新行为。
-- 项目中的 `dist/`、`build/` 等构建目录默认忽略；可由后续工作流构建并汇总到 `site/`。
-- 无静态导出能力的应用需要独立托管服务，在索引中记录其真实演示地址即可。
+## 自动发布
 
-返回[仓库首页](../README.md)。
+工作流由 `main` 分支推送或手动运行触发，执行依赖安装、规则测试、全站构建、资源检查、artifact 上传和 Pages 部署。Pages 的构建来源设为 GitHub Actions，部署任务使用 `github-pages` environment，权限为 `pages: write` 与 `id-token: write`。
+
+构建输出来自每次干净的 Actions checkout，包含全部已配置项目，避免只部署新项目导致旧演示丢失。本地汇总会覆盖同名文件；若删除了源码资源，应检查输出没有过期文件，正式发布以干净的 CI 构建为准。
+
+项目资源使用相对路径，检查脚本会拒绝依赖站点根路径的本地链接。发布后验证导航、研究页、游戏、图片、模块加载和刷新，再将实际地址写入根索引。
+
+GitHub Pages 托管静态网页；联网排行榜、账户和持久化后端需要另外实现。当前研究原型仅在页面内保存进度。
+
+依据：[GitHub Pages 说明](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages) · [自定义发布工作流](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。
+
+[返回索引](../README.md) · [静态目录](../site/README.md) · [001 运行说明](../projects/001-paperroute/app/README.md)
