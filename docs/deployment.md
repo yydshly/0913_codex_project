@@ -4,6 +4,8 @@
 
 已上线：[项目目录](https://yydshly.github.io/0913_codex_project/) · [001 研究汇总](https://yydshly.github.io/0913_codex_project/001-paperroute/research.html) · [001 独立原型](https://yydshly.github.io/0913_codex_project/001-paperroute/)。
 
+002 已上线：[Dunhuang Aura 研究结论与后续参考价值](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/) · [实验归因与延伸设计](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/studio.html#generation-note)。
+
 ## 源码与发布输出
 
 ```text
@@ -42,7 +44,7 @@ node scripts/check-site.mjs
 
 `projects/002-dunhuang-aura/app/` 为无第三方依赖的静态演示，根构建脚本会自动执行其 `build.mjs`，汇总到 `site/002-dunhuang-aura/`。原图、样式、脚本与 MIT 许可使用相对路径随构建复制，静态导航按编号加入入口。
 
-2026-09-14 用户授权归档、提交和发布。摘要聚焦库的美术规范与流程参考价值，研究延伸和 Skill 效果归因分别标明。本地 9 项 Node 测试、2 项上游 Python 测试、两项目构建及 139 处站内引用检查通过；发布状态等待远端部署确认。上游 Python 检查器属于研究复核与 CI 验证，不是网页运行依赖。
+2026-09-14 用户授权归档、提交和发布。摘要聚焦库的美术规范与流程参考价值，研究延伸和 Skill 效果归因分别标明。本地 9 项 Node 测试、2 项上游 Python 测试、两项目构建及 139 处站内引用检查通过；首次发布成功，来源提交 `d1f6b8364e7f0013588177ba00ee7ed8ac6980b4`，见 [Actions 运行](https://github.com/yydshly/0913_codex_project/actions/runs/34769637576)。实际请求线上目录、001 两个既有页面及 002 的全部 42 个发布文件，共 45 个 URL：全部 HTTP 200；文本统一换行后与本地构建一致，图片逐字节一致。主要结论、Skill 归因提示、三张新版海报和模块均已包含。本轮没有将网页检查扩展成新的效果评测，也未声称原始 PNG 下载落盘成功。上游 Python 检查器属于研究复核与 CI 验证，不是网页运行依赖。
 
 工作流由 `main` 分支推送或手动运行触发，执行依赖安装、规则测试、全站构建、资源检查、artifact 上传和 Pages 部署。Pages 的构建来源设为 GitHub Actions，部署任务使用 `github-pages` environment，权限为 `pages: write` 与 `id-token: write`。
 

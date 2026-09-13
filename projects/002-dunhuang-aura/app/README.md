@@ -65,4 +65,4 @@ node scripts/build-site.mjs
 node scripts/check-site.mjs
 ```
 
-2026-09-14 已整理发布源码，部署状态见 [仓库部署记录](../../../docs/deployment.md)。页面与交互为本研究新增，检查器遵循上游 MIT；[图片来源](../assets/README.md)单独记录。返回 [研究汇总](../README.md)。
+2026-09-14 已发布至 [GitHub Pages](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/)；[工作台](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/studio.html#generation-note)、[扩展实验](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/extensions.html) 和 [备选产品方向](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/products.html) 随站点发布。状态与验证见 [仓库部署记录](../../../docs/deployment.md)。页面与交互为本研究新增，检查器遵循上游 MIT；[图片来源](../assets/README.md)单独记录。返回 [研究汇总](../README.md)。

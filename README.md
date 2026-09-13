@@ -18,7 +18,7 @@
 | 编号 | 研究项目 | 摘要 / 关注点 | 原始网页 | 进度 | 在线演示 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | 001 | [PaperRoute](projects/001-paperroute/README.md) | 浏览器 3D 送报、障碍反馈与七日进程；AI 辅助常规迭代案例，可复用技术价值有限 | [PaperRoute 官网](https://www.paperroute.lol/) | 已总结 | [研究汇总](https://yydshly.github.io/0913_codex_project/001-paperroute/research.html) · [研究原型](https://yydshly.github.io/0913_codex_project/001-paperroute/) |
-| 002 | [Dunhuang Aura](projects/002-dunhuang-aura/README.md) | 敦煌美术风格与出图流程说明书；可复用配色、构图、提示词和修图要求，未新增绘图能力，质量与效率增益未验证 | [govin-ai/dunhuang-aura-skill](https://github.com/govin-ai/dunhuang-aura-skill) | 已总结 | — |
+| 002 | [Dunhuang Aura](projects/002-dunhuang-aura/README.md) | 敦煌美术风格与出图流程说明书；可复用配色、构图、提示词和修图要求，未新增绘图能力，质量与效率增益未验证 | [govin-ai/dunhuang-aura-skill](https://github.com/govin-ai/dunhuang-aura-skill) | 已总结 | [研究结论与参考价值](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/) |
 <!-- PROJECT_INDEX_END -->
 
 进度：`待研究` → `研究中` → `已复现` → `已总结`；暂时停止的项目标为 `暂缓`。演示未上线时填写 `—`。
@@ -43,7 +43,7 @@
 
 *本次依据上游规则调用 imagegen 生成，1983 × 793，约 5:2。子项目另附香氛广告、中文标题封面和删除飘带的修图对照；未做同模型有无 Skill 的评测。*
 
-[研究汇总](projects/002-dunhuang-aura/README.md) · [本地演示运行说明](projects/002-dunhuang-aura/app/README.md) · [原始仓库](https://github.com/govin-ai/dunhuang-aura-skill) · [实验记录](projects/002-dunhuang-aura/notes.md) · [六个扩展方向](projects/002-dunhuang-aura/experiments/extensions.md) · [产品落地意义](projects/002-dunhuang-aura/product-opportunities.md) · [物料工作台源码](projects/002-dunhuang-aura/app/studio.html)
+[在线研究结论](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/) · [完整研究](projects/002-dunhuang-aura/README.md) · [实验与延伸设计](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/studio.html#generation-note) · [原始仓库](https://github.com/govin-ai/dunhuang-aura-skill)
 <!-- PROJECT_PREVIEWS_END -->
 
 ## 仓库结构

@@ -27,7 +27,7 @@
 | 进度 | 已总结并归档；保留实测与延伸探索，暂不继续扩展；上游原图未复现 |
 | 上游技术 | Markdown 规则与模板、YAML 元数据、Python 标准库检查器 |
 | 本地演示 | HTML、CSS、原生 JavaScript、Node.js 静态构建；无第三方包 |
-| 在线演示 | 尚未部署 |
+| 在线演示 | [研究结论与参考价值](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/) · [实验归因与延伸设计](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/studio.html#generation-note)；2026-09-14 首次发布验证通过 |
 
 [返回索引](../../README.md#项目索引) · [演示源码页面](app/index.html) · [运行说明](app/README.md) · [实验记录](notes.md) · [素材来源](assets/README.md)
 
