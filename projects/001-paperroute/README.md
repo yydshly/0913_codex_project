@@ -13,8 +13,8 @@ PaperRoute 是一款浏览器 3D 骑车送报游戏，官网介绍骑行投递�
 | 项目 | 内容 |
 | :--- | :--- |
 | 固定编号 | 001 |
-| 上游 URL | [PaperRoute 官网](https://www.paperroute.lol/) |
-| 原始仓库线索 | [sketchymedia/Paperroute](https://github.com/sketchymedia/Paperroute)，来自开发日志；本次访问返回 404，公开可用性待核实 |
+| 原始网页 | [PaperRoute 官网](https://www.paperroute.lol/) |
+| 源码仓库线索 | [sketchymedia/Paperroute](https://github.com/sketchymedia/Paperroute)，来自开发日志；本次访问返回 404，公开可用性待核实 |
 | 原作者 | [BuiltBySketch](https://x.com/BuiltBySketch)，官网署名 |
 | 发现渠道 | 用户提供官网链接 |
 | 上游许可证 | 待核实，未确认代码或素材的开放许可 |

@@ -15,9 +15,9 @@
 按固定三位编号升序排列，从 `001` 开始。编号分配后保留，目录、研究标题、截图说明及演示路径使用同一编号。
 
 <!-- PROJECT_INDEX_START -->
-| 编号 | 研究项目 | 摘要 / 关注点 | 原始仓库 | 进度 | 在线演示 |
+| 编号 | 研究项目 | 摘要 / 关注点 | 原始网页 | 进度 | 在线演示 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 001 | [PaperRoute](projects/001-paperroute/README.md) | 浏览器 3D 送报、障碍反馈与七日进程；AI 辅助常规迭代案例，可复用技术价值有限 | [sketchymedia/Paperroute](https://github.com/sketchymedia/Paperroute)（404，开源待核实） | 已总结 | [研究汇总](https://yydshly.github.io/0913_codex_project/001-paperroute/research.html) · [研究原型](https://yydshly.github.io/0913_codex_project/001-paperroute/) |
+| 001 | [PaperRoute](projects/001-paperroute/README.md) | 浏览器 3D 送报、障碍反馈与七日进程；AI 辅助常规迭代案例，可复用技术价值有限 | [PaperRoute 官网](https://www.paperroute.lol/) | 已总结 | [研究汇总](https://yydshly.github.io/0913_codex_project/001-paperroute/research.html) · [研究原型](https://yydshly.github.io/0913_codex_project/001-paperroute/) |
 <!-- PROJECT_INDEX_END -->
 
 进度：`待研究` → `研究中` → `已复现` → `已总结`；暂时停止的项目标为 `暂缓`。演示未上线时填写 `—`。
@@ -33,7 +33,7 @@
 
 *2026-09-13 官网画廊截图；画面由上游提供，非本项目实际游玩截图。*
 
-[研究汇总](projects/001-paperroute/README.md) · [在线研究页](https://yydshly.github.io/0913_codex_project/001-paperroute/research.html) · [试玩研究原型](https://yydshly.github.io/0913_codex_project/001-paperroute/) · [原始仓库线索](https://github.com/sketchymedia/Paperroute) · [原版游戏](https://www.paperroute.lol/play/) · [实践指南](projects/001-paperroute/practical-guide.md)
+[研究汇总](projects/001-paperroute/README.md) · [在线研究页](https://yydshly.github.io/0913_codex_project/001-paperroute/research.html) · [试玩研究原型](https://yydshly.github.io/0913_codex_project/001-paperroute/) · [原始网页](https://www.paperroute.lol/) · [原版游戏](https://www.paperroute.lol/play/) · [实践指南](projects/001-paperroute/practical-guide.md)
 <!-- PROJECT_PREVIEWS_END -->
 
 ## 仓库结构
@@ -50,7 +50,7 @@
 
 ## 使用方式
 
-1. 选定一个原始仓库，按[新增项目指南](docs/adding-projects.md)分配编号并复制模板。
+1. 选定一个原始网页或仓库，按[新增项目指南](docs/adding-projects.md)分配编号并复制模板。
 2. 在子项目中记录研究目标、上游版本、运行步骤、截图与结论。
 3. 更新本页对应的索引行和预览卡片，保持编号升序。
 4. 有可展示的网页时，再按[部署说明](docs/deployment.md)添加演示入口。
