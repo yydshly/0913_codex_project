@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-labelledby="title desc">
+  <title id="title">GitHub Research Hub</title>
+  <desc id="desc">Discover, study, build and share. An ordered collection of open source research projects.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#163d4a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="280" rx="20" fill="url(#bg)"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="56" y="66" fill="#67e8f9" font-size="14" font-weight="600" letter-spacing="3">OPEN SOURCE / FIELD NOTES</text>
+    <text x="54" y="130" fill="#f8fafc" font-size="46" font-weight="700">GitHub Research Hub</text>
+    <text x="56" y="174" fill="#cbd5e1" font-size="19">Discover. Study. Build. Share.</text>
+    <text x="56" y="232" fill="#94a3b8" font-size="14">Research notes / Project index / Screenshots / Web demos</text>
+    <path d="M898 79V201" fill="none" stroke="#3c6974" stroke-width="2"/>
+    <g fill="#183746" stroke="#3c6974">
+      <rect x="864" y="49" width="268" height="52" rx="10"/>
+      <rect x="864" y="113" width="268" height="52" rx="10"/>
+      <rect x="864" y="177" width="268" height="52" rx="10"/>
+    </g>
+    <g fill="#67e8f9" font-size="16" font-weight="600">
+      <text x="884" y="81">001</text>
+      <text x="884" y="145">002</text>
+      <text x="884" y="209">003</text>
+    </g>
+    <g fill="#e2e8f0" font-size="16">
+      <text x="945" y="81">Explore an idea</text>
+      <text x="945" y="145">Understand the code</text>
+      <text x="945" y="209">Make it work</text>
+    </g>
+  </g>
+</svg>

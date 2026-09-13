@@ -1,0 +1,42 @@
+# System and editors
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+
+# Dependencies, caches and build products
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.next/
+.nuxt/
+.cache/
+.turbo/
+dist/
+build/
+coverage/
+*.log
+*.tsbuildinfo
+
+# Local copies of upstream repositories (link them in research notes instead)
+upstream/
+
+# Local scratch work
+.tmp/
+tmp/
