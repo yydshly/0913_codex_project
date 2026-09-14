@@ -20,7 +20,7 @@
 | 001 | [PaperRoute](projects/001-paperroute/README.md) | 浏览器 3D 送报、障碍反馈与七日进程；AI 辅助常规迭代案例，可复用技术价值有限 | [PaperRoute 官网](https://www.paperroute.lol/) | 已总结 | [研究汇总](https://yydshly.github.io/0913_codex_project/001-paperroute/research.html) · [研究原型](https://yydshly.github.io/0913_codex_project/001-paperroute/) |
 | 002 | [Dunhuang Aura](projects/002-dunhuang-aura/README.md) | 敦煌美术风格与出图流程说明书；可复用配色、构图、提示词和修图要求，未新增绘图能力，质量与效率增益未验证 | [govin-ai/dunhuang-aura-skill](https://github.com/govin-ai/dunhuang-aura-skill) | 已总结 | [研究结论与参考价值](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/) |
 | 003 | [Mountain Railway Diorama · 白鹭河谷](projects/003-mountain-railway-diorama/README.md) | 从原作研究到可调场景：三种构图、四季光线、风与植被联动、三种水流与方案保存/比较；附实景、能力边界和开发记录 | [iamtechartist/mountain-railway-diorama](https://github.com/iamtechartist/mountain-railway-diorama) | 已总结 | [研究分析](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/) · [实际场景](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html) · [开发过程](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/dev-log.html) |
-| 005 | [Stick & Steel](projects/005-stick-steel/README.md) | 人物表演与物理交互底座：视频创作、游戏展示及后续 Skill 路线 | [Genex 原作](https://genex.games/stick-steel) | 已复现 | [研究导览](https://yydshly.github.io/0913_codex_project/005-stick-steel/) · [人物演示](https://yydshly.github.io/0913_codex_project/005-stick-steel/demo/?view=characters) |
+| 005 | [Stick & Steel](projects/005-stick-steel/README.md) | 火柴人游戏效果构建；后续以 Skill 制作游戏效果视频或同类风格游戏 | [Genex 原作](https://genex.games/stick-steel) | 已复现 | [研究导览](https://yydshly.github.io/0913_codex_project/005-stick-steel/) · [游戏效果](https://yydshly.github.io/0913_codex_project/005-stick-steel/demo/?view=capabilities) |
 | 006 | [游戏效果、交互与教学体验](projects/006-emberfall-arpg/README.md) | 从 ARPG 效果参考与可玩实践，理解情绪、实时反馈和物理教学；附三图导览与完整研究 | 用户提供截图，原作 URL 待核实 | 研究中 | [研究导览](https://yydshly.github.io/0913_codex_project/006-emberfall-arpg/research/) · [试玩 ARPG](https://yydshly.github.io/0913_codex_project/006-emberfall-arpg/) |
 | 007 | [Mini Moto — Pine Ridge Park](projects/007-mini-moto-park/README.md) | 迷你越野摩托公园；已定位并体验原作，参考赛道与比赛联动、跟随镜头和车手能力；源码许可待核实 | [作者原帖](https://x.com/chrisjdimarco/status/2098919328368197682) | 已总结 | — |
 | 010 | [Mini Moto 赛车游戏参考与实践总结](projects/010-mini-moto-comparison/README.md) | 赛车类游戏参考：核心为场景构建与赛车手能力构建；保留基础竞速和驾驶演示，后续按项目需求开发 | [作者原作](https://mini-moto-park.chipchaunceytheonlyone.chatgpt.site/) | 已总结 | [网页研究与比赛](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/) · [自由驾驶练习](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/ride.html) |
@@ -61,11 +61,11 @@
 
 ### 005 · Stick & Steel
 
-[![005 四位人物同一时刻的造型与动作对照，点击进入效果导览](projects/005-stick-steel/assets/24-character-comparison.png)](https://yydshly.github.io/0913_codex_project/005-stick-steel/)
+[![005 火柴人游戏效果：姿态、受力、接球、握持、攀爬与镜头，点击进入效果导览](projects/005-stick-steel/assets/14-capabilities-overview.jpg)](https://yydshly.github.io/0913_codex_project/005-stick-steel/)
 
-**意义：**积累可复用的人物、动作、生活场景、声音与物理交互。已实现四种人物刻画、三个 MiniMax 配音故事和六组物理能力；可向叙事视频与游戏效果展示扩展。后续先完成视频导出，再沉淀由 Codex 等代理驱动的创作 Skill；当前尚无自动成片能力。
+**本质：用火柴人形象构建游戏效果。** 通过关节、动作、碰撞、受力、握持与攀爬表现角色操作和游戏反馈。后续将这套效果与制作流程沉淀为 Skill，由 Codex 等代理驱动，制作火柴人游戏效果视频，或构建采用同类火柴人风格与物理效果的游戏。现有人物和生活故事是风格与表演的扩展实验；视频导出与 Skill 尚待开发。
 
-*2026-09-14 本地实时渲染截图；选择性复用上游 MIT 模块，新增人物与故事编排。研究导览与互动演示已发布至 GitHub Pages。*
+*2026-09-14 六组实际交互截图；选择性复用上游 MIT 模块。点击图片进入研究导览，再亲手体验火柴人游戏效果。*
 
 [在线效果导览](https://yydshly.github.io/0913_codex_project/005-stick-steel/) · [配音故事](https://yydshly.github.io/0913_codex_project/005-stick-steel/demo/?view=stories) · [研究说明](projects/005-stick-steel/README.md) · [当前能力](projects/005-stick-steel/capabilities.md) · [后续开发与 Skill](projects/005-stick-steel/next-steps.md) · [本地运行](projects/005-stick-steel/app/README.md) · [验证记录](projects/005-stick-steel/notes.md) · [上游原作](https://genex.games/stick-steel)
 
