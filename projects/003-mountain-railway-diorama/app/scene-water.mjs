@@ -12,9 +12,9 @@ export function createWater(group,world,shared){
  const dividers=(world.riverRocks||[]).filter(r=>r.kind==='divider');
  const dividerCentres=Array.from({length:3},(_,i)=>{const r=dividers[i];return r?new THREE.Vector4(r.x,r.y,r.z,r.rx):new THREE.Vector4();});
  const dividerShapes=Array.from({length:3},(_,i)=>{const r=dividers[i];return r?new THREE.Vector2(r.ry,r.rz):new THREE.Vector2(1,1);});
- const uniforms={uDividerCount:{value:dividers.length},uDividerCentres:{value:dividerCentres},uDividerShapes:{value:dividerShapes},uPhase:phase,uThickness:shared.waterThickness,uFoamAmount:shared.waterFoam,uReflection:shared.waterReflection,uRipple:shared.waterRipple,uPoolZ:{value:style.end+.5},uSplit:{value:style.split?1:0},uFoam:{value:style.foam},uFlowScale:{value:style.flowScale},uSeason:shared.season,uTime:shared.time,uWind:shared.wind,uGust:shared.gust,uWindDir:shared.windDir,uRain:shared.rain,uFlow:shared.flow,uReflect:{value:target.texture},uReflectMatrix:{value:reflectionMatrix}};
+ const uniforms={uDividerCount:{value:dividers.length},uDividerCentres:{value:dividerCentres},uDividerShapes:{value:dividerShapes},uPhase:phase,uThickness:shared.waterThickness,uFoamAmount:shared.waterFoam,uReflection:shared.waterReflection,uRipple:shared.waterRipple,uPoolZ:{value:style.end+.5},uFallActive:{value:style.splash>0?1:0},uSplit:{value:style.split?1:0},uFoam:{value:style.foam},uFlowScale:{value:style.flowScale},uSeason:shared.season,uTime:shared.time,uWind:shared.wind,uGust:shared.gust,uWindDir:shared.windDir,uRain:shared.rain,uFlow:shared.flow,uReflect:{value:target.texture},uReflectMatrix:{value:reflectionMatrix}};
  const material=new THREE.MeshStandardMaterial({color:'#257b7d',roughness:.24,metalness:.02,side:THREE.DoubleSide});
- material.userData.seasonOwn=true;material.customProgramCacheKey=()=> 'wetland-water-v17-rills';
+ material.userData.seasonOwn=true;material.customProgramCacheKey=()=> 'wetland-water-v22-filaments';
  material.onBeforeCompile=shader=>{
   Object.assign(shader.uniforms,uniforms);
   const noise=`float hash21(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}float noise21(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(hash21(i),hash21(i+vec2(1,0)),f.x),mix(hash21(i+vec2(0,1)),hash21(i+vec2(1,1)),f.x),f.y);}`;
@@ -27,7 +27,7 @@ export function createWater(group,world,shared){
   `).replace('#include <worldpos_vertex>',`#include <worldpos_vertex>
    vReflect=uReflectMatrix*modelMatrix*vec4(transformed,1.);
   `);
-  shader.fragmentShader=`varying vec3 vFlowTangent;varying float vImpactShift;uniform int uDividerCount;uniform vec4 uDividerCentres[3];uniform vec2 uDividerShapes[3];uniform float uPhase,uThickness,uFoamAmount,uReflection,uRipple,uSplit,uFoam,uFlowScale,uPoolZ;uniform vec4 uSeason;uniform float uTime,uWind,uGust,uRain,uFlow;uniform vec2 uWindDir;uniform sampler2D uReflect;varying vec2 vRiver;varying float vWaterY,vObstacle,vDeflect,vContactFoam,vFall,vDepth,vChannel,vTravel,vCross;varying vec4 vReflect;${noise}\n`+shader.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
+  shader.fragmentShader=`varying vec3 vFlowTangent;varying float vImpactShift;uniform int uDividerCount;uniform vec4 uDividerCentres[3];uniform vec2 uDividerShapes[3];uniform float uPhase,uThickness,uFoamAmount,uReflection,uRipple,uSplit,uFoam,uFlowScale,uPoolZ,uFallActive;uniform vec4 uSeason;uniform float uTime,uWind,uGust,uRain,uFlow;uniform vec2 uWindDir;uniform sampler2D uReflect;varying vec2 vRiver;varying float vWaterY,vObstacle,vDeflect,vContactFoam,vFall,vDepth,vChannel,vTravel,vCross;varying vec4 vReflect;${noise}\n`+shader.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
    if(vDepth<=.005||vObstacle<.025)discard;
    // Exact fragment test for lip boulders; water-grid interpolation cannot leak.
    for(int solid=0;solid<3;solid++){
@@ -51,17 +51,25 @@ export function createWater(group,world,shared){
    float pool=birth*exp(-max(0.,downstream)*.37);
    vec2 poolUV=vec2(vCross/(1.+max(0.,downstream)*.055),flowTime*2.1)+warp*.6;
    float foamNoise=noise21(poolUV*1.7)*.65+noise21(poolUV*4.6+31.)*.35;
-   float churn=pool*smoothstep(.56,.78,foamNoise)*smoothstep(.27,.63,broad);
+   // The impact patch is textured inside the water surface, then fades downstream.
+   float impact=pool*uFallActive;
+   float churn=impact*smoothstep(.41,.70,foamNoise)*(.42+.58*smoothstep(.22,.65,broad));
    float rills=noise21(vec2((vCross-vDeflect)*5.2+warp.x*.8,flowTime*1.15))*.68+noise21(vec2(vCross*10.5,flowTime*2.6))*.32;
-   float threads=smoothstep(.65,.88,rills)*smoothstep(.3,.7,broad);
-   float foam=(cascade*threads*uFoam*.65+shoreFoam*.2+churn*uFoam*.72+vContactFoam*.22)*uFoamAmount*2.*bankFade;
+   float falling=smoothstep(.12,.8,vFall)*uFallActive;
+   float breaks=noise21(vec2(vCross*11.+warp.x*3.,flowTime*11.+noise21(vec2(vCross*4.,flowTime*.5))*2.));
+   float filaments=noise21(vec2((vCross-vDeflect)*18.+warp.x*1.5,flowTime*1.8));
+   float threads=smoothstep(.53,.80,rills)*smoothstep(.18,.68,breaks);
+   float fineThreads=smoothstep(.50,.79,filaments)*smoothstep(.22,.66,breaks);
+   float waterThreads=clamp(threads*.62+fineThreads*.65,0.,1.)*falling*bankFade;
+   float foam=(falling*threads*uFoam*.55+shoreFoam*.2+churn*uFoam*1.25+vContactFoam*.22)*uFoamAmount*2.*bankFade;
    diffuseColor.rgb=mix(vec3(.025,.115,.105),vec3(.23,.255,.15),exp(-vDepth*mix(.65,3.2,uThickness)));
-   diffuseColor.rgb=mix(diffuseColor.rgb,vec3(.035,.17,.16),cascade*.75);
+   diffuseColor.rgb=mix(diffuseColor.rgb,vec3(.06,.20,.19),falling*.75);
    diffuseColor.rgb*=mix(1.,.78+rills*.44,cascade);
-   diffuseColor.rgb=mix(diffuseColor.rgb,vec3(.12,.31,.29),cascade*smoothstep(.48,.8,rills)*(.06+(1.-uThickness)*.13));
+   // Narrow, interrupted highlights describe moving water even with foam off.
+   diffuseColor.rgb=mix(diffuseColor.rgb,vec3(.43,.65,.63),waterThreads*(.38+(1.-uThickness)*.22));
    diffuseColor.rgb*=vec3(1.)+uSeason.x*vec3(.08,.15,.04)+uSeason.z*vec3(.08,.03,-.08)+uSeason.w*vec3(.12,.13,.18);
    diffuseColor.rgb=mix(diffuseColor.rgb,vec3(.64,.77,.72),clamp(foam,0.,.95));
-   diffuseColor.rgb=mix(diffuseColor.rgb,diffuseColor.rgb*vec3(.73,.88,.92),cascade*uThickness*.3);
+   diffuseColor.rgb=mix(diffuseColor.rgb,diffuseColor.rgb*vec3(.73,.88,.92),falling*uThickness*.10);
    float ice=uSeason.w*(1.-smoothstep(.25,1.05,vDepth))*(1.-cascade);
    diffuseColor.rgb=mix(diffuseColor.rgb,vec3(.57,.76,.81),ice*.94);
   `).replace('#include <normal_fragment_maps>',`#include <normal_fragment_maps>
@@ -79,12 +87,13 @@ export function createWater(group,world,shared){
    float wake=sin(length(vec2(vCross*.42,spread))*8.-uPhase*3.)*exp(-spread*.36)*smoothstep(0.,.8,downstream);
    normal+=mat3(viewMatrix)*vec3(0.,0.,wake*.025*uRipple);
    normal.xz*=1.-ice*.85;normal=normalize(normal);
-   roughnessFactor=mix(roughnessFactor,.48,cascade);
+   roughnessFactor=mix(roughnessFactor,.42,falling);
+   roughnessFactor=mix(roughnessFactor,.65,clamp(churn*uFoamAmount*2.,0.,1.));
   `).replace('#include <opaque_fragment>',`
    vec2 reflectUV=vReflect.xy/vReflect.w+normal.xz*.009;
    float fresnel=pow(1.-abs(dot(normal,normalize(vViewPosition))),2.);
    vec3 reflected=texture2D(uReflect,clamp(reflectUV,.002,.998)).rgb;
-   outgoingLight=mix(outgoingLight,reflected,clamp((.12+fresnel*.46)*uReflection*1.65,0.,.92)*(1.-ice*.7)*(1.-clamp(vFall,0.,1.))*smoothstep(-2.,1.,vRiver.y)*smoothstep(.015,.5,vDepth));
+   outgoingLight=mix(outgoingLight,reflected,clamp((.12+fresnel*.46)*uReflection*1.65,0.,.92)*(1.-ice*.7)*(1.-clamp(vFall,0.,1.))*smoothstep(-2.,1.,vRiver.y)*smoothstep(.015,.5,vDepth)*(1.-clamp((churn*uFoam+foam*.45)*uFoamAmount*2.,0.,.9)));
    #include <opaque_fragment>`);
  };
  const water=mesh(geo,material,group,false),foamGroup=new THREE.Group();group.add(foamGroup);const rng=random(49);

@@ -51,11 +51,11 @@
 [在线研究结论](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/) · [完整研究](projects/002-dunhuang-aura/README.md) · [实验与延伸设计](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/studio.html#generation-note) · [原始仓库](https://github.com/govin-ai/dunhuang-aura-skill)
 ### 003 · Mountain Railway Diorama / 白鹭河谷
 
-研究山间铁路微缩景观，并独立重建可调地形的“白鹭河谷”。**可以看什么：**三种构图、春夏秋冬、风与植被联动，以及连续跌水、浅滩缓流、岩间分流。**研究价值：**观察地形、植被、水体与光照如何共同构成场景；V21 提供连续跌水与岸坡衔接样件（自然感仍待改善），保留白沫薄片与成组消散，支持方案保存、恢复、文件迁移与同机位比较，仍未提供自由绘轨或真实流体模拟。
+研究山间铁路微缩景观，并独立重建可调地形的“白鹭河谷”。**可以看什么：**三种构图、春夏秋冬、风与植被联动，以及连续跌水、浅滩缓流、岩间分流。**研究价值：**观察地形、植被、水体与光照如何共同构成场景；V22 细化当前水丝与入潭翻白（水路形态仍有限制），保留白沫薄片与成组消散，支持方案保存、恢复、文件迁移与同机位比较，仍未提供自由绘轨或真实流体模拟。
 
-[![003 白鹭河谷当前实景：秋季溪谷、环线列车、拱桥与连续跌水](projects/003-mountain-railway-diorama/assets/scene-v21-overview.jpg)](projects/003-mountain-railway-diorama/README.md)
+[![003 白鹭河谷当前实景：秋季溪谷、环线列车、拱桥与连续跌水](projects/003-mountain-railway-diorama/assets/scene-v22-overview.jpg)](projects/003-mountain-railway-diorama/README.md)
 
-*本研究独立重建的 V21 实景，2026-09-14 本地浏览器截图；点击图片进入研究与效果导览。*
+*本研究独立重建的 V22 实景，2026-09-14 本地浏览器截图；点击图片进入研究与效果导览。*
 
 [研究分析](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/) · [实际场景](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html) · [开发过程](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/dev-log.html) · [看效果与操作导览](projects/003-mountain-railway-diorama/README.md) · [查当前能力](projects/003-mountain-railway-diorama/capabilities.md) · [本地运行](projects/003-mountain-railway-diorama/app/README.md) · [开发记录](projects/003-mountain-railway-diorama/development-log.md) · [后续路线](projects/003-mountain-railway-diorama/next-steps.md) · [上游原作演示](https://iamtechartist.github.io/mountain-railway-diorama/)
 
