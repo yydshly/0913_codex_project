@@ -21,11 +21,30 @@ export const groundTextureShader=`
  float floorHash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
  float floorNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(floorHash(i),floorHash(i+vec2(1,0)),f.x),mix(floorHash(i+vec2(0,1)),floorHash(i+vec2(1,1)),f.x),f.y);}
 `;
-export function groundZones(world,x,z,slope,shore){
+// Smooth metre-scale fields define outcrop and soil regions. No extra objects,
+// displaced vertices, or camera-dependent patches are introduced.
+function terrainNoise(x,z){
+ const hash=(a,b)=>{const n=Math.sin(a*127.1+b*311.7)*43758.5453;return n-Math.floor(n);};
+ const ix=Math.floor(x),iz=Math.floor(z),fx=smooth(0,1,x-ix),fz=smooth(0,1,z-iz);
+ const a=hash(ix,iz)*(1-fx)+hash(ix+1,iz)*fx,b=hash(ix,iz+1)*(1-fx)+hash(ix+1,iz+1)*fx;
+ return a*(1-fz)+b*fz;
+}
+export function slopeMaterialField(world,x,z,slope,shore,y=world.height(x,z)){
+ const protection=smooth(3,7,shore)*smooth(2.6,5.5,world.closest(x,z).distance);
+ const amount=protection*smooth(.2,.65,slope);
+ const warp=terrainNoise(x*.065,z*.075)*3;
+ const exposure=smooth(.28,.75,terrainNoise(x*.16+warp+y*.025,z*.18-y*.055));
+ const soil=smooth(.32,.78,terrainNoise(x*.11-warp,z*.14+y*.035))*(1-exposure*.65);
+ return{amount,exposure,soil,tone:terrainNoise(x*.095,z*.1)};
+}
+export function groundZones(world,x,z,slope,shore,y){
  const broad=.5+.25*Math.sin(x*.14+Math.sin(z*.11)*1.5)+.25*Math.cos(z*.17-x*.06);
- const rock=smooth(.4,1.55,slope)*.78*(.82+.18*broad);
+ const field=slopeMaterialField(world,x,z,slope,shore,y);
+ const baseRock=smooth(.4,1.55,slope)*.78*(.82+.18*broad);
+ const mixedRock=clamp(baseRock*(1-field.amount*.65)+field.amount*field.exposure*.64);
+ const cliff=smooth(1.3,1.9,slope),rock=mixedRock*(1-cliff)+baseRock*cliff;
  const bank=1-smooth(.2,world.composition.bankWidth+1.5,shore);
- const soil=clamp(bank*.85+smooth(.63,.9,broad)*.16)*(1-rock);
+ const soil=clamp(bank*.85+smooth(.63,.9,broad)*.16+field.amount*field.soil*.44)*(1-rock);
  // Actual tree roots drive the forest floor when the scene supplies them.
  const clearing=1-.75*smooth(4,9,z)*(1-smooth(-12,-6,x));
  const forest=world.groundTrees?treeCoverAt(world.groundTrees,x,z):forestWeight(world.config.composition,x,z)*clamp(world.config.density/190)*clearing;
@@ -33,7 +52,7 @@ export function groundZones(world,x,z,slope,shore){
  const wood=floorCover*.9*(1-rock);
  const soilAvailable=Math.min(soil*(1-floorCover*.85),Math.max(0,1-rock-wood));
  const meadow=Math.max(0,1-rock-soilAvailable-wood);
- return {weights:[meadow,wood,soilAvailable,rock],variation:.96+broad*.08};
+ return {weights:[meadow,wood,soilAvailable,rock],variation:.96+(broad*(1-field.amount)+field.tone*field.amount)*.08,slopeRegion:field.amount};
 }
 export function groundColour(seasonWeights,zones,variation=1){
  const residual=smooth(.972,1.028,variation)*.42;
@@ -50,6 +69,10 @@ export const groundTextureColour=`
  float rockBand=floorNoise(vSeasonWorld.xz*.65+vec2(vSeasonWorld.y*.13,-vSeasonWorld.y*.21));
  float rockCracks=smoothstep(.63,.82,floorNoise(vSeasonWorld.xz*1.3+vSeasonWorld.y*.45));
  diffuseColor.rgb*=mix(1.,.78+rockBand*.28-rockCracks*.14,vGroundZones.w);
+ // Broad weathered rock layers belong only to dry slopes. Snow is applied
+ // afterwards by bindSeasonSurface, so winter does not inherit dark patches.
+ float stratum=floorNoise(vec2(vSeasonWorld.x*.17+vSeasonWorld.z*.11,vSeasonWorld.y*.52+floorNoise(vSeasonWorld.xz*.19)*.85));
+ diffuseColor.rgb*=mix(1.,.57+stratum*.84,vSlopeRegion*vGroundZones.w);
  float floorAmount=vGroundZones.x*.5+vGroundZones.y*.9+vGroundZones.z*.55;
  diffuseColor.rgb*=mix(1.,.79+floorFine*.23+floorPatch*.13,floorAmount);
  diffuseColor.rgb=mix(diffuseColor.rgb,diffuseColor.rgb*vec3(.72,.70,.65),smoothstep(.54,.76,floorPatch)*vGroundZones.y*.35);

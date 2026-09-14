@@ -4,6 +4,40 @@ import {createSpatial,createFoundation,terrainPresets} from './scene-world.mjs';
 import {windResponse} from './scene-vegetation.mjs';
 const world=createSpatial();
 
+test('坡面材质避开平地、河岸和铁路近旁，分区连续且可重复',async()=>{
+ const {slopeMaterialField}=await import('./scene-ground.mjs');
+ const distant={...world,closest:()=>({distance:20})};
+ for(let x=-30;x<30;x+=1.7){
+  assert.equal(slopeMaterialField(distant,x,-10,.15,10).amount,0);
+  assert.equal(slopeMaterialField(distant,x,-10,1,2.9).amount,0);
+  assert.equal(slopeMaterialField({...distant,closest:()=>({distance:2.5})},x,-10,1,10).amount,0);
+  const a=slopeMaterialField(distant,x,-10,1,10),b=slopeMaterialField(distant,x+.001,-10,1,10);
+  assert.deepEqual(a,slopeMaterialField(distant,x,-10,1,10));
+  for(const key of Object.keys(a)){assert.ok(a[key]>=0&&a[key]<=1);assert.ok(Math.abs(a[key]-b[key])<.01);}
+ }
+});
+
+test('三种构图及极端基底的坡面分区有层次，四季混色有界',async()=>{
+ const {groundZones,groundColour}=await import('./scene-ground.mjs');
+ const {compositions}=await import('./scene-composition.mjs');
+ for(const composition of Object.keys(compositions))for(const config of [compositions[composition].terrain,terrainPresets.canyon,terrainPresets.islands]){
+  const w=createSpatial({...config,composition});w.groundTrees=[];const rock=[];
+  for(let x=-36;x<-4;x+=2)for(let z=-23;z<15;z+=2){
+   if(!w.footprint(x,z))continue;
+   const slope=Math.hypot(w.height(x+.3,z)-w.height(x-.3,z),w.height(x,z+.3)-w.height(x,z-.3)),shore=Math.abs(x-w.riverX(z))-w.halfWidth(z),g=groundZones(w,x,z,slope,shore);
+   assert.ok(g.weights.every(v=>Number.isFinite(v)&&v>=0));assert.ok(Math.abs(g.weights.reduce((a,b)=>a+b)-1)<1e-10);
+   if(g.slopeRegion>.5)rock.push(g.weights[3]);
+   for(const season of [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1],[.2,.3,.3,.2]])assert.ok(groundColour(season,g.weights,g.variation).every(v=>v>0&&v<1));
+  }
+  if(rock.length>8)assert.ok(Math.max(...rock)-Math.min(...rock)>.1,'不能退化为整坡同一种岩色权重');
+ }
+ const w=createSpatial({composition:'ridge',relief:1.55});const foundation=createFoundation(new THREE.Scene(),w),g=foundation.group.children[0].geometry,a=g.attributes;
+ assert.equal(a.aSlopeRegion.count,a.position.count);let active=0;
+ for(let i=0;i<a.position.count;i++){const value=a.aSlopeRegion.getX(i);assert.ok(value>=0&&value<=1);if(value>.5)active++;}
+ assert.ok(active>100,'实际网格必须携带坡面分区');
+ foundation.group.traverse(o=>{o.geometry?.dispose();if(o.material)o.material.dispose();});
+});
+
 test('同组白沫在同一实际落点出生，逐渐散开并在寿命边界归零',async()=>{
  const {poolFoamClusterState,poolFoamState}=await import('./scene-water-modes.mjs');
  const emitter={lateral:.4,seed:.35},members=[{lateral:-.9,seed:0},{lateral:.9,seed:1}],life=4.5+emitter.seed*2;
