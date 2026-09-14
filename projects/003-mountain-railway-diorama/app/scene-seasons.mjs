@@ -37,7 +37,7 @@ export function bindSeasonSurface(material,shared){
    diffuseColor.rgb*=1.-uGroundWet*.12;
    diffuseColor.rgb*=mix(vec3(1.),vec3(.80,.86,.83),vBankWet);
    roughnessFactor=mix(roughnessFactor,.46,vBankWet);`:''}
-   float snowCover=smoothstep(.24,.72,upward+grain*.08)*uSeason.w;
+   float snowCover=smoothstep(.24,.72,upward+grain*.08)*uSeason.w${terrain?'*(1.-smoothstep(-.08,.08,vRiverDepth))':''};
    diffuseColor.rgb=mix(diffuseColor.rgb,vec3(.81,.87,.92)*(1.+grain*.025),snowCover*.98);
    roughnessFactor=mix(roughnessFactor,.94,snowCover);
   `);

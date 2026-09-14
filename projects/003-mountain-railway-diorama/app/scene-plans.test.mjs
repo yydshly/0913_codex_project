@@ -7,6 +7,9 @@ test('动物开关与观察机位可迁移，旧版方案兼容，非法动物�
  const p=fixture();p.environment.wildlife=false;p.observation.view='birds';assert.deepEqual(parsePlan(JSON.stringify(p)),p);
  p.observation.view='wildlife';assert.equal(validatePlan(p).observation.view,'wildlife');p.environment.wildlife='yes';assert.throws(()=>validatePlan(p));
 });
+test('鱼群开关与俯看机位兼容旧方案并可保存恢复',()=>{
+ const p=fixture();p.environment.fish=false;p.observation.view='fish';assert.deepEqual(parsePlan(JSON.stringify(p)),p);p.environment.fish=1;assert.throws(()=>validatePlan(p));
+});
 test('完整方案往返保持全部构图、模式、手动环境和镜头，返回独立副本',()=>{const p=fixture();p.compositions.marsh.width=9;p.waterTuning.rocky.foam=.12;const v=parsePlan(JSON.stringify(p));assert.deepEqual(v,p);v.compositions.marsh.width=8;assert.equal(p.compositions.marsh.width,9)});
 test('拒绝不完整、未来版本、非法枚举、越界和非有限数，不改原始对象',()=>{for(const mutate of[p=>delete p.environment,p=>p.schemaVersion=2,p=>p.composition='missing',p=>p.compositions.ridge.width=0,p=>p.waterTuning.rocky.foam=Infinity,p=>p.observation.stage=2.5,p=>p.camera.position=[0,0,0],p=>p.environment.rain='1']){const p=fixture();mutate(p);if(p.camera.position[0]===0)p.camera.target=[0,0,0];assert.throws(()=>validatePlan(p))}});
 test('JSON 大小和原型附加字段不会进入可应用配置',()=>{assert.throws(()=>parsePlan('bad'));assert.throws(()=>parsePlan(' '.repeat(262145)));const p=fixture();const raw=JSON.stringify(p).replace('{','{"__proto__":{"polluted":true},');const v=parsePlan(raw);assert.equal(Object.hasOwn(v,'__proto__'),false);assert.equal({}.polluted,undefined)});

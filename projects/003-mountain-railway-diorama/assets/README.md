@@ -414,3 +414,17 @@
 - [冬夜活动减少](scene-v25-winter-night.jpg)
 - [疏林浅湾春雨](scene-v25-spring-rain.jpg)
 - [原有河谷春日](scene-v25-classic-ducks.jpg)
+
+## V26 · 水下鱼群
+
+2026-09-14 在本地构建页面通过浏览器采集七张 1280 × 720 实景，未做图像生成或后期修图。具体构图、季节、光线、水流模式与水层厚薄见 [截图参数](scene-v26-checks.json)。
+
+- [夏季白天](scene-v26-summer-fish.jpg)
+- [秋季黄昏](scene-v26-autumn-fish.jpg)
+- [冬季水下](scene-v26-winter-fish.jpg)
+- [春季雨景](scene-v26-spring-rain.jpg)
+- [岩间分流下游](scene-v26-rocky-fish.jpg)
+- [原有跌水近景](scene-v26-rocky-water.jpg)
+- [浅湾夜间](scene-v26-night-fish.jpg)
+
+鱼处于水面以下，平缓水面透明混合显露河床；截图不代表真实光学、水生态模拟或性能测量。

@@ -1,0 +1,93 @@
+{
+  "date": "2026-09-14",
+  "screenshots": [
+    {
+      "image": "scene-v26-autumn-fish.jpg",
+      "view": "fish",
+      "season": "autumn",
+      "mode": "evening",
+      "composition": "ridge",
+      "water-mode": "continuous",
+      "water-thickness": "0.65",
+      "fish": "7",
+      "fish-enabled": "true",
+      "environment-ready": "true"
+    },
+    {
+      "image": "scene-v26-summer-fish.jpg",
+      "view": "fish",
+      "season": "summer",
+      "mode": "day",
+      "composition": "ridge",
+      "water-mode": "continuous",
+      "water-thickness": "0.65",
+      "fish": "7",
+      "fish-enabled": "true",
+      "environment-ready": "true"
+    },
+    {
+      "image": "scene-v26-winter-fish.jpg",
+      "view": "fish",
+      "season": "winter",
+      "mode": "day",
+      "composition": "ridge",
+      "water-mode": "continuous",
+      "water-thickness": "0.65",
+      "fish": "7",
+      "fish-enabled": "true",
+      "environment-ready": "true"
+    },
+    {
+      "image": "scene-v26-spring-rain.jpg",
+      "view": "fish",
+      "season": "spring",
+      "mode": "rain",
+      "composition": "marsh",
+      "water-mode": "stream",
+      "water-thickness": "0.4",
+      "fish": "7",
+      "fish-enabled": "true",
+      "environment-ready": "true"
+    },
+    {
+      "image": "scene-v26-rocky-fish.jpg",
+      "view": "fish",
+      "season": "spring",
+      "mode": "day",
+      "composition": "classic",
+      "water-mode": "rocky",
+      "water-thickness": "0.7",
+      "fish": "7",
+      "fish-enabled": "true",
+      "environment-ready": "true"
+    },
+    {
+      "image": "scene-v26-rocky-water.jpg",
+      "view": "waterfall",
+      "season": "spring",
+      "mode": "day",
+      "composition": "classic",
+      "water-mode": "rocky",
+      "water-thickness": "0.7",
+      "fish": "7",
+      "fish-enabled": "true",
+      "environment-ready": "true"
+    },
+    {
+      "image": "scene-v26-night-fish.jpg",
+      "view": "fish",
+      "season": "autumn",
+      "mode": "night",
+      "composition": "marsh",
+      "water-mode": "stream",
+      "water-thickness": "0.4",
+      "fish": "7",
+      "fish-enabled": "true",
+      "environment-ready": "true"
+    }
+  ],
+  "checks": [
+    "关闭鱼群后切换构图，鱼群仍隐藏；再打开可显示。",
+    "69 项自动检查通过。"
+  ]
+}

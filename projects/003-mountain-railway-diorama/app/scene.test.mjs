@@ -3,6 +3,22 @@ import * as THREE from './vendor/three.module.js';
 import {createSpatial,createFoundation,terrainPresets} from './scene-world.mjs';import {createService,stageDefinitions} from './scene-service.mjs';
 import {windResponse} from './scene-vegetation.mjs';
 const world=createSpatial();
+test('鱼群路线在三构图三水流的宽窄河道中有水深并避开跌水与岩石',async()=>{
+ const {fishHabitat,fishPoint}=await import('./scene-fish.mjs');const {createRiverRocks}=await import('./scene-rocks.mjs');
+ for(const composition of['ridge','classic','marsh'])for(const waterMode of['continuous','stream','rocky'])for(const width of[3,11]){
+  const w=createSpatial({composition,waterMode,width,relief:1.8,bend:7,fall:6});w.riverRocks=createRiverRocks(w);const h=fishHabitat(w);assert.ok(h.safe);assert.ok(h.minClearance>.23);
+  for(let i=0;i<64;i++){const p=fishPoint(w,i*Math.PI/32,2,1);assert.ok(p.y<w.waterSurface(p.x,p.z)-.4);assert.ok(p.y>w.height(p.x,p.z)+.23);assert.ok(p.z>w.waterStyle.end+3);}
+ }
+});
+test('实际鱼模型完整位于水面下和河床上，冬季减速，暂停保留位置与摆尾',async()=>{
+ const {createFish,fishActivity}=await import('./scene-fish.mjs');
+ const w=createSpatial({composition:'ridge',width:3,waterMode:'rocky'}),shared={time:{value:0},night:{value:0},season:{value:new THREE.Vector4(0,0,0,1)},flow:{value:1}};
+ const fish=createFish(new THREE.Group(),w,shared);for(let i=0;i<10;i++)fish.update(i*.1,0);
+ fish.group.updateMatrixWorld(true);const v=new THREE.Vector3();
+ fish.group.traverse(o=>{if(!o.isMesh)return;assert.equal(o.material.depthTest,true);assert.equal(o.material.transparent,false);assert.equal(o.material.userData.seasonOwn,true);const p=o.geometry.attributes.position;for(let i=0;i<p.count;i++){v.fromBufferAttribute(p,i).applyMatrix4(o.matrixWorld);assert.ok(v.y<w.waterSurface(v.x,v.z)-.07);assert.ok(v.y>w.height(v.x,v.z)+.05);}});
+ const p=fish.fish[0].root.position.clone(),tail=fish.fish[0].rear.rotation.y;fish.update(.9,0);assert.ok(fish.fish[0].root.position.equals(p));assert.equal(fish.fish[0].rear.rotation.y,tail);
+ assert.ok(fishActivity(1,0,1)<fishActivity(0,0,1));assert.ok(fishActivity(0,1,1)<fishActivity(0,0,1));
+});
 test('动物栖息地覆盖三构图、三水流与参数边界，鸭群远离铁路岩石与跌水',async()=>{
  const {wildlifeHabitat,duckPoint,birdPoint}=await import('./scene-wildlife.mjs');
  const {createRiverRocks}=await import('./scene-rocks.mjs');

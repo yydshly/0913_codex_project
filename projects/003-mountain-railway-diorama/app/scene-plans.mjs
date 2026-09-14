@@ -15,7 +15,8 @@ export function validatePlan(input){
  const waterTuning=Object.fromEntries(modes.map(id=>{const v=obj(tuning[id]);return[id,Object.fromEntries(['thickness','foam','mist','reflection','ripple'].map(k=>[k,num(v[k],0,1)]))]}));
  const environment={season:choice(e.season,['spring','summer','autumn','winter']),mode:choice(e.mode,['day','evening','rain','night']),recommendedLight:bool(e.recommendedLight),fixedSeasonView:bool(e.fixedSeasonView),wind:num(e.wind,0,1),direction:num(e.direction,0,360),gust:num(e.gust,0,1),flow:num(e.flow,0,3),rain:num(e.rain,0,1),fog:num(e.fog,0,2),detail:num(e.detail,0,1),litter:num(e.litter,0,1)};
  if(e.wildlife!==undefined)environment.wildlife=bool(e.wildlife);
- const observation={stage:num(o.stage,1,5),speed:num(o.speed,.4,2),paused:bool(o.paused),auto:bool(o.auto),wireframe:bool(o.wireframe),view:choice(o.view,['overview','free','bridge','station','waterfall','wind','meadow','back','train','birds','wildlife'])};
+ if(e.fish!==undefined)environment.fish=bool(e.fish);
+ const observation={stage:num(o.stage,1,5),speed:num(o.speed,.4,2),paused:bool(o.paused),auto:bool(o.auto),wireframe:bool(o.wireframe),view:choice(o.view,['overview','free','bridge','station','waterfall','wind','meadow','back','train','birds','wildlife','fish'])};
  if(!Number.isInteger(observation.stage))fail();
  const camera={position:vector(c.position),target:vector(c.target)};const distance=Math.hypot(...camera.position.map((v,i)=>v-camera.target[i]));if(distance<10-.001||distance>300.001)fail();
  return{kind:'egret-scene',schemaVersion:1,name:p.name.trim(),composition:choice(p.composition,ids),compositions,waterTuning,environment,observation,camera};
