@@ -26,12 +26,14 @@ jobs:
           node-version: '22'
           cache: npm
           cache-dependency-path: |
+            projects/011-frontend-visual-lab/app/package-lock.json
             projects/009-city-landmark-map/app/package-lock.json
             projects/001-paperroute/app/package-lock.json
             projects/005-stick-steel/app/client/package-lock.json
       - name: Install project dependencies
         run: |
           npm ci --prefix projects/009-city-landmark-map/app
+          npm ci --prefix projects/011-frontend-visual-lab/app
           npm ci --prefix projects/001-paperroute/app
           npm ci --prefix projects/005-stick-steel/app/client
       - name: Verify game rules
@@ -68,6 +70,7 @@ jobs:
       - name: Check published resources and navigation
         run: |
           node scripts/check-site.mjs
+          npm run test:pages --prefix projects/011-frontend-visual-lab/app
           npm run check --prefix projects/009-city-landmark-map/app
           npm run check --prefix projects/008-terrain-motion-lab/app
           node projects/005-stick-steel/app/check.mjs

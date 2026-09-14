@@ -17,7 +17,7 @@ for (const name of projects) {
     throw error;
   }
   execFileSync(process.execPath, [build], { cwd: app, stdio: 'inherit' });
-  const output = path.join(app, 'dist');
+  const output = path.join(app, 'dist', name === '011-frontend-visual-lab' ? 'client' : '');
   await stat(path.join(output, 'index.html'));
   const destination = path.join(root, 'site', name);
   await mkdir(destination, { recursive: true });

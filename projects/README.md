@@ -21,6 +21,8 @@
 - [009 · 城景工坊 / 城市景点汇总 Skill](009-city-landmark-map/README.md)：汇总城市及周边值得去的景点，以图的方式展示特色、介绍与大体位置。当前为研究原型，后期需要优化实现。[实际引导与记录](009-city-landmark-map/publishing.md)。
 - [010 · Mini Moto 赛车游戏参考与实践总结](010-mini-moto-comparison/README.md)：赛车类游戏参考，核心是场景构建和赛车手能力构建。保留四车比赛与发卡弯驾驶原型，研究已总结，后续按具体项目需求开发；当前不是成熟赛车框架。 [网页研究与比赛](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/) · [自由驾驶练习](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/ride.html)。
 
+- [011 · 前端视觉实验室](011-frontend-visual-lab/README.md)：理解内容结构、视觉设计、动效编排、场景特效四种优化方式，以我们的真实效果图进入64项交互、16个原版组件和实际作品场景。[摘要](011-frontend-visual-lab/understanding.md) · [发布记录](011-frontend-visual-lab/publishing.md)。
+
 新增编号取现有项目目录的最大编号加一；既有编号保持稳定。
 
 新增时复制[研究模板](../templates/project/README.md)，具体步骤见[新增项目指南](../docs/adding-projects.md)。

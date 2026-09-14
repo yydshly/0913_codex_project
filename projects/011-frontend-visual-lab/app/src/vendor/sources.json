@@ -1,0 +1,171 @@
+{
+  "commit": "44de3787b77d78477a7c03a4c81a7d5ea317cdbc",
+  "fetched": "2026-09-14",
+  "files": {
+    "src/lib/Liquid/Liquid.tsx": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/Liquid/Liquid.tsx",
+      "sha256": "38429f9812f661e1cea24da2cfa59e902b959238a4f25f947cd06990e019d9db",
+      "bytes": 2833
+    },
+    "src/lib/Liquid/LiquidVanilla.ts": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/Liquid/LiquidVanilla.ts",
+      "sha256": "b37561590c7d6dd43b0f7e7ba4b9494d51186feccdbcf750a8ec1a7757801548",
+      "bytes": 28315
+    },
+    "src/lib/rect-cache.ts": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/rect-cache.ts",
+      "sha256": "4f743f99a3cf0830f567d01143bd820776589dea1172f2eb0ccfa002d0a08382",
+      "bytes": 646
+    },
+    "src/lib/Blaze/Blaze.tsx": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/Blaze/Blaze.tsx",
+      "sha256": "81fdb537ddc6ed4f772be84ffa275e45504b4fb782f5c3e44d2712fd3d8af70f",
+      "bytes": 2812
+    },
+    "src/lib/Blaze/BlazeVanilla.ts": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/Blaze/BlazeVanilla.ts",
+      "sha256": "246fcab70b7c5372c79ea9850e55d9a7a9696e144151b9241facc4b020142a8a",
+      "bytes": 19890
+    },
+    "src/lib/Glass/Glass.tsx": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/Glass/Glass.tsx",
+      "sha256": "d5c4dee4d4a6c6d30839773198d3c4a29271aa18616fddbbb2ee69fb9571650e",
+      "bytes": 2812
+    },
+    "src/lib/Glass/GlassVanilla.ts": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/Glass/GlassVanilla.ts",
+      "sha256": "26e1b304ee608e74ecc286cb3d589d29d7ffc4634d77d123042b5d86b4100190",
+      "bytes": 19202
+    },
+    "src/lib/Shatter/Shatter.tsx": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/Shatter/Shatter.tsx",
+      "sha256": "8c726da4b167cb9ae2848becfc59815ac254adfa00efcf154713e83ce29af36d",
+      "bytes": 2846
+    },
+    "src/lib/Shatter/ShatterVanilla.ts": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/Shatter/ShatterVanilla.ts",
+      "sha256": "5b993169cdc6f868190dc3be8514f3f895fb4aa972c09a8933b8904464c84060",
+      "bytes": 22000
+    },
+    "src/lib/ParticleReveal/ParticleReveal.tsx": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/ParticleReveal/ParticleReveal.tsx",
+      "sha256": "7fbc9a487683d0a6e11f3fc34eccf3a27ff5d01d70d12590a0cf4cae03a00a0a",
+      "bytes": 2937
+    },
+    "src/lib/ParticleReveal/ParticleRevealVanilla.ts": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/ParticleReveal/ParticleRevealVanilla.ts",
+      "sha256": "c0074e188b6b813ea82f54da075fd0f20ca92cc83f436aaf6eba10476aa78082",
+      "bytes": 15837
+    },
+    "src/lib/VHS/VHS.tsx": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/VHS/VHS.tsx",
+      "sha256": "06b026ac6312cfde973107d65bd84ab780fa1193b1ca759e1f9689fed1e68920",
+      "bytes": 2786
+    },
+    "src/lib/VHS/VHSVanilla.ts": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/VHS/VHSVanilla.ts",
+      "sha256": "a825c211e1437fa9cee41e65632872f0a6a2715796742da0f2498f4b5fdbae6c",
+      "bytes": 16198
+    },
+    "src/lib/Ripple/Ripple.tsx": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/Ripple/Ripple.tsx",
+      "sha256": "6360838ccaf6a81c0fe71b9dc5b99b5e997b8ecb0033fa39482213d9f669ef0d",
+      "bytes": 2825
+    },
+    "src/lib/Ripple/RippleVanilla.ts": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/Ripple/RippleVanilla.ts",
+      "sha256": "fef4d5425f2ad47a8c87160908550a674f4aceb98e37acc2051a1f948e3fb41e",
+      "bytes": 14998
+    },
+    "src/lib/Droplets/Droplets.tsx": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/Droplets/Droplets.tsx",
+      "sha256": "978a4afdd4924cd66aab10036f1ab702f7b9cc59f3785e130657a57b0ff0ab3c",
+      "bytes": 2859
+    },
+    "src/lib/Droplets/DropletsVanilla.ts": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/Droplets/DropletsVanilla.ts",
+      "sha256": "4f4040c3fe7a499837a2aa17c9ab3fe382266c01b04ecdd2478c8bf009dafdbe",
+      "bytes": 22779
+    },
+    "src/lib/Clouds/Clouds.tsx": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/Clouds/Clouds.tsx",
+      "sha256": "3a89e6485c93d3fa39546c4789a3a64fa8204c5f96f6e5b6d4507c9d9e6b968e",
+      "bytes": 2833
+    },
+    "src/lib/Clouds/CloudsVanilla.ts": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/Clouds/CloudsVanilla.ts",
+      "sha256": "b2fd27e7099d9892adc9bce0302c931f3c80578ba0dd5d88e3d077cc6dc23aed",
+      "bytes": 22584
+    },
+    "src/lib/Laser/Laser.tsx": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/Laser/Laser.tsx",
+      "sha256": "5f359619638a88dcef53d2419a90a25ceac8e3f5dddcf91569e15a4ffa96300e",
+      "bytes": 2812
+    },
+    "src/lib/Laser/LaserVanilla.ts": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/Laser/LaserVanilla.ts",
+      "sha256": "701b5ab6b26a7787181677977f8c2497c5d50b2656543ee5edf1c49fe3e908a4",
+      "bytes": 19013
+    },
+    "src/lib/Bubble/Bubble.tsx": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/Bubble/Bubble.tsx",
+      "sha256": "cd4e7f87312bd08a3bfdc8511371c294bb4d8b83b8196559db594952bcb4a5b1",
+      "bytes": 2833
+    },
+    "src/lib/Bubble/BubbleVanilla.ts": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/Bubble/BubbleVanilla.ts",
+      "sha256": "e91e4d88350ba012d842000e324f8cf3bf88ce4481d1542b9931ad73678f8d69",
+      "bytes": 18838
+    },
+    "src/lib/ForceField/ForceField.tsx": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/ForceField/ForceField.tsx",
+      "sha256": "5da427098477260d0ec92b4380227dad169a2bf2a37236ee88593f40338239c9",
+      "bytes": 2885
+    },
+    "src/lib/ForceField/ForceFieldVanilla.ts": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/ForceField/ForceFieldVanilla.ts",
+      "sha256": "a77142d4c3c2b082a6e560771f775a404caf37983e2fe23e4e788133c724e0f0",
+      "bytes": 40588
+    },
+    "src/lib/GlyphRain/GlyphRain.tsx": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/GlyphRain/GlyphRain.tsx",
+      "sha256": "155681321d12e0254173963c217579eeac74c0b2b7a1db77bf8418126d36a3cf",
+      "bytes": 2872
+    },
+    "src/lib/GlyphRain/GlyphRainVanilla.ts": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/GlyphRain/GlyphRainVanilla.ts",
+      "sha256": "67a81072685158da52ca705a37c6699f6959c214129a664c3c8362eda14287a6",
+      "bytes": 26324
+    },
+    "src/lib/Frost/Frost.tsx": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/Frost/Frost.tsx",
+      "sha256": "f37a50b40a478cd522b7e9e330f5d71356bd7a62227736274e8162177e923ccf",
+      "bytes": 2945
+    },
+    "src/lib/Frost/FrostVanilla.ts": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/Frost/FrostVanilla.ts",
+      "sha256": "4fe93196af243b1418e343d751da3e3276f0324d44de02c7c848816821cfabb1",
+      "bytes": 36496
+    },
+    "src/lib/FlameWrap/FlameWrap.tsx": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/FlameWrap/FlameWrap.tsx",
+      "sha256": "0f48c80b81dea1f2c6b158dc50c927de45a7a36aebc792be7cce4df513d39b78",
+      "bytes": 3142
+    },
+    "src/lib/FlameWrap/FlameWrapVanilla.ts": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/FlameWrap/FlameWrapVanilla.ts",
+      "sha256": "50556c7f52f1ccd8181c5dec2d73542b6c33b61397cef8c5fd161711c830c6f0",
+      "bytes": 22561
+    },
+    "src/lib/HexFloat/HexFloat.tsx": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/HexFloat/HexFloat.tsx",
+      "sha256": "4b249dd890053adbaec5256d5b988ff7c4cca7785113600d4b85d867e201243a",
+      "bytes": 2859
+    },
+    "src/lib/HexFloat/HexFloatVanilla.ts": {
+      "url": "https://raw.githubusercontent.com/DavidHDev/canvas-ui/44de3787b77d78477a7c03a4c81a7d5ea317cdbc/src/lib/HexFloat/HexFloatVanilla.ts",
+      "sha256": "4a328970a0cac7c0fa8ed8e02a86bd670668bf9334a69831991ddceda572ffc3",
+      "bytes": 48338
+    }
+  }
+}
