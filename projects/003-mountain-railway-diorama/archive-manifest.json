@@ -1,0 +1,48 @@
+{
+  "project": "003-mountain-railway-diorama",
+  "sceneVersion": "V23",
+  "archiveTag": "003-v23-archive-2026-09-14",
+  "date": "2026-09-14",
+  "runtimeBaselineCommit": "66c1e1d0807510213b59e9a3552103ea3d088ca1",
+  "upstream": {
+    "url": "https://github.com/iamtechartist/mountain-railway-diorama",
+    "commit": "6e8b0fbb806e486d7819b6d297b92f4ecf3d258b",
+    "license": "MIT"
+  },
+  "threeRevision": "185",
+  "verification": {
+    "automatedTests": 58,
+    "result": "passed",
+    "screenshots": "复用 V23 的 10 张实景；本轮未新增视觉修改或截图"
+  },
+  "excluded": [
+    "其他子项目",
+    "浏览器 localStorage 私人方案",
+    "动画时间与列车当前进度",
+    "app/dist 构建产物",
+    ".git"
+  ],
+  "runtimeHashes": {
+    "app/scene-atmosphere.mjs": "8aacc77b72cfc5c2a8d4a42a929cfd800016183e747093b888cfc1bae01b36e9",
+    "app/scene-cascade.mjs": "c390740c22e6159fd16162926215969aad53c1eb1b9a9eec95f4899a0d947eca",
+    "app/scene-composition.mjs": "4f990ff94d2a0f75752fefe57bd0b999876467b0b04ceaebf997e6c0232e811c",
+    "app/scene-details.mjs": "98dac9603c4a4669bfaa565f44fd6ac62a1cd7e08eb7edd47299112289f27395",
+    "app/scene-ground-cover.mjs": "024e7e2a0f391c336bf19108d8d1fe7fad2c68e603968a695a082266a5abab10",
+    "app/scene-ground.mjs": "67b0b74cd459291b39d71ccd31702a7f37c4197edd84ba31a4f9eb4538a18c9f",
+    "app/scene-landscape.mjs": "cedbed5477aa5416101b93d617c7980211564d9cbcdaeafc435f0f2d39e06794",
+    "app/scene-plans-ui.mjs": "a8af506ba76101f99087a9e383a2370067ff6bda17576b6faca10a199fceb940",
+    "app/scene-plans.mjs": "5e7ccf7323645356eaf80182c8ba2b3fdce128b595a6ffcf52561aa4118efd75",
+    "app/scene-regions.mjs": "ca0817118a61166cec3297abade173a85e6a72b69f593b5df67a2bd9b9dbe7f8",
+    "app/scene-rocks.mjs": "7648bfb0aa423fd2f7d2c31acab54d42e7d8331e074957c871cf0a2657a79eb7",
+    "app/scene-seasons.mjs": "4ea99a6a6d51f18cdb44028767b9e3094fb5be540d83a09f440bff7ec2edab05",
+    "app/scene-service.mjs": "5efb06e2e5220cd2d3053731b9db7c0bcd4b33c0f5419c98372cca302192979d",
+    "app/scene-train.mjs": "355a575440363d71a5aa9868c5dd8c94bf209157eb1abe94cc012965fa793980",
+    "app/scene-tree-shape.mjs": "97123595a7e81d68d18a2ce1627014acd28b38b1177e00c0b90efc04f1161003",
+    "app/scene-vegetation.mjs": "a210c67b6059216a9dfda4bfd533ce42bfbd3b3dde6801a46dd25f3ffc62e5c8",
+    "app/scene-water-modes.mjs": "a19ee7a3dad4f46eb57cd8187b1edb2a96d61fe3a01edaf565c1ee9df34540ec",
+    "app/scene-water.mjs": "b14c0c034d34a8a84fbca0cf17302c7e8aee79df6b014e91e5980501b12ea94d",
+    "app/scene-world.mjs": "f62131adf6fcf40d9522dec26ba53d14442dc0606ab27a114c85a14e5371e786",
+    "app/scene.mjs": "ec21d21b61515bf9212294fde1a92a5ca22bf83237c3a5cd53e0aaeefca4f599"
+  },
+  "hashEncoding": "SHA-256 of Git blob bytes (archive bytes; repository LF line endings)"
+}

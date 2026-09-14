@@ -1,5 +1,7 @@
 # 003 · Mountain Railway Diorama / 白鹭河谷
 
+[V23 归档与技术原理](archive.md) · [在线原理说明](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/archive.html)
+
 **研究一个山间铁路微缩作品，并把理解落到可操作的网页场景。** 本项目固定版本研究原作 Yamaai（山あい），另以景区观景展示为用途，独立重建“白鹭河谷”：调整地形与河道，切换四季和光线，观察风、树木、水流如何共同变化。
 
 ![白鹭河谷 V22 全景：秋季树群、河谷跌水、观景拱桥与环线列车](assets/scene-v23-overview.jpg)
