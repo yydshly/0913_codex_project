@@ -47,6 +47,8 @@ jobs:
           npm run test:audio --prefix projects/005-stick-steel/app/client
       - name: Configure Pages
         uses: actions/configure-pages@v5
+      - name: Install 006 research document renderer
+        run: python3 -m pip install -r projects/006-emberfall-arpg/app/requirements-research.txt
       - name: Build all static projects
         run: node scripts/build-site.mjs
       - name: Check published resources and navigation
