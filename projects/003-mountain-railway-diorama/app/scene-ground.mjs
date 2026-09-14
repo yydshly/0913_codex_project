@@ -1,5 +1,6 @@
 import * as THREE from './vendor/three.module.js';
 import {forestWeight} from './scene-composition.mjs';
+import {naturalFallZone} from './scene-water-modes.mjs';
 
 // Meadow, woodland floor, exposed soil, rock. Hex colours are converted to
 // linear working space once; seasons blend albedo rather than tinting green.
@@ -42,7 +43,9 @@ export function groundZones(world,x,z,slope,shore,y){
  const field=slopeMaterialField(world,x,z,slope,shore,y);
  const baseRock=smooth(.4,1.55,slope)*.78*(.82+.18*broad);
  const mixedRock=clamp(baseRock*(1-field.amount*.65)+field.amount*field.exposure*.64);
- const cliff=smooth(1.3,1.9,slope),rock=mixedRock*(1-cliff)+baseRock*cliff;
+ const cliff=smooth(1.3,1.9,slope);
+ const fallBank=naturalFallZone(world,z)*smooth(4.3,8,world.closest(x,z).distance)*smooth(-2,-.4,shore)*(1-smooth(1,5,shore))*smooth(.06,.3,slope);
+ const rock=clamp(mixedRock*(1-cliff)+baseRock*cliff+fallBank*.8);
  const bank=1-smooth(.2,world.composition.bankWidth+1.5,shore);
  const soil=clamp(bank*.85+smooth(.63,.9,broad)*.16+field.amount*field.soil*.44)*(1-rock);
  // Actual tree roots drive the forest floor when the scene supplies them.

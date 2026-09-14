@@ -21,10 +21,13 @@ export function createWaterTuning(){
 
 // Integrate flow time so changing speed does not jump the texture position.
 export function advanceWaterPhase(phase,dt,flow){return phase+Math.max(0,dt)*Math.max(0,flow);}
-export const waterLaneShift=cross=>.48*Math.sin(cross*1.17)+.23*Math.sin(cross*2.31);
-export const waterImpactZ=(world,cross=0)=>world.waterStyle.end-waterLaneShift(cross)+.25;
+// Continuous falls share a broader, offset lip across geometry, travel and impact.
+export const naturalFallZone=(world,z)=>world.config.waterMode==='continuous'&&world.config.naturalFalls!==false?smoothFall(-12,-7,z)*(1-smoothFall(-2,4,z)):0;
+const smoothFall=(a,b,x)=>{const t=Math.max(0,Math.min(1,(x-a)/(b-a)));return t*t*(3-2*t);};
+export const waterLaneShift=(cross,world)=>.48*Math.sin(cross*1.17)+.23*Math.sin(cross*2.31)+(world?.config.waterMode==='continuous'&&world.config.naturalFalls!==false?.95*Math.sin(cross*.55)+.5*Math.sin(cross*.95+.6):0);
+export const waterImpactZ=(world,cross=0)=>world.waterStyle.end-waterLaneShift(cross,world)+.25;
 export function waterTravel(world,z,cross=0){
- const {start,end}=world.waterStyle,d=end-start,a=z+waterLaneShift(cross)-start,entry=1.15*1.35;
+ const {start,end}=world.waterStyle,d=end-start,a=z+waterLaneShift(cross,world)-start,entry=1.15*1.35;
  if(a<=0)return a/1.15-3/1.15*Math.log((1+.35*Math.exp(a/3))/1.35);
  const fallTime=d/entry*Math.log(1+2.2*Math.min(a/d,1))/2.2;
  if(a<=d)return fallTime;

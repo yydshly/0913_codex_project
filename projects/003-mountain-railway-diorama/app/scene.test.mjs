@@ -405,7 +405,7 @@ test('流纹在上游加速且跨越跌水边界连续，各横向水线可逆',
  for(const waterMode of ['continuous','stream','rocky']){
   const w=createSpatial({waterMode});
   for(const lane of [-8,-3,0,3,8]){
-   const shift=waterLaneShift(lane),start=w.waterStyle.start-shift,end=w.waterStyle.end-shift;
+   const shift=waterLaneShift(lane,w),start=w.waterStyle.start-shift,end=w.waterStyle.end-shift;
    const speed=z=>.0002/(waterTravel(w,z+.0001,lane)-waterTravel(w,z-.0001,lane));
    assert.ok(speed(start-.1)>speed(start-8)*1.2);
    assert.ok(speed(end-.1)>speed(start+.1)*2);
@@ -421,7 +421,7 @@ test('各横向落点、白沫出生和飞沫入口对应同一跌落边缘',asy
   const w=createSpatial({...config,waterMode});
   for(const lateral of [-.8,-.3,0,.4,.8]){
    const cross=lateral*.48*w.halfWidth(w.waterStyle.end),impact=waterImpactZ(w,cross),p=poolFoamState(w,0,lateral,.4);
-   assert.ok(Math.abs(impact+waterLaneShift(cross)-w.waterStyle.end-.25)<1e-9);assert.ok(Math.abs(p.z-impact)<.009);assert.equal(p.opacity,0);
+   assert.ok(Math.abs(impact+waterLaneShift(cross,w)-w.waterStyle.end-.25)<1e-9);assert.ok(Math.abs(p.z-impact)<.009);assert.equal(p.opacity,0);
    assert.ok(poolFoamState(w,.5,lateral,.4).z>p.z);
   }
  }
@@ -440,4 +440,45 @@ test('实际水面网格保持有限法线与固体避让属性，三种模式�
   }
   g.dispose();
  }
+});
+
+
+test('跌水样件保持其他水流、局部之外地形、种植基准与轨道净空',async()=>{
+ const {compositions}=await import('./scene-composition.mjs');
+ for(const composition of Object.keys(compositions))for(const waterMode of ['continuous','stream','rocky']){
+  const config={...compositions[composition].terrain,composition,waterMode},w=createSpatial(config),old=createSpatial({...config,naturalFalls:false});
+  assert.deepEqual(w.samples,old.samples);
+  for(let z=-30;z<=30;z+=3)for(let x=-40;x<=40;x+=4){
+   assert.equal(w.halfWidth(z),old.halfWidth(z));
+   assert.equal(w.layoutHeight(x,z),old.layoutHeight(x,z));
+   if(waterMode!=='continuous'||z<=-12||z>=4){assert.equal(w.height(x,z),old.height(x,z));assert.equal(w.waterSurface(x,z),old.waterSurface(x,z));}
+  }
+  for(const {p} of w.samples)if(!w.bridge(p))assert.ok(Math.abs(w.height(p.x,p.z)-old.height(p.x,p.z))<1e-9);
+ }
+});
+
+test('连续跌水局部形态连续，中心水路保持通畅且两侧网格边界收进陆地',async()=>{
+ const {compositions}=await import('./scene-composition.mjs');
+ for(const composition of Object.keys(compositions))for(const terrain of [compositions[composition].terrain,terrainPresets.canyon,terrainPresets.islands]){
+  const w=createSpatial({...terrain,composition});
+  for(let z=-12;z<=4;z+=.4){
+   for(const u of [-.7,0,.7]){
+    const x=w.riverX(z)+u*w.halfWidth(z),y=w.waterSurface(x,z);
+    assert.ok(Number.isFinite(w.height(x,z)));assert.ok(Math.abs(w.height(x+.001,z)-w.height(x,z))<.03);
+    if(w.closest(x,z).distance>4.3)assert.ok(w.height(x,z)<y,'无遮挡水流保留连续的湿河心');
+   }
+   for(const side of [-1,1]){const x=w.riverX(z)+side*(w.halfWidth(z)+1.2);if(w.closest(x,z).distance>4.3)assert.ok(w.height(x,z)>w.waterSurface(x,z),'水网格边界藏入干岸，不能横向悬空');}
+  }
+ }
+});
+
+test('实际水网格与变形跌口共用落点偏移和河床深度',async()=>{
+ const {createWaterGeometry}=await import('./scene-water.mjs');const {waterLaneShift}=await import('./scene-water-modes.mjs');
+ const w=createSpatial({composition:'ridge',width:6,bend:4}),g=createWaterGeometry(w),a=g.attributes;
+ for(let i=0;i<a.position.count;i+=47){const x=a.position.getX(i),z=a.position.getZ(i),lane=a.aCross.getX(i);
+  assert.ok(Math.abs(a.aImpactShift.getX(i)-waterLaneShift(lane,w))<1e-5);
+  assert.ok(Math.abs(a.aDepth.getX(i)-(w.waterSurface(x,z)-w.height(x,z)))<1e-4);
+  for(const v of [a.normal.getX(i),a.normal.getY(i),a.normal.getZ(i)])assert.ok(Number.isFinite(v));
+ }
+ g.dispose();
 });

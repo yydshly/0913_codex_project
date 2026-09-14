@@ -1,7 +1,7 @@
 import * as THREE from './vendor/three.module.js';
 import {getComposition,landformHeight} from './scene-composition.mjs';
 import {groundZones} from './scene-ground.mjs';
-import {getWaterMode,waterLaneShift} from './scene-water-modes.mjs';
+import {getWaterMode,waterLaneShift,naturalFallZone} from './scene-water-modes.mjs';
 export const V=(x,y,z)=>new THREE.Vector3(x,y,z);
 export const clamp=THREE.MathUtils.clamp;
 export const smooth=(a,b,x)=>THREE.MathUtils.smoothstep(x,a,b);
@@ -16,10 +16,12 @@ export function createSpatial(settings={}){
  const samples=Array.from({length:600},(_,i)=>({p:curve.getPointAt(i/600),u:i/600}));
  const closest=(x,z)=>{let best=samples[0],distance=Infinity;for(const item of samples){const d=(item.p.x-x)**2+(item.p.z-z)**2;if(d<distance){distance=d;best=item}}return{...best,distance:Math.sqrt(distance)}};
  const riverX=z=>9+config.bend*Math.sin(z*.075);
- const halfWidth=z=>config.width*(.58+.5*smooth(-5,9,z))*(1+.08*Math.sin(z*.43)+.035*Math.sin(z*.91));
+ const baseHalfWidth=z=>config.width*(.58+.5*smooth(-5,9,z))*(1+.08*Math.sin(z*.43)+.035*Math.sin(z*.91));
+ const fallContext={config};
+ const halfWidth=baseHalfWidth;
  const waterLevel=z=>1.05+effectiveDrop*(1-smooth(waterStyle.start,waterStyle.end,z))-.002*Math.max(0,z+2);
  // A staggered rock lip breaks the straight waterfall edge; both water and bed use it.
- const waterSurface=(x,z)=>{const lateral=x-riverX(z),shift=waterLaneShift(lateral);return 1.05+effectiveDrop*(1-smooth(waterStyle.start,waterStyle.end,z+shift))-.002*Math.max(0,z+2);};
+ const waterSurface=(x,z)=>{const lateral=x-riverX(z),shift=waterLaneShift(lateral,fallContext);return 1.05+effectiveDrop*(1-smooth(waterStyle.start,waterStyle.end,z+shift))-.002*Math.max(0,z+2);};
  const edge=a=>1+.033*Math.sin(3*a)+.018*Math.sin(7*a);
  const footprint=(x,z)=>Math.hypot(x/49,z/35)<edge(Math.atan2(z/35,x/49));
  const bridge=p=>p.x>7&&p.x<30&&p.z>14;
@@ -29,10 +31,18 @@ export function createSpatial(settings={}){
   const hills=landformHeight(composition,x,z);
   let h=1.7+config.relief*hills;
   h+=(Math.sin(x*.27+z*.18)*Math.cos(z*.24)+Math.sin(x*.85+z*.2)*.12)*.48*config.relief;
-  const d=Math.abs(x-riverX(z)),shore=halfWidth(z),surface=waterSurface(x,z);
+  const d=Math.abs(x-riverX(z)),shore=halfWidth(z)*(layout?1:1-.10*naturalFallZone(fallContext,z));
+  const surface=layout?1.05+effectiveDrop*(1-smooth(waterStyle.start,waterStyle.end,z+waterLaneShift(x-riverX(z))))-.002*Math.max(0,z+2):waterSurface(x,z);
   const bank=THREE.MathUtils.lerp(Math.max(h,surface+.38),h,smooth(shore+1.2,shore+5,d));
   h=layout?THREE.MathUtils.lerp(surface-1.15,h,smooth(shore*.88,shore+3.8,d)):THREE.MathUtils.lerp(surface-1.15,bank,smooth(shore*.82,shore+1.2,d));
   const near=closest(x,z);
+  if(!layout){
+   const bankDistance=d-shore,run=Math.max(0,bankDistance);
+   const shoulder=1.05+effectiveDrop*(1-smooth(-10,3,z));
+   const terrace=Math.max(surface+.12,THREE.MathUtils.lerp(surface,shoulder,smooth(0,4,run)))+.14+run*.20+run*run*.025;
+   const local=naturalFallZone(fallContext,z)*smooth(4.3,8,near.distance)*smooth(-.1,.7,bankDistance)*(1-smooth(3,9,bankDistance));
+   h=THREE.MathUtils.lerp(h,Math.min(h,terrace),local);
+  }
   if(!bridge(near.p)){
    const grade=near.p.y-.3,original=h;
    h=THREE.MathUtils.lerp(grade,h,smooth(1.8,4.3,near.distance));

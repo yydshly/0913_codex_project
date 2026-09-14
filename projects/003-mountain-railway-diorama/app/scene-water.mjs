@@ -158,7 +158,7 @@ export function createWaterGeometry(world){
   const z=-32+i/rows*64,y=world.waterLevel(z);
   for(let j=0;j<=cols;j++){
    const u=j/cols,x=world.riverX(z)+(u-.5)*(world.halfWidth(z)+1.2)*2;
-   const surface=world.waterSurface(x,z);pos.push(x,surface+.025,z);uv.push(x,z);fall.push(Math.abs(world.waterSurface(x,z+.12)-world.waterSurface(x,z-.12))*4);shore.push(surface-Math.max(world.height(x,z),cascadeBedHeight(world,x,z)));const obstacle=rockWaterField(world.riverRocks||[],x,z,surface);obstacles.push(obstacle.clearance);deflections.push(obstacle.deflect);contactFoam.push(obstacle.foam);cross.push(x-world.riverX(z));channels.push(channelStrength(world,x,z));const lane=x-world.riverX(z);travel.push(waterTravel(world,z,lane));impactOffsets.push(waterLaneShift(lane));
+   const surface=world.waterSurface(x,z);pos.push(x,surface+.025,z);uv.push(x,z);fall.push(Math.abs(world.waterSurface(x,z+.12)-world.waterSurface(x,z-.12))*4);shore.push(surface-Math.max(world.height(x,z),cascadeBedHeight(world,x,z)));const obstacle=rockWaterField(world.riverRocks||[],x,z,surface);obstacles.push(obstacle.clearance);deflections.push(obstacle.deflect);contactFoam.push(obstacle.foam);cross.push(x-world.riverX(z));channels.push(channelStrength(world,x,z));const lane=x-world.riverX(z);travel.push(waterTravel(world,z,lane));impactOffsets.push(waterLaneShift(lane,world));
    const dx=(world.waterSurface(x+.04,z)-world.waterSurface(x-.04,z))/.08,dz=(world.waterSurface(x,z+.04)-world.waterSurface(x,z-.04))/.08;
    surfaceNormals.push(...V(-dx,1,-dz).normalize().toArray());flowTangents.push(...V(0,dz,1).normalize().toArray());
    if(i<rows&&j<cols&&world.footprint(x,z)){const a=i*(cols+1)+j,b=a+cols+1;indices.push(a,b,a+1,a+1,b,b+1)}
