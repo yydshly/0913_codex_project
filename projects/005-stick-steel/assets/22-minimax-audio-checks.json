@@ -1,0 +1,169 @@
+[
+  {
+    "story": "father",
+    "file": "father.24bcfd11550c.wav",
+    "duration": 72.0,
+    "sampleRate": 32000,
+    "sha256Verified": true,
+    "cues": [
+      {
+        "role": "narrator",
+        "seconds": 3.4,
+        "rms": 1800,
+        "peak": 14285,
+        "gain": 0.798
+      },
+      {
+        "role": "child",
+        "seconds": 1.9,
+        "rms": 1800,
+        "peak": 13223,
+        "gain": 0.83
+      },
+      {
+        "role": "narrator",
+        "seconds": 3.2,
+        "rms": 1800,
+        "peak": 14529,
+        "gain": 0.75
+      },
+      {
+        "role": "narrator",
+        "seconds": 2.6,
+        "rms": 1800,
+        "peak": 19797,
+        "gain": 0.865
+      },
+      {
+        "role": "narrator",
+        "seconds": 2.53,
+        "rms": 1800,
+        "peak": 14433,
+        "gain": 0.794
+      },
+      {
+        "role": "narrator",
+        "seconds": 3.37,
+        "rms": 1800,
+        "peak": 12185,
+        "gain": 0.755
+      },
+      {
+        "role": "narrator",
+        "seconds": 2.6,
+        "rms": 1800,
+        "peak": 16190,
+        "gain": 0.813
+      },
+      {
+        "role": "narrator",
+        "seconds": 1.32,
+        "rms": 1800,
+        "peak": 13108,
+        "gain": 0.802
+      },
+      {
+        "role": "narrator",
+        "seconds": 2.0,
+        "rms": 1800,
+        "peak": 18193,
+        "gain": 0.846
+      },
+      {
+        "role": "narrator",
+        "seconds": 2.5,
+        "rms": 1800,
+        "peak": 14175,
+        "gain": 0.779
+      }
+    ]
+  },
+  {
+    "story": "dinner",
+    "file": "dinner.42c313f97041.wav",
+    "duration": 36.0,
+    "sampleRate": 32000,
+    "sha256Verified": true,
+    "cues": [
+      {
+        "role": "narrator",
+        "seconds": 2.6,
+        "rms": 1800,
+        "peak": 14733,
+        "gain": 0.818
+      },
+      {
+        "role": "narrator",
+        "seconds": 1.68,
+        "rms": 1800,
+        "peak": 14889,
+        "gain": 0.846
+      },
+      {
+        "role": "narrator",
+        "seconds": 2.9,
+        "rms": 1800,
+        "peak": 15300,
+        "gain": 0.797
+      },
+      {
+        "role": "narrator",
+        "seconds": 2.66,
+        "rms": 1800,
+        "peak": 12783,
+        "gain": 0.761
+      },
+      {
+        "role": "woman",
+        "seconds": 1.68,
+        "rms": 1800,
+        "peak": 8971,
+        "gain": 2.186
+      }
+    ]
+  },
+  {
+    "story": "newcomer",
+    "file": "newcomer.11337f44760b.wav",
+    "duration": 36.0,
+    "sampleRate": 32000,
+    "sha256Verified": true,
+    "cues": [
+      {
+        "role": "narrator",
+        "seconds": 3.99,
+        "rms": 1800,
+        "peak": 16312,
+        "gain": 0.8
+      },
+      {
+        "role": "narrator",
+        "seconds": 2.9,
+        "rms": 1800,
+        "peak": 14284,
+        "gain": 0.799
+      },
+      {
+        "role": "colleague",
+        "seconds": 2.48,
+        "rms": 1800,
+        "peak": 18874,
+        "gain": 2.401
+      },
+      {
+        "role": "narrator",
+        "seconds": 2.97,
+        "rms": 1800,
+        "peak": 13368,
+        "gain": 0.753
+      },
+      {
+        "role": "narrator",
+        "seconds": 3.15,
+        "rms": 1800,
+        "peak": 16439,
+        "gain": 0.848
+      }
+    ]
+  }
+]

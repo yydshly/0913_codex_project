@@ -8,6 +8,7 @@
 - [002 · Dunhuang Aura](002-dunhuang-aura/README.md)：敦煌美术风格与出图流程说明书；可复用配色、构图、提示词和修图要求，未新增绘图能力，质量与效率增益未验证。研究已总结，后续作为特定风格的美术规范与流程参考。
 
 - [003 · Mountain Railway Diorama / 白鹭河谷](003-mountain-railway-diorama/README.md)：独立重建可调地形的四季铁路景观；三种构图、风与植被联动、三种水流。[研究分析](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/) · [实际场景](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html) · [开发过程](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/dev-log.html) · [实景与导览](003-mountain-railway-diorama/README.md) · [能力清单](003-mountain-railway-diorama/capabilities.md) · [运行方式](003-mountain-railway-diorama/app/README.md) · [开发记录](003-mountain-railway-diorama/development-log.md) · [下一步](003-mountain-railway-diorama/next-steps.md)。V18 支持方案存档、文件迁移与同机位比较；仍无自由绘轨或真实流体。
+- [005 · Stick & Steel](005-stick-steel/README.md)：以实际效果图引导的人物表演与物理交互底座研究；四种人物、三个配音故事、六组物理能力。扩展方向为叙事视频和游戏展示，后续先打通成片再沉淀创作 Skill。[当前能力](005-stick-steel/capabilities.md) · [开发与 Skill 路线](005-stick-steel/next-steps.md) · [本地运行](005-stick-steel/app/README.md) · [验证记录](005-stick-steel/notes.md)。尚未部署。
 
 新增编号取现有项目目录的最大编号加一；既有编号保持稳定。
 
