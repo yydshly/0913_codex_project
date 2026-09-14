@@ -71,4 +71,8 @@ GitHub Pages 托管静态网页；联网排行榜、账户和持久化后端需�
 
 用户于 2026-09-14 授权推送远端并关联网页部署。新增 005 的 `app/build.mjs` 接入原有多项目汇总流程：研究导览为项目根页，`demo/` 为可运行的 Vite 静态客户端，`guide-assets/` 为实际效果引导图与上游 MIT 原文。总目录卡片以四人效果图进入研究导览，提供人物、配音故事与物理能力入口；演示底部可返回研究摘要和开发路线。
 
-工作流新增 005 的依赖安装、类型检查、44 项人物/故事/物理测试及 5 项音轨测试；全站构建之后检查各路由、引导文字、三条音轨摘要/时长及发布目录不含本地配置。保留远端既有项目及其检查，不复制其他工作区未提交项目。`client/.openai/hosting.json` 仅保留原有模板兼容信息，本次发布使用现有 GitHub Pages。实际发布结果在验证后补记。
+工作流新增 005 的依赖安装、类型检查、44 项人物/故事/物理测试及 5 项音轨测试；全站构建之后检查各路由、引导文字、三条音轨摘要/时长及发布目录不含本地配置。保留远端既有项目及其检查，不复制其他工作区未提交项目。`client/.openai/hosting.json` 仅保留原有模板兼容信息，本次发布使用现有 GitHub Pages。
+
+首次发布提交 `c05400f6b1f7a66612c9d7184ced9611fa2d37f2`，对应 [Actions 成功记录](https://github.com/yydshly/0913_codex_project/actions/runs/34824369331)。[在线效果导览](https://yydshly.github.io/0913_codex_project/005-stick-steel/) · [人物表演](https://yydshly.github.io/0913_codex_project/005-stick-steel/demo/?view=characters) · [配音故事](https://yydshly.github.io/0913_codex_project/005-stick-steel/demo/?view=stories) · [物理能力](https://yydshly.github.io/0913_codex_project/005-stick-steel/demo/?view=capabilities)。
+
+干净工作树构建 5 个项目，295 处静态引用检查通过；005 类型检查、44 项功能测试及 5 项音轨测试通过。线上 39 个文件全部返回 HTTP 200，内容与本地构建一致（HTML/CSS/文本仅归一化 Windows 与 Linux 换行；图片、音轨与 JS 校验原始字节）。总目录与 001、002、003、010 项目页均返回 200。浏览器检查及截图见 [005 验证记录](../projects/005-stick-steel/notes.md)。Actions 出现既有 Pages action 的 Node 20 弃用提示，未阻止本次构建和部署。

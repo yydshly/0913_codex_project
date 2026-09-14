@@ -1,6 +1,6 @@
 # 人物刻画：让人物有自己的样子
 
-2026-09-14 新增实际演示。启动本项目服务后进入 `?view=characters#zhou`，也可从故事页右上角进入。尚未部署。
+2026-09-14 新增实际演示。启动本项目服务后进入 `?view=characters#zhou`，也可从故事页右上角进入。[在线人物演示](https://yydshly.github.io/0913_codex_project/005-stick-steel/demo/?view=characters) · [效果导览](https://yydshly.github.io/0913_codex_project/005-stick-steel/)。
 
 不是四张人物卡片，而是四位角色在同一间屋里表演同一件事：**进门 → 回应正在等候的人 → 坐到对方身边**。每轮 24 秒，动作按预设时间编排，可以暂停、慢放和任意跳转。
 

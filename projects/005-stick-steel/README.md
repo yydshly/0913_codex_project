@@ -1,12 +1,14 @@
 # 005 · Stick & Steel｜人物动画与交互底座研究
 
-[![四位人物在同一时刻的造型、姿态与招手回应对照，点击查看人物刻画](assets/24-character-comparison.png)](characters.md)
+[![四位人物在同一时刻的造型、姿态与招手回应对照，点击查看人物刻画](assets/24-character-comparison.png)](https://yydshly.github.io/0913_codex_project/005-stick-steel/demo/?view=characters)
 
-*效果引导图：2026-09-14 本地实时三维表演截图。点击图片查看人物设定、动作对照和观看方法；本研究尚未部署。*
+*效果引导图：2026-09-14 本地实时三维表演截图。点击图片直接观看在线人物表演；研究导览与互动演示已发布至 GitHub Pages。*
 
 **这个库的意义，是把简化人物、动作表演、生活场景、声音与物理交互积累为可重复使用的创作材料。** 当前以研究原型验证两条路线：按剧本与时间轴制作叙事视频；按玩家操作与事件制作游戏效果和交互展示。它还不是可直接安装的通用动画库、完整游戏引擎或自动视频创作工具。
 
 **当前已完成：**四种人物刻画、三个 MiniMax 配音生活故事、六组物理能力演示，以及中文训练和机器人对战。**后续重点：**先打通“故事到 MP4”的完整制作流程，再把经过验证的流程沉淀为可由 Codex 等代理调用的创作 Skill。
+
+[在线效果导览](https://yydshly.github.io/0913_codex_project/005-stick-steel/) · [人物演示](https://yydshly.github.io/0913_codex_project/005-stick-steel/demo/?view=characters) · [配音故事](https://yydshly.github.io/0913_codex_project/005-stick-steel/demo/?view=stories) · [物理演示](https://yydshly.github.io/0913_codex_project/005-stick-steel/demo/?view=capabilities)
 
 [当前能力总览](capabilities.md) · [后续开发与 Skill 路线](next-steps.md) · [启动与操作](app/README.md) · [验证记录](notes.md) · [来源与改动](source-and-changes.md) · [返回总索引](../../README.md#项目索引)
 
@@ -66,7 +68,8 @@
 | 复用范围 | 选择性提取上游关节、物理、手部及对战模块；人物造型、生活故事、中文说明和配音接入为本项目新增 |
 | 许可证 | 上游代码 MIT，Patrick Hand 字体 OFL；第三方生成模型/声音的单独分发条款待核实；本仓库原创内容尚未指定统一开源许可证 |
 | 应用位置 | `app/client/`，React、Three.js、Rapier、Vite、TypeScript；独立管理依赖 |
-| 本地运行 | 按 [运行说明](app/README.md) 启动后访问 http://127.0.0.1:8055/；预览仅监听本机，未部署 |
+| 本地运行 | 按 [运行说明](app/README.md) 启动后访问 http://127.0.0.1:8055/；开发预览仅监听本机 |
+| 在线发布 | [GitHub Pages 研究导览](https://yydshly.github.io/0913_codex_project/005-stick-steel/)；main 推送自动构建，见[发布记录](../../docs/deployment.md#005--人物动画与交互研究发布适配) |
 | 已有验证 | 44 项人物/物理/故事测试、5 项音轨测试；类型检查和生产构建通过，执行轮次见 [验证记录](notes.md) |
 | 未验证范围 | 长期性能、手机实机、完整教学逐关人工通关、观众角色辨识率与独立音质评分；仍有大分包和 Rapier 初始化弃用提示 |
 

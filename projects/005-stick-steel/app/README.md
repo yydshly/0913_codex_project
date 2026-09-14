@@ -46,7 +46,7 @@ npm test
 npm run build
 ```
 
-构建输出为 `client/dist/client/`。当前没有根 `app/build.mjs` 发布入口，避免被全仓库构建自动发布。本轮没有部署；构建目录和 `node_modules` 均由根忽略规则排除。
+客户端构建输出为 `client/dist/client/`。仓库发布由 `app/build.mjs` 接入现有 GitHub Pages 流程，生成独立研究导览与 `demo/` 演示目录，具体命令见本文末尾。构建目录和 `node_modules` 均由根忽略规则排除。
 
 ## 源码导航
 
