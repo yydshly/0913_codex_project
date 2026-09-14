@@ -27,7 +27,7 @@
 | 008 | [山地巡游实验室](projects/008-terrain-motion-lab/README.md) | 沉淀道路、地表、树木的素材、生成规则与表现能力；三图操作导览、共享组件、加载反馈和三份可运行快照 | [参考原作](https://mini-moto-park.chipchaunceytheonlyone.chatgpt.site/) | 已总结 · 原型持续打磨 | [能力与图片导览](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/capabilities.html) · [山林效果](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/outdoor.html?layout=valley&view=sunrise#stage) |
 | 009 | [城景工坊 · 城市景点汇总 Skill](projects/009-city-landmark-map/README.md) | 汇总城市及周边景点，以图鉴展示特色、介绍与大体位置；后期需要优化实现 | [YouMind相关线索](https://youmind.com/skills/yhbukK6TtKX0t9) · 原版本待核实 | 研究原型 · 待优化 | [实际演示导览](https://yydshly.github.io/0913_codex_project/009-city-landmark-map/archive.html) |
 | 010 | [Mini Moto 赛车游戏参考与实践总结](projects/010-mini-moto-comparison/README.md) | 赛车类游戏参考：核心为场景构建与赛车手能力构建；保留基础竞速和驾驶演示，后续按项目需求开发 | [作者原作](https://mini-moto-park.chipchaunceytheonlyone.chatgpt.site/) | 已总结 | [网页研究与比赛](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/) · [自由驾驶练习](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/ride.html) |
-| 011 | [前端视觉实验室](projects/011-frontend-visual-lab/README.md) | 内容结构、视觉设计、动效编排、场景特效四种优化方式；64项交互、16个原版组件和V4.3实际作品场景 | [Canvas UI](https://canvasui.dev/) · [GSAP](https://gsap.com/) | 已整理，发布中 | — |
+| 011 | [前端视觉实验室](projects/011-frontend-visual-lab/README.md) | 内容结构、视觉设计、动效编排、场景特效四种优化方式；64项交互、16个原版组件和V4.3实际作品场景 | [Canvas UI](https://canvasui.dev/) · [GSAP](https://gsap.com/) | 已上线 | [摘要与看图体验](https://yydshly.github.io/0913_codex_project/011-frontend-visual-lab/research.html) |
 <!-- PROJECT_INDEX_END -->
 
 进度：`待研究` → `研究中` → `已复现` → `已总结`；暂时停止的项目标为 `暂缓`。演示未上线时填写 `—`。
@@ -143,7 +143,7 @@
 
 *2026-09-15实际浏览器截图。点击从研究进入看图体验；完整HTML变形取决于浏览器能力，截图与实时场景分别说明。*
 
-[理解摘要](projects/011-frontend-visual-lab/understanding.md) · [能力与操作](projects/011-frontend-visual-lab/README.md) · [全部优化记录](projects/011-frontend-visual-lab/portfolio-iterations.md) · [发布范围与验证](projects/011-frontend-visual-lab/publishing.md)
+[在线摘要与看图体验](https://yydshly.github.io/0913_codex_project/011-frontend-visual-lab/research.html) · [完整实验室](https://yydshly.github.io/0913_codex_project/011-frontend-visual-lab/) · [理解摘要](projects/011-frontend-visual-lab/understanding.md) · [能力与操作](projects/011-frontend-visual-lab/README.md) · [全部优化记录](projects/011-frontend-visual-lab/portfolio-iterations.md) · [发布范围与验证](projects/011-frontend-visual-lab/publishing.md)
 
 <!-- PROJECT_PREVIEWS_END -->
 

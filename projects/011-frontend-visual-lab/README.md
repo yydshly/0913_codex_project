@@ -15,7 +15,7 @@
 | 上游许可 | Product Design：Proprietary；GSAP：Standard no charge license；Canvas UI：MIT + Commons Clause，非纯 MIT |
 | 技术栈 | React 19.2、Vite 6.4.2、GSAP 3.15.0、Canvas UI React / WebGL 组件 |
 | 进度 | 已完成本地效果实验，完整 HTML 变形受浏览器支持限制 |
-| 在线演示 | 尚未部署 |
+| 在线演示 | [摘要与看图体验](https://yydshly.github.io/0913_codex_project/011-frontend-visual-lab/research.html) · [完整实验室](https://yydshly.github.io/0913_codex_project/011-frontend-visual-lab/) · [实际作品页](https://yydshly.github.io/0913_codex_project/011-frontend-visual-lab/?view=portfolio) |
 
 ## 六十四种 GSAP 交互
 
@@ -205,4 +205,5 @@ Phosphor 图标通过 npm 使用；中文衬线字体可从 Google Fonts 加载�
 ## V4.3 · 场景手记 · 2026-09-15
 
 听雨山居详情已增加晴空、檐下雨景和庭院雪景切换，章节说明与观察重点同步，雪景可融霜，主要入口进入既有实时山居。素材均为真实截图，明确不同机位与阶段；沿用选定深绿设计。桌面、手机、键盘、收藏返回、无动效模式及快速切换检查通过，构建成功，未部署。来源、前后截图和修复见 [V4.3 验证记录](portfolio-v43-validation.md)。
+
 

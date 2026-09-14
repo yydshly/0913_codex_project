@@ -1,0 +1,1046 @@
+{
+  "checkedAt": "2026-09-14T18:59:43.023Z",
+  "base": "https://yydshly.github.io/0913_codex_project/011-frontend-visual-lab/",
+  "counts": {
+    "gsapInteractions": 64,
+    "canvasComponents": 16,
+    "screenshots": 135,
+    "documents": 10
+  },
+  "manifestFiles": 188,
+  "existingEntrypoints": 18,
+  "files": [
+    {
+      "path": "assets/atelier-studies-B6YUTCQb.js",
+      "bytes": 8039,
+      "ok": true
+    },
+    {
+      "path": "assets/Blaze-tVGqxVrT.js",
+      "bytes": 14274,
+      "ok": true
+    },
+    {
+      "path": "assets/Bubble-CsZlch8S.js",
+      "bytes": 12762,
+      "ok": true
+    },
+    {
+      "path": "assets/Clouds-CZm4rn-X.js",
+      "bytes": 15112,
+      "ok": true
+    },
+    {
+      "path": "assets/collection-studies-BwgC068S.js",
+      "bytes": 10407,
+      "ok": true
+    },
+    {
+      "path": "assets/Droplets-L8dvjKR4.js",
+      "bytes": 15228,
+      "ok": true
+    },
+    {
+      "path": "assets/FlameWrap-COWoR1FZ.js",
+      "bytes": 16730,
+      "ok": true
+    },
+    {
+      "path": "assets/ForceField-CUMdrvrc.js",
+      "bytes": 26184,
+      "ok": true
+    },
+    {
+      "path": "assets/Frost-B2ly9ZAI.js",
+      "bytes": 22749,
+      "ok": true
+    },
+    {
+      "path": "assets/Glass-BtFPMjd4.js",
+      "bytes": 12463,
+      "ok": true
+    },
+    {
+      "path": "assets/GlyphRain-DgTYxWXs.js",
+      "bytes": 16956,
+      "ok": true
+    },
+    {
+      "path": "assets/HexFloat-DJOqDWir.js",
+      "bytes": 29956,
+      "ok": true
+    },
+    {
+      "path": "assets/index-BbCKxaic.css",
+      "bytes": 226,
+      "ok": true
+    },
+    {
+      "path": "assets/index-D4H_t_Zs.js",
+      "bytes": 196646,
+      "ok": true
+    },
+    {
+      "path": "assets/journey-studies-D5WHw7z_.js",
+      "bytes": 9349,
+      "ok": true
+    },
+    {
+      "path": "assets/lab-CxfL8Ngo.js",
+      "bytes": 217832,
+      "ok": true
+    },
+    {
+      "path": "assets/lab-jvdb7GHd.css",
+      "bytes": 57675,
+      "ok": true
+    },
+    {
+      "path": "assets/Laser-DDSaICyf.js",
+      "bytes": 12227,
+      "ok": true
+    },
+    {
+      "path": "assets/Liquid-DIlWgT7o.js",
+      "bytes": 1276,
+      "ok": true
+    },
+    {
+      "path": "assets/ParticleReveal-D_d1rz_R.js",
+      "bytes": 9778,
+      "ok": true
+    },
+    {
+      "path": "assets/portfolio-Deu9ikS_.js",
+      "bytes": 49248,
+      "ok": true
+    },
+    {
+      "path": "assets/portfolio-xY2TcLKa.css",
+      "bytes": 30988,
+      "ok": true
+    },
+    {
+      "path": "assets/rect-cache-DQwfaM4q.js",
+      "bytes": 390,
+      "ok": true
+    },
+    {
+      "path": "assets/Ripple-DPiAvPvm.js",
+      "bytes": 8781,
+      "ok": true
+    },
+    {
+      "path": "assets/Shatter-C5BY5rOw.js",
+      "bytes": 15610,
+      "ok": true
+    },
+    {
+      "path": "assets/VHS-BcYT5PMC.js",
+      "bytes": 10460,
+      "ok": true
+    },
+    {
+      "path": "assets/X.es-BWtn54up.js",
+      "bytes": 84562,
+      "ok": true
+    },
+    {
+      "path": "index.html",
+      "bytes": 534,
+      "ok": true
+    },
+    {
+      "path": "licenses/Canvas-UI.md",
+      "bytes": 1307,
+      "ok": true
+    },
+    {
+      "path": "licenses/THIRD-PARTY.md",
+      "bytes": 629,
+      "ok": true
+    },
+    {
+      "path": "portfolio/characters.png",
+      "bytes": 99650,
+      "ok": true
+    },
+    {
+      "path": "portfolio/city.png",
+      "bytes": 143397,
+      "ok": true
+    },
+    {
+      "path": "portfolio/immersive-cover.png",
+      "bytes": 1779887,
+      "ok": true
+    },
+    {
+      "path": "portfolio/railway.jpg",
+      "bytes": 81841,
+      "ok": true
+    },
+    {
+      "path": "portfolio/terrain.png",
+      "bytes": 114201,
+      "ok": true
+    },
+    {
+      "path": "portfolio/visual.png",
+      "bytes": 48297,
+      "ok": true
+    },
+    {
+      "path": "portfolio/weather-clear.jpg",
+      "bytes": 39483,
+      "ok": true
+    },
+    {
+      "path": "portfolio/weather-rain.jpg",
+      "bytes": 32276,
+      "ok": true
+    },
+    {
+      "path": "portfolio/weather.jpg",
+      "bytes": 52298,
+      "ok": true
+    },
+    {
+      "path": "records.html",
+      "bytes": 155001,
+      "ok": true
+    },
+    {
+      "path": "records/design-qa.md",
+      "bytes": 22558,
+      "ok": true
+    },
+    {
+      "path": "records/notes.md",
+      "bytes": 35940,
+      "ok": true
+    },
+    {
+      "path": "records/portfolio-iterations.md",
+      "bytes": 16068,
+      "ok": true
+    },
+    {
+      "path": "records/portfolio-v42-validation.md",
+      "bytes": 4246,
+      "ok": true
+    },
+    {
+      "path": "records/portfolio-v43-validation.md",
+      "bytes": 4496,
+      "ok": true
+    },
+    {
+      "path": "records/product-design-options.md",
+      "bytes": 3305,
+      "ok": true
+    },
+    {
+      "path": "records/product-scenario.md",
+      "bytes": 6642,
+      "ok": true
+    },
+    {
+      "path": "records/publishing.md",
+      "bytes": 1846,
+      "ok": true
+    },
+    {
+      "path": "records/README.md",
+      "bytes": 18709,
+      "ok": true
+    },
+    {
+      "path": "records/understanding.md",
+      "bytes": 2727,
+      "ok": true
+    },
+    {
+      "path": "research-assets/00-reference-playground.png",
+      "bytes": 119657,
+      "ok": true
+    },
+    {
+      "path": "research-assets/01-lab-overview.png",
+      "bytes": 68274,
+      "ok": true
+    },
+    {
+      "path": "research-assets/02-design-comparison.png",
+      "bytes": 77074,
+      "ok": true
+    },
+    {
+      "path": "research-assets/03-gsap-scroll.png",
+      "bytes": 55131,
+      "ok": true
+    },
+    {
+      "path": "research-assets/04-mobile-preview.png",
+      "bytes": 29411,
+      "ok": true
+    },
+    {
+      "path": "research-assets/05-reference-comparison.jpg",
+      "bytes": 292025,
+      "ok": true
+    },
+    {
+      "path": "research-assets/06-narrow-fixed.png",
+      "bytes": 64139,
+      "ok": true
+    },
+    {
+      "path": "research-assets/07-force-field.png",
+      "bytes": 84696,
+      "ok": true
+    },
+    {
+      "path": "research-assets/08-ripple.png",
+      "bytes": 76158,
+      "ok": true
+    },
+    {
+      "path": "research-assets/09-droplets.png",
+      "bytes": 76225,
+      "ok": true
+    },
+    {
+      "path": "research-assets/10-clouds.png",
+      "bytes": 84033,
+      "ok": true
+    },
+    {
+      "path": "research-assets/100-product-v4-clouds-on.png",
+      "bytes": 167489,
+      "ok": true
+    },
+    {
+      "path": "research-assets/101-product-v4-final-wide.png",
+      "bytes": 166459,
+      "ok": true
+    },
+    {
+      "path": "research-assets/102-product-v4-clouds-off.png",
+      "bytes": 154264,
+      "ok": true
+    },
+    {
+      "path": "research-assets/103-product-v4-detail.png",
+      "bytes": 62444,
+      "ok": true
+    },
+    {
+      "path": "research-assets/104-product-v4-collection.png",
+      "bytes": 132802,
+      "ok": true
+    },
+    {
+      "path": "research-assets/105-product-v4-mobile.png",
+      "bytes": 40316,
+      "ok": true
+    },
+    {
+      "path": "research-assets/106-product-v4-mobile-detail.png",
+      "bytes": 35035,
+      "ok": true
+    },
+    {
+      "path": "research-assets/107-product-v4-mobile-collection.png",
+      "bytes": 35687,
+      "ok": true
+    },
+    {
+      "path": "research-assets/108-product-v4-mobile-verified.png",
+      "bytes": 40724,
+      "ok": true
+    },
+    {
+      "path": "research-assets/109-product-v4-delivery.png",
+      "bytes": 162053,
+      "ok": true
+    },
+    {
+      "path": "research-assets/11-laser.png",
+      "bytes": 73023,
+      "ok": true
+    },
+    {
+      "path": "research-assets/110-product-v4-final.png",
+      "bytes": 165594,
+      "ok": true
+    },
+    {
+      "path": "research-assets/111-product-weather-before.png",
+      "bytes": 108112,
+      "ok": true
+    },
+    {
+      "path": "research-assets/112-product-frost-frozen.png",
+      "bytes": 115089,
+      "ok": true
+    },
+    {
+      "path": "research-assets/113-product-frost-melted.png",
+      "bytes": 108174,
+      "ok": true
+    },
+    {
+      "path": "research-assets/114-product-frost-off.png",
+      "bytes": 84878,
+      "ok": true
+    },
+    {
+      "path": "research-assets/115-product-frost-final-frozen.png",
+      "bytes": 103501,
+      "ok": true
+    },
+    {
+      "path": "research-assets/116-product-frost-final-melt.png",
+      "bytes": 96902,
+      "ok": true
+    },
+    {
+      "path": "research-assets/117-product-frost-refrozen.png",
+      "bytes": 103521,
+      "ok": true
+    },
+    {
+      "path": "research-assets/118-product-frost-mobile.png",
+      "bytes": 37483,
+      "ok": true
+    },
+    {
+      "path": "research-assets/119-product-frost-final.png",
+      "bytes": 113995,
+      "ok": true
+    },
+    {
+      "path": "research-assets/12-bubble.png",
+      "bytes": 71663,
+      "ok": true
+    },
+    {
+      "path": "research-assets/120-portfolio-v42-collection.png",
+      "bytes": 67269,
+      "ok": true
+    },
+    {
+      "path": "research-assets/121-portfolio-v42-opening.png",
+      "bytes": 59434,
+      "ok": true
+    },
+    {
+      "path": "research-assets/122-portfolio-v42-detail.png",
+      "bytes": 66270,
+      "ok": true
+    },
+    {
+      "path": "research-assets/123-portfolio-v42-closing.png",
+      "bytes": 78462,
+      "ok": true
+    },
+    {
+      "path": "research-assets/124-portfolio-v42-mobile.png",
+      "bytes": 36183,
+      "ok": true
+    },
+    {
+      "path": "research-assets/125-portfolio-v42-opening-final.png",
+      "bytes": 51981,
+      "ok": true
+    },
+    {
+      "path": "research-assets/126-portfolio-v42-closing-final.png",
+      "bytes": 93797,
+      "ok": true
+    },
+    {
+      "path": "research-assets/127-weather-detail-before.png",
+      "bytes": 59327,
+      "ok": true
+    },
+    {
+      "path": "research-assets/128-weather-story-snow.png",
+      "bytes": 91905,
+      "ok": true
+    },
+    {
+      "path": "research-assets/129-weather-story-rain.png",
+      "bytes": 70233,
+      "ok": true
+    },
+    {
+      "path": "research-assets/13-glyph-rain.png",
+      "bytes": 77906,
+      "ok": true
+    },
+    {
+      "path": "research-assets/130-weather-story-clear.png",
+      "bytes": 70418,
+      "ok": true
+    },
+    {
+      "path": "research-assets/131-weather-story-melt.png",
+      "bytes": 87678,
+      "ok": true
+    },
+    {
+      "path": "research-assets/132-weather-story-mobile.png",
+      "bytes": 34806,
+      "ok": true
+    },
+    {
+      "path": "research-assets/133-research-summary-desktop.png",
+      "bytes": 111212,
+      "ok": true
+    },
+    {
+      "path": "research-assets/134-research-summary-mobile.png",
+      "bytes": 47025,
+      "ok": true
+    },
+    {
+      "path": "research-assets/14-frost.png",
+      "bytes": 108624,
+      "ok": true
+    },
+    {
+      "path": "research-assets/15-flame-wrap.png",
+      "bytes": 80542,
+      "ok": true
+    },
+    {
+      "path": "research-assets/16-hex-float.png",
+      "bytes": 78699,
+      "ok": true
+    },
+    {
+      "path": "research-assets/17-gsap-flip.png",
+      "bytes": 70427,
+      "ok": true
+    },
+    {
+      "path": "research-assets/18-gsap-decode.png",
+      "bytes": 68695,
+      "ok": true
+    },
+    {
+      "path": "research-assets/19-gsap-tilt.png",
+      "bytes": 70520,
+      "ok": true
+    },
+    {
+      "path": "research-assets/20-gsap-magnet.png",
+      "bytes": 69585,
+      "ok": true
+    },
+    {
+      "path": "research-assets/21-gsap-iris.png",
+      "bytes": 74546,
+      "ok": true
+    },
+    {
+      "path": "research-assets/22-gsap-press.png",
+      "bytes": 72797,
+      "ok": true
+    },
+    {
+      "path": "research-assets/23-gsap-drag.png",
+      "bytes": 72510,
+      "ok": true
+    },
+    {
+      "path": "research-assets/24-gsap-shutter.png",
+      "bytes": 75276,
+      "ok": true
+    },
+    {
+      "path": "research-assets/25-gsap-path.png",
+      "bytes": 78638,
+      "ok": true
+    },
+    {
+      "path": "research-assets/26-gsap-deck.png",
+      "bytes": 76795,
+      "ok": true
+    },
+    {
+      "path": "research-assets/27-gsap-spotlight.png",
+      "bytes": 73587,
+      "ok": true
+    },
+    {
+      "path": "research-assets/28-gsap-fold.png",
+      "bytes": 70866,
+      "ok": true
+    },
+    {
+      "path": "research-assets/29-gsap-counter.png",
+      "bytes": 72812,
+      "ok": true
+    },
+    {
+      "path": "research-assets/30-gsap-wipe.png",
+      "bytes": 75654,
+      "ok": true
+    },
+    {
+      "path": "research-assets/31-gsap-pulse.png",
+      "bytes": 75813,
+      "ok": true
+    },
+    {
+      "path": "research-assets/32-gsap-orbit.png",
+      "bytes": 77542,
+      "ok": true
+    },
+    {
+      "path": "research-assets/33-gsap-elastic-grid.png",
+      "bytes": 79059,
+      "ok": true
+    },
+    {
+      "path": "research-assets/34-gsap-fan.png",
+      "bytes": 77708,
+      "ok": true
+    },
+    {
+      "path": "research-assets/35-gsap-mosaic.png",
+      "bytes": 76760,
+      "ok": true
+    },
+    {
+      "path": "research-assets/36-gsap-daynight.png",
+      "bytes": 52940,
+      "ok": true
+    },
+    {
+      "path": "research-assets/37-gsap-cube.png",
+      "bytes": 52456,
+      "ok": true
+    },
+    {
+      "path": "research-assets/38-gsap-equalizer.png",
+      "bytes": 51288,
+      "ok": true
+    },
+    {
+      "path": "research-assets/39-gsap-morph.png",
+      "bytes": 54261,
+      "ok": true
+    },
+    {
+      "path": "research-assets/40-gsap-galaxy.png",
+      "bytes": 55407,
+      "ok": true
+    },
+    {
+      "path": "research-assets/41-gsap-gallery.png",
+      "bytes": 57567,
+      "ok": true
+    },
+    {
+      "path": "research-assets/42-gsap-drawing.png",
+      "bytes": 55213,
+      "ok": true
+    },
+    {
+      "path": "research-assets/43-gsap-corridor.png",
+      "bytes": 57276,
+      "ok": true
+    },
+    {
+      "path": "research-assets/44-gsap-kaleido.png",
+      "bytes": 54950,
+      "ok": true
+    },
+    {
+      "path": "research-assets/45-gsap-matrix.png",
+      "bytes": 61990,
+      "ok": true
+    },
+    {
+      "path": "research-assets/46-gsap-ribbon.png",
+      "bytes": 57083,
+      "ok": true
+    },
+    {
+      "path": "research-assets/47-gsap-comet.png",
+      "bytes": 53726,
+      "ok": true
+    },
+    {
+      "path": "research-assets/48-gsap-calendar.png",
+      "bytes": 55837,
+      "ok": true
+    },
+    {
+      "path": "research-assets/49-gsap-radar.png",
+      "bytes": 57406,
+      "ok": true
+    },
+    {
+      "path": "research-assets/50-gsap-zipper.png",
+      "bytes": 58720,
+      "ok": true
+    },
+    {
+      "path": "research-assets/51-gsap-bloom.png",
+      "bytes": 48520,
+      "ok": true
+    },
+    {
+      "path": "research-assets/52-gsap-cradle.png",
+      "bytes": 48608,
+      "ok": true
+    },
+    {
+      "path": "research-assets/53-gsap-hourglass.png",
+      "bytes": 48511,
+      "ok": true
+    },
+    {
+      "path": "research-assets/54-gsap-spring.png",
+      "bytes": 47738,
+      "ok": true
+    },
+    {
+      "path": "research-assets/55-gsap-flag.png",
+      "bytes": 46699,
+      "ok": true
+    },
+    {
+      "path": "research-assets/56-gsap-eclipse.png",
+      "bytes": 49463,
+      "ok": true
+    },
+    {
+      "path": "research-assets/57-gsap-focus.png",
+      "bytes": 46617,
+      "ok": true
+    },
+    {
+      "path": "research-assets/58-gsap-verse.png",
+      "bytes": 47387,
+      "ok": true
+    },
+    {
+      "path": "research-assets/59-gsap-book.png",
+      "bytes": 47975,
+      "ok": true
+    },
+    {
+      "path": "research-assets/60-gsap-stairs.png",
+      "bytes": 47205,
+      "ok": true
+    },
+    {
+      "path": "research-assets/61-gsap-scan.png",
+      "bytes": 49000,
+      "ok": true
+    },
+    {
+      "path": "research-assets/62-gsap-compass.png",
+      "bytes": 47971,
+      "ok": true
+    },
+    {
+      "path": "research-assets/63-gsap-aurora.png",
+      "bytes": 48473,
+      "ok": true
+    },
+    {
+      "path": "research-assets/64-gsap-honeycomb.png",
+      "bytes": 48188,
+      "ok": true
+    },
+    {
+      "path": "research-assets/65-gsap-sparks.png",
+      "bytes": 45631,
+      "ok": true
+    },
+    {
+      "path": "research-assets/66-gsap-metaball.png",
+      "bytes": 45228,
+      "ok": true
+    },
+    {
+      "path": "research-assets/67-gsap-gears.png",
+      "bytes": 46938,
+      "ok": true
+    },
+    {
+      "path": "research-assets/68-gsap-plane.png",
+      "bytes": 45650,
+      "ok": true
+    },
+    {
+      "path": "research-assets/69-gsap-aperture.png",
+      "bytes": 49394,
+      "ok": true
+    },
+    {
+      "path": "research-assets/70-gsap-arcmenu.png",
+      "bytes": 47428,
+      "ok": true
+    },
+    {
+      "path": "research-assets/71-gsap-nebula.png",
+      "bytes": 48297,
+      "ok": true
+    },
+    {
+      "path": "research-assets/72-gsap-rainwindow.png",
+      "bytes": 49091,
+      "ok": true
+    },
+    {
+      "path": "research-assets/73-gsap-film.png",
+      "bytes": 51223,
+      "ok": true
+    },
+    {
+      "path": "research-assets/74-gsap-foldmap.png",
+      "bytes": 51487,
+      "ok": true
+    },
+    {
+      "path": "research-assets/75-gsap-routes.png",
+      "bytes": 48163,
+      "ok": true
+    },
+    {
+      "path": "research-assets/76-gsap-gyroscope.png",
+      "bytes": 49763,
+      "ok": true
+    },
+    {
+      "path": "research-assets/77-gsap-mobius.png",
+      "bytes": 47455,
+      "ok": true
+    },
+    {
+      "path": "research-assets/78-gsap-marble.png",
+      "bytes": 47081,
+      "ok": true
+    },
+    {
+      "path": "research-assets/79-gsap-shuffle.png",
+      "bytes": 46976,
+      "ok": true
+    },
+    {
+      "path": "research-assets/80-gsap-glowborder.png",
+      "bytes": 48309,
+      "ok": true
+    },
+    {
+      "path": "research-assets/81-product-overview.png",
+      "bytes": 52878,
+      "ok": true
+    },
+    {
+      "path": "research-assets/82-product-detail.png",
+      "bytes": 54150,
+      "ok": true
+    },
+    {
+      "path": "research-assets/83-product-mobile.png",
+      "bytes": 36835,
+      "ok": true
+    },
+    {
+      "path": "research-assets/84-product-v1-before.png",
+      "bytes": 53866,
+      "ok": true
+    },
+    {
+      "path": "research-assets/85-product-v2-reveal.png",
+      "bytes": 25467,
+      "ok": true
+    },
+    {
+      "path": "research-assets/86-product-v2-scroll.png",
+      "bytes": 69162,
+      "ok": true
+    },
+    {
+      "path": "research-assets/87-product-v2-mobile.png",
+      "bytes": 36335,
+      "ok": true
+    },
+    {
+      "path": "research-assets/88-product-v2-before.png",
+      "bytes": 53500,
+      "ok": true
+    },
+    {
+      "path": "research-assets/89-product-v3-wide.png",
+      "bytes": 97432,
+      "ok": true
+    },
+    {
+      "path": "research-assets/90-product-v3-detail.png",
+      "bytes": 62827,
+      "ok": true
+    },
+    {
+      "path": "research-assets/91-product-v3-collection.png",
+      "bytes": 115719,
+      "ok": true
+    },
+    {
+      "path": "research-assets/92-product-v3-mobile.png",
+      "bytes": 35985,
+      "ok": true
+    },
+    {
+      "path": "research-assets/93-product-v3-overview.png",
+      "bytes": 53829,
+      "ok": true
+    },
+    {
+      "path": "research-assets/94-product-v3-mobile-hero.png",
+      "bytes": 35431,
+      "ok": true
+    },
+    {
+      "path": "research-assets/95-product-design-reference.png",
+      "bytes": 65283,
+      "ok": true
+    },
+    {
+      "path": "research-assets/96-product-design-editorial.png",
+      "bytes": 1547244,
+      "ok": true
+    },
+    {
+      "path": "research-assets/97-product-design-immersive.png",
+      "bytes": 1701772,
+      "ok": true
+    },
+    {
+      "path": "research-assets/98-product-design-showcase.png",
+      "bytes": 1554888,
+      "ok": true
+    },
+    {
+      "path": "research-assets/99-product-immersive-cover.png",
+      "bytes": 1779887,
+      "ok": true
+    },
+    {
+      "path": "research-assets/README.md",
+      "bytes": 11664,
+      "ok": true
+    },
+    {
+      "path": "research.css",
+      "bytes": 3936,
+      "ok": true
+    },
+    {
+      "path": "research.html",
+      "bytes": 11229,
+      "ok": true
+    }
+  ],
+  "previous": [
+    {
+      "path": "/",
+      "bytes": 17515,
+      "ok": true
+    },
+    {
+      "path": "001-paperroute/",
+      "bytes": 6462,
+      "ok": true
+    },
+    {
+      "path": "001-paperroute/research.html",
+      "bytes": 15126,
+      "ok": true
+    },
+    {
+      "path": "002-dunhuang-aura/",
+      "bytes": 15327,
+      "ok": true
+    },
+    {
+      "path": "002-dunhuang-aura/studio.html",
+      "bytes": 8815,
+      "ok": true
+    },
+    {
+      "path": "003-mountain-railway-diorama/scene.html",
+      "bytes": 13846,
+      "ok": true
+    },
+    {
+      "path": "003-mountain-railway-diorama/archives/v23/",
+      "bytes": 6085,
+      "ok": true
+    },
+    {
+      "path": "004-eanpa-sky/",
+      "bytes": 11044,
+      "ok": true
+    },
+    {
+      "path": "004-eanpa-sky/lab/",
+      "bytes": 48682,
+      "ok": true
+    },
+    {
+      "path": "005-stick-steel/",
+      "bytes": 8552,
+      "ok": true
+    },
+    {
+      "path": "005-stick-steel/demo/?view=capabilities",
+      "bytes": 430,
+      "ok": true
+    },
+    {
+      "path": "006-emberfall-arpg/",
+      "bytes": 4056,
+      "ok": true
+    },
+    {
+      "path": "006-emberfall-arpg/research/",
+      "bytes": 59206,
+      "ok": true
+    },
+    {
+      "path": "008-terrain-motion-lab/capabilities.html",
+      "bytes": 14553,
+      "ok": true
+    },
+    {
+      "path": "008-terrain-motion-lab/versions.html",
+      "bytes": 3829,
+      "ok": true
+    },
+    {
+      "path": "009-city-landmark-map/archive.html",
+      "bytes": 3973,
+      "ok": true
+    },
+    {
+      "path": "010-mini-moto-comparison/",
+      "bytes": 16242,
+      "ok": true
+    },
+    {
+      "path": "010-mini-moto-comparison/ride.html",
+      "bytes": 4365,
+      "ok": true
+    }
+  ]
+}

@@ -170,3 +170,5 @@
 ## 发布摘要 · 2026-09-15
 
 133-research-summary-desktop.png：发布摘要桌面首屏；134-research-summary-mobile.png：手机宽度下四种方式的阅读布局。均来自子目录发布包的实际浏览器截图。
+
+135-lab-mobile-published-navigation.png：手机实验室的两行导航与64项交互入口，修复文字过密后的实际画面。
