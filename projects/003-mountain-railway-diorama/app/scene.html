@@ -11,7 +11,7 @@
 <div class="plan-actions"><button id="plan-save">另存方案</button><button id="plan-export">导出文件</button></div>
 <label class="field-label">已保存方案<select id="plan-list"></select></label><button id="plan-load">恢复选中方案</button>
 <div class="plan-actions"><button id="plan-pin">设当前为基准</button><button id="plan-compare" aria-pressed="false">查看基准</button></div>
-<p class="control-note">包含三套构图、各水流精调、四季光线、风与镜头。基准比较沿用当前机位；动画帧不锁定。数据保存在当前浏览器与网址，可导出迁移。</p>
+<p class="control-note">包含三套构图、各水流精调、四季光线、风与镜头。比较沿用当前机位与当前版本画面，不恢复旧版效果；动画帧不锁定。数据保存在当前浏览器与网址，可导出迁移。</p>
 <details id="plan-transfer"><summary>导入 / 查看方案文件</summary><label class="field-label">选择方案文件<input id="plan-file" type="file" accept=".json,application/json"></label><label class="field-label">或粘贴方案内容<textarea id="plan-json" rows="5" spellcheck="false" placeholder="粘贴导出的 JSON 方案"></textarea></label><button id="plan-import-text">应用方案内容</button></details>
 <p id="plan-status" class="control-note" role="status" aria-live="polite">先调整场景，再另存方案。刷新后从列表恢复；V17 原始基准始终可选。</p>
 </details>

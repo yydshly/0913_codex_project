@@ -3,6 +3,54 @@ import * as THREE from './vendor/three.module.js';
 import {createSpatial,createFoundation,terrainPresets} from './scene-world.mjs';import {createService,stageDefinitions} from './scene-service.mjs';
 import {windResponse} from './scene-vegetation.mjs';
 const world=createSpatial();
+
+test('同组白沫在同一实际落点出生，逐渐散开并在寿命边界归零',async()=>{
+ const {poolFoamClusterState,poolFoamState}=await import('./scene-water-modes.mjs');
+ const emitter={lateral:.4,seed:.35},members=[{lateral:-.9,seed:0},{lateral:.9,seed:1}],life=4.5+emitter.seed*2;
+ for(const waterMode of ['continuous','stream','rocky']){
+  const w=createSpatial({waterMode}),birth=poolFoamState(w,0,emitter.lateral,emitter.seed);
+  for(const member of members){
+   assert.deepEqual(poolFoamClusterState(w,0,emitter,member),birth);
+   assert.equal(poolFoamClusterState(w,life,emitter,member).opacity,0);
+   assert.equal(poolFoamClusterState(w,-.1,emitter,member).opacity,0);
+   let z=birth.z;
+   for(let age=.1;age<life;age+=.1){const p=poolFoamClusterState(w,age,emitter,member);assert.ok(p.z>z);assert.ok(p.opacity>0&&p.opacity<=1);z=p.z;}
+  }
+  const separation=age=>{const a=poolFoamClusterState(w,age,emitter,members[0]),b=poolFoamClusterState(w,age,emitter,members[1]);return Math.hypot(a.x-b.x,a.z-b.z);};
+  assert.ok(separation(3)>separation(.5)*4);
+ }
+});
+
+test('白沫拉伸随年龄增长，整片包围半径覆盖所有朝向的四角',async()=>{
+ const {foamPatchShape}=await import('./scene-water-modes.mjs');
+ for(const seed of [0,.5,1])for(const pool of [true,false])for(const size of [.02,.1,.25]){
+  const first=foamPatchShape(size,0,seed,pool),last=foamPatchShape(size,8,seed,pool);
+  assert.equal(first.maturity,0);assert.equal(last.maturity,1);assert.ok(last.length>=first.length);assert.ok(first.length>first.width);
+  for(const age of [0,1,3,7]){
+   const shape=foamPatchShape(size,age,seed,pool);
+   for(let angle=0;angle<6.3;angle+=.31)for(const a of [-1,1])for(const b of [-1,1]){
+    const x=a*shape.width*Math.cos(angle)-b*shape.length*Math.sin(angle),z=a*shape.width*Math.sin(angle)+b*shape.length*Math.cos(angle);
+    assert.ok(Math.hypot(x,z)<=shape.radius+1e-12,'避石检查必须覆盖拉伸后的四角');
+   }
+  }
+ }
+});
+
+test('白沫完整薄片拒绝越岸与岛外，实际三水流河心仍保留可见区域',async()=>{
+ const {foamFitsWater}=await import('./scene-water.mjs');
+ const {foamPatchShape}=await import('./scene-water-modes.mjs');
+ const shape=foamPatchShape(.2,2,.5),across=new THREE.Vector3(1,0,0),flow=new THREE.Vector3(0,0,1);
+ // The center itself is wet; a stretched corner reaches the dry bank.
+ const bounded={...world,footprint:(x,z)=>Math.abs(x)<2&&Math.abs(z)<2,height:(x,z)=>Math.abs(x)>1?1:-1,waterSurface:()=>0};
+ assert.equal(foamFitsWater(bounded,0,0,across,flow,shape),true);
+ assert.equal(foamFitsWater(bounded,.95,0,across,flow,shape),false);
+ assert.equal(foamFitsWater(bounded,0,1.9,across,flow,shape),false);
+ for(const waterMode of ['continuous','stream','rocky']){
+  const w=createSpatial({waterMode});let wet=0;
+  for(let z=3;z<18;z+=.5)if(foamFitsWater(w,w.riverX(z),z,across,flow,shape))wet++;
+  assert.ok(wet>20,'保守边界不能把正常河心水片全部裁掉');
+ }
+});
 test('水纹行程连续递增，跌落加速后下游减速，调速和暂停不跳位',async()=>{
  const {waterTravel,advanceWaterPhase}=await import('./scene-water-modes.mjs');
  for(const waterMode of['continuous','stream','rocky']){const w=createSpatial({waterMode});let prev=-Infinity;for(let z=-32;z<=32;z+=.03){const t=waterTravel(w,z);assert.ok(Number.isFinite(t)&&t>prev);prev=t;}const{start,end}=w.waterStyle,speed=z=>.001/(waterTravel(w,z+.001)-waterTravel(w,z));assert.ok(speed(end-.1)>speed(start+.1)*2);assert.ok(speed(end+9)<speed(end+.1));assert.ok(Math.abs(waterTravel(w,end-.000001)-waterTravel(w,end+.000001))<.00001);}

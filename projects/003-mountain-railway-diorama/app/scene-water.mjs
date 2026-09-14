@@ -1,6 +1,6 @@
 import * as THREE from './vendor/three.module.js';
 import {V,mesh,random} from './scene-world.mjs';
-import {advanceWaterPhase,waterTravel,waterTravelToZ,poolFoamState,waterLaneShift} from './scene-water-modes.mjs';
+import {advanceWaterPhase,waterTravel,waterTravelToZ,poolFoamClusterState,waterLaneShift,foamPatchShape} from './scene-water-modes.mjs';
 import {channelStrength,cascadeBedHeight,createCascadeRock,createCascadeSplash} from './scene-cascade.mjs';
 import {rockWaterField} from './scene-rocks.mjs';
 export function createWater(group,world,shared){
@@ -88,16 +88,28 @@ export function createWater(group,world,shared){
    #include <opaque_fragment>`);
  };
  const water=mesh(geo,material,group,false),foamGroup=new THREE.Group();group.add(foamGroup);const rng=random(49);
- // One instanced draw; each patch has its own birth/fade envelope.
- const foamMat=new THREE.MeshBasicMaterial({color:'#b6d4c7',transparent:true,opacity:.45,depthWrite:false,side:THREE.DoubleSide}),foam=[],foamOpacity=new THREE.InstancedBufferAttribute(new Float32Array(180),1);
- const foamGeo=new THREE.CircleGeometry(1,7);foamGeo.setAttribute('aFoamOpacity',foamOpacity);
+ // Still 180 instances in one draw: soft, torn films instead of polygon discs.
+ const foamMat=new THREE.MeshBasicMaterial({color:'#b6d4c7',transparent:true,opacity:.45,depthWrite:false,side:THREE.DoubleSide}),foam=[],foamOpacity=new THREE.InstancedBufferAttribute(new Float32Array(180),1),foamStyle=new THREE.InstancedBufferAttribute(new Float32Array(180*2),2);
+ const foamGeo=new THREE.PlaneGeometry(2,2);foamGeo.setAttribute('aFoamOpacity',foamOpacity);foamGeo.setAttribute('aFoamStyle',foamStyle);foamOpacity.setUsage(THREE.DynamicDrawUsage);foamStyle.setUsage(THREE.DynamicDrawUsage);
  foamMat.onBeforeCompile=shader=>{
-  shader.vertexShader='attribute float aFoamOpacity;varying float vFoamOpacity;\n'+shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvFoamOpacity=aFoamOpacity;');
-  shader.fragmentShader='varying float vFoamOpacity;\n'+shader.fragmentShader.replace('#include <opaque_fragment>','diffuseColor.a*=vFoamOpacity;\n#include <opaque_fragment>');
+  shader.vertexShader='attribute float aFoamOpacity;attribute vec2 aFoamStyle;varying float vFoamOpacity;varying vec2 vFoamUV;varying vec2 vFoamStyle;\n'+shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvFoamOpacity=aFoamOpacity;vFoamUV=uv*2.-1.;vFoamStyle=aFoamStyle;');
+  shader.fragmentShader=`varying float vFoamOpacity;varying vec2 vFoamUV;varying vec2 vFoamStyle;
+   float foamHash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+   float foamNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(foamHash(i),foamHash(i+vec2(1.,0.)),f.x),mix(foamHash(i+vec2(0.,1.)),foamHash(i+1.),f.x),f.y);}
+   `+shader.fragmentShader.replace('#include <opaque_fragment>',`
+    vec2 p=vFoamUV;float seed=vFoamStyle.x*57.,age=vFoamStyle.y;
+    p.x+=.16*sin(p.y*5.+seed)+.08*sin(p.y*11.-seed);
+    float coarse=foamNoise(p*vec2(3.8,3.1)+seed);
+    float edge=1.-smoothstep(.43,.84,length(p*vec2(1.,.9))+(coarse-.5)*.42);
+    float grain=foamNoise(p*vec2(7.,6.)+seed+age*.65);
+    float film=smoothstep(.22+age*.27,.43+age*.25,coarse*.55+grain*.45);
+    float margin=1.-smoothstep(.82,1.,max(abs(vFoamUV.x),abs(vFoamUV.y)));
+    diffuseColor.a*=vFoamOpacity*edge*film*margin;
+    #include <opaque_fragment>`);
  };
- foamMat.customProgramCacheKey=()=> 'river-foam-lifecycle-v9';
+ foamMat.customProgramCacheKey=()=> 'river-foam-film-v19';
  const foamMesh=new THREE.InstancedMesh(foamGeo,foamMat,180);foamMesh.frustumCulled=false;foamMesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);foamGroup.add(foamMesh);
- const foamDummy=new THREE.Object3D(),upNormal=V(0,0,1),surfaceNormal=V();
+ const foamDummy=new THREE.Object3D(),surfaceNormal=V(),flowAxis=V(),acrossAxis=V(),foamBasis=new THREE.Matrix4();
  for(let i=0;i<180;i++)foam.push({offset:rng(),lateral:(rng()-.5)*1.8,seed:rng(),size:.028+rng()*.07,pool:i<100});
  const mistCanvas=document.createElement('canvas');mistCanvas.width=mistCanvas.height=64;const ctx=mistCanvas.getContext('2d'),gradient=ctx.createRadialGradient(32,32,2,32,32,32);gradient.addColorStop(0,'rgba(226,247,243,.23)');gradient.addColorStop(1,'rgba(226,247,243,0)');ctx.fillStyle=gradient;ctx.fillRect(0,0,64,64);const mistMat=new THREE.SpriteMaterial({map:new THREE.CanvasTexture(mistCanvas),transparent:true,opacity:.3,depthWrite:false}),mist=[];
  for(let i=0;i<20;i++){const m=new THREE.Sprite(mistMat);m.scale.set(1.2+rng()*1.8,1.1+rng()*1.5,1);foamGroup.add(m);mist.push({m,a:rng()*6.28})}
@@ -109,18 +121,22 @@ export function createWater(group,world,shared){
   material.envMapIntensity=shared.waterReflection.value*.5;
   splash.update(time);splash.points.visible=style.splash>0&&shared.flow.value>.001;splash.points.material.uniforms.uVisible.value*=style.splash*shared.waterFoam.value*2.;
   for(let i=0;i<foam.length;i++){
-   const f=foam[i],life=4.5+f.seed*2,age=(f.offset*life+phase.value)%life;
+   const f=foam[i],emitter=f.pool?foam[Math.floor(i/4)*4]:f,life=4.5+emitter.seed*2,age=(emitter.offset*life+phase.value)%life;
    let z,x,alpha,size;
-   if(f.pool){const patch=poolFoamState(world,age,f.lateral,f.seed);({z,x}=patch);alpha=patch.opacity*style.foam;size=f.size*patch.scale;}
+   if(f.pool){const patch=poolFoamClusterState(world,age,emitter,f);({z,x}=patch);alpha=patch.opacity*style.foam;size=f.size*patch.scale;}
    else{z=waterTravelToZ(world,travelStart+(f.offset*(travelEnd-travelStart)+phase.value)%(travelEnd-travelStart));x=world.riverX(z)+f.lateral*world.halfWidth(z);alpha=.13;size=f.size*.55;}
    const around=rockWaterField(world.riverRocks||[],x,z,world.waterSurface(x,z));x+=around.deflect*.45;
    const surface=world.waterSurface(x,z),depth=surface-Math.max(world.height(x,z),cascadeBedHeight(world,x,z)),obstacle=rockWaterField(world.riverRocks||[],x,z,surface);
-   const valid=world.footprint(x,z)&&depth>.05&&obstacle.clearance>size+.035;
+   const shape=foamPatchShape(size,age,emitter.seed,f.pool);
    const dx=(world.waterSurface(x+.04,z)-world.waterSurface(x-.04,z))/.08,dz=(world.waterSurface(x,z+.04)-world.waterSurface(x,z-.04))/.08;
-   surfaceNormal.set(-dx,1,-dz).normalize();foamDummy.quaternion.setFromUnitVectors(upNormal,surfaceNormal);foamDummy.position.set(x,surface+.04,z);foamDummy.scale.set(size,size*(f.pool?1.35:1.7),1);foamDummy.updateMatrix();foamMesh.setMatrixAt(i,foamDummy.matrix);
+   const bend=(world.riverX(z+.08)-world.riverX(z-.08))/.16;
+   surfaceNormal.set(-dx,1,-dz).normalize();flowAxis.set(bend,dx*bend+dz,1).normalize();acrossAxis.crossVectors(flowAxis,surfaceNormal).normalize();foamBasis.makeBasis(acrossAxis,flowAxis,surfaceNormal);
+   const valid=depth>.05&&obstacle.clearance>shape.radius+.035&&foamFitsWater(world,x,z,acrossAxis,flowAxis,shape);
+   foamDummy.quaternion.setFromRotationMatrix(foamBasis);foamDummy.position.set(x,surface+.04,z);foamDummy.scale.set(shape.width,shape.length,1);foamDummy.updateMatrix();foamMesh.setMatrixAt(i,foamDummy.matrix);
    foamOpacity.setX(i,valid?alpha*Math.min(1,depth*4):0);
+   foamStyle.setXY(i,f.seed,f.pool?shape.maturity:.65);
   }
-  foamMesh.instanceMatrix.needsUpdate=true;foamOpacity.needsUpdate=true;
+  foamMesh.instanceMatrix.needsUpdate=true;foamOpacity.needsUpdate=true;foamStyle.needsUpdate=true;
   for(let i=0;i<mist.length;i++){const f=mist[i],e=splash.emitters[i%splash.emitters.length];f.m.position.set(e.x+Math.sin(time*.3+f.a)*.45,e.y+.23+Math.cos(time*.5+f.a)*.18,e.z+.3);f.m.scale.set(.55+Math.sin(f.a)**2*.65,.45,1);}
   mistMat.opacity=(.20+world.effectiveDrop*.03)*Math.min(1,shared.flow.value)*style.splash*shared.waterMist.value*2.;mistMat.color.setScalar(1-night*.55);foamMat.opacity=(.38-night*.12)*shared.waterFoam.value*2.;
  },reflect(renderer,scene,camera,now){
@@ -150,4 +166,14 @@ export function createWaterGeometry(world){
  }
  const geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.Float32BufferAttribute(pos,3));geo.setAttribute('uv',new THREE.Float32BufferAttribute(uv,2));geo.setAttribute('aFall',new THREE.Float32BufferAttribute(fall,1));geo.setAttribute('aDepth',new THREE.Float32BufferAttribute(shore,1));geo.setAttribute('aChannel',new THREE.Float32BufferAttribute(channels,1));geo.setAttribute('aTravel',new THREE.Float32BufferAttribute(travel,1));geo.setAttribute('aCross',new THREE.Float32BufferAttribute(cross,1));geo.setAttribute('aObstacle',new THREE.Float32BufferAttribute(obstacles,1));geo.setAttribute('aDeflect',new THREE.Float32BufferAttribute(deflections,1));geo.setAttribute('aContactFoam',new THREE.Float32BufferAttribute(contactFoam,1));geo.setAttribute('aFlowNormal',new THREE.Float32BufferAttribute(surfaceNormals,3));geo.setAttribute('aFlowTangent',new THREE.Float32BufferAttribute(flowTangents,3));geo.setAttribute('aImpactShift',new THREE.Float32BufferAttribute(impactOffsets,1));geo.setIndex(indices);geo.computeVertexNormals();
  return geo;
+}
+
+// Check the stretched footprint at all four corners, including shore and island
+// bounds. Near rocks the caller uses the full quad's circumscribed radius.
+export function foamFitsWater(world,x,z,across,flow,shape){
+ for(const a of [-1,1])for(const b of [-1,1]){
+  const px=x+across.x*shape.width*a+flow.x*shape.length*b,pz=z+across.z*shape.width*a+flow.z*shape.length*b;
+  if(!world.footprint(px,pz)||world.waterSurface(px,pz)-Math.max(world.height(px,pz),cascadeBedHeight(world,px,pz))<=.05)return false;
+ }
+ return true;
 }

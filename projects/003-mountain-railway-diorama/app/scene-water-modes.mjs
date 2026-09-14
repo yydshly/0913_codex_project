@@ -38,6 +38,14 @@ export function waterTravelToZ(world,t,cross=0){
  return(lo+hi)/2;
 }
 
+// Half extents of the whole quad, including its transparent edges. Use the
+// circumscribed radius for solid clearance, rather than the old disc radius.
+export function foamPatchShape(size,age,seed,pool=true){
+ const maturity=Math.max(0,Math.min(1,age/(4.5+seed*2)));
+ const width=size*(pool?1.65:.75),length=size*(pool?2.6+1.7*maturity:2.7);
+ return{width,length,radius:Math.hypot(width,length),maturity};
+}
+
 // A pool patch is born at the foot, spreads with its age, then dissolves.
 export function poolFoamState(world,age,lateral,seed=0){
  const life=4.5+seed*2,a=Math.max(0,Math.min(1,age/life));
@@ -47,4 +55,9 @@ export function poolFoamState(world,age,lateral,seed=0){
  const x=world.riverX(z)+Math.max(-.86,Math.min(.86,lateral*spread+Math.sin(a*4+seed*6)*.025*a))*world.halfWidth(z);
  const fadeIn=Math.min(1,a/.12),fadeOut=Math.max(0,1-a);
  return{x,z,opacity:age<0||age>=life?0:fadeIn*fadeIn*(3-2*fadeIn)*fadeOut*fadeOut,scale:.7+a*1.8};
+}
+
+export function poolFoamClusterState(world,age,emitter,member){
+ const patch=poolFoamState(world,age,emitter.lateral,emitter.seed),spread=Math.max(0,Math.min(1,age/(4.5+emitter.seed*2)));
+ return{...patch,x:patch.x+(member.lateral-emitter.lateral)*spread*.9,z:patch.z+(member.seed-emitter.seed)*spread*1.3};
 }
