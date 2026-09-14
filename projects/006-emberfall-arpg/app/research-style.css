@@ -11,3 +11,5 @@
 @media(max-width:900px){.guide-grid{gap:12px}.guide-copy{padding:16px}.guide-copy h2{font-size:17px}.guide-image img{height:175px}}
 @media(max-width:700px){.research-intro{padding:27px 0 20px}.research-intro h1{font-size:29px;line-height:1.5}.guide-grid{grid-template-columns:1fr}.guide-image img{height:230px}.guide-copy{padding:20px}.guide-copy h2{font-size:20px}.intro-links{gap:12px}}
 @media print{.guide-grid{grid-template-columns:repeat(3,1fr)}.guide-image img{height:150px}.guide-card{break-inside:avoid}.guide-copy{padding:10px}.guide-copy h2{font-size:15px}.guide-copy p{font-size:10px}.research-intro{display:block;padding-top:0}.intro-links{display:none}}
+
+@media(max-width:700px){header nav{gap:14px;flex-wrap:wrap}}

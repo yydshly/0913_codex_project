@@ -76,3 +76,10 @@ GitHub Pages 托管静态网页；联网排行榜、账户和持久化后端需�
 首次发布提交 `c05400f6b1f7a66612c9d7184ced9611fa2d37f2`，对应 [Actions 成功记录](https://github.com/yydshly/0913_codex_project/actions/runs/34824369331)。[在线效果导览](https://yydshly.github.io/0913_codex_project/005-stick-steel/) · [人物表演](https://yydshly.github.io/0913_codex_project/005-stick-steel/demo/?view=characters) · [配音故事](https://yydshly.github.io/0913_codex_project/005-stick-steel/demo/?view=stories) · [物理能力](https://yydshly.github.io/0913_codex_project/005-stick-steel/demo/?view=capabilities)。
 
 干净工作树构建 5 个项目，295 处静态引用检查通过；005 类型检查、44 项功能测试及 5 项音轨测试通过。线上 39 个文件全部返回 HTTP 200，内容与本地构建一致（HTML/CSS/文本仅归一化 Windows 与 Linux 换行；图片、音轨与 JS 校验原始字节）。总目录与 001、002、003、010 项目页均返回 200。浏览器检查及截图见 [005 验证记录](../projects/005-stick-steel/notes.md)。Actions 出现既有 Pages action 的 Node 20 弃用提示，未阻止本次构建和部署。
+
+
+## 006 · 游戏与研究导览
+
+[在线 ARPG](https://yydshly.github.io/0913_codex_project/006-emberfall-arpg/) · [三图研究导览](https://yydshly.github.io/0913_codex_project/006-emberfall-arpg/research/) · [物理实验台介绍](https://yydshly.github.io/0913_codex_project/006-emberfall-arpg/research/physics-lab.html)。此前 Pages 运行 34824948133 已成功，2026-09-14 实际检查游戏、研究页、脚本、引擎模块及代表截图均返回 HTTP 200。
+
+本次补齐网站目录、研究导览与可玩游戏的双向入口。006 的 `app/build.mjs` 生成游戏及 `dist/research/`，沿用现有全站构建；Python Markdown 依赖已接入工作流。物理实验台的 Windows 包仍未网络发布。

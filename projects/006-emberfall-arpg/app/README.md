@@ -1,5 +1,7 @@
 # 006 · 运行与操作
 
+[在线试玩 ARPG](https://yydshly.github.io/0913_codex_project/006-emberfall-arpg/) · [在线研究导览](https://yydshly.github.io/0913_codex_project/006-emberfall-arpg/research/)
+
 > 当前主线已转为 [杠杆实验室](lever-lab/README.md)，使用独立 Windows 启动包；本页保留旧浏览器 ARPG 的操作说明。
 
 版本 3.0.0，单人跨区域 ARPG 原型。支持 WebGL 2 的现代浏览器与 Node.js 18+。

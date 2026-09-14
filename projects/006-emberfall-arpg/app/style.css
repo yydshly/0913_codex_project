@@ -17,3 +17,5 @@ header{top:23px}.quest{top:130px}.quest h2{text-shadow:0 2px 5px #000}.quest p{c
 #route-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}#route-options[hidden]{display:none}#route-options button{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:7px 5px}
 
 #modal .modal-mark{font-size:32px;margin:0 0 8px}#modal>h2{margin:10px 0 20px}#modal>.eyebrow{margin:6px 0}#modal-primary{position:sticky;bottom:0;z-index:2}
+
+.header-actions .research-link{font-size:12px;color:#e5decb;text-decoration:none;padding:8px 10px;border:1px solid #8b795648;background:#121b1bd9;white-space:nowrap}.research-link:hover{background:#34403a}.research-link:focus-visible{outline:2px solid #87eaff;outline-offset:3px}@media(max-width:720px){.header-actions .research-link{font-size:10px;padding:6px}.header-actions{flex-wrap:wrap;justify-content:flex-end;max-width:58vw}}
