@@ -1,3 +1,4 @@
+import {createWanderer,stepWanderers} from './scene-motion.mjs';
 import * as THREE from './vendor/three.module.js';
 import {V,mat,mesh,random} from './scene-world.mjs';
 import {duckPoint} from './scene-wildlife.mjs';
@@ -61,11 +62,13 @@ export function createAquatic(parent,world,shared){
   const body=mesh(sphere,bodyMat,root);body.scale.set(.024,.027,.23);
   const head=mesh(sphere,gold,root);head.scale.set(.043,.036,.04);head.position.z=.18;
   const wings=[];for(const side of[-1,1])for(const z of[-.06,.07]){const pivot=new THREE.Group();pivot.position.z=z;root.add(pivot);const wing=mesh(sphere,wingMat,pivot);wing.position.x=side*.17;wing.scale.set(.2,.006,.047);wings.push({pivot,side});}
-  insects.push({root,site,wings});
+  insects.push({root,site,wings,motion:createWanderer(941+i*101)});
  }
  const stats={leaves:0,flowers:0,insects:0};
  const springColor=new THREE.Color('#748a53'),summerColor=new THREE.Color('#5e7545'),autumnColor=new THREE.Color('#8b8050');
+ let previousTime=shared.time.value;
  function update(time,night){
+  const dt=Math.max(0,Math.min(.1,time-previousTime));previousTime=time;
   const weights=shared.season.value.toArray(),s=aquaticSeason(weights,night,shared.rain.value,shared.wind.value);
   // Blend palettes in linear color space, keeping leaves free of terrain snow.
   leafMat.color.setRGB(springColor.r*weights[0]+summerColor.r*weights[1]+autumnColor.r*(weights[2]+weights[3]),springColor.g*weights[0]+summerColor.g*weights[1]+autumnColor.g*(weights[2]+weights[3]),springColor.b*weights[0]+summerColor.b*weights[1]+autumnColor.b*(weights[2]+weights[3]));
@@ -79,9 +82,9 @@ export function createAquatic(parent,world,shared){
   });
   insects.forEach((insect,i)=>{
    insect.root.visible=s.insects>(i?.4:.12)&&s.growth>.1;if(!insect.root.visible)return;stats.insects++;
-   const phase=time*(.8+i*.13)+i*2,p=insect.site;
-   insect.root.position.set(p.x+Math.sin(phase)*.45,world.waterSurface(p.x,p.z)+.7+Math.sin(phase*2)*.16,p.z+Math.cos(phase)*.4);
-   insect.root.rotation.y=Math.atan2(Math.cos(phase),-Math.sin(phase));
+   stepWanderers([insect.motion],dt,.45,.6,.6,0);const m=insect.motion,p=insect.site;
+   insect.root.position.set(p.x+m.x*.6,world.waterSurface(p.x,p.z)+.65+Math.sin(time*.9+i*2)*.08,p.z+m.z*.6);
+   insect.root.rotation.y=m.yaw;
    insect.wings.forEach(w=>w.pivot.rotation.z=w.side*Math.sin(time*36+i)*.32);
   });
  }

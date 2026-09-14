@@ -629,3 +629,32 @@ test('睡莲随季节休眠恢复，雨夜收花并抑制蜻蜓，暂停不改�
  shared.season.value.set(0,0,0,1);a.update(3,0);assert.deepEqual(a.stats,{leaves:0,flowers:0,insects:0});
  shared.season.value.set(0,1,0,0);shared.rain.value=0;a.update(3,0);assert.ok(a.stats.flowers>0);assert.equal(a.stats.insects,2);
 });
+
+test('石桥桥面宽度水平展开，所有顶点位于轨道以下且顶面法线向上',async()=>{
+ const {createBridgeDeckGeometry}=await import('./scene-world.mjs');const w=createSpatial(),samples=w.samples.filter(s=>w.bridge(s.p)),start=samples[0].u,end=samples.at(-1).u;
+ const g=createBridgeDeckGeometry(w,start,end),a=g.attributes.position,n=g.attributes.normal;
+ for(let i=0;i<a.count;i++){const near=w.closest(a.getX(i),a.getZ(i));assert.ok(a.getY(i)<near.p.y-.09);assert.ok(near.distance<1.4);if(i%4<2)assert.ok(n.getY(i)>0);}
+ g.dispose();
+});
+test('独立游动包含停留与转向，位置保持栖息区内，重复时间不改变姿态',async()=>{
+ const {createWanderer,stepWanderers}=await import('./scene-motion.mjs');const agents=Array.from({length:7},(_,i)=>createWanderer(280+i*79));
+ let resting=0,moving=0;const snapshot=[];
+ for(let i=0;i<3600;i++){stepWanderers(agents,1/30,.35,1.8,1.7,.6);for(const a of agents){assert.ok(Math.hypot(a.x,a.z)<=.941);assert.ok(Number.isFinite(a.yaw));if(a.speed<.02)resting++;if(a.speed>.12)moving++;}if(i%300===0)snapshot.push(agents.map(a=>a.rest));}
+ assert.ok(resting>100&&moving>100);assert.ok(snapshot.some(s=>s.some(x=>x>0)&&s.some(x=>x===0)));
+ const before=agents.map(a=>[a.x,a.z,a.yaw]);stepWanderers(agents,0,.35,1.8,1.7,.6);assert.deepEqual(agents.map(a=>[a.x,a.z,a.yaw]),before);
+});
+test('新的鱼鸭活动区内部同样保留水深并避让浮叶',async()=>{
+ const {aquaticSites}=await import('./scene-aquatic.mjs');
+ for(const composition of ['ridge','marsh','classic'])for(const waterMode of ['continuous','stream','rocky'])for(const width of [3,11]){
+  const w=createSpatial({composition,waterMode,width,bend:7,fall:6,relief:1.8}),sites=aquaticSites(w);
+  for(const type of ['fish','duck'])for(let i=0;i<80;i++){
+   const a=i*.83,r=(i%9)/9*.94,z=(type==='fish'?7.8:9.3)+Math.sin(a)*r*(type==='fish'?1.7:2.4),x=w.riverX(z)+Math.cos(a)*r*Math.min(type==='fish'?2.1:1.9,w.halfWidth(z)*(type==='fish'?.28:.24));
+   assert.ok(w.waterSurface(x,z)-w.height(x,z)>.95);for(const site of sites)assert.ok(Math.hypot(x-site.x,z-site.z)>site.r+(type==='fish'?.5:.8));
+  }
+ }
+});
+
+test('鸭群在宽窄活动区连续游动两分钟保持身体间距',async()=>{
+ const {createWanderer,stepWanderers}=await import('./scene-motion.mjs');
+ for(const rx of [.75,1.7]){const agents=[0,1,2].map(i=>Object.assign(createWanderer(719+i*181),{x:[-.55,.55,-.15][i],z:[-.6,0,.65][i]}));for(let k=0;k<3600;k++){stepWanderers(agents,1/30,.34,rx,2.4,1.8);for(let i=0;i<3;i++)for(let j=i+1;j<3;j++)assert.ok(Math.hypot((agents[i].x-agents[j].x)*rx,(agents[i].z-agents[j].z)*2.4)>1.3);}}
+});

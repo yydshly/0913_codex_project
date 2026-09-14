@@ -1,3 +1,4 @@
+import {createWanderer,stepWanderers} from './scene-motion.mjs';
 import * as THREE from './vendor/three.module.js';
 import {V,mat,mesh,beam} from './scene-world.mjs';
 import {windResponse} from './scene-vegetation.mjs';
@@ -82,9 +83,10 @@ export function createWildlife(parent,world,shared){
   }
   const tail=egg(root,palette.dark,[.13,.08,.22],[0,.27,-.54]);tail.rotation.x=-.35;
   root.scale.setScalar(.95);
-  return {root,head,phase:index*TAU/3,trail:[],lastTrail:-Infinity};
+  return {root,head,phase:index*TAU/3,motion:createWanderer(719+index*181),trail:[],lastTrail:-Infinity};
  }
- const birds=Array.from({length:4},(_,i)=>{const b=egret();b.phase=i*.45;return b;}),ducks=Array.from({length:3},(_,i)=>duck(i));
+ const birds=Array.from({length:4},(_,i)=>{const b=egret();b.phase=[.2,2.8,4.7,1.4][i];return b;}),ducks=Array.from({length:3},(_,i)=>duck(i));
+ ducks.forEach((d,i)=>{d.motion.x=[-.55,.55,-.15][i];d.motion.z=[-.6,0,.65][i];});
  const wakeMaterial=new THREE.MeshBasicMaterial({color:'#c5d9ce',transparent:true,opacity:.2,depthWrite:false,side:THREE.DoubleSide});
  for(const [index,d] of ducks.entries()){
   // Two narrow ribbons sampled from actual past positions, not a rigid V card.
@@ -109,10 +111,10 @@ export function createWildlife(parent,world,shared){
    b.wings.forEach(({pivot,side})=>pivot.rotation.z=side*(.14+beat));
   });
   stats.flightSpeed/=Math.max(1,stats.birds);
+  stepWanderers(ducks.map(d=>d.motion),dt,.34*activity.swim,Math.min(1.9,world.halfWidth(9.3)*.24),2.4,1.8);
   ducks.forEach((d,i)=>{
    d.root.visible=habitat.waterSafe;d.wake.visible=habitat.waterSafe;if(!habitat.waterSafe)return;
-   d.phase+=dt*.18*activity.swim;
-   const p=duckPoint(world,d.phase),ahead=duckPoint(world,d.phase+.01),heading=Math.atan2(ahead.x-p.x,ahead.z-p.z),force=windResponse(time,p.x,p.z,wind,shared.gust.value);
+   const m=d.motion,z=9.3+m.z*2.4,x=world.riverX(z)+m.x*Math.min(1.9,world.halfWidth(z)*.24),p=V(x,world.waterSurface(x,z),z),heading=m.yaw,force=windResponse(time,p.x,p.z,wind,shared.gust.value);
    d.root.position.copy(p);d.root.position.y+=.015+Math.sin(time*3+i)*force*.035;
    d.root.rotation.set(Math.sin(time*2+i)*force*.04,heading,Math.sin(time*2.3+i)*force*.055,'YXZ');
    d.head.rotation.x=.08*Math.sin(time*.8+i)+(activity.swim<.25?.45:0);
@@ -127,7 +129,7 @@ export function createWildlife(parent,world,shared){
      const fade=Math.max(0,1-age/2.5);colors.setXYZ(index,fade,fade,fade);
     }
    }
-   positions.needsUpdate=true;colors.needsUpdate=true;d.wake.material.opacity=.32*activity.swim*(1-night*.7);
+   positions.needsUpdate=true;colors.needsUpdate=true;d.wake.material.opacity=.32*Math.min(1,d.motion.speed/.32)*(1-night*.7);
   });
  }
  update(shared.time.value,shared.night.value);

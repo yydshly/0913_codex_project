@@ -14,7 +14,7 @@ export function createWater(group,world,shared){
  const dividerShapes=Array.from({length:3},(_,i)=>{const r=dividers[i];return r?new THREE.Vector2(r.ry,r.rz):new THREE.Vector2(1,1);});
  const uniforms={uDividerCount:{value:dividers.length},uDividerCentres:{value:dividerCentres},uDividerShapes:{value:dividerShapes},uPhase:phase,uThickness:shared.waterThickness,uFoamAmount:shared.waterFoam,uReflection:shared.waterReflection,uRipple:shared.waterRipple,uPoolZ:{value:style.end+.5},uFallActive:{value:style.splash>0?1:0},uSplit:{value:style.split?1:0},uFoam:{value:style.foam},uFlowScale:{value:style.flowScale},uSeason:shared.season,uTime:shared.time,uWind:shared.wind,uGust:shared.gust,uWindDir:shared.windDir,uRain:shared.rain,uFlow:shared.flow,uReflect:{value:target.texture},uReflectMatrix:{value:reflectionMatrix}};
  const material=new THREE.MeshStandardMaterial({color:'#257b7d',roughness:.24,metalness:.02,side:THREE.DoubleSide,transparent:true,depthWrite:false});
- material.userData.seasonOwn=true;material.customProgramCacheKey=()=> 'wetland-water-v26-underwater';
+ material.userData.seasonOwn=true;material.customProgramCacheKey=()=> 'wetland-water-v28-restrained-transmission';
  material.onBeforeCompile=shader=>{
   Object.assign(shader.uniforms,uniforms);
   const noise=`float hash21(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}float noise21(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(hash21(i),hash21(i+vec2(1,0)),f.x),mix(hash21(i+vec2(0,1)),hash21(i+vec2(1,1)),f.x),f.y);}`;
@@ -97,7 +97,7 @@ export function createWater(group,world,shared){
    // Transmission is gradual across all calm water, with no viewing hole or
    // fish-shaped cutout. Depth-tested fish remain behind the tinted surface.
    float clearWater=(1.-clamp(vFall,0.,1.))*(1.-ice)*smoothstep(.18,.6,vDepth)*(1.-smoothstep(1.8,3.5,vDepth));
-   float transmission=clearWater*mix(.72,.28,uThickness)*(1.-fresnel*.85)*(1.-uRain*.75)*(1.-uWind*.18)*(1.-uSeason.w*.38);
+   float transmission=clearWater*mix(.22,.06,uThickness)*(1.-fresnel*.85)*(1.-uRain*.75)*(1.-uWind*.18)*(1.-uSeason.w*.38);
    diffuseColor.a=1.-clamp(transmission,0.,.7);
    #include <opaque_fragment>`);
  };

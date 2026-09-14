@@ -1,0 +1,24 @@
+{
+  "date": "2026-09-15",
+  "screenshots": [
+    {
+      "image": "scene-v28-bridge-after.jpg",
+      "composition": "ridge",
+      "view": "bridge",
+      "season": "summer",
+      "mode": "day",
+      "water-mode": "continuous",
+      "water-thickness": "0.65",
+      "environment-ready": "true"
+    },
+    {"image":"scene-v28-water-after.jpg","composition":"ridge","view":"fish","season":"summer","mode":"day","water-mode":"continuous","water-thickness":"0.65","environment-ready":"true"},
+    {"image":"scene-v28-winter-bridge.jpg","composition":"ridge","view":"bridge","season":"winter","mode":"day","water-mode":"continuous","water-thickness":"0.65","environment-ready":"true"},
+    {"image":"scene-v28-spring-rain.jpg","composition":"marsh","view":"wildlife","season":"spring","mode":"rain","water-mode":"stream","water-thickness":"0.4","environment-ready":"true"},
+    {"image":"scene-v28-autumn-rocky.jpg","composition":"classic","view":"wildlife","season":"autumn","mode":"evening","water-mode":"rocky","water-thickness":"0.7","environment-ready":"true"}
+  ],
+  "referenceVersion": "9d29354 (V27)",
+  "notes": [
+    "参考图与修复图使用命名机位，窗口尺寸和动画时刻未锁定。",
+    "76 项自动检查通过；身体间距采用两分钟时间步进检查。"
+  ]
+}

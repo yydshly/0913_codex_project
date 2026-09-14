@@ -441,3 +441,15 @@
 - [隐藏水面生物](scene-v27-hidden.jpg)
 
 这些画面仅验证所列代表状态，不代表真实生态、浮力模拟或性能测试。
+
+## V28 · 水色、动物运动与石桥修复
+
+2026-09-15 通过浏览器保存七张实际截图。修改前来自线上 V27（9d29354），修改后来自本地 V28。未做图像生成或后期修改。前后使用命名观察机位，但浏览器尺寸及动物位置可能不同，不是像素级或锁帧比较。修改后参数见 [记录](scene-v28-checks.json)。
+
+- [桥面修复前](scene-v28-bridge-before.jpg)
+- [桥面修复后](scene-v28-bridge-after.jpg)
+- [水色修复前](scene-v28-water-before.jpg)
+- [水色修复后](scene-v28-water-after.jpg)
+- [冬季桥面](scene-v28-winter-bridge.jpg)
+- [浅湾春雨](scene-v28-spring-rain.jpg)
+- [秋季岩间分流](scene-v28-autumn-rocky.jpg)

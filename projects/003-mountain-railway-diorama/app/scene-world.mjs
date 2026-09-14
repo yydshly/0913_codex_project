@@ -96,8 +96,10 @@ export function createFoundation(scene,world){
  const stone=mat('#d6cbb0',.82),archCount=5;
  for(let i=0;i<archCount;i++){
   const u=first+(last-first)*i/archCount,v=first+(last-first)*(i+1)/archCount,a=world.curve.getPointAt(u),b=world.curve.getPointAt(v);
-  beam(group,stone,a.clone().add(V(0,-.42,0)),b.clone().add(V(0,-.42,0)),2.7,.4);
-  for(const p of[a,b]){const floor=Math.min(world.height(p.x,p.z),world.waterLevel(p.z)-.1);box(group,stone,[.6,p.y-floor-.4,2.65],[p.x,(p.y+floor-.4)/2,p.z]);}
+  // A sampled deck keeps width horizontal and follows the actual curved rail.
+  // The generic beam rotates around its long axis and is unsuitable here.
+  const deck=mesh(createBridgeDeckGeometry(world,u,v),stone,group);deck.name='石桥桥面';
+  for(const at of (i===0?[u,v]:[v])){const p=world.curve.getPointAt(at),t=world.curve.getTangentAt(at),floor=Math.min(world.height(p.x,p.z),world.waterLevel(p.z)-.1);const pier=box(group,stone,[2.65,p.y-floor-.5,.6],[p.x,(p.y+floor-.5)/2,p.z]);pier.rotation.y=Math.atan2(t.x,t.z);pier.name='石桥桥墩';}
   const normal=V(b.z-a.z,0,a.x-b.x).normalize();
   for(const side of[-1,1])for(let j=0;j<18;j++){
    const f=j/18,g=(j+1)/18,p=a.clone().lerp(b,f),q=a.clone().lerp(b,g);
@@ -106,4 +108,16 @@ export function createFoundation(scene,world){
   }
  }
  return{group,bridgeU:(first+last)/2};
+}
+
+export function createBridgeDeckGeometry(world,start,end){
+ const pos=[],indices=[],segments=12;
+ for(let i=0;i<=segments;i++){
+  const u=start+(end-start)*i/segments,p=world.curve.getPointAt(u),t=world.curve.getTangentAt(u),n=V(t.z,0,-t.x).normalize();
+  for(const y of[-.13,-.6])for(const side of[-1,1]){const q=p.clone().addScaledVector(n,side*1.35);pos.push(q.x,q.y+y,q.z);}
+  if(i<segments){const k=i*4;indices.push(k,k+1,k+4,k+1,k+5,k+4,k+2,k+6,k+3,k+3,k+6,k+7,k,k+4,k+2,k+2,k+4,k+6,k+1,k+3,k+5,k+3,k+7,k+5);}
+ }
+ indices.push(0,2,1,1,2,3);const k=segments*4;indices.push(k,k+1,k+2,k+1,k+3,k+2);
+ for(let i=0;i<indices.length;i+=3)[indices[i+1],indices[i+2]]=[indices[i+2],indices[i+1]];
+ const geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.Float32BufferAttribute(pos,3));geo.setIndex(indices);geo.computeVertexNormals();return geo;
 }

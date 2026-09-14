@@ -1,3 +1,4 @@
+import {createWanderer,stepWanderers} from './scene-motion.mjs';
 import * as THREE from './vendor/three.module.js';
 import {V,mat,mesh} from './scene-world.mjs';
 
@@ -39,18 +40,19 @@ export function createFish(parent,world,shared){
   const fins=[];for(const side of[-1,1]){const f=mesh(sideGeo,finMaterial,root);f.position.set(side*.08,-.03,.15);f.scale.x=side;fins.push(f);
    const eye=mesh(bodyGeo,dark,root);eye.scale.set(.024,.029,.032);eye.position.set(side*.106,.035,.31);
   }
-  root.scale.setScalar(.8+(i%3)*.12);fish.push({root,rear,fins,phase:i*Math.PI*2/7,beat:i,previous:V()});
+  root.scale.setScalar(.8+(i%3)*.12);fish.push({root,rear,fins,phase:i*Math.PI*2/7,beat:i,motion:createWanderer(280+i*79)});
  }
  let previousTime=shared.time.value;const stats={count:habitat.safe?7:0,activity:'缓水巡游'};
  function update(time,night){
   const dt=Math.min(.1,Math.max(0,time-previousTime));previousTime=time;
   const winter=shared.season.value.w,activity=fishActivity(winter,night,shared.flow.value);
+  const rx=Math.min(2.1,world.halfWidth(7.8)*.28);stepWanderers(fish.map(f=>f.motion),dt,.42*activity,rx,1.7,.6);
   stats.activity=winter>.6?'冬季慢游':night>.85?'夜间慢游':'缓水巡游';
   for(let i=0;i<fish.length;i++){
    const f=fish[i];f.root.visible=habitat.safe;if(!habitat.safe)continue;
-   f.phase+=dt*.24*activity;f.beat+=dt*(3+activity*3);
-   const p=fishPoint(world,f.phase,i,winter),next=fishPoint(world,f.phase+.01,i,winter),direction=next.clone().sub(p);
-   f.root.position.copy(p);f.root.rotation.set(-Math.atan2(direction.y,Math.hypot(direction.x,direction.z)),Math.atan2(direction.x,direction.z),.035*Math.sin(f.beat),'YXZ');
+   const m=f.motion;f.beat+=dt*(1.3+m.speed*9);
+   const z=7.8+m.z*1.7,x=world.riverX(z)+m.x*Math.min(2.1,world.halfWidth(z)*.28),depth=.48+(i%3)*.085+winter*.1;
+   f.root.position.set(x,world.waterSurface(x,z)-depth,z);f.root.rotation.set(0,m.yaw,.02*Math.sin(f.beat),'YXZ');
    f.rear.rotation.y=Math.sin(f.beat)*.32;f.fins.forEach((fin,j)=>fin.rotation.z=(j?1:-1)*Math.sin(f.beat*.55)*.18);
   }
  }
