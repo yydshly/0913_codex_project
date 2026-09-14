@@ -89,3 +89,5 @@ GitHub Pages 托管静态网页；联网排行榜、账户和持久化后端需�
 2026-09-14 根据用户要求归档研究理解、实际效果图与后期扩展，准备发布静态研究页及可操作院落。源码位于 `projects/004-eanpa-sky/app/`，根构建脚本自动执行 `build.mjs`，输出到 `site/004-eanpa-sky/`。研究页为根入口，`lab/` 为天气演示。
 
 构建按固定上游清单收集并校验 42 个必要运行文件，缓存与构建输出不提交，不复制完整上游世界。新增 40 项天气与宿主规则检查到现有工作流，保留其他项目构建。发布范围及真实验证见 [004 发布记录](../projects/004-eanpa-sky/publishing.md)。
+
+004 首次发布成功：提交 `2ee9f86ae86959708a1dc146f43e35d2ffa60cde`，[Actions](https://github.com/yydshly/0913_codex_project/actions/runs/34851773665)。[研究摘要](https://yydshly.github.io/0913_codex_project/004-eanpa-sky/) · [实时天气演示](https://yydshly.github.io/0913_codex_project/004-eanpa-sky/lab/)。CI 构建 7 个项目、792 处引用检查通过，首次发布的 185 个文件及既有 7 个入口均返回 200；浏览器完成雨景初始化与语言、声音链路复核。首次线上启动约 64 秒，具体环境与比对边界见专项记录。

@@ -4,6 +4,8 @@
 
 当前已满足阶段研究与效果演示需求，研究已总结，后续按具体用途扩展。
 
+[在线研究摘要](https://yydshly.github.io/0913_codex_project/004-eanpa-sky/) · [体验我们的天气场景](https://yydshly.github.io/0913_codex_project/004-eanpa-sky/lab/)
+
 [返回总索引](../../README.md#项目索引) · [运行与操作](app/README.md) · [实践过程归档](practice-history.md) · [后期扩展](next-steps.md) · [实际验证](notes.md)
 
 | 项目 | 内容 |
@@ -14,7 +16,7 @@
 | 技术基础 | Three.js r186、WebGPU、TSL 与上游渲染器补丁 |
 | 许可证 | 引擎代码 MIT；Three.js MIT；素材分别署名与授权，见下文 |
 | 阶段状态 | 已总结；现有演示够用，保留后续优化备忘 |
-| 发布状态 | 已准备 GitHub Pages 研究页与实时院落，部署验证后补充在线地址 |
+| 发布状态 | GitHub Pages 已发布；研究页、实际截图、实时院落与声音链路已复核 |
 
 ## 我们的实际效果
 

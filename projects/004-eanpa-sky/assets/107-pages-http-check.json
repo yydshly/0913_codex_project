@@ -1,0 +1,1152 @@
+{
+  "deploymentCommit": "2ee9f86ae86959708a1dc146f43e35d2ffa60cde",
+  "deploymentRun": 34851773665,
+  "project": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "matches": true,
+      "bytes": 11044
+    },
+    {
+      "path": "LICENSE",
+      "status": 200,
+      "matches": true,
+      "bytes": 1066
+    },
+    {
+      "path": "research.css",
+      "status": 200,
+      "matches": true,
+      "bytes": 2957
+    },
+    {
+      "path": "runtime-manifest.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 5202
+    },
+    {
+      "path": "assets/moon_color_4k.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 2031963
+    },
+    {
+      "path": "assets/starmap_tycho_4k.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 3009146
+    },
+    {
+      "path": "assets/weather/cirrus_ice_trails.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 240
+    },
+    {
+      "path": "assets/weather/cirrus_ice_trails.png",
+      "status": 200,
+      "matches": true,
+      "bytes": 471139
+    },
+    {
+      "path": "assets/weather/rain_streak.png",
+      "status": 200,
+      "matches": true,
+      "bytes": 24932
+    },
+    {
+      "path": "assets/weather/README.md",
+      "status": 200,
+      "matches": true,
+      "bytes": 913
+    },
+    {
+      "path": "assets/weather/trace_06.png",
+      "status": 200,
+      "matches": true,
+      "bytes": 36247
+    },
+    {
+      "path": "engine/cached_cloud_display.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 14947
+    },
+    {
+      "path": "engine/cloud_motion.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 686
+    },
+    {
+      "path": "engine/cloud_shadow_map.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 7474
+    },
+    {
+      "path": "engine/cloud_uniform_snapshot.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 1566
+    },
+    {
+      "path": "engine/impact_smoke.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 2091
+    },
+    {
+      "path": "engine/quality_presets.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 2540
+    },
+    {
+      "path": "engine/rain_accumulation_field.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 6444
+    },
+    {
+      "path": "engine/rain_surface_field.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 13575
+    },
+    {
+      "path": "engine/sky_noise.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 1691
+    },
+    {
+      "path": "engine/sky_system.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 182902
+    },
+    {
+      "path": "engine/weather_listener.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 2518
+    },
+    {
+      "path": "engine/weather_system.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 138343
+    },
+    {
+      "path": "lab/adaptive-quality.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 1645
+    },
+    {
+      "path": "lab/boot-preview.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 903
+    },
+    {
+      "path": "lab/courtyard-rain.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 9016
+    },
+    {
+      "path": "lab/courtyard.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 9985
+    },
+    {
+      "path": "lab/hail-weather.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 5400
+    },
+    {
+      "path": "lab/impact-audio.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 1093
+    },
+    {
+      "path": "lab/index.html",
+      "status": 200,
+      "matches": true,
+      "bytes": 48682
+    },
+    {
+      "path": "lab/lab.css",
+      "status": 200,
+      "matches": true,
+      "bytes": 14591
+    },
+    {
+      "path": "lab/LICENSE.eanpa.txt",
+      "status": 200,
+      "matches": true,
+      "bytes": 1066
+    },
+    {
+      "path": "lab/lighting.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 614
+    },
+    {
+      "path": "lab/main.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 42266
+    },
+    {
+      "path": "lab/rain-experience.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 6620
+    },
+    {
+      "path": "lab/reflection-budget.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 550
+    },
+    {
+      "path": "lab/resource-sizes.json",
+      "status": 200,
+      "matches": false,
+      "bytes": 2289,
+      "semanticMatchesOnlineFiles": true
+    },
+    {
+      "path": "lab/runtime-history.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 167
+    },
+    {
+      "path": "lab/scenarios.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 1836
+    },
+    {
+      "path": "lab/shoreline.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 625
+    },
+    {
+      "path": "lab/snow-coating.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 537
+    },
+    {
+      "path": "lab/snow-sampling.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 1317
+    },
+    {
+      "path": "lab/snow-weather.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 6069
+    },
+    {
+      "path": "lab/snowmelt.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 1033
+    },
+    {
+      "path": "lab/soundscape.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 12235
+    },
+    {
+      "path": "lab/splash-motion.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 952
+    },
+    {
+      "path": "lab/stay.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 3895
+    },
+    {
+      "path": "lab/surface-state.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 2690
+    },
+    {
+      "path": "lab/water-waves.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 2411
+    },
+    {
+      "path": "lab/weather-response.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 3299
+    },
+    {
+      "path": "lab-audio/rain-garden.ogg",
+      "status": 200,
+      "matches": true,
+      "bytes": 175471
+    },
+    {
+      "path": "lab-audio/thunder-natural.ogg",
+      "status": 200,
+      "matches": true,
+      "bytes": 243284
+    },
+    {
+      "path": "research-assets/01-earth-cumulus.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 78800
+    },
+    {
+      "path": "research-assets/02-earth-sunset.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 45052
+    },
+    {
+      "path": "research-assets/03-earth-night.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 52732
+    },
+    {
+      "path": "research-assets/04-earth-rain.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 62827
+    },
+    {
+      "path": "research-assets/05-earth-dark-storm.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 45162
+    },
+    {
+      "path": "research-assets/06-orbital-halo.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 87505
+    },
+    {
+      "path": "research-assets/07-shieldworld.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 86458
+    },
+    {
+      "path": "research-assets/08-chinese-demo.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 59122
+    },
+    {
+      "path": "research-assets/09-practice-record.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 88478
+    },
+    {
+      "path": "research-assets/10-lab-clear.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 76362
+    },
+    {
+      "path": "research-assets/100-snowmelt-snow.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 67994
+    },
+    {
+      "path": "research-assets/101-snowmelt-thaw.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 68056
+    },
+    {
+      "path": "research-assets/102-snowmelt-finished.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 79015
+    },
+    {
+      "path": "research-assets/103-snowmelt-stability-results.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 1068139
+    },
+    {
+      "path": "research-assets/104-static-publish-snow.png",
+      "status": 200,
+      "matches": true,
+      "bytes": 53382
+    },
+    {
+      "path": "research-assets/105-research-summary.png",
+      "status": 200,
+      "matches": true,
+      "bytes": 73185
+    },
+    {
+      "path": "research-assets/106-static-publish-check.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 11477
+    },
+    {
+      "path": "research-assets/11-lab-rain.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 66911
+    },
+    {
+      "path": "research-assets/12-lab-night.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 73633
+    },
+    {
+      "path": "research-assets/13-lab-journal.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 47138
+    },
+    {
+      "path": "research-assets/14-lab-session.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 3383
+    },
+    {
+      "path": "research-assets/15-lab-sound.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 39913
+    },
+    {
+      "path": "research-assets/16-sound-verification.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 6409
+    },
+    {
+      "path": "research-assets/17-usecase-landscape.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 72900
+    },
+    {
+      "path": "research-assets/18-usecase-materials.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 63912
+    },
+    {
+      "path": "research-assets/19-usecase-guide.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 90485
+    },
+    {
+      "path": "research-assets/20-usecase-architecture.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 55484
+    },
+    {
+      "path": "research-assets/21-garden-clear.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 68610
+    },
+    {
+      "path": "research-assets/22-garden-rain.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 57066
+    },
+    {
+      "path": "research-assets/23-garden-night.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 60234
+    },
+    {
+      "path": "research-assets/24-garden-audio-checks.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 16647
+    },
+    {
+      "path": "research-assets/25-garden-dusk.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 56898
+    },
+    {
+      "path": "research-assets/26-stay-arrival.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 79019
+    },
+    {
+      "path": "research-assets/27-stay-tea.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 67546
+    },
+    {
+      "path": "research-assets/28-stay-rooms-night.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 61402
+    },
+    {
+      "path": "research-assets/29-stay-verification.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 13949
+    },
+    {
+      "path": "research-assets/30-stay-return-final.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 61367
+    },
+    {
+      "path": "research-assets/31-rural-rain.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 66616
+    },
+    {
+      "path": "research-assets/32-rain-lightning-checks.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 5639
+    },
+    {
+      "path": "research-assets/33-earth-rain-final.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 55361
+    },
+    {
+      "path": "research-assets/34-layered-earth-first.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 65556
+    },
+    {
+      "path": "research-assets/35-rain-porch-full.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 32276
+    },
+    {
+      "path": "research-assets/36-layered-rain-checks.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 15570
+    },
+    {
+      "path": "research-assets/37-rain-distance.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 30887
+    },
+    {
+      "path": "research-assets/38-rain-earth-detail.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 36756
+    },
+    {
+      "path": "research-assets/39-rain-eaves.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 34189
+    },
+    {
+      "path": "research-assets/40-layered-controls.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 64477
+    },
+    {
+      "path": "research-assets/41-independent-night-rain.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 62703
+    },
+    {
+      "path": "research-assets/42-independent-weather-time-checks.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 6427
+    },
+    {
+      "path": "research-assets/43-night-lights-on.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 62213
+    },
+    {
+      "path": "research-assets/44-night-lights-off.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 46618
+    },
+    {
+      "path": "research-assets/45-lighting-controls.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 67486
+    },
+    {
+      "path": "research-assets/46-lighting-checks.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 24757
+    },
+    {
+      "path": "research-assets/47-visible-night-rain.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 70717
+    },
+    {
+      "path": "research-assets/48-ground-rain-detail.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 64095
+    },
+    {
+      "path": "research-assets/49-ground-rain-checks.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 16861
+    },
+    {
+      "path": "research-assets/50-night-ground-rain-final.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 82682
+    },
+    {
+      "path": "research-assets/51-splash-before.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 68771
+    },
+    {
+      "path": "research-assets/52-fine-spray-day.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 58029
+    },
+    {
+      "path": "research-assets/53-fine-spray-night.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 74913
+    },
+    {
+      "path": "research-assets/54-splash-verification.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 6317
+    },
+    {
+      "path": "research-assets/55-water-wave-field.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 46677
+    },
+    {
+      "path": "research-assets/56-wave-controls-night.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 65192
+    },
+    {
+      "path": "research-assets/57-wave-field-checks.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 23831
+    },
+    {
+      "path": "research-assets/58-sky-clear.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 38281
+    },
+    {
+      "path": "research-assets/59-sky-overcast.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 32714
+    },
+    {
+      "path": "research-assets/60-sky-rain.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 28716
+    },
+    {
+      "path": "research-assets/61-sky-snow.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 30508
+    },
+    {
+      "path": "research-assets/62-snow-night.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 17773
+    },
+    {
+      "path": "research-assets/63-snow-shelter.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 33599
+    },
+    {
+      "path": "research-assets/64-snow-checks.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 48815
+    },
+    {
+      "path": "research-assets/65-hail-ground.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 41700
+    },
+    {
+      "path": "research-assets/66-hail-porch.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 41395
+    },
+    {
+      "path": "research-assets/67-snow-landscape.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 52298
+    },
+    {
+      "path": "research-assets/68-snow-distant-forest.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 37067
+    },
+    {
+      "path": "research-assets/69-snow-landscape-night.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 27298
+    },
+    {
+      "path": "research-assets/70-hail-snow-checks.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 31714
+    },
+    {
+      "path": "research-assets/71-audit-current-ui.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 60901
+    },
+    {
+      "path": "research-assets/72-audit-hail-overview.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 48119
+    },
+    {
+      "path": "research-assets/73-audit-paused-weather.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 76779
+    },
+    {
+      "path": "research-assets/74-audit-runtime.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 32668
+    },
+    {
+      "path": "research-assets/75-audit-code-probes.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 1038
+    },
+    {
+      "path": "research-assets/76-fixed-overview.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 40770
+    },
+    {
+      "path": "research-assets/77-fixed-snow.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 51733
+    },
+    {
+      "path": "research-assets/78-fix-checks.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 44076
+    },
+    {
+      "path": "research-assets/79-continuity-rain.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 51790
+    },
+    {
+      "path": "research-assets/80-continuity-after-rain.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 70389
+    },
+    {
+      "path": "research-assets/81-continuity-clear-sky.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 39483
+    },
+    {
+      "path": "research-assets/82-continuity-overcast.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 44623
+    },
+    {
+      "path": "research-assets/83-continuity-storm.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 35611
+    },
+    {
+      "path": "research-assets/84-continuity-checks.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 57248
+    },
+    {
+      "path": "research-assets/85-shore-rain-progress.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 52507
+    },
+    {
+      "path": "research-assets/86-shore-paused.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 58522
+    },
+    {
+      "path": "research-assets/87-shore-retreat.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 75450
+    },
+    {
+      "path": "research-assets/88-shore-checks.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 45844
+    },
+    {
+      "path": "research-assets/89-acceptance-snow.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 62088
+    },
+    {
+      "path": "research-assets/90-acceptance-cycle.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 72689
+    },
+    {
+      "path": "research-assets/91-acceptance-results.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 126496
+    },
+    {
+      "path": "research-assets/92-performance-before-snow.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 63486
+    },
+    {
+      "path": "research-assets/93-performance-after-snow.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 63001
+    },
+    {
+      "path": "research-assets/94-performance-night-snow.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 54031
+    },
+    {
+      "path": "research-assets/95-performance-rain-after-snow.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 60991
+    },
+    {
+      "path": "research-assets/96-performance-results.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 71489
+    },
+    {
+      "path": "research-assets/97-startup-preview.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 34824
+    },
+    {
+      "path": "research-assets/98-auto-ready.jpg",
+      "status": 200,
+      "matches": true,
+      "bytes": 48423
+    },
+    {
+      "path": "research-assets/99-startup-adaptive-results.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 55851
+    },
+    {
+      "path": "research-assets/README.md",
+      "status": 200,
+      "matches": true,
+      "bytes": 16419
+    },
+    {
+      "path": "research-assets/audio/rain-garden.ogg",
+      "status": 200,
+      "matches": true,
+      "bytes": 175471
+    },
+    {
+      "path": "research-assets/audio/README.md",
+      "status": 200,
+      "matches": true,
+      "bytes": 1685
+    },
+    {
+      "path": "research-assets/audio/source-and-checks.json",
+      "status": 200,
+      "matches": true,
+      "bytes": 1151
+    },
+    {
+      "path": "research-assets/audio/thunder-natural.ogg",
+      "status": 200,
+      "matches": true,
+      "bytes": 243284
+    },
+    {
+      "path": "src/ambient_occlusion.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 4394
+    },
+    {
+      "path": "src/cloudspatial.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 11547
+    },
+    {
+      "path": "src/local_reflection_probe.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 10362
+    },
+    {
+      "path": "src/native_reflection_pipeline.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 16303
+    },
+    {
+      "path": "src/reflection_environment.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 1893
+    },
+    {
+      "path": "src/reflection_geometry.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 5139
+    },
+    {
+      "path": "src/reflection_receiver_id.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 726
+    },
+    {
+      "path": "src/screen_space_trace.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 10824
+    },
+    {
+      "path": "src/sky_geometry_layer.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 5479
+    },
+    {
+      "path": "src/visible_emission.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 895
+    },
+    {
+      "path": "src/weathersky.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 18512
+    },
+    {
+      "path": "src/vendor/n8ao/BlueNoise.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 87892
+    },
+    {
+      "path": "src/vendor/n8ao/math.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 2820
+    },
+    {
+      "path": "src/vendor/n8ao/N8AONode.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 57880
+    },
+    {
+      "path": "vendor/three/EANPA_PATCHES.md",
+      "status": 200,
+      "matches": true,
+      "bytes": 5228
+    },
+    {
+      "path": "vendor/three/LICENSE",
+      "status": 200,
+      "matches": true,
+      "bytes": 1081
+    },
+    {
+      "path": "vendor/three/three.core.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 1458113
+    },
+    {
+      "path": "vendor/three/three.tsl.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 36982
+    },
+    {
+      "path": "vendor/three/three.webgpu.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 2289183
+    },
+    {
+      "path": "vendor/three/addons/controls/OrbitControls.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 40755
+    },
+    {
+      "path": "vendor/three/addons/tsl/display/BloomNode.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 17242
+    },
+    {
+      "path": "vendor/three/addons/tsl/display/FXAANode.js",
+      "status": 200,
+      "matches": true,
+      "bytes": 9450
+    }
+  ],
+  "existingEntries": [
+    {
+      "path": "",
+      "status": 200
+    },
+    {
+      "path": "001-paperroute/",
+      "status": 200
+    },
+    {
+      "path": "002-dunhuang-aura/",
+      "status": 200
+    },
+    {
+      "path": "003-mountain-railway-diorama/",
+      "status": 200
+    },
+    {
+      "path": "005-stick-steel/",
+      "status": 200
+    },
+    {
+      "path": "006-emberfall-arpg/",
+      "status": 200
+    },
+    {
+      "path": "010-mini-moto-comparison/",
+      "status": 200
+    }
+  ],
+  "resourceIndexValidation": {
+    "entries": 72,
+    "mismatches": [],
+    "note": "CI checkout line endings change authored file byte counts; validate generated index against actual online bytes."
+  }
+}
