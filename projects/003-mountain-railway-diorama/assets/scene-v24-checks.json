@@ -1,0 +1,160 @@
+{
+  "date": "2026-09-14",
+  "method": "真实浏览器界面操作；到站近看主动停靠；等待环境过渡结束后截图",
+  "screenshots": [
+    {
+      "file": "scene-v24-autumn-day.jpg",
+      "season": "autumn",
+      "mode": "day",
+      "composition": "ridge",
+      "relief": "1.05",
+      "environment-ready": "true",
+      "progress": "0.02557",
+      "stops": "1",
+      "view": "station"
+    },
+    {
+      "file": "scene-v24-autumn-night.jpg",
+      "season": "autumn",
+      "mode": "night",
+      "composition": "ridge",
+      "relief": "1.05",
+      "environment-ready": "true",
+      "progress": "0.02557",
+      "stops": "1",
+      "view": "station"
+    },
+    {
+      "file": "scene-v24-spring-day.jpg",
+      "season": "spring",
+      "mode": "day",
+      "composition": "ridge",
+      "relief": "1.05",
+      "environment-ready": "true",
+      "progress": "0.02557",
+      "stops": "1",
+      "view": "station"
+    },
+    {
+      "file": "scene-v24-spring-night.jpg",
+      "season": "spring",
+      "mode": "night",
+      "composition": "ridge",
+      "relief": "1.05",
+      "environment-ready": "true",
+      "progress": "0.02557",
+      "stops": "1",
+      "view": "station"
+    },
+    {
+      "file": "scene-v24-summer-day.jpg",
+      "season": "summer",
+      "mode": "day",
+      "composition": "ridge",
+      "relief": "1.05",
+      "environment-ready": "true",
+      "progress": "0.02557",
+      "stops": "1",
+      "view": "station"
+    },
+    {
+      "file": "scene-v24-summer-night.jpg",
+      "season": "summer",
+      "mode": "night",
+      "composition": "ridge",
+      "relief": "1.05",
+      "environment-ready": "true",
+      "progress": "0.02557",
+      "stops": "1",
+      "view": "station"
+    },
+    {
+      "file": "scene-v24-winter-day.jpg",
+      "season": "winter",
+      "mode": "day",
+      "composition": "ridge",
+      "relief": "1.05",
+      "environment-ready": "true",
+      "progress": "0.02557",
+      "stops": "1",
+      "view": "station"
+    },
+    {
+      "file": "scene-v24-winter-night.jpg",
+      "season": "winter",
+      "mode": "night",
+      "composition": "ridge",
+      "relief": "1.05",
+      "environment-ready": "true",
+      "progress": "0.02557",
+      "stops": "1",
+      "view": "station"
+    },
+    {
+      "file": "scene-v24-marsh-day.jpg",
+      "season": "spring",
+      "mode": "day",
+      "composition": "marsh",
+      "relief": "0.25",
+      "environment-ready": "true",
+      "progress": "0.02557",
+      "stops": "1",
+      "view": "station"
+    },
+    {
+      "file": "scene-v24-classic-day.jpg",
+      "season": "spring",
+      "mode": "day",
+      "composition": "classic",
+      "relief": "0.75",
+      "environment-ready": "true",
+      "progress": "0.02557",
+      "stops": "1",
+      "view": "station"
+    },
+    {
+      "file": "scene-v24-classic-back.jpg",
+      "season": "spring",
+      "mode": "day",
+      "composition": "classic",
+      "relief": "0.75",
+      "environment-ready": "true",
+      "progress": "0.02557",
+      "stops": "1",
+      "view": "free"
+    },
+    {
+      "file": "scene-v24-classic-high-back.jpg",
+      "season": "spring",
+      "mode": "day",
+      "composition": "classic",
+      "relief": "1.8",
+      "environment-ready": "true",
+      "progress": "0.02557",
+      "stops": "1",
+      "view": "free"
+    },
+    {
+      "file": "scene-v24-classic-low-back.jpg",
+      "season": "spring",
+      "mode": "day",
+      "composition": "classic",
+      "relief": "0.15",
+      "environment-ready": "true",
+      "progress": "0.02557",
+      "stops": "1",
+      "view": "free"
+    },
+    {
+      "file": "scene-v24-overview.jpg",
+      "season": "autumn",
+      "mode": "evening",
+      "composition": "ridge",
+      "relief": "1.05",
+      "environment-ready": "true",
+      "progress": "0.02557",
+      "stops": "1",
+      "view": "overview"
+    }
+  ]
+}

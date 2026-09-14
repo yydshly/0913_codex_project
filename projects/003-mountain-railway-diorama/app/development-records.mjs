@@ -1,6 +1,117 @@
 // 开发记录的唯一内容源；网页直接读取，build.mjs 同步导出 Markdown。
 export const developmentRecords=[
 {
+  "id": "v24",
+  "date": "2026-09-14",
+  "title": "曲线站台、接地入口与列车站房细节",
+  "status": "已验证",
+  "tags": [
+    "列车与站房",
+    "空间衔接",
+    "四季光线"
+  ],
+  "goal": "依据 B3 当前实景研究，先让列车到站与站台出入关系合理，再完善建筑多面细节。",
+  "reason": "直线站台与弯曲铁路间隙在两端变大，固定高度基础未完全接地；列车车门和站房端墙缺少使用与尺度线索。",
+  "steps": [
+    "抽出共享站房坐标与列车尺寸，曲线站台按铁路切线偏移；停车点前移半节车间距，使两节车居于站台中央。",
+    "基础底边采样实际地形，增加入口台阶、扶手与接地前场；站房后门也有步道和台阶。",
+    "补列车车门、踏步、窗框、屋顶设备；补站房端墙和背侧窗户、门框、站牌、檐口及落水管。",
+    "延用现有湿润、覆雪、夜间权重，分开深色窗底与暖色内窗；植物布点后清除车站范围，避免重新打乱远处布点。",
+    "增加可见的“列车到站近看”操作，主动把车移到停靠位置并暂停，方便观察与继续运行。"
+  ],
+  "fixes": [
+    "把车门、站台边缘和停车点建立在相同的轨道坐标上，避免只在默认机位看似靠近。",
+    "固定 V23 归档继续来自原提交；本轮修改持续更新的场景。"
+  ],
+  "validation": [
+    "新增几何与运行检查：三构图及低高地形的轨道净空、基础接地、台阶高度、建筑完整顶点岛内约束。",
+    "实际双节列车正常进站后，四处踏步处于站台范围内，间隙有界；驻留、暂停和出站检查通过。",
+    "62 项自动检查全部通过；当前场景浏览器未记录 error 级日志。",
+    "拍摄 14 张实景：层峦溪谷四季的白天与夜间、疏林浅湾与原有河谷、背侧低/高起伏及秋季全景。截图参数保存在 assets/scene-v24-checks.json。",
+    "固定 V23 独立构建成功，20 个归档运行模块校验一致。",
+    "当前版与固定归档合并后，184 个本地链接、模块引用与静态锚点检查通过。"
+  ],
+  "limits": [
+    "车门为模型细节，尚无开关门、人物上下车或通用寻路。",
+    "站房窗口是分层几何与发光材质，尚非完整室内；无新增动物或天气行为模拟。",
+    "到站近看是明确的观察跳转，不等同于一次正常行驶进站。",
+    "原有河谷背侧地形落差形成较高挡墙，材质层次仍较简单；部分机位有前景树冠遮挡。",
+    "冬夜整体雪面仍偏亮。本轮检查灯光与覆雪联动，不标记为全场画质、全组合或移动端性能最终验收。"
+  ],
+  "files": [
+    "scene-station-layout.mjs",
+    "scene-station.mjs",
+    "scene-train.mjs",
+    "scene-service.mjs",
+    "scene-landscape.mjs",
+    "scene-vegetation.mjs",
+    "scene.mjs",
+    "scene.html",
+    "scene.test.mjs"
+  ],
+  "beforeImage": "research-station-day.jpg",
+  "image": "scene-v24-autumn-day.jpg",
+  "galleryTitle": "四季昼夜、构图与地形实景",
+  "gallery": [
+    {
+      "label": "秋季白天",
+      "image": "scene-v24-autumn-day.jpg"
+    },
+    {
+      "label": "秋季夜间",
+      "image": "scene-v24-autumn-night.jpg"
+    },
+    {
+      "label": "春季白天",
+      "image": "scene-v24-spring-day.jpg"
+    },
+    {
+      "label": "春季夜间",
+      "image": "scene-v24-spring-night.jpg"
+    },
+    {
+      "label": "夏季白天",
+      "image": "scene-v24-summer-day.jpg"
+    },
+    {
+      "label": "夏季夜间",
+      "image": "scene-v24-summer-night.jpg"
+    },
+    {
+      "label": "冬季白天",
+      "image": "scene-v24-winter-day.jpg"
+    },
+    {
+      "label": "冬季夜间",
+      "image": "scene-v24-winter-night.jpg"
+    },
+    {
+      "label": "疏林浅湾",
+      "image": "scene-v24-marsh-day.jpg"
+    },
+    {
+      "label": "原有河谷",
+      "image": "scene-v24-classic-day.jpg"
+    },
+    {
+      "label": "原有河谷背侧",
+      "image": "scene-v24-classic-back.jpg"
+    },
+    {
+      "label": "高起伏背侧",
+      "image": "scene-v24-classic-high-back.jpg"
+    },
+    {
+      "label": "低起伏背侧",
+      "image": "scene-v24-classic-low-back.jpg"
+    },
+    {
+      "label": "当前全景",
+      "image": "scene-v24-overview.jpg"
+    }
+  ]
+},
+{
   "id": "b4",
   "date": "2026-09-14",
   "title": "V23 固定归档直接在线体验",

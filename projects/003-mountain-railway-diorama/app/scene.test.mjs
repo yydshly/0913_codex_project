@@ -4,6 +4,55 @@ import {createSpatial,createFoundation,terrainPresets} from './scene-world.mjs';
 import {windResponse} from './scene-vegetation.mjs';
 const world=createSpatial();
 
+test('到站观察显式停靠可重复，继续后只驶向下一圈车站',()=>{
+ const service=createService(200,5,120);service.park();assert.equal(service.distance,205);assert.equal(service.stops,1);assert.equal(service.speed,0);
+ service.park();assert.equal(service.distance,205);assert.equal(service.stops,1);
+ service.update(2,1,true);assert.equal(service.distance,205);assert.equal(service.dwell,5.5);
+ service.update(8,1,false);assert.ok(service.distance>205);assert.equal(service.stops,1);
+ service.park();assert.equal(service.distance,405);assert.equal(service.stops,2);
+});
+
+test('曲线站台在三构图和低高地形中保持轨道净空、基础接地及入口台阶连续',async()=>{
+ const {stationLayout}=await import('./scene-station-layout.mjs');
+ const {groundedSlabGeometry}=await import('./scene-station.mjs');
+ for(const composition of['classic','ridge','marsh'])for(const relief of[.15,1.05,1.8]){
+  const w=createSpatial({composition,relief}),l=stationLayout(w);
+  for(const p of l.rows){const q=l.toWorld(p.x,0,p.z);assert.ok(w.footprint(q.x,q.z));assert.ok(w.closest(q.x,q.z).distance>1.29);assert.ok(p.x>l.back+2);}
+  let top=l.top;for(const s of l.steps){assert.ok(top-s.height>0&&top-s.height<=.171);assert.ok(s.width>=.28);top=s.height;}assert.ok(Math.abs(top-l.landing)<1e-10);
+  const outline=[...l.rows.map(p=>[p.x,p.z]),...l.rows.map(p=>[l.back,p.z]).reverse()];
+  const g=groundedSlabGeometry(l,outline,l.top),p=g.attributes.position,n=g.attributes.normal;let groundVertices=0,upward=0;
+  for(let i=0;i<p.count;i++){assert.ok(Number.isFinite(p.getY(i)));if(p.getY(i)<l.top-.02){assert.ok(p.getY(i)<=l.ground(p.getX(i),p.getZ(i))-.16);groundVertices++;}else if(n.getY(i)>.99)upward++;}
+  assert.ok(groundVertices>40&&upward>40);g.dispose();
+ }
+});
+
+test('实际双节列车停稳后四处站台侧踏步均靠近站台且停车、驻留、出站可完成',async()=>{
+ const {stationLayout,trainDimensions}=await import('./scene-station-layout.mjs');const {createTrain}=await import('./scene-train.mjs');
+ const w=createSpatial(),l=stationLayout(w),train=createTrain(new THREE.Scene(),w,((l.stopDistance-18)/w.length+1)%1,()=>new THREE.Texture());
+ let frames=0;while(train.service.stops===0&&frames<3000){train.update(.025,frames*.025,{speed:1,night:0,paused:false});frames++;}
+ assert.equal(train.service.stops,1);assert.ok(Math.abs(((train.service.distance-l.stopDistance)%w.length+w.length)%w.length)<.001);
+ train.group.updateMatrixWorld(true);
+ for(const car of train.cars)for(const z of trainDimensions.doorPositions){
+  const step=car.localToWorld(new THREE.Vector3(-1.21,.65,z));const p=l.toLocal(step);assert.ok(p.z>l.rows[0].z+.5&&p.z<l.rows.at(-1).z-.5);
+  let distance=Infinity;
+  for(let i=0;i<l.rows.length-1;i++){const a=l.rows[i],b=l.rows[i+1],dx=b.x-a.x,dz=b.z-a.z,t=Math.max(0,Math.min(1,((p.x-a.x)*dx+(p.z-a.z)*dz)/(dx*dx+dz*dz)));distance=Math.min(distance,Math.hypot(p.x-a.x-t*dx,p.z-a.z-t*dz));}
+  assert.ok(distance>.04&&distance<.25,'实际踏步与曲线站台水平间隙应受控');assert.ok(p.y-l.top>-.05&&p.y-l.top<.25);
+ }
+ const stopped=train.service.distance;train.update(1,0,{speed:1,night:1,paused:true});assert.equal(train.service.distance,stopped);
+ train.update(8,8,{speed:1,night:1,paused:false});assert.ok(train.service.distance>stopped&&train.service.speed>0);
+});
+
+test('站房实体在不同地形中位于岛内，四季材质绑定与夜灯更新可共用重建模型',async()=>{
+ const {createStation}=await import('./scene-station.mjs');const {bindSeasonSurface}=await import('./scene-seasons.mjs');
+ for(const composition of['classic','ridge','marsh'])for(const relief of[.15,1.8]){
+  const w=createSpatial({composition,relief}),station=createStation(new THREE.Group(),w,()=>new THREE.Texture());station.group.updateMatrixWorld(true);
+  const shared={season:{value:new THREE.Vector4(0,0,0,1)}},materials=new Set();let vertices=0;
+  station.group.traverse(o=>{if(!o.isMesh)return;const p=o.geometry.attributes.position;for(let i=0;i<p.count;i++){const q=o.localToWorld(new THREE.Vector3().fromBufferAttribute(p,i));assert.ok(q.toArray().every(Number.isFinite));assert.ok(w.footprint(q.x,q.z),'完整建筑顶点必须在岛内');vertices++;}materials.add(o.material);});
+  for(const m of materials)bindSeasonSurface(m,shared);assert.ok(vertices>1000);
+  station.update(0);assert.ok(station.lights.every(l=>l.intensity===0));station.update(1);assert.ok(station.lights.every(l=>l.intensity>0));
+ }
+});
+
 test('坡面材质避开平地、河岸和铁路近旁，分区连续且可重复',async()=>{
  const {slopeMaterialField}=await import('./scene-ground.mjs');
  const distant={...world,closest:()=>({distance:20})};

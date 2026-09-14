@@ -10,6 +10,52 @@
 
 每一轮保留目标、原因、实现步骤、发现的问题、实际验证和当前边界。代码完成后先标记“验证中”；检查通过并记录证据后再改为“已验证”。旧记录追加更正，不抹去曾经存在的问题。
 
+## V24 · 曲线站台、接地入口与列车站房细节
+
+2026-09-14 · 已验证 · 列车与站房 / 空间衔接 / 四季光线
+
+依据 B3 当前实景研究，先让列车到站与站台出入关系合理，再完善建筑多面细节。
+
+**为什么这样改：** 直线站台与弯曲铁路间隙在两端变大，固定高度基础未完全接地；列车车门和站房端墙缺少使用与尺度线索。
+
+### 实现过程
+
+1. 抽出共享站房坐标与列车尺寸，曲线站台按铁路切线偏移；停车点前移半节车间距，使两节车居于站台中央。
+2. 基础底边采样实际地形，增加入口台阶、扶手与接地前场；站房后门也有步道和台阶。
+3. 补列车车门、踏步、窗框、屋顶设备；补站房端墙和背侧窗户、门框、站牌、檐口及落水管。
+4. 延用现有湿润、覆雪、夜间权重，分开深色窗底与暖色内窗；植物布点后清除车站范围，避免重新打乱远处布点。
+5. 增加可见的“列车到站近看”操作，主动把车移到停靠位置并暂停，方便观察与继续运行。
+
+### 问题与修正
+
+- 把车门、站台边缘和停车点建立在相同的轨道坐标上，避免只在默认机位看似靠近。
+- 固定 V23 归档继续来自原提交；本轮修改持续更新的场景。
+
+### 实际验证
+
+- 新增几何与运行检查：三构图及低高地形的轨道净空、基础接地、台阶高度、建筑完整顶点岛内约束。
+- 实际双节列车正常进站后，四处踏步处于站台范围内，间隙有界；驻留、暂停和出站检查通过。
+- 62 项自动检查全部通过；当前场景浏览器未记录 error 级日志。
+- 拍摄 14 张实景：层峦溪谷四季的白天与夜间、疏林浅湾与原有河谷、背侧低/高起伏及秋季全景。截图参数保存在 assets/scene-v24-checks.json。
+- 固定 V23 独立构建成功，20 个归档运行模块校验一致。
+- 当前版与固定归档合并后，184 个本地链接、模块引用与静态锚点检查通过。
+
+### 当前边界
+
+- 车门为模型细节，尚无开关门、人物上下车或通用寻路。
+- 站房窗口是分层几何与发光材质，尚非完整室内；无新增动物或天气行为模拟。
+- 到站近看是明确的观察跳转，不等同于一次正常行驶进站。
+- 原有河谷背侧地形落差形成较高挡墙，材质层次仍较简单；部分机位有前景树冠遮挡。
+- 冬夜整体雪面仍偏亮。本轮检查灯光与覆雪联动，不标记为全场画质、全组合或移动端性能最终验收。
+
+对应实现：[scene-station-layout.mjs](app/scene-station-layout.mjs) · [scene-station.mjs](app/scene-station.mjs) · [scene-train.mjs](app/scene-train.mjs) · [scene-service.mjs](app/scene-service.mjs) · [scene-landscape.mjs](app/scene-landscape.mjs) · [scene-vegetation.mjs](app/scene-vegetation.mjs) · [scene.mjs](app/scene.mjs) · [scene.html](app/scene.html) · [scene.test.mjs](app/scene.test.mjs)
+
+四季昼夜、构图与地形实景：[秋季白天](assets/scene-v24-autumn-day.jpg) · [秋季夜间](assets/scene-v24-autumn-night.jpg) · [春季白天](assets/scene-v24-spring-day.jpg) · [春季夜间](assets/scene-v24-spring-night.jpg) · [夏季白天](assets/scene-v24-summer-day.jpg) · [夏季夜间](assets/scene-v24-summer-night.jpg) · [冬季白天](assets/scene-v24-winter-day.jpg) · [冬季夜间](assets/scene-v24-winter-night.jpg) · [疏林浅湾](assets/scene-v24-marsh-day.jpg) · [原有河谷](assets/scene-v24-classic-day.jpg) · [原有河谷背侧](assets/scene-v24-classic-back.jpg) · [高起伏背侧](assets/scene-v24-classic-high-back.jpg) · [低起伏背侧](assets/scene-v24-classic-low-back.jpg) · [当前全景](assets/scene-v24-overview.jpg)
+
+![修改前同机位实际画面](assets/research-station-day.jpg)
+
+![曲线站台、接地入口与列车站房细节实际画面](assets/scene-v24-autumn-day.jpg)
+
 ## B4 · V23 固定归档直接在线体验
 
 2026-09-14 · 已验证 · 固定版本 / GitHub Pages / 归档体验

@@ -3,6 +3,7 @@ import {V,mat,mesh,box,beam,random,labelTexture,smooth} from './scene-world.mjs'
 import {createVegetation} from './scene-vegetation.mjs';
 import {createRiverRocks} from './scene-rocks.mjs';
 import {createWater} from './scene-water.mjs';
+import {createStation} from './scene-station.mjs';
 export function createLandscape(scene,world,shared){
  const group=new THREE.Group();group.name='03 湿地与河岸';scene.add(group);const rand=random(73),wood=mat('#695b43'),dummy=new THREE.Object3D(),vegetation=createVegetation(group,world,shared);
  const rockGeo=new THREE.DodecahedronGeometry(1,1),rp=rockGeo.attributes.position;
@@ -36,18 +37,14 @@ export function createLandscape(scene,world,shared){
   const trunk=mesh(new THREE.CylinderGeometry(log.radius*.65,log.radius,a.distanceTo(b),7),deadwood,group);
   trunk.position.copy(a).add(b).multiplyScalar(.5);trunk.quaternion.setFromUnitVectors(V(0,1,0),b.clone().sub(a).normalize());
  }
- const station=new THREE.Group(),p=world.curve.getPointAt(world.stationU),t=world.curve.getTangentAt(world.stationU);station.position.copy(p);station.rotation.y=Math.atan2(t.x,t.z);group.add(station);const plaster=mat('#e4d6b3'),roof=mat('#31584f',.7),foundation=mat('#899188'),window=mat('#59786c',.35);window.emissive.set('#ffd295');
- box(station,foundation,[2.5,.6,17],[-2.65,.03,0]);box(station,foundation,[5,1.8,9],[-6,-.5,0]);box(station,plaster,[4.2,2.9,8],[-6,1.75,0]);for(const z of[-2.6,0,2.6])box(station,window,[.04,1.15,1.55],[-3.88,1.9,z]);box(station,wood,[.08,2.6,.9],[-3.82,1.7,0]);
- const roofShape=new THREE.Shape();roofShape.moveTo(-2.8,0);roofShape.lineTo(0,1.45);roofShape.lineTo(2.8,0);roofShape.lineTo(2.65,-.18);roofShape.lineTo(0,1.22);roofShape.lineTo(-2.65,-.18);roofShape.closePath();const g=new THREE.ExtrudeGeometry(roofShape,{depth:9,bevelEnabled:false});g.translate(-6,3.15,-4.5);mesh(g,roof,station);for(const z of[-4,-2,0,2,4])beam(station,wood,V(-3.6,.3,z),V(-3.6,3.05,z),.12);box(station,roof,[2.3,.16,9.4],[-3.45,3.02,0]);
- const sign=mat('#ffffff');sign.map=labelTexture('白鹭河站');const signBoard=mesh(new THREE.PlaneGeometry(3.5,.95),sign,station);signBoard.rotation.y=Math.PI/2;signBoard.position.set(-3.85,2.55,0);for(const z of[-5.4,5.4]){box(station,wood,[.7,.14,2.2],[-2.6,.88,z]);for(const dz of[-.7,.7])box(station,wood,[.15,.58,.15],[-2.6,.54,z+dz]);box(station,wood,[.15,.55,2.2],[-3,.99,z]);}
- const lanternMat=mat('#ffdfa1',.4);lanternMat.emissive.set('#ffc46b');const lights=[];for(const z of[-7,-3.5,3.5,7]){box(station,wood,[.11,3.4,.11],[-1.58,1.6,z]);const lantern=mesh(new THREE.SphereGeometry(.26,10,8),lanternMat,station);lantern.position.set(-1.58,3.23,z);const light=new THREE.PointLight('#ffc784',0,11,2);light.position.copy(lantern.position);station.add(light);lights.push(light)}
+ const station=createStation(group,world),lights=station.lights;
  const waterSystem=createWater(group,world,shared);
- const stationTarget=station.localToWorld(V(-3,1,0));
+ const stationTarget=station.target;
  // A waterside observation deck gives the station a different destination.
  const deck=V(world.riverX(15)-world.halfWidth(15)-1,world.waterLevel(15)+.65,15);
  for(let i=0;i<25;i++)box(group,wood,[3,.12,.19],[deck.x,deck.y,deck.z+i*.22-2.7]);
  for(const z of[-2.6,2.6])for(const x of[-1.3,1.3]){box(group,wood,[.14,2,.14],[deck.x+x,deck.y-.5,deck.z+z]);}
- return{group,...vegetation,stationTarget,lights,reflect:waterSystem.reflect,dispose:waterSystem.dispose,update(time,night){window.emissiveIntensity=.04+night*1.4;lanternMat.emissiveIntensity=.05+night*3;lights.forEach(l=>l.intensity=night*4.3);waterSystem.update(time,night);}};
+ return{group,...vegetation,stationTarget,lights,reflect:waterSystem.reflect,dispose:waterSystem.dispose,update(time,night){station.update(night);waterSystem.update(time,night);}};
 }
 
 // Project each outcrop onto the terrain so its lower shell is buried.

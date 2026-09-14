@@ -380,3 +380,24 @@
 - `research-station-night.jpg`：沿用上述暂停车位与机位，仅切换为夜间。
 - `research-station-side.jpg`：沿用车位，切回白天后手动旋转到站房背侧与列车侧面。
 - 均为本地实际浏览器 1280×720 截图，未使用生成图；不是新模型修改后的效果图，也不代表所有季节已验收。
+
+## V24 · 列车与站房（2026-09-14）
+
+14 张 `scene-v24-*.jpg` 均为本地浏览器 1280×720 实景，未使用生成图。通过“列车到站近看”主动停靠并暂停，切换四季和昼夜；正常运行的进站/驻留/出站另由实际模型自动检查验证。
+
+- `scene-v24-autumn-day.jpg`：秋季白天，ridge / autumn / day / 起伏 1.05 / station。
+- `scene-v24-autumn-night.jpg`：秋季夜间，ridge / autumn / night / 起伏 1.05 / station。
+- `scene-v24-spring-day.jpg`：春季白天，ridge / spring / day / 起伏 1.05 / station。
+- `scene-v24-spring-night.jpg`：春季夜间，ridge / spring / night / 起伏 1.05 / station。
+- `scene-v24-summer-day.jpg`：夏季白天，ridge / summer / day / 起伏 1.05 / station。
+- `scene-v24-summer-night.jpg`：夏季夜间，ridge / summer / night / 起伏 1.05 / station。
+- `scene-v24-winter-day.jpg`：冬季白天，ridge / winter / day / 起伏 1.05 / station。
+- `scene-v24-winter-night.jpg`：冬季夜间，ridge / winter / night / 起伏 1.05 / station。
+- `scene-v24-marsh-day.jpg`：疏林浅湾，marsh / spring / day / 起伏 0.25 / station。
+- `scene-v24-classic-day.jpg`：原有河谷，classic / spring / day / 起伏 0.75 / station。
+- `scene-v24-classic-back.jpg`：原有河谷背侧，classic / spring / day / 起伏 0.75 / free。
+- `scene-v24-classic-high-back.jpg`：高起伏背侧，classic / spring / day / 起伏 1.8 / free。
+- `scene-v24-classic-low-back.jpg`：低起伏背侧，classic / spring / day / 起伏 0.15 / free。
+- `scene-v24-overview.jpg`：当前全景，ridge / autumn / evening / 起伏 1.05 / overview。
+
+完整参数见 [scene-v24-checks.json](scene-v24-checks.json)。春秋近景采集于植被计数与地表锚点同步修正之前；夏冬、构图和地形实景采集于该修正后。列车和站房模型在这些截图之间未变化。B3 修改前对照沿用相同站房预设机位，但列车位置与动画相位不同，不作逐像素对比。

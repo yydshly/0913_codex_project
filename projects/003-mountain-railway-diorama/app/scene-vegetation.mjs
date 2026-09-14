@@ -1,3 +1,4 @@
+import {stationLayout,stationOccupies} from './scene-station-layout.mjs';
 import * as THREE from './vendor/three.module.js';
 import {V,mat,random} from './scene-world.mjs';
 import {createRegionDetails} from './scene-regions.mjs';
@@ -55,7 +56,7 @@ export function createVegetation(group,world,shared){
   const tree={root:V(x,world.height(x,z),z),h:1+rng()*1.4,flex:1.9};for(let j=0;j<4;j++)reedData.push({tree,a:rng()*6.28});
  }
  // Understorey follows dry banks and woodland edges, leaving railway clearance.
- const shrubRoots=[];
+ const shrubRoots=[],stationArea=stationLayout(world);
  for(let i=0;i<1100;i++){
   const x=(rng()-.5)*88,z=(rng()-.5)*62,y=placementHeight(x,z),bank=Math.abs(x-world.riverX(z))-world.halfWidth(z);
   if(!world.footprint(x,z)||world.closest(x,z).distance<3.2||y<world.waterLevel(z)+.08||bank<.6||Math.abs(placementHeight(x+.4,z)-y)>.7)continue;
@@ -65,6 +66,7 @@ export function createVegetation(group,world,shared){
   for(let j=0;j<9;j++)grassData.push({tree:{...shrub,root:shrub.root.clone().add(V((rng()-.5)*1.4,0,(rng()-.5)*1.4)),h:.16+rng()*.48},a:rng()*6.28});
  }
  // Anchor both the forest floor and short grass to the actual tree layout.
+ for(let i=trees.length-1;i>=0;i--)if(stationOccupies(stationArea,trees[i].root.x,trees[i].root.z,1.4))trees.splice(i,1);
  world.groundTrees=trees.map(t=>({x:t.root.x,y:t.root.y,z:t.root.z,height:t.h}));
  for(const d of grassData)d.tree.root.y=world.height(d.tree.root.x,d.tree.root.z);
  for(const c of createMeadowClumps(world))for(let blade=0;blade<6;blade++){
@@ -86,6 +88,9 @@ export function createVegetation(group,world,shared){
   const a=c.angle+blade*2.399,x=c.x+Math.cos(a)*.1,z=c.z+Math.sin(a)*.1;
   grassData.push({tree:{root:V(x,world.height(x,z),z),h:c.height*(.7+blade*.09),flex:1.4},a});
  }
+ // Filter after placement so clearing the station does not reshuffle distant plants.
+ for(const data of[woodData,leafData,grassData])for(let i=data.length-1;i>=0;i--){const r=data[i].tree.root;if(stationOccupies(stationArea,r.x,r.z,1.4))data.splice(i,1);}
+ for(let i=shrubRoots.length-1;i>=0;i--){const r=shrubRoots[i].root;if(stationOccupies(stationArea,r.x,r.z,1.4))shrubRoots.splice(i,1);}
  const texture=foliageTexture(),leafMat=new THREE.MeshStandardMaterial({map:texture,alphaTest:.34,alphaToCoverage:true,side:THREE.DoubleSide,roughness:.88,color:'#ffffff'}),woodMat=mat('#5d5846'),reedMat=mat('#8d9d4a');
  const gm=mat('#74834d');gm.side=THREE.DoubleSide;
  const dummy=new THREE.Object3D(),up=V(0,1,0);

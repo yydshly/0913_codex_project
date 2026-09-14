@@ -8,9 +8,9 @@
 
 **研究一个山间铁路微缩作品，并把理解落到可操作的网页场景。** 本项目固定版本研究原作 Yamaai（山あい），另以景区观景展示为用途，独立重建“白鹭河谷”：调整地形与河道，切换四季和光线，观察风、树木、水流如何共同变化。
 
-![白鹭河谷 V23 全景：秋季树群、河谷跌水、观景拱桥与环线列车](assets/scene-v23-overview.jpg)
+![白鹭河谷 V24 全景：秋季树群、河谷跌水、观景拱桥与环线列车](assets/scene-v24-overview.jpg)
 
-*2026-09-14，V23 在本地浏览器中的实际画面，1280×720；独立重建原型，不是上游截图或生成图。*
+*2026-09-14，V24 在本地浏览器中的实际画面，1280×720；独立重建原型，不是上游截图或生成图。*
 
 [研究分析](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/) · [实际场景](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html) · [开发过程](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/dev-log.html) · [先看实际能力](capabilities.md) · [启动并操作](app/README.md#运行) · [看实现过程](development-log.md) · [看现有问题与下一步](next-steps.md) · [看上游原作](https://iamtechartist.github.io/mountain-railway-diorama/)
 
@@ -24,6 +24,16 @@
 | 还差什么 | [提交后实景分析](next-steps.md) | 有截图依据的画面问题，以及保存/比较/空间创作路线 |
 
 首次体验建议：先在“层峦溪谷”切换春夏秋冬；再选择“水流近景”比较三种水流；最后调整河宽、地形起伏和风力，观察地面、植被与水面联动。GitHub 中的 HTML 链接是源码浏览入口，运行方式见上方说明。
+
+## V24 · 列车与站房的空间衔接
+
+曲线站台沿轨道布置，基础随地形接地，入口配有台阶与扶手；两节车的停车位置和踏步与站台对齐。补齐车门、窗框及站房端墙、背面、檐口、站牌，延用四季覆雪与夜间照明。
+
+体验方式：打开实际场景 → 编辑场景 → 天气、列车与镜头 → **列车到站近看**。此操作主动移车并暂停；点击“继续场景”恢复运行。
+
+![V24 到站近景：车门、曲线站台、站房端墙与入口台阶](assets/scene-v24-autumn-day.jpg)
+
+[本轮开发记录](development-log.md) · [从研究到实现](train-station-research.md)。V23 固定归档保持原效果。
 
 ## V23 · 河流跌口与岸坡的局部衔接
 
