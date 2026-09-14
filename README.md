@@ -21,7 +21,7 @@
 | 002 | [Dunhuang Aura](projects/002-dunhuang-aura/README.md) | 敦煌美术风格与出图流程说明书；可复用配色、构图、提示词和修图要求，未新增绘图能力，质量与效率增益未验证 | [govin-ai/dunhuang-aura-skill](https://github.com/govin-ai/dunhuang-aura-skill) | 已总结 | [研究结论与参考价值](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/) |
 | 003 | [Mountain Railway Diorama · 白鹭河谷](projects/003-mountain-railway-diorama/README.md) | 从原作研究到可调场景：三种构图、四季光线、风与植被联动、三种水流与方案保存/比较；附实景、能力边界和开发记录 | [iamtechartist/mountain-railway-diorama](https://github.com/iamtechartist/mountain-railway-diorama) | 已总结 | [研究分析](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/) · [实际场景](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html) · [开发过程](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/dev-log.html) |
 | 007 | [Mini Moto — Pine Ridge Park](projects/007-mini-moto-park/README.md) | 迷你越野摩托公园；已定位并体验原作，参考赛道与比赛联动、跟随镜头和车手能力；源码许可待核实 | [作者原帖](https://x.com/chrisjdimarco/status/2098919328368197682) | 已总结 | — |
-| 010 | [Mini Moto 赛车游戏参考与实践总结](projects/010-mini-moto-comparison/README.md) | 赛车类游戏参考：核心为场景构建与赛车手能力构建；保留基础竞速和驾驶演示，后续按项目需求开发 | [作者原作](https://mini-moto-park.chipchaunceytheonlyone.chatgpt.site/) | 已总结 | — |
+| 010 | [Mini Moto 赛车游戏参考与实践总结](projects/010-mini-moto-comparison/README.md) | 赛车类游戏参考：核心为场景构建与赛车手能力构建；保留基础竞速和驾驶演示，后续按项目需求开发 | [作者原作](https://mini-moto-park.chipchaunceytheonlyone.chatgpt.site/) | 已总结 | [网页研究与比赛](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/) · [自由驾驶练习](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/ride.html) |
 <!-- PROJECT_INDEX_END -->
 
 进度：`待研究` → `研究中` → `已复现` → `已总结`；暂时停止的项目标为 `暂缓`。演示未上线时填写 `—`。
@@ -75,7 +75,7 @@
 
 *2026-09-14 原作游戏实测效果图，来自 007 来源档案；非 010 重建画面。上游源码与许可待核实。*
 
-[研究总结](projects/010-mini-moto-comparison/README.md) · [运行与操作](projects/010-mini-moto-comparison/app/README.md) · [原作对比](projects/010-mini-moto-comparison/comparison.md) · [实现与验证](projects/010-mini-moto-comparison/notes.md)
+[网页研究与比赛](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/) · [自由驾驶练习](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/ride.html) · [研究总结](projects/010-mini-moto-comparison/README.md) · [运行与操作](projects/010-mini-moto-comparison/app/README.md) · [原作对比](projects/010-mini-moto-comparison/comparison.md) · [实现与验证](projects/010-mini-moto-comparison/notes.md)
 
 <!-- PROJECT_PREVIEWS_END -->
 

@@ -2,6 +2,10 @@
 
 独立网页：实时 3D 公园、四车三圈短赛与研究说明。Node.js v22.15.0 已验证，浏览器需要 WebGL。Three.js r185 和 OrbitControls 随项目保存，无需安装依赖，运行时不依赖 CDN。
 
+## 在线体验
+
+[网页研究与比赛](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/) · [自由驾驶练习](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/ride.html)。这是本项目的 GitHub Pages 演示，与作者原作分别标注。
+
 ## 启动
 
 在本目录执行：

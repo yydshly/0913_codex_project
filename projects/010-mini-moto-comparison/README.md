@@ -45,6 +45,8 @@
 
 ## 查看与运行
 
+在线体验：[网页研究与比赛](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/) · [自由驾驶练习](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/ride.html)。2026-09-14 已核实部署成功，两个入口均返回 HTTP 200。
+
 在 app/ 执行 node serve.mjs，按服务输出访问本机地址：
 
 - 公园比赛与网页研究：http://127.0.0.1:4320/app/ 。
