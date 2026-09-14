@@ -1,5 +1,7 @@
 # 003 · Mountain Railway Diorama / 白鹭河谷
 
+[▶ 在线体验 V23 固定归档版](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/archives/v23/scene.html) · [当前持续更新场景](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html)
+
 [列车与站房实景研究](train-station-research.md) · [研究与归档入口](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/archive.html)
 
 [V23 归档与技术原理](archive.md) · [在线原理说明](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/archive.html)

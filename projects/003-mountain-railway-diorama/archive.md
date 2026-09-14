@@ -1,5 +1,7 @@
 # V23 版本归档与技术原理
 
+[▶ 在线体验 V23 固定归档版](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/archives/v23/scene.html) · [当前持续更新场景](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html)
+
 2026-09-14 · 003-v23-archive-2026-09-14
 
 当前归档冻结的是 V23 风格化铁路观景原型：三种构图、可调地形、两节列车与车站、三种水流、植被与风、四季和天气、镜头及方案保存。归档不代表最终画质验收，也不新增人物或动物。

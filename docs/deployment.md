@@ -91,3 +91,9 @@ GitHub Pages 托管静态网页；联网排行榜、账户和持久化后端需�
 构建按固定上游清单收集并校验 42 个必要运行文件，缓存与构建输出不提交，不复制完整上游世界。新增 40 项天气与宿主规则检查到现有工作流，保留其他项目构建。发布范围及真实验证见 [004 发布记录](../projects/004-eanpa-sky/publishing.md)。
 
 004 首次发布成功：提交 `2ee9f86ae86959708a1dc146f43e35d2ffa60cde`，[Actions](https://github.com/yydshly/0913_codex_project/actions/runs/34851773665)。[研究摘要](https://yydshly.github.io/0913_codex_project/004-eanpa-sky/) · [实时天气演示](https://yydshly.github.io/0913_codex_project/004-eanpa-sky/lab/)。CI 构建 7 个项目、792 处引用检查通过，首次发布的 185 个文件及既有 7 个入口均返回 200；浏览器完成雨景初始化与语言、声音链路复核。首次线上启动约 64 秒，具体环境与比对边界见专项记录。
+
+## 003 · 固定 V23 在线归档
+
+除持续更新目录外，`scripts/build-003-archive.mjs` 从不可变提交 `9948ae93a61ef9d38eeacb6183f8521b9f9d141c` 提取 003 项目，以归档内构建脚本生成 `site/003-mountain-railway-diorama/archives/v23/`。全站构建自动包含此目录，后续发布不会遗漏它。Actions 获取完整仓库历史；缺少固定对象或任何运行模块校验不一致时构建失败。
+
+历史源码不重复提交到当前目录。仅在生成的 HTML 中增加归档身份、返回导航并适配开发记录锚点；场景模块、材质、默认参数及历史研究内容来自固定提交。`archive-version.json` 记录来源、适配项与 20 个运行模块校验。下载版标签和 Release 附件保持不变。

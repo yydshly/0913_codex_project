@@ -25,4 +25,5 @@ for (const name of projects) {
   count++;
 }
 if (!count) throw new Error('No runnable project was built.');
+await import('./build-003-archive.mjs');
 console.log(`Pages site prepared with ${count} project(s).`);
