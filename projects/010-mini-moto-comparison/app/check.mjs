@@ -1,0 +1,10 @@
+import {readFile,stat} from 'node:fs/promises';import path from 'node:path';import {fileURLToPath} from 'node:url';import {execFileSync} from 'node:child_process';import {createHash} from 'node:crypto';
+const root=path.dirname(fileURLToPath(import.meta.url)),dist=path.join(root,'dist');let refs=0,totalIds=0;
+for(const name of ['model.mjs','scene.mjs','app.mjs','ride-model.mjs','ride.mjs','serve.mjs','build.mjs'])execFileSync(process.execPath,['--check',path.join(root,name)]);
+for(const [page,modules]of [['index.html',['app.mjs','scene.mjs','model.mjs']],['ride.html',['ride.mjs','ride-model.mjs']]]){
+ const html=await readFile(path.join(dist,page),'utf8'),ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);if(new Set(ids).size!==ids.length)throw Error('Duplicate IDs in '+page);totalIds+=ids.length;
+ for(const m of html.matchAll(/(?:src|href)="([^"]+)"/g)){const url=m[1];if(/^(https?:|data:)/.test(url))continue;if(url.startsWith('#')){if(!ids.includes(url.slice(1)))throw Error('Missing anchor '+url);continue}if(url.startsWith('/'))throw Error('Root-relative resource '+url);if(!(await stat(path.resolve(dist,url.split('#')[0]))).size)throw Error('Empty resource '+url);refs++}
+ for(const name of modules){const content=await readFile(path.join(dist,name),'utf8');if(content.includes('../assets/'))throw Error('Unresolved asset path');for(const m of content.matchAll(/from\s+['"]([^'"]+)['"]/g)){if(m[1].startsWith('.')){await stat(path.resolve(dist,m[1]));refs++}}for(const m of content.matchAll(/\$\('([^']+)'\)/g))if(!ids.includes(m[1]))throw Error('Missing UI element '+m[1])}
+}
+const manifest=JSON.parse(await readFile(path.join(root,'../assets/texture-manifest.json'),'utf8'));for(const item of manifest){const b=await readFile(path.join(dist,'assets/textures',item.file));if(b.length!==item.bytes||createHash('md5').update(b).digest('hex')!==item.md5)throw Error('Texture mismatch '+item.file)}
+console.log(`2 pages: syntax, ${refs} local references, ${totalIds} HTML IDs, UI bindings and ${manifest.length} texture hashes passed.`);

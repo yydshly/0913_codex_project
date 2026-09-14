@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>松脊越野公园 · Mini Moto 研究与演示</title>
+<meta name="description" content="在实时 3D 越野公园中观察坡度、抓地、车手和比赛如何联动；阅读 Mini Moto 原作对比、参考价值和实现逻辑。">
+<link rel="stylesheet" href="styles.css">
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+</head>
+<body>
+<a class="skip" href="#world">跳到越野场景</a>
+<header class="masthead"><a class="brand" href="#park"><span class="brand-mark">M<span>↗</span></span><span>松脊越野公园<small>MINI MOTO / RESEARCH 010</small></span></a><nav aria-label="主要导航"><a href="#park" class="active">场景实验</a><a href="#our-value">对我们的价值</a><a href="#comparison">原作对比</a><a href="#mechanism">实现逻辑</a><a href="#sources">来源</a></nav><a class="original" href="https://mini-moto-park.chipchaunceytheonlyone.chatgpt.site/" target="_blank" rel="noopener noreferrer">查看作者原作 ↗</a></header>
+<main>
+<section id="park" class="park" aria-labelledby="park-title">
+<div class="explanation-strip"><span class="eyebrow">新尝试 / 自由驾驶</span><p>一辆摩托、一个发卡弯。内线泥地更短更滑，外线硬土更远更稳，练习刹车与走线。</p><a href="ride.html">进入驾驶练习 ↗</a></div>
+<div class="section-heading"><div><span class="eyebrow">01 / 实时场景实验</span><h1 id="park-title">让赛道改变比赛。</h1></div><p>改一处坡道，换一种路面，观察同一场比赛。<br><span>独立场景 · 道路辅助运动 · 非原作复刻</span></p></div>
+<div class="workspace">
+<div class="stage" id="stage">
+<canvas id="world" tabindex="0" aria-label="实时三维越野公园。全景可拖动和缩放；接管后 W 加速、S 制动、A D 路内转向、Escape 交回。"></canvas>
+<div id="loading" class="loading"><span class="loader"></span><strong>正在准备赛道</strong><span>地形 · 摩托 · 松林</span></div>
+<div class="stage-top"><div class="park-label"><span class="live-line">PINE RIDGE / 独立演示</span><strong>松脊越野公园</strong><span id="camera-label">公园全景</span></div><div class="race-label"><span id="race-status">准备起跑</span><strong id="race-time">00:00.0</strong><small id="lap-count">3 圈短赛</small></div></div>
+<div id="countdown" class="countdown" aria-live="polite"></div>
+<div id="finish" class="finish" hidden><span class="eyebrow">RACE COMPLETE</span><h2>本场比赛结束</h2><div id="finish-results"></div><button class="primary" id="again">再跑一场</button></div>
+<div class="stage-left"><div class="ranking"><span class="overline">场上排名</span><ol id="ranking"></ol></div><canvas id="minimap" width="240" height="160" aria-label="赛道俯视位置图"></canvas></div>
+<div class="stage-bottom"><div class="telemetry"><div><strong id="speed">0</strong><span>km/h</span></div><p id="cause">等待起跑</p></div><div class="camera-buttons" role="group" aria-label="观察镜头"><button data-camera="overview" aria-pressed="true">全景</button><button data-camera="follow" aria-pressed="false">跟随</button><button data-camera="helmet" aria-pressed="false">骑手</button><button data-camera="test" aria-pressed="false">试验坡</button></div></div>
+<div class="drive-pad" id="drive-pad" hidden aria-label="触控驾驶"><button data-drive="left" aria-label="向左">←</button><button data-drive="brake">制动</button><button data-drive="throttle">油门</button><button data-drive="right" aria-label="向右">→</button></div>
+</div>
+<aside class="experiment" aria-label="场景实验控制">
+<div class="experiment-title"><span class="eyebrow">LIVE EXPERIMENT</span><h2>改动一个条件</h2><p>参数修改后重新起跑，便于观察。</p></div>
+<div class="experiment-tabs" role="group" aria-label="实验情境"><button data-preset="original" aria-pressed="true">原始赛道</button><button data-preset="hill" aria-pressed="false">抬高坡道</button><button data-preset="rain" aria-pressed="false">雨后比赛</button></div>
+<label class="slider-label" for="lift"><span>试验坡高程</span><output id="lift-value">+0.0 m</output></label><input id="lift" type="range" min="-2" max="4" step="0.5" value="0"><div class="range-hints"><span>下挖 −2 m</span><span>抬高 +4 m</span></div>
+<div class="field"><label for="surface">试验段路面</label><select id="surface"><option value="dirt">压实土路</option><option value="mud">松软泥地</option><option value="gravel">碎石路面</option></select></div>
+<label class="slider-label" for="wet"><span>全场湿润程度</span><output id="wet-value">0%</output></label><input id="wet" type="range" min="0" max="1" step="0.05" value="0"><div class="range-hints"><span>干燥</span><span>持续降雨</span></div>
+<label class="slider-label" for="skill"><span>阿岚的控弯能力</span><output id="skill-value">70</output></label><input id="skill" type="range" min="40" max="95" step="5" value="70"><p class="field-note">黄色车手；影响控弯上限与加速响应。</p>
+<div class="metrics"><div><span>当前抓地</span><strong id="grip">0.90</strong></div><div><span>当前坡度</span><strong id="grade">0.0%</strong></div></div>
+<button class="primary compare-button" id="compare">计算同车手单圈对照 <span>↗</span></button><div class="comparison-result" id="comparison-result" hidden aria-live="polite"></div>
+<div class="mini-actions"><button id="takeover" aria-pressed="false">接管阿岚</button><button id="sound" aria-pressed="false">开启声音</button></div><p id="control-help" class="field-note">自动巡游与比赛；声音默认关闭。</p>
+</aside>
+</div>
+<div class="transport"><div class="transport-left"><button id="pause" aria-pressed="false">暂停</button><button id="restart">重新起跑</button><label for="pace">演示速度 <select id="pace"><option value="1">1×</option><option value="2">2×</option><option value="4">4×</option></select></label><label for="view-mode">场景显示 <select id="view-mode"><option value="full">完整效果</option><option value="clay">白模结构</option><option value="wire">网格结构</option></select></label></div><p id="notice" role="status">拖动全景改变观察角度 · 滚轮缩放</p></div>
+<div class="explanation-strip"><span class="strip-number">WHY IT CHANGES</span><p id="live-explanation">前方弯道决定目标速度，车手会提前减速。道路、运动和画面读取同一份场景状态。</p><a href="#mechanism">看实现逻辑 ↓</a></div>
+</section>
+
+<section id="comparison" class="research-section" aria-labelledby="comparison-title"><div class="section-heading"><div><span class="eyebrow">02 / 对照原作</span><h2 id="comparison-title">参考什么，做到哪里。</h2></div><p>原作公开仓库和许可证待核实。<br>依据作者发布页面、公开脚本及 007 研究记录。</p></div>
+<div id="our-value" class="our-value" aria-labelledby="our-value-title">
+<div class="value-intro"><span class="tag">研究已总结</span><h3 id="our-value-title">赛车游戏参考：场景构建与赛车手能力构建。</h3><p>Mini Moto 是越野摩托竞速参考。核心在于把可玩的赛道空间，与摩托、骑手的表现和驾驶能力组合起来。基础原型已验证，后续围绕具体项目需求开发。</p></div>
+<div class="use-cases">
+<article><span class="eyebrow">01 / 场景构建</span><h4>让赛道产生选择</h4><p>地形、弯道、路面、护栏和镜头既影响画面，也影响路线和刹车点。</p><dl><dt>已验证</dt><dd>抬坡、路面和湿润改变简化运动；内外线形成不同成绩。</dd><dt>按需扩展</dt><dd>复杂地形、桥隧、素材、光影与性能。</dd></dl><button data-demo="hill">观察场景与运动 ↗</button></article>
+<article><span class="eyebrow">02 / 赛车手能力</span><h4>让主体与行为一致</h4><p>摩托和骑手的外观、驾驶操作、能力取舍、姿态与声音共同塑造体验。</p><dl><dt>已验证</dt><dd>有限控弯参数、自由驾驶、制动和抓地反馈。</dd><dt>仍有限制</dt><dd>没有原作完整七项能力系统、悬挂、跳跃或对手争线。</dd></dl><button data-demo="race">观察车手与比赛 ↗</button></article>
+<article><span class="eyebrow">03 / 可玩性</span><h4>让选择得到反馈</h4><p>圈数、排名、检查点、失误与重赛，让驾驶过程可以反复挑战。</p><dl><dt>实测示范</dt><dd>内线 15.63 秒，外线 14.21 秒；同一模型，路短不一定更快。</dd><dt>体验入口</dt><dd><a href="ride.html">进入发卡弯驾驶练习 ↗</a></dd></dl></article>
+</div>
+<div class="value-verdict"><div><h4>研究到这里收尾</h4><p><strong>保留为赛车类游戏的参考和原型起点。</strong>场景表达、驾驶能力与竞赛反馈值得借鉴；当前没有证明独有算法、通用引擎能力或效率优势。</p></div><div><h4>后续按项目开发</h4><p>展示项目优化场景与镜头；交互项目补充操作和反馈；正式赛车游戏再建设物理、对手和内容。已有系统可持续优化，缺少的能力需要另行建设。</p></div></div>
+<p class="research-note">原作源码仓库和许可待核实。本页为独立简化演示，未复现完整车手能力或真实摩托物理。</p>
+</div>
+<div class="reference-grid"><figure><img src="../assets/mini-moto-game-overview.png" alt="Mini Moto 原作游戏实测全景，展示越野赛道、摩托、排名和接管界面" loading="lazy" width="1280" height="720"><figcaption>2026-09-14 原作游戏实测截图 · 来源于 007 档案，不是本页重建效果。</figcaption></figure><div class="reference-copy"><span class="tag">原作启发</span><h3>可借鉴系统组织，暂不能当作现成代码库。</h3><p>赛道高低和路面参与行车决策，车辆状态再反馈到姿态、排名、镜头与声音。值得学习的是这些状态如何一致地工作；单独的曲线运动、贴图、雨丝或排名界面，并不是目前已确认的独有技术。</p><div class="value-row"><b>可参考</b><div><strong>数据一致性与完整体验</strong><p>编辑、运动、观察与反馈形成连续的操作过程。</p></div></div><div class="value-row"><b>待核实</b><div><strong>原作代码与素材的直接复用</strong><p>可访问网页不等于取得源码、模型和贴图授权。</p></div></div><p class="muted">本页新写赛道、摩托、比赛与场景；沿用 008 的研究思路和有来源的通用纹理，没有移植原作发布包。</p></div></div>
+<div class="table-scroll"><table><caption>原作、008 和本页 010 的能力边界</caption><thead><tr><th>能力</th><th>原作 Mini Moto</th><th>008 观光车实践</th><th>本页 010</th></tr></thead><tbody>
+<tr><th>道路编辑</th><td>多种编辑入口；发布脚本重建几何及碰撞体</td><td>固定路段高程调整</td><td>局部抬坡、泥地/碎石切换，与车速联动</td></tr>
+<tr><th>驾驶与比赛</th><td>Rapier 世界、排名、8 圈完赛逻辑</td><td>双车巡游与跟车</td><td>四车 3 圈短赛、计时排名、自动/手动切换</td></tr>
+<tr><th>车手差异</th><td>七项能力和固定点数；007 面板记录</td><td>三种驾驶策略</td><td>简化控弯参数；仅改变黄色车手</td></tr>
+<tr><th>物理范围</th><td>作者说明轮胎接触、悬挂与辅助驾驶；精度未验收</td><td>道路约束与建筑前停车</td><td>道路约束、坡度/抓地限速与姿态表现；无刚体撞车或跳跃</td></tr>
+<tr><th>素材与声音</th><td>加载 GLB、贴图和 Web Audio；许可待核实</td><td>独立几何及 CC0 纹理</td><td>独立几何、CC0 纹理、合成引擎声</td></tr>
+<tr><th>天气</th><td>转述声称具备，完整机制待核实</td><td>湿润/抓地/雨丝联动</td><td>相同参数驱动抓地、材质、天空与雨丝</td></tr>
+</tbody></table></div><p class="research-note">本页是虚构公园中的简化驾驶演示，不是实车标定模型。原作的“音轨编辑”、完整天气系统与单次提示完成等说法，证据不足。</p></section>
+
+<section id="mechanism" class="research-section mechanism" aria-labelledby="mechanism-title"><div class="section-heading"><div><span class="eyebrow">03 / 实现逻辑</span><h2 id="mechanism-title">从一个参数，到整个场景。</h2></div><p>以下解释本页实际采用的模型。<br>不是对原作源工程的还原。</p></div>
+<div class="logic-flow"><div><span>01</span><h3>道路数据</h3><p>闭合曲线按路程采样。抬坡同时改变路面、地表与车辆高度。</p><button data-demo="hill">观察试验坡 ↗</button></div><div><span>02</span><h3>驾驶决策</h3><p>查看前方弯道，结合路面抓地与车手能力，计算目标速度。</p><button data-demo="rain">比较雨后路面 ↗</button></div><div><span>03</span><h3>持续模拟</h3><p>每秒 60 次更新速度和路程；按过线时刻记录圈时、排名与完赛。</p><button data-demo="race">观看短程比赛 ↗</button></div><div><span>04</span><h3>画面与反馈</h3><p>车轮、倾角、尘土、镜头和引擎声读取车辆状态，界面显示原因。</p><button data-demo="structure">拆看场景结构 ↗</button></div></div>
+<div class="principle-grid"><article><span class="eyebrow">弯道与抓地</span><h3>更湿，为什么会更慢？</h3><p>弯道速度上限随抓地能力的平方根变化；湿润降低抓地，车手更早制动。前方上坡也会触发保守控速，坡度另以重力分量改变加速度。</p><div class="formula">弯道限速 ≈ √（抓地 × 重力 × 控弯系数 ÷ 曲率）<br>坡道限速 = 巡航上限 ÷（1 + 5 × 前方最大正坡度）</div><p class="muted">这是玩法近似，坡道系数为演示设定。单圈对照使用同一黄色车手、相同起点和固定时间步；不是实测赛车成绩。</p></article><article><span class="eyebrow">几何与材质</span><h3>真实运行的场景，由什么组成？</h3><p>道路、两轮摩托、车手、松林、围栏和维修区均为三维几何。颜色、法线与粗糙度纹理提供表面细节；阴影和雾建立尺度。</p><div class="material-swatches"><figure><img src="../assets/textures/brown_mud_dry_diff_1k.jpg" alt="土路颜色纹理" loading="lazy"><figcaption>表面颜色</figcaption></figure><figure><img src="../assets/textures/brown_mud_dry_nor_gl_1k.jpg" alt="土路法线纹理" loading="lazy"><figcaption>细节法线</figcaption></figure><figure><img src="../assets/textures/brown_mud_dry_rough_1k.jpg" alt="土路粗糙度纹理" loading="lazy"><figcaption>粗糙程度</figcaption></figure></div></article></div></section>
+
+<section id="sources" class="research-section sources"><div><span class="eyebrow">04 / 来源与边界</span><h2>保留证据，也保留差距。</h2><p>研究日期：2026-09-14。原作 commit/tag 与项目许可证待核实；本地验证范围与运行说明随研究文档保存。</p></div><div class="source-links"><a href="https://mini-moto-park.chipchaunceytheonlyone.chatgpt.site/" target="_blank" rel="noopener noreferrer">作者原作 <span>线上页面与公开发布脚本 ↗</span></a><a href="https://x.com/chrisjdimarco/status/2098919328368197682" target="_blank" rel="noopener noreferrer">Christopher J. DiMarco <span>原始发布记录 ↗</span></a><a href="https://polyhaven.com/a/brown_mud_dry" target="_blank" rel="noopener noreferrer">Poly Haven 纹理 <span>Brown Mud Dry / Aerial Grass Rock · CC0 ↗</span></a><a href="./vendor/THREE-LICENSE.txt">Three.js r185 <span>渲染库与 OrbitControls · MIT ↗</span></a><a href="./research/notes.md">本项目验证记录 <span>来源、文件指纹与实际检查结果 ↗</span></a></div></section>
+</main><footer><span>010 / 松脊越野公园</span><span>原作启发 · 独立演示 · 尚未进行实车物理标定</span><a href="#park">回到场景 ↑</a></footer>
+<script type="module" src="app.mjs"></script>
+</body></html>

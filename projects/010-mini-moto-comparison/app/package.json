@@ -1,0 +1,1 @@
+{"name":"mini-moto-comparison","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"node serve.mjs","build":"node build.mjs","test":"node --test model.test.mjs ride.test.mjs","check":"node check.mjs"}}
