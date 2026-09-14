@@ -110,3 +110,5 @@ GitHub Pages 托管静态网页；联网排行榜、账户和持久化后端需�
 ## 009 · 城市景区图归档展示
 
 新增009实际演示导览、全部图稿与资料库，沿用全站构建和Pages部署。CI安装其独立依赖、运行40项规则测试和构建检查；入口为archive.html。发布状态见[009发布记录](../projects/009-city-landmark-map/publishing.md)，本轮保留其他项目的构建和导航。
+
+009于2026-09-14完成Pages部署：[实际导览](https://yydshly.github.io/0913_codex_project/009-city-landmark-map/archive.html)，[成功运行记录](https://github.com/yydshly/0913_codex_project/actions/runs/34862251860)。149个在线文件检查通过，24个图片文件哈希一致；详情见009发布记录。

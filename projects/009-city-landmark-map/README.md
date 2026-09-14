@@ -10,7 +10,7 @@
 
 ![实际网页截图：西安样稿与图稿查看控件](assets/demo/01-xian-demo.png)
 
-本地实际运行截图，非AI生成的网页示意。先从图稿查看页看全图、放大和保存，再进入全部图稿资料页比较V1/V2/V3；参考原图与技术实验分别保留。当前准备通过GitHub Pages发布，结果见[发布记录](publishing.md)。
+本地实际运行截图，非AI生成的网页示意。先从图稿查看页看全图、放大和保存，再进入全部图稿资料页比较V1/V2/V3；参考原图与技术实验分别保留。已通过GitHub Pages发布：[实际演示导览](https://yydshly.github.io/0913_codex_project/009-city-landmark-map/archive.html) · [全部图稿资料](https://yydshly.github.io/0913_codex_project/009-city-landmark-map/library.html)。结果见[发布记录](publishing.md)。
 
 ## 效果参考
 
@@ -48,7 +48,7 @@
 | 记录日期 | 2026-09-14 |
 | 来源元数据 | [原始元数据与指令哈希](source-metadata.json) |
 | 本项目实现 | 独立研究应用、绘图与校验代码；冻结项目内技能草稿v0.7 |
-| 部署状态 | 尚未部署 |
+| 部署状态 | GitHub Pages已部署并验证；149个在线文件可访问，图片哈希一致 |
 
 ## 回看与恢复
 

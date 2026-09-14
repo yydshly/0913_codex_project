@@ -25,7 +25,7 @@
 | 006 | [游戏效果、交互与教学体验](projects/006-emberfall-arpg/README.md) | 从 ARPG 效果参考与可玩实践，理解情绪、实时反馈和物理教学；附三图导览与完整研究 | 用户提供截图，原作 URL 待核实 | 研究中 | [研究导览](https://yydshly.github.io/0913_codex_project/006-emberfall-arpg/research/) · [试玩 ARPG](https://yydshly.github.io/0913_codex_project/006-emberfall-arpg/) |
 | 007 | [Mini Moto — Pine Ridge Park](projects/007-mini-moto-park/README.md) | 迷你越野摩托公园；已定位并体验原作，参考赛道与比赛联动、跟随镜头和车手能力；源码许可待核实 | [作者原帖](https://x.com/chrisjdimarco/status/2098919328368197682) | 已总结 | — |
 | 008 | [山地巡游实验室](projects/008-terrain-motion-lab/README.md) | 沉淀道路、地表、树木的素材、生成规则与表现能力；三图操作导览、共享组件和三份可运行快照 | [参考原作](https://mini-moto-park.chipchaunceytheonlyone.chatgpt.site/) | 已总结 · 原型持续打磨 | [能力与图片导览](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/capabilities.html) · [山林效果](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/outdoor.html?layout=valley&view=sunrise#stage) |
-| 009 | [城景工坊 · 城市景区图](projects/009-city-landmark-map/README.md) | 实际图稿展示、版本对比与资料归档；真实位置驱动的旅游理解图方向备份 | [YouMind相关线索](https://youmind.com/skills/yhbukK6TtKX0t9) · 原版本待核实 | 阶段归档，技能暂缓 | — |
+| 009 | [城景工坊 · 城市景区图](projects/009-city-landmark-map/README.md) | 实际图稿展示、版本对比与资料归档；真实位置驱动的旅游理解图方向备份 | [YouMind相关线索](https://youmind.com/skills/yhbukK6TtKX0t9) · 原版本待核实 | 阶段归档，技能暂缓 | [实际演示导览](https://yydshly.github.io/0913_codex_project/009-city-landmark-map/archive.html) |
 | 010 | [Mini Moto 赛车游戏参考与实践总结](projects/010-mini-moto-comparison/README.md) | 赛车类游戏参考：核心为场景构建与赛车手能力构建；保留基础竞速和驾驶演示，后续按项目需求开发 | [作者原作](https://mini-moto-park.chipchaunceytheonlyone.chatgpt.site/) | 已总结 | [网页研究与比赛](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/) · [自由驾驶练习](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/ride.html) |
 <!-- PROJECT_INDEX_END -->
 
@@ -122,7 +122,7 @@
 
 *2026-09-14实际浏览器截图；画面中的插画为用户样稿，含已记录的位置问题。*
 
-[项目摘要与资料](projects/009-city-landmark-map/README.md) · [发布记录](projects/009-city-landmark-map/publishing.md)
+[实际演示导览](https://yydshly.github.io/0913_codex_project/009-city-landmark-map/archive.html) · [全部图稿资料](https://yydshly.github.io/0913_codex_project/009-city-landmark-map/library.html) · [项目摘要与资料](projects/009-city-landmark-map/README.md) · [发布记录](projects/009-city-landmark-map/publishing.md)
 
 ### 010 · Mini Moto 赛车游戏参考与实践总结
 
