@@ -290,3 +290,13 @@
 | [scene-v17-canyon-rocky.jpg](scene-v17-canyon-rocky.jpg) | 峡谷高落差 · 岩间分流 |
 | [scene-v17-marsh-stream.jpg](scene-v17-marsh-stream.jpg) | 浅湾 · 缓流 |
 | [scene-v17-marsh-max-wind.jpg](scene-v17-marsh-max-wind.jpg) | 浅湾 · 最大风力阵风水纹，零流速 |
+
+## B1 提交后实景分析
+
+2026-09-14，在本地 Git 基线 b670133 提交后，独立临时浏览器页访问 app/dist/scene.html 实际采集，1280×720。层峦溪谷、秋季推荐黄昏、连续跌水默认精调，面板收起。未改变场景算法，三个机位动画时刻不同；分析完成关闭临时页，用户原页面未操作。
+
+- [全景](b1-review-overview.jpg)：默认河谷全景。
+- [水流近景](b1-review-water.jpg)：水流近景按钮。
+- [山后坡地](b1-review-back.jpg)：山后坡地按钮。
+
+截图用于定位现有版本的美术问题，不是已修复证据或跨版本像素对比。
