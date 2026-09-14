@@ -4,6 +4,10 @@
 
 [当前能力与未完成部分](../capabilities.md) · [开发记录](../development-log.md)
 
+[在线真实场景](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html) · [在线原理分析](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/index.html) · [在线开发记录](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/dev-log.html)
+
+2026-09-14，仓库现有 GitHub Actions 已发布并检查在线场景加载。下方命令仍用于本地运行。
+
 ## 四季主题
 
 四季保持同一地形、轨道和建筑布局，默认用同一全景机位比较，切换不会重建地形。取消“切换时使用同一全景机位”即可保留自己的观察位置。

@@ -19,7 +19,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | 001 | [PaperRoute](projects/001-paperroute/README.md) | 浏览器 3D 送报、障碍反馈与七日进程；AI 辅助常规迭代案例，可复用技术价值有限 | [PaperRoute 官网](https://www.paperroute.lol/) | 已总结 | [研究汇总](https://yydshly.github.io/0913_codex_project/001-paperroute/research.html) · [研究原型](https://yydshly.github.io/0913_codex_project/001-paperroute/) |
 | 002 | [Dunhuang Aura](projects/002-dunhuang-aura/README.md) | 敦煌美术风格与出图流程说明书；可复用配色、构图、提示词和修图要求，未新增绘图能力，质量与效率增益未验证 | [govin-ai/dunhuang-aura-skill](https://github.com/govin-ai/dunhuang-aura-skill) | 已总结 | [研究结论与参考价值](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/) |
-| 003 | [Mountain Railway Diorama · 白鹭河谷](projects/003-mountain-railway-diorama/README.md) | 从原作研究到可调场景：三种构图、四季光线、风与植被联动、三种水流；附实景、能力边界和开发记录 | [iamtechartist/mountain-railway-diorama](https://github.com/iamtechartist/mountain-railway-diorama) | 已总结 | — |
+| 003 | [Mountain Railway Diorama · 白鹭河谷](projects/003-mountain-railway-diorama/README.md) | 从原作研究到可调场景：三种构图、四季光线、风与植被联动、三种水流；附实景、能力边界和开发记录 | [iamtechartist/mountain-railway-diorama](https://github.com/iamtechartist/mountain-railway-diorama) | 已总结 | [在线场景](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html) |
 <!-- PROJECT_INDEX_END -->
 
 进度：`待研究` → `研究中` → `已复现` → `已总结`；暂时停止的项目标为 `暂缓`。演示未上线时填写 `—`。
@@ -53,7 +53,7 @@
 
 *本研究独立重建的 V17 基线实景，2026-09-14 本地浏览器截图；点击图片进入研究与效果导览。*
 
-[看效果与操作导览](projects/003-mountain-railway-diorama/README.md) · [查当前能力](projects/003-mountain-railway-diorama/capabilities.md) · [本地运行](projects/003-mountain-railway-diorama/app/README.md) · [开发记录](projects/003-mountain-railway-diorama/development-log.md) · [后续路线](projects/003-mountain-railway-diorama/next-steps.md) · [上游原作演示](https://iamtechartist.github.io/mountain-railway-diorama/)
+[在线体验](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html) · [看效果与操作导览](projects/003-mountain-railway-diorama/README.md) · [查当前能力](projects/003-mountain-railway-diorama/capabilities.md) · [本地运行](projects/003-mountain-railway-diorama/app/README.md) · [开发记录](projects/003-mountain-railway-diorama/development-log.md) · [后续路线](projects/003-mountain-railway-diorama/next-steps.md) · [上游原作演示](https://iamtechartist.github.io/mountain-railway-diorama/)
 
 <!-- PROJECT_PREVIEWS_END -->
 

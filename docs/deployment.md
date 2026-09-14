@@ -59,3 +59,9 @@ GitHub Pages 托管静态网页；联网排行榜、账户和持久化后端需�
 依据：[GitHub Pages 说明](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages) · [自定义发布工作流](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。
 
 [返回索引](../README.md) · [静态目录](../site/README.md) · [001 运行说明](../projects/001-paperroute/app/README.md)
+
+## 003 · 白鹭河谷发布补记
+
+2026-09-14，用户要求把当前源码与效果摘要推送远端。仓库原有 main 推送工作流自动构建 003；新增其 43 项规则检查，保留 001、002 的构建与验证。干净 checkout 构建 3 个项目并通过 209 处引用检查。首次成功发布来自 b64aae801f6ae5ea4d2906cfbe91a7c2e8fb716f，见 [Actions 记录](https://github.com/yydshly/0913_codex_project/actions/runs/34818941356)。
+
+[真实场景](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html) · [原理分析](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/index.html) · [开发记录](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/dev-log.html)。浏览器已确认默认秋季场景生成，8 个代表 URL 返回 200，详情与编译警告见 [003 验证笔记](../projects/003-mountain-railway-diorama/notes.md)。这不表示全参数或移动端画质已经验收。

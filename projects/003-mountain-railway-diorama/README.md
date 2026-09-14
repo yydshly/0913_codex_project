@@ -6,14 +6,14 @@
 
 *2026-09-14，V17 基线在本地浏览器中的实际画面，1280×720；独立重建原型，不是上游截图或生成图。*
 
-[先看实际能力](capabilities.md) · [启动并操作](app/README.md#运行) · [看实现过程](development-log.md) · [看现有问题与下一步](next-steps.md) · [看上游原作](https://iamtechartist.github.io/mountain-railway-diorama/)
+[直接体验白鹭河谷](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html) · [先看实际能力](capabilities.md) · [启动并操作](app/README.md#运行) · [看实现过程](development-log.md) · [看现有问题与下一步](next-steps.md) · [看上游原作](https://iamtechartist.github.io/mountain-railway-diorama/)
 
 ## 三分钟理解这个项目
 
 | 想了解什么 | 从哪里看 | 可以得到什么 |
 | --- | --- | --- |
 | 最终能做什么 | 本页实景与 [能力清单](capabilities.md) | 已实现、已验证和未完成部分分开说明 |
-| 如何体验 | 按 [运行说明](app/README.md#运行) 启动，进入真实场景 | 调整地形、四季、风力与水流，直接观察三维变化 |
+| 如何体验 | [打开在线场景](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html)，也可按 [运行说明](app/README.md#运行) 在本地启动 | 调整地形、四季、风力与水流，直接观察三维变化 |
 | 怎么实现的 | [技术笔记](notes.md) 与 [开发记录](development-log.md) | 从空间函数到材质、动画、灯光和验证的实现依据 |
 | 还差什么 | [提交后实景分析](next-steps.md) | 有截图依据的画面问题，以及保存/比较/空间创作路线 |
 
@@ -45,7 +45,7 @@ Yamaai 是具有完整视觉表现的具体作品；本地“白鹭河谷”是�
 | 进度 | 已总结：固定版本研究完成；独立场景升级为“白鹭河谷”，新增四季主题、地形编辑、共享风场与水面反射 |
 | 技术栈 | 原生 JavaScript ES Modules、Three.js r185、WebGL 2、GLSL、HTML/CSS；Node.js 检查与构建；Python 本地服务 |
 | 上游演示 | [Yamaai](https://iamtechartist.github.io/mountain-railway-diorama/)，已在浏览器打开验证 |
-| 本研究项目演示 | 真实三维场景与交互分析页均可本地运行，尚未部署；见 [网页运行说明](app/README.md) |
+| 本研究项目演示 | [在线场景](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html) · [原理分析](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/index.html) · [开发记录](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/dev-log.html)；2026-09-14 发布后已检查场景加载 |
 
 [当前能力基线](capabilities.md) · [返回总索引](../../README.md#项目索引) · [真实场景源码入口](app/scene.html) · [交互分析网页](app/index.html) · [网页运行说明](app/README.md) · [开发与优化记录](development-log.md) · [源码与验证笔记](notes.md) · [扩展方向](extensions.md) · [图片来源](assets/README.md)
 
@@ -76,7 +76,7 @@ Yamaai 是具有完整视觉表现的具体作品；本地“白鹭河谷”是�
 - [ ] 实施配置化或导览改造。
 - [ ] 跨设备性能和移动端完整交互测试。
 
-## 核心能力
+## 上游核心能力
 
 | 能力 | 已有实现 | 边界 |
 | :--- | :--- | :--- |
@@ -89,7 +89,7 @@ Yamaai 是具有完整视觉表现的具体作品；本地“白鹭河谷”是�
 
 源码入口及固定版本链接见 [模块地图](notes.md#模块地图)。
 
-## 技术原理
+## 上游技术原理
 
 ### 程序化建模
 
@@ -113,7 +113,7 @@ Yamaai 是具有完整视觉表现的具体作品；本地“白鹭河谷”是�
 
 重复物体使用几何合并和实例化；树木、道砟按距离切换细节层级（LOD）；阴影和反射限制更新频率；GPU 计时可用时根据持续压力调整像素密度。低分辨率 Bloom 限制光晕成本。具体参数与限制见 [研究笔记](notes.md)。
 
-## 实现效果
+## 上游实现效果
 
 以下图片来自固定 commit 的本地运行，未使用图像生成或视觉修饰。整体呈现秋日微缩模型风格：切面岩石、深绿与金红植被、跨峡谷钢桥和多级瀑布共同形成层次。
 
@@ -150,7 +150,7 @@ Yamaai 是具有完整视觉表现的具体作品；本地“白鹭河谷”是�
 
 固定版本已在 Windows、Node.js `v22.15.0`、Python `3.10.11` 下完成检查、构建与浏览器加载。Windows 使用 `python serve.py`；上游开发脚本写的是 `python3 serve.py`，本机没有使用该别名启动。
 
-完整命令见 [app/README.md](app/README.md)。上游克隆仅放在 Git 忽略的 `.tmp/`，正式子项目未导入完整源码或嵌套 `.git`。`app/` 包含独立的效果驱动分析网页及可编辑的白鹭河谷三维场景，仅随应用提供 Three.js 库文件与 MIT 许可。本次未部署网页。
+完整命令见 [app/README.md](app/README.md)。上游克隆仅放在 Git 忽略的 `.tmp/`，正式子项目未导入完整源码或嵌套 `.git`。`app/` 包含独立的效果驱动分析网页及可编辑的白鹭河谷三维场景，仅随应用提供 Three.js 库文件与 MIT 许可。初期研究仅在本地运行；2026-09-14 已通过仓库现有 Actions 发布 GitHub Pages。
 
 ## 来源与许可
 
