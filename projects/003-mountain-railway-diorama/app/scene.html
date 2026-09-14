@@ -6,6 +6,15 @@
 <div id="loading" role="status">正在生成河岸、叶簇与水面…</div><div id="error" role="alert" hidden></div>
 <aside class="scene-controls" id="scene-control-panel">
 <div class="panel-title"><span>场景主题</span><button id="reset-view" title="回到全景">全景</button></div>
+<details class="plan-panel" id="plan-panel" open><summary>我的场景方案</summary>
+<label class="field-label">方案名称<input id="plan-name" type="text" maxlength="60" placeholder="例如：秋日溪谷 · 暖光" value="我的溪谷"></label>
+<div class="plan-actions"><button id="plan-save">另存方案</button><button id="plan-export">导出文件</button></div>
+<label class="field-label">已保存方案<select id="plan-list"></select></label><button id="plan-load">恢复选中方案</button>
+<div class="plan-actions"><button id="plan-pin">设当前为基准</button><button id="plan-compare" aria-pressed="false">查看基准</button></div>
+<p class="control-note">包含三套构图、各水流精调、四季光线、风与镜头。基准比较沿用当前机位；动画帧不锁定。数据保存在当前浏览器与网址，可导出迁移。</p>
+<details id="plan-transfer"><summary>导入 / 查看方案文件</summary><label class="field-label">选择方案文件<input id="plan-file" type="file" accept=".json,application/json"></label><label class="field-label">或粘贴方案内容<textarea id="plan-json" rows="5" spellcheck="false" placeholder="粘贴导出的 JSON 方案"></textarea></label><button id="plan-import-text">应用方案内容</button></details>
+<p id="plan-status" class="control-note" role="status" aria-live="polite">先调整场景，再另存方案。刷新后从列表恢复；V17 原始基准始终可选。</p>
+</details>
 <section class="composition-panel" aria-label="景观构图">
 <label class="field-label">景观构图<select id="composition"><option value="ridge" selected>层峦溪谷 · 叠岭与窄溪</option><option value="marsh">疏林浅湾 · 宽水与低岸</option><option value="classic">原有河谷 · 第九版布局</option></select></label>
 <p id="composition-note" role="status">西侧叠岭、林间留白与窄溪跌水；拱桥作为前景焦点。</p>
@@ -50,7 +59,7 @@
 <label class="slider-label">风力 <output id="wind-value">45%</output><input id="wind" type="range" min="0" max="100" value="45"></label>
 <label class="slider-label">风向 <output id="wind-direction-value">0°</output><input id="wind-direction" type="range" min="0" max="360" step="15" value="0"></label>
 <label class="slider-label">阵风幅度 <output id="gust-value">60%</output><input id="gust" type="range" min="0" max="100" value="60"></label>
-<label class="slider-label">水流速度 <output id="water-flow-value">1×</output><input id="water-flow" type="range" min="0" max="3" step="0.1" value="1"></label>
+<label class="slider-label">水流速度 <output id="water-flow-value">1×</output><input id="water-flow" type="range" min="0" max="3" step="0.05" value="1"></label>
 <button id="wind-focus">靠近河岸观察风</button>
 <p id="wind-feedback" class="control-note">柳树更柔软，乔木较稳，芦苇摆幅最大。</p>
 <p class="control-note">风力 → 枝干弯曲 / 叶片颤动 / 芦苇倾斜 / 水纹增强；风向也改变雨丝倾斜。</p>

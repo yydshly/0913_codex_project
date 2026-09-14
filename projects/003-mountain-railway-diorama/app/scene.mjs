@@ -11,8 +11,11 @@ import {stageDefinitions} from './scene-service.mjs';
 import {regionViews} from './scene-regions.mjs';
 import {compositions,createCompositionSettings,lightingModes,resolveLighting} from './scene-composition.mjs';
 import {waterModes,createWaterTuning} from './scene-water-modes.mjs';
+import {validatePlan} from './scene-plans.mjs';
+import {mountPlans} from './scene-plans-ui.mjs';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 async function start(){
+ let planManager;
  const renderer=new THREE.WebGLRenderer({canvas:$('#world'),antialias:true,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.setSize(innerWidth,innerHeight);renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.toneMapping=THREE.NoToneMapping;renderer.outputColorSpace=THREE.SRGBColorSpace;
  const scene=new THREE.Scene();scene.background=new THREE.Color('#a7baab');scene.fog=new THREE.FogExp2('#a7baab',.0026);const camera=new THREE.PerspectiveCamera(42,innerWidth/innerHeight,.2,700);const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.08;controls.minDistance=10;controls.maxDistance=300;controls.maxPolarAngle=Math.PI*.49;controls.panSpeed=.6;controls.zoomSpeed=.75;
  const sun=new THREE.DirectionalLight('#ffe1aa',3.1);sun.position.set(-38,65,32);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-65,right:65,top:55,bottom:-55,near:1,far:200});sun.shadow.normalBias=.11;sun.shadow.bias=-.00008;sun.shadow.autoUpdate=false;sun.shadow.needsUpdate=true;
@@ -34,7 +37,7 @@ async function start(){
  function pause(){state.paused=!state.paused;$('#pause').setAttribute('aria-pressed',String(state.paused));$('#pause').textContent=state.paused?'继续场景':'暂停场景'}$('#pause').onclick=pause;if(state.paused){state.paused=false;pause()}
  $('#wireframe').onchange=e=>{state.wireframe=e.target.checked;scene.traverse(o=>{if(o.isMesh&&o!==ground){for(const m of Array.isArray(o.material)?o.material:[o.material]){if('wireframe'in m)m.wireframe=state.wireframe}}});sun.shadow.needsUpdate=true};$('#reset-view').onclick=()=>{state.auto=false;$('#auto-camera').checked=false;goView('overview')};$('#camera-view').onchange=e=>{state.auto=false;$('#auto-camera').checked=false;goView(e.target.value)};$('#auto-camera').onchange=e=>{state.auto=e.target.checked;lastAuto=-Infinity};controls.addEventListener('start',()=>{state.auto=false;$('#auto-camera').checked=false;tween=null;state.view='free';$('#camera-view').value='free'});
  $('#toggle-controls').onclick=()=>{const narrow=innerWidth<=560;const open=narrow?document.body.classList.toggle('controls-open'):!document.body.classList.toggle('controls-hidden');$('#toggle-controls').setAttribute('aria-expanded',String(open))};
- addEventListener('keydown',e=>{if(e.target.matches('input,select,button,textarea'))return;if(e.code==='Space'){e.preventDefault();pause()}});addEventListener('resize',()=>{viewport();if(state.view==='overview')goView('overview',true)});viewport();goView('overview',true);
+ addEventListener('keydown',e=>{if(planManager?.comparing())return;if(e.target.matches('input,select,button,textarea'))return;if(e.code==='Space'){e.preventDefault();pause()}});addEventListener('resize',()=>{viewport();if(state.view==='overview')goView('overview',true)});viewport();goView('overview',true);
  const tempColor=new THREE.Color();function lighting(dt){const theme=seasons[state.season],m=resolveLighting(world.config.composition,theme,state.stage>=4?state.mode:'day'),k=1-Math.exp(-dt*1.6);shared.season.value.fromArray(blendSeason(shared.season.value.toArray(),theme.weights,dt));seasonDetails.group.visible=state.stage>=3;seasonDetails.update();shared.night.value=THREE.MathUtils.lerp(shared.night.value,state.stage>=4?m.night:0,k);shared.rain.value=THREE.MathUtils.lerp(shared.rain.value,state.stage>=4?state.rain:0,k);shared.wind.value=state.stage>=3?state.wind:0;shared.wet.value=THREE.MathUtils.lerp(shared.wet.value,state.stage>=4?Math.max(m.wet,state.rain,theme.wet||0):0,k*.45);scene.background.lerp(tempColor.set(m.sky),k);scene.fog.color.copy(scene.background);scene.fog.density=THREE.MathUtils.lerp(scene.fog.density,m.fog*state.fog/Math.max(1,1.07/camera.aspect),k);groundMaterial.color.copy(scene.background).multiplyScalar(.86);sun.color.lerp(tempColor.set(m.sun),k);sun.intensity=THREE.MathUtils.lerp(sun.intensity,m.power,k);sun.position.lerp(V(...m.pos),k);hemi.intensity=THREE.MathUtils.lerp(hemi.intensity,m.ambient,k);}
 
 
@@ -94,7 +97,51 @@ async function start(){
  $('#detail-focus').onclick=()=>goView('wind');
 
 
- await renderer.compileAsync(scene,camera);setStage(5);chooseSeason('autumn');lighting(50);$('#loading').hidden=true;document.documentElement.dataset.ready='true';last=performance.now();
+
+ function capturePlan(name){
+  compositionSettings.save(terrainConfig.composition,terrainConfig);
+  return validatePlan({kind:'egret-scene',schemaVersion:1,name,composition:terrainConfig.composition,
+   compositions:Object.fromEntries(Object.keys(compositions).map(id=>[id,compositionSettings.get(id)])),
+   waterTuning:Object.fromEntries(Object.keys(waterModes).map(id=>[id,waterTuning.get(id)])),
+   environment:{season:state.season,mode:state.mode,recommendedLight:$('#season-lighting').checked,fixedSeasonView:$('#season-fixed-view').checked,wind:state.wind,direction:+$('#wind-direction').value,gust:shared.gust.value,flow:shared.flow.value,rain:state.rain,fog:state.fog,detail:shared.detailAmount.value,litter:shared.litter.value},
+   observation:{stage:state.stage,speed:state.speed,paused:state.paused,auto:state.auto,wireframe:state.wireframe,view:state.view},camera:{position:camera.position.toArray(),target:controls.target.toArray()}});
+ }
+ function applyPlanData(p){
+  clearTimeout(rebuildTimer);tween=null;
+  for(const[id,c]of Object.entries(p.compositions))compositionSettings.save(id,c);
+  for(const[id,values]of Object.entries(p.waterTuning))for(const[k,v]of Object.entries(values))waterTuning.set(id,k,v);
+  Object.assign(terrainConfig,p.compositions[p.composition]);const e=p.environment,o=p.observation;
+  Object.assign(state,{season:e.season,mode:e.mode,wind:e.wind,rain:e.rain,fog:e.fog,...o});
+  shared.gust.value=e.gust;shared.flow.value=e.flow;shared.detailAmount.value=e.detail;shared.litter.value=e.litter;
+  shared.windDir.value.set(Math.cos(e.direction*Math.PI/180),Math.sin(e.direction*Math.PI/180));
+  $('#composition').value=p.composition;$('#composition-note').textContent=compositions[p.composition].note;$('#terrain-preset').value='custom';
+  $('#season-lighting').checked=e.recommendedLight;$('#season-fixed-view').checked=e.fixedSeasonView;
+  $$('button[data-season]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.season===e.season)));
+  $$('button[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===e.mode)));
+  $('#season-note').textContent=seasons[e.season].note;$('#lighting-note').textContent=seasons[e.season].name+' / '+modes[e.mode].name+(e.recommendedLight?' · 随季节推荐':' · 手动光线');
+  for(const[id,value,suffix,output]of [['wind',e.wind*100,'%','wind-value'],['wind-direction',e.direction,'°','wind-direction-value'],['gust',e.gust*100,'%','gust-value'],['water-flow',e.flow,'×','water-flow-value'],['rain',e.rain*100,'%','rain-value'],['fog-amount',e.fog*100,'%','fog-amount-value'],['detail-amount',e.detail*100,'%','detail-amount-value'],['ground-litter',e.litter*100,'%','ground-litter-value'],['train-speed',o.speed,'×','speed-value']]){$('#'+id).step='any';$('#'+id).value=value;$('#'+output).value=Number(value.toFixed(3))+suffix;}
+  for(const input of $$('.scene-controls input[type=range]'))input.step='any';
+  syncTerrain();syncCompositionWater();rebuild();setStage(o.stage);
+  $('#wireframe').checked=o.wireframe;$('#wireframe').onchange({target:$('#wireframe')});
+  state.auto=o.auto;$('#auto-camera').checked=o.auto;lastAuto=elapsed;autoShot='';
+  state.view=o.view;$('#camera-view').value=o.view;tween=null;
+  // Clear residual orbit damping before restoring the exact saved pose.
+  const damping=controls.enableDamping;controls.enableDamping=false;controls.update();
+  camera.position.fromArray(p.camera.position);controls.target.fromArray(p.camera.target);controls.update();controls.enableDamping=damping;
+  $('#pause').setAttribute('aria-pressed',String(o.paused));$('#pause').textContent=o.paused?'继续场景':'暂停场景';
+  lighting(50);sun.shadow.needsUpdate=true;document.documentElement.dataset.planApplied=String(+(document.documentElement.dataset.planApplied||0)+1);
+ }
+ function applyPlan(input,{sameCamera=false}={}){const p=validatePlan(input);if(sameCamera){const checkWorld=createSpatial(p.compositions[p.composition]),[x,y,z]=p.camera.position;if(checkWorld.footprint(x,z)&&y<checkWorld.height(x,z)+2.5)throw new Error('当前近景会进入基准地形，请先切换全景再比较。');}const previous=capturePlan('恢复前');try{applyPlanData(p)}catch(error){console.error("方案应用失败",error);try{applyPlanData(previous)}catch(rollbackError){console.error("方案回退失败",rollbackError);throw new Error('场景恢复遇到错误，请刷新后从已保存方案重试。')}throw new Error('方案未能应用，已恢复修改前设置：'+error.message)}}
+ const disabledBefore=new Map();
+ function lockPlanPreview(locked){
+  controls.enabled=!locked;
+  for(const child of $('#scene-control-panel').children)if(child.id!=='plan-panel')child.inert=locked;
+  $('.build-panel').inert=locked;
+  for(const input of $$('#plan-panel input,#plan-panel select,#plan-panel textarea,#plan-panel button'))if(input.id!=='plan-compare'){if(locked){disabledBefore.set(input,input.disabled);input.disabled=true}else input.disabled=disabledBefore.get(input)??false;}
+  document.documentElement.dataset.planPreview=String(locked);
+ }
+
+ await renderer.compileAsync(scene,camera);setStage(5);chooseSeason('autumn');lighting(50);planManager=mountPlans({capture:capturePlan,apply:applyPlan,lock:lockPlanPreview});$('#loading').hidden=true;document.documentElement.dataset.ready='true';last=performance.now();
  function animate(now){const dt=Math.min((now-last)/1000,.1);last=now;if(!state.paused)elapsed+=dt;shared.time.value=elapsed;lighting(dt);train.update(dt,elapsed,{speed:state.speed,paused:state.paused||state.stage<2,night:state.stage>=4?shared.night.value:0});landscape.update(elapsed,state.stage>=4?shared.night.value:0);rain.update();
  if(state.stage>=5&&state.auto&&!state.paused){const p=train.cars[0].position,desired=train.service.status.includes('站')?'station':world.bridge(p)?'bridge':train.service.progress>.28&&train.service.progress<.55?'waterfall':'overview';if(desired!==autoShot&&elapsed-lastAuto>8){goView(desired);autoShot=desired;lastAuto=elapsed}}
  if(tween){const t=Math.min(1,(now-tween.at)/tween.duration),e=t*t*(3-2*t);camera.position.lerpVectors(tween.from,tween.to,e);camera.position.y+=Math.sin(Math.PI*e)**.5*tween.lift;controls.target.lerpVectors(tween.fromTarget,tween.target,e);if(t===1)tween=null;}else if(state.stage>=5&&state.view==='train'){const outward=V(train.focus.x,0,train.focus.z).normalize().multiplyScalar(20),tangent=world.curve.getTangentAt(train.service.progress).multiplyScalar(-7);camera.position.lerp(train.focus.clone().add(outward).add(tangent).add(V(0,14,0)),1-Math.exp(-dt*2));controls.target.lerp(train.focus,1-Math.exp(-dt*3));}

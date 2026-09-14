@@ -20,3 +20,5 @@
 #lighting-note,.composition-panel .control-note{display:block}
 
 #toggle-controls{display:block}body.controls-hidden .scene-controls{display:none}
+
+.plan-panel{border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:12px}.plan-panel input[type=text],.plan-panel textarea{box-sizing:border-box;width:100%;background:#193440;color:#e4edf0;border:1px solid #67808a;border-radius:5px;padding:9px;font:inherit}.plan-panel textarea{font:12px monospace;resize:vertical}.plan-actions{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:10px 0}.plan-panel button{font-size:13px}#plan-load{width:100%}#plan-status{color:#f0d59f;overflow-wrap:anywhere}.plan-panel input[type=file]{max-width:100%;font-size:12px}
