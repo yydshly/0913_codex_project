@@ -401,3 +401,16 @@
 - `scene-v24-overview.jpg`：当前全景，ridge / autumn / evening / 起伏 1.05 / overview。
 
 完整参数见 [scene-v24-checks.json](scene-v24-checks.json)。春秋近景采集于植被计数与地表锚点同步修正之前；夏冬、构图和地形实景采集于该修正后。列车和站房模型在这些截图之间未变化。B3 修改前对照沿用相同站房预设机位，但列车位置与动画相位不同，不作逐像素对比。
+
+## V25 · 动物与共享风场（2026-09-14）
+
+8 张 JPEG 均为本地浏览器实际运行截图，1280×720，非生成图。参数见 scene-v25-checks.json；最初两张的风向/飞速字段未采到，保留 null。各图动画相位不同；记录覆盖代表组合，未宣称全部组合视觉验收。最后一次尾迹材质复用和雨景状态文案修正不改变截图几何与画面。
+
+- [秋季白鹭](scene-v25-autumn-birds.jpg)
+- [夏日无风](scene-v25-summer-calm.jpg)
+- [夏日强风 180°](scene-v25-summer-wind.jpg)
+- [野鸭与尾迹](scene-v25-summer-ducks.jpg)
+- [冬季缓水](scene-v25-winter-ducks.jpg)
+- [冬夜活动减少](scene-v25-winter-night.jpg)
+- [疏林浅湾春雨](scene-v25-spring-rain.jpg)
+- [原有河谷春日](scene-v25-classic-ducks.jpg)

@@ -1,5 +1,14 @@
 # 003 · Mountain Railway Diorama / 白鹭河谷
 
+## V25 · 动物与风
+
+![V25 野鸭游动、尾迹与倒影](assets/scene-v25-summer-ducks.jpg)
+
+V25 新增林缘白鹭与缓水野鸭：飞行、扑翼、转向、贴水游动与尾迹，读取现有风力、风向、阵风、季节、昼夜和雨量。属于规则驱动的动物表现，尚无完整生态模拟。
+
+操作：**编辑场景 → 动物与栖息地 → 近看水边野鸭 / 观察林缘白鹭**；展开“风与水的关系”调整风力和风向。夜间飞鸟退场，野鸭减速。隐藏动物的选择及两个观察机位随场景方案保存。
+
+
 [▶ 在线体验 V23 固定归档版](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/archives/v23/scene.html) · [当前持续更新场景](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html)
 
 [列车与站房实景研究](train-station-research.md) · [研究与归档入口](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/archive.html)

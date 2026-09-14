@@ -3,6 +3,41 @@ import * as THREE from './vendor/three.module.js';
 import {createSpatial,createFoundation,terrainPresets} from './scene-world.mjs';import {createService,stageDefinitions} from './scene-service.mjs';
 import {windResponse} from './scene-vegetation.mjs';
 const world=createSpatial();
+test('动物栖息地覆盖三构图、三水流与参数边界，鸭群远离铁路岩石与跌水',async()=>{
+ const {wildlifeHabitat,duckPoint,birdPoint}=await import('./scene-wildlife.mjs');
+ const {createRiverRocks}=await import('./scene-rocks.mjs');
+ for(const composition of['classic','ridge','marsh'])for(const waterMode of['continuous','stream','rocky'])for(const edge of[false,true]){
+  const w=createSpatial({composition,waterMode,width:edge?3:11,bend:edge?7:0,relief:edge?1.8:.15,fall:edge?6:1});w.riverRocks=createRiverRocks(w);
+  w.groundTrees=[{x:-23,z:4,y:w.height(-23,4),height:15}];const h=wildlifeHabitat(w);assert.ok(h.waterSafe);
+  for(let i=0;i<64;i++){
+   const a=i/64*Math.PI*2,p=duckPoint(w,a),b=birdPoint(h.height,a);
+   assert.ok(p.z>w.waterStyle.end+3);assert.ok(w.closest(p.x,p.z).distance>3);
+   assert.ok(Math.abs(p.x-w.riverX(p.z))+.8<w.halfWidth(p.z));assert.ok(w.height(p.x,p.z)<p.y-.3);
+   assert.ok(w.footprint(b.x,b.z));assert.ok(b.y>w.height(b.x,b.z)+3);
+   if(Math.hypot(b.x+23,b.z-4)<6)assert.ok(b.y>w.groundTrees[0].y+15+2);
+  }
+ }
+});
+test('同一风场驱动鸟类，逆风减速且扑翼增强，夜雨和冬季减少活动',async()=>{
+ const {flightResponse,animalActivity}=await import('./scene-wildlife.mjs');
+ const p=new THREE.Vector3(0,10,0),t=new THREE.Vector3(1,0,0),dir=new THREE.Vector2(1,0);
+ const tail=flightResponse(1,p,t,1,dir,1),head=flightResponse(1,p,t,1,dir.clone().negate(),1),calm=flightResponse(1,p,t,0,dir,1);
+ assert.ok(tail.speed>calm.speed&&calm.speed>head.speed);assert.ok(head.wingRate>tail.wingRate);
+ const day=animalActivity([1,0,0,0],0,0,0),winter=animalActivity([0,0,0,1],0,0,0),night=animalActivity([1,0,0,0],1,0,0),rain=animalActivity([1,0,0,0],0,1,0);
+ assert.equal(night.flight,0);assert.ok(winter.swim<day.swim&&rain.swim<day.swim&&night.swim<day.swim);
+});
+test('实际动物模型暂停不移动，风变化不跳位置，尾迹顶点随水面且材质不覆雪',async()=>{
+ const {createWildlife}=await import('./scene-wildlife.mjs');
+ const shared={time:{value:0},night:{value:0},season:{value:new THREE.Vector4(1,0,0,0)},wind:{value:.3},windDir:{value:new THREE.Vector2(1,0)},gust:{value:.6},rain:{value:0}};
+ const a=createWildlife(new THREE.Group(),createSpatial(),shared);
+ for(let i=1;i<=90;i++)a.update(i/30,0);
+ const before=a.birds[0].root.position.clone(),duck=a.ducks[0].root.position.clone(),trail=a.ducks[0].trail.length;
+ a.update(3,0);assert.ok(a.birds[0].root.position.equals(before));assert.ok(a.ducks[0].root.position.equals(duck));assert.equal(a.ducks[0].trail.length,trail);
+ shared.wind.value=1;shared.windDir.value.set(-1,0);a.update(3,0);assert.ok(a.birds[0].root.position.equals(before));
+ a.update(3.02,0);assert.ok(a.birds[0].root.position.distanceTo(before)<.13);
+ for(const d of a.ducks){assert.ok(d.root.children.every(o=>!o.material||o.material.userData.seasonOwn));for(const v of d.wake.geometry.attributes.position.array)assert.ok(Number.isFinite(v));}
+ a.update(3.04,1);assert.equal(a.stats.birds,0);
+});
 
 test('到站观察显式停靠可重复，继续后只驶向下一圈车站',()=>{
  const service=createService(200,5,120);service.park();assert.equal(service.distance,205);assert.equal(service.stops,1);assert.equal(service.speed,0);
