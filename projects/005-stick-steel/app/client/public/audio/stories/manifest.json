@@ -1,0 +1,256 @@
+{
+  "provider": "MiniMax",
+  "status": "ready",
+  "stories": {
+    "father": {
+      "file": "father.24bcfd11550c.wav",
+      "duration": 72,
+      "bytes": 4608044,
+      "sha256": "24bcfd11550c5ac6c92483a2b964d48bae35b24874e14681a18c5eec992f6b34",
+      "model": "speech-2.8-hd",
+      "generatedAt": "2026-09-14T07:13:01.786Z",
+      "cues": [
+        {
+          "start": 0.5,
+          "end": 7,
+          "text": "小时候，我总要小跑，才能跟上他。",
+          "role": "narrator",
+          "voice": "Chinese (Mandarin)_Gentleman",
+          "speed": 0.96,
+          "gain": 0.7981151099875861,
+          "seconds": 3.4,
+          "sha256": "5395a69c7401afb2e8af0677c621cca89c63b384f4dcbd5fa54257bd29baf8fb"
+        },
+        {
+          "start": 7.5,
+          "end": 16,
+          "text": "慢一点，爸。",
+          "role": "child",
+          "voice": "cute_boy",
+          "speed": 0.96,
+          "gain": 0.8297596448397943,
+          "seconds": 1.9040625,
+          "sha256": "6a0582812be726b8b187f69173ee1ce2df68a526bc869da3e98b4c794f49ce58"
+        },
+        {
+          "start": 16.5,
+          "end": 24,
+          "text": "他没说什么，只把我的手握紧了些。",
+          "role": "narrator",
+          "voice": "Chinese (Mandarin)_Gentleman",
+          "speed": 0.96,
+          "gain": 0.7501033125907486,
+          "seconds": 3.2,
+          "sha256": "0757a2dc6d01cc62a2406eea13e6852962fc74f8b53ef9c7d64ec072785ad072"
+        },
+        {
+          "start": 24.5,
+          "end": 33,
+          "text": "长大以后，我开始走在前面。",
+          "role": "narrator",
+          "voice": "Chinese (Mandarin)_Gentleman",
+          "speed": 0.96,
+          "gain": 0.8652674179730246,
+          "seconds": 2.6,
+          "sha256": "ddd8c1d3b32900350e36e72e600c20d4eed2cc4cf9d92d849e9e36690fb326c3"
+        },
+        {
+          "start": 33.5,
+          "end": 42,
+          "text": "聊着自己的事，很少回头。",
+          "role": "narrator",
+          "voice": "Chinese (Mandarin)_Gentleman",
+          "speed": 0.96,
+          "gain": 0.7935629641795747,
+          "seconds": 2.531,
+          "sha256": "a09212a5ae415dfa3ac29233e4369229f8a2b8f3f294ee12d7e6573bb5ca6702"
+        },
+        {
+          "start": 42.3,
+          "end": 48,
+          "text": "偶尔回头，才发现他落在了后面。",
+          "role": "narrator",
+          "voice": "Chinese (Mandarin)_Gentleman",
+          "speed": 0.96,
+          "gain": 0.754558695980852,
+          "seconds": 3.36690625,
+          "sha256": "2005add112750952d6ddfcdeac8d35ec3498c51035b0df5f56af7339d930f10e"
+        },
+        {
+          "start": 48.3,
+          "end": 54,
+          "text": "再后来，他走得越来越慢。",
+          "role": "narrator",
+          "voice": "Chinese (Mandarin)_Gentleman",
+          "speed": 0.96,
+          "gain": 0.8127737709622668,
+          "seconds": 2.6,
+          "sha256": "2d8648650fd34fd3c2369e474d1c638d7d71e9a82538b009b0d5de078f93fbfa"
+        },
+        {
+          "start": 54.5,
+          "end": 60,
+          "text": "我停了下来。",
+          "role": "narrator",
+          "voice": "Chinese (Mandarin)_Gentleman",
+          "speed": 0.96,
+          "gain": 0.8024421243965668,
+          "seconds": 1.3235625,
+          "sha256": "af5f56a00e19dbeaed6eda7a1a099daaaffe1feddba5ad40fa5099f35ae0d726"
+        },
+        {
+          "start": 60.5,
+          "end": 66,
+          "text": "不急，我们一起走。",
+          "role": "narrator",
+          "voice": "Chinese (Mandarin)_Gentleman",
+          "speed": 0.96,
+          "gain": 0.846324940348379,
+          "seconds": 1.9969375,
+          "sha256": "4c7b55020993ab38d7253a68c808459f4f77441d6ecbd93f9960c6a7ad65a60c"
+        },
+        {
+          "start": 66.3,
+          "end": 72,
+          "text": "同一条路，这次换我等你。",
+          "role": "narrator",
+          "voice": "Chinese (Mandarin)_Gentleman",
+          "speed": 0.96,
+          "gain": 0.7793550702170937,
+          "seconds": 2.5,
+          "sha256": "61a1f296b1f63657bdf7ce314db310268c3040e54dff535985d41bab1ff93d9b"
+        }
+      ]
+    },
+    "dinner": {
+      "file": "dinner.42c313f97041.wav",
+      "duration": 36,
+      "bytes": 2304044,
+      "sha256": "42c313f97041fb015bd419a0e37fe1f1eaacf779cfe8fe8af60b438c894cf07f",
+      "model": "speech-2.8-hd",
+      "generatedAt": "2026-09-14T07:13:01.810Z",
+      "cues": [
+        {
+          "start": 0.5,
+          "end": 8,
+          "text": "那天的晚饭，比平时安静。",
+          "role": "narrator",
+          "voice": "Chinese (Mandarin)_Gentleman",
+          "speed": 0.96,
+          "gain": 0.8181148852479815,
+          "seconds": 2.6,
+          "sha256": "86226b66d51b86b9e77b5972303072e131a7ed2e7045e628a55bed7821500371"
+        },
+        {
+          "start": 8.3,
+          "end": 14,
+          "text": "她看着桌上的菜。",
+          "role": "narrator",
+          "voice": "Chinese (Mandarin)_Gentleman",
+          "speed": 0.96,
+          "gain": 0.8457534099245907,
+          "seconds": 1.68346875,
+          "sha256": "c649d787d6f05cb2191c094956ba52d9b6ed68c3c97c82a28fe905daa5179140"
+        },
+        {
+          "start": 14.3,
+          "end": 24,
+          "text": "他把那盘菜，慢慢推了过去。",
+          "role": "narrator",
+          "voice": "Chinese (Mandarin)_Gentleman",
+          "speed": 0.96,
+          "gain": 0.796892656210223,
+          "seconds": 2.9,
+          "sha256": "7ad63ab3b744770c35ff725ab11d8884ff3d0f11785948bdf07052ee4a637d6c"
+        },
+        {
+          "start": 24.3,
+          "end": 30,
+          "text": "过了一会儿，她把碗递了回来。",
+          "role": "narrator",
+          "voice": "Chinese (Mandarin)_Gentleman",
+          "speed": 0.96,
+          "gain": 0.7605140394956874,
+          "seconds": 2.6586875,
+          "sha256": "0aac425ddc7962dcef4ba7227bd270491b1ffc2838ec4341673b887ae660e6fa"
+        },
+        {
+          "start": 30.3,
+          "end": 36,
+          "text": "再给我盛一点吧。",
+          "role": "woman",
+          "voice": "Chinese (Mandarin)_Warm_Bestie",
+          "speed": 0.96,
+          "gain": 2.1863344031558616,
+          "seconds": 1.68346875,
+          "sha256": "5db94959ef4f56b151427847d6614e202fde729d9a216590197331d661db83e1"
+        }
+      ]
+    },
+    "newcomer": {
+      "file": "newcomer.11337f44760b.wav",
+      "duration": 36,
+      "bytes": 2304044,
+      "sha256": "11337f44760b1bf59cd5fc761ac502f16c75dce1f9d9f0f136a29c318f568f93",
+      "model": "speech-2.8-hd",
+      "generatedAt": "2026-09-14T07:13:01.836Z",
+      "cues": [
+        {
+          "start": 0.5,
+          "end": 9,
+          "text": "第一天，他端着杯子，站在聊天声外面。",
+          "role": "narrator",
+          "voice": "Chinese (Mandarin)_Gentleman",
+          "speed": 0.96,
+          "gain": 0.800099456389006,
+          "seconds": 3.99384375,
+          "sha256": "b05643948793fcc2774238d6fe1b5194e1df5e8f6d64f3a2731b7863ace8920c"
+        },
+        {
+          "start": 9.3,
+          "end": 17,
+          "text": "想说些什么，又怕打断别人。",
+          "role": "narrator",
+          "voice": "Chinese (Mandarin)_Gentleman",
+          "speed": 0.96,
+          "gain": 0.7992883552263317,
+          "seconds": 2.9,
+          "sha256": "4ef9844757d56226d9aebd9de625cb2145b1e3cdeebbb41fe1352a9643b7c631"
+        },
+        {
+          "start": 17.3,
+          "end": 25,
+          "text": "你也刚搬来？过来一起聊。",
+          "role": "colleague",
+          "voice": "Chinese (Mandarin)_Sincere_Adult",
+          "speed": 0.96,
+          "gain": 2.4012743767038267,
+          "seconds": 2.4845625,
+          "sha256": "0cad4f244e67b5fa5b6eb187b9b46295f3d526b0614530689fb5fd80f10cf359"
+        },
+        {
+          "start": 25.2,
+          "end": 32,
+          "text": "有人侧了侧身，留出了一个位置。",
+          "role": "narrator",
+          "voice": "Chinese (Mandarin)_Gentleman",
+          "speed": 0.96,
+          "gain": 0.7528068722598356,
+          "seconds": 2.97215625,
+          "sha256": "8e2c07400cf071e4748cf690b31d89b404a7dd205f9bc316f946b880c468bd56"
+        },
+        {
+          "start": 32.1,
+          "end": 36,
+          "text": "半步的空隙，刚好容得下一个人。",
+          "role": "narrator",
+          "voice": "Chinese (Mandarin)_Gentleman",
+          "speed": 0.96,
+          "gain": 0.8482678444376456,
+          "seconds": 3.1463125,
+          "sha256": "9e6cd7931a99941b2b973a4eb5e8d755072df19f6167602ad6716a99fef6dfdf"
+        }
+      ]
+    }
+  }
+}

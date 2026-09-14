@@ -23,9 +23,13 @@ jobs:
         with:
           node-version: '22'
           cache: npm
-          cache-dependency-path: projects/001-paperroute/app/package-lock.json
+          cache-dependency-path: |
+            projects/001-paperroute/app/package-lock.json
+            projects/005-stick-steel/app/client/package-lock.json
       - name: Install project dependencies
-        run: npm ci --prefix projects/001-paperroute/app
+        run: |
+          npm ci --prefix projects/001-paperroute/app
+          npm ci --prefix projects/005-stick-steel/app/client
       - name: Verify game rules
         run: node --test projects/001-paperroute/app/game-state.test.mjs
       - name: Verify material layout and upstream prompt checker
@@ -36,12 +40,19 @@ jobs:
         run: node --test projects/003-mountain-railway-diorama/app/model.test.mjs projects/003-mountain-railway-diorama/app/scene.test.mjs projects/003-mountain-railway-diorama/app/scene-plans.test.mjs
       - name: Verify motorcycle driving rules
         run: node --test projects/010-mini-moto-comparison/app/model.test.mjs projects/010-mini-moto-comparison/app/ride.test.mjs
+      - name: Verify character, story, physics and cached audio
+        run: |
+          npm run typecheck --prefix projects/005-stick-steel/app/client
+          npm test --prefix projects/005-stick-steel/app/client
+          npm run test:audio --prefix projects/005-stick-steel/app/client
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Build all static projects
         run: node scripts/build-site.mjs
       - name: Check published resources and navigation
-        run: node scripts/check-site.mjs
+        run: |
+          node scripts/check-site.mjs
+          node projects/005-stick-steel/app/check.mjs
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:

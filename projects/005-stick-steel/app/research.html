@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>人物动画与交互底座 · Stick & Steel 研究导览</title>
+  <meta name="description" content="先看真实效果：四位人物、三个 MiniMax 配音故事与六组物理能力。了解视频创作、游戏展示，以及后续创作 Skill 的开发路线。">
+  <meta name="theme-color" content="#f3f1e9"><link rel="stylesheet" href="research.css">
+</head>
+<body>
+<a class="skip" href="#effects">跳到效果演示</a>
+<main>
+  <header><a class="brand" href="../">005 <span>/</span> STICK & STEEL</a><nav aria-label="研究导航"><a href="#capabilities">当前能力</a><a href="#directions">扩展方向</a><a href="#skill">Skill 路线</a><a href="https://github.com/yydshly/0913_codex_project/tree/main/projects/005-stick-steel">源码与研究 ↗</a></nav></header>
+  <section class="intro" id="effects"><p class="eyebrow">CHARACTERS · STORIES · INTERACTION</p><h1>让人物有自己的样子，<br>也有继续出演的可能。</h1><p class="lead">从一组火柴人，积累人物、动作、场景、声音与物理交互。<br>这是一个可运行的研究底座，用实际作品验证视频创作和游戏展示两条路线。</p><div class="actions"><a class="button" href="demo/?view=characters">看四位人物表演 ↗</a><a class="button secondary" href="demo/?view=stories">观看配音生活故事 ↗</a><a class="text-link" href="demo/?view=capabilities">体验六组物理能力 →</a></div></section>
+  <figure class="hero"><a href="demo/?view=characters" aria-label="从四人效果图进入人物表演演示"><img src="guide-assets/24-character-comparison.png" width="1425" height="1039" alt="四位角色在第六秒的同场景表演：年轻女性招手、银发教师观察、卷发老人回应、疲惫父亲走近" fetchpriority="high"></a><figcaption><span>真实效果图 · 点击画面进入实时演示</span><span>四个人，同一段 24 秒的进门、回应与落座。</span></figcaption></figure>
+  <div class="facts"><p><strong>04</strong>具体人物与动作对照</p><p><strong>03</strong>MiniMax 配音生活故事</p><p><strong>06</strong>可亲手触发的物理能力</p></div>
+  <section id="capabilities"><div class="section-title"><p class="eyebrow">WHAT WORKS TODAY</p><h2>先看效果，再理解复用。</h2></div><div class="gallery">
+    <article><a href="demo/?view=stories"><img src="guide-assets/20-story-overview.jpg" width="2244" height="881" loading="lazy" alt="三个生活故事：父子牵手、伴侣递碗和解、新同事加入聊天"></a><span class="label">叙事表演 / 已实现</span><h3>那些没说出口的话</h3><p>父亲慢下来、吵架后的晚饭、新来的同事。用牵手、停顿、回头与半步距离表达关系，提供字幕、章节和时间轴；20 句 MiniMax 旁白与对白已经生成。</p><a href="demo/?view=stories">观看三个故事 →</a><p class="caption">截图来自配音接入前的实际演示；在线故事已加入声音。新人物刻画页单独采用无声表演。</p></article>
+    <article><a href="demo/?view=capabilities"><img src="guide-assets/14-capabilities-overview.jpg" width="1440" height="1215" loading="lazy" alt="六组物理演示：关节姿态、受力恢复、接球释放、武器握持、悬边攀爬与镜头观察"></a><span class="label">输入与物理 / 已实现</span><h3>把交互能力拆开来看</h3><p>拖动关节目标、投球撞击人偶、接住再放开，观察物体握持和悬边攀回。输入改变真实模拟状态；另保留中文训练与机器人对战。</p><a href="demo/?view=capabilities">亲手触发效果 →</a> <a href="demo/?view=duel">进入训练与对战 →</a></article>
+  </div><div class="table-wrap"><table><caption>可以复用什么，以及尚未做到什么</caption><thead><tr><th>当前基础</th><th>复用价值</th><th>当前边界</th></tr></thead><tbody>
+    <tr><td>人物配置与动作</td><td>外形、视线、姿态和行为习惯，供同一人物反复出演</td><td>仍需编排；新造型尚未统一接入旧故事</td></tr>
+    <tr><td>故事、镜头与声音</td><td>将生活片段组织成可观看的时间轴，并同步字幕与配音</td><td>尚无统一故事输入、MP4 导出或口型同步</td></tr>
+    <tr><td>接触与物理反馈</td><td>复用关节、受力、握持与攀爬，验证交互玩法</td><td>部分逻辑仍耦合对战；不是人体仿真或通用游戏编辑器</td></tr>
+  </tbody></table></div><p class="note">这是可运行的研究原型，尚未封装成通用 SDK 或自动创作工具。表演时间轴与物理模拟是两类驱动方式，不将预设剧情表述为模拟自动产生的结果。</p></section>
+  <section id="directions"><div class="section-title"><p class="eyebrow">TWO DIRECTIONS</p><h2>一个人物，可以走进不同作品。</h2></div><div class="directions"><article><span class="label">01 / 视频创作</span><h3>由剧本和时间轴驱动</h3><p>生活短剧、人物系列、剧情片头、角色介绍、情境教学。重点是人物连续性、镜头节奏与表演细节。</p><p><b>下一步：</b>统一故事数据、画幅与分镜，完成固定帧率渲染、字幕配音合成和 MP4 导出。</p></article><article><span class="label">02 / 游戏与交互展示</span><h3>由操作和事件驱动</h3><p>角色操作、物理效果、玩法教学、互动剧情和小型游戏原型。重点是操作能否改变状态，以及反馈是否清晰。</p><p><b>下一步：</b>拆分规则与场景依赖，整理交互事件，在新场景中验证机制复用。</p></article></div></section>
+  <section id="skill"><div class="section-title"><p class="eyebrow">NEXT / NOT YET IMPLEMENTED</p><h2>先完成成片，再沉淀创作 Skill。</h2></div><p class="lead">Codex 等代理理解需求并调用工具；Skill 保存制作方法与检查标准；底层程序负责实际渲染与导出。</p><ol class="roadmap"><li><b>统一人物与故事接口</b><span>同一个人物配置能在两个不同故事里复用。</span></li><li><b>交付第一支 MP4</b><span>画幅、分镜、字幕和 MiniMax 配音完整合成。</span></li><li><b>用第二个故事验证复用</b><span>保留角色与底层程序，支持只修改指定镜头或对白。</span></li><li><b>封装经过验证的 Skill</b><span>包含模板、执行入口、错误处理与成片验收；交付视频和可修改工程。</span></li></ol><p class="note">以上为后续开发规划。当前尚未创建创作 Skill，也不能输入文字直接生成完整视频。制作效率和成本收益仍需通过实际项目验证。</p><a href="https://github.com/yydshly/0913_codex_project/blob/main/projects/005-stick-steel/next-steps.md">查看完整开发与验收路线 →</a></section>
+  <section class="provenance"><h2>来源与验证</h2><p>基于 <a href="https://github.com/Rabneba/stick-steel">Rabneba/stick-steel</a> 的选定 MIT 模块，固定提交 <code>4c8e1d05a1ec47db93b687a81a82878727308b20</code>。人物造型、生活故事、说明页面和配音接入为本项目新增；<a href="https://genex.games/stick-steel">原作网页 ↗</a>。</p><p>已有 44 项人物/物理/故事测试与 5 项音轨测试通过；执行轮次和浏览器检查见 <a href="https://github.com/yydshly/0913_codex_project/blob/main/projects/005-stick-steel/notes.md">验证记录</a>。截图为本地真实渲染，素材来源及许可分别记录；没有进行长期性能、手机实机和独立音质评测。</p><p>播放已生成的配音不需要密钥。重新生成声音需本地配置 MiniMax；本网页不接收凭据，不提供语音生成接口。<a href="guide-assets/Stick-Steel-MIT.txt">上游 MIT 原文</a> · <a href="https://github.com/yydshly/0913_codex_project/blob/main/projects/005-stick-steel/source-and-changes.md">来源、素材与改动</a></p></section>
+  <footer><a href="../">← 返回全部项目</a><span>005 · 人物动画与交互底座研究 · 2026.09.14</span><a href="#effects">回到效果图 ↑</a></footer>
+</main>
+</body></html>

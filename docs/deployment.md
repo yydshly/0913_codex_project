@@ -65,3 +65,10 @@ GitHub Pages 托管静态网页；联网排行榜、账户和持久化后端需�
 2026-09-14，用户要求把当前源码与效果摘要推送远端。仓库原有 main 推送工作流自动构建 003；新增其 43 项规则检查，保留 001、002 的构建与验证。干净 checkout 构建 3 个项目并通过 209 处引用检查。首次成功发布来自 b64aae801f6ae5ea4d2906cfbe91a7c2e8fb716f，见 [Actions 记录](https://github.com/yydshly/0913_codex_project/actions/runs/34818941356)。
 
 [真实场景](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html) · [原理分析](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/index.html) · [开发记录](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/dev-log.html)。浏览器已确认默认秋季场景生成，8 个代表 URL 返回 200，详情与编译警告见 [003 验证笔记](../projects/003-mountain-railway-diorama/notes.md)。这不表示全参数或移动端画质已经验收。
+
+
+## 005 · 人物动画与交互研究发布适配
+
+用户于 2026-09-14 授权推送远端并关联网页部署。新增 005 的 `app/build.mjs` 接入原有多项目汇总流程：研究导览为项目根页，`demo/` 为可运行的 Vite 静态客户端，`guide-assets/` 为实际效果引导图与上游 MIT 原文。总目录卡片以四人效果图进入研究导览，提供人物、配音故事与物理能力入口；演示底部可返回研究摘要和开发路线。
+
+工作流新增 005 的依赖安装、类型检查、44 项人物/故事/物理测试及 5 项音轨测试；全站构建之后检查各路由、引导文字、三条音轨摘要/时长及发布目录不含本地配置。保留远端既有项目及其检查，不复制其他工作区未提交项目。`client/.openai/hosting.json` 仅保留原有模板兼容信息，本次发布使用现有 GitHub Pages。实际发布结果在验证后补记。

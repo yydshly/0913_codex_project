@@ -4,6 +4,6 @@
 
 线上地址：[项目研究与实践](https://yydshly.github.io/0913_codex_project/)，2026-09-13 首次部署和访问验证通过。
 
-当前配置项目为 `001-paperroute`，包含研究汇总和独立可玩原型。能力展示图引用该项目真实的官网画廊截图，原图存放在项目 `assets/`。应用源码保存在 `projects/NNN-project-slug/app/`。
+当前构建包含 001、002、003、005、010 等已配置项目；005 新增人物动画与交互研究导览、效果引导图和 `demo/` 实时演示。001 包含研究汇总和独立可玩原型。能力展示图引用该项目真实的官网画廊截图，原图存放在项目 `assets/`。应用源码保存在 `projects/NNN-project-slug/app/`。
 
 仓库根目录运行 `node scripts/build-site.mjs` 后，使用 `node scripts/check-site.mjs` 检查发布资源。依赖安装、自动发布与实际上线状态见[部署说明](../docs/deployment.md)。
