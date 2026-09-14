@@ -1,0 +1,197 @@
+{
+  "base": "https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/",
+  "files": [
+    {
+      "path": "capabilities.html",
+      "status": 200,
+      "bytes": 14517,
+      "sha256": "d5783e57d407e140487e9ac80bd08bf8490d5ff14139dca992944399cda60d1d"
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 10632,
+      "sha256": "e743f6fbf27ca3b545443879ca165adf9ee76cda4606846bc7aacd7973f4c9af"
+    },
+    {
+      "path": "outdoor.html",
+      "status": 200,
+      "bytes": 13565,
+      "sha256": "ce24b9385e19e3af99e122bcd79a556f16805b5ae89e7df1a94a71763425a8f7"
+    },
+    {
+      "path": "surface-lab.html",
+      "status": 200,
+      "bytes": 7294,
+      "sha256": "142a9b03278f80ef01c20bb73f07f0f9ce7847bf05fd2a65ca8ec324baf6e88e"
+    },
+    {
+      "path": "reuse-lab.html",
+      "status": 200,
+      "bytes": 12051,
+      "sha256": "0f874ff2c61391a2c81c11d306b475714cb21cc88c2dcefe8990e6367c5069ea"
+    },
+    {
+      "path": "materials.html",
+      "status": 200,
+      "bytes": 7672,
+      "sha256": "c3ff176e8947219d2ede603f6ade2e645b4ac712583e6d4c54366482e172207e"
+    },
+    {
+      "path": "versions.html",
+      "status": 200,
+      "bytes": 3829,
+      "sha256": "e679497cee30e90f0d4fee4476444276d836e59df0bd7f5122bb153fbfc47e8c"
+    },
+    {
+      "path": "camp-planner.html",
+      "status": 200,
+      "bytes": 6931,
+      "sha256": "6c0f4e483fc09ee33b329f2c0f4ba9b8eda2453681b554f814c1356ef151d196"
+    },
+    {
+      "path": "capabilities.css",
+      "status": 200,
+      "bytes": 6226,
+      "sha256": "90e8c442029ff43f6d3f3760cef98ef2172d39be8afbd8d628626b3de2b98977"
+    },
+    {
+      "path": "outdoor.mjs",
+      "status": 200,
+      "bytes": 31330,
+      "sha256": "cd4d64e37b24f7cb69199646fe077ceea6d57494ea9944fd2e1697bdf57b3278"
+    },
+    {
+      "path": "forest-render.mjs",
+      "status": 200,
+      "bytes": 5869,
+      "sha256": "1fb37fb05a521cbaaac90ead0ab8ce3969df4f2d7e0f1c1839ebb4e32991ecbe"
+    },
+    {
+      "path": "nature-render.mjs",
+      "status": 200,
+      "bytes": 8291,
+      "sha256": "2155b8ec15f745502b87e581e8cbef9e05867c90a1a10a7d5e6e0a8f49024160"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "status": 200,
+      "bytes": 650153,
+      "sha256": "bbf5ed13fe4373f5bd38b14ea8e62e9f157327da5638edc6d3863e08b167c9c7"
+    },
+    {
+      "path": "assets/natural-ground-view.png",
+      "status": 200,
+      "bytes": 114201,
+      "sha256": "03d2c564dfb10c81fa39cd647f67183b921549b2c2756e371e719176def20834"
+    },
+    {
+      "path": "assets/effect-07-ground-after.png",
+      "status": 200,
+      "bytes": 102964,
+      "sha256": "138e1895c8fba74cf66b031e4024cb63ab12e4aa9fb6a2e0b8a5d8b2f30e446a"
+    },
+    {
+      "path": "assets/effect-06-crown-after.png",
+      "status": 200,
+      "bytes": 88983,
+      "sha256": "63bfb7181b17ac8ac9cfd42ffd748ee1d69d222f47b056beb67566347942b24e"
+    },
+    {
+      "path": "snapshots/v001/app/outdoor.html",
+      "status": 200,
+      "bytes": 13232,
+      "sha256": "809ee3bc29820d697d368b6cd4e4d48fb7aae2cbcae489671e1fce5d8dc0b3e3"
+    },
+    {
+      "path": "snapshots/v002/app/outdoor.html",
+      "status": 200,
+      "bytes": 13441,
+      "sha256": "13d4c7b24c9a97be877b7eb56bf6cb64fae12d326bfb549ec28dfa46363bfd1a"
+    },
+    {
+      "path": "snapshots/v003/app/camp-planner.html",
+      "status": 200,
+      "bytes": 6897,
+      "sha256": "1db15ce71191a40f1b1169e64d44ba9f6d9c859bcc5984f1a8152888c17b9b6b"
+    },
+    {
+      "path": "assets/textures/aerial_grass_rock_diff_1k.jpg",
+      "status": 200,
+      "bytes": 666655,
+      "sha256": "57b8041bfe0d0f01430e4dbaad45e7ddddf0a9fc97317f90dbc51f7b0d9e1b5d"
+    },
+    {
+      "path": "assets/textures/aerial_grass_rock_nor_gl_1k.jpg",
+      "status": 200,
+      "bytes": 904956,
+      "sha256": "1aa3e23bff453f152e089b9f83aa36b4901651e019f7e2ca01d5331a9bbbda78"
+    },
+    {
+      "path": "assets/textures/aerial_grass_rock_rough_1k.jpg",
+      "status": 200,
+      "bytes": 362214,
+      "sha256": "b9f3f76aba74007f708333c0dbe73c52eb83ea0c4187a13e2e994f888a25114a"
+    },
+    {
+      "path": "assets/textures/brown_mud_dry_diff_1k.jpg",
+      "status": 200,
+      "bytes": 920456,
+      "sha256": "a56281b644de614787340f3db45e28d2f72ec32fc19a442f99002bae0ab11398"
+    },
+    {
+      "path": "assets/textures/brown_mud_dry_nor_gl_1k.jpg",
+      "status": 200,
+      "bytes": 1539092,
+      "sha256": "4dd82ecb3e810d4de49d34c7d6cc30152129434a58b3bd786bc9952bc8874877"
+    },
+    {
+      "path": "assets/textures/brown_mud_dry_rough_1k.jpg",
+      "status": 200,
+      "bytes": 390385,
+      "sha256": "31fb99629f533924b1150a7dac8d9432de85450bb45cda5033e3eb723f8dda04"
+    },
+    {
+      "path": "assets/textures/rock_2_diff_1k.jpg",
+      "status": 200,
+      "bytes": 828020,
+      "sha256": "80c75f42ceec91a3511eb398bc4b60ce705eb5c3bcca7d83c9147ada298f2bae"
+    },
+    {
+      "path": "assets/textures/rock_2_nor_gl_1k.jpg",
+      "status": 200,
+      "bytes": 1241241,
+      "sha256": "362076d8e9a74f54fdbe18df5d9f5b4a86a29b0e369aaa6999d7ee47a92252b5"
+    },
+    {
+      "path": "assets/textures/rock_2_rough_1k.jpg",
+      "status": 200,
+      "bytes": 266988,
+      "sha256": "656331ea030fc70f8dce98cfe1f5ee489ce2ceba488f58d087ac97d4f42d0718"
+    },
+    {
+      "path": "assets/vegetation/pine_tree_01_bark_diff_1k.jpg",
+      "status": 200,
+      "bytes": 725265,
+      "sha256": "5c76836b01c3536fa0e24207b67bf4f3315b53ebe2b4ecc6f08dfcf3f8d74929"
+    },
+    {
+      "path": "assets/vegetation/pine_tree_01_bark_nor_gl_1k.jpg",
+      "status": 200,
+      "bytes": 1016849,
+      "sha256": "05c46455531781b6cf18cae0648cf627f60ee942adaa8bcbfd1592fc2506a9e0"
+    },
+    {
+      "path": "assets/vegetation/pine_tree_01_twig_alpha_1k.png",
+      "status": 200,
+      "bytes": 351928,
+      "sha256": "6f91aa99f2c27108d6f817f874954aa7df8bfbb4dea2673e9322555a6ae79d99"
+    },
+    {
+      "path": "assets/vegetation/pine_tree_01_twig_diff_1k.jpg",
+      "status": 200,
+      "bytes": 510932,
+      "sha256": "e649f0f9bc74d1af5f1a45eaf2fe7a29adaaddfab251f746b983da301e4b80e1"
+    }
+  ]
+}

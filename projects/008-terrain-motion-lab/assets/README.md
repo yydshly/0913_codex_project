@@ -70,3 +70,5 @@
 能力入口的三图导览复用 `natural-ground-view.png`、`effect-07-ground-after.png`、`effect-06-crown-after.png`，分别引导道路、地表和树木观察。均为此前实际记录，保留原图与当时页面界面，未重新美化；当前参数与机位可能不同。
 
 `capabilities-effect-guide.png`：2026-09-14 三图操作导览实际浏览器截图，记录图片、观察点、操作提示与沉淀内容的网页布局。
+
+`published-sunrise.png`：2026-09-14 GitHub Pages 公网版本实际截图，低坡营地、97% 自动晨光，未美化。`published-resource-check.json` 保存首轮上线后 32 个资源的 HTTP 状态、大小与 SHA-256。

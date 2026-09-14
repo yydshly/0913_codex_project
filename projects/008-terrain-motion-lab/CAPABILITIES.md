@@ -39,7 +39,7 @@
 | 林间、草甸、岩地组合 | [户外布局工作台](app/outdoor.html#layout-workbench) | [环境配方与分布规则](app/environment-core.mjs)、[地被渲染](app/environment-render.mjs) |
 | 旧效果和当前效果比较 | [历史版本入口](app/versions.html) | [逐步效果记录](effect-log.md)、[快照规则](snapshots/README.md) |
 
-素材来源、许可和贴图清单见 [素材档案](assets/README.md)。场景入口需通过项目本地服务器运行，尚未部署到公网。
+素材来源、许可和贴图清单见 [素材档案](assets/README.md)。现已发布到 GitHub Pages：[能力汇总与图片导览](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/capabilities.html) · [完整山林效果](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/outdoor.html?layout=valley&view=sunrise#stage) · [历史版本](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/versions.html)。也可通过项目本地服务器运行。
 
 ## 怎样复用现有能力
 

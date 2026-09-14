@@ -15,7 +15,7 @@
 | 技术栈 | Three.js r185、原生 ES Modules、Canvas 图表与简化运动模型 |
 | 第三方许可 | Three.js / OrbitControls：MIT；三组地表与松树表面素材：Poly Haven CC0 |
 | 进度 | 已实现；模型、构建与页面状态接口验证通过，未做全面视觉/交互验收 |
-| 在线演示 | 尚未部署 |
+| 在线演示 | [能力汇总与图片导览](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/capabilities.html) · [完整山林效果](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/outdoor.html?layout=valley&view=sunrise#stage) · [历史版本](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/versions.html) |
 
 [返回总索引](../../README.md#项目索引) · [运行与操作](app/README.md) · [验证记录](notes.md) · [素材来源](assets/README.md)
 
@@ -29,7 +29,7 @@
 | 泥土、草岩表面如何呈现细节 | [地表拆解](app/surface-lab.html)：逐层开启材质，低视角比较轮廓 | 贴图通道配方、尺度控制、混合与地被布置 |
 | 单株树如何组成山林并随光线变化 | [户外演示](app/outdoor.html?layout=valley&view=sunrise#stage)：暂停并转动视角，切换环境组合 | 程序树形、种子分布、远近细节与受光处理 |
 
-[![道路、草地与松林的实际近景；点击查看图片和操作导览](assets/natural-ground-view.png)](app/capabilities.html#effect-guide)
+[![道路、草地与松林的实际近景；点击查看图片和操作导览](assets/natural-ground-view.png)](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/capabilities.html#effect-guide)
 
 *实际浏览器截图，不是实景照片或上游宣传图。网页的三图导览同时展示营地地表和晨光树冠，附观察点、操作与实现价值。*
 

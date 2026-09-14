@@ -104,3 +104,5 @@ GitHub Pages 托管静态网页；联网排行榜、账户和持久化后端需�
 发布使用本仓库既有 GitHub Actions / GitHub Pages，路径为 `008-terrain-motion-lab/`。目录首选入口为 `capabilities.html`，包含项目意义、实际图片与操作引导、全部 8 个当前页面以及 3 个历史快照。源码位于项目 `app/`，由项目独立构建脚本生成静态文件，统一构建时复制到 `site/008-terrain-motion-lab/`。
 
 发布前执行 008 的 62 项测试、素材校验、全站静态链接检查。快照保持原始文件与校验清单，历史文档中的本地状态描述属于当时记录。实际部署结果另记于 [008 发布记录](../projects/008-terrain-motion-lab/publishing.md)。
+
+008 已于 2026-09-14 完成首次 Pages 发布（功能提交 `8548012`，Actions `34859223402` 成功），[能力与图片导览](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/capabilities.html) 和历史版本入口已复核。

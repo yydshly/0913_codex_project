@@ -4,6 +4,8 @@
 
 环境：Node.js 22.15.0 已验证；支持 WebGL 的现代浏览器。无依赖安装步骤，Three.js r185 与 OrbitControls 随项目保存。
 
+在线入口：[能力汇总与图片导览](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/capabilities.html) · [完整山林效果](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/outdoor.html?layout=valley&view=sunrise#stage) · [历史版本](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/versions.html)。
+
 ## 启动
 
 ```powershell
