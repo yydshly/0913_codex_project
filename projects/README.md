@@ -18,6 +18,7 @@
 
 - [008 · 山地巡游实验室](008-terrain-motion-lab/README.md)：沉淀道路、地表、树木的素材、生成与表现能力；三图导览、参数演示及三份历史快照。当前为独立原型，优先完善自然效果与稳定复用。[能力清单](008-terrain-motion-lab/CAPABILITIES.md) · [效果记录](008-terrain-motion-lab/effect-log.md)。 [在线图文导览](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/capabilities.html) · [完整山林](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/outdoor.html?layout=valley&view=sunrise#stage)。
 
+- [009 · 城景工坊 / 城市景区图](009-city-landmark-map/README.md)：实际图稿展示、版本对比与资料归档。技能沉淀暂缓，保留真实位置驱动的旅游理解图方向。[实际引导与记录](009-city-landmark-map/publishing.md)。
 - [010 · Mini Moto 赛车游戏参考与实践总结](010-mini-moto-comparison/README.md)：赛车类游戏参考，核心是场景构建和赛车手能力构建。保留四车比赛与发卡弯驾驶原型，研究已总结，后续按具体项目需求开发；当前不是成熟赛车框架。 [网页研究与比赛](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/) · [自由驾驶练习](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/ride.html)。
 
 新增编号取现有项目目录的最大编号加一；既有编号保持稳定。

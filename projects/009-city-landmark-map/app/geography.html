@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#254f3c"><meta name="description" content="基于13个真实地点坐标的西安旅游理解图。城市概览、城区展开、地点来源与直线距离参考。"><title>西安 · 城市旅游理解图 | 城景工坊</title><link rel="stylesheet" href="./xian.css"></head>
+<body>
+<header class="topbar"><a class="brand" href="./"><span class="brand-icon">城</span><span>城景工坊<small>CITY READING ATLAS</small></span></a><nav aria-label="项目导航"><a href="./">西安画卷</a><a class="current" href="./geography.html" aria-current="page">地理依据</a><a href="./studio.html">插画工作台</a><a href="./library.html">全部图稿与资料</a></nav><button class="primary" id="export-svg" type="button">导出当前图件 ↓</button></header>
+<main class="shell">
+<section class="intro"><div><div class="eyebrow">FIRST VISIT / XI’AN</div><h1>初到西安，先建立一张心里的地图。</h1><p>从钟鼓楼到雁塔，从机场到临潼。先看方向与远近，再决定怎样探索。</p></div><span class="badge">13 个有来源的地点 · 地理依据版</span></section>
+<div class="workspace"><div class="main-column">
+<section class="map-card" aria-label="西安空间理解图">
+<div class="toolbar"><nav class="tabs" aria-label="地图范围"><button type="button" data-view="overview" aria-pressed="true">城市与周边</button><button type="button" data-view="center" aria-pressed="false">中心城区</button><button type="button" data-view="south" aria-pressed="false">雁塔一带</button><button type="button" data-view="east" aria-pressed="false">临潼景区</button></nav><small>北方朝上 · 地点可点击</small></div>
+<div id="map"><p>正在绘制地点关系图…</p></div>
+<div class="map-footer"><span id="view-caption">两幅图比例不同，请分别看比例尺。</span><button type="button" id="export-data">下载地点依据 ↓</button></div>
+</section>
+<section class="all-points"><div class="section-title"><h2>从这些地点认识西安</h2><small>按阅读主题分组，非行政区划</small></div><div class="point-groups" id="point-groups"></div></section>
+<div class="reading">
+<article><h3>01 / 先有方向感</h3><p>钟鼓楼在中心城区；雁塔一带在其南侧。机场在西北方向，临潼景区在东北方向。</p></article>
+<article><h3>02 / 分清空间尺度</h3><p>中心城区单独放大。片区之间看整体图，片区内部看展开图，避免将远近误读。</p></article>
+<article><h3>03 / 再查实际走法</h3><p>接近的点可能被道路、围墙或入口隔开。图中标签细线不是游览路线。</p></article>
+</div>
+</div>
+<aside class="panel" aria-label="地点详情与来源"><div><div class="label">LOCATION / 地点依据</div><h2 id="place-name">西安钟楼</h2><span class="point-category" id="place-group">钟鼓楼与南门一带</span><p id="place-note"></p><div class="coords"><div><span>经度 E</span><strong id="longitude"></strong></div><div><span>纬度 N</span><strong id="latitude"></strong></div></div><div class="semantics" id="semantics"></div><a id="source" class="source" href="https://ditu.amap.com/place/B001D09TAA" target="_blank" rel="noopener noreferrer">查看高德地点来源 ↗</a><small id="source-date"></small></div><div><hr class="divider"><label class="compare-label" for="compare">与另一个地点比较远近</label><select id="compare"></select><div class="distance"><strong id="distance-value"></strong> <span id="distance-unit">km</span></div><p class="fine" id="distance-description"></p><p class="fine">按参考点坐标计算的近似直线距离，不是步行距离或车程。</p></div></aside>
+</div>
+<details id="evidence"><summary>这张图依据什么？哪些内容还需要补充？</summary>
+<p>13 个地点坐标来自高德公开地点页，核对日期 2026-09-14。每个地点均提供来源链接。高德使用 <a href="https://lbs.amap.com/api/javascript-api-v2/guide/abc/basetype" target="_blank" rel="noopener noreferrer">GCJ-02 坐标系 ↗</a>；本版用同一坐标系计算近似位置关系，没有混用 GPS 坐标。</p>
+<ul><li>地点圆点按坐标固定；名称框自动避让，细线指回原始圆点。图幅内使用统一距离尺度，城区放大图独立标注比例尺。</li><li>点位是塔体、院区、车站或航站楼参考点，不普遍等同于入口。机场 T3 / T5、西安站 / 西安北站分别标注；陕西历史博物馆指定为小寨东路本馆。</li><li>未获取道路、城墙轮廓、水系和行政边界的可靠线面数据，因此本版只画地点关系。浅色方格是绘图纸背景，不是道路。</li><li>地标插画、真实路线、交通时间、营业预约与现场入口信息尚未加入。首版先验证地点关系与新人理解；尚未进行用户实验。</li></ul>
+<p>名称核对参考：<a href="https://www.sxhm.com/guide.html" target="_blank" rel="noopener noreferrer">陕西历史博物馆参观指南 ↗</a> · <a href="https://www.bmy.com.cn/index.htm" target="_blank" rel="noopener noreferrer">秦始皇帝陵博物院 ↗</a>。地点数据的再分发及商业使用许可待核实，来源公开可读不等于开放授权。</p>
+</details>
+<p id="status" role="status" aria-live="polite"></p>
+<noscript><p>互动地图需要启用 JavaScript。可查阅项目内的西安研究说明及导出图件。</p></noscript>
+</main><footer>研究项目 009 · 独立实现 · 精选地点关系示意 · 2026.09.14</footer>
+<script type="module" src="./xian.mjs"></script></body></html>
+

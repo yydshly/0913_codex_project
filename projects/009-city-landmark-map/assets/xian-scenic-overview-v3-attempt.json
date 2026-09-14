@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-14",
+  "mode": "built-in image_gen",
+  "status": "failed",
+  "imageProduced": false,
+  "attempts": [
+    {
+      "prompt": "xian-scenic-overview-v3-prompt.txt",
+      "reference": "source-city-map-reference.png",
+      "error": "network error sending request to images/edits"
+    },
+    {
+      "prompt": "xian-scenic-overview-v3-direct-prompt.txt",
+      "error": "network error sending request to images/generations"
+    }
+  ],
+  "scope": "31处景区及游览目的地；大体方位、微缩景观、名称和短看点；未完成图像效果验证"
+}

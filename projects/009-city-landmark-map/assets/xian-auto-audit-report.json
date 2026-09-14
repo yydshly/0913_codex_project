@@ -1,0 +1,929 @@
+{
+  "date": "2026-09-14",
+  "description": "代码测试素材的受控栅格合成自检；不是真实景观准确性验收",
+  "scenarios": {
+    "normal": {
+      "version": 1,
+      "mode": "controlled-raster-audit",
+      "positionStatus": "passed",
+      "productionStatus": "pending",
+      "identityStatus": "unverified",
+      "diagnostic": true,
+      "frame": {
+        "width": 1400,
+        "height": 900
+      },
+      "observedCount": 8,
+      "expectedCount": 8,
+      "issues": [],
+      "warnings": [
+        "使用代码测试色块，仅验证合成与自动检查，不是景区插画",
+        "真实景观放大后仍需解决密集点占位；本次小色块通过不能证明美术容量充足"
+      ],
+      "observations": [
+        {
+          "id": "bell",
+          "visiblePixels": 196,
+          "outsidePixels": 0,
+          "minX": 622,
+          "minY": 401,
+          "maxX": 635,
+          "maxY": 414,
+          "expectedPixels": 196,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 629,
+            "y": 408
+          }
+        },
+        {
+          "id": "pagoda",
+          "visiblePixels": 256,
+          "outsidePixels": 0,
+          "minX": 636,
+          "minY": 443,
+          "maxX": 651,
+          "maxY": 458,
+          "expectedPixels": 256,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 644,
+            "y": 451
+          }
+        },
+        {
+          "id": "daming",
+          "visiblePixels": 196,
+          "outsidePixels": 0,
+          "minX": 636,
+          "minY": 366,
+          "maxX": 649,
+          "maxY": 379,
+          "expectedPixels": 196,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 643,
+            "y": 373
+          }
+        },
+        {
+          "id": "hanyang",
+          "visiblePixels": 784,
+          "outsidePixels": 0,
+          "minX": 616,
+          "minY": 201,
+          "maxX": 643,
+          "maxY": 228,
+          "expectedPixels": 784,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 630,
+            "y": 215
+          }
+        },
+        {
+          "id": "huaqing",
+          "visiblePixels": 576,
+          "outsidePixels": 0,
+          "minX": 851,
+          "minY": 294,
+          "maxX": 874,
+          "maxY": 317,
+          "expectedPixels": 576,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 863,
+            "y": 306
+          }
+        },
+        {
+          "id": "terracotta",
+          "visiblePixels": 576,
+          "outsidePixels": 0,
+          "minX": 909,
+          "minY": 262,
+          "maxX": 932,
+          "maxY": 285,
+          "expectedPixels": 576,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 921,
+            "y": 274
+          }
+        },
+        {
+          "id": "cuihua",
+          "visiblePixels": 784,
+          "outsidePixels": 0,
+          "minX": 669,
+          "minY": 701,
+          "maxX": 696,
+          "maxY": 728,
+          "expectedPixels": 784,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 683,
+            "y": 715
+          }
+        },
+        {
+          "id": "louguan",
+          "visiblePixels": 784,
+          "outsidePixels": 0,
+          "minX": 76,
+          "minY": 590,
+          "maxX": 103,
+          "maxY": 617,
+          "expectedPixels": 784,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 90,
+            "y": 604
+          }
+        }
+      ],
+      "outputSha256": "56ec4000647b4e51575e964d2c1b843291093e549af33358356c24b63f69f96e",
+      "ownershipSha256": "10ce24598651f8c0e3881058fcc558a8bd5f9dd0df8eba880969e0dbe704545b",
+      "scope": "自动扫描本次受控合成的像素归属；不识别任意外部整图，不证明素材画的是正确景区；alpha<0.5的装饰像素不参与归属"
+    },
+    "swap": {
+      "version": 1,
+      "mode": "controlled-raster-audit",
+      "positionStatus": "failed",
+      "productionStatus": "pending",
+      "identityStatus": "unverified",
+      "diagnostic": true,
+      "frame": {
+        "width": 1400,
+        "height": 900
+      },
+      "observedCount": 8,
+      "expectedCount": 8,
+      "issues": [
+        {
+          "code": "anchor-outside",
+          "id": "terracotta",
+          "detail": "实际变换后的素材接地点超出地理区域"
+        },
+        {
+          "code": "anchor-outside",
+          "id": "louguan",
+          "detail": "实际变换后的素材接地点超出地理区域"
+        },
+        {
+          "code": "pixels-outside",
+          "id": "terracotta",
+          "detail": "实际可见主体像素超出指定区域"
+        },
+        {
+          "code": "pixels-outside",
+          "id": "louguan",
+          "detail": "实际可见主体像素超出指定区域"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "bell / terracotta",
+          "detail": "可见像素的x方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "bell / terracotta",
+          "detail": "可见像素的y方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "bell / louguan",
+          "detail": "可见像素的x方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "bell / louguan",
+          "detail": "可见像素的y方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "pagoda / terracotta",
+          "detail": "可见像素的x方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "pagoda / terracotta",
+          "detail": "可见像素的y方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "pagoda / louguan",
+          "detail": "可见像素的x方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "pagoda / louguan",
+          "detail": "可见像素的y方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "daming / terracotta",
+          "detail": "可见像素的x方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "daming / terracotta",
+          "detail": "可见像素的y方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "daming / louguan",
+          "detail": "可见像素的x方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "daming / louguan",
+          "detail": "可见像素的y方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "hanyang / terracotta",
+          "detail": "可见像素的x方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "hanyang / louguan",
+          "detail": "可见像素的x方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "huaqing / terracotta",
+          "detail": "可见像素的x方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "huaqing / terracotta",
+          "detail": "可见像素的y方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "huaqing / louguan",
+          "detail": "可见像素的x方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "huaqing / louguan",
+          "detail": "可见像素的y方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "terracotta / cuihua",
+          "detail": "可见像素的x方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "terracotta / louguan",
+          "detail": "可见像素的x方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "terracotta / louguan",
+          "detail": "可见像素的y方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "cuihua / louguan",
+          "detail": "可见像素的x方向顺序错误"
+        }
+      ],
+      "warnings": [
+        "使用代码测试色块，仅验证合成与自动检查，不是景区插画",
+        "真实景观放大后仍需解决密集点占位；本次小色块通过不能证明美术容量充足"
+      ],
+      "observations": [
+        {
+          "id": "bell",
+          "visiblePixels": 196,
+          "outsidePixels": 0,
+          "minX": 622,
+          "minY": 401,
+          "maxX": 635,
+          "maxY": 414,
+          "expectedPixels": 196,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 629,
+            "y": 408
+          }
+        },
+        {
+          "id": "pagoda",
+          "visiblePixels": 256,
+          "outsidePixels": 0,
+          "minX": 636,
+          "minY": 443,
+          "maxX": 651,
+          "maxY": 458,
+          "expectedPixels": 256,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 644,
+            "y": 451
+          }
+        },
+        {
+          "id": "daming",
+          "visiblePixels": 196,
+          "outsidePixels": 0,
+          "minX": 636,
+          "minY": 366,
+          "maxX": 649,
+          "maxY": 379,
+          "expectedPixels": 196,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 643,
+            "y": 373
+          }
+        },
+        {
+          "id": "hanyang",
+          "visiblePixels": 784,
+          "outsidePixels": 0,
+          "minX": 616,
+          "minY": 201,
+          "maxX": 643,
+          "maxY": 228,
+          "expectedPixels": 784,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 630,
+            "y": 215
+          }
+        },
+        {
+          "id": "huaqing",
+          "visiblePixels": 576,
+          "outsidePixels": 0,
+          "minX": 851,
+          "minY": 294,
+          "maxX": 874,
+          "maxY": 317,
+          "expectedPixels": 576,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 863,
+            "y": 306
+          }
+        },
+        {
+          "id": "terracotta",
+          "visiblePixels": 576,
+          "outsidePixels": 576,
+          "minX": 76,
+          "minY": 590,
+          "maxX": 99,
+          "maxY": 613,
+          "expectedPixels": 576,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 88,
+            "y": 602
+          }
+        },
+        {
+          "id": "cuihua",
+          "visiblePixels": 784,
+          "outsidePixels": 0,
+          "minX": 669,
+          "minY": 701,
+          "maxX": 696,
+          "maxY": 728,
+          "expectedPixels": 784,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 683,
+            "y": 715
+          }
+        },
+        {
+          "id": "louguan",
+          "visiblePixels": 784,
+          "outsidePixels": 784,
+          "minX": 909,
+          "minY": 262,
+          "maxX": 936,
+          "maxY": 289,
+          "expectedPixels": 784,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 923,
+            "y": 276
+          }
+        }
+      ],
+      "outputSha256": "7d2a031403b9218cfb66cbda2aa3d2215745c4393e0afdb774ac00fd57a992f6",
+      "ownershipSha256": "30830badbcd8d4aa24c0ee389202ee3a4e0da7491ed5889de0c72eb2b08fc8e1",
+      "scope": "自动扫描本次受控合成的像素归属；不识别任意外部整图，不证明素材画的是正确景区；alpha<0.5的装饰像素不参与归属"
+    },
+    "missing": {
+      "version": 1,
+      "mode": "controlled-raster-audit",
+      "positionStatus": "failed",
+      "productionStatus": "pending",
+      "identityStatus": "unverified",
+      "diagnostic": true,
+      "frame": {
+        "width": 1400,
+        "height": 900
+      },
+      "observedCount": 7,
+      "expectedCount": 8,
+      "issues": [
+        {
+          "code": "missing-place",
+          "id": "louguan",
+          "detail": "没有合成该景区"
+        }
+      ],
+      "warnings": [
+        "使用代码测试色块，仅验证合成与自动检查，不是景区插画",
+        "真实景观放大后仍需解决密集点占位；本次小色块通过不能证明美术容量充足"
+      ],
+      "observations": [
+        {
+          "id": "bell",
+          "visiblePixels": 196,
+          "outsidePixels": 0,
+          "minX": 622,
+          "minY": 401,
+          "maxX": 635,
+          "maxY": 414,
+          "expectedPixels": 196,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 629,
+            "y": 408
+          }
+        },
+        {
+          "id": "pagoda",
+          "visiblePixels": 256,
+          "outsidePixels": 0,
+          "minX": 636,
+          "minY": 443,
+          "maxX": 651,
+          "maxY": 458,
+          "expectedPixels": 256,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 644,
+            "y": 451
+          }
+        },
+        {
+          "id": "daming",
+          "visiblePixels": 196,
+          "outsidePixels": 0,
+          "minX": 636,
+          "minY": 366,
+          "maxX": 649,
+          "maxY": 379,
+          "expectedPixels": 196,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 643,
+            "y": 373
+          }
+        },
+        {
+          "id": "hanyang",
+          "visiblePixels": 784,
+          "outsidePixels": 0,
+          "minX": 616,
+          "minY": 201,
+          "maxX": 643,
+          "maxY": 228,
+          "expectedPixels": 784,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 630,
+            "y": 215
+          }
+        },
+        {
+          "id": "huaqing",
+          "visiblePixels": 576,
+          "outsidePixels": 0,
+          "minX": 851,
+          "minY": 294,
+          "maxX": 874,
+          "maxY": 317,
+          "expectedPixels": 576,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 863,
+            "y": 306
+          }
+        },
+        {
+          "id": "terracotta",
+          "visiblePixels": 576,
+          "outsidePixels": 0,
+          "minX": 909,
+          "minY": 262,
+          "maxX": 932,
+          "maxY": 285,
+          "expectedPixels": 576,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 921,
+            "y": 274
+          }
+        },
+        {
+          "id": "cuihua",
+          "visiblePixels": 784,
+          "outsidePixels": 0,
+          "minX": 669,
+          "minY": 701,
+          "maxX": 696,
+          "maxY": 728,
+          "expectedPixels": 784,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 683,
+            "y": 715
+          }
+        },
+        {
+          "id": "louguan",
+          "visiblePixels": 0,
+          "outsidePixels": 0,
+          "minX": 1400,
+          "minY": 900,
+          "maxX": -1,
+          "maxY": -1,
+          "expectedPixels": 0,
+          "visibleRatio": 0,
+          "centroid": null
+        }
+      ],
+      "outputSha256": "fea811eb48562d0d4126403cebba662fe21c261fdc3d7fa0dcf89341667a93ba",
+      "ownershipSha256": "d8584377fe78b159cbc05755967f3550c49d9808b590a39d31fc21b310a8a883",
+      "scope": "自动扫描本次受控合成的像素归属；不识别任意外部整图，不证明素材画的是正确景区；alpha<0.5的装饰像素不参与归属"
+    },
+    "occlusion": {
+      "version": 1,
+      "mode": "controlled-raster-audit",
+      "positionStatus": "failed",
+      "productionStatus": "pending",
+      "identityStatus": "unverified",
+      "diagnostic": true,
+      "frame": {
+        "width": 1400,
+        "height": 900
+      },
+      "observedCount": 7,
+      "expectedCount": 8,
+      "issues": [
+        {
+          "code": "anchor-outside",
+          "id": "terracotta",
+          "detail": "实际变换后的素材接地点超出地理区域"
+        },
+        {
+          "code": "pixels-outside",
+          "id": "terracotta",
+          "detail": "实际可见主体像素超出指定区域"
+        },
+        {
+          "code": "invisible-place",
+          "id": "louguan",
+          "detail": "没有可见的景观主体像素"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "bell / terracotta",
+          "detail": "可见像素的x方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "bell / terracotta",
+          "detail": "可见像素的y方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "pagoda / terracotta",
+          "detail": "可见像素的x方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "pagoda / terracotta",
+          "detail": "可见像素的y方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "daming / terracotta",
+          "detail": "可见像素的x方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "daming / terracotta",
+          "detail": "可见像素的y方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "hanyang / terracotta",
+          "detail": "可见像素的x方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "huaqing / terracotta",
+          "detail": "可见像素的x方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "huaqing / terracotta",
+          "detail": "可见像素的y方向顺序错误"
+        },
+        {
+          "code": "direction-reversed",
+          "id": "terracotta / cuihua",
+          "detail": "可见像素的x方向顺序错误"
+        }
+      ],
+      "warnings": [
+        "使用代码测试色块，仅验证合成与自动检查，不是景区插画",
+        "真实景观放大后仍需解决密集点占位；本次小色块通过不能证明美术容量充足"
+      ],
+      "observations": [
+        {
+          "id": "bell",
+          "visiblePixels": 196,
+          "outsidePixels": 0,
+          "minX": 622,
+          "minY": 401,
+          "maxX": 635,
+          "maxY": 414,
+          "expectedPixels": 196,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 629,
+            "y": 408
+          }
+        },
+        {
+          "id": "pagoda",
+          "visiblePixels": 256,
+          "outsidePixels": 0,
+          "minX": 636,
+          "minY": 443,
+          "maxX": 651,
+          "maxY": 458,
+          "expectedPixels": 256,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 644,
+            "y": 451
+          }
+        },
+        {
+          "id": "daming",
+          "visiblePixels": 196,
+          "outsidePixels": 0,
+          "minX": 636,
+          "minY": 366,
+          "maxX": 649,
+          "maxY": 379,
+          "expectedPixels": 196,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 643,
+            "y": 373
+          }
+        },
+        {
+          "id": "hanyang",
+          "visiblePixels": 784,
+          "outsidePixels": 0,
+          "minX": 616,
+          "minY": 201,
+          "maxX": 643,
+          "maxY": 228,
+          "expectedPixels": 784,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 630,
+            "y": 215
+          }
+        },
+        {
+          "id": "huaqing",
+          "visiblePixels": 576,
+          "outsidePixels": 0,
+          "minX": 851,
+          "minY": 294,
+          "maxX": 874,
+          "maxY": 317,
+          "expectedPixels": 576,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 863,
+            "y": 306
+          }
+        },
+        {
+          "id": "terracotta",
+          "visiblePixels": 784,
+          "outsidePixels": 784,
+          "minX": 76,
+          "minY": 590,
+          "maxX": 103,
+          "maxY": 617,
+          "expectedPixels": 784,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 90,
+            "y": 604
+          }
+        },
+        {
+          "id": "cuihua",
+          "visiblePixels": 784,
+          "outsidePixels": 0,
+          "minX": 669,
+          "minY": 701,
+          "maxX": 696,
+          "maxY": 728,
+          "expectedPixels": 784,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 683,
+            "y": 715
+          }
+        },
+        {
+          "id": "louguan",
+          "visiblePixels": 0,
+          "outsidePixels": 0,
+          "minX": 1400,
+          "minY": 900,
+          "maxX": -1,
+          "maxY": -1,
+          "expectedPixels": 784,
+          "visibleRatio": 0,
+          "centroid": null
+        }
+      ],
+      "outputSha256": "fd46c0c97ba212ed41f78c7f938fa08d72b3330ea067b3fa70bac00ca5540697",
+      "ownershipSha256": "2296aba0e3a2e8ff4ec920358167f4214015cdd63f85a1c626484c3498bb51d3",
+      "scope": "自动扫描本次受控合成的像素归属；不识别任意外部整图，不证明素材画的是正确景区；alpha<0.5的装饰像素不参与归属"
+    },
+    "asset": {
+      "version": 1,
+      "mode": "controlled-raster-audit",
+      "positionStatus": "failed",
+      "productionStatus": "pending",
+      "identityStatus": "unverified",
+      "diagnostic": true,
+      "frame": {
+        "width": 1400,
+        "height": 900
+      },
+      "observedCount": 8,
+      "expectedCount": 8,
+      "issues": [
+        {
+          "code": "identity-binding",
+          "id": "louguan",
+          "detail": "素材编号与景区编号不对应"
+        }
+      ],
+      "warnings": [
+        "使用代码测试色块，仅验证合成与自动检查，不是景区插画",
+        "真实景观放大后仍需解决密集点占位；本次小色块通过不能证明美术容量充足"
+      ],
+      "observations": [
+        {
+          "id": "bell",
+          "visiblePixels": 196,
+          "outsidePixels": 0,
+          "minX": 622,
+          "minY": 401,
+          "maxX": 635,
+          "maxY": 414,
+          "expectedPixels": 196,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 629,
+            "y": 408
+          }
+        },
+        {
+          "id": "pagoda",
+          "visiblePixels": 256,
+          "outsidePixels": 0,
+          "minX": 636,
+          "minY": 443,
+          "maxX": 651,
+          "maxY": 458,
+          "expectedPixels": 256,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 644,
+            "y": 451
+          }
+        },
+        {
+          "id": "daming",
+          "visiblePixels": 196,
+          "outsidePixels": 0,
+          "minX": 636,
+          "minY": 366,
+          "maxX": 649,
+          "maxY": 379,
+          "expectedPixels": 196,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 643,
+            "y": 373
+          }
+        },
+        {
+          "id": "hanyang",
+          "visiblePixels": 784,
+          "outsidePixels": 0,
+          "minX": 616,
+          "minY": 201,
+          "maxX": 643,
+          "maxY": 228,
+          "expectedPixels": 784,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 630,
+            "y": 215
+          }
+        },
+        {
+          "id": "huaqing",
+          "visiblePixels": 576,
+          "outsidePixels": 0,
+          "minX": 851,
+          "minY": 294,
+          "maxX": 874,
+          "maxY": 317,
+          "expectedPixels": 576,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 863,
+            "y": 306
+          }
+        },
+        {
+          "id": "terracotta",
+          "visiblePixels": 576,
+          "outsidePixels": 0,
+          "minX": 909,
+          "minY": 262,
+          "maxX": 932,
+          "maxY": 285,
+          "expectedPixels": 576,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 921,
+            "y": 274
+          }
+        },
+        {
+          "id": "cuihua",
+          "visiblePixels": 784,
+          "outsidePixels": 0,
+          "minX": 669,
+          "minY": 701,
+          "maxX": 696,
+          "maxY": 728,
+          "expectedPixels": 784,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 683,
+            "y": 715
+          }
+        },
+        {
+          "id": "louguan",
+          "visiblePixels": 784,
+          "outsidePixels": 0,
+          "minX": 76,
+          "minY": 590,
+          "maxX": 103,
+          "maxY": 617,
+          "expectedPixels": 784,
+          "visibleRatio": 1,
+          "centroid": {
+            "x": 90,
+            "y": 604
+          }
+        }
+      ],
+      "outputSha256": "3a1c2e9e81ebc86ea7834c958bcf9693250283d83d0f20be91b932a506b91a9c",
+      "ownershipSha256": "10ce24598651f8c0e3881058fcc558a8bd5f9dd0df8eba880969e0dbe704545b",
+      "scope": "自动扫描本次受控合成的像素归属；不识别任意外部整图，不证明素材画的是正确景区；alpha<0.5的装饰像素不参与归属"
+    }
+  }
+}

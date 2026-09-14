@@ -1,0 +1,13 @@
+{
+  "source": "用户上传的西安宏观生成结果，原样保存作视觉纠偏样本",
+  "sourceFilename": "codex-clipboard-42463baf-d4a6-43f5-b84c-44e321a336f7.png",
+  "recordedAt": "2026-09-14",
+  "sha256": "b8e1bc21d197fe1e57f7e656ac12f25b7fffd027c7bff286c130dabf217f1a4c",
+  "bytes": 3882433,
+  "width": 1536,
+  "height": 1024,
+  "model": "待核实",
+  "license": "待核实",
+  "actualGenerationPrompt": "待核实；对话提供过提示词，不推断外部工具实际提交内容",
+  "status": "用户认为与参考画风差距较大；保留作对照，不标为合格成品"
+}

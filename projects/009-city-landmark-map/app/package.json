@@ -1,0 +1,22 @@
+{
+  "name": "city-landmark-map-studio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node serve.mjs",
+    "build": "node build.mjs",
+    "test": "node --test studio.test.mjs xian.test.mjs atlas.test.mjs position-study.test.mjs controlled-compositor.test.mjs destination-audit.test.mjs area-audit.test.mjs",
+    "research:xian": "node compile-location-evidence.mjs && node xian-validation-export.mjs",
+    "research": "node research-export.mjs && node auto-audit-export.mjs",
+    "research:scenic": "python register-sprite-sheet.py && node scenic-export.mjs",
+    "test:scenic": "python register-sprite-sheet.py && node --test scenic-integration.test.mjs",
+    "check": "node check.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "coordtransform": "2.1.2",
+    "leaflet": "1.9.4"
+  }
+}

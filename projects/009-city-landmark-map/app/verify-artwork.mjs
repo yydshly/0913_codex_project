@@ -1,0 +1,12 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {validateArtwork} from './position-study.mjs';
+const [planPath,observationPath,imagePath,outputPath]=process.argv.slice(2);
+if(!planPath||!observationPath||!imagePath)throw new Error('用法：node verify-artwork.mjs 布局.json 观察.json 成图.png [报告.json]');
+const plan=JSON.parse(await readFile(planPath,'utf8')),observation=JSON.parse(await readFile(observationPath,'utf8')),bytes=await readFile(imagePath);
+if(bytes.subarray(0,8).toString('hex')!=='89504e470d0a1a0a')throw new Error('本原型仅支持 PNG 成图证据');
+const result=validateArtwork(plan,observation);
+if(observation.imageSha256!==createHash('sha256').update(bytes).digest('hex'))result.errors.push('观察记录与图片哈希不匹配');
+if(observation.width!==bytes.readUInt32BE(16)||observation.height!==bytes.readUInt32BE(20))result.errors.push('观察记录与实际图片尺寸不匹配');
+if(result.errors.length)result.status='failed';
+const report=JSON.stringify(result,null,2);if(outputPath)await writeFile(outputPath,report);console.log(report);process.exitCode=result.status==='passed'?0:2;

@@ -1,0 +1,554 @@
+{
+  "version": 1,
+  "kind": "planned-layout",
+  "coordinateSystem": "GCJ-02",
+  "projection": "城市范围局部等距圆柱近似；经度按平均纬度修正；统一缩放",
+  "frame": {
+    "width": 1400,
+    "height": 900
+  },
+  "anchorId": "bell",
+  "places": [
+    {
+      "id": "bell",
+      "name": "西安钟楼",
+      "label": "钟楼",
+      "group": "old",
+      "lon": 108.94703,
+      "lat": 34.25943,
+      "poi": "B001D09TAA",
+      "note": "钟楼与四条大街的交汇是认识中心城区的参考。",
+      "semantics": "地标参考点",
+      "number": 1,
+      "source": "https://ditu.amap.com/place/B001D09TAA",
+      "checkedAt": "2026-09-14",
+      "coordinateSystem": "GCJ-02",
+      "zone": "old",
+      "type": "城市地标",
+      "headline": "从古城中心建立方向感",
+      "description": "明代楼阁与台基是西安的城市标志，也是理解东西南北大街的直观参照。",
+      "tip": "先辨认钟楼，再看西侧鼓楼和南侧永宁门。",
+      "introSource": "https://en.xa.gov.cn/CultureTravel/Attractions/1691691501245550594.html",
+      "reach": "near",
+      "x": 628.2886221902274,
+      "y": 407.5478793060558,
+      "radius": 13.221571899888456
+    },
+    {
+      "id": "pagoda",
+      "name": "大雁塔",
+      "label": "大雁塔",
+      "group": "south",
+      "lon": 108.964176,
+      "lat": 34.218229,
+      "poi": "B001D023F0",
+      "note": "大慈恩寺内的塔，与同名地铁站是不同地点。",
+      "semantics": "塔体参考点；非景区入口",
+      "number": 2,
+      "source": "https://ditu.amap.com/place/B001D023F0",
+      "checkedAt": "2026-09-14",
+      "coordinateSystem": "GCJ-02",
+      "zone": "qujiang",
+      "type": "历史建筑",
+      "headline": "识别城南的七层砖塔",
+      "description": "大雁塔位于大慈恩寺内，是认识雁塔一带的核心标志；朴素的砖塔形态与周围唐风建筑不同。",
+      "tip": "地点指塔体，同名地铁站和景区入口需分别核对。",
+      "introSource": "https://xadfz.xa.gov.cn/xadq/rwxa/1802954373708996609.html",
+      "reach": "near",
+      "x": 643.2221404893509,
+      "y": 450.96031614223756,
+      "radius": 16.06820092616474
+    },
+    {
+      "id": "daming",
+      "name": "大明宫国家遗址公园",
+      "label": "大明宫",
+      "lon": 108.96353,
+      "lat": 34.292586,
+      "poi": "B001D0ZYYD",
+      "zone": "palace",
+      "type": "唐代遗址",
+      "headline": "从遗址读懂唐代宫城",
+      "description": "以宫殿遗址与历史格局展示为核心，可沿丹凤门及宫城轴线理解唐代大明宫。",
+      "tip": "它是遗址公园，不是一座完整保存至今的唐代宫殿。",
+      "introSource": "https://qjxq.xa.gov.cn/zjqj/gyqj/tsqj/5df21c62fd8508098d284f14.html",
+      "source": "https://ditu.amap.com/place/B001D0ZYYD",
+      "coordinateSystem": "GCJ-02",
+      "checkedAt": "2026-09-14",
+      "semantics": "景区或街区参考点；非精确入口",
+      "reach": "near",
+      "number": 3,
+      "x": 642.6594988924145,
+      "y": 372.6122526042687,
+      "radius": 13.221571899888456
+    },
+    {
+      "id": "hanyang",
+      "name": "汉景帝阳陵博物院",
+      "label": "汉阳陵",
+      "lon": 108.949302,
+      "lat": 34.442318,
+      "poi": "B0FFMHW98M",
+      "zone": "north",
+      "type": "汉代遗址",
+      "headline": "把历史视角延伸到汉代",
+      "description": "汉景帝阳陵博物院位于城区北部的更大范围，是在秦唐主题之外加入汉代陵墓与文博内容的地点。",
+      "tip": "与机场同处城区北部大范围，但不是相邻步行景点。",
+      "introSource": "https://www.xa.gov.cn/ztzl/ztzl/lzledc/ywdc/1824366329290301442.html",
+      "source": "https://ditu.amap.com/place/B0FFMHW98M",
+      "coordinateSystem": "GCJ-02",
+      "checkedAt": "2026-09-14",
+      "semantics": "景区或街区参考点；非精确入口",
+      "reach": "near",
+      "number": 4,
+      "x": 630.2674483640108,
+      "y": 214.84348504146612,
+      "radius": 34
+    },
+    {
+      "id": "huaqing",
+      "name": "华清宫",
+      "label": "华清宫",
+      "group": "east",
+      "lon": 109.215759,
+      "lat": 34.356728,
+      "poi": "B001D006F1",
+      "note": "在中心城区东北方向的临潼一带，位于兵马俑西南侧。",
+      "semantics": "景区参考点；非入口",
+      "number": 5,
+      "source": "https://ditu.amap.com/place/B001D006F1",
+      "checkedAt": "2026-09-14",
+      "coordinateSystem": "GCJ-02",
+      "zone": "lintong",
+      "type": "历史园林",
+      "headline": "认识骊山脚下的宫苑景观",
+      "description": "华清宫把温泉宫苑、唐文化与骊山景观联系在一起，是理解临潼历史层次的重要地点。",
+      "tip": "与兵马俑都在临潼，实际交通和参观安排仍需单独查询。",
+      "introSource": "https://www.hqc.cn/about/",
+      "reach": "near",
+      "x": 862.3414297841861,
+      "y": 305.0274725371303,
+      "radius": 22.923720795179243
+    },
+    {
+      "id": "terracotta",
+      "name": "秦始皇兵马俑博物馆",
+      "label": "兵马俑博物馆",
+      "group": "east",
+      "lon": 109.28196,
+      "lat": 34.386214,
+      "poi": "B0FFGXMLTU",
+      "note": "临潼区的兵马俑参观点；不代表秦始皇帝陵全部园区。",
+      "semantics": "馆区参考点；非入口",
+      "number": 6,
+      "source": "https://ditu.amap.com/place/B0FFGXMLTU",
+      "checkedAt": "2026-09-14",
+      "coordinateSystem": "GCJ-02",
+      "zone": "lintong",
+      "type": "考古遗址",
+      "headline": "看秦代军阵与考古展示",
+      "description": "兵马俑博物馆的俑坑与军阵展示，提供认识秦代历史和考古现场的直接入口。",
+      "tip": "这里标兵马俑馆区，不代表秦始皇帝陵全部园区。",
+      "introSource": "https://www.bmy.com.cn/index.htm",
+      "reach": "near",
+      "x": 920,
+      "y": 273.9588306946538,
+      "radius": 22.923720795179243
+    },
+    {
+      "id": "cuihua",
+      "name": "翠华山景区",
+      "label": "翠华山",
+      "lon": 109.009545,
+      "lat": 33.967491,
+      "poi": "B001D08PIN",
+      "zone": "qinling",
+      "type": "山地自然",
+      "headline": "看天池与山崩奇石",
+      "description": "翠华山以天池、山崩地貌与山间景观提供自然主题体验，和城内建筑文博形成互补。",
+      "tip": "山地行程需要另查天气、开放范围和实际路线。",
+      "introSource": "https://qjxq.xa.gov.cn/xwzx/tpxw/2044354510126653442.html",
+      "source": "https://ditu.amap.com/place/B001D08PIN",
+      "coordinateSystem": "GCJ-02",
+      "checkedAt": "2026-09-14",
+      "semantics": "景区或街区参考点；非精确入口",
+      "reach": "near",
+      "number": 7,
+      "x": 682.7368256470074,
+      "y": 715.1565149585339,
+      "radius": 34
+    },
+    {
+      "id": "louguan",
+      "name": "终南山古楼观历史文化景区",
+      "label": "古楼观",
+      "lon": 108.328991,
+      "lat": 34.072514,
+      "poi": "B0FFHCVB2G",
+      "zone": "qinling",
+      "type": "文化景观",
+      "headline": "向西南认识楼观一带",
+      "description": "楼观一带以道文化展示与秦岭山前环境为特色，是理解西安西南周边的另一种文化视角。",
+      "tip": "使用已核对的北门位置作参照，不等同于整个景区中心。",
+      "introSource": "https://qjxq.xa.gov.cn/zjqj/index.html",
+      "source": "https://ditu.amap.com/place/B0FFHCVB2G",
+      "coordinateSystem": "GCJ-02",
+      "checkedAt": "2026-09-14",
+      "semantics": "北门参考点",
+      "reach": "near",
+      "number": 8,
+      "x": 90,
+      "y": 604.4964738467642,
+      "radius": 34
+    }
+  ],
+  "relations": [
+    {
+      "a": "bell",
+      "b": "pagoda",
+      "axis": "x",
+      "sign": 1
+    },
+    {
+      "a": "bell",
+      "b": "pagoda",
+      "axis": "y",
+      "sign": 1
+    },
+    {
+      "a": "bell",
+      "b": "daming",
+      "axis": "x",
+      "sign": 1
+    },
+    {
+      "a": "bell",
+      "b": "daming",
+      "axis": "y",
+      "sign": -1
+    },
+    {
+      "a": "bell",
+      "b": "hanyang",
+      "axis": "y",
+      "sign": -1
+    },
+    {
+      "a": "bell",
+      "b": "huaqing",
+      "axis": "x",
+      "sign": 1
+    },
+    {
+      "a": "bell",
+      "b": "huaqing",
+      "axis": "y",
+      "sign": -1
+    },
+    {
+      "a": "bell",
+      "b": "terracotta",
+      "axis": "x",
+      "sign": 1
+    },
+    {
+      "a": "bell",
+      "b": "terracotta",
+      "axis": "y",
+      "sign": -1
+    },
+    {
+      "a": "bell",
+      "b": "cuihua",
+      "axis": "x",
+      "sign": 1
+    },
+    {
+      "a": "bell",
+      "b": "cuihua",
+      "axis": "y",
+      "sign": 1
+    },
+    {
+      "a": "bell",
+      "b": "louguan",
+      "axis": "x",
+      "sign": -1
+    },
+    {
+      "a": "bell",
+      "b": "louguan",
+      "axis": "y",
+      "sign": 1
+    },
+    {
+      "a": "pagoda",
+      "b": "daming",
+      "axis": "y",
+      "sign": -1
+    },
+    {
+      "a": "pagoda",
+      "b": "hanyang",
+      "axis": "x",
+      "sign": -1
+    },
+    {
+      "a": "pagoda",
+      "b": "hanyang",
+      "axis": "y",
+      "sign": -1
+    },
+    {
+      "a": "pagoda",
+      "b": "huaqing",
+      "axis": "x",
+      "sign": 1
+    },
+    {
+      "a": "pagoda",
+      "b": "huaqing",
+      "axis": "y",
+      "sign": -1
+    },
+    {
+      "a": "pagoda",
+      "b": "terracotta",
+      "axis": "x",
+      "sign": 1
+    },
+    {
+      "a": "pagoda",
+      "b": "terracotta",
+      "axis": "y",
+      "sign": -1
+    },
+    {
+      "a": "pagoda",
+      "b": "cuihua",
+      "axis": "x",
+      "sign": 1
+    },
+    {
+      "a": "pagoda",
+      "b": "cuihua",
+      "axis": "y",
+      "sign": 1
+    },
+    {
+      "a": "pagoda",
+      "b": "louguan",
+      "axis": "x",
+      "sign": -1
+    },
+    {
+      "a": "pagoda",
+      "b": "louguan",
+      "axis": "y",
+      "sign": 1
+    },
+    {
+      "a": "daming",
+      "b": "hanyang",
+      "axis": "x",
+      "sign": -1
+    },
+    {
+      "a": "daming",
+      "b": "hanyang",
+      "axis": "y",
+      "sign": -1
+    },
+    {
+      "a": "daming",
+      "b": "huaqing",
+      "axis": "x",
+      "sign": 1
+    },
+    {
+      "a": "daming",
+      "b": "huaqing",
+      "axis": "y",
+      "sign": -1
+    },
+    {
+      "a": "daming",
+      "b": "terracotta",
+      "axis": "x",
+      "sign": 1
+    },
+    {
+      "a": "daming",
+      "b": "terracotta",
+      "axis": "y",
+      "sign": -1
+    },
+    {
+      "a": "daming",
+      "b": "cuihua",
+      "axis": "x",
+      "sign": 1
+    },
+    {
+      "a": "daming",
+      "b": "cuihua",
+      "axis": "y",
+      "sign": 1
+    },
+    {
+      "a": "daming",
+      "b": "louguan",
+      "axis": "x",
+      "sign": -1
+    },
+    {
+      "a": "daming",
+      "b": "louguan",
+      "axis": "y",
+      "sign": 1
+    },
+    {
+      "a": "hanyang",
+      "b": "huaqing",
+      "axis": "x",
+      "sign": 1
+    },
+    {
+      "a": "hanyang",
+      "b": "huaqing",
+      "axis": "y",
+      "sign": 1
+    },
+    {
+      "a": "hanyang",
+      "b": "terracotta",
+      "axis": "x",
+      "sign": 1
+    },
+    {
+      "a": "hanyang",
+      "b": "terracotta",
+      "axis": "y",
+      "sign": 1
+    },
+    {
+      "a": "hanyang",
+      "b": "cuihua",
+      "axis": "x",
+      "sign": 1
+    },
+    {
+      "a": "hanyang",
+      "b": "cuihua",
+      "axis": "y",
+      "sign": 1
+    },
+    {
+      "a": "hanyang",
+      "b": "louguan",
+      "axis": "x",
+      "sign": -1
+    },
+    {
+      "a": "hanyang",
+      "b": "louguan",
+      "axis": "y",
+      "sign": 1
+    },
+    {
+      "a": "huaqing",
+      "b": "terracotta",
+      "axis": "x",
+      "sign": 1
+    },
+    {
+      "a": "huaqing",
+      "b": "terracotta",
+      "axis": "y",
+      "sign": -1
+    },
+    {
+      "a": "huaqing",
+      "b": "cuihua",
+      "axis": "x",
+      "sign": -1
+    },
+    {
+      "a": "huaqing",
+      "b": "cuihua",
+      "axis": "y",
+      "sign": 1
+    },
+    {
+      "a": "huaqing",
+      "b": "louguan",
+      "axis": "x",
+      "sign": -1
+    },
+    {
+      "a": "huaqing",
+      "b": "louguan",
+      "axis": "y",
+      "sign": 1
+    },
+    {
+      "a": "terracotta",
+      "b": "cuihua",
+      "axis": "x",
+      "sign": -1
+    },
+    {
+      "a": "terracotta",
+      "b": "cuihua",
+      "axis": "y",
+      "sign": 1
+    },
+    {
+      "a": "terracotta",
+      "b": "louguan",
+      "axis": "x",
+      "sign": -1
+    },
+    {
+      "a": "terracotta",
+      "b": "louguan",
+      "axis": "y",
+      "sign": 1
+    },
+    {
+      "a": "cuihua",
+      "b": "louguan",
+      "axis": "x",
+      "sign": -1
+    },
+    {
+      "a": "cuihua",
+      "b": "louguan",
+      "axis": "y",
+      "sign": -1
+    }
+  ],
+  "crowded": [
+    [
+      "bell",
+      "pagoda"
+    ],
+    [
+      "bell",
+      "daming"
+    ],
+    [
+      "pagoda",
+      "daming"
+    ],
+    [
+      "huaqing",
+      "terracotta"
+    ]
+  ],
+  "limits": {
+    "axisDeadbandPx": 12,
+    "artworkTestDiameterPx": 100
+  },
+  "note": "圆形区域仅约束景观落点，不是景区边界或完整素材尺寸。此文件不是成图观察。"
+}

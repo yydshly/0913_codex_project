@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "mode": "controlled-raster-audit",
+  "positionStatus": "passed",
+  "productionStatus": "pending",
+  "identityStatus": "unverified",
+  "diagnostic": false,
+  "frame": {
+    "width": 2600,
+    "height": 1550
+  },
+  "observedCount": 8,
+  "expectedCount": 8,
+  "issues": [],
+  "warnings": [],
+  "observations": [
+    {
+      "id": "bell",
+      "visiblePixels": 19976,
+      "outsidePixels": 0,
+      "minX": 1942,
+      "minY": 634,
+      "maxX": 2134,
+      "maxY": 797,
+      "expectedPixels": 19976,
+      "visibleRatio": 1,
+      "centroid": {
+        "x": 2040.64467360833,
+        "y": 731.9468862635163
+      }
+    },
+    {
+      "id": "pagoda",
+      "visiblePixels": 19000,
+      "outsidePixels": 0,
+      "minX": 2123,
+      "minY": 1138,
+      "maxX": 2311,
+      "maxY": 1323,
+      "expectedPixels": 19000,
+      "visibleRatio": 1,
+      "centroid": {
+        "x": 2216.4432631578948,
+        "y": 1256.2362631578947
+      }
+    },
+    {
+      "id": "daming",
+      "visiblePixels": 22106,
+      "outsidePixels": 0,
+      "minX": 2111,
+      "minY": 235,
+      "maxX": 2304,
+      "maxY": 384,
+      "expectedPixels": 22106,
+      "visibleRatio": 1,
+      "centroid": {
+        "x": 2209.471862842667,
+        "y": 315.2463584547182
+      }
+    },
+    {
+      "id": "hanyang",
+      "visiblePixels": 14094,
+      "outsidePixels": 0,
+      "minX": 1051,
+      "minY": 263,
+      "maxX": 1215,
+      "maxY": 376,
+      "expectedPixels": 14094,
+      "visibleRatio": 1,
+      "centroid": {
+        "x": 1136.6377891301263,
+        "y": 322.2528026110402
+      }
+    },
+    {
+      "id": "huaqing",
+      "visiblePixels": 2455,
+      "outsidePixels": 0,
+      "minX": 1525,
+      "minY": 438,
+      "maxX": 1587,
+      "maxY": 492,
+      "expectedPixels": 2455,
+      "visibleRatio": 1,
+      "centroid": {
+        "x": 1557.395315682281,
+        "y": 467.57291242362527
+      }
+    },
+    {
+      "id": "terracotta",
+      "visiblePixels": 2423,
+      "outsidePixels": 0,
+      "minX": 1630,
+      "minY": 388,
+      "maxX": 1691,
+      "maxY": 436,
+      "expectedPixels": 2423,
+      "visibleRatio": 1,
+      "centroid": {
+        "x": 1662.5742880726373,
+        "y": 413.8355344614115
+      }
+    },
+    {
+      "id": "cuihua",
+      "visiblePixels": 18318,
+      "outsidePixels": 0,
+      "minX": 1145,
+      "minY": 1137,
+      "maxX": 1312,
+      "maxY": 1289,
+      "expectedPixels": 18318,
+      "visibleRatio": 1,
+      "centroid": {
+        "x": 1231.4251009935583,
+        "y": 1221.217545583579
+      }
+    },
+    {
+      "id": "louguan",
+      "visiblePixels": 17539,
+      "outsidePixels": 0,
+      "minX": 66,
+      "minY": 941,
+      "maxX": 232,
+      "maxY": 1080,
+      "expectedPixels": 17539,
+      "visibleRatio": 1,
+      "centroid": {
+        "x": 150.93594275614345,
+        "y": 1015.899509664177
+      }
+    }
+  ],
+  "outputSha256": "5f41d2adb4724fcf565d2c0f0b9cec405114aa844cc092e3a56b29e7e2af4d36",
+  "ownershipSha256": "f6e88a0b38d48297ea77450286b7a9a4a0e66ee25288360d5ac7e2bed530ce32",
+  "scope": "自动扫描本次受控合成的像素归属；不识别任意外部整图，不证明素材画的是正确景区；alpha<0.5的装饰像素不参与归属",
+  "pngSha256": "37e4f5ca23b0f7db53feb82972749e07c78c825564a48093151ec76aa98c7496",
+  "sourceSheetSha256": "31351ac790f4828852bc2ced962fbef72db982d631dda8530bbc1b438d0b1e46"
+}

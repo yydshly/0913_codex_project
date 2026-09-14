@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#173e36"><meta name="description" content="城市地标微缩插画研究与编辑：腾冲、丽江样例，可编辑标注、导出海报与绘图提示词。"><title>城景工坊 · 城市地标插画地图</title><link rel="stylesheet" href="./style.css"></head>
+<body>
+<header class="topbar"><a class="brand" href="./"><span class="brand-icon">景</span><span>城景工坊<small>CITY ATLAS STUDIO</small></span></a><nav aria-label="工作区"><a href="./">西安理解图 ↗</a><button class="nav-active" type="button">插画工作台</button><button id="research-open" type="button">研究与来源 ↗</button><a href="./library.html">全部图稿与资料</a></nav><span class="edition">研究项目 009</span><button class="primary" id="export">导出海报 ↓</button></header>
+<main class="workspace">
+<aside class="sidebar">
+<div class="section-heading"><span>01 / 选择城市</span><span class="muted">原创样例</span></div>
+<div class="city-options"><button data-city="tengchong" class="city-card active"><img src="../assets/tengchong-art.png" alt="腾冲生成底图预览" loading="eager"><span>腾冲<small>火山 · 湿地 · 侨乡</small></span><span class="check">✓</span></button><button data-city="lijiang" class="city-card"><img src="../assets/lijiang-art.png" alt="丽江生成底图预览" loading="lazy"><span>丽江<small>雪山 · 古城 · 水巷</small></span><span class="check">✓</span></button></div>
+<section><div class="section-heading">02 / 海报文字</div><label for="title">城市标题</label><input id="title" maxlength="14"><label for="subtitle">副标题</label><input id="subtitle" maxlength="40"><label for="caption">旅行寄语</label><input id="caption" maxlength="48"></section>
+<section><div class="section-heading">03 / 版式</div><label>装裱配色</label><div class="swatches" role="group" aria-label="装裱配色"><button data-theme="paper" class="active" aria-label="纸白" title="纸白"><i style="background:#f5f0e6"></i>纸白</button><button data-theme="forest" aria-label="松绿" title="松绿"><i style="background:#173e36"></i>松绿</button><button data-theme="ink" aria-label="夜墨" title="夜墨"><i style="background:#253041"></i>夜墨</button></div><label for="label-style">地标标注</label><select id="label-style"><option value="full">序号与名称</option><option value="number">仅序号</option><option value="none">不显示标注</option></select></section>
+<div class="sidebar-bottom"><button id="prompt-open" class="secondary full">为其他城市准备绘图提示词 ↗</button><p>两张底图为预先生成的原创插画。编辑标注不会重画景观。</p></div>
+</aside>
+<section class="stage" aria-label="海报画布"><div class="stage-toolbar"><span><b id="current-city">腾冲</b><span class="separator">/</span>城市印象图</span><div><span class="format-tag">3:4 · 1800 × 2400</span><button id="reset" class="text-button">重置当前城市</button></div></div><div class="canvas-wrap"><canvas id="poster" width="1800" height="2400" tabindex="0" aria-label="城市插画地图，可拖动标注；也可在地标面板中选择并调整位置">请使用支持 Canvas 的浏览器。</canvas><div id="image-status" role="status">正在载入城市插画…</div></div><div class="stage-footer"><span>拖动标注调整位置 · 文字独立于插画</span><span id="save-status">修改保存在本机</span></div></section>
+<aside class="inspector"><div class="section-heading"><span>地标清单</span><span id="landmark-count">06</span></div><p class="intro">选择地标，调整名称与位置。</p><div id="landmark-list"></div><section class="detail"><div class="detail-top"><span id="landmark-category">自然景观</span><label class="toggle"><input type="checkbox" id="visible">显示标注</label></div><label for="landmark-name">标注名称</label><input id="landmark-name" maxlength="18"><div class="coordinates"><div><label for="pos-x">横向位置 <output id="x-value"></output></label><input type="range" id="pos-x" min="10" max="90" step="0.5"></div><div><label for="pos-y">纵向位置 <output id="y-value"></output></label><input type="range" id="pos-y" min="18" max="87" step="0.5"></div></div><p id="landmark-description"></p><a id="landmark-source" target="_blank" rel="noopener noreferrer">查看地标资料 ↗</a><small id="source-note">资料确认地标归属，插画外形与位置为艺术化表达。</small></section><div class="inspector-bottom"><span class="tiny-heading">关于这张地图</span><p>把一座城市的记忆，收进一张插画。景物经过艺术化重排，不用于路线导航。</p><div class="draft-actions"><button id="save-draft">保存工程</button><button id="import-draft">导入工程</button><input hidden type="file" id="draft-file" accept="application/json,.json"></div></div></aside>
+</main>
+<dialog id="research-dialog"><div class="dialog-header"><div><small>RESEARCH NOTE / 009 · 2026.09.14</small><h2>从城市插画，到旅游理解图</h2></div><button data-close="research-dialog" aria-label="关闭研究说明">×</button></div>
+<p class="research-status">本页保留原插画编辑。<a href="./">西安理解图 ↗</a> 已独立实现 13 个有来源的地点坐标与两级视图；路网、车程和西安插画尚未加入。</p>
+<h3>一、当前能力：能做海报，尚不能解释真实空间</h3>
+<p>找到的 <a href="https://youmind.com/skills/yhbukK6TtKX0t9" target="_blank" rel="noopener noreferrer">公开 Skill ↗</a> 将城市资料搜索、提示词模板和图像生成串起来。它与最初截图中的版本是否相同仍未确认；没有证据表明它提供独立地图引擎。</p>
+<div class="research-grid"><article><b>01</b><h3>视觉表达</h3><p>两张原创底图展示腾冲与丽江特色。来自通用图像模型，不是按真实坐标绘制。</p></article><article><b>02</b><h3>编辑交付</h3><p>中文文字、标注拖动、装裱配色、工程保存与海报导出已实现。修改文字不会重画景物。</p></article><article><b>03</b><h3>实际边界</h3><p>新城市工具只整理提示词。没有在线生图、地理坐标、路线规划或独立建筑编辑。</p></article></div>
+<p>现有价值是视觉内容与便捷排版；技术独特性有限。已完成 8 项逻辑检查和两张实际海报，未做浏览器交互测试或同模型效果对照。</p>
+<h3>二、扩展研究：让新人形成空间认识</h3>
+<p><strong>新人看完后，应当知道城市怎么分、主要看什么、哪些可以一起探索。</strong> 要衡量理解和安排效率，不能只看图片是否漂亮。</p>
+<div class="research-flow"><span>核实地点与坐标</span><span>绘制地理结构</span><span>放置地标插画</span><span>解释区域与交通</span></div>
+<p>首个地理试点按用户要求确定为西安。已实现“城市与周边概览”和中心城区、雁塔、临潼的展开视图；13 个地点有坐标、来源与核对日期。当前不提供未经查询的具体车程或线路。</p>
+<div class="research-table-wrapper" tabindex="0" aria-label="地理设计约束"><table class="research-table"><thead><tr><th>可以艺术化</th><th>必须可靠</th></tr></thead><tbody><tr><td>建筑放大、街区简化、素材风格</td><td>地点身份、地理锚点和关键方位</td></tr><tr><td>文字移动与避让</td><td>标签仍指向原地点，不拖动真实位置</td></tr><tr><td>区域放大、远郊插图</td><td>标明尺度差异，不暗示相同距离</td></tr><tr><td>精选道路与水系</td><td>关键连接真实，不虚构桥梁或可走小路</td></tr></tbody></table></div>
+<p><strong>初版优先：真实坐标布局＋独立地标插画。</strong> 程序固定地理关系，模型负责景物视觉。整图受控生成可做对照，但仍需检查位置漂移；现有整张插画不能直接变成准确地图。</p>
+<p>西安版人工核对了 13 个高德公开地点页坐标，使用独立 SVG 绘制；尚未调用地图或路线 API。交通时间应记录出行方式与查询时间，不能用直线距离替代。地点身份、入口与航站楼分别标明。</p>
+<div class="source-links"><a href="https://developer.amap.com/api/webservice/guide/api/newroute" target="_blank" rel="noopener noreferrer">高德路线能力 ↗</a><a href="https://maplibre.org/maplibre-style-spec/layers/" target="_blank" rel="noopener noreferrer">地图图层与标注 ↗</a></div>
+<p><strong>验证计划：</strong>邀请 8–12 位不熟悉城市的人，将理解图与普通地图＋相同地点清单对照。比较位置关系判断、景点组合选择、任务耗时和错误距离判断。人数是计划，不是已完成实验。</p>
+<h3>三、还可以用在哪里？</h3>
+<div class="research-table-wrapper" tabindex="0" aria-label="扩展场景与价值"><table class="research-table"><thead><tr><th>场景</th><th>用户得到什么</th><th>关键前提</th></tr></thead><tbody>
+<tr><td>民宿 / 酒店周边</td><td>理解住处、早餐、散步与游览范围</td><td>真实入口、步行路线与营业信息</td></tr>
+<tr><td>景区 / 古镇初访</td><td>理解入口、片区与返回方式</td><td>管理方底图与通道更新</td></tr>
+<tr><td>校园迎新</td><td>找到报到点，认识校内生活结构</td><td>校门权限与最新地点信息</td></tr>
+<tr><td>建筑 / 美食主题探索</td><td>看懂主题地点的空间联系</td><td>精选内容与持续核实</td></tr>
+<tr><td>新居民生活圈</td><td>建立买菜、通勤、公园等日常认识</td><td>服务信息与交通条件更新</td></tr>
+<tr><td>亲子 / 长者出行</td><td>理解休息点、厕所和出行负担</td><td>现场核实坡度、台阶和设施</td></tr>
+<tr><td>历史 / 研学地图</td><td>将事件、年代与地点关联</td><td>史料与历史位置不确定性</td></tr>
+<tr><td>展会 / 园区活动</td><td>快速认识分区、入口与集合点</td><td>楼层图与活动动态信息</td></tr>
+<tr><td>旅行回顾</td><td>把真实足迹和照片组织成回忆</td><td>用户授权的轨迹与照片</td></tr>
+</tbody></table></div>
+<p><strong>优先验证“城市初访概览＋民宿周边展开”。</strong>前者检验理解价值，后者有具体分发入口。这个排序是研究判断；付费意愿、维护成本和市场需求都尚未验证。</p>
+<details><summary>来源与最初参考</summary><p><a href="https://blog.sciencenet.cn/home.php?do=blog&amp;id=1524553&amp;mod=space&amp;uid=377709" target="_blank" rel="noopener noreferrer">作者文章 ↗</a> · <a href="https://docs.mapbox.com/api/maps/static-images/" target="_blank" rel="noopener noreferrer">静态地图叠加 ↗</a> · <a href="https://arxiv.org/abs/2302.05543" target="_blank" rel="noopener noreferrer">空间条件生成论文 ↗</a></p><p>空间条件生成研究不等于地图准确性保证；相关接口与方法均为待选路线，未接入当前工作台。</p><img class="reference" src="../assets/source-city-map-reference.png" alt="用户提供的腾冲与丽江地图截图，非本项目生成结果"><p>原帖地址与图片许可待核实，仅作研究参考。当前两张工作台底图则由内置 imagegen 独立生成。</p></details></dialog>
+<dialog id="prompt-dialog"><div class="dialog-header"><div><small>PREPARE A NEW CITY</small><h2>把下一个目的地写进画面</h2></div><button data-close="prompt-dialog" aria-label="关闭绘图提示词">×</button></div><p>填写城市与已核实的地标，生成可交给图像工具的完整创作说明。这里生成提示词，不调用绘图服务。</p><div class="form-row"><div><label for="prompt-city">城市</label><input id="prompt-city" value="腾冲" maxlength="30"></div><div><label for="prompt-mood">画面风格</label><select id="prompt-mood"><option value="miniature">微缩模型</option><option value="watercolor">水彩旅行插画</option><option value="papercut">分层纸雕</option></select></div></div><label for="prompt-landmarks">地标（每行一个，建议 4–8 个）</label><textarea id="prompt-landmarks" rows="5"></textarea><button id="make-prompt" class="primary">整理绘图提示词</button><label for="prompt-result">完整创作说明</label><textarea id="prompt-result" rows="8" readonly></textarea><div class="dialog-actions"><button id="copy-prompt" class="secondary">复制提示词</button><button id="download-prompt" class="secondary">下载提示词</button></div></dialog>
+<dialog id="reset-dialog"><div class="dialog-header"><h2>恢复当前城市的初始版式？</h2><button data-close="reset-dialog" aria-label="关闭重置确认">×</button></div><p>这会恢复标题、配色和标注位置。其他城市的草稿会保留。</p><div class="dialog-actions"><button data-close="reset-dialog" class="secondary">继续编辑</button><button id="confirm-reset" class="primary">恢复初始版式</button></div></dialog><div id="toast" role="status" aria-live="polite"></div><script type="module" src="./app.mjs"></script></body></html>
+

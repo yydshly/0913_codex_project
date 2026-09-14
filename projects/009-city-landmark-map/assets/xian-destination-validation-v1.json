@@ -1,0 +1,2388 @@
+{
+  "config": {
+    "id": "xian-2026-09-v1",
+    "name": "西安与周边",
+    "country": "CN",
+    "anchorId": "station",
+    "centerId": "bell",
+    "agreementMeters": 500,
+    "requiredIds": [
+      "zhuque",
+      "qinling-zoo",
+      "yuanjia",
+      "bailuyuan-region",
+      "bailucang",
+      "bailu-film"
+    ],
+    "scope": "以西安站为抵达参照、钟楼为城区参照，向周边扩展；不以西安市行政边界删除目的地。500米为同类参考点初步筛查阈值，不是位置精度承诺。"
+  },
+  "places": [
+    {
+      "id": "bell",
+      "name": "西安钟楼",
+      "country": "CN",
+      "kind": "destination",
+      "category": "城市地标",
+      "area": "old",
+      "reason": "从古城中心建立方向感",
+      "evidence": [
+        {
+          "url": "https://en.xa.gov.cn/CultureTravel/Attractions/1691691501245550594.html",
+          "claim": "明代楼阁与台基是西安的城市标志，也是理解东西南北大街的直观参照。",
+          "originGroup": "en.xa.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据",
+      "coordinates": [
+        {
+          "placeId": "bell",
+          "providerPlaceId": "B001D09TAA",
+          "lon": 108.94703,
+          "lat": 34.25943,
+          "crs": "GCJ-02",
+          "pointRole": "reference-point",
+          "pointDescription": "地标参考点",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B001D09TAA",
+          "checkedAt": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "drum",
+      "name": "西安鼓楼",
+      "country": "CN",
+      "kind": "destination",
+      "category": "传统建筑",
+      "area": "old",
+      "reason": "与钟楼相望的古城地标",
+      "evidence": [
+        {
+          "url": "https://en.xa.gov.cn/CultureTravel/Attractions/1691691501245550594.html",
+          "claim": "长方形楼阁与钟楼形成一组容易记住的城市标志，可比较两者建筑形制与位置。",
+          "originGroup": "en.xa.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据",
+      "coordinates": [
+        {
+          "placeId": "drum",
+          "providerPlaceId": "B001D07CMS",
+          "lon": 108.943512,
+          "lat": 34.260206,
+          "crs": "GCJ-02",
+          "pointRole": "reference-point",
+          "pointDescription": "地标参考点",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B001D07CMS",
+          "checkedAt": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "south-gate",
+      "name": "西安城墙（永宁门）",
+      "country": "CN",
+      "kind": "destination",
+      "category": "城墙景观",
+      "area": "old",
+      "reason": "从南门认识城墙内外",
+      "evidence": [
+        {
+          "url": "https://qjxq.xa.gov.cn/zjqj/gyqj/tsqj/5df21c5565cbd81235fc1efa.html",
+          "claim": "永宁门是古城南缘的识别点。城门、城楼和城墙有助于理解老城空间。",
+          "originGroup": "qjxq.xa.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据",
+      "coordinates": [
+        {
+          "placeId": "south-gate",
+          "providerPlaceId": "B0FFHNKLSK",
+          "lon": 108.947029,
+          "lat": 34.25066,
+          "crs": "GCJ-02",
+          "pointRole": "reference-point",
+          "pointDescription": "城门地点；开放入口待核实",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B0FFHNKLSK",
+          "checkedAt": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "xian-museum",
+      "name": "西安博物院",
+      "country": "CN",
+      "kind": "destination",
+      "category": "博物馆",
+      "area": "old",
+      "reason": "补充西安历史与园林体验",
+      "evidence": [
+        {
+          "url": "https://www.xa.gov.cn/ztzl/ztzl/lzledc/ywdc/1824366329290301442.html",
+          "claim": "西安博物院与小雁塔片区提供另一种认识古城的角度，适合加入文博主题的地点清单。",
+          "originGroup": "www.xa.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据",
+      "coordinates": [
+        {
+          "placeId": "xian-museum",
+          "providerPlaceId": "B001D06AOS",
+          "lon": 108.941673,
+          "lat": 34.238589,
+          "crs": "GCJ-02",
+          "pointRole": "reference-point",
+          "pointDescription": "院区参考点；非入口",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B001D06AOS",
+          "checkedAt": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "name": "陕西历史博物馆（本馆）",
+      "country": "CN",
+      "kind": "destination",
+      "category": "博物馆",
+      "area": "qujiang",
+      "reason": "以文物了解陕西历史",
+      "evidence": [
+        {
+          "url": "https://www.sxhm.com/guide.html",
+          "claim": "这里指小寨东路的陕西历史博物馆本馆，适合把城市中分散的历史线索放到更大的背景中理解。",
+          "originGroup": "www.sxhm.com",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据",
+      "coordinates": [
+        {
+          "placeId": "history",
+          "providerPlaceId": "B001D03PEX",
+          "lon": 108.955044,
+          "lat": 34.224199,
+          "crs": "GCJ-02",
+          "pointRole": "reference-point",
+          "pointDescription": "馆区参考点；非入口",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B001D03PEX",
+          "checkedAt": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "pagoda",
+      "name": "大雁塔",
+      "country": "CN",
+      "kind": "destination",
+      "category": "历史建筑",
+      "area": "qujiang",
+      "reason": "识别城南的七层砖塔",
+      "evidence": [
+        {
+          "url": "https://xadfz.xa.gov.cn/xadq/rwxa/1802954373708996609.html",
+          "claim": "大雁塔位于大慈恩寺内，是认识雁塔一带的核心标志；朴素的砖塔形态与周围唐风建筑不同。",
+          "originGroup": "xadfz.xa.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据",
+      "coordinates": [
+        {
+          "placeId": "pagoda",
+          "providerPlaceId": "B001D023F0",
+          "lon": 108.964176,
+          "lat": 34.218229,
+          "crs": "GCJ-02",
+          "pointRole": "reference-point",
+          "pointDescription": "塔体参考点；非景区入口",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B001D023F0",
+          "checkedAt": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "garden",
+      "name": "大唐芙蓉园",
+      "country": "CN",
+      "kind": "destination",
+      "category": "园林景观",
+      "area": "qujiang",
+      "reason": "感受唐风建筑与水景",
+      "evidence": [
+        {
+          "url": "https://www.xa.gov.cn/ztzl/ztzl/lzledc/ywdc/1824366329290301442.html",
+          "claim": "大唐芙蓉园位于大雁塔东南一带，可通过园林、水面与唐风建筑认识曲江的文化景观。",
+          "originGroup": "www.xa.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据",
+      "coordinates": [
+        {
+          "placeId": "garden",
+          "providerPlaceId": "B001D092BB",
+          "lon": 108.97436,
+          "lat": 34.212717,
+          "crs": "GCJ-02",
+          "pointRole": "reference-point",
+          "pointDescription": "园区参考点；非入口",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B001D092BB",
+          "checkedAt": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "huaqing",
+      "name": "华清宫",
+      "country": "CN",
+      "kind": "destination",
+      "category": "历史园林",
+      "area": "lintong",
+      "reason": "认识骊山脚下的宫苑景观",
+      "evidence": [
+        {
+          "url": "https://www.hqc.cn/about/",
+          "claim": "华清宫把温泉宫苑、唐文化与骊山景观联系在一起，是理解临潼历史层次的重要地点。",
+          "originGroup": "www.hqc.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据",
+      "coordinates": [
+        {
+          "placeId": "huaqing",
+          "providerPlaceId": "B001D006F1",
+          "lon": 109.215759,
+          "lat": 34.356728,
+          "crs": "GCJ-02",
+          "pointRole": "reference-point",
+          "pointDescription": "景区参考点；非入口",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B001D006F1",
+          "checkedAt": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "terracotta",
+      "name": "秦始皇兵马俑博物馆",
+      "country": "CN",
+      "kind": "destination",
+      "category": "考古遗址",
+      "area": "lintong",
+      "reason": "看秦代军阵与考古展示",
+      "evidence": [
+        {
+          "url": "https://www.bmy.com.cn/index.htm",
+          "claim": "兵马俑博物馆的俑坑与军阵展示，提供认识秦代历史和考古现场的直接入口。",
+          "originGroup": "www.bmy.com.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据",
+      "coordinates": [
+        {
+          "placeId": "terracotta",
+          "providerPlaceId": "B0FFGXMLTU",
+          "lon": 109.28196,
+          "lat": 34.386214,
+          "crs": "GCJ-02",
+          "pointRole": "reference-point",
+          "pointDescription": "馆区参考点；非入口",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B0FFGXMLTU",
+          "checkedAt": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "north-station",
+      "name": "西安北站",
+      "country": "CN",
+      "kind": "arrival",
+      "category": "铁路枢纽",
+      "area": "arrival",
+      "reason": "认清更靠北的抵达点",
+      "evidence": [
+        {
+          "url": "https://ditu.amap.com/place/B001D09TZP",
+          "claim": "西安北站与西安站相距明显，先确认车票上的站名，再判断住宿和景区的大方向。",
+          "originGroup": "ditu.amap.com",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据",
+      "coordinates": [
+        {
+          "placeId": "north-station",
+          "providerPlaceId": "B001D09TZP",
+          "lon": 108.938757,
+          "lat": 34.37666,
+          "crs": "GCJ-02",
+          "pointRole": "reference-point",
+          "pointDescription": "铁路车站参考点；非地铁站",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B001D09TZP",
+          "checkedAt": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "station",
+      "name": "西安站",
+      "country": "CN",
+      "kind": "arrival",
+      "category": "铁路枢纽",
+      "area": "arrival",
+      "reason": "从抵达开始认识这座城",
+      "evidence": [
+        {
+          "url": "https://ditu.amap.com/place/B001D08UZ3",
+          "claim": "西安站是本项目的默认抵达参照，位于钟楼东北方向，可先认识它与古城、大明宫的关系。",
+          "originGroup": "ditu.amap.com",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据",
+      "coordinates": [
+        {
+          "placeId": "station",
+          "providerPlaceId": "B001D08UZ3",
+          "lon": 108.962723,
+          "lat": 34.278498,
+          "crs": "GCJ-02",
+          "pointRole": "reference-point",
+          "pointDescription": "铁路车站参考点；非地铁站",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B001D08UZ3",
+          "checkedAt": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "airport-t3",
+      "name": "西安咸阳国际机场 T3 航站楼",
+      "country": "CN",
+      "kind": "arrival",
+      "category": "机场航站楼",
+      "area": "arrival",
+      "reason": "西北方向的航空抵达点",
+      "evidence": [
+        {
+          "url": "https://ditu.amap.com/place/B038E0OI0C",
+          "claim": "西安咸阳国际机场 T3 航站楼位于中心城区西北方向，属咸阳区域。",
+          "originGroup": "ditu.amap.com",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据",
+      "coordinates": [
+        {
+          "placeId": "airport-t3",
+          "providerPlaceId": "B038E0OI0C",
+          "lon": 108.761401,
+          "lat": 34.435045,
+          "crs": "GCJ-02",
+          "pointRole": "reference-point",
+          "pointDescription": "T3 航站楼参考点；非到达口",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B038E0OI0C",
+          "checkedAt": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "airport-t5",
+      "name": "西安咸阳国际机场 T5 航站楼",
+      "country": "CN",
+      "kind": "arrival",
+      "category": "机场航站楼",
+      "area": "arrival",
+      "reason": "与 T3 分开辨认",
+      "evidence": [
+        {
+          "url": "https://ditu.amap.com/place/B0IUJUK824",
+          "claim": "T5 是另一处航站楼参考点。宏观上先看机场与城区关系，进一步抵达信息以实际航班为准。",
+          "originGroup": "ditu.amap.com",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据",
+      "coordinates": [
+        {
+          "placeId": "airport-t5",
+          "providerPlaceId": "B0IUJUK824",
+          "lon": 108.78206,
+          "lat": 34.452254,
+          "crs": "GCJ-02",
+          "pointRole": "reference-point",
+          "pointDescription": "T5 航站楼参考点；非到达口",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B0IUJUK824",
+          "checkedAt": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "daming",
+      "name": "大明宫国家遗址公园",
+      "country": "CN",
+      "kind": "destination",
+      "category": "唐代遗址",
+      "area": "palace",
+      "reason": "从遗址读懂唐代宫城",
+      "evidence": [
+        {
+          "url": "https://qjxq.xa.gov.cn/zjqj/gyqj/tsqj/5df21c62fd8508098d284f14.html",
+          "claim": "以宫殿遗址与历史格局展示为核心，可沿丹凤门及宫城轴线理解唐代大明宫。",
+          "originGroup": "qjxq.xa.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据",
+      "coordinates": [
+        {
+          "placeId": "daming",
+          "providerPlaceId": "B001D0ZYYD",
+          "lon": 108.96353,
+          "lat": 34.292586,
+          "crs": "GCJ-02",
+          "pointRole": "reference-point",
+          "pointDescription": "景区或街区参考点；非精确入口",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B001D0ZYYD",
+          "checkedAt": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "hanyang",
+      "name": "汉景帝阳陵博物院",
+      "country": "CN",
+      "kind": "destination",
+      "category": "汉代遗址",
+      "area": "north",
+      "reason": "把历史视角延伸到汉代",
+      "evidence": [
+        {
+          "url": "https://www.xa.gov.cn/ztzl/ztzl/lzledc/ywdc/1824366329290301442.html",
+          "claim": "汉景帝阳陵博物院位于城区北部的更大范围，是在秦唐主题之外加入汉代陵墓与文博内容的地点。",
+          "originGroup": "www.xa.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据",
+      "coordinates": [
+        {
+          "placeId": "hanyang",
+          "providerPlaceId": "B0FFMHW98M",
+          "lon": 108.949302,
+          "lat": 34.442318,
+          "crs": "GCJ-02",
+          "pointRole": "reference-point",
+          "pointDescription": "景区或街区参考点；非精确入口",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B0FFMHW98M",
+          "checkedAt": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "cuihua",
+      "name": "翠华山景区",
+      "country": "CN",
+      "kind": "destination",
+      "category": "山地自然",
+      "area": "qinling",
+      "reason": "看天池与山崩奇石",
+      "evidence": [
+        {
+          "url": "https://qjxq.xa.gov.cn/xwzx/tpxw/2044354510126653442.html",
+          "claim": "翠华山以天池、山崩地貌与山间景观提供自然主题体验，和城内建筑文博形成互补。",
+          "originGroup": "qjxq.xa.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据",
+      "coordinates": [
+        {
+          "placeId": "cuihua",
+          "providerPlaceId": "B001D08PIN",
+          "lon": 109.009545,
+          "lat": 33.967491,
+          "crs": "GCJ-02",
+          "pointRole": "reference-point",
+          "pointDescription": "景区或街区参考点；非精确入口",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B001D08PIN",
+          "checkedAt": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "louguan",
+      "name": "终南山古楼观历史文化景区",
+      "country": "CN",
+      "kind": "destination",
+      "category": "文化景观",
+      "area": "qinling",
+      "reason": "向西南认识楼观一带",
+      "evidence": [
+        {
+          "url": "https://qjxq.xa.gov.cn/zjqj/index.html",
+          "claim": "楼观一带以道文化展示与秦岭山前环境为特色，是理解西安西南周边的另一种文化视角。",
+          "originGroup": "qjxq.xa.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据",
+      "coordinates": [
+        {
+          "placeId": "louguan",
+          "providerPlaceId": "B0FFHCVB2G",
+          "lon": 108.328991,
+          "lat": 34.072514,
+          "crs": "GCJ-02",
+          "pointRole": "north-gate",
+          "pointDescription": "北门参考点",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B0FFHCVB2G",
+          "checkedAt": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "huashan",
+      "name": "华山风景名胜区",
+      "country": "CN",
+      "kind": "destination",
+      "category": "山地延伸",
+      "area": "far",
+      "reason": "放到更大范围看山岳景观",
+      "evidence": [
+        {
+          "url": "https://ditu.amap.com/place/B0391003ON",
+          "claim": "华山位于渭南华阴，属于从西安向东延伸的山岳目的地，应与城区和近郊分开理解尺度。",
+          "originGroup": "ditu.amap.com",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据",
+      "coordinates": [
+        {
+          "placeId": "huashan",
+          "providerPlaceId": "B0391003ON",
+          "lon": 110.070978,
+          "lat": 34.493336,
+          "crs": "GCJ-02",
+          "pointRole": "reference-point",
+          "pointDescription": "景区或街区参考点；非精确入口",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B0391003ON",
+          "checkedAt": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "name": "大唐不夜城",
+      "country": "CN",
+      "kind": "destination",
+      "category": "夜间街区",
+      "area": "qujiang",
+      "reason": "感受唐文化主题的夜间街景",
+      "evidence": [
+        {
+          "url": "https://qjxq.xa.gov.cn/xwzx/xwdt/1897583146133217281.html",
+          "claim": "大唐不夜城以唐文化主题、街区夜景和文化商业体验形成城南的另一种游览氛围。",
+          "originGroup": "qjxq.xa.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据",
+      "coordinates": [
+        {
+          "placeId": "night",
+          "providerPlaceId": "B001D0VWAX",
+          "lon": 108.964046,
+          "lat": 34.213866,
+          "crs": "GCJ-02",
+          "pointRole": "reference-point",
+          "pointDescription": "景区或街区参考点；非精确入口",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B001D0VWAX",
+          "checkedAt": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "beilin",
+      "name": "西安碑林博物馆",
+      "country": "CN",
+      "kind": "destination",
+      "category": "碑刻文博",
+      "area": "old",
+      "reason": "把书法与石刻加入古城探索",
+      "evidence": [
+        {
+          "url": "https://www.amap.com/place/B001D06484",
+          "claim": "以碑刻与石刻文化为主题，为古城建筑之外增加文字、书法与文博的观察角度。",
+          "originGroup": "www.amap.com",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据",
+      "coordinates": [
+        {
+          "placeId": "beilin",
+          "providerPlaceId": "B001D06484",
+          "lon": 108.95286,
+          "lat": 34.254497,
+          "crs": "GCJ-02",
+          "pointRole": "reference-point",
+          "pointDescription": "景区或街区参考点；非精确入口",
+          "originGroup": "amap",
+          "url": "https://www.amap.com/place/B001D06484",
+          "checkedAt": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "zhuque",
+      "name": "朱雀国家森林公园",
+      "category": "山林",
+      "area": "西安·鄠邑",
+      "reason": "森林、山景与山地地貌",
+      "country": "CN",
+      "kind": "destination",
+      "evidence": [
+        {
+          "url": "https://lyj.shaanxi.gov.cn/stwh/sxgjgy/202503/P020250310383614567409.pdf",
+          "claim": "森林、山景与山地地貌",
+          "originGroup": "lyj.shaanxi.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "coordinates": [],
+      "reputationStatus": "未单独采集口碑证据",
+      "regionalEvidence": {
+        "description": "省生态环境厅公开环评资料提及东经108°26′—108°40′、北纬33°46′—34°01′；仅粗范围，原文坐标系未明确，未当作入口或中心坐标。",
+        "source": "https://sthjt.shaanxi.gov.cn/sy/gs/202109/P020241011607122993932.pdf",
+        "checkedAt": "2026-09-14",
+        "readMethod": "检索可读摘录，全文读取未成功",
+        "status": "regional-only"
+      }
+    },
+    {
+      "id": "taiping",
+      "name": "太平国家森林公园",
+      "category": "山林",
+      "area": "西安·鄠邑",
+      "reason": "森林、流水与季节植被",
+      "country": "CN",
+      "kind": "destination",
+      "evidence": [
+        {
+          "url": "https://xaqlbhj.xa.gov.cn/xwdt/qldt/1964864987608932353.html",
+          "claim": "森林、流水与季节植被",
+          "originGroup": "xaqlbhj.xa.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "coordinates": [],
+      "reputationStatus": "未单独采集口碑证据"
+    },
+    {
+      "id": "nanwutai",
+      "name": "南五台",
+      "category": "山林",
+      "area": "西安·长安",
+      "reason": "山景、登临与宗教文化",
+      "country": "CN",
+      "kind": "destination",
+      "evidence": [
+        {
+          "url": "https://xian.qinfeng.gov.cn/info/1174/30705.htm",
+          "claim": "山景、登临与宗教文化",
+          "originGroup": "xian.qinfeng.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "coordinates": [],
+      "reputationStatus": "未单独采集口碑证据"
+    },
+    {
+      "id": "wangshun",
+      "name": "王顺山",
+      "category": "山林",
+      "area": "西安·蓝田",
+      "reason": "峰林与森林景观",
+      "country": "CN",
+      "kind": "destination",
+      "evidence": [
+        {
+          "url": "https://xian.qinfeng.gov.cn/info/1174/30705.htm",
+          "claim": "峰林与森林景观",
+          "originGroup": "xian.qinfeng.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "coordinates": [],
+      "reputationStatus": "未单独采集口碑证据"
+    },
+    {
+      "id": "heihe",
+      "name": "黑河国家森林公园",
+      "category": "山林",
+      "area": "西安·周至",
+      "reason": "森林生态与山地环境",
+      "country": "CN",
+      "kind": "destination",
+      "evidence": [
+        {
+          "url": "https://lyj.shaanxi.gov.cn/zwxx/lydt/202505/t20250520_3520672.html",
+          "claim": "森林生态与山地环境",
+          "originGroup": "lyj.shaanxi.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "coordinates": [],
+      "reputationStatus": "未单独采集口碑证据"
+    },
+    {
+      "id": "qinling-zoo",
+      "name": "西安秦岭野生动物园",
+      "category": "动物与自然教育",
+      "area": "西安·长安滦镇",
+      "reason": "动物观察与家庭游园",
+      "country": "CN",
+      "kind": "destination",
+      "evidence": [
+        {
+          "url": "https://www.xa.gov.cn/ztzl/ztzl/lzledc/ywdc/1824366329290301442.html",
+          "claim": "动物观察与家庭游园",
+          "originGroup": "www.xa.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "coordinates": [
+        {
+          "placeId": "qinling-zoo",
+          "providerPlaceId": "B001D092I6",
+          "lon": 108.866715,
+          "lat": 34.047456,
+          "pointRole": "reference-point",
+          "pointDescription": "西安秦岭野生动物园；长安滦镇；园区参考点，非指定入口",
+          "crs": "GCJ-02",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B001D092I6",
+          "checkedAt": "2026-09-14",
+          "license": "再分发与商业使用许可待核实"
+        }
+      ],
+      "spatialEvidence": {
+        "point": {
+          "placeId": "qinling-zoo",
+          "lon": 108.86213719521805,
+          "lat": 34.04912040326327,
+          "crs": "WGS-84",
+          "originGroup": "amap",
+          "source": "https://ditu.amap.com/place/B001D092I6",
+          "original": {
+            "placeId": "qinling-zoo",
+            "providerPlaceId": "B001D092I6",
+            "lon": 108.866715,
+            "lat": 34.047456,
+            "pointRole": "reference-point",
+            "pointDescription": "西安秦岭野生动物园；长安滦镇；园区参考点，非指定入口",
+            "crs": "GCJ-02",
+            "originGroup": "amap",
+            "url": "https://ditu.amap.com/place/B001D092I6",
+            "checkedAt": "2026-09-14",
+            "license": "再分发与商业使用许可待核实"
+          },
+          "conversion": {
+            "method": "coordtransform@2.1.2 gcj02towgs84",
+            "accuracy": "近似转换，非测绘精度保证",
+            "source": "https://github.com/wandergis/coordtransform"
+          }
+        },
+        "area": {
+          "placeId": "qinling-zoo",
+          "crs": "WGS-84",
+          "originGroup": "openstreetmap",
+          "source": "https://www.openstreetmap.org/way/256930203",
+          "api": "https://api.openstreetmap.org/api/0.6/way/256930203/full.json",
+          "version": 3,
+          "sourceUpdatedAt": "2023-11-26T14:54:45Z",
+          "checkedAt": "2026-09-14",
+          "identityBasis": "原始way的name等于西安秦岭野生动物园；结合已读取高德地点名称及行政区域进行实体对应。非自动语义认证。",
+          "ring": [
+            [
+              108.8485056,
+              34.0539853
+            ],
+            [
+              108.8473165,
+              34.0530692
+            ],
+            [
+              108.8473048,
+              34.0529484
+            ],
+            [
+              108.8491997,
+              34.0502339
+            ],
+            [
+              108.8494599,
+              34.0500587
+            ],
+            [
+              108.8498787,
+              34.0497522
+            ],
+            [
+              108.8500413,
+              34.0494592
+            ],
+            [
+              108.8504094,
+              34.0495079
+            ],
+            [
+              108.8512993,
+              34.0499983
+            ],
+            [
+              108.8523335,
+              34.0505681
+            ],
+            [
+              108.8523242,
+              34.0510909
+            ],
+            [
+              108.8529871,
+              34.0510946
+            ],
+            [
+              108.853529,
+              34.0508699
+            ],
+            [
+              108.8550421,
+              34.050839
+            ],
+            [
+              108.8551075,
+              34.0502509
+            ],
+            [
+              108.8558733,
+              34.0501812
+            ],
+            [
+              108.8558266,
+              34.0500032
+            ],
+            [
+              108.8558173,
+              34.0498252
+            ],
+            [
+              108.8558547,
+              34.0495389
+            ],
+            [
+              108.8559667,
+              34.0493145
+            ],
+            [
+              108.8562376,
+              34.049121
+            ],
+            [
+              108.8565271,
+              34.0489275
+            ],
+            [
+              108.8567887,
+              34.0487263
+            ],
+            [
+              108.8569101,
+              34.0484632
+            ],
+            [
+              108.8567326,
+              34.048115
+            ],
+            [
+              108.8567046,
+              34.047759
+            ],
+            [
+              108.8568821,
+              34.0473875
+            ],
+            [
+              108.8576012,
+              34.0469232
+            ],
+            [
+              108.8580776,
+              34.0464898
+            ],
+            [
+              108.8597027,
+              34.0460951
+            ],
+            [
+              108.8607862,
+              34.045832
+            ],
+            [
+              108.8618976,
+              34.0457546
+            ],
+            [
+              108.8632333,
+              34.0453986
+            ],
+            [
+              108.863859,
+              34.0448646
+            ],
+            [
+              108.8648678,
+              34.0443538
+            ],
+            [
+              108.86526,
+              34.044052
+            ],
+            [
+              108.8654935,
+              34.0440597
+            ],
+            [
+              108.8682675,
+              34.043487
+            ],
+            [
+              108.8683049,
+              34.0433477
+            ],
+            [
+              108.8685197,
+              34.0431775
+            ],
+            [
+              108.8694724,
+              34.0430691
+            ],
+            [
+              108.8702009,
+              34.0435103
+            ],
+            [
+              108.8701168,
+              34.0439669
+            ],
+            [
+              108.870341,
+              34.0446479
+            ],
+            [
+              108.8704718,
+              34.0450194
+            ],
+            [
+              108.8703317,
+              34.0454992
+            ],
+            [
+              108.8711536,
+              34.0463273
+            ],
+            [
+              108.8715552,
+              34.0464898
+            ],
+            [
+              108.8717327,
+              34.0467607
+            ],
+            [
+              108.8724705,
+              34.0472482
+            ],
+            [
+              108.8738435,
+              34.0479138
+            ],
+            [
+              108.8727227,
+              34.0514813
+            ],
+            [
+              108.8675016,
+              34.0515587
+            ],
+            [
+              108.8644008,
+              34.052201
+            ],
+            [
+              108.8607115,
+              34.0522551
+            ],
+            [
+              108.8593011,
+              34.0522784
+            ],
+            [
+              108.8587968,
+              34.0522397
+            ],
+            [
+              108.8580402,
+              34.0521158
+            ],
+            [
+              108.8557519,
+              34.0517212
+            ],
+            [
+              108.8558453,
+              34.0522938
+            ],
+            [
+              108.8525016,
+              34.0523093
+            ],
+            [
+              108.8506336,
+              34.0547159
+            ],
+            [
+              108.8503627,
+              34.054685
+            ],
+            [
+              108.8502693,
+              34.054182
+            ],
+            [
+              108.8494007,
+              34.054182
+            ],
+            [
+              108.8493914,
+              34.0543909
+            ],
+            [
+              108.8485056,
+              34.0539853
+            ]
+          ],
+          "rawFile": "osm-way-256930203.json",
+          "rawSha256": "5edd5096c15f5eab5e7384cb33d9daa712067bcd8607ea0bd7a551b701e27e6d",
+          "license": "ODbL-1.0",
+          "attribution": "© OpenStreetMap contributors",
+          "licenseURL": "https://www.openstreetmap.org/copyright"
+        },
+        "edgeMarginMeters": 100
+      },
+      "reputationStatus": "未单独采集口碑证据"
+    },
+    {
+      "id": "four-treasures",
+      "name": "秦岭四宝科学公园",
+      "category": "动物与自然教育",
+      "area": "西安·周至楼观",
+      "reason": "秦岭动物保护与自然教育",
+      "country": "CN",
+      "kind": "destination",
+      "evidence": [
+        {
+          "url": "https://zhuanti.mct.gov.cn/xcszbwg2022/shanxi2/detail/2020.html",
+          "claim": "秦岭动物保护与自然教育",
+          "originGroup": "zhuanti.mct.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "coordinates": [],
+      "reputationStatus": "未单独采集口碑证据"
+    },
+    {
+      "id": "botanical",
+      "name": "秦岭国家植物园",
+      "category": "动物与自然教育",
+      "area": "西安·周至集贤",
+      "reason": "植物多样性与自然教育",
+      "country": "CN",
+      "kind": "destination",
+      "evidence": [
+        {
+          "url": "https://www.qinlingbg.com/post/%E5%9B%AD%E5%8C%BA%E7%AE%80%E4%BB%8B/",
+          "claim": "植物多样性与自然教育",
+          "originGroup": "www.qinlingbg.com",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "coordinates": [],
+      "reputationStatus": "未单独采集口碑证据"
+    },
+    {
+      "id": "natural-museum",
+      "name": "陕西自然博物馆",
+      "category": "动物与自然教育",
+      "area": "西安·城区",
+      "reason": "地质、古生物与自然标本",
+      "country": "CN",
+      "kind": "destination",
+      "evidence": [
+        {
+          "url": "https://xadfz.xa.gov.cn/xadq/rwxa/6281fe1af8fd1c0bdc97f214.html",
+          "claim": "地质、古生物与自然标本",
+          "originGroup": "xadfz.xa.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "coordinates": [],
+      "reputationStatus": "未单独采集口碑证据"
+    },
+    {
+      "id": "yuanjia",
+      "name": "袁家村",
+      "category": "乡村民俗",
+      "area": "咸阳·礼泉烟霞镇",
+      "reason": "关中饮食、传统作坊与乡村民俗",
+      "country": "CN",
+      "kind": "destination",
+      "evidence": [
+        {
+          "url": "https://zhuanti.mct.gov.cn/xcss2024_nlhwzzxc/shanxi1/detail/8174.html",
+          "claim": "关中饮食、传统作坊与乡村民俗",
+          "originGroup": "zhuanti.mct.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "coordinates": [
+        {
+          "placeId": "yuanjia",
+          "providerPlaceId": "B0GUKACX5K",
+          "lon": 108.538698,
+          "lat": 34.59024,
+          "pointRole": "reference-point",
+          "pointDescription": "礼泉烟霞镇袁家村；不是城区同名餐饮店",
+          "crs": "GCJ-02",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B0GUKACX5K",
+          "checkedAt": "2026-09-14",
+          "license": "再分发与商业使用许可待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据"
+    },
+    {
+      "id": "mawei",
+      "name": "马嵬驿民俗文化体验园",
+      "category": "乡村民俗",
+      "area": "咸阳·兴平",
+      "reason": "民俗展示与关中饮食",
+      "country": "CN",
+      "kind": "destination",
+      "evidence": [
+        {
+          "url": "https://zhuanti.mct.gov.cn/xcss2024_nlhwzzxc/shanxi1/detail/8174.html",
+          "claim": "民俗展示与关中饮食",
+          "originGroup": "zhuanti.mct.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "coordinates": [],
+      "reputationStatus": "未单独采集口碑证据"
+    },
+    {
+      "id": "fucha",
+      "name": "茯茶镇",
+      "category": "乡村民俗",
+      "area": "西咸新区·泾河新城",
+      "reason": "茯茶文化与品茶休闲",
+      "country": "CN",
+      "kind": "destination",
+      "evidence": [
+        {
+          "url": "https://gjcr.moa.gov.cn/cxcy/202005/t20200519_6344528.htm",
+          "claim": "茯茶文化与品茶休闲",
+          "originGroup": "gjcr.moa.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "coordinates": [],
+      "reputationStatus": "未单独采集口碑证据"
+    },
+    {
+      "id": "bailucang",
+      "name": "白鹿仓景区",
+      "category": "乡村民俗",
+      "area": "西安·灞桥",
+      "reason": "民俗主题街区与家庭休闲",
+      "country": "CN",
+      "kind": "destination",
+      "evidence": [
+        {
+          "url": "https://www.xa.gov.cn/sq/csgk/qxgk/1955453645970071553.html",
+          "claim": "民俗主题街区与家庭休闲",
+          "originGroup": "www.xa.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "coordinates": [
+        {
+          "placeId": "bailucang",
+          "providerPlaceId": "B0FFI2H1FU",
+          "lon": 109.11531,
+          "lat": 34.215594,
+          "pointRole": "east-gate",
+          "pointDescription": "高德具名东门参考点；不当作景区中心，不承诺该门当前开放",
+          "crs": "GCJ-02",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B0FFI2H1FU",
+          "checkedAt": "2026-09-14",
+          "license": "再分发与商业使用许可待核实"
+        }
+      ],
+      "reputationStatus": "未单独采集口碑证据"
+    },
+    {
+      "id": "bailu-film",
+      "name": "白鹿原影视城",
+      "category": "影视文化",
+      "area": "西安·蓝田",
+      "reason": "文学题材、影视场景与演艺",
+      "country": "CN",
+      "kind": "destination",
+      "evidence": [
+        {
+          "url": "https://www.sxtourgroup.com/home/Party_building/index.html?catId=188",
+          "claim": "文学题材、影视场景与演艺",
+          "originGroup": "www.sxtourgroup.com",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "coordinates": [
+        {
+          "placeId": "bailu-film",
+          "providerPlaceId": "B0FFGAB102",
+          "lon": 109.278101,
+          "lat": 34.076758,
+          "pointRole": "reference-point",
+          "pointDescription": "蓝田白鹿原影视城；不是白鹿仓或整个白鹿原",
+          "crs": "GCJ-02",
+          "originGroup": "amap",
+          "url": "https://ditu.amap.com/place/B0FFGAB102",
+          "checkedAt": "2026-09-14",
+          "license": "再分发与商业使用许可待核实"
+        }
+      ],
+      "spatialEvidence": {
+        "point": {
+          "placeId": "bailu-film",
+          "lon": 109.27304581499261,
+          "lat": 34.07823342250152,
+          "crs": "WGS-84",
+          "originGroup": "amap",
+          "source": "https://ditu.amap.com/place/B0FFGAB102",
+          "original": {
+            "placeId": "bailu-film",
+            "providerPlaceId": "B0FFGAB102",
+            "lon": 109.278101,
+            "lat": 34.076758,
+            "pointRole": "reference-point",
+            "pointDescription": "蓝田白鹿原影视城；不是白鹿仓或整个白鹿原",
+            "crs": "GCJ-02",
+            "originGroup": "amap",
+            "url": "https://ditu.amap.com/place/B0FFGAB102",
+            "checkedAt": "2026-09-14",
+            "license": "再分发与商业使用许可待核实"
+          },
+          "conversion": {
+            "method": "coordtransform@2.1.2 gcj02towgs84",
+            "accuracy": "近似转换，非测绘精度保证",
+            "source": "https://github.com/wandergis/coordtransform"
+          }
+        },
+        "area": {
+          "placeId": "bailu-film",
+          "crs": "WGS-84",
+          "originGroup": "openstreetmap",
+          "source": "https://www.openstreetmap.org/way/533105129",
+          "api": "https://api.openstreetmap.org/api/0.6/way/533105129/full.json",
+          "version": 1,
+          "sourceUpdatedAt": "2017-10-17T07:10:49Z",
+          "checkedAt": "2026-09-14",
+          "identityBasis": "原始way的name等于白鹿原影视城；结合已读取高德地点名称及行政区域进行实体对应。非自动语义认证。",
+          "ring": [
+            [
+              109.2744833,
+              34.0806008
+            ],
+            [
+              109.2735306,
+              34.0810185
+            ],
+            [
+              109.272634,
+              34.08238
+            ],
+            [
+              109.2701122,
+              34.0826585
+            ],
+            [
+              109.2704858,
+              34.0807555
+            ],
+            [
+              109.2668806,
+              34.0787132
+            ],
+            [
+              109.2673476,
+              34.0766399
+            ],
+            [
+              109.267553,
+              34.0747059
+            ],
+            [
+              109.2695331,
+              34.0758354
+            ],
+            [
+              109.2699814,
+              34.0741488
+            ],
+            [
+              109.2705418,
+              34.0736846
+            ],
+            [
+              109.2713451,
+              34.0739477
+            ],
+            [
+              109.2714011,
+              34.0756342
+            ],
+            [
+              109.2715319,
+              34.076315
+            ],
+            [
+              109.2723538,
+              34.0775373
+            ],
+            [
+              109.2761458,
+              34.0782026
+            ],
+            [
+              109.2771359,
+              34.078543
+            ],
+            [
+              109.2769491,
+              34.0777539
+            ],
+            [
+              109.2750811,
+              34.0772124
+            ],
+            [
+              109.2750811,
+              34.0766554
+            ],
+            [
+              109.2789292,
+              34.0766709
+            ],
+            [
+              109.2791533,
+              34.0801521
+            ],
+            [
+              109.2769117,
+              34.08074
+            ],
+            [
+              109.2744833,
+              34.0806008
+            ]
+          ],
+          "rawFile": "osm-way-533105129.json",
+          "rawSha256": "f1a806dd7baeac69b90ee2511007ba9ffeda9e8814057c80bd893c3451ae7fd7",
+          "license": "ODbL-1.0",
+          "attribution": "© OpenStreetMap contributors",
+          "licenseURL": "https://www.openstreetmap.org/copyright"
+        },
+        "edgeMarginMeters": 100
+      },
+      "reputationStatus": "未单独采集口碑证据"
+    },
+    {
+      "id": "zhouzhi-water",
+      "name": "周至水街·烟火巷子",
+      "category": "乡村民俗",
+      "area": "西安·周至",
+      "reason": "水街休闲与夜间氛围",
+      "country": "CN",
+      "kind": "destination",
+      "evidence": [
+        {
+          "url": "https://wlj.xa.gov.cn/xxgk/tzgg/1839203941456883713.html",
+          "claim": "水街休闲与夜间氛围",
+          "originGroup": "wlj.xa.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "coordinates": [],
+      "reputationStatus": "未单独采集口碑证据"
+    },
+    {
+      "id": "tang-village",
+      "name": "长安唐村",
+      "category": "乡村民俗",
+      "area": "西安·长安",
+      "reason": "田园与文化休闲",
+      "country": "CN",
+      "kind": "destination",
+      "evidence": [
+        {
+          "url": "https://wlj.xa.gov.cn/wlxw/gzdt/2079843114999664642.html",
+          "claim": "田园与文化休闲",
+          "originGroup": "wlj.xa.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "coordinates": [],
+      "reputationStatus": "未单独采集口碑证据"
+    },
+    {
+      "id": "taibai",
+      "name": "太白山",
+      "category": "远郊山地",
+      "area": "宝鸡方向·具体景区待辨认",
+      "reason": "山岳景观与垂直自然环境",
+      "country": "CN",
+      "kind": "destination",
+      "evidence": [
+        {
+          "url": "https://lyj.shaanxi.gov.cn/zwxx/lydt/202505/t20250520_3520672.html",
+          "claim": "山岳景观与垂直自然环境",
+          "originGroup": "lyj.shaanxi.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "coordinates": [],
+      "reputationStatus": "未单独采集口碑证据"
+    },
+    {
+      "id": "niubeiliang",
+      "name": "牛背梁国家森林公园",
+      "category": "远郊山地",
+      "area": "商洛·柞水",
+      "reason": "秦岭南侧森林山地",
+      "country": "CN",
+      "kind": "destination",
+      "evidence": [
+        {
+          "url": "https://www.snzs.gov.cn/html/zwyw/zhbd/100708.html",
+          "claim": "秦岭南侧森林山地",
+          "originGroup": "www.snzs.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "coordinates": [],
+      "reputationStatus": "未单独采集口碑证据"
+    },
+    {
+      "id": "zhashui-cave",
+      "name": "柞水溶洞",
+      "category": "远郊地质",
+      "area": "商洛·柞水",
+      "reason": "溶洞地质景观",
+      "country": "CN",
+      "kind": "destination",
+      "evidence": [
+        {
+          "url": "https://www.snzs.gov.cn/html/zwyw/zhbd/100708.html",
+          "claim": "溶洞地质景观",
+          "originGroup": "www.snzs.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "coordinates": [],
+      "reputationStatus": "未单独采集口碑证据"
+    },
+    {
+      "id": "bailuyuan-region",
+      "name": "白鹿原（地域）",
+      "country": "CN",
+      "kind": "region",
+      "category": "地域",
+      "area": "西安东部",
+      "reason": "组织具体目的地，不虚构一个统一入口",
+      "evidence": [
+        {
+          "url": "https://www.xa.gov.cn/sq/csgk/qxgk/1955453645970071553.html",
+          "claim": "白鹿原片区与白鹿仓；地域不等于单一景区",
+          "originGroup": "www.xa.gov.cn",
+          "checkedAt": "2026-09-14",
+          "review": "既有研究资料迁移；不代表本轮重新核验全部页面",
+          "license": "待核实"
+        }
+      ],
+      "coordinates": [],
+      "reputationStatus": "不适用"
+    }
+  ],
+  "report": {
+    "schemaVersion": 1,
+    "caseId": "xian-2026-09-v1",
+    "anchorId": "station",
+    "anchorName": "西安站",
+    "agreementMeters": 500,
+    "counts": {
+      "total": 40,
+      "destinations": 35,
+      "arrival": 4,
+      "regions": 1,
+      "withCoordinates": 24,
+      "consistent": 0
+    },
+    "areaEvidenceCounts": {
+      "inside": 1,
+      "edgeUncertain": 1,
+      "outside": 0
+    },
+    "missingRequired": [],
+    "anchorReady": false,
+    "contentCoverage": "required-listed",
+    "positionEvidenceStatus": "pending",
+    "productionStatus": "pending",
+    "rows": [
+      {
+        "id": "bell",
+        "name": "西安钟楼",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "drum",
+        "name": "西安鼓楼",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "south-gate",
+        "name": "西安城墙（永宁门）",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "xian-museum",
+        "name": "西安博物院",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "history",
+        "name": "陕西历史博物馆（本馆）",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "pagoda",
+        "name": "大雁塔",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "garden",
+        "name": "大唐芙蓉园",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "huaqing",
+        "name": "华清宫",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "terracotta",
+        "name": "秦始皇兵马俑博物馆",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "north-station",
+        "name": "西安北站",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "station",
+        "name": "西安站",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "airport-t3",
+        "name": "西安咸阳国际机场 T3 航站楼",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "airport-t5",
+        "name": "西安咸阳国际机场 T5 航站楼",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "daming",
+        "name": "大明宫国家遗址公园",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "hanyang",
+        "name": "汉景帝阳陵博物院",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "cuihua",
+        "name": "翠华山景区",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "louguan",
+        "name": "终南山古楼观历史文化景区",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "huashan",
+        "name": "华山风景名胜区",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "night",
+        "name": "大唐不夜城",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "beilin",
+        "name": "西安碑林博物馆",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "zhuque",
+        "name": "朱雀国家森林公园",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "missing-coordinate",
+            "detail": "尚未取得具名地点坐标"
+          }
+        ],
+        "coordinateCount": 0,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "taiping",
+        "name": "太平国家森林公园",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "missing-coordinate",
+            "detail": "尚未取得具名地点坐标"
+          }
+        ],
+        "coordinateCount": 0,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "nanwutai",
+        "name": "南五台",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "missing-coordinate",
+            "detail": "尚未取得具名地点坐标"
+          }
+        ],
+        "coordinateCount": 0,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "wangshun",
+        "name": "王顺山",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "missing-coordinate",
+            "detail": "尚未取得具名地点坐标"
+          }
+        ],
+        "coordinateCount": 0,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "heihe",
+        "name": "黑河国家森林公园",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "missing-coordinate",
+            "detail": "尚未取得具名地点坐标"
+          }
+        ],
+        "coordinateCount": 0,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "qinling-zoo",
+        "name": "西安秦岭野生动物园",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "inside",
+          "inside": true,
+          "edgeDistanceMeters": 346,
+          "detail": "参考点落在另一来源的同名景区边界内（仅区域支持）",
+          "boundarySource": "https://www.openstreetmap.org/way/256930203",
+          "sourceVersion": 3
+        }
+      },
+      {
+        "id": "four-treasures",
+        "name": "秦岭四宝科学公园",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "missing-coordinate",
+            "detail": "尚未取得具名地点坐标"
+          }
+        ],
+        "coordinateCount": 0,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "botanical",
+        "name": "秦岭国家植物园",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "missing-coordinate",
+            "detail": "尚未取得具名地点坐标"
+          }
+        ],
+        "coordinateCount": 0,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "natural-museum",
+        "name": "陕西自然博物馆",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "missing-coordinate",
+            "detail": "尚未取得具名地点坐标"
+          }
+        ],
+        "coordinateCount": 0,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "yuanjia",
+        "name": "袁家村",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "mawei",
+        "name": "马嵬驿民俗文化体验园",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "missing-coordinate",
+            "detail": "尚未取得具名地点坐标"
+          }
+        ],
+        "coordinateCount": 0,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "fucha",
+        "name": "茯茶镇",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "missing-coordinate",
+            "detail": "尚未取得具名地点坐标"
+          }
+        ],
+        "coordinateCount": 0,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "bailucang",
+        "name": "白鹿仓景区",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "bailu-film",
+        "name": "白鹿原影视城",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "single-origin",
+            "detail": "只有一个坐标来源体系，尚未独立交叉核对"
+          }
+        ],
+        "coordinateCount": 1,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "edge-uncertain",
+          "inside": true,
+          "edgeDistanceMeters": 63,
+          "detail": "参考点靠近边界，受转换及边界误差影响，暂不判断",
+          "boundarySource": "https://www.openstreetmap.org/way/533105129",
+          "sourceVersion": 1
+        }
+      },
+      {
+        "id": "zhouzhi-water",
+        "name": "周至水街·烟火巷子",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "missing-coordinate",
+            "detail": "尚未取得具名地点坐标"
+          }
+        ],
+        "coordinateCount": 0,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "tang-village",
+        "name": "长安唐村",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "missing-coordinate",
+            "detail": "尚未取得具名地点坐标"
+          }
+        ],
+        "coordinateCount": 0,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "taibai",
+        "name": "太白山",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "missing-coordinate",
+            "detail": "尚未取得具名地点坐标"
+          }
+        ],
+        "coordinateCount": 0,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "niubeiliang",
+        "name": "牛背梁国家森林公园",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "missing-coordinate",
+            "detail": "尚未取得具名地点坐标"
+          }
+        ],
+        "coordinateCount": 0,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "zhashui-cave",
+        "name": "柞水溶洞",
+        "status": "pending",
+        "issues": [
+          {
+            "code": "missing-coordinate",
+            "detail": "尚未取得具名地点坐标"
+          }
+        ],
+        "coordinateCount": 0,
+        "maxDifferenceMeters": null,
+        "positionReady": false,
+        "areaCheck": {
+          "status": "pending",
+          "detail": "未取得另一来源的具名景区边界"
+        }
+      },
+      {
+        "id": "bailuyuan-region",
+        "name": "白鹿原（地域）",
+        "status": "region",
+        "issues": [],
+        "coordinateCount": 0,
+        "positionReady": false
+      }
+    ],
+    "boundary": "来源分组及地点身份需有采集证据支撑；数值一致不证明上游真实。地域无单点坐标；未检查当前开放、全城穷尽、口碑排序、素材外形或成图。"
+  }
+}

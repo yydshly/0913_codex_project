@@ -1,0 +1,12 @@
+{
+  "instruction_sha256": "9a5d3d6cea4e7178a34d6f57d4df8ab8ead826a232415a5a7fe9b0e328044311",
+  "checked_at": "2026-09-14",
+  "commit_or_tag": "待核实：托管 Skill 页面未提供",
+  "license": "待核实",
+  "author": "Shuyi Wang",
+  "title": "nano banana 画城市",
+  "url": "https://youmind.com/skills/yhbukK6TtKX0t9",
+  "full_instruction_copied": false,
+  "normalization": "HTML 标签替换为空格，HTML 实体解码，截取首次指令至 2:3 format 后 Trim，再 UTF-8 编码",
+  "screenshot_match": "待核实；只确认同作者相关公开 Skill"
+}

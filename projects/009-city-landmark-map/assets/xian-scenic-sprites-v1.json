@@ -1,0 +1,241 @@
+{
+  "version": 1,
+  "date": "2026-09-14",
+  "sheet": "xian-scenic-sprites-v1.png",
+  "width": 1774,
+  "height": 887,
+  "format": "RGBA",
+  "sha256": "31351ac790f4828852bc2ced962fbef72db982d631dda8530bbc1b438d0b1e46",
+  "generator": "Codex 内置 image_gen",
+  "model": "工具未提供可核实模型版本",
+  "prompt": "xian-scenic-sprites-v1-prompt.txt",
+  "license": "待核实",
+  "originalPath": "D:/codex/home/generated_images/01a09e56-c2f3-7e53-a467-4c7a6354f4d1/exec-4f6ac0f3-83c6-4a46-84e5-e32e5ae63427.png",
+  "scope": "4列2行候选景区素材，按提示词槽位绑定ID；透明边界通过不等于景区外形已核实。",
+  "places": [
+    {
+      "id": "bell",
+      "name": "西安钟楼",
+      "label": "钟楼",
+      "description": "从古城中心建立方向感",
+      "source": "https://en.xa.gov.cn/CultureTravel/Attractions/1691691501245550594.html",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 443,
+        "height": 443
+      },
+      "alphaBounds": [
+        13,
+        41,
+        438,
+        404
+      ],
+      "solidBoundaryPixels": 0,
+      "decodedSha256": "2361c6672f3eb0a10bc58dceea6e62810e93248a825fd2189f2665e9cb46ed2b",
+      "identityStatus": "unverified",
+      "kind": "generated-candidate",
+      "anchor": {
+        "u": 0.5,
+        "v": 0.5
+      },
+      "anchorMeaning": "素材分格中心，仅为构图锚点，不代表真实建筑接地基部"
+    },
+    {
+      "id": "pagoda",
+      "name": "大雁塔",
+      "label": "大雁塔",
+      "description": "识别城南的七层砖塔",
+      "source": "https://xadfz.xa.gov.cn/xadq/rwxa/1802954373708996609.html",
+      "crop": {
+        "x": 443,
+        "y": 0,
+        "width": 444,
+        "height": 443
+      },
+      "alphaBounds": [
+        20,
+        16,
+        438,
+        426
+      ],
+      "solidBoundaryPixels": 0,
+      "decodedSha256": "ca8c7bc0f21983f1a49f2ba948eea8e3c343e90789dbc941c0b7afa73c938fed",
+      "identityStatus": "unverified",
+      "kind": "generated-candidate",
+      "anchor": {
+        "u": 0.5,
+        "v": 0.5
+      },
+      "anchorMeaning": "素材分格中心，仅为构图锚点，不代表真实建筑接地基部"
+    },
+    {
+      "id": "daming",
+      "name": "大明宫国家遗址公园",
+      "label": "大明宫",
+      "description": "从遗址读懂唐代宫城",
+      "source": "https://qjxq.xa.gov.cn/zjqj/gyqj/tsqj/5df21c62fd8508098d284f14.html",
+      "crop": {
+        "x": 887,
+        "y": 0,
+        "width": 443,
+        "height": 443
+      },
+      "alphaBounds": [
+        9,
+        76,
+        437,
+        407
+      ],
+      "solidBoundaryPixels": 0,
+      "decodedSha256": "ae969086f7a2c3c75fb5db346f0b7f2eef95972ea6b21df5af956bfe5ed607c2",
+      "identityStatus": "unverified",
+      "kind": "generated-candidate",
+      "anchor": {
+        "u": 0.5,
+        "v": 0.5
+      },
+      "anchorMeaning": "素材分格中心，仅为构图锚点，不代表真实建筑接地基部"
+    },
+    {
+      "id": "hanyang",
+      "name": "汉景帝阳陵博物院",
+      "label": "汉阳陵",
+      "description": "把历史视角延伸到汉代",
+      "source": "https://www.xa.gov.cn/ztzl/ztzl/lzledc/ywdc/1824366329290301442.html",
+      "crop": {
+        "x": 1330,
+        "y": 0,
+        "width": 444,
+        "height": 443
+      },
+      "alphaBounds": [
+        15,
+        114,
+        433,
+        405
+      ],
+      "solidBoundaryPixels": 0,
+      "decodedSha256": "7ed9e08652f024ec5f6837ce8038f9ba249549f88a6df4a0640e5749d54e37f4",
+      "identityStatus": "unverified",
+      "kind": "generated-candidate",
+      "anchor": {
+        "u": 0.5,
+        "v": 0.5
+      },
+      "anchorMeaning": "素材分格中心，仅为构图锚点，不代表真实建筑接地基部"
+    },
+    {
+      "id": "huaqing",
+      "name": "华清宫",
+      "label": "华清宫",
+      "description": "认识骊山脚下的宫苑景观",
+      "source": "https://www.hqc.cn/about/",
+      "crop": {
+        "x": 0,
+        "y": 443,
+        "width": 443,
+        "height": 444
+      },
+      "alphaBounds": [
+        11,
+        13,
+        439,
+        385
+      ],
+      "solidBoundaryPixels": 0,
+      "decodedSha256": "83efd7a6d07cf6a6127003f56b566e4ae139996c5aed9cc61d6dd3ec6847ca00",
+      "identityStatus": "unverified",
+      "kind": "generated-candidate",
+      "anchor": {
+        "u": 0.5,
+        "v": 0.5
+      },
+      "anchorMeaning": "素材分格中心，仅为构图锚点，不代表真实建筑接地基部"
+    },
+    {
+      "id": "terracotta",
+      "name": "秦始皇兵马俑博物馆",
+      "label": "兵马俑博物馆",
+      "description": "看秦代军阵与考古展示",
+      "source": "https://www.bmy.com.cn/index.htm",
+      "crop": {
+        "x": 443,
+        "y": 443,
+        "width": 444,
+        "height": 444
+      },
+      "alphaBounds": [
+        8,
+        50,
+        436,
+        388
+      ],
+      "solidBoundaryPixels": 0,
+      "decodedSha256": "1018788fa2c74c43340d87a65e053ead6edb289788a1e7e6c1039b9e430f11f0",
+      "identityStatus": "unverified",
+      "kind": "generated-candidate",
+      "anchor": {
+        "u": 0.5,
+        "v": 0.5
+      },
+      "anchorMeaning": "素材分格中心，仅为构图锚点，不代表真实建筑接地基部"
+    },
+    {
+      "id": "cuihua",
+      "name": "翠华山景区",
+      "label": "翠华山",
+      "description": "看天池与山崩奇石",
+      "source": "https://qjxq.xa.gov.cn/xwzx/tpxw/2044354510126653442.html",
+      "crop": {
+        "x": 887,
+        "y": 443,
+        "width": 443,
+        "height": 444
+      },
+      "alphaBounds": [
+        9,
+        21,
+        434,
+        411
+      ],
+      "solidBoundaryPixels": 0,
+      "decodedSha256": "5c5aa51e6a36ecf593373b778eca46db20451e2247727bfac434c065308ead63",
+      "identityStatus": "unverified",
+      "kind": "generated-candidate",
+      "anchor": {
+        "u": 0.5,
+        "v": 0.5
+      },
+      "anchorMeaning": "素材分格中心，仅为构图锚点，不代表真实建筑接地基部"
+    },
+    {
+      "id": "louguan",
+      "name": "终南山古楼观历史文化景区",
+      "label": "古楼观",
+      "description": "向西南认识楼观一带",
+      "source": "https://qjxq.xa.gov.cn/zjqj/index.html",
+      "crop": {
+        "x": 1330,
+        "y": 443,
+        "width": 444,
+        "height": 444
+      },
+      "alphaBounds": [
+        8,
+        37,
+        433,
+        391
+      ],
+      "solidBoundaryPixels": 0,
+      "decodedSha256": "6d59d81b009b0e541c94e96bae47ae34318e46a2105140cbc7af6ae2e958fdba",
+      "identityStatus": "unverified",
+      "kind": "generated-candidate",
+      "anchor": {
+        "u": 0.5,
+        "v": 0.5
+      },
+      "anchorMeaning": "素材分格中心，仅为构图锚点，不代表真实建筑接地基部"
+    }
+  ]
+}

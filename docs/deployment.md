@@ -106,3 +106,7 @@ GitHub Pages 托管静态网页；联网排行榜、账户和持久化后端需�
 发布前执行 008 的 62 项测试、素材校验、全站静态链接检查。快照保持原始文件与校验清单，历史文档中的本地状态描述属于当时记录。实际部署结果另记于 [008 发布记录](../projects/008-terrain-motion-lab/publishing.md)。
 
 008 已于 2026-09-14 完成首次 Pages 发布（功能提交 `8548012`，Actions `34859223402` 成功），[能力与图片导览](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/capabilities.html) 和历史版本入口已复核。
+
+## 009 · 城市景区图归档展示
+
+新增009实际演示导览、全部图稿与资料库，沿用全站构建和Pages部署。CI安装其独立依赖、运行40项规则测试和构建检查；入口为archive.html。发布状态见[009发布记录](../projects/009-city-landmark-map/publishing.md)，本轮保留其他项目的构建和导航。

@@ -1,0 +1,18 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {studyPlaces} from './research-data.mjs';
+import {createScenicPlan,scenicCommands,renderScenicPlan} from './scenic-layout.mjs';
+import {assetDigest,digest,composeAndAudit,verifyOutputBytes} from './controlled-compositor.mjs';
+import {encodeRgbaPng} from './png-export.mjs';
+const root=new URL('../assets/',import.meta.url),manifest=JSON.parse(await readFile(new URL('xian-scenic-sprites-v1.json',root),'utf8'));
+if(await digest(await readFile(new URL(manifest.sheet,root)))!==manifest.sha256)throw new Error('源图哈希不符');
+const assets=await Promise.all(manifest.places.map(async p=>{const rgba=new Uint8ClampedArray(await readFile(new URL('./node_modules/.cache/scenic-rgba/'+p.id+'.rgba',import.meta.url)));const a={...p,width:p.crop.width,height:p.crop.height,rgba,sha256:p.decodedSha256};if(await assetDigest(a)!==a.sha256)throw new Error('解码缓存与源图登记不符：'+p.id);return a;}));
+const plan=createScenicPlan(studyPlaces),result=await composeAndAudit(plan,assets,scenicCommands(plan));
+await writeFile(new URL('xian-scenic-layout-v1.json',root),JSON.stringify(plan,null,2));
+await writeFile(new URL('xian-scenic-layout-v1.svg',root),renderScenicPlan(plan));
+if(result.report.positionStatus!=='passed'||!await verifyOutputBytes(result.rgba,result.report))throw new Error('实际景观素材位置校验失败');
+const png=await encodeRgbaPng(result.rgba,plan.frame.width,plan.frame.height);
+result.report.pngSha256=await digest(png);
+result.report.sourceSheetSha256=manifest.sha256;
+await writeFile(new URL('xian-scenic-layer-v1.png',root),png);
+await writeFile(new URL('xian-scenic-audit-v1.json',root),JSON.stringify(result.report,null,2));
+console.log(JSON.stringify({points:result.report.observedCount,position:result.report.positionStatus,production:result.report.productionStatus,layer:'xian-scenic-layer-v1.png'}));

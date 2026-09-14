@@ -1,0 +1,80 @@
+{
+  "kind": "artwork-observation",
+  "imageSha256": null,
+  "width": 1400,
+  "height": 900,
+  "places": [
+    {
+      "id": "bell",
+      "status": "unreviewed",
+      "x": null,
+      "y": null,
+      "identity": "unreviewed",
+      "reference": null,
+      "reviewNote": null
+    },
+    {
+      "id": "pagoda",
+      "status": "unreviewed",
+      "x": null,
+      "y": null,
+      "identity": "unreviewed",
+      "reference": null,
+      "reviewNote": null
+    },
+    {
+      "id": "daming",
+      "status": "unreviewed",
+      "x": null,
+      "y": null,
+      "identity": "unreviewed",
+      "reference": null,
+      "reviewNote": null
+    },
+    {
+      "id": "hanyang",
+      "status": "unreviewed",
+      "x": null,
+      "y": null,
+      "identity": "unreviewed",
+      "reference": null,
+      "reviewNote": null
+    },
+    {
+      "id": "huaqing",
+      "status": "unreviewed",
+      "x": null,
+      "y": null,
+      "identity": "unreviewed",
+      "reference": null,
+      "reviewNote": null
+    },
+    {
+      "id": "terracotta",
+      "status": "unreviewed",
+      "x": null,
+      "y": null,
+      "identity": "unreviewed",
+      "reference": null,
+      "reviewNote": null
+    },
+    {
+      "id": "cuihua",
+      "status": "unreviewed",
+      "x": null,
+      "y": null,
+      "identity": "unreviewed",
+      "reference": null,
+      "reviewNote": null
+    },
+    {
+      "id": "louguan",
+      "status": "unreviewed",
+      "x": null,
+      "y": null,
+      "identity": "unreviewed",
+      "reference": null,
+      "reviewNote": null
+    }
+  ]
+}

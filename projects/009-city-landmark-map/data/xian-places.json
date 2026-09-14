@@ -1,0 +1,265 @@
+{
+  "metadata": {
+    "city": "西安",
+    "date": "2026-09-14",
+    "coordinateSystem": "GCJ-02",
+    "source": "高德公开地点页",
+    "coordinateReference": "https://lbs.amap.com/api/javascript-api-v2/guide/abc/basetype",
+    "license": "地点数据再分发与商业使用许可待核实",
+    "scope": "13 个精选地点的空间理解样本，非完整城市地图"
+  },
+  "places": [
+    {
+      "id": "bell",
+      "name": "西安钟楼",
+      "label": "钟楼",
+      "group": "old",
+      "lon": 108.94703,
+      "lat": 34.25943,
+      "poi": "B001D09TAA",
+      "note": "钟楼与四条大街的交汇是认识中心城区的参考。",
+      "semantics": "地标参考点",
+      "number": 1,
+      "source": "https://ditu.amap.com/place/B001D09TAA",
+      "checkedAt": "2026-09-14",
+      "coordinateSystem": "GCJ-02"
+    },
+    {
+      "id": "drum",
+      "name": "西安鼓楼",
+      "label": "鼓楼",
+      "group": "old",
+      "lon": 108.943512,
+      "lat": 34.260206,
+      "poi": "B001D07CMS",
+      "note": "在钟楼西侧，可先认识钟鼓楼的相对位置。",
+      "semantics": "地标参考点",
+      "number": 2,
+      "source": "https://ditu.amap.com/place/B001D07CMS",
+      "checkedAt": "2026-09-14",
+      "coordinateSystem": "GCJ-02"
+    },
+    {
+      "id": "south-gate",
+      "name": "西安城墙（永宁门）",
+      "label": "永宁门",
+      "group": "old",
+      "lon": 108.947029,
+      "lat": 34.25066,
+      "poi": "B0FFHNKLSK",
+      "note": "位于钟楼南侧，是认识古城南缘的参考点。开放入口须另行核实。",
+      "semantics": "城门地点；开放入口待核实",
+      "number": 3,
+      "source": "https://ditu.amap.com/place/B0FFHNKLSK",
+      "checkedAt": "2026-09-14",
+      "coordinateSystem": "GCJ-02"
+    },
+    {
+      "id": "xian-museum",
+      "name": "西安博物院",
+      "label": "西安博物院",
+      "group": "old",
+      "lon": 108.941673,
+      "lat": 34.238589,
+      "poi": "B001D06AOS",
+      "note": "位于永宁门西南侧。不要与陕西历史博物馆混淆。",
+      "semantics": "院区参考点；非入口",
+      "number": 4,
+      "source": "https://ditu.amap.com/place/B001D06AOS",
+      "checkedAt": "2026-09-14",
+      "coordinateSystem": "GCJ-02"
+    },
+    {
+      "id": "history",
+      "name": "陕西历史博物馆（本馆）",
+      "label": "陕历博·本馆",
+      "group": "south",
+      "lon": 108.955044,
+      "lat": 34.224199,
+      "poi": "B001D03PEX",
+      "note": "小寨东路本馆，位于大雁塔西北侧；不是秦汉馆。",
+      "semantics": "馆区参考点；非入口",
+      "number": 5,
+      "source": "https://ditu.amap.com/place/B001D03PEX",
+      "checkedAt": "2026-09-14",
+      "coordinateSystem": "GCJ-02"
+    },
+    {
+      "id": "pagoda",
+      "name": "大雁塔",
+      "label": "大雁塔",
+      "group": "south",
+      "lon": 108.964176,
+      "lat": 34.218229,
+      "poi": "B001D023F0",
+      "note": "大慈恩寺内的塔，与同名地铁站是不同地点。",
+      "semantics": "塔体参考点；非景区入口",
+      "number": 6,
+      "source": "https://ditu.amap.com/place/B001D023F0",
+      "checkedAt": "2026-09-14",
+      "coordinateSystem": "GCJ-02"
+    },
+    {
+      "id": "garden",
+      "name": "大唐芙蓉园",
+      "label": "大唐芙蓉园",
+      "group": "south",
+      "lon": 108.97436,
+      "lat": 34.212717,
+      "poi": "B001D092BB",
+      "note": "位于大雁塔东南侧。图中点位代表园区，不表示入口或园区范围。",
+      "semantics": "园区参考点；非入口",
+      "number": 7,
+      "source": "https://ditu.amap.com/place/B001D092BB",
+      "checkedAt": "2026-09-14",
+      "coordinateSystem": "GCJ-02"
+    },
+    {
+      "id": "huaqing",
+      "name": "华清宫",
+      "label": "华清宫",
+      "group": "east",
+      "lon": 109.215759,
+      "lat": 34.356728,
+      "poi": "B001D006F1",
+      "note": "在中心城区东北方向的临潼一带，位于兵马俑西南侧。",
+      "semantics": "景区参考点；非入口",
+      "number": 8,
+      "source": "https://ditu.amap.com/place/B001D006F1",
+      "checkedAt": "2026-09-14",
+      "coordinateSystem": "GCJ-02"
+    },
+    {
+      "id": "terracotta",
+      "name": "秦始皇兵马俑博物馆",
+      "label": "兵马俑博物馆",
+      "group": "east",
+      "lon": 109.28196,
+      "lat": 34.386214,
+      "poi": "B0FFGXMLTU",
+      "note": "临潼区的兵马俑参观点；不代表秦始皇帝陵全部园区。",
+      "semantics": "馆区参考点；非入口",
+      "number": 9,
+      "source": "https://ditu.amap.com/place/B0FFGXMLTU",
+      "checkedAt": "2026-09-14",
+      "coordinateSystem": "GCJ-02"
+    },
+    {
+      "id": "north-station",
+      "name": "西安北站",
+      "label": "西安北站",
+      "group": "arrival",
+      "lon": 108.938757,
+      "lat": 34.37666,
+      "poi": "B001D09TZP",
+      "note": "位于钟楼北侧；与西安站分开标注。具体出入口须另查。",
+      "semantics": "铁路车站参考点；非地铁站",
+      "number": 10,
+      "source": "https://ditu.amap.com/place/B001D09TZP",
+      "checkedAt": "2026-09-14",
+      "coordinateSystem": "GCJ-02"
+    },
+    {
+      "id": "station",
+      "name": "西安站",
+      "label": "西安站",
+      "group": "arrival",
+      "lon": 108.962723,
+      "lat": 34.278498,
+      "poi": "B001D08UZ3",
+      "note": "位于钟楼东北侧；不要与位置更靠北的西安北站混淆。",
+      "semantics": "铁路车站参考点；非地铁站",
+      "number": 11,
+      "source": "https://ditu.amap.com/place/B001D08UZ3",
+      "checkedAt": "2026-09-14",
+      "coordinateSystem": "GCJ-02"
+    },
+    {
+      "id": "airport-t3",
+      "name": "西安咸阳国际机场 T3 航站楼",
+      "label": "机场 T3",
+      "group": "arrival",
+      "lon": 108.761401,
+      "lat": 34.435045,
+      "poi": "B038E0OI0C",
+      "note": "在中心城区西北方向，属咸阳市。按实际航班确认航站楼。",
+      "semantics": "T3 航站楼参考点；非到达口",
+      "number": 12,
+      "source": "https://ditu.amap.com/place/B038E0OI0C",
+      "checkedAt": "2026-09-14",
+      "coordinateSystem": "GCJ-02"
+    },
+    {
+      "id": "airport-t5",
+      "name": "西安咸阳国际机场 T5 航站楼",
+      "label": "机场 T5",
+      "group": "arrival",
+      "lon": 108.78206,
+      "lat": 34.452254,
+      "poi": "B0IUJUK824",
+      "note": "与 T3 分开标注；图上的两点距离不是机场内换乘路线。",
+      "semantics": "T5 航站楼参考点；非到达口",
+      "number": 13,
+      "source": "https://ditu.amap.com/place/B0IUJUK824",
+      "checkedAt": "2026-09-14",
+      "coordinateSystem": "GCJ-02"
+    }
+  ],
+  "views": {
+    "overview": {
+      "title": "先看整体位置",
+      "subtitle": "机场在西北，临潼在东北；中心城区另图展开。",
+      "ids": [
+        "bell",
+        "drum",
+        "south-gate",
+        "xian-museum",
+        "history",
+        "pagoda",
+        "garden",
+        "huaqing",
+        "terracotta",
+        "north-station",
+        "station",
+        "airport-t3",
+        "airport-t5"
+      ]
+    },
+    "center": {
+      "title": "展开中心城区",
+      "subtitle": "以钟楼作参考，从钟鼓楼、永宁门向南认识雁塔一带。",
+      "ids": [
+        "bell",
+        "drum",
+        "south-gate",
+        "xian-museum",
+        "history",
+        "pagoda",
+        "garden",
+        "station"
+      ]
+    },
+    "south": {
+      "title": "雁塔一带",
+      "subtitle": "先分清本馆、大雁塔与芙蓉园的相对位置。",
+      "ids": [
+        "history",
+        "pagoda",
+        "garden"
+      ]
+    },
+    "east": {
+      "title": "临潼景区",
+      "subtitle": "华清宫与兵马俑在中心城区之外，空间接近不等于步行方便。",
+      "ids": [
+        "huaqing",
+        "terracotta"
+      ]
+    }
+  },
+  "notes": [
+    "点位未经实地测量，作为空间理解参考",
+    "直线距离是同坐标系的球面近似计算，不是路线距离",
+    "完整路线、入口、营业与预约信息待核实"
+  ]
+}

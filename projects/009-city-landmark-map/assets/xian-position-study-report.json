@@ -1,0 +1,40 @@
+{
+  "layout": {
+    "count": 8,
+    "relations": 54,
+    "crowded": [
+      [
+        "bell",
+        "pagoda"
+      ],
+      [
+        "bell",
+        "daming"
+      ],
+      [
+        "pagoda",
+        "daming"
+      ],
+      [
+        "huaqing",
+        "terracotta"
+      ]
+    ]
+  },
+  "artwork": {
+    "status": "pending",
+    "scope": "仅校验输入的成图观察；不自动识别图片，不证明人工观察真实或审美合格",
+    "errors": [],
+    "pending": [
+      "尚未绑定成图哈希",
+      "落点待确认：bell",
+      "落点待确认：pagoda",
+      "落点待确认：daming",
+      "落点待确认：hanyang",
+      "落点待确认：huaqing",
+      "落点待确认：terracotta",
+      "落点待确认：cuihua",
+      "落点待确认：louguan"
+    ]
+  }
+}
