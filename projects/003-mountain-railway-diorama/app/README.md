@@ -1,5 +1,7 @@
 # 003 · 白鹭河谷：四季微缩景观与场景编辑
 
+[列车与站房实景研究](../train-station-research.md) · [研究与归档入口](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/archive.html)
+
 [V23 归档与技术原理](../archive.md) · [在线原理说明](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/archive.html)
 
 当前实践是独立编写的 Three.js r185 场景“白鹭河谷”，以河岸观景铁路为用途。保留原理分析页及五步搭建功能，打开实景页直接进入层峦溪谷秋季完整场景，可在顶部切换四季主题。
