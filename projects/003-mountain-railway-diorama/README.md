@@ -6,7 +6,7 @@
 
 *2026-09-14，V17 基线在本地浏览器中的实际画面，1280×720；独立重建原型，不是上游截图或生成图。*
 
-[直接体验白鹭河谷](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html) · [先看实际能力](capabilities.md) · [启动并操作](app/README.md#运行) · [看实现过程](development-log.md) · [看现有问题与下一步](next-steps.md) · [看上游原作](https://iamtechartist.github.io/mountain-railway-diorama/)
+[研究分析](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/) · [实际场景](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html) · [开发过程](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/dev-log.html) · [先看实际能力](capabilities.md) · [启动并操作](app/README.md#运行) · [看实现过程](development-log.md) · [看现有问题与下一步](next-steps.md) · [看上游原作](https://iamtechartist.github.io/mountain-railway-diorama/)
 
 ## 三分钟理解这个项目
 
