@@ -1,0 +1,15 @@
+// A fictional guesthouse tour, using the same live courtyard and weather engine.
+export const stayStops={
+ arrival:{title:['抵达庭院','Arrive in the courtyard'],weather:'fair',hours:15.5,view:'entrance',description:['沿石径进入山居，查看院落布局、树影与接待茶亭。','Follow the stone path into the garden and discover the planting and tea pavilion.']},
+ garden:{title:['花园散步','Walk through the garden'],weather:'sunshower',hours:16,view:'surface',description:['在花园观察太阳雨：阳光与局部雨区可以同时出现，雨声跟随所在位置。','Observe a sunshower in the garden: sunlight and local rain coexist, with sound following your position.']},
+ tea:{title:['檐下品茶','Tea under the eaves'],weather:'rain',hours:17,view:'shelter',description:['坐到茶亭檐下，看室外雨幕，比较屋顶遮雨与柔和雨声；桌椅和茶杯是场景的一部分。','Sit under the pavilion roof, watch the rain and compare shelter and softened sound around the tea table.']},
+ evening:{title:['夜间归房','Return at night'],weather:'none',hours:23,view:'rooms',description:['沿院灯照亮的石径返回客房，观察窗口暖光和雨后仍可能保留的湿润。','Follow the path lights back to the guest rooms, observing warm windows and possible retained moisture.']},
+};
+export function stayResponse(weather,hours){
+ if(weather==='hail')return{key:'hail',title:['冰雹体验 · 硬地与檐下对照','Hail experience · hard ground and shelter'],description:['冰粒快速落下，石径短促反弹、泥地迅速停住。进入檐下比较屋顶敲击声。','Ice pellets fall quickly, rebound briefly on stone and settle on earth. Compare roof impacts from the porch.'],action:['进入檐下观察','View from the porch'],view:'rainporch'};
+ if(weather==='snow')return{key:'snow',title:['雪天体验 · 屋顶与露天地面对照','Snow experience · roofs and exposed ground'],description:['慢落雪花随风飘移；屋顶与露天院落逐渐积雪，檐下不铺雪。积雪采用加速演示，停雪后逐渐消退。','Snow drifts in the wind and settles on roofs and exposed ground, leaving shelter clear. Accumulation and recession use accelerated visual time.'],action:['查看天空与院落','View sky and courtyard'],view:'overview'};
+ if(['storm','darkstorm','cyclone'].includes(weather))return{key:'shelter',title:['风暴体验 · 转入檐下观察','Storm experience · view from shelter'],description:['此演示路线改为茶亭观察，可点击“进入茶亭”；实际出行请以当地预警为准。','This demo offers a pavilion viewpoint. Select Enter pavilion; real travel depends on local advisories.'],action:['进入茶亭','Enter pavilion'],view:'shelter'};
+ if(['rain','sunshower'].includes(weather))return{key:'rain',title:['雨天体验 · 庭院与茶亭对照','Rain experience · garden and pavilion'],description:['露天石径逐渐湿润；进入檐下，雨声和雨丝遮挡一起变化。','The exposed path becomes wet; shelter changes both rainfall occlusion and sound.'],action:['进入茶亭','Enter pavilion'],view:'shelter'};
+ if(hours<6||hours>=18)return{key:'night',title:['夜间体验 · 灯光引导归途','Evening experience · follow the lights'],description:['院灯和窗口随天色亮起，可从客房归途视角查看照明效果。','Path lights and windows brighten with the time of day; inspect them on the return to the guest rooms.'],action:['查看归途','View the return path'],view:'rooms'};
+ return{key:'garden',title:['日间体验 · 探访花园','Daytime experience · explore the garden'],description:['在同一院落查看不同云量下的光照、树影与材质外观。','Compare light, tree shadows and materials under different cloud cover in the same garden.'],action:['走近花园','Explore the garden'],view:'surface'};
+}

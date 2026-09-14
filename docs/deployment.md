@@ -83,3 +83,9 @@ GitHub Pages 托管静态网页；联网排行榜、账户和持久化后端需�
 [在线 ARPG](https://yydshly.github.io/0913_codex_project/006-emberfall-arpg/) · [三图研究导览](https://yydshly.github.io/0913_codex_project/006-emberfall-arpg/research/) · [物理实验台介绍](https://yydshly.github.io/0913_codex_project/006-emberfall-arpg/research/physics-lab.html)。此前 Pages 运行 34824948133 已成功，2026-09-14 实际检查游戏、研究页、脚本、引擎模块及代表截图均返回 HTTP 200。
 
 本次补齐网站目录、研究导览与可玩游戏的双向入口。006 的 `app/build.mjs` 生成游戏及 `dist/research/`，沿用现有全站构建；Python Markdown 依赖已接入工作流。物理实验台的 Windows 包仍未网络发布。
+
+## 004 · 天空天气研究与听雨山居
+
+2026-09-14 根据用户要求归档研究理解、实际效果图与后期扩展，准备发布静态研究页及可操作院落。源码位于 `projects/004-eanpa-sky/app/`，根构建脚本自动执行 `build.mjs`，输出到 `site/004-eanpa-sky/`。研究页为根入口，`lab/` 为天气演示。
+
+构建按固定上游清单收集并校验 42 个必要运行文件，缓存与构建输出不提交，不复制完整上游世界。新增 40 项天气与宿主规则检查到现有工作流，保留其他项目构建。发布范围及真实验证见 [004 发布记录](../projects/004-eanpa-sky/publishing.md)。

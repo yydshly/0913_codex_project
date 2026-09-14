@@ -1,0 +1,179 @@
+{
+  "date": "2026-09-14",
+  "commit": "a197d3dc42577e9b870b471a39d6b1710c5b5633",
+  "scope": "Verified files in local disk cache; not RAM, VRAM, or a single page transfer.",
+  "bytes": 420991649,
+  "files": 232,
+  "groups": [
+    {
+      "path": "assets/pbr",
+      "bytes": 158034980,
+      "files": 9
+    },
+    {
+      "path": "assets/terrain",
+      "bytes": 67589699,
+      "files": 6
+    },
+    {
+      "path": "assets/vegetation",
+      "bytes": 46247805,
+      "files": 10
+    },
+    {
+      "path": "assets/ringworld",
+      "bytes": 36471917,
+      "files": 10
+    },
+    {
+      "path": "assets/player",
+      "bytes": 32190564,
+      "files": 1
+    },
+    {
+      "path": "assets/temple",
+      "bytes": 31720191,
+      "files": 15
+    },
+    {
+      "path": "assets/grass",
+      "bytes": 15765803,
+      "files": 26
+    },
+    {
+      "path": "assets/eidoverse",
+      "bytes": 11800152,
+      "files": 4
+    },
+    {
+      "path": "assets/audio",
+      "bytes": 5494716,
+      "files": 38
+    },
+    {
+      "path": "vendor",
+      "bytes": 4793480,
+      "files": 24
+    },
+    {
+      "path": "assets/asteroid_cluster_v3.glb",
+      "bytes": 3394664,
+      "files": 1
+    },
+    {
+      "path": "assets/starmap_tycho_4k.jpg",
+      "bytes": 3009146,
+      "files": 1
+    },
+    {
+      "path": "assets/moon_color_4k.jpg",
+      "bytes": 2031963,
+      "files": 1
+    },
+    {
+      "path": "src",
+      "bytes": 1219293,
+      "files": 54
+    },
+    {
+      "path": "engine",
+      "bytes": 566640,
+      "files": 20
+    },
+    {
+      "path": "assets/weather",
+      "bytes": 532318,
+      "files": 3
+    },
+    {
+      "path": "assets/collision",
+      "bytes": 99455,
+      "files": 1
+    },
+    {
+      "path": "qa",
+      "bytes": 10019,
+      "files": 2
+    },
+    {
+      "path": "index.html",
+      "bytes": 6842,
+      "files": 1
+    },
+    {
+      "path": "assets/brand",
+      "bytes": 4230,
+      "files": 1
+    },
+    {
+      "path": "KNOWN_ISSUES.md",
+      "bytes": 3492,
+      "files": 1
+    },
+    {
+      "path": "README.md",
+      "bytes": 3208,
+      "files": 1
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1066,
+      "files": 1
+    },
+    {
+      "path": "VERSION",
+      "bytes": 6,
+      "files": 1
+    }
+  ],
+  "largest": [
+    {
+      "path": "assets/pbr/eanpa_southwest_ground_v3/runtime/SouthwestGroundV3_PackedNxyRoughAO_14x2K_UASTC.ktx2",
+      "bytes": 75057198
+    },
+    {
+      "path": "assets/pbr/eanpa_southwest_ground_v3/runtime/SouthwestGroundV3_AlbedoHeight_14x2K_UASTC.ktx2",
+      "bytes": 71062959
+    },
+    {
+      "path": "assets/player/runtime/Aletheia_Chrome_1p_arms_viewmodel.glb",
+      "bytes": 32190564
+    },
+    {
+      "path": "assets/vegetation/joshuaTree_seed555.glb",
+      "bytes": 25496444
+    },
+    {
+      "path": "assets/terrain/Desert_rock_chunks_12_pieces_runtime_2k_lods.glb",
+      "bytes": 18707644
+    },
+    {
+      "path": "assets/terrain/Desert_Cliff_Mesa_High_runtime_2k_lods.glb",
+      "bytes": 17418524
+    },
+    {
+      "path": "assets/terrain/baked/eanpa_terrain_v1_height.f32",
+      "bytes": 16777216
+    },
+    {
+      "path": "assets/terrain/Desert_Cliff_Wide_Mesa_Low_runtime_2k_lods.glb",
+      "bytes": 14039596
+    },
+    {
+      "path": "assets/vegetation/saguaro_seed555.glb",
+      "bytes": 11704164
+    },
+    {
+      "path": "assets/eidoverse/perimeter/scifi_perimeter_wall_gate.glb",
+      "bytes": 11661860
+    },
+    {
+      "path": "assets/ringworld/ring_relief_v4.bin.gz",
+      "bytes": 10241123
+    },
+    {
+      "path": "assets/ringworld/ring_albedo_v4.png",
+      "bytes": 9059070
+    }
+  ]
+}

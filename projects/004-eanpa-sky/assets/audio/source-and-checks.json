@@ -1,0 +1,29 @@
+{
+  "source": "https://opengameart.org/content/rain-long-thunder",
+  "file": "https://opengameart.org/sites/default/files/rain-thunder.ogg",
+  "author": "WuxiaScrub",
+  "license": "CC0 1.0",
+  "retrieved": "2026-09-14",
+  "originalSHA256": "9499fd1aefa3b5d8ba3764ea46d15c00ab449be7e19c029290a1f52228f1434c",
+  "processing": "Rain: source 2–19s, 1.5s tail/head crossfade, DC removal, gain normalization. Thunder: source 20.7s–end, DC removal, peak normalization and edge fades. Selected rain excludes the documented thunder event.",
+  "outputs": [
+    {
+      "file": "rain-garden.ogg",
+      "bytes": 175471,
+      "duration": 15.5,
+      "rms": 0.05370352585685524,
+      "peak": 0.6611855626106262,
+      "loopSeamDelta": 0.022039785981178284,
+      "sha256": "9d8496c64125d3bef2e575b35f0890b1ca470c1e230127fe1b8bada5d8124da2"
+    },
+    {
+      "file": "thunder-natural.ogg",
+      "bytes": 243284,
+      "duration": 23.67265306122449,
+      "rms": 0.09334354159949705,
+      "peak": 0.7509373426437378,
+      "loopSeamDelta": 4.974852708983235e-05,
+      "sha256": "537fd8b68147ec62eececd26c00430be6f9770c4aaea32bf76581a32ea267007"
+    }
+  ]
+}

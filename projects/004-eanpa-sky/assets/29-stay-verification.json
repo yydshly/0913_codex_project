@@ -1,0 +1,507 @@
+{
+  "date": "2026-09-14T05:42:46.287Z",
+  "note": "Actual UI reports after transitions; sunshower can have zero local rain. No subjective listening or exhaustive combinations tested.",
+  "checks": {
+    "garden": {
+      "startupSeconds": 20.66,
+      "resourceMiB": 9.64,
+      "resourceFiles": 44,
+      "completedFrames": 5053,
+      "lastFPS": 55,
+      "weather": "sunshower",
+      "time": 16,
+      "budget": "balanced",
+      "stay": "garden",
+      "view": "surface",
+      "audio": {
+        "enabled": false,
+        "context": "uninitialized",
+        "loading": false,
+        "loaded": false,
+        "rain": 0,
+        "shelter": 0,
+        "rms": 0,
+        "thunderScheduled": 0,
+        "thunderPlayed": 0,
+        "pending": 0,
+        "listenerSource": "GPU rain cell and surface exposure",
+        "volume": 0.25,
+        "focus": "all",
+        "blocked": false,
+        "activeThunder": 0,
+        "source": "CC0 natural rain/thunder + quiet synthesized wind"
+      },
+      "errors": [],
+      "observations": [
+        {
+          "at": "2026-09-14T05:38:17.121Z",
+          "simulationSeconds": 0.05,
+          "action": "ready",
+          "detail": "live weather engine; procedural courtyard"
+        },
+        {
+          "at": "2026-09-14T05:38:17.122Z",
+          "simulationSeconds": 0.05,
+          "action": "view",
+          "detail": "entrance"
+        },
+        {
+          "at": "2026-09-14T05:38:17.122Z",
+          "simulationSeconds": 0.05,
+          "action": "guest-stop",
+          "detail": "arrival"
+        },
+        {
+          "at": "2026-09-14T05:38:34.965Z",
+          "simulationSeconds": 17.52,
+          "action": "view",
+          "detail": "surface"
+        },
+        {
+          "at": "2026-09-14T05:38:34.965Z",
+          "simulationSeconds": 17.52,
+          "action": "guest-stop",
+          "detail": "garden"
+        },
+        {
+          "at": "2026-09-14T05:39:57.284Z",
+          "simulationSeconds": 99.77,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        }
+      ]
+    },
+    "tea": {
+      "startupSeconds": 20.66,
+      "resourceMiB": 10.04,
+      "resourceFiles": 46,
+      "completedFrames": 7804,
+      "lastFPS": 60,
+      "weather": "rain",
+      "time": 17,
+      "budget": "balanced",
+      "stay": "tea",
+      "view": "shelter",
+      "audio": {
+        "enabled": true,
+        "context": "running",
+        "loading": false,
+        "loaded": true,
+        "rain": 0.695,
+        "shelter": 1,
+        "rms": 0.00367,
+        "thunderScheduled": 0,
+        "thunderPlayed": 0,
+        "pending": 0,
+        "listenerSource": "GPU rain cell and surface exposure",
+        "volume": 0.25,
+        "focus": "all",
+        "blocked": false,
+        "activeThunder": 0,
+        "source": "CC0 natural rain/thunder + quiet synthesized wind"
+      },
+      "errors": [],
+      "observations": [
+        {
+          "at": "2026-09-14T05:38:17.122Z",
+          "simulationSeconds": 0.05,
+          "action": "view",
+          "detail": "entrance"
+        },
+        {
+          "at": "2026-09-14T05:38:17.122Z",
+          "simulationSeconds": 0.05,
+          "action": "guest-stop",
+          "detail": "arrival"
+        },
+        {
+          "at": "2026-09-14T05:38:34.965Z",
+          "simulationSeconds": 17.52,
+          "action": "view",
+          "detail": "surface"
+        },
+        {
+          "at": "2026-09-14T05:38:34.965Z",
+          "simulationSeconds": 17.52,
+          "action": "guest-stop",
+          "detail": "garden"
+        },
+        {
+          "at": "2026-09-14T05:39:57.284Z",
+          "simulationSeconds": 99.77,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        },
+        {
+          "at": "2026-09-14T05:39:57.843Z",
+          "simulationSeconds": 100.05,
+          "action": "view",
+          "detail": "shelter"
+        },
+        {
+          "at": "2026-09-14T05:39:57.843Z",
+          "simulationSeconds": 100.05,
+          "action": "guest-weather-action",
+          "detail": "rain"
+        },
+        {
+          "at": "2026-09-14T05:40:03.516Z",
+          "simulationSeconds": 105.72,
+          "action": "view",
+          "detail": "shelter"
+        },
+        {
+          "at": "2026-09-14T05:40:03.516Z",
+          "simulationSeconds": 105.72,
+          "action": "guest-stop",
+          "detail": "tea"
+        },
+        {
+          "at": "2026-09-14T05:40:04.037Z",
+          "simulationSeconds": 106.23,
+          "action": "audio-loaded",
+          "detail": {
+            "source": "CC0 natural rain and thunder",
+            "files": 2
+          }
+        },
+        {
+          "at": "2026-09-14T05:40:04.037Z",
+          "simulationSeconds": 106.23,
+          "action": "audio",
+          "detail": true
+        },
+        {
+          "at": "2026-09-14T05:40:44.525Z",
+          "simulationSeconds": 146.74,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        }
+      ]
+    },
+    "overcast": {
+      "startupSeconds": 20.66,
+      "resourceMiB": 10.04,
+      "resourceFiles": 46,
+      "completedFrames": 10233,
+      "lastFPS": 52,
+      "weather": "overcast",
+      "time": 23,
+      "budget": "balanced",
+      "stay": "evening",
+      "view": "rooms",
+      "audio": {
+        "enabled": true,
+        "context": "running",
+        "loading": false,
+        "loaded": true,
+        "rain": 0,
+        "shelter": 0,
+        "rms": 0.00071,
+        "thunderScheduled": 0,
+        "thunderPlayed": 0,
+        "pending": 0,
+        "listenerSource": "GPU rain cell and surface exposure",
+        "volume": 0.25,
+        "focus": "all",
+        "blocked": false,
+        "activeThunder": 0,
+        "source": "CC0 natural rain/thunder + quiet synthesized wind"
+      },
+      "errors": [],
+      "observations": [
+        {
+          "at": "2026-09-14T05:39:57.284Z",
+          "simulationSeconds": 99.77,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        },
+        {
+          "at": "2026-09-14T05:39:57.843Z",
+          "simulationSeconds": 100.05,
+          "action": "view",
+          "detail": "shelter"
+        },
+        {
+          "at": "2026-09-14T05:39:57.843Z",
+          "simulationSeconds": 100.05,
+          "action": "guest-weather-action",
+          "detail": "rain"
+        },
+        {
+          "at": "2026-09-14T05:40:03.516Z",
+          "simulationSeconds": 105.72,
+          "action": "view",
+          "detail": "shelter"
+        },
+        {
+          "at": "2026-09-14T05:40:03.516Z",
+          "simulationSeconds": 105.72,
+          "action": "guest-stop",
+          "detail": "tea"
+        },
+        {
+          "at": "2026-09-14T05:40:04.037Z",
+          "simulationSeconds": 106.23,
+          "action": "audio-loaded",
+          "detail": {
+            "source": "CC0 natural rain and thunder",
+            "files": 2
+          }
+        },
+        {
+          "at": "2026-09-14T05:40:04.037Z",
+          "simulationSeconds": 106.23,
+          "action": "audio",
+          "detail": true
+        },
+        {
+          "at": "2026-09-14T05:40:44.525Z",
+          "simulationSeconds": 146.74,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        },
+        {
+          "at": "2026-09-14T05:40:45.098Z",
+          "simulationSeconds": 147.02,
+          "action": "view",
+          "detail": "rooms"
+        },
+        {
+          "at": "2026-09-14T05:40:45.098Z",
+          "simulationSeconds": 147.02,
+          "action": "guest-stop",
+          "detail": "evening"
+        },
+        {
+          "at": "2026-09-14T05:40:55.045Z",
+          "simulationSeconds": 156.97,
+          "action": "weather",
+          "detail": "overcast"
+        },
+        {
+          "at": "2026-09-14T05:41:28.612Z",
+          "simulationSeconds": 190.51,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        }
+      ]
+    },
+    "cyclone": {
+      "startupSeconds": 20.66,
+      "resourceMiB": 10.04,
+      "resourceFiles": 46,
+      "completedFrames": 11366,
+      "lastFPS": 54,
+      "weather": "cyclone",
+      "time": 23,
+      "budget": "balanced",
+      "stay": "evening",
+      "view": "rooms",
+      "audio": {
+        "enabled": true,
+        "context": "running",
+        "loading": false,
+        "loaded": true,
+        "rain": 1,
+        "shelter": 0,
+        "rms": 0.01584,
+        "thunderScheduled": 0,
+        "thunderPlayed": 0,
+        "pending": 0,
+        "listenerSource": "GPU rain cell and surface exposure",
+        "volume": 0.25,
+        "focus": "all",
+        "blocked": false,
+        "activeThunder": 0,
+        "source": "CC0 natural rain/thunder + quiet synthesized wind"
+      },
+      "errors": [],
+      "observations": [
+        {
+          "at": "2026-09-14T05:39:57.843Z",
+          "simulationSeconds": 100.05,
+          "action": "guest-weather-action",
+          "detail": "rain"
+        },
+        {
+          "at": "2026-09-14T05:40:03.516Z",
+          "simulationSeconds": 105.72,
+          "action": "view",
+          "detail": "shelter"
+        },
+        {
+          "at": "2026-09-14T05:40:03.516Z",
+          "simulationSeconds": 105.72,
+          "action": "guest-stop",
+          "detail": "tea"
+        },
+        {
+          "at": "2026-09-14T05:40:04.037Z",
+          "simulationSeconds": 106.23,
+          "action": "audio-loaded",
+          "detail": {
+            "source": "CC0 natural rain and thunder",
+            "files": 2
+          }
+        },
+        {
+          "at": "2026-09-14T05:40:04.037Z",
+          "simulationSeconds": 106.23,
+          "action": "audio",
+          "detail": true
+        },
+        {
+          "at": "2026-09-14T05:40:44.525Z",
+          "simulationSeconds": 146.74,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        },
+        {
+          "at": "2026-09-14T05:40:45.098Z",
+          "simulationSeconds": 147.02,
+          "action": "view",
+          "detail": "rooms"
+        },
+        {
+          "at": "2026-09-14T05:40:45.098Z",
+          "simulationSeconds": 147.02,
+          "action": "guest-stop",
+          "detail": "evening"
+        },
+        {
+          "at": "2026-09-14T05:40:55.045Z",
+          "simulationSeconds": 156.97,
+          "action": "weather",
+          "detail": "overcast"
+        },
+        {
+          "at": "2026-09-14T05:41:28.612Z",
+          "simulationSeconds": 190.51,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        },
+        {
+          "at": "2026-09-14T05:41:29.128Z",
+          "simulationSeconds": 190.75,
+          "action": "weather",
+          "detail": "cyclone"
+        },
+        {
+          "at": "2026-09-14T05:41:50.165Z",
+          "simulationSeconds": 211.79,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        }
+      ]
+    },
+    "clear": {
+      "startupSeconds": 20.66,
+      "resourceMiB": 10.04,
+      "resourceFiles": 46,
+      "completedFrames": 12938,
+      "lastFPS": 53,
+      "weather": "clear",
+      "time": 23,
+      "budget": "balanced",
+      "stay": "evening",
+      "view": "rooms",
+      "audio": {
+        "enabled": true,
+        "context": "running",
+        "loading": false,
+        "loaded": true,
+        "rain": 0,
+        "shelter": 0,
+        "rms": 0.00024,
+        "thunderScheduled": 0,
+        "thunderPlayed": 0,
+        "pending": 0,
+        "listenerSource": "GPU rain cell and surface exposure",
+        "volume": 0.25,
+        "focus": "all",
+        "blocked": false,
+        "activeThunder": 0,
+        "source": "CC0 natural rain/thunder + quiet synthesized wind"
+      },
+      "errors": [],
+      "observations": [
+        {
+          "at": "2026-09-14T05:40:03.516Z",
+          "simulationSeconds": 105.72,
+          "action": "guest-stop",
+          "detail": "tea"
+        },
+        {
+          "at": "2026-09-14T05:40:04.037Z",
+          "simulationSeconds": 106.23,
+          "action": "audio-loaded",
+          "detail": {
+            "source": "CC0 natural rain and thunder",
+            "files": 2
+          }
+        },
+        {
+          "at": "2026-09-14T05:40:04.037Z",
+          "simulationSeconds": 106.23,
+          "action": "audio",
+          "detail": true
+        },
+        {
+          "at": "2026-09-14T05:40:44.525Z",
+          "simulationSeconds": 146.74,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        },
+        {
+          "at": "2026-09-14T05:40:45.098Z",
+          "simulationSeconds": 147.02,
+          "action": "view",
+          "detail": "rooms"
+        },
+        {
+          "at": "2026-09-14T05:40:45.098Z",
+          "simulationSeconds": 147.02,
+          "action": "guest-stop",
+          "detail": "evening"
+        },
+        {
+          "at": "2026-09-14T05:40:55.045Z",
+          "simulationSeconds": 156.97,
+          "action": "weather",
+          "detail": "overcast"
+        },
+        {
+          "at": "2026-09-14T05:41:28.612Z",
+          "simulationSeconds": 190.51,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        },
+        {
+          "at": "2026-09-14T05:41:29.128Z",
+          "simulationSeconds": 190.75,
+          "action": "weather",
+          "detail": "cyclone"
+        },
+        {
+          "at": "2026-09-14T05:41:50.165Z",
+          "simulationSeconds": 211.79,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        },
+        {
+          "at": "2026-09-14T05:41:50.699Z",
+          "simulationSeconds": 212.03,
+          "action": "weather",
+          "detail": "clear"
+        },
+        {
+          "at": "2026-09-14T05:42:22.039Z",
+          "simulationSeconds": 243.37,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        }
+      ]
+    }
+  }
+}

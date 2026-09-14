@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {groundAt,advancePuddles} from './courtyard-rain.js';
+assert.deepEqual(groundAt(.7,5,1),{y:.14,kind:'stone'});
+assert.equal(groundAt(-3,4.5,0).kind,'earth');
+assert.equal(groundAt(-3,4.5,1).kind,'water');
+assert(groundAt(-3,4.5,1).y>groundAt(-3,4.5,0).y);
+assert.equal(groundAt(-5,10,1).kind,'earth');
+let water=0;for(let i=0;i<300;i++)water=advancePuddles(water,.7,.1);assert(water>.5&&water<.7);
+assert.equal(advancePuddles(water,0,0),water);
+const next=advancePuddles(water,0,.1);assert(next>0&&next<water);
+for(let i=0;i<8000;i++)water=advancePuddles(water,0,.1);assert(water<.001);
+console.log('Ground rain checks passed: stone/earth/water contact heights, gradual filling, drying and pause.');

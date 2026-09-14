@@ -1,0 +1,57 @@
+{
+  "date": "2026-09-14T08:55:00.702Z",
+  "roofSideEntry": {
+    "before": {
+      "x": 1.27,
+      "y": 1,
+      "z": 0,
+      "vx": -1,
+      "vz": 0,
+      "vy": -1,
+      "radius": 0.02,
+      "bounces": 0
+    },
+    "after": {
+      "x": 1.24506240895174,
+      "y": 5.17,
+      "z": 0,
+      "vx": -0.5479413623580441,
+      "vz": 0,
+      "vy": 0,
+      "radius": 0.02,
+      "bounces": 1,
+      "rest": 0
+    },
+    "dt": 0.05,
+    "events": [
+      {
+        "x": 1.24506240895174,
+        "y": 5.15,
+        "z": 0,
+        "kind": "hail-roof",
+        "strength": 0.10377083333333333,
+        "speed": 1.24525
+      }
+    ]
+  },
+  "overviewAudio": {
+    "camera": [
+      24,
+      14,
+      29
+    ],
+    "nominalGroundFootprint": {
+      "x": [
+        -10,
+        14
+      ],
+      "z": [
+        1,
+        14
+      ]
+    },
+    "minimumNominalGroundDistance": 22.564239406636336,
+    "gainAtThatDistance": 0,
+    "note": "Footprint bound omits wind drift; runtime event counts provide the observed far-view result."
+  }
+}

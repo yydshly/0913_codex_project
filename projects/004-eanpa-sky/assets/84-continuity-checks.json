@@ -1,0 +1,2457 @@
+{
+  "rainStart": {
+    "startupSeconds": 35.78,
+    "resourceMiB": 10.11,
+    "resourceFiles": 57,
+    "completedFrames": 1003,
+    "lastFPS": 60,
+    "paused": false,
+    "weather": "rain",
+    "time": 15.5,
+    "budget": "balanced",
+    "stay": "tea",
+    "view": "rural",
+    "camera": {
+      "position": [
+        -3,
+        1.2,
+        12
+      ],
+      "target": [
+        -3,
+        0.35,
+        1
+      ]
+    },
+    "sequence": {
+      "started": 9.623600000035772,
+      "phase": "rain"
+    },
+    "atmosphere": {
+      "fog": 0.005442215833378788,
+      "cloud": 0.8903693055631317,
+      "sunIntensity": 0.847,
+      "skyLightIntensity": 0.573
+    },
+    "lighting": {
+      "mode": "auto",
+      "brightness": 0.7,
+      "tea": true,
+      "path": true,
+      "rooms": true
+    },
+    "lightOutput": {
+      "mode": "auto",
+      "brightness": 0.7,
+      "targets": {
+        "tea": 0,
+        "path": 0,
+        "rooms": 0
+      },
+      "levels": {
+        "tea": 0,
+        "path": 0,
+        "rooms": 0
+      },
+      "teaIntensity": 0,
+      "pathIntensity": 0,
+      "roomIntensity": 0,
+      "shadowLights": 0
+    },
+    "layers": {
+      "roofWater": 0.609,
+      "activeDrops": 22,
+      "impactEvents": 134,
+      "fogDensity": 0.00544,
+      "detailEnabled": true,
+      "groundRain": {
+        "wavesEnabled": true,
+        "waves": [
+          {
+            "impulses": 16,
+            "ticks": 1538,
+            "peak": 0.000283,
+            "energy": 0.000006039,
+            "size": 64
+          },
+          {
+            "impulses": 18,
+            "ticks": 1538,
+            "peak": 0.000491,
+            "energy": 0.000007129,
+            "size": 64
+          },
+          {
+            "impulses": 133,
+            "ticks": 1538,
+            "peak": 0.000803,
+            "energy": 0.000062741,
+            "size": 64
+          }
+        ],
+        "rain": 0.677,
+        "falling": 149,
+        "contacts": 45,
+        "activeSpray": 39,
+        "puddleFill": 0.303,
+        "soilMoisture": 0.547,
+        "dryingRate": 0.634,
+        "impacts": 3874,
+        "region": "open courtyard plus east puddle at x 4.4, z 4"
+      },
+      "snow": {
+        "engineWeather": null,
+        "intensity": 0,
+        "accumulation": 0,
+        "visibleFlakes": 0,
+        "capacity": 1800,
+        "shelteredFloorExcluded": true
+      },
+      "hail": {
+        "intensity": 0,
+        "falling": 0,
+        "bouncing": 0,
+        "resting": 0,
+        "impacts": 0,
+        "bySurface": {
+          "roof": 0,
+          "stone": 0,
+          "earth": 0,
+          "water": 0,
+          "snow": 0,
+          "foliage": 0
+        },
+        "capacity": 420
+      },
+      "distanceEnabled": true
+    },
+    "audio": {
+      "enabled": true,
+      "context": "running",
+      "loading": false,
+      "loaded": true,
+      "rain": 0.675,
+      "shelter": 0,
+      "rms": 0.01061,
+      "thunderScheduled": 0,
+      "thunderPlayed": 0,
+      "pending": 0,
+      "detailPlayed": 65,
+      "hailFarImpacts": 0,
+      "hailFarLevel": 0,
+      "detailByKind": {
+        "stone": 49,
+        "earth": 4,
+        "roof": 12
+      },
+      "listenerSource": "GPU rain cell and surface exposure",
+      "snow": 0,
+      "hail": 0,
+      "lastDetail": {
+        "kind": "stone",
+        "variant": 1,
+        "cutoff": 2879,
+        "distance": 11.24,
+        "pan": 0.03
+      },
+      "stems": {
+        "hailFar": 0,
+        "rain": 0.607,
+        "roof": 0,
+        "leaves": 0.005,
+        "wind": 0.041
+      },
+      "volume": 0.25,
+      "detailVolume": 0.55,
+      "focus": "all",
+      "blocked": false,
+      "activeDetails": 1,
+      "activeThunder": 0,
+      "impactVariants": 6,
+      "source": "CC0 rain/thunder + filtered ambience and varied synthesized contacts"
+    },
+    "errors": [],
+    "observations": [
+      {
+        "at": "2026-09-14T11:20:02.046Z",
+        "simulationSeconds": 0.05,
+        "action": "ready",
+        "detail": "live weather engine; procedural courtyard"
+      },
+      {
+        "at": "2026-09-14T11:20:02.048Z",
+        "simulationSeconds": 0.05,
+        "action": "view",
+        "detail": "shelter"
+      },
+      {
+        "at": "2026-09-14T11:20:02.048Z",
+        "simulationSeconds": 0.05,
+        "action": "guest-stop",
+        "detail": "tea"
+      },
+      {
+        "at": "2026-09-14T11:20:02.048Z",
+        "simulationSeconds": 0.05,
+        "action": "view",
+        "detail": "rainporch"
+      },
+      {
+        "at": "2026-09-14T11:20:11.903Z",
+        "simulationSeconds": 9.62,
+        "action": "weather",
+        "detail": "rain"
+      },
+      {
+        "at": "2026-09-14T11:20:11.903Z",
+        "simulationSeconds": 9.62,
+        "action": "view",
+        "detail": "rural"
+      },
+      {
+        "at": "2026-09-14T11:20:11.903Z",
+        "simulationSeconds": 9.62,
+        "action": "rain-sequence",
+        "detail": "started; 40s rain then 70s clearing; time preserved"
+      },
+      {
+        "at": "2026-09-14T11:20:12.431Z",
+        "simulationSeconds": 10.11,
+        "action": "audio-loaded",
+        "detail": {
+          "source": "CC0 natural rain and thunder",
+          "files": 2
+        }
+      },
+      {
+        "at": "2026-09-14T11:20:12.432Z",
+        "simulationSeconds": 10.11,
+        "action": "audio",
+        "detail": true
+      },
+      {
+        "at": "2026-09-14T11:20:19.483Z",
+        "simulationSeconds": 17.19,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      }
+    ]
+  },
+  "clearing": {
+    "startupSeconds": 35.78,
+    "resourceMiB": 10.11,
+    "resourceFiles": 57,
+    "completedFrames": 3043,
+    "lastFPS": 60,
+    "paused": false,
+    "weather": "clear",
+    "time": 15.5,
+    "budget": "balanced",
+    "stay": "tea",
+    "view": "rural",
+    "camera": {
+      "position": [
+        -3,
+        1.2,
+        12
+      ],
+      "target": [
+        -3,
+        0.35,
+        1
+      ]
+    },
+    "sequence": {
+      "started": 9.623600000035772,
+      "phase": "drying"
+    },
+    "atmosphere": {
+      "fog": 0.0036784758069848674,
+      "cloud": 0.5515347621318326,
+      "sunIntensity": 0.938,
+      "skyLightIntensity": 0.587
+    },
+    "lighting": {
+      "mode": "auto",
+      "brightness": 0.7,
+      "tea": true,
+      "path": true,
+      "rooms": true
+    },
+    "lightOutput": {
+      "mode": "auto",
+      "brightness": 0.7,
+      "targets": {
+        "tea": 0,
+        "path": 0,
+        "rooms": 0
+      },
+      "levels": {
+        "tea": 0,
+        "path": 0,
+        "rooms": 0
+      },
+      "teaIntensity": 0,
+      "pathIntensity": 0,
+      "roomIntensity": 0,
+      "shadowLights": 0
+    },
+    "layers": {
+      "roofWater": 0.695,
+      "activeDrops": 17,
+      "impactEvents": 808,
+      "fogDensity": 0.00368,
+      "detailEnabled": true,
+      "groundRain": {
+        "wavesEnabled": true,
+        "waves": [
+          {
+            "impulses": 188,
+            "ticks": 4634,
+            "peak": 0.00053,
+            "energy": 0.000013701,
+            "size": 64
+          },
+          {
+            "impulses": 227,
+            "ticks": 4634,
+            "peak": 0.000324,
+            "energy": 0.000009716,
+            "size": 64
+          },
+          {
+            "impulses": 1319,
+            "ticks": 4634,
+            "peak": 0.001687,
+            "energy": 0.000094657,
+            "size": 64
+          }
+        ],
+        "rain": 0.649,
+        "falling": 139,
+        "contacts": 48,
+        "activeSpray": 36,
+        "puddleFill": 0.639,
+        "soilMoisture": 0.699,
+        "dryingRate": 0.814,
+        "impacts": 16312,
+        "region": "open courtyard plus east puddle at x 4.4, z 4"
+      },
+      "snow": {
+        "engineWeather": null,
+        "intensity": 0,
+        "accumulation": 0,
+        "visibleFlakes": 0,
+        "capacity": 1800,
+        "shelteredFloorExcluded": true
+      },
+      "hail": {
+        "intensity": 0,
+        "falling": 0,
+        "bouncing": 0,
+        "resting": 0,
+        "impacts": 0,
+        "bySurface": {
+          "roof": 0,
+          "stone": 0,
+          "earth": 0,
+          "water": 0,
+          "snow": 0,
+          "foliage": 0
+        },
+        "capacity": 420
+      },
+      "distanceEnabled": true
+    },
+    "audio": {
+      "enabled": true,
+      "context": "running",
+      "loading": false,
+      "loaded": true,
+      "rain": 0.649,
+      "shelter": 0,
+      "rms": 0.01003,
+      "thunderScheduled": 0,
+      "thunderPlayed": 0,
+      "pending": 0,
+      "detailPlayed": 418,
+      "hailFarImpacts": 0,
+      "hailFarLevel": 0,
+      "detailByKind": {
+        "stone": 331,
+        "earth": 24,
+        "roof": 63
+      },
+      "listenerSource": "GPU rain cell and surface exposure",
+      "snow": 0,
+      "hail": 0,
+      "lastDetail": {
+        "kind": "stone",
+        "variant": 4,
+        "cutoff": 2817,
+        "distance": 11.64,
+        "pan": 0.26
+      },
+      "stems": {
+        "hailFar": 0,
+        "rain": 0.585,
+        "roof": 0,
+        "leaves": 0.005,
+        "wind": 0.04
+      },
+      "volume": 0.25,
+      "detailVolume": 0.55,
+      "focus": "all",
+      "blocked": false,
+      "activeDetails": 2,
+      "activeThunder": 0,
+      "impactVariants": 6,
+      "source": "CC0 rain/thunder + filtered ambience and varied synthesized contacts"
+    },
+    "errors": [],
+    "observations": [
+      {
+        "at": "2026-09-14T11:20:02.048Z",
+        "simulationSeconds": 0.05,
+        "action": "view",
+        "detail": "shelter"
+      },
+      {
+        "at": "2026-09-14T11:20:02.048Z",
+        "simulationSeconds": 0.05,
+        "action": "guest-stop",
+        "detail": "tea"
+      },
+      {
+        "at": "2026-09-14T11:20:02.048Z",
+        "simulationSeconds": 0.05,
+        "action": "view",
+        "detail": "rainporch"
+      },
+      {
+        "at": "2026-09-14T11:20:11.903Z",
+        "simulationSeconds": 9.62,
+        "action": "weather",
+        "detail": "rain"
+      },
+      {
+        "at": "2026-09-14T11:20:11.903Z",
+        "simulationSeconds": 9.62,
+        "action": "view",
+        "detail": "rural"
+      },
+      {
+        "at": "2026-09-14T11:20:11.903Z",
+        "simulationSeconds": 9.62,
+        "action": "rain-sequence",
+        "detail": "started; 40s rain then 70s clearing; time preserved"
+      },
+      {
+        "at": "2026-09-14T11:20:12.431Z",
+        "simulationSeconds": 10.11,
+        "action": "audio-loaded",
+        "detail": {
+          "source": "CC0 natural rain and thunder",
+          "files": 2
+        }
+      },
+      {
+        "at": "2026-09-14T11:20:12.432Z",
+        "simulationSeconds": 10.11,
+        "action": "audio",
+        "detail": true
+      },
+      {
+        "at": "2026-09-14T11:20:19.483Z",
+        "simulationSeconds": 17.19,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:20:52.401Z",
+        "simulationSeconds": 49.63,
+        "action": "weather",
+        "detail": "clear"
+      },
+      {
+        "at": "2026-09-14T11:20:52.401Z",
+        "simulationSeconds": 49.63,
+        "action": "rain-sequence",
+        "detail": "drying"
+      },
+      {
+        "at": "2026-09-14T11:20:54.415Z",
+        "simulationSeconds": 51.63,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      }
+    ]
+  },
+  "pausedCycle": {
+    "startupSeconds": 35.78,
+    "resourceMiB": 10.11,
+    "resourceFiles": 57,
+    "completedFrames": 3726,
+    "lastFPS": 60,
+    "paused": true,
+    "weather": "clear",
+    "time": 15.5,
+    "budget": "balanced",
+    "stay": "tea",
+    "view": "rural",
+    "camera": {
+      "position": [
+        -3,
+        1.2,
+        12
+      ],
+      "target": [
+        -3,
+        0.35,
+        1
+      ]
+    },
+    "sequence": {
+      "started": 9.623600000035772,
+      "phase": "drying"
+    },
+    "atmosphere": {
+      "fog": 0.0010598814791554297,
+      "cloud": 0.05058603705618938,
+      "sunIntensity": 3.079,
+      "skyLightIntensity": 0.919
+    },
+    "lighting": {
+      "mode": "auto",
+      "brightness": 0.7,
+      "tea": true,
+      "path": true,
+      "rooms": true
+    },
+    "lightOutput": {
+      "mode": "auto",
+      "brightness": 0.7,
+      "targets": {
+        "tea": 0,
+        "path": 0,
+        "rooms": 0
+      },
+      "levels": {
+        "tea": 0,
+        "path": 0,
+        "rooms": 0
+      },
+      "teaIntensity": 0,
+      "pathIntensity": 0,
+      "roomIntensity": 0,
+      "shadowLights": 0
+    },
+    "layers": {
+      "roofWater": 0.285,
+      "activeDrops": 12,
+      "impactEvents": 984,
+      "fogDensity": 0.00106,
+      "detailEnabled": true,
+      "groundRain": {
+        "wavesEnabled": true,
+        "waves": [
+          {
+            "impulses": 212,
+            "ticks": 5662,
+            "peak": 0,
+            "energy": 0,
+            "size": 64
+          },
+          {
+            "impulses": 266,
+            "ticks": 5662,
+            "peak": 0,
+            "energy": 0,
+            "size": 64
+          },
+          {
+            "impulses": 1477,
+            "ticks": 5662,
+            "peak": 0.000001,
+            "energy": 0,
+            "size": 64
+          }
+        ],
+        "rain": 0,
+        "falling": 0,
+        "contacts": 0,
+        "activeSpray": 0,
+        "puddleFill": 0.591,
+        "soilMoisture": 0.689,
+        "dryingRate": 0.97,
+        "impacts": 17798,
+        "region": "open courtyard plus east puddle at x 4.4, z 4"
+      },
+      "snow": {
+        "engineWeather": null,
+        "intensity": 0,
+        "accumulation": 0,
+        "visibleFlakes": 0,
+        "capacity": 1800,
+        "shelteredFloorExcluded": true
+      },
+      "hail": {
+        "intensity": 0,
+        "falling": 0,
+        "bouncing": 0,
+        "resting": 0,
+        "impacts": 0,
+        "bySurface": {
+          "roof": 0,
+          "stone": 0,
+          "earth": 0,
+          "water": 0,
+          "snow": 0,
+          "foliage": 0
+        },
+        "capacity": 420
+      },
+      "distanceEnabled": true
+    },
+    "audio": {
+      "enabled": true,
+      "context": "suspended",
+      "loading": false,
+      "loaded": true,
+      "rain": 0,
+      "shelter": 0,
+      "rms": 0,
+      "thunderScheduled": 0,
+      "thunderPlayed": 0,
+      "pending": 0,
+      "detailPlayed": 508,
+      "hailFarImpacts": 0,
+      "hailFarLevel": 0,
+      "detailByKind": {
+        "stone": 415,
+        "earth": 29,
+        "roof": 64
+      },
+      "listenerSource": "GPU rain cell and surface exposure",
+      "snow": 0,
+      "hail": 0,
+      "lastDetail": {
+        "kind": "stone",
+        "variant": 1,
+        "cutoff": 2842,
+        "distance": 11.47,
+        "pan": -0.21
+      },
+      "stems": {
+        "hailFar": 0,
+        "rain": 0,
+        "roof": 0,
+        "leaves": 0,
+        "wind": 0.008
+      },
+      "volume": 0.25,
+      "detailVolume": 0.55,
+      "focus": "all",
+      "blocked": true,
+      "activeDetails": 0,
+      "activeThunder": 0,
+      "impactVariants": 6,
+      "source": "CC0 rain/thunder + filtered ambience and varied synthesized contacts"
+    },
+    "errors": [],
+    "observations": [
+      {
+        "at": "2026-09-14T11:20:02.048Z",
+        "simulationSeconds": 0.05,
+        "action": "view",
+        "detail": "rainporch"
+      },
+      {
+        "at": "2026-09-14T11:20:11.903Z",
+        "simulationSeconds": 9.62,
+        "action": "weather",
+        "detail": "rain"
+      },
+      {
+        "at": "2026-09-14T11:20:11.903Z",
+        "simulationSeconds": 9.62,
+        "action": "view",
+        "detail": "rural"
+      },
+      {
+        "at": "2026-09-14T11:20:11.903Z",
+        "simulationSeconds": 9.62,
+        "action": "rain-sequence",
+        "detail": "started; 40s rain then 70s clearing; time preserved"
+      },
+      {
+        "at": "2026-09-14T11:20:12.431Z",
+        "simulationSeconds": 10.11,
+        "action": "audio-loaded",
+        "detail": {
+          "source": "CC0 natural rain and thunder",
+          "files": 2
+        }
+      },
+      {
+        "at": "2026-09-14T11:20:12.432Z",
+        "simulationSeconds": 10.11,
+        "action": "audio",
+        "detail": true
+      },
+      {
+        "at": "2026-09-14T11:20:19.483Z",
+        "simulationSeconds": 17.19,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:20:52.401Z",
+        "simulationSeconds": 49.63,
+        "action": "weather",
+        "detail": "clear"
+      },
+      {
+        "at": "2026-09-14T11:20:52.401Z",
+        "simulationSeconds": 49.63,
+        "action": "rain-sequence",
+        "detail": "drying"
+      },
+      {
+        "at": "2026-09-14T11:20:54.415Z",
+        "simulationSeconds": 51.63,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:21:06.173Z",
+        "simulationSeconds": 63.05,
+        "action": "pause",
+        "detail": true
+      },
+      {
+        "at": "2026-09-14T11:21:06.455Z",
+        "simulationSeconds": 63.05,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      }
+    ]
+  },
+  "pausedCycleLater": {
+    "startupSeconds": 35.78,
+    "resourceMiB": 10.11,
+    "resourceFiles": 57,
+    "completedFrames": 3726,
+    "lastFPS": 60,
+    "paused": true,
+    "weather": "clear",
+    "time": 15.5,
+    "budget": "balanced",
+    "stay": "tea",
+    "view": "rural",
+    "camera": {
+      "position": [
+        -3,
+        1.2,
+        12
+      ],
+      "target": [
+        -3,
+        0.35,
+        1
+      ]
+    },
+    "sequence": {
+      "started": 9.623600000035772,
+      "phase": "drying"
+    },
+    "atmosphere": {
+      "fog": 0.0010598814791554297,
+      "cloud": 0.05058603705618938,
+      "sunIntensity": 3.079,
+      "skyLightIntensity": 0.919
+    },
+    "lighting": {
+      "mode": "auto",
+      "brightness": 0.7,
+      "tea": true,
+      "path": true,
+      "rooms": true
+    },
+    "lightOutput": {
+      "mode": "auto",
+      "brightness": 0.7,
+      "targets": {
+        "tea": 0,
+        "path": 0,
+        "rooms": 0
+      },
+      "levels": {
+        "tea": 0,
+        "path": 0,
+        "rooms": 0
+      },
+      "teaIntensity": 0,
+      "pathIntensity": 0,
+      "roomIntensity": 0,
+      "shadowLights": 0
+    },
+    "layers": {
+      "roofWater": 0.285,
+      "activeDrops": 12,
+      "impactEvents": 984,
+      "fogDensity": 0.00106,
+      "detailEnabled": true,
+      "groundRain": {
+        "wavesEnabled": true,
+        "waves": [
+          {
+            "impulses": 212,
+            "ticks": 5662,
+            "peak": 0,
+            "energy": 0,
+            "size": 64
+          },
+          {
+            "impulses": 266,
+            "ticks": 5662,
+            "peak": 0,
+            "energy": 0,
+            "size": 64
+          },
+          {
+            "impulses": 1477,
+            "ticks": 5662,
+            "peak": 0.000001,
+            "energy": 0,
+            "size": 64
+          }
+        ],
+        "rain": 0,
+        "falling": 0,
+        "contacts": 0,
+        "activeSpray": 0,
+        "puddleFill": 0.591,
+        "soilMoisture": 0.689,
+        "dryingRate": 0.97,
+        "impacts": 17798,
+        "region": "open courtyard plus east puddle at x 4.4, z 4"
+      },
+      "snow": {
+        "engineWeather": null,
+        "intensity": 0,
+        "accumulation": 0,
+        "visibleFlakes": 0,
+        "capacity": 1800,
+        "shelteredFloorExcluded": true
+      },
+      "hail": {
+        "intensity": 0,
+        "falling": 0,
+        "bouncing": 0,
+        "resting": 0,
+        "impacts": 0,
+        "bySurface": {
+          "roof": 0,
+          "stone": 0,
+          "earth": 0,
+          "water": 0,
+          "snow": 0,
+          "foliage": 0
+        },
+        "capacity": 420
+      },
+      "distanceEnabled": true
+    },
+    "audio": {
+      "enabled": true,
+      "context": "suspended",
+      "loading": false,
+      "loaded": true,
+      "rain": 0,
+      "shelter": 0,
+      "rms": 0,
+      "thunderScheduled": 0,
+      "thunderPlayed": 0,
+      "pending": 0,
+      "detailPlayed": 508,
+      "hailFarImpacts": 0,
+      "hailFarLevel": 0,
+      "detailByKind": {
+        "stone": 415,
+        "earth": 29,
+        "roof": 64
+      },
+      "listenerSource": "GPU rain cell and surface exposure",
+      "snow": 0,
+      "hail": 0,
+      "lastDetail": {
+        "kind": "stone",
+        "variant": 1,
+        "cutoff": 2842,
+        "distance": 11.47,
+        "pan": -0.21
+      },
+      "stems": {
+        "hailFar": 0,
+        "rain": 0,
+        "roof": 0,
+        "leaves": 0,
+        "wind": 0.008
+      },
+      "volume": 0.25,
+      "detailVolume": 0.55,
+      "focus": "all",
+      "blocked": true,
+      "activeDetails": 0,
+      "activeThunder": 0,
+      "impactVariants": 6,
+      "source": "CC0 rain/thunder + filtered ambience and varied synthesized contacts"
+    },
+    "errors": [],
+    "observations": [
+      {
+        "at": "2026-09-14T11:20:11.903Z",
+        "simulationSeconds": 9.62,
+        "action": "weather",
+        "detail": "rain"
+      },
+      {
+        "at": "2026-09-14T11:20:11.903Z",
+        "simulationSeconds": 9.62,
+        "action": "view",
+        "detail": "rural"
+      },
+      {
+        "at": "2026-09-14T11:20:11.903Z",
+        "simulationSeconds": 9.62,
+        "action": "rain-sequence",
+        "detail": "started; 40s rain then 70s clearing; time preserved"
+      },
+      {
+        "at": "2026-09-14T11:20:12.431Z",
+        "simulationSeconds": 10.11,
+        "action": "audio-loaded",
+        "detail": {
+          "source": "CC0 natural rain and thunder",
+          "files": 2
+        }
+      },
+      {
+        "at": "2026-09-14T11:20:12.432Z",
+        "simulationSeconds": 10.11,
+        "action": "audio",
+        "detail": true
+      },
+      {
+        "at": "2026-09-14T11:20:19.483Z",
+        "simulationSeconds": 17.19,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:20:52.401Z",
+        "simulationSeconds": 49.63,
+        "action": "weather",
+        "detail": "clear"
+      },
+      {
+        "at": "2026-09-14T11:20:52.401Z",
+        "simulationSeconds": 49.63,
+        "action": "rain-sequence",
+        "detail": "drying"
+      },
+      {
+        "at": "2026-09-14T11:20:54.415Z",
+        "simulationSeconds": 51.63,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:21:06.173Z",
+        "simulationSeconds": 63.05,
+        "action": "pause",
+        "detail": true
+      },
+      {
+        "at": "2026-09-14T11:21:06.455Z",
+        "simulationSeconds": 63.05,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:21:35.541Z",
+        "simulationSeconds": 63.05,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      }
+    ]
+  },
+  "dryLater": {
+    "startupSeconds": 35.78,
+    "resourceMiB": 10.11,
+    "resourceFiles": 57,
+    "completedFrames": 6664,
+    "lastFPS": 58,
+    "paused": false,
+    "weather": "clear",
+    "time": 15.5,
+    "budget": "balanced",
+    "stay": "tea",
+    "view": "rural",
+    "camera": {
+      "position": [
+        -3,
+        1.2,
+        12
+      ],
+      "target": [
+        -3,
+        0.35,
+        1
+      ]
+    },
+    "sequence": {
+      "started": 9.623600000035772,
+      "phase": "drying"
+    },
+    "atmosphere": {
+      "fog": 0.0009000006929399494,
+      "cloud": 0.02000013256249007,
+      "sunIntensity": 3.079,
+      "skyLightIntensity": 0.919
+    },
+    "lighting": {
+      "mode": "auto",
+      "brightness": 0.7,
+      "tea": true,
+      "path": true,
+      "rooms": true
+    },
+    "lightOutput": {
+      "mode": "auto",
+      "brightness": 0.7,
+      "targets": {
+        "tea": 0,
+        "path": 0,
+        "rooms": 0
+      },
+      "levels": {
+        "tea": 0,
+        "path": 0,
+        "rooms": 0
+      },
+      "teaIntensity": 0,
+      "pathIntensity": 0,
+      "roomIntensity": 0,
+      "shadowLights": 0
+    },
+    "layers": {
+      "roofWater": 0.005,
+      "activeDrops": 0,
+      "impactEvents": 1060,
+      "fogDensity": 0.0009,
+      "detailEnabled": true,
+      "groundRain": {
+        "wavesEnabled": true,
+        "waves": [
+          {
+            "impulses": 212,
+            "ticks": 10108,
+            "peak": 0,
+            "energy": 0,
+            "size": 64
+          },
+          {
+            "impulses": 266,
+            "ticks": 10108,
+            "peak": 0,
+            "energy": 0,
+            "size": 64
+          },
+          {
+            "impulses": 1477,
+            "ticks": 10108,
+            "peak": 0,
+            "energy": 0,
+            "size": 64
+          }
+        ],
+        "rain": 0,
+        "falling": 0,
+        "contacts": 0,
+        "activeSpray": 0,
+        "puddleFill": 0.333,
+        "soilMoisture": 0.613,
+        "dryingRate": 0.987,
+        "impacts": 17798,
+        "region": "open courtyard plus east puddle at x 4.4, z 4"
+      },
+      "snow": {
+        "engineWeather": null,
+        "intensity": 0,
+        "accumulation": 0,
+        "visibleFlakes": 0,
+        "capacity": 1800,
+        "shelteredFloorExcluded": true
+      },
+      "hail": {
+        "intensity": 0,
+        "falling": 0,
+        "bouncing": 0,
+        "resting": 0,
+        "impacts": 0,
+        "bySurface": {
+          "roof": 0,
+          "stone": 0,
+          "earth": 0,
+          "water": 0,
+          "snow": 0,
+          "foliage": 0
+        },
+        "capacity": 420
+      },
+      "distanceEnabled": true
+    },
+    "audio": {
+      "enabled": true,
+      "context": "running",
+      "loading": false,
+      "loaded": true,
+      "rain": 0,
+      "shelter": 0,
+      "rms": 0.00023,
+      "thunderScheduled": 0,
+      "thunderPlayed": 0,
+      "pending": 0,
+      "detailPlayed": 568,
+      "hailFarImpacts": 0,
+      "hailFarLevel": 0,
+      "detailByKind": {
+        "stone": 475,
+        "earth": 29,
+        "roof": 64
+      },
+      "listenerSource": "GPU rain cell and surface exposure",
+      "snow": 0,
+      "hail": 0,
+      "lastDetail": {
+        "kind": "stone",
+        "variant": 5,
+        "cutoff": 2872,
+        "distance": 11.28,
+        "pan": 0.12
+      },
+      "stems": {
+        "hailFar": 0,
+        "rain": 0,
+        "roof": 0,
+        "leaves": 0,
+        "wind": 0.008
+      },
+      "volume": 0.25,
+      "detailVolume": 0.55,
+      "focus": "all",
+      "blocked": false,
+      "activeDetails": 0,
+      "activeThunder": 0,
+      "impactVariants": 6,
+      "source": "CC0 rain/thunder + filtered ambience and varied synthesized contacts"
+    },
+    "errors": [],
+    "observations": [
+      {
+        "at": "2026-09-14T11:20:12.432Z",
+        "simulationSeconds": 10.11,
+        "action": "audio",
+        "detail": true
+      },
+      {
+        "at": "2026-09-14T11:20:19.483Z",
+        "simulationSeconds": 17.19,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:20:52.401Z",
+        "simulationSeconds": 49.63,
+        "action": "weather",
+        "detail": "clear"
+      },
+      {
+        "at": "2026-09-14T11:20:52.401Z",
+        "simulationSeconds": 49.63,
+        "action": "rain-sequence",
+        "detail": "drying"
+      },
+      {
+        "at": "2026-09-14T11:20:54.415Z",
+        "simulationSeconds": 51.63,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:21:06.173Z",
+        "simulationSeconds": 63.05,
+        "action": "pause",
+        "detail": true
+      },
+      {
+        "at": "2026-09-14T11:21:06.455Z",
+        "simulationSeconds": 63.05,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:21:35.541Z",
+        "simulationSeconds": 63.05,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:21:36.172Z",
+        "simulationSeconds": 63.05,
+        "action": "pause",
+        "detail": false
+      },
+      {
+        "at": "2026-09-14T11:21:42.273Z",
+        "simulationSeconds": 69.14,
+        "action": "language",
+        "detail": "en"
+      },
+      {
+        "at": "2026-09-14T11:21:54.207Z",
+        "simulationSeconds": 81.07,
+        "action": "language",
+        "detail": "zh"
+      },
+      {
+        "at": "2026-09-14T11:22:25.587Z",
+        "simulationSeconds": 112.44,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      }
+    ]
+  },
+  "clearSky": {
+    "startupSeconds": 35.78,
+    "resourceMiB": 10.11,
+    "resourceFiles": 57,
+    "completedFrames": 9631,
+    "lastFPS": 50,
+    "paused": false,
+    "weather": "clear",
+    "time": 15.5,
+    "budget": "balanced",
+    "stay": "tea",
+    "view": "sky",
+    "camera": {
+      "position": [
+        13.6116,
+        22.0303,
+        22.1587
+      ],
+      "target": [
+        -4,
+        20,
+        -40
+      ]
+    },
+    "sequence": null,
+    "atmosphere": {
+      "fog": 0.0009000000000015663,
+      "cloud": 0.020000000000299636,
+      "sunIntensity": 3.079,
+      "skyLightIntensity": 0.919
+    },
+    "lighting": {
+      "mode": "auto",
+      "brightness": 0.7,
+      "tea": true,
+      "path": true,
+      "rooms": true
+    },
+    "lightOutput": {
+      "mode": "auto",
+      "brightness": 0.7,
+      "targets": {
+        "tea": 0,
+        "path": 0,
+        "rooms": 0
+      },
+      "levels": {
+        "tea": 0,
+        "path": 0,
+        "rooms": 0
+      },
+      "teaIntensity": 0,
+      "pathIntensity": 0,
+      "roomIntensity": 0,
+      "shadowLights": 0
+    },
+    "layers": {
+      "roofWater": 0,
+      "activeDrops": 0,
+      "impactEvents": 1060,
+      "fogDensity": 0.0009,
+      "detailEnabled": true,
+      "groundRain": {
+        "wavesEnabled": true,
+        "waves": [
+          {
+            "impulses": 212,
+            "ticks": 14785,
+            "peak": 0,
+            "energy": 0,
+            "size": 64
+          },
+          {
+            "impulses": 266,
+            "ticks": 14785,
+            "peak": 0,
+            "energy": 0,
+            "size": 64
+          },
+          {
+            "impulses": 1477,
+            "ticks": 14785,
+            "peak": 0,
+            "energy": 0,
+            "size": 64
+          }
+        ],
+        "rain": 0,
+        "falling": 0,
+        "contacts": 0,
+        "activeSpray": 0,
+        "puddleFill": 0.182,
+        "soilMoisture": 0.515,
+        "dryingRate": 0.987,
+        "impacts": 17798,
+        "region": "open courtyard plus east puddle at x 4.4, z 4"
+      },
+      "snow": {
+        "engineWeather": null,
+        "intensity": 0,
+        "accumulation": 0,
+        "visibleFlakes": 0,
+        "capacity": 1800,
+        "shelteredFloorExcluded": true
+      },
+      "hail": {
+        "intensity": 0,
+        "falling": 0,
+        "bouncing": 0,
+        "resting": 0,
+        "impacts": 0,
+        "bySurface": {
+          "roof": 0,
+          "stone": 0,
+          "earth": 0,
+          "water": 0,
+          "snow": 0,
+          "foliage": 0
+        },
+        "capacity": 420
+      },
+      "distanceEnabled": true
+    },
+    "audio": {
+      "enabled": true,
+      "context": "running",
+      "loading": false,
+      "loaded": true,
+      "rain": 0,
+      "shelter": 0,
+      "rms": 0.00021,
+      "thunderScheduled": 0,
+      "thunderPlayed": 0,
+      "pending": 0,
+      "detailPlayed": 568,
+      "hailFarImpacts": 0,
+      "hailFarLevel": 0,
+      "detailByKind": {
+        "stone": 475,
+        "earth": 29,
+        "roof": 64
+      },
+      "listenerSource": "GPU rain cell and surface exposure",
+      "snow": 0,
+      "hail": 0,
+      "lastDetail": {
+        "kind": "stone",
+        "variant": 5,
+        "cutoff": 2872,
+        "distance": 11.28,
+        "pan": 0.12
+      },
+      "stems": {
+        "hailFar": 0,
+        "rain": 0,
+        "roof": 0,
+        "leaves": 0,
+        "wind": 0.008
+      },
+      "volume": 0.25,
+      "detailVolume": 0.55,
+      "focus": "all",
+      "blocked": false,
+      "activeDetails": 0,
+      "activeThunder": 0,
+      "impactVariants": 6,
+      "source": "CC0 rain/thunder + filtered ambience and varied synthesized contacts"
+    },
+    "errors": [],
+    "observations": [
+      {
+        "at": "2026-09-14T11:20:52.401Z",
+        "simulationSeconds": 49.63,
+        "action": "rain-sequence",
+        "detail": "drying"
+      },
+      {
+        "at": "2026-09-14T11:20:54.415Z",
+        "simulationSeconds": 51.63,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:21:06.173Z",
+        "simulationSeconds": 63.05,
+        "action": "pause",
+        "detail": true
+      },
+      {
+        "at": "2026-09-14T11:21:06.455Z",
+        "simulationSeconds": 63.05,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:21:35.541Z",
+        "simulationSeconds": 63.05,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:21:36.172Z",
+        "simulationSeconds": 63.05,
+        "action": "pause",
+        "detail": false
+      },
+      {
+        "at": "2026-09-14T11:21:42.273Z",
+        "simulationSeconds": 69.14,
+        "action": "language",
+        "detail": "en"
+      },
+      {
+        "at": "2026-09-14T11:21:54.207Z",
+        "simulationSeconds": 81.07,
+        "action": "language",
+        "detail": "zh"
+      },
+      {
+        "at": "2026-09-14T11:22:25.587Z",
+        "simulationSeconds": 112.44,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:22:33.153Z",
+        "simulationSeconds": 119.63,
+        "action": "rain-sequence",
+        "detail": "complete"
+      },
+      {
+        "at": "2026-09-14T11:22:42.436Z",
+        "simulationSeconds": 128.9,
+        "action": "view",
+        "detail": "sky"
+      },
+      {
+        "at": "2026-09-14T11:23:17.992Z",
+        "simulationSeconds": 164.44,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      }
+    ]
+  },
+  "overcastSky": {
+    "startupSeconds": 35.78,
+    "resourceMiB": 10.11,
+    "resourceFiles": 57,
+    "completedFrames": 11598,
+    "lastFPS": 19,
+    "paused": false,
+    "weather": "overcast",
+    "time": 15.5,
+    "budget": "balanced",
+    "stay": "tea",
+    "view": "sky",
+    "camera": {
+      "position": [
+        13.6116,
+        22.0303,
+        22.1587
+      ],
+      "target": [
+        -4,
+        20,
+        -40
+      ]
+    },
+    "sequence": null,
+    "atmosphere": {
+      "fog": 0.003199784831878957,
+      "cloud": 0.7999270299415593,
+      "sunIntensity": 1.17,
+      "skyLightIntensity": 0.717
+    },
+    "lighting": {
+      "mode": "auto",
+      "brightness": 0.7,
+      "tea": true,
+      "path": true,
+      "rooms": true
+    },
+    "lightOutput": {
+      "mode": "auto",
+      "brightness": 0.7,
+      "targets": {
+        "tea": 0,
+        "path": 0,
+        "rooms": 0
+      },
+      "levels": {
+        "tea": 0,
+        "path": 0,
+        "rooms": 0
+      },
+      "teaIntensity": 0,
+      "pathIntensity": 0,
+      "roomIntensity": 0,
+      "shadowLights": 0
+    },
+    "layers": {
+      "roofWater": 0,
+      "activeDrops": 0,
+      "impactEvents": 1060,
+      "fogDensity": 0.0032,
+      "detailEnabled": true,
+      "groundRain": {
+        "wavesEnabled": true,
+        "waves": [
+          {
+            "impulses": 212,
+            "ticks": 18138,
+            "peak": 0,
+            "energy": 0,
+            "size": 64
+          },
+          {
+            "impulses": 266,
+            "ticks": 18138,
+            "peak": 0,
+            "energy": 0,
+            "size": 64
+          },
+          {
+            "impulses": 1477,
+            "ticks": 18138,
+            "peak": 0,
+            "energy": 0,
+            "size": 64
+          }
+        ],
+        "rain": 0,
+        "falling": 0,
+        "contacts": 0,
+        "activeSpray": 0,
+        "puddleFill": 0.136,
+        "soilMoisture": 0.468,
+        "dryingRate": 0.611,
+        "impacts": 17798,
+        "region": "open courtyard plus east puddle at x 4.4, z 4"
+      },
+      "snow": {
+        "engineWeather": null,
+        "intensity": 0,
+        "accumulation": 0,
+        "visibleFlakes": 0,
+        "capacity": 1800,
+        "shelteredFloorExcluded": true
+      },
+      "hail": {
+        "intensity": 0,
+        "falling": 0,
+        "bouncing": 0,
+        "resting": 0,
+        "impacts": 0,
+        "bySurface": {
+          "roof": 0,
+          "stone": 0,
+          "earth": 0,
+          "water": 0,
+          "snow": 0,
+          "foliage": 0
+        },
+        "capacity": 420
+      },
+      "distanceEnabled": true
+    },
+    "audio": {
+      "enabled": true,
+      "context": "running",
+      "loading": false,
+      "loaded": true,
+      "rain": 0,
+      "shelter": 0,
+      "rms": 0.00075,
+      "thunderScheduled": 0,
+      "thunderPlayed": 0,
+      "pending": 0,
+      "detailPlayed": 568,
+      "hailFarImpacts": 0,
+      "hailFarLevel": 0,
+      "detailByKind": {
+        "stone": 475,
+        "earth": 29,
+        "roof": 64
+      },
+      "listenerSource": "GPU rain cell and surface exposure",
+      "snow": 0,
+      "hail": 0,
+      "lastDetail": {
+        "kind": "stone",
+        "variant": 5,
+        "cutoff": 2872,
+        "distance": 11.28,
+        "pan": 0.12
+      },
+      "stems": {
+        "hailFar": 0,
+        "rain": 0,
+        "roof": 0,
+        "leaves": 0,
+        "wind": 0.022
+      },
+      "volume": 0.25,
+      "detailVolume": 0.55,
+      "focus": "all",
+      "blocked": false,
+      "activeDetails": 0,
+      "activeThunder": 0,
+      "impactVariants": 6,
+      "source": "CC0 rain/thunder + filtered ambience and varied synthesized contacts"
+    },
+    "errors": [],
+    "observations": [
+      {
+        "at": "2026-09-14T11:21:06.173Z",
+        "simulationSeconds": 63.05,
+        "action": "pause",
+        "detail": true
+      },
+      {
+        "at": "2026-09-14T11:21:06.455Z",
+        "simulationSeconds": 63.05,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:21:35.541Z",
+        "simulationSeconds": 63.05,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:21:36.172Z",
+        "simulationSeconds": 63.05,
+        "action": "pause",
+        "detail": false
+      },
+      {
+        "at": "2026-09-14T11:21:42.273Z",
+        "simulationSeconds": 69.14,
+        "action": "language",
+        "detail": "en"
+      },
+      {
+        "at": "2026-09-14T11:21:54.207Z",
+        "simulationSeconds": 81.07,
+        "action": "language",
+        "detail": "zh"
+      },
+      {
+        "at": "2026-09-14T11:22:25.587Z",
+        "simulationSeconds": 112.44,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:22:33.153Z",
+        "simulationSeconds": 119.63,
+        "action": "rain-sequence",
+        "detail": "complete"
+      },
+      {
+        "at": "2026-09-14T11:22:42.436Z",
+        "simulationSeconds": 128.9,
+        "action": "view",
+        "detail": "sky"
+      },
+      {
+        "at": "2026-09-14T11:23:17.992Z",
+        "simulationSeconds": 164.44,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:23:19.021Z",
+        "simulationSeconds": 165.1,
+        "action": "weather",
+        "detail": "overcast"
+      },
+      {
+        "at": "2026-09-14T11:23:57.416Z",
+        "simulationSeconds": 202.21,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      }
+    ]
+  },
+  "stormSky": {
+    "startupSeconds": 35.78,
+    "resourceMiB": 10.11,
+    "resourceFiles": 57,
+    "completedFrames": 13327,
+    "lastFPS": 56,
+    "paused": false,
+    "weather": "storm",
+    "time": 15.5,
+    "budget": "balanced",
+    "stay": "tea",
+    "view": "sky",
+    "camera": {
+      "position": [
+        13.6116,
+        22.0303,
+        22.1587
+      ],
+      "target": [
+        -4,
+        20,
+        -40
+      ]
+    },
+    "sequence": null,
+    "atmosphere": {
+      "fog": 0.0079985153796795,
+      "cloud": 0.9999381240977798,
+      "sunIntensity": 0.369,
+      "skyLightIntensity": 0.395
+    },
+    "lighting": {
+      "mode": "auto",
+      "brightness": 0.7,
+      "tea": true,
+      "path": true,
+      "rooms": true
+    },
+    "lightOutput": {
+      "mode": "auto",
+      "brightness": 0.7,
+      "targets": {
+        "tea": 0,
+        "path": 0,
+        "rooms": 0
+      },
+      "levels": {
+        "tea": 0,
+        "path": 0,
+        "rooms": 0
+      },
+      "teaIntensity": 0,
+      "pathIntensity": 0,
+      "roomIntensity": 0,
+      "shadowLights": 0
+    },
+    "layers": {
+      "roofWater": 0.872,
+      "activeDrops": 20,
+      "impactEvents": 1480,
+      "fogDensity": 0.008,
+      "detailEnabled": true,
+      "groundRain": {
+        "wavesEnabled": true,
+        "waves": [
+          {
+            "impulses": 442,
+            "ticks": 21102,
+            "peak": 0.000704,
+            "energy": 0.000035434,
+            "size": 64
+          },
+          {
+            "impulses": 612,
+            "ticks": 21102,
+            "peak": 0.001652,
+            "energy": 0.00010586,
+            "size": 64
+          },
+          {
+            "impulses": 2561,
+            "ticks": 21102,
+            "peak": 0.001006,
+            "energy": 0.000171408,
+            "size": 64
+          }
+        ],
+        "rain": 1,
+        "falling": 209,
+        "contacts": 73,
+        "activeSpray": 74,
+        "puddleFill": 0.79,
+        "soilMoisture": 0.99,
+        "dryingRate": 0.732,
+        "impacts": 30620,
+        "region": "open courtyard plus east puddle at x 4.4, z 4"
+      },
+      "snow": {
+        "engineWeather": null,
+        "intensity": 0,
+        "accumulation": 0,
+        "visibleFlakes": 0,
+        "capacity": 1800,
+        "shelteredFloorExcluded": true
+      },
+      "hail": {
+        "intensity": 0,
+        "falling": 0,
+        "bouncing": 0,
+        "resting": 0,
+        "impacts": 0,
+        "bySurface": {
+          "roof": 0,
+          "stone": 0,
+          "earth": 0,
+          "water": 0,
+          "snow": 0,
+          "foliage": 0
+        },
+        "capacity": 420
+      },
+      "distanceEnabled": true
+    },
+    "audio": {
+      "enabled": true,
+      "context": "running",
+      "loading": false,
+      "loaded": true,
+      "rain": 0.847,
+      "shelter": 0,
+      "rms": 0.01761,
+      "thunderScheduled": 0,
+      "thunderPlayed": 0,
+      "pending": 0,
+      "detailPlayed": 568,
+      "hailFarImpacts": 0,
+      "hailFarLevel": 0,
+      "detailByKind": {
+        "stone": 475,
+        "earth": 29,
+        "roof": 64
+      },
+      "listenerSource": "GPU rain cell and surface exposure",
+      "snow": 0,
+      "hail": 0,
+      "lastDetail": {
+        "kind": "stone",
+        "variant": 5,
+        "cutoff": 2872,
+        "distance": 11.28,
+        "pan": 0.12
+      },
+      "stems": {
+        "hailFar": 0,
+        "rain": 0.762,
+        "roof": 0,
+        "leaves": 0,
+        "wind": 0.083
+      },
+      "volume": 0.25,
+      "detailVolume": 0.55,
+      "focus": "all",
+      "blocked": false,
+      "activeDetails": 0,
+      "activeThunder": 0,
+      "impactVariants": 6,
+      "source": "CC0 rain/thunder + filtered ambience and varied synthesized contacts"
+    },
+    "errors": [],
+    "observations": [
+      {
+        "at": "2026-09-14T11:21:35.541Z",
+        "simulationSeconds": 63.05,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:21:36.172Z",
+        "simulationSeconds": 63.05,
+        "action": "pause",
+        "detail": false
+      },
+      {
+        "at": "2026-09-14T11:21:42.273Z",
+        "simulationSeconds": 69.14,
+        "action": "language",
+        "detail": "en"
+      },
+      {
+        "at": "2026-09-14T11:21:54.207Z",
+        "simulationSeconds": 81.07,
+        "action": "language",
+        "detail": "zh"
+      },
+      {
+        "at": "2026-09-14T11:22:25.587Z",
+        "simulationSeconds": 112.44,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:22:33.153Z",
+        "simulationSeconds": 119.63,
+        "action": "rain-sequence",
+        "detail": "complete"
+      },
+      {
+        "at": "2026-09-14T11:22:42.436Z",
+        "simulationSeconds": 128.9,
+        "action": "view",
+        "detail": "sky"
+      },
+      {
+        "at": "2026-09-14T11:23:17.992Z",
+        "simulationSeconds": 164.44,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:23:19.021Z",
+        "simulationSeconds": 165.1,
+        "action": "weather",
+        "detail": "overcast"
+      },
+      {
+        "at": "2026-09-14T11:23:57.416Z",
+        "simulationSeconds": 202.21,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:23:58.634Z",
+        "simulationSeconds": 202.88,
+        "action": "weather",
+        "detail": "storm"
+      },
+      {
+        "at": "2026-09-14T11:24:30.963Z",
+        "simulationSeconds": 235.21,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      }
+    ]
+  },
+  "night": {
+    "startupSeconds": 35.78,
+    "resourceMiB": 10.11,
+    "resourceFiles": 57,
+    "completedFrames": 14142,
+    "lastFPS": 56,
+    "paused": false,
+    "weather": "storm",
+    "time": 23,
+    "budget": "balanced",
+    "stay": "tea",
+    "view": "sky",
+    "camera": {
+      "position": [
+        13.6116,
+        22.0303,
+        22.1587
+      ],
+      "target": [
+        -4,
+        20,
+        -40
+      ]
+    },
+    "sequence": null,
+    "atmosphere": {
+      "fog": 0.00799996197231899,
+      "cloud": 0.9999984150849622,
+      "sunIntensity": 0.042,
+      "skyLightIntensity": 0.133
+    },
+    "lighting": {
+      "mode": "auto",
+      "brightness": 0.7,
+      "tea": true,
+      "path": true,
+      "rooms": true
+    },
+    "lightOutput": {
+      "mode": "auto",
+      "brightness": 0.7,
+      "targets": {
+        "tea": 0.7,
+        "path": 0.7,
+        "rooms": 0.7
+      },
+      "levels": {
+        "tea": 0.6999999999999994,
+        "path": 0.6999999999999994,
+        "rooms": 0.6999999999999994
+      },
+      "teaIntensity": 59.49999999999995,
+      "pathIntensity": 9.799999999999992,
+      "roomIntensity": 4.899999999999996,
+      "shadowLights": 0
+    },
+    "layers": {
+      "roofWater": 0.996,
+      "activeDrops": 16,
+      "impactEvents": 1768,
+      "fogDensity": 0.008,
+      "detailEnabled": true,
+      "groundRain": {
+        "wavesEnabled": true,
+        "waves": [
+          {
+            "impulses": 617,
+            "ticks": 22421,
+            "peak": 0.001089,
+            "energy": 0.000048152,
+            "size": 64
+          },
+          {
+            "impulses": 897,
+            "ticks": 22421,
+            "peak": 0.000706,
+            "energy": 0.000062219,
+            "size": 64
+          },
+          {
+            "impulses": 3363,
+            "ticks": 22421,
+            "peak": 0.001146,
+            "energy": 0.000197473,
+            "size": 64
+          }
+        ],
+        "rain": 1,
+        "falling": 197,
+        "contacts": 76,
+        "activeSpray": 42,
+        "puddleFill": 0.907,
+        "soilMoisture": 0.999,
+        "dryingRate": 0.732,
+        "impacts": 37676,
+        "region": "open courtyard plus east puddle at x 4.4, z 4"
+      },
+      "snow": {
+        "engineWeather": null,
+        "intensity": 0,
+        "accumulation": 0,
+        "visibleFlakes": 0,
+        "capacity": 1800,
+        "shelteredFloorExcluded": true
+      },
+      "hail": {
+        "intensity": 0,
+        "falling": 0,
+        "bouncing": 0,
+        "resting": 0,
+        "impacts": 0,
+        "bySurface": {
+          "roof": 0,
+          "stone": 0,
+          "earth": 0,
+          "water": 0,
+          "snow": 0,
+          "foliage": 0
+        },
+        "capacity": 420
+      },
+      "distanceEnabled": true
+    },
+    "audio": {
+      "enabled": true,
+      "context": "running",
+      "loading": false,
+      "loaded": true,
+      "rain": 1,
+      "shelter": 0,
+      "rms": 0.01832,
+      "thunderScheduled": 0,
+      "thunderPlayed": 0,
+      "pending": 0,
+      "detailPlayed": 568,
+      "hailFarImpacts": 0,
+      "hailFarLevel": 0,
+      "detailByKind": {
+        "stone": 475,
+        "earth": 29,
+        "roof": 64
+      },
+      "listenerSource": "GPU rain cell and surface exposure",
+      "snow": 0,
+      "hail": 0,
+      "lastDetail": {
+        "kind": "stone",
+        "variant": 5,
+        "cutoff": 2872,
+        "distance": 11.28,
+        "pan": 0.12
+      },
+      "stems": {
+        "hailFar": 0,
+        "rain": 0.9,
+        "roof": 0,
+        "leaves": 0,
+        "wind": 0.083
+      },
+      "volume": 0.25,
+      "detailVolume": 0.55,
+      "focus": "all",
+      "blocked": false,
+      "activeDetails": 0,
+      "activeThunder": 0,
+      "impactVariants": 6,
+      "source": "CC0 rain/thunder + filtered ambience and varied synthesized contacts"
+    },
+    "errors": [],
+    "observations": [
+      {
+        "at": "2026-09-14T11:21:42.273Z",
+        "simulationSeconds": 69.14,
+        "action": "language",
+        "detail": "en"
+      },
+      {
+        "at": "2026-09-14T11:21:54.207Z",
+        "simulationSeconds": 81.07,
+        "action": "language",
+        "detail": "zh"
+      },
+      {
+        "at": "2026-09-14T11:22:25.587Z",
+        "simulationSeconds": 112.44,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:22:33.153Z",
+        "simulationSeconds": 119.63,
+        "action": "rain-sequence",
+        "detail": "complete"
+      },
+      {
+        "at": "2026-09-14T11:22:42.436Z",
+        "simulationSeconds": 128.9,
+        "action": "view",
+        "detail": "sky"
+      },
+      {
+        "at": "2026-09-14T11:23:17.992Z",
+        "simulationSeconds": 164.44,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:23:19.021Z",
+        "simulationSeconds": 165.1,
+        "action": "weather",
+        "detail": "overcast"
+      },
+      {
+        "at": "2026-09-14T11:23:57.416Z",
+        "simulationSeconds": 202.21,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:23:58.634Z",
+        "simulationSeconds": 202.88,
+        "action": "weather",
+        "detail": "storm"
+      },
+      {
+        "at": "2026-09-14T11:24:30.963Z",
+        "simulationSeconds": 235.21,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:24:31.997Z",
+        "simulationSeconds": 235.85,
+        "action": "time",
+        "detail": 23
+      },
+      {
+        "at": "2026-09-14T11:24:46.015Z",
+        "simulationSeconds": 249.87,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      }
+    ]
+  },
+  "final": {
+    "startupSeconds": 35.78,
+    "resourceMiB": 10.11,
+    "resourceFiles": 57,
+    "completedFrames": 16653,
+    "lastFPS": 54,
+    "paused": false,
+    "weather": "clear",
+    "time": 15.5,
+    "budget": "balanced",
+    "stay": "tea",
+    "view": "rural",
+    "camera": {
+      "position": [
+        -3,
+        1.2,
+        12
+      ],
+      "target": [
+        -3,
+        0.35,
+        1
+      ]
+    },
+    "sequence": null,
+    "atmosphere": {
+      "fog": 0.0009000916426981254,
+      "cloud": 0.020012871012174055,
+      "sunIntensity": 3.079,
+      "skyLightIntensity": 0.919
+    },
+    "lighting": {
+      "mode": "auto",
+      "brightness": 0.7,
+      "tea": true,
+      "path": true,
+      "rooms": true
+    },
+    "lightOutput": {
+      "mode": "auto",
+      "brightness": 0.7,
+      "targets": {
+        "tea": 0,
+        "path": 0,
+        "rooms": 0
+      },
+      "levels": {
+        "tea": 6.050449069095575e-80,
+        "path": 6.050449069095575e-80,
+        "rooms": 6.050449069095575e-80
+      },
+      "teaIntensity": 5.142881708731239e-78,
+      "pathIntensity": 8.470628696733805e-79,
+      "roomIntensity": 4.2353143483669024e-79,
+      "shadowLights": 0
+    },
+    "layers": {
+      "roofWater": 0.031,
+      "activeDrops": 0,
+      "impactEvents": 2168,
+      "fogDensity": 0.0009,
+      "detailEnabled": true,
+      "groundRain": {
+        "wavesEnabled": true,
+        "waves": [
+          {
+            "impulses": 690,
+            "ticks": 26549,
+            "peak": 0,
+            "energy": 0,
+            "size": 64
+          },
+          {
+            "impulses": 1024,
+            "ticks": 26549,
+            "peak": 0,
+            "energy": 0,
+            "size": 64
+          },
+          {
+            "impulses": 3771,
+            "ticks": 26549,
+            "peak": 0,
+            "energy": 0,
+            "size": 64
+          }
+        ],
+        "rain": 0,
+        "falling": 0,
+        "contacts": 0,
+        "activeSpray": 0,
+        "puddleFill": 0.588,
+        "soilMoisture": 0.921,
+        "dryingRate": 0.987,
+        "impacts": 41180,
+        "region": "open courtyard plus east puddle at x 4.4, z 4"
+      },
+      "snow": {
+        "engineWeather": null,
+        "intensity": 0,
+        "accumulation": 0,
+        "visibleFlakes": 0,
+        "capacity": 1800,
+        "shelteredFloorExcluded": true
+      },
+      "hail": {
+        "intensity": 0,
+        "falling": 0,
+        "bouncing": 0,
+        "resting": 0,
+        "impacts": 0,
+        "bySurface": {
+          "roof": 0,
+          "stone": 0,
+          "earth": 0,
+          "water": 0,
+          "snow": 0,
+          "foliage": 0
+        },
+        "capacity": 420
+      },
+      "distanceEnabled": true
+    },
+    "audio": {
+      "enabled": true,
+      "context": "running",
+      "loading": false,
+      "loaded": true,
+      "rain": 0,
+      "shelter": 0,
+      "rms": 0.00022,
+      "thunderScheduled": 0,
+      "thunderPlayed": 0,
+      "pending": 0,
+      "detailPlayed": 789,
+      "hailFarImpacts": 0,
+      "hailFarLevel": 0,
+      "detailByKind": {
+        "stone": 681,
+        "earth": 41,
+        "roof": 67
+      },
+      "listenerSource": "GPU rain cell and surface exposure",
+      "snow": 0,
+      "hail": 0,
+      "lastDetail": {
+        "kind": "stone",
+        "variant": 3,
+        "cutoff": 2872,
+        "distance": 11.28,
+        "pan": 0.12
+      },
+      "stems": {
+        "hailFar": 0,
+        "rain": 0,
+        "roof": 0,
+        "leaves": 0,
+        "wind": 0.008
+      },
+      "volume": 0.25,
+      "detailVolume": 0.55,
+      "focus": "all",
+      "blocked": false,
+      "activeDetails": 0,
+      "activeThunder": 0,
+      "impactVariants": 6,
+      "source": "CC0 rain/thunder + filtered ambience and varied synthesized contacts"
+    },
+    "errors": [],
+    "observations": [
+      {
+        "at": "2026-09-14T11:23:19.021Z",
+        "simulationSeconds": 165.1,
+        "action": "weather",
+        "detail": "overcast"
+      },
+      {
+        "at": "2026-09-14T11:23:57.416Z",
+        "simulationSeconds": 202.21,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:23:58.634Z",
+        "simulationSeconds": 202.88,
+        "action": "weather",
+        "detail": "storm"
+      },
+      {
+        "at": "2026-09-14T11:24:30.963Z",
+        "simulationSeconds": 235.21,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:24:31.997Z",
+        "simulationSeconds": 235.85,
+        "action": "time",
+        "detail": 23
+      },
+      {
+        "at": "2026-09-14T11:24:46.015Z",
+        "simulationSeconds": 249.87,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T11:24:46.726Z",
+        "simulationSeconds": 250.22,
+        "action": "time",
+        "detail": 15.5
+      },
+      {
+        "at": "2026-09-14T11:24:47.021Z",
+        "simulationSeconds": 250.52,
+        "action": "weather",
+        "detail": "rain"
+      },
+      {
+        "at": "2026-09-14T11:24:47.022Z",
+        "simulationSeconds": 250.52,
+        "action": "view",
+        "detail": "rural"
+      },
+      {
+        "at": "2026-09-14T11:24:47.022Z",
+        "simulationSeconds": 250.52,
+        "action": "rain-sequence",
+        "detail": "started; 40s rain then 70s clearing; time preserved"
+      },
+      {
+        "at": "2026-09-14T11:24:47.309Z",
+        "simulationSeconds": 250.8,
+        "action": "weather",
+        "detail": "clear"
+      },
+      {
+        "at": "2026-09-14T11:25:32.246Z",
+        "simulationSeconds": 295.73,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      }
+    ]
+  }
+}

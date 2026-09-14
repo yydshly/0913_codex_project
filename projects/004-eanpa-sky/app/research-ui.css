@@ -1,0 +1,14 @@
+#panel { width: 248px; max-height: calc(100dvh - 100px); overflow-y: auto; box-sizing: content-box; }
+#panel label { letter-spacing: .01em; }
+.research-tools { display:flex; gap:8px; margin:10px 0 12px; padding-bottom:12px; border-bottom:1px solid #27343f; }
+.research-tools button, .research-tools select { border:1px solid #466175; border-radius:7px; min-height:34px; background:#152735; color:#e3f3fa; font:12px system-ui; }
+.research-tools button { cursor:pointer; flex:1; padding:6px 9px; }
+.research-tools select { width:90px !important; }
+.research-tools button:hover { background:#254357; }
+.research-tools :focus-visible, #practice-dialog button:focus-visible { outline:2px solid #8fd8ff; outline-offset:3px; }
+#practice-dialog { padding:0; width:min(1060px,calc(100vw - 32px)); max-width:none; height:min(850px,calc(100dvh - 32px)); max-height:none; border:1px solid #456477; border-radius:14px; background:#0c141b; color:#eaf2f5; box-shadow:0 24px 100px #0009; }
+#practice-dialog::backdrop { background:#01060bbc; }
+#practice-dialog header { display:flex; align-items:center; justify-content:space-between; height:54px; padding:0 18px; border-bottom:1px solid #2a3d48; font:14px system-ui; }
+#practice-dialog button { background:#203744; color:#eaf2f5; border:1px solid #456477; border-radius:7px; padding:7px 12px; cursor:pointer; }
+#practice-dialog iframe { width:100%; height:calc(100% - 55px); border:0; display:block; }
+@media(max-width:480px) { #panel { top:8px; left:8px; width:220px; padding:10px; } #practice-dialog { width:calc(100vw - 12px); height:calc(100dvh - 12px); } }

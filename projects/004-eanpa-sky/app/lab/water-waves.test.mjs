@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {makeWaveField} from './water-waves.js';
+const f=makeWaveField();assert.equal(f.snapshot().energy,0);assert.equal(f.impulse(0,0),false);f.impulse(.5,.5,.005);
+const initial=f.snapshot();assert(initial.peak>0);assert.equal(f.advance(0),false);assert.deepEqual(f.snapshot(),initial);
+for(let i=0;i<30;i++)f.advance(1/90);assert(Math.abs(f.sample(23,32))>1e-7,'Wave propagates outside initial impulse');
+for(let i=0;i<2700;i++)f.advance(1/90);assert(f.snapshot().energy<initial.energy*.03,'Waves dissipate');
+const a=makeWaveField(),b=makeWaveField();a.impulse(.5,.5);b.impulse(.5,.5);for(let i=0;i<60;i++)a.advance(1/60);for(let i=0;i<30;i++)b.advance(1/30);assert.deepEqual(a.snapshot(),b.snapshot(),'Fixed step is independent of render rate');
+const c=makeWaveField(),d=makeWaveField(),sum=makeWaveField();c.impulse(.4,.5,.001);d.impulse(.6,.5,.001);sum.impulse(.4,.5,.001);sum.impulse(.6,.5,.001);
+for(let i=0;i<30;i++){c.advance(1/90);d.advance(1/90);sum.advance(1/90);}assert(Math.abs(sum.sample(32,32)-c.sample(32,32)-d.sample(32,32))<1e-8,'Impulses superpose');
+for(let i=0;i<1000;i++){f.impulse(.25+(i%8)*.06,.5,.002);f.advance(.1);}assert(Number.isFinite(f.snapshot().energy));assert(f.snapshot().peak<.03,'Repeated forcing stays bounded');
+f.reset();assert.equal(f.snapshot().energy,0);assert.equal(f.normals[2],1);
+console.log('Wave checks passed: propagation, damping, pause, fixed timestep, superposition, repeated impacts and reset.');

@@ -1,0 +1,236 @@
+[
+  {
+    "case": "outdoor rain",
+    "at": "2026-09-14T04:46:35.182Z",
+    "ui": {
+      "level": "",
+      "status": "露天 · 风声与雨声",
+      "weather": "已就绪"
+    }
+  },
+  {
+    "case": "under roof",
+    "at": "2026-09-14T04:47:38.847Z",
+    "ui": {
+      "level": "",
+      "status": "屋檐下 · 雨打屋顶"
+    }
+  },
+  {
+    "case": "muted",
+    "ui": {
+      "level": "",
+      "status": "点击开启风雨声"
+    }
+  },
+  {
+    "case": "pause before resume settled (before fix)",
+    "report": {
+      "startupSeconds": 4.79,
+      "resourceMiB": 9.61,
+      "resourceFiles": 42,
+      "completedFrames": 4666,
+      "lastFPS": 30,
+      "weather": "rain",
+      "time": 15.5,
+      "budget": "eco",
+      "audio": {
+        "enabled": false,
+        "context": "suspended",
+        "rain": 0.7,
+        "shelter": 1,
+        "rms": 0,
+        "thunderScheduled": 0,
+        "thunderPlayed": 0,
+        "pending": 0,
+        "volume": 0.35,
+        "blocked": true,
+        "activeThunder": 0,
+        "source": "procedural Web Audio"
+      },
+      "errors": [],
+      "observations": [
+        {
+          "at": "2026-09-14T04:45:40.387Z",
+          "simulationSeconds": 0.05,
+          "action": "ready",
+          "detail": "live weather engine; procedural courtyard"
+        },
+        {
+          "at": "2026-09-14T04:46:11.343Z",
+          "simulationSeconds": 30.87,
+          "action": "audio",
+          "detail": true
+        },
+        {
+          "at": "2026-09-14T04:46:11.466Z",
+          "simulationSeconds": 31.07,
+          "action": "weather",
+          "detail": "rain"
+        },
+        {
+          "at": "2026-09-14T04:46:11.480Z",
+          "simulationSeconds": 31.09,
+          "action": "budget",
+          "detail": "eco"
+        },
+        {
+          "at": "2026-09-14T04:46:11.522Z",
+          "simulationSeconds": 31.12,
+          "action": "view",
+          "detail": "surface"
+        },
+        {
+          "at": "2026-09-14T04:46:35.270Z",
+          "simulationSeconds": 54.88,
+          "action": "view",
+          "detail": "shelter"
+        },
+        {
+          "at": "2026-09-14T04:47:38.925Z",
+          "simulationSeconds": 118.54,
+          "action": "audio",
+          "detail": false
+        },
+        {
+          "at": "2026-09-14T04:47:46.976Z",
+          "simulationSeconds": 126.58,
+          "action": "pause",
+          "detail": true
+        },
+        {
+          "at": "2026-09-14T04:47:47.315Z",
+          "simulationSeconds": 126.58,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        }
+      ]
+    }
+  },
+  {
+    "case": "zero volume",
+    "ui": {
+      "level": "",
+      "status": "音量为零"
+    }
+  },
+  {
+    "case": "lightning and pause after fix",
+    "report": {
+      "startupSeconds": 4.88,
+      "resourceMiB": 9.61,
+      "resourceFiles": 42,
+      "completedFrames": 2149,
+      "lastFPS": 30,
+      "weather": "storm",
+      "time": 15.5,
+      "budget": "eco",
+      "audio": {
+        "enabled": true,
+        "context": "suspended",
+        "rain": 1,
+        "shelter": 0,
+        "rms": 0,
+        "thunderScheduled": 1,
+        "thunderPlayed": 1,
+        "pending": 0,
+        "volume": 0.25,
+        "blocked": true,
+        "activeThunder": 0,
+        "source": "procedural Web Audio"
+      },
+      "errors": [],
+      "observations": [
+        {
+          "at": "2026-09-14T04:48:46.280Z",
+          "simulationSeconds": 23.96,
+          "action": "audio",
+          "detail": true
+        },
+        {
+          "at": "2026-09-14T04:48:46.421Z",
+          "simulationSeconds": 24.19,
+          "action": "budget",
+          "detail": "eco"
+        },
+        {
+          "at": "2026-09-14T04:48:46.435Z",
+          "simulationSeconds": 24.19,
+          "action": "weather",
+          "detail": "storm"
+        },
+        {
+          "at": "2026-09-14T04:48:46.475Z",
+          "simulationSeconds": 24.22,
+          "action": "view",
+          "detail": "surface"
+        },
+        {
+          "at": "2026-09-14T04:48:52.301Z",
+          "simulationSeconds": 30.05,
+          "action": "volume",
+          "detail": 0
+        },
+        {
+          "at": "2026-09-14T04:49:01.485Z",
+          "simulationSeconds": 39.26,
+          "action": "volume",
+          "detail": 25
+        },
+        {
+          "at": "2026-09-14T04:49:01.549Z",
+          "simulationSeconds": 39.29,
+          "action": "test-lightning",
+          "detail": true
+        },
+        {
+          "at": "2026-09-14T04:49:02.125Z",
+          "simulationSeconds": 39.89,
+          "action": "lightning",
+          "detail": "local impact"
+        },
+        {
+          "at": "2026-09-14T04:49:02.125Z",
+          "simulationSeconds": 39.89,
+          "action": "thunder-scheduled",
+          "detail": {
+            "distanceMeters": 44,
+            "delaySeconds": 0.13
+          }
+        },
+        {
+          "at": "2026-09-14T04:49:02.260Z",
+          "simulationSeconds": 40.03,
+          "action": "thunder-played",
+          "detail": {
+            "distanceMeters": 44,
+            "delaySeconds": 0.13
+          }
+        },
+        {
+          "at": "2026-09-14T04:49:11.455Z",
+          "simulationSeconds": 49.21,
+          "action": "pause",
+          "detail": true
+        },
+        {
+          "at": "2026-09-14T04:49:11.739Z",
+          "simulationSeconds": 49.21,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        }
+      ]
+    }
+  },
+  {
+    "case": "resume playback",
+    "ui": {
+      "level": "",
+      "status": "Outdoors · wind and rain"
+    }
+  },
+  {
+    "case": "final running audio",
+    "accessibility": "Browser tab: 3, Title: \"风雨观测庭 · Eanpa 能力实践\", URL: \"http://127.0.0.1:8044/lab/\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\nRemoved element IDs: 67, 71, 75-79\n+\t\t\t\t81 text 已就绪\n+\t\t\t\t82 text 15:30\n+\t\t\t83 text 25%\n~\t\t\t62 level indicator Description: 声音输出强度 / Output level, Value: 0.017909999936819077, ID: sound-level\n+\t\t\t84 text 露天 · 风声与雨声\n+\t\t85 text 30 帧/秒\n+\t\t86 text 本次启动 4.9 秒\n+\t\t87 text 资源内容 9.6 MiB\nThe focused UI element is 49 button 暂停, ID: pause"
+  }
+]

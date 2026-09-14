@@ -1,0 +1,580 @@
+{
+  "date": "2026-09-14T06:24:14.162Z",
+  "note": "Actual UI snapshots from this iteration; transient audio RMS is not a human listening assessment.",
+  "checks": {
+    "details": {
+      "startupSeconds": 29.12,
+      "resourceMiB": 10.06,
+      "resourceFiles": 47,
+      "completedFrames": 6362,
+      "lastFPS": 46,
+      "weather": "rain",
+      "time": 17,
+      "budget": "balanced",
+      "stay": "tea",
+      "view": "eaves",
+      "layers": {
+        "roofWater": 0.698,
+        "activeDrops": 19,
+        "impactEvents": 2746,
+        "fogDensity": 0.0038,
+        "detailEnabled": true,
+        "distanceEnabled": true
+      },
+      "audio": {
+        "enabled": true,
+        "context": "running",
+        "loading": false,
+        "loaded": true,
+        "rain": 0.698,
+        "shelter": 1,
+        "rms": 0,
+        "thunderScheduled": 0,
+        "thunderPlayed": 0,
+        "pending": 0,
+        "detailPlayed": 748,
+        "listenerSource": "GPU rain cell and surface exposure",
+        "lastDetail": {
+          "kind": "earth",
+          "distance": 3.47,
+          "pan": 0.8
+        },
+        "stems": {
+          "rain": 0,
+          "roof": 0,
+          "leaves": 0,
+          "wind": 0
+        },
+        "volume": 0.25,
+        "detailVolume": 0.55,
+        "focus": "details",
+        "blocked": false,
+        "activeDetails": 0,
+        "activeThunder": 0,
+        "source": "CC0 rain/thunder + filtered leaves, quiet wind and synthesized impact details"
+      },
+      "errors": [],
+      "observations": [
+        {
+          "at": "2026-09-14T06:14:10.521Z",
+          "simulationSeconds": 0.05,
+          "action": "ready",
+          "detail": "live weather engine; procedural courtyard"
+        },
+        {
+          "at": "2026-09-14T06:14:10.525Z",
+          "simulationSeconds": 0.05,
+          "action": "view",
+          "detail": "shelter"
+        },
+        {
+          "at": "2026-09-14T06:14:10.525Z",
+          "simulationSeconds": 0.05,
+          "action": "guest-stop",
+          "detail": "tea"
+        },
+        {
+          "at": "2026-09-14T06:14:10.526Z",
+          "simulationSeconds": 0.05,
+          "action": "view",
+          "detail": "rainporch"
+        },
+        {
+          "at": "2026-09-14T06:15:26.275Z",
+          "simulationSeconds": 75.32,
+          "action": "audio-focus",
+          "detail": "details"
+        },
+        {
+          "at": "2026-09-14T06:15:26.497Z",
+          "simulationSeconds": 75.57,
+          "action": "audio-loaded",
+          "detail": {
+            "source": "CC0 natural rain and thunder",
+            "files": 2
+          }
+        },
+        {
+          "at": "2026-09-14T06:15:26.498Z",
+          "simulationSeconds": 75.57,
+          "action": "audio",
+          "detail": true
+        },
+        {
+          "at": "2026-09-14T06:15:26.565Z",
+          "simulationSeconds": 75.67,
+          "action": "view",
+          "detail": "eaves"
+        },
+        {
+          "at": "2026-09-14T06:16:42.153Z",
+          "simulationSeconds": 151.18,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        }
+      ]
+    },
+    "disabled": {
+      "startupSeconds": 24.12,
+      "resourceMiB": 10.06,
+      "resourceFiles": 47,
+      "completedFrames": 13162,
+      "lastFPS": 47,
+      "weather": "rain",
+      "time": 15.5,
+      "budget": "balanced",
+      "stay": "tea",
+      "view": "rainporch",
+      "layers": {
+        "roofWater": 0.698,
+        "activeDrops": 0,
+        "impactEvents": 4175,
+        "fogDensity": 0.0038,
+        "detailEnabled": false,
+        "distanceEnabled": false
+      },
+      "audio": {
+        "enabled": true,
+        "context": "running",
+        "loading": false,
+        "loaded": true,
+        "rain": 0.698,
+        "shelter": 1,
+        "rms": 0.00428,
+        "thunderScheduled": 0,
+        "thunderPlayed": 0,
+        "pending": 0,
+        "detailPlayed": 1342,
+        "detailByKind": {
+          "stone": 1077,
+          "earth": 84,
+          "roof": 181
+        },
+        "listenerSource": "GPU rain cell and surface exposure",
+        "lastDetail": {
+          "kind": "roof",
+          "distance": 4.1,
+          "pan": -0.36
+        },
+        "stems": {
+          "rain": 0.23,
+          "roof": 0.095,
+          "leaves": 0.003,
+          "wind": 0.011
+        },
+        "volume": 0.25,
+        "detailVolume": 0.55,
+        "focus": "all",
+        "blocked": false,
+        "activeDetails": 1,
+        "activeThunder": 0,
+        "source": "CC0 rain/thunder + filtered leaves, quiet wind and synthesized impact details"
+      },
+      "errors": [],
+      "observations": [
+        {
+          "at": "2026-09-14T06:17:39.727Z",
+          "simulationSeconds": 0.05,
+          "action": "ready",
+          "detail": "live weather engine; procedural courtyard"
+        },
+        {
+          "at": "2026-09-14T06:17:39.729Z",
+          "simulationSeconds": 0.05,
+          "action": "view",
+          "detail": "shelter"
+        },
+        {
+          "at": "2026-09-14T06:17:39.729Z",
+          "simulationSeconds": 0.05,
+          "action": "guest-stop",
+          "detail": "tea"
+        },
+        {
+          "at": "2026-09-14T06:17:39.729Z",
+          "simulationSeconds": 0.05,
+          "action": "view",
+          "detail": "rainporch"
+        },
+        {
+          "at": "2026-09-14T06:19:14.123Z",
+          "simulationSeconds": 94.18,
+          "action": "audio-loaded",
+          "detail": {
+            "source": "CC0 natural rain and thunder",
+            "files": 2
+          }
+        },
+        {
+          "at": "2026-09-14T06:19:14.123Z",
+          "simulationSeconds": 94.18,
+          "action": "audio",
+          "detail": true
+        },
+        {
+          "at": "2026-09-14T06:21:42.236Z",
+          "simulationSeconds": 241.8,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        }
+      ]
+    },
+    "disabledLater": {
+      "startupSeconds": 24.12,
+      "resourceMiB": 10.06,
+      "resourceFiles": 47,
+      "completedFrames": 15197,
+      "lastFPS": 43,
+      "weather": "rain",
+      "time": 15.5,
+      "budget": "balanced",
+      "stay": "tea",
+      "view": "rainporch",
+      "layers": {
+        "roofWater": 0.698,
+        "activeDrops": 0,
+        "impactEvents": 4175,
+        "fogDensity": 0.0038,
+        "detailEnabled": false,
+        "distanceEnabled": false
+      },
+      "audio": {
+        "enabled": true,
+        "context": "running",
+        "loading": false,
+        "loaded": true,
+        "rain": 0.698,
+        "shelter": 1,
+        "rms": 0.00655,
+        "thunderScheduled": 0,
+        "thunderPlayed": 0,
+        "pending": 0,
+        "detailPlayed": 1470,
+        "detailByKind": {
+          "stone": 1077,
+          "earth": 84,
+          "roof": 309
+        },
+        "listenerSource": "GPU rain cell and surface exposure",
+        "lastDetail": {
+          "kind": "roof",
+          "distance": 3.76,
+          "pan": 0.25
+        },
+        "stems": {
+          "rain": 0.23,
+          "roof": 0.095,
+          "leaves": 0.003,
+          "wind": 0.011
+        },
+        "volume": 0.25,
+        "detailVolume": 0.55,
+        "focus": "all",
+        "blocked": false,
+        "activeDetails": 1,
+        "activeThunder": 0,
+        "source": "CC0 rain/thunder + filtered leaves, quiet wind and synthesized impact details"
+      },
+      "errors": [],
+      "observations": [
+        {
+          "at": "2026-09-14T06:17:39.727Z",
+          "simulationSeconds": 0.05,
+          "action": "ready",
+          "detail": "live weather engine; procedural courtyard"
+        },
+        {
+          "at": "2026-09-14T06:17:39.729Z",
+          "simulationSeconds": 0.05,
+          "action": "view",
+          "detail": "shelter"
+        },
+        {
+          "at": "2026-09-14T06:17:39.729Z",
+          "simulationSeconds": 0.05,
+          "action": "guest-stop",
+          "detail": "tea"
+        },
+        {
+          "at": "2026-09-14T06:17:39.729Z",
+          "simulationSeconds": 0.05,
+          "action": "view",
+          "detail": "rainporch"
+        },
+        {
+          "at": "2026-09-14T06:19:14.123Z",
+          "simulationSeconds": 94.18,
+          "action": "audio-loaded",
+          "detail": {
+            "source": "CC0 natural rain and thunder",
+            "files": 2
+          }
+        },
+        {
+          "at": "2026-09-14T06:19:14.123Z",
+          "simulationSeconds": 94.18,
+          "action": "audio",
+          "detail": true
+        },
+        {
+          "at": "2026-09-14T06:21:42.236Z",
+          "simulationSeconds": 241.8,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        },
+        {
+          "at": "2026-09-14T06:22:28.468Z",
+          "simulationSeconds": 287.72,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        }
+      ]
+    },
+    "afterRain": {
+      "startupSeconds": 24.12,
+      "resourceMiB": 10.06,
+      "resourceFiles": 47,
+      "completedFrames": 16742,
+      "lastFPS": 46,
+      "weather": "none",
+      "time": 15.5,
+      "budget": "balanced",
+      "stay": "tea",
+      "view": "rainporch",
+      "layers": {
+        "roofWater": 0.065,
+        "activeDrops": 1,
+        "impactEvents": 4528,
+        "fogDensity": 0.0018,
+        "detailEnabled": true,
+        "distanceEnabled": true
+      },
+      "audio": {
+        "enabled": true,
+        "context": "running",
+        "loading": false,
+        "loaded": true,
+        "rain": 0,
+        "shelter": 1,
+        "rms": 0.00006,
+        "thunderScheduled": 0,
+        "thunderPlayed": 0,
+        "pending": 0,
+        "detailPlayed": 1676,
+        "detailByKind": {
+          "stone": 1264,
+          "earth": 93,
+          "roof": 319
+        },
+        "listenerSource": "GPU rain cell and surface exposure",
+        "lastDetail": {
+          "kind": "stone",
+          "distance": 8.79,
+          "pan": -0.42
+        },
+        "stems": {
+          "rain": 0,
+          "roof": 0,
+          "leaves": 0,
+          "wind": 0.002
+        },
+        "volume": 0.25,
+        "detailVolume": 0.55,
+        "focus": "all",
+        "blocked": false,
+        "activeDetails": 0,
+        "activeThunder": 0,
+        "source": "CC0 rain/thunder + filtered leaves, quiet wind and synthesized impact details"
+      },
+      "errors": [],
+      "observations": [
+        {
+          "at": "2026-09-14T06:17:39.727Z",
+          "simulationSeconds": 0.05,
+          "action": "ready",
+          "detail": "live weather engine; procedural courtyard"
+        },
+        {
+          "at": "2026-09-14T06:17:39.729Z",
+          "simulationSeconds": 0.05,
+          "action": "view",
+          "detail": "shelter"
+        },
+        {
+          "at": "2026-09-14T06:17:39.729Z",
+          "simulationSeconds": 0.05,
+          "action": "guest-stop",
+          "detail": "tea"
+        },
+        {
+          "at": "2026-09-14T06:17:39.729Z",
+          "simulationSeconds": 0.05,
+          "action": "view",
+          "detail": "rainporch"
+        },
+        {
+          "at": "2026-09-14T06:19:14.123Z",
+          "simulationSeconds": 94.18,
+          "action": "audio-loaded",
+          "detail": {
+            "source": "CC0 natural rain and thunder",
+            "files": 2
+          }
+        },
+        {
+          "at": "2026-09-14T06:19:14.123Z",
+          "simulationSeconds": 94.18,
+          "action": "audio",
+          "detail": true
+        },
+        {
+          "at": "2026-09-14T06:21:42.236Z",
+          "simulationSeconds": 241.8,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        },
+        {
+          "at": "2026-09-14T06:22:28.468Z",
+          "simulationSeconds": 287.72,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        },
+        {
+          "at": "2026-09-14T06:22:30.015Z",
+          "simulationSeconds": 288.96,
+          "action": "weather-comparison",
+          "detail": "clear"
+        },
+        {
+          "at": "2026-09-14T06:23:03.493Z",
+          "simulationSeconds": 322.46,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        }
+      ]
+    },
+    "paused": {
+      "startupSeconds": 24.12,
+      "resourceMiB": 10.06,
+      "resourceFiles": 47,
+      "completedFrames": 16742,
+      "lastFPS": 46,
+      "weather": "none",
+      "time": 15.5,
+      "budget": "balanced",
+      "stay": "tea",
+      "view": "rainporch",
+      "layers": {
+        "roofWater": 0.065,
+        "activeDrops": 1,
+        "impactEvents": 4528,
+        "fogDensity": 0.0018,
+        "detailEnabled": true,
+        "distanceEnabled": true
+      },
+      "audio": {
+        "enabled": true,
+        "context": "suspended",
+        "loading": false,
+        "loaded": true,
+        "rain": 0,
+        "shelter": 1,
+        "rms": 0,
+        "thunderScheduled": 0,
+        "thunderPlayed": 0,
+        "pending": 0,
+        "detailPlayed": 1676,
+        "detailByKind": {
+          "stone": 1264,
+          "earth": 93,
+          "roof": 319
+        },
+        "listenerSource": "GPU rain cell and surface exposure",
+        "lastDetail": {
+          "kind": "stone",
+          "distance": 8.79,
+          "pan": -0.42
+        },
+        "stems": {
+          "rain": 0,
+          "roof": 0,
+          "leaves": 0,
+          "wind": 0.002
+        },
+        "volume": 0.25,
+        "detailVolume": 0.55,
+        "focus": "all",
+        "blocked": true,
+        "activeDetails": 0,
+        "activeThunder": 0,
+        "source": "CC0 rain/thunder + filtered leaves, quiet wind and synthesized impact details"
+      },
+      "errors": [],
+      "observations": [
+        {
+          "at": "2026-09-14T06:17:39.727Z",
+          "simulationSeconds": 0.05,
+          "action": "ready",
+          "detail": "live weather engine; procedural courtyard"
+        },
+        {
+          "at": "2026-09-14T06:17:39.729Z",
+          "simulationSeconds": 0.05,
+          "action": "view",
+          "detail": "shelter"
+        },
+        {
+          "at": "2026-09-14T06:17:39.729Z",
+          "simulationSeconds": 0.05,
+          "action": "guest-stop",
+          "detail": "tea"
+        },
+        {
+          "at": "2026-09-14T06:17:39.729Z",
+          "simulationSeconds": 0.05,
+          "action": "view",
+          "detail": "rainporch"
+        },
+        {
+          "at": "2026-09-14T06:19:14.123Z",
+          "simulationSeconds": 94.18,
+          "action": "audio-loaded",
+          "detail": {
+            "source": "CC0 natural rain and thunder",
+            "files": 2
+          }
+        },
+        {
+          "at": "2026-09-14T06:19:14.123Z",
+          "simulationSeconds": 94.18,
+          "action": "audio",
+          "detail": true
+        },
+        {
+          "at": "2026-09-14T06:21:42.236Z",
+          "simulationSeconds": 241.8,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        },
+        {
+          "at": "2026-09-14T06:22:28.468Z",
+          "simulationSeconds": 287.72,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        },
+        {
+          "at": "2026-09-14T06:22:30.015Z",
+          "simulationSeconds": 288.96,
+          "action": "weather-comparison",
+          "detail": "clear"
+        },
+        {
+          "at": "2026-09-14T06:23:03.493Z",
+          "simulationSeconds": 322.46,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        }
+      ]
+    }
+  }
+}

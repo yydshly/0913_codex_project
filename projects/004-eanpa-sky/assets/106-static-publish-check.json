@@ -1,0 +1,476 @@
+{
+  "startupSeconds": 34.9,
+  "resourceMiB": 10.14,
+  "resourceFiles": 64,
+  "completedFrames": 11613,
+  "lastFPS": 55,
+  "paused": false,
+  "eventLog": {
+    "limit": 600,
+    "total": 9,
+    "dropped": 0
+  },
+  "runtime": {
+    "sampleLimit": 120,
+    "totalSamples": 43,
+    "droppedSamples": 0,
+    "samples": [
+      {
+        "elapsedSeconds": 200.9,
+        "simulationSeconds": 200.34,
+        "frames": 10831,
+        "weather": "snow",
+        "quality": "standard",
+        "memory": {
+          "attributes": 560,
+          "attributesSize": 9162276,
+          "geometries": 255,
+          "indexAttributes": 161,
+          "indexAttributesSize": 1767968,
+          "indirectStorageAttributes": 0,
+          "indirectStorageAttributesSize": 0,
+          "programs": 174,
+          "programsSize": 4915892,
+          "readbackBuffers": 0,
+          "readbackBuffersSize": 0,
+          "renderTargets": 33,
+          "storageAttributes": 0,
+          "storageAttributesSize": 0,
+          "textures": 54,
+          "texturesSize": 216589855,
+          "uniformBuffers": 1443,
+          "uniformBuffersSize": 1102976,
+          "total": 233538967
+        },
+        "jsHeapUsedBytes": 177494627
+      },
+      {
+        "elapsedSeconds": 206,
+        "simulationSeconds": 205.36,
+        "frames": 11111,
+        "weather": "snow",
+        "quality": "standard",
+        "memory": {
+          "attributes": 560,
+          "attributesSize": 9162276,
+          "geometries": 255,
+          "indexAttributes": 161,
+          "indexAttributesSize": 1767968,
+          "indirectStorageAttributes": 0,
+          "indirectStorageAttributesSize": 0,
+          "programs": 174,
+          "programsSize": 4915892,
+          "readbackBuffers": 0,
+          "readbackBuffersSize": 0,
+          "renderTargets": 33,
+          "storageAttributes": 0,
+          "storageAttributesSize": 0,
+          "textures": 54,
+          "texturesSize": 216589855,
+          "uniformBuffers": 1443,
+          "uniformBuffersSize": 1102976,
+          "total": 233538967
+        },
+        "jsHeapUsedBytes": 179255771
+      },
+      {
+        "elapsedSeconds": 211,
+        "simulationSeconds": 210.37,
+        "frames": 11355,
+        "weather": "snow",
+        "quality": "standard",
+        "memory": {
+          "attributes": 560,
+          "attributesSize": 9162276,
+          "geometries": 255,
+          "indexAttributes": 161,
+          "indexAttributesSize": 1767968,
+          "indirectStorageAttributes": 0,
+          "indirectStorageAttributesSize": 0,
+          "programs": 174,
+          "programsSize": 4915892,
+          "readbackBuffers": 0,
+          "readbackBuffersSize": 0,
+          "renderTargets": 33,
+          "storageAttributes": 0,
+          "storageAttributesSize": 0,
+          "textures": 54,
+          "texturesSize": 216589855,
+          "uniformBuffers": 1443,
+          "uniformBuffersSize": 1102976,
+          "total": 233538967
+        },
+        "jsHeapUsedBytes": 172795975
+      }
+    ],
+    "note": "Renderer-tracked resources and estimated bytes, not process VRAM; JS heap is optional browser telemetry.",
+    "startedAt": 35241.5,
+    "wallSeconds": 211
+  },
+  "acceptance": {
+    "startup": [
+      {
+        "stage": "Module dependencies ready",
+        "elapsedMs": 342.4,
+        "durationMs": 342.4
+      },
+      {
+        "stage": "Resource index",
+        "elapsedMs": 389.3,
+        "durationMs": 46.9
+      },
+      {
+        "stage": "WebGPU initialization",
+        "elapsedMs": 799.3,
+        "durationMs": 410
+      },
+      {
+        "stage": "Courtyard and host effects",
+        "elapsedMs": 900.4,
+        "durationMs": 101.1
+      },
+      {
+        "stage": "Sky creation and assets",
+        "elapsedMs": 1382.9,
+        "durationMs": 482.5
+      },
+      {
+        "stage": "Weather assets",
+        "elapsedMs": 1460,
+        "durationMs": 77.1
+      },
+      {
+        "stage": "Material wrapping",
+        "elapsedMs": 1461.7,
+        "durationMs": 1.7
+      },
+      {
+        "stage": "Initial sky environment bake",
+        "elapsedMs": 1990.8,
+        "durationMs": 529.1
+      },
+      {
+        "stage": "Reflection pipeline setup",
+        "elapsedMs": 2019.9,
+        "durationMs": 29.1
+      },
+      {
+        "stage": "Cloud pass compilation",
+        "elapsedMs": 6938.8,
+        "durationMs": 4918.9
+      },
+      {
+        "stage": "Reflection and material compilation",
+        "elapsedMs": 30124.9,
+        "durationMs": 23186.1
+      },
+      {
+        "stage": "First pipeline render",
+        "elapsedMs": 33261.3,
+        "durationMs": 3136.4
+      },
+      {
+        "stage": "Three warmup frames and GPU completion",
+        "elapsedMs": 35241.3,
+        "durationMs": 1980
+      }
+    ],
+    "previewVisibleMs": 229.2,
+    "previewTimingNote": "Second animation-frame callback after illustration markup; approximate visibility marker, not interactive scene readiness.",
+    "navigationToReadyMs": 35241.5,
+    "renderWork": {
+      "measuredFrames": 11610,
+      "meanMs": 12.33,
+      "recentSamples": 300,
+      "p50Ms": 14.1,
+      "p95Ms": 18.4,
+      "over100ms": 0,
+      "note": "Wall-clock time awaiting frame submission; excludes paused/hidden intervals, not GPU execution time or display FPS."
+    }
+  },
+  "weather": "snow",
+  "time": 15.5,
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "budget": "auto",
+  "quality": {
+    "mode": "auto",
+    "name": "standard",
+    "divisor": 2,
+    "ao": true,
+    "reflectionMultiplier": 1,
+    "frameCap": 60
+  },
+  "adaptive": {
+    "level": 0,
+    "name": "standard",
+    "divisor": 2,
+    "ao": true,
+    "reflectionMultiplier": 1,
+    "decisions": 0,
+    "lastWindow": {
+      "fps": 52.4,
+      "p95Ms": 19.3,
+      "samples": 263
+    },
+    "windowSeconds": 5,
+    "cooldownSeconds": 20
+  },
+  "reflectionBudget": {
+    "environmentOnlyMaterials": 8,
+    "policy": "Authored matte landscape/earth/snow use native sky lighting; wet paths, water and windows retain local-probe and screen-space reflections."
+  },
+  "stay": "tea",
+  "view": "overview",
+  "camera": {
+    "position": [
+      24,
+      14,
+      29
+    ],
+    "target": [
+      -1,
+      1,
+      -2
+    ]
+  },
+  "sequence": null,
+  "atmosphere": {
+    "fog": 0.0048,
+    "cloud": 0.8,
+    "progress": 1,
+    "clock": "engine",
+    "sunIntensity": 1.17,
+    "skyLightIntensity": 0.717
+  },
+  "lighting": {
+    "mode": "auto",
+    "brightness": 0.7,
+    "tea": true,
+    "path": true,
+    "rooms": true
+  },
+  "lightOutput": {
+    "mode": "auto",
+    "brightness": 0.7,
+    "targets": {
+      "tea": 0,
+      "path": 0,
+      "rooms": 0
+    },
+    "levels": {
+      "tea": 0,
+      "path": 0,
+      "rooms": 0
+    },
+    "teaIntensity": 0,
+    "pathIntensity": 0,
+    "roomIntensity": 0,
+    "shadowLights": 0
+  },
+  "layers": {
+    "roofWater": 0,
+    "activeDrops": 0,
+    "impactEvents": 2378,
+    "fogDensity": 0.0048,
+    "detailEnabled": true,
+    "snow": {
+      "meltwaterDelta": 0,
+      "meltwaterTotal": 0,
+      "meltSeconds": 196,
+      "engineWeather": "overcast",
+      "intensity": 1,
+      "accumulation": 0.965,
+      "visibleFlakes": 1714,
+      "capacity": 1800,
+      "coveredSurfaces": [
+        "pavilion roof",
+        "guestroom roof",
+        "exposed courtyard",
+        "tree and shrub upper faces",
+        "grass",
+        "distant terrain and forest upper faces"
+      ],
+      "shelteredFloorExcluded": true,
+      "model": "accelerated normalized snow reservoir; melt feeds host soil and pools; no temperature or physical runoff solver"
+    },
+    "groundRain": {
+      "meltwaterReceived": 0,
+      "meltInput": 0,
+      "meltOverflow": 0,
+      "wetReach": 0.4102,
+      "waterLevel": 0.0581,
+      "waterCoverage": [
+        0.2038,
+        0.0489,
+        0.1418
+      ],
+      "wavesEnabled": true,
+      "waves": [
+        {
+          "impulses": 344,
+          "ticks": 19328,
+          "peak": 0,
+          "energy": 0,
+          "size": 64
+        },
+        {
+          "impulses": 470,
+          "ticks": 19328,
+          "peak": 0,
+          "energy": 0,
+          "size": 64
+        },
+        {
+          "impulses": 2970,
+          "ticks": 19328,
+          "peak": 0,
+          "energy": 0,
+          "size": 64
+        }
+      ],
+      "rain": 0,
+      "falling": 0,
+      "contacts": 0,
+      "activeSpray": 0,
+      "puddleFill": 0.354,
+      "soilMoisture": 0.62,
+      "dryingRate": 0.611,
+      "impacts": 41440,
+      "region": "open courtyard plus east puddle at x 4.4, z 4"
+    },
+    "hail": {
+      "intensity": 0,
+      "falling": 0,
+      "bouncing": 0,
+      "resting": 0,
+      "impacts": 0,
+      "bySurface": {
+        "roof": 0,
+        "stone": 0,
+        "earth": 0,
+        "water": 0,
+        "snow": 0,
+        "foliage": 0
+      },
+      "capacity": 420
+    },
+    "weatherTransition": {
+      "active": false,
+      "from": "rain",
+      "target": "overcast",
+      "durationSeconds": 12,
+      "elapsedSeconds": 12.012400000002188,
+      "rawProgress": 1,
+      "easedProgress": 1
+    },
+    "distanceEnabled": true
+  },
+  "audio": {
+    "enabled": true,
+    "context": "running",
+    "loading": false,
+    "loaded": true,
+    "rain": 0,
+    "shelter": 0,
+    "rms": 0.00121,
+    "thunderScheduled": 0,
+    "thunderPlayed": 0,
+    "pending": 0,
+    "detailPlayed": 82,
+    "hailFarImpacts": 0,
+    "hailFarLevel": 0,
+    "detailByKind": {
+      "stone": 70,
+      "earth": 3,
+      "roof": 9
+    },
+    "listenerSource": "GPU rain cell and surface exposure",
+    "snow": 1,
+    "hail": 0,
+    "lastDetail": {
+      "kind": "stone",
+      "variant": 0,
+      "cutoff": 2323,
+      "distance": 15.6,
+      "pan": 0.8
+    },
+    "stems": {
+      "hailFar": 0,
+      "rain": 0,
+      "roof": 0,
+      "leaves": 0,
+      "wind": 0.035
+    },
+    "volume": 0.25,
+    "detailVolume": 0.55,
+    "focus": "all",
+    "blocked": false,
+    "activeDetails": 0,
+    "activeThunder": 0,
+    "impactVariants": 6,
+    "source": "CC0 rain/thunder + filtered ambience and varied synthesized contacts"
+  },
+  "errors": [],
+  "observations": [
+    {
+      "at": "2026-09-14T13:44:35.702Z",
+      "simulationSeconds": 0.05,
+      "action": "ready",
+      "detail": "live weather engine; procedural courtyard"
+    },
+    {
+      "at": "2026-09-14T13:44:35.706Z",
+      "simulationSeconds": 0.05,
+      "action": "view",
+      "detail": "shelter"
+    },
+    {
+      "at": "2026-09-14T13:44:35.706Z",
+      "simulationSeconds": 0.05,
+      "action": "guest-stop",
+      "detail": "tea"
+    },
+    {
+      "at": "2026-09-14T13:44:35.706Z",
+      "simulationSeconds": 0.05,
+      "action": "view",
+      "detail": "rainporch"
+    },
+    {
+      "at": "2026-09-14T13:46:23.022Z",
+      "simulationSeconds": 106.67,
+      "action": "audio-loaded",
+      "detail": {
+        "source": "CC0 natural rain and thunder",
+        "files": 2
+      }
+    },
+    {
+      "at": "2026-09-14T13:46:23.023Z",
+      "simulationSeconds": 106.67,
+      "action": "audio",
+      "detail": true
+    },
+    {
+      "at": "2026-09-14T13:46:30.560Z",
+      "simulationSeconds": 114.26,
+      "action": "weather",
+      "detail": "snow"
+    },
+    {
+      "at": "2026-09-14T13:46:30.646Z",
+      "simulationSeconds": 114.35,
+      "action": "view",
+      "detail": "overview"
+    },
+    {
+      "at": "2026-09-14T13:48:11.326Z",
+      "simulationSeconds": 214.95,
+      "action": "journal",
+      "detail": "opened; rendering suspended"
+    }
+  ]
+}

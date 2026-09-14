@@ -1,0 +1,118 @@
+{
+  "project": "004-eanpa-sky / weather-courtyard",
+  "upstreamCommit": "a197d3dc42577e9b870b471a39d6b1710c5b5633",
+  "date": "2026-09-14T04:32:04.580Z",
+  "ready": true,
+  "paused": true,
+  "hours": 15.5,
+  "weather": "rain",
+  "cloud": "cumulus",
+  "budget": "eco",
+  "view": "shelter",
+  "time": 116.18530000002168,
+  "frames": 6695,
+  "fps": 30,
+  "readyMs": 11092.700000047684,
+  "events": [
+    {
+      "at": "2026-09-14T04:29:59.014Z",
+      "simulationSeconds": 0.05,
+      "action": "ready",
+      "detail": "live weather engine; procedural courtyard"
+    },
+    {
+      "at": "2026-09-14T04:30:17.059Z",
+      "simulationSeconds": 18.08,
+      "action": "weather",
+      "detail": "rain"
+    },
+    {
+      "at": "2026-09-14T04:30:39.794Z",
+      "simulationSeconds": 40.82,
+      "action": "view",
+      "detail": "surface"
+    },
+    {
+      "at": "2026-09-14T04:31:48.509Z",
+      "simulationSeconds": 109.54,
+      "action": "view",
+      "detail": "shelter"
+    },
+    {
+      "at": "2026-09-14T04:31:48.759Z",
+      "simulationSeconds": 109.79,
+      "action": "budget",
+      "detail": "eco"
+    },
+    {
+      "at": "2026-09-14T04:31:55.074Z",
+      "simulationSeconds": 116.09,
+      "action": "language",
+      "detail": "en"
+    },
+    {
+      "at": "2026-09-14T04:31:55.160Z",
+      "simulationSeconds": 116.19,
+      "action": "pause",
+      "detail": true
+    },
+    {
+      "at": "2026-09-14T04:31:55.458Z",
+      "simulationSeconds": 116.19,
+      "action": "journal",
+      "detail": "opened; rendering suspended"
+    },
+    {
+      "at": "2026-09-14T04:32:04.580Z",
+      "simulationSeconds": 116.19,
+      "action": "export",
+      "detail": "session JSON"
+    }
+  ],
+  "errors": [],
+  "resourceContentBytes": 10065616,
+  "loadedResources": [
+    "/assets/moon_color_4k.jpg",
+    "/assets/starmap_tycho_4k.jpg",
+    "/assets/weather/cirrus_ice_trails.png",
+    "/assets/weather/rain_streak.png",
+    "/assets/weather/trace_06.png",
+    "/engine/cached_cloud_display.js",
+    "/engine/cloud_motion.js",
+    "/engine/cloud_shadow_map.js",
+    "/engine/cloud_uniform_snapshot.js",
+    "/engine/impact_smoke.js",
+    "/engine/quality_presets.js",
+    "/engine/rain_accumulation_field.js",
+    "/engine/rain_surface_field.js",
+    "/engine/sky_noise.js",
+    "/engine/sky_system.js",
+    "/engine/weather_listener.js",
+    "/engine/weather_system.js",
+    "/lab/",
+    "/lab/courtyard.js",
+    "/lab/lab.css",
+    "/lab/main.js",
+    "/src/ambient_occlusion.js",
+    "/src/cloudspatial.js",
+    "/src/local_reflection_probe.js",
+    "/src/native_reflection_pipeline.js",
+    "/src/reflection_environment.js",
+    "/src/reflection_geometry.js",
+    "/src/reflection_receiver_id.js",
+    "/src/screen_space_trace.js",
+    "/src/sky_geometry_layer.js",
+    "/src/vendor/n8ao/BlueNoise.js",
+    "/src/vendor/n8ao/N8AONode.js",
+    "/src/vendor/n8ao/math.js",
+    "/src/visible_emission.js",
+    "/src/weathersky.js",
+    "/vendor/three/addons/controls/OrbitControls.js",
+    "/vendor/three/addons/tsl/display/BloomNode.js",
+    "/vendor/three/addons/tsl/display/FXAANode.js",
+    "/vendor/three/three.core.js",
+    "/vendor/three/three.tsl.js",
+    "/vendor/three/three.webgpu.js"
+  ],
+  "measurementNote": "Content bytes from loaded paths and pinned file sizes; not network transfer or VRAM. Startup includes this navigation only. FPS counts completed frames."
+}

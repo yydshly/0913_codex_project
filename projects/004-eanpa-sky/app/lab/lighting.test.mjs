@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {lightTargets,fadeLight} from './lighting.js';
+assert.equal(lightTargets(12).tea,0);
+assert.equal(lightTargets(23).tea,.7);
+assert.deepEqual(lightTargets(0),lightTargets(24));
+assert(lightTargets(18).tea>lightTargets(17).tea);
+assert(lightTargets(6).tea>lightTargets(7).tea);
+assert.deepEqual(lightTargets(12,{mode:'on'}),lightTargets(23,{mode:'on'}));
+assert.equal(lightTargets(23,{mode:'off'}).tea,0);
+assert.equal(lightTargets(23,{brightness:0}).path,0);
+const zones=lightTargets(23,{tea:false});assert.equal(zones.tea,0);assert(zones.path>0&&zones.rooms>0);
+assert.equal(fadeLight(.7,0,0),.7);
+let value=.7;for(let i=0;i<120;i++)value=fadeLight(value,0,1/60);assert(value<.001);
+console.log('Lighting checks passed: dawn/dusk, midnight wrap, manual override, zones, dimming, pause and fade.');

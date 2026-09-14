@@ -1,0 +1,2068 @@
+{
+  "repository": "https://github.com/SkyeShark/Eanpa-Sky",
+  "commit": "a197d3dc42577e9b870b471a39d6b1710c5b5633",
+  "version": "0.2.1",
+  "researchDate": "2026-09-14",
+  "files": {
+    "KNOWN_ISSUES.md": {
+      "sha": "b5fc3edc13a0cb8862cc0dbf6343e95faee54ccc",
+      "size": 3492
+    },
+    "LICENSE": {
+      "sha": "dfd987b54dfda2fdeb055760e54ff4feee0eeb24",
+      "size": 1066
+    },
+    "README.md": {
+      "sha": "372301e0172085452e5fa85842a81b46822cf402",
+      "size": 3208
+    },
+    "VERSION": {
+      "sha": "0c62199f16ac1e2d7f7ae75b420c1231325dff4e",
+      "size": 6
+    },
+    "assets/asteroid_cluster_v3.glb": {
+      "sha": "ea78cfc2feef0d37135d02343198d3bc70645c20",
+      "size": 3394664
+    },
+    "assets/audio/README.md": {
+      "sha": "35080583b04203010e78efb6ba32ee7908ade879",
+      "size": 12670
+    },
+    "assets/audio/ambience_desert_wind.wav": {
+      "sha": "5d172dea57ea8e9c3cbbc603088687aed415d7cf",
+      "size": 1091278
+    },
+    "assets/audio/bird_cactus_wren_01.mp3": {
+      "sha": "15bdf9f3ea667d62fd9ce5dd920c1b7638d97da5",
+      "size": 55768
+    },
+    "assets/audio/bird_cactus_wren_02.mp3": {
+      "sha": "d613faadaa315c964c5ec1349b3a4afafe5fd0ec",
+      "size": 57821
+    },
+    "assets/audio/bird_roadrunner_01.mp3": {
+      "sha": "51d66992322bc0d4e5da38238ea2c90267130c2d",
+      "size": 53149
+    },
+    "assets/audio/bird_roadrunner_02.mp3": {
+      "sha": "737ff33f52e3d8e607e1905cdc897d94a1569d68",
+      "size": 73529
+    },
+    "assets/audio/flashlight_click_off.ogg": {
+      "sha": "85f095c76c8f4cc80538a0cf4b8b46bac88ae181",
+      "size": 5932
+    },
+    "assets/audio/flashlight_click_on.ogg": {
+      "sha": "8b6b8ebff3a62c64adb2d10f8a2fb2fea5ab7b35",
+      "size": 5085
+    },
+    "assets/audio/footstep_gravel_01.ogg": {
+      "sha": "3e69e620348756f61505848881c86476f2273e52",
+      "size": 11124
+    },
+    "assets/audio/footstep_gravel_02.ogg": {
+      "sha": "392db550a26c1ed065c51f07091605df3091f10b",
+      "size": 13824
+    },
+    "assets/audio/footstep_gravel_03.ogg": {
+      "sha": "dd5ac39f9a814beb834e052db01bc3ecc3ab8321",
+      "size": 13300
+    },
+    "assets/audio/footstep_gravel_04.ogg": {
+      "sha": "987ecdd2d505b81aa718212d97c97fbd47c6b3d6",
+      "size": 14149
+    },
+    "assets/audio/footstep_sand_01.ogg": {
+      "sha": "09847ff87a429bde459d36c0ffa047a5dc1d8005",
+      "size": 11819
+    },
+    "assets/audio/footstep_sand_02.ogg": {
+      "sha": "4800a05104e14da8674454b26c8438cfad75d7fa",
+      "size": 9756
+    },
+    "assets/audio/footstep_sand_03.ogg": {
+      "sha": "f1f39217eeafc3eeed82b0fb3d5e1dba728b91dd",
+      "size": 11160
+    },
+    "assets/audio/footstep_sand_04.ogg": {
+      "sha": "39931f1babfe63dfe391a97542932ead6c44e244",
+      "size": 9521
+    },
+    "assets/audio/footstep_sandstone_01.ogg": {
+      "sha": "5a6c6cbb42d03a1a5e5506a74a32a2569c2ea4ed",
+      "size": 9914
+    },
+    "assets/audio/footstep_sandstone_02.ogg": {
+      "sha": "5e216feac633f54e47d72363fe8194bf9b98a648",
+      "size": 9612
+    },
+    "assets/audio/footstep_sandstone_03.ogg": {
+      "sha": "6b4535c21c067e61a70aac4398f6166013b8ec08",
+      "size": 10452
+    },
+    "assets/audio/footstep_sandstone_04.ogg": {
+      "sha": "ce82530537c9e0e5a83942d9c1cac3fe6f968301",
+      "size": 9375
+    },
+    "assets/audio/footstep_stone_01.ogg": {
+      "sha": "9eaf3cb7a6e676e56df4512d55fa2461435d426c",
+      "size": 7430
+    },
+    "assets/audio/footstep_stone_02.ogg": {
+      "sha": "00efe819917f054b668c338e93286466ba42fdc1",
+      "size": 7537
+    },
+    "assets/audio/footstep_stone_03.ogg": {
+      "sha": "b5ec62d37966a2a962257041bee00057f540de3b",
+      "size": 7084
+    },
+    "assets/audio/footstep_stone_04.ogg": {
+      "sha": "6641ea740d990832b798584ab9261a43835a4c33",
+      "size": 7274
+    },
+    "assets/audio/gate_close.ogg": {
+      "sha": "ebeb02b6e9fd99cf2f2b3d473974a683195ae4ce",
+      "size": 30317
+    },
+    "assets/audio/gate_open.ogg": {
+      "sha": "6e4f6d7786fbc24b34415930979c345d37a710ca",
+      "size": 25985
+    },
+    "assets/audio/landing_heavy.ogg": {
+      "sha": "4a6ca176120a61cfaf7b6db533ac627a68c94bae",
+      "size": 8060
+    },
+    "assets/audio/landing_medium.ogg": {
+      "sha": "47b194a9f045e94ea21b635c2705420349787f92",
+      "size": 7776
+    },
+    "assets/audio/landing_soft.ogg": {
+      "sha": "e919c65a6c69e4ab91d923b75301ee37764f8703",
+      "size": 7608
+    },
+    "assets/audio/rain_desert_loop.ogg": {
+      "sha": "aba252acce86ca75d28d3b3161c1efd65453e048",
+      "size": 806290
+    },
+    "assets/audio/thunder_close_01.ogg": {
+      "sha": "c879f5ef77176193d9b82d3b1145a06272342f87",
+      "size": 219634
+    },
+    "assets/audio/thunder_close_02.ogg": {
+      "sha": "06aeb29f4a0405580c3dcc649534d1891ec60e5f",
+      "size": 168294
+    },
+    "assets/audio/thunder_close_03.ogg": {
+      "sha": "ad97441c31eccd4b3d9943cda59e405b932a6ba2",
+      "size": 107739
+    },
+    "assets/audio/thunder_distant_01.ogg": {
+      "sha": "f996c56e5fdd8a1c178cfecec3192ddb4242bb7a",
+      "size": 145425
+    },
+    "assets/audio/thunder_distant_02.ogg": {
+      "sha": "eb95fbb836b2bc358548a62b6d3ace163f76fe83",
+      "size": 99563
+    },
+    "assets/audio/thunder_distant_03.ogg": {
+      "sha": "c71f60e9ec3a13efcb8df4604ae1d3cc8b37c5c5",
+      "size": 58000
+    },
+    "assets/audio/thunder_explosive_01.wav": {
+      "sha": "bf83fe6d0916c40045298388ff41fc2e8970d57a",
+      "size": 768044
+    },
+    "assets/audio/thunder_explosive_02.wav": {
+      "sha": "7d385c34d69f4afa2b2d67ec055cb73f6f18e940",
+      "size": 768044
+    },
+    "assets/audio/thunder_explosive_03.wav": {
+      "sha": "532de93e0a5b5a5fae19ce2516da6b6d1c0082aa",
+      "size": 768044
+    },
+    "assets/brand/eanpa_favicon.png": {
+      "sha": "30f3e25483273525c40037137883dd8a119331e9",
+      "size": 4230
+    },
+    "assets/brand/eanpa_icon.svg": {
+      "sha": "45c71924c1ff65d2e0b822272c9becbcbee4980a",
+      "size": 513
+    },
+    "assets/brand/eanpa_logo.png": {
+      "sha": "f33059086cf1c6d1ac0a81b639d85769328d1c0e",
+      "size": 837492
+    },
+    "assets/brand/eanpa_logo_160.png": {
+      "sha": "bdd5a62fded6d3e38511a3355bc7cb9a363015ac",
+      "size": 19774
+    },
+    "assets/brand/eanpa_wordmark.png": {
+      "sha": "f354a3529e81289e8bc1fda49e52f6762e4df651",
+      "size": 812026
+    },
+    "assets/brand/eanpa_wordmark.svg": {
+      "sha": "fce7bb5387a6d37a96f8a7523d56676920971d9a",
+      "size": 808
+    },
+    "assets/collision/convex_hulls_v1.json": {
+      "sha": "ecb8fa8f539a04fe37d2a2c85662bba2bff5209a",
+      "size": 99455
+    },
+    "assets/dressing/ATTRIBUTION.md": {
+      "sha": "a94e0ab358d101f970694340477c817cf58eb5ec",
+      "size": 979
+    },
+    "assets/dressing/scrub/blackbrush_albedo.png": {
+      "sha": "17d3d55a3d01a8789a9059062d4c1daf7fd270a9",
+      "size": 947029
+    },
+    "assets/dressing/scrub/blackbrush_normal.png": {
+      "sha": "40440a16ef53fe1091b01ed4536cbc3d32636d49",
+      "size": 334744
+    },
+    "assets/dressing/scrub/blackbrush_roughness.png": {
+      "sha": "6d91fed769431568f6d49f6582824204caa45bb2",
+      "size": 131676
+    },
+    "assets/dressing/scrub/blackbrush_translucency.png": {
+      "sha": "c60403d050331d90eb88a5fa8a3a1ca4a38246ec",
+      "size": 88449
+    },
+    "assets/dressing/scrub/creosote_albedo.png": {
+      "sha": "bbc75f8ef7e2868d4c0bf612c21968d8d0b81967",
+      "size": 1031794
+    },
+    "assets/dressing/scrub/creosote_normal.png": {
+      "sha": "f8593693683e463f6594d54a7b1f3729b7dcf0c2",
+      "size": 368315
+    },
+    "assets/dressing/scrub/creosote_roughness.png": {
+      "sha": "7b7b47a3ba3a7dd00889741386350cbf93c782b8",
+      "size": 141576
+    },
+    "assets/dressing/scrub/creosote_translucency.png": {
+      "sha": "44da00767688834c929e60943db13800fa6cb56f",
+      "size": 133881
+    },
+    "assets/dressing/scrub/sagebrush_albedo.png": {
+      "sha": "d3ee0af405e4ad3486dc6c3da3f1cd1bbae2e52f",
+      "size": 1325185
+    },
+    "assets/dressing/scrub/sagebrush_normal.png": {
+      "sha": "ac7aebb93bd69274c5f366c0835c1a19d1546f81",
+      "size": 784185
+    },
+    "assets/dressing/scrub/sagebrush_roughness.png": {
+      "sha": "e837ca1db4fd7fb37077a5287981a68c2f5a25b4",
+      "size": 244454
+    },
+    "assets/dressing/scrub/sagebrush_translucency.png": {
+      "sha": "674b17ba3f58f73444f370997063cccaa933efdc",
+      "size": 159631
+    },
+    "assets/eidoverse/perimeter/ATTRIBUTION.md": {
+      "sha": "6623298debbb019fea169fef7e32f7ade4c1519c",
+      "size": 1342
+    },
+    "assets/eidoverse/perimeter/scifi_perimeter_wall_gate.glb": {
+      "sha": "aa9e015b10cd6fcb49470dacaa72bc3d3f70c8db",
+      "size": 11661860
+    },
+    "assets/eidoverse/perimeter/scifi_perimeter_wall_middle_geometry.glb": {
+      "sha": "c0c7e08968384c235fdde9ae74f76683f00488c9",
+      "size": 43472
+    },
+    "assets/eidoverse/perimeter/scifi_perimeter_wall_middle_use_between_two_pillars.glb": {
+      "sha": "720ab163c20fcf3578203385ac1aa24d4166ee1e",
+      "size": 11627392
+    },
+    "assets/eidoverse/perimeter/scifi_perimeter_wall_pillar.glb": {
+      "sha": "2af507a28631fc7ce5b1e8ef55c4cc8201a9123c",
+      "size": 11608592
+    },
+    "assets/eidoverse/perimeter/scifi_perimeter_wall_pillar_geometry.glb": {
+      "sha": "deb3685bae62ca2a8375cc38c3880b6d2f6cd355",
+      "size": 24672
+    },
+    "assets/eidoverse/perimeter/scifi_perimeter_watchtower_geometry.glb": {
+      "sha": "25388fea73bbb41188ab4b9c729a024420ed3a67",
+      "size": 70148
+    },
+    "assets/eidoverse/perimeter/scifi_perimeter_watchtower_standalone_or_with_wall_middle_four_way.glb": {
+      "sha": "9c8c8fb4c557fc71f111ed96e77320928da58af5",
+      "size": 11654068
+    },
+    "assets/grass/blackbrush_albedo.png": {
+      "sha": "12800dce63391161a5e2b6211f3fd78af66e93dc",
+      "size": 867838
+    },
+    "assets/grass/blackbrush_normal.png": {
+      "sha": "991837e3726a56b54d0ca58ae172c8af423def25",
+      "size": 256144
+    },
+    "assets/grass/blackbrush_roughness.png": {
+      "sha": "35e0a97cf97f90108cf904a380530265924e9121",
+      "size": 151641
+    },
+    "assets/grass/blackbrush_stem_albedo.png": {
+      "sha": "12c91c08046d8324dafc8ad2916e5d6226dd0bd5",
+      "size": 2334028
+    },
+    "assets/grass/blackbrush_stem_roughness.png": {
+      "sha": "e3bd3de1f2b1fbdaa0a843bfbc3615319d2ce53a",
+      "size": 668935
+    },
+    "assets/grass/blackbrush_translucency.png": {
+      "sha": "a2329a696d38012c0c31dbf7270f5439f7ba3006",
+      "size": 57081
+    },
+    "assets/grass/blades_meadow_albedo.png": {
+      "sha": "33c325beecb2670d462e3cd8509d8e0606ef0f62",
+      "size": 619577
+    },
+    "assets/grass/blades_meadow_fit.json": {
+      "sha": "98c99ec0ba2a076a0e53d5a909dc90bb7c901332",
+      "size": 749
+    },
+    "assets/grass/blades_meadow_normal.png": {
+      "sha": "c4e430f3b3fe2fdd6cd92e12b102419c79dcb3a6",
+      "size": 371666
+    },
+    "assets/grass/blades_meadow_roughness.png": {
+      "sha": "7c8ec4f619554a996ca42fee11fed77d79fd282c",
+      "size": 371328
+    },
+    "assets/grass/blades_meadow_translucency.png": {
+      "sha": "da43bd04833b0720c782d4b496ae06c6ec638a0d",
+      "size": 381721
+    },
+    "assets/grass/creosote_albedo.png": {
+      "sha": "e11a1d90c2ed4a8d1832abfe3126e8172d09637c",
+      "size": 955753
+    },
+    "assets/grass/creosote_normal.png": {
+      "sha": "441ac597f74d483f0843760ecef4472fcb0e15d9",
+      "size": 281094
+    },
+    "assets/grass/creosote_roughness.png": {
+      "sha": "cb1f36384a75330fade32eebc7b1a32001092555",
+      "size": 202564
+    },
+    "assets/grass/creosote_stem_albedo.png": {
+      "sha": "e8b02be799846eb469905a7ac74bb9c8bce83b61",
+      "size": 2597034
+    },
+    "assets/grass/creosote_stem_roughness.png": {
+      "sha": "81e5eab490d829b0a1d44b77bc88f4a1609a4a61",
+      "size": 686613
+    },
+    "assets/grass/creosote_translucency.png": {
+      "sha": "970cd0ebcf962cbfee3ceac16eaecd7b99a2ca16",
+      "size": 123471
+    },
+    "assets/grass/sagebrush_albedo.png": {
+      "sha": "5010cfc5e0cd6e1ed75c321dd211c28800cc4575",
+      "size": 1245381
+    },
+    "assets/grass/sagebrush_normal.png": {
+      "sha": "3f8e8af6e1c14ad26ccacd288195d938a1294b36",
+      "size": 558270
+    },
+    "assets/grass/sagebrush_roughness.png": {
+      "sha": "869bdaeea45fb79d34a72a412c6c9fcd6ba78078",
+      "size": 255839
+    },
+    "assets/grass/sagebrush_translucency.png": {
+      "sha": "d36988d919dacf2e41c7fdf549620b83948242c7",
+      "size": 213263
+    },
+    "assets/grass/shrub_anchors.json": {
+      "sha": "f4dbc8b93aa949693855995e5b464516a58affe1",
+      "size": 225
+    },
+    "assets/grass/yucca_kit_albedo.png": {
+      "sha": "d98e51e6abb458dae2322c1d8c77c2c2832e1945",
+      "size": 1122969
+    },
+    "assets/grass/yucca_kit_normal.png": {
+      "sha": "5ac03bafeeff9a4ea5abcf953535733a433a1eca",
+      "size": 957116
+    },
+    "assets/grass/yucca_kit_roughness.png": {
+      "sha": "087526db4455f51a243d37994d7dee6627de7eb2",
+      "size": 354934
+    },
+    "assets/grass/yucca_kit_translucency.png": {
+      "sha": "a251c10ee515cf566425763689aea97033fbd1d9",
+      "size": 130569
+    },
+    "assets/moon_color_1k.jpg": {
+      "sha": "81e639cfe153b01dfbdf50dec2555c471a5b4806",
+      "size": 139068
+    },
+    "assets/moon_color_4k.jpg": {
+      "sha": "56c5889a1a9772d4696ff83d5cc7d9c0c0e0b0d7",
+      "size": 2031963
+    },
+    "assets/pbr/ADDITIONAL_DESERT_MATERIALS.md": {
+      "sha": "8948e2425a8f1fb2fbb3c9053e97adddb4d005f5",
+      "size": 1198
+    },
+    "assets/pbr/Grass001/Grass001.png": {
+      "sha": "8f061dd430a2fdb6cdf224330b27354d2156d881",
+      "size": 513474
+    },
+    "assets/pbr/Grass001/Grass001_1K-JPG.blend": {
+      "sha": "1822c1acaaad381af900d7225d8cb328cf1cd15d",
+      "size": 1109012
+    },
+    "assets/pbr/Grass001/Grass001_1K-JPG.mtlx": {
+      "sha": "9a72beb1e57924fcef324ca3fc25b92861371f4d",
+      "size": 2257
+    },
+    "assets/pbr/Grass001/Grass001_1K-JPG.tres": {
+      "sha": "506de58c22a56115a414e227b5e385800efb513b",
+      "size": 1015
+    },
+    "assets/pbr/Grass001/Grass001_1K-JPG.usdc": {
+      "sha": "97bde65a20241ec79a93230e19d93c95842ae05a",
+      "size": 2966
+    },
+    "assets/pbr/Grass001/Grass001_1K-JPG_AmbientOcclusion.jpg": {
+      "sha": "9426ebad749e4ac23c436e67bc22032cac7e81f3",
+      "size": 902486
+    },
+    "assets/pbr/Grass001/Grass001_1K-JPG_Color.jpg": {
+      "sha": "bcf62fb9984391be18968aabd63e2c755cab8e8e",
+      "size": 1764300
+    },
+    "assets/pbr/Grass001/Grass001_1K-JPG_Displacement.jpg": {
+      "sha": "a57d0777377640bcf3bed51a0ed2ffa3b90eb532",
+      "size": 913308
+    },
+    "assets/pbr/Grass001/Grass001_1K-JPG_NormalDX.jpg": {
+      "sha": "755e10fe79a39ac15ff13a9ddc98d0fcc45b0d5b",
+      "size": 2337443
+    },
+    "assets/pbr/Grass001/Grass001_1K-JPG_NormalGL.jpg": {
+      "sha": "fc06369a459d617856e7aed7088b232690bac3e5",
+      "size": 2338245
+    },
+    "assets/pbr/Grass001/Grass001_1K-JPG_Roughness.jpg": {
+      "sha": "122c7ed7d532d627c27a2c257cc056d84c1258a1",
+      "size": 823623
+    },
+    "assets/pbr/Gravel022/Gravel022.png": {
+      "sha": "2a00e038795f4607592cd4cc6a7f3e092fd833c1",
+      "size": 486945
+    },
+    "assets/pbr/Gravel022/Gravel022_1K-JPG.blend": {
+      "sha": "4b6ce11b933019e6dd387cefbf3b325812a29b36",
+      "size": 1109636
+    },
+    "assets/pbr/Gravel022/Gravel022_1K-JPG.mtlx": {
+      "sha": "7161b849d33aea56bdf962df9b1dfe8197853c5e",
+      "size": 2272
+    },
+    "assets/pbr/Gravel022/Gravel022_1K-JPG.tres": {
+      "sha": "c7ba7c637e89fde8a8f65227c6b5a53b59ec5f15",
+      "size": 1020
+    },
+    "assets/pbr/Gravel022/Gravel022_1K-JPG.usdc": {
+      "sha": "567da04021a2cfe25ee6d4bf6502e60fc1af5a52",
+      "size": 3012
+    },
+    "assets/pbr/Gravel022/Gravel022_1K-JPG_AmbientOcclusion.jpg": {
+      "sha": "b823ac8ff4c5a8c3e21c96dcf18eb65ae088bcce",
+      "size": 880026
+    },
+    "assets/pbr/Gravel022/Gravel022_1K-JPG_Color.jpg": {
+      "sha": "3041547813f1e24c1b49071e6eade84ae512ab48",
+      "size": 1424058
+    },
+    "assets/pbr/Gravel022/Gravel022_1K-JPG_Displacement.jpg": {
+      "sha": "b0485dd2ca2a2cd74a79b350f2a70d65f84b35aa",
+      "size": 702515
+    },
+    "assets/pbr/Gravel022/Gravel022_1K-JPG_NormalDX.jpg": {
+      "sha": "fff342c4d7df4bcd2e4c895f4ccf6434558e59d9",
+      "size": 2461751
+    },
+    "assets/pbr/Gravel022/Gravel022_1K-JPG_NormalGL.jpg": {
+      "sha": "9ff0d4b42ddde9e2bd7e996d77decb2656f07e65",
+      "size": 2460248
+    },
+    "assets/pbr/Gravel022/Gravel022_1K-JPG_Roughness.jpg": {
+      "sha": "52ae5da7951d633db4145f1878376b85fcb24f18",
+      "size": 542531
+    },
+    "assets/pbr/Ground103/ATTRIBUTION.md": {
+      "sha": "043d1d52b5468a50678b09ff72d41fd75764d6cd",
+      "size": 442
+    },
+    "assets/pbr/Ground103/Ground103_AmbientOcclusion.jpg": {
+      "sha": "6395d868ccf1dc66de4bef5701caf1e29be720ff",
+      "size": 904525
+    },
+    "assets/pbr/Ground103/Ground103_Color.jpg": {
+      "sha": "222b6583c9ab2f2e4545c49167fd32b43a89f3a3",
+      "size": 1504949
+    },
+    "assets/pbr/Ground103/Ground103_Displacement.jpg": {
+      "sha": "b063380f87147d12c54f17a024b31cea2a508fee",
+      "size": 479279
+    },
+    "assets/pbr/Ground103/Ground103_NormalGL.jpg": {
+      "sha": "2d7ab00d870bd5c58b4f31c86c8dc758c648543c",
+      "size": 2136725
+    },
+    "assets/pbr/Ground103/Ground103_Roughness.jpg": {
+      "sha": "87cd0bacaeb78d5935e05857ce4f5c6f55b890aa",
+      "size": 853705
+    },
+    "assets/pbr/Rock030/Rock030.png": {
+      "sha": "89cca8d27f8f208f65f24a4dbe942e6846a7637f",
+      "size": 434696
+    },
+    "assets/pbr/Rock030/Rock030_1K-JPG.blend": {
+      "sha": "e17a77c1241a1dfe3981e3935846a7284cbc3304",
+      "size": 1109428
+    },
+    "assets/pbr/Rock030/Rock030_1K-JPG.mtlx": {
+      "sha": "264da1fe3d24746aed5f6a7e4bc9544ade2d577e",
+      "size": 2242
+    },
+    "assets/pbr/Rock030/Rock030_1K-JPG.tres": {
+      "sha": "8f8c4be8e7a83a444474cd357010dae76def3f03",
+      "size": 1010
+    },
+    "assets/pbr/Rock030/Rock030_1K-JPG.usdc": {
+      "sha": "e8435c319c54fe0d60507443f8ff18ef69292b05",
+      "size": 2996
+    },
+    "assets/pbr/Rock030/Rock030_1K-JPG_AmbientOcclusion.jpg": {
+      "sha": "9109d2463e717d86933a3c0242704b78f3052eda",
+      "size": 568556
+    },
+    "assets/pbr/Rock030/Rock030_1K-JPG_Color.jpg": {
+      "sha": "5192dd96cefc36cf690ccde49b1376447e761d60",
+      "size": 1483352
+    },
+    "assets/pbr/Rock030/Rock030_1K-JPG_Displacement.jpg": {
+      "sha": "f85f84e7117e86084f64356747fbd5d62c17b8f1",
+      "size": 348477
+    },
+    "assets/pbr/Rock030/Rock030_1K-JPG_NormalDX.jpg": {
+      "sha": "64161193f4ec7dbef36be2e2332f3631bf49c815",
+      "size": 2526607
+    },
+    "assets/pbr/Rock030/Rock030_1K-JPG_NormalGL.jpg": {
+      "sha": "e254b4b94c1206526ffdba83b3407f8bc0385e3e",
+      "size": 2528233
+    },
+    "assets/pbr/Rock030/Rock030_1K-JPG_Roughness.jpg": {
+      "sha": "13d464dc031fb21e3a2dcad03de930867fb4554d",
+      "size": 669875
+    },
+    "assets/pbr/TERRAIN_MATERIALS_ATTRIBUTION.md": {
+      "sha": "5eff8c6cb58a269d197d98f217136724796b59d8",
+      "size": 1725
+    },
+    "assets/pbr/ambientcg_Gravel025/Gravel025.png": {
+      "sha": "e92b77d1a12937a7f7df29dd2184c4cae7b6691a",
+      "size": 493747
+    },
+    "assets/pbr/ambientcg_Gravel025/Gravel025_1K-JPG.blend": {
+      "sha": "d12be67fd2aeca0a10ed25761d357177ef8f7b7e",
+      "size": 1110052
+    },
+    "assets/pbr/ambientcg_Gravel025/Gravel025_1K-JPG.mtlx": {
+      "sha": "b02064672837fc12f21d2e00a9c233a284a821bd",
+      "size": 2272
+    },
+    "assets/pbr/ambientcg_Gravel025/Gravel025_1K-JPG.tres": {
+      "sha": "7f29a1ddeba6a46a30b673ea7af246ab6d063d0e",
+      "size": 1020
+    },
+    "assets/pbr/ambientcg_Gravel025/Gravel025_1K-JPG.usdc": {
+      "sha": "d5f491543540c79c511b91917bfdd2ed01a7db9c",
+      "size": 3045
+    },
+    "assets/pbr/ambientcg_Gravel025/Gravel025_1K-JPG_AmbientOcclusion.jpg": {
+      "sha": "1eafbe2d44b4bf2a7a508590502c4b6abbf96b77",
+      "size": 884817
+    },
+    "assets/pbr/ambientcg_Gravel025/Gravel025_1K-JPG_Color.jpg": {
+      "sha": "7cade938c41cf3994161fcd1cb7056a532b328c5",
+      "size": 1363906
+    },
+    "assets/pbr/ambientcg_Gravel025/Gravel025_1K-JPG_Displacement.jpg": {
+      "sha": "061a8f9e55a640099ab7d69515983d0984bb38a2",
+      "size": 707602
+    },
+    "assets/pbr/ambientcg_Gravel025/Gravel025_1K-JPG_NormalDX.jpg": {
+      "sha": "2b621bf593904ca0892287ba3dfe6094223d6e18",
+      "size": 2470814
+    },
+    "assets/pbr/ambientcg_Gravel025/Gravel025_1K-JPG_NormalGL.jpg": {
+      "sha": "09bc7aa1177c700c76931f2b37dc8ec3068843c0",
+      "size": 2469220
+    },
+    "assets/pbr/ambientcg_Gravel025/Gravel025_1K-JPG_Roughness.jpg": {
+      "sha": "912e8d8052df69a12a1ce2afd648bfc4a81a049e",
+      "size": 534754
+    },
+    "assets/pbr/ambientcg_Gravel025/README.md": {
+      "sha": "23b8b49a4def78cb224a5d942bd704df37d00e8b",
+      "size": 676
+    },
+    "assets/pbr/ambientcg_Ground022/Ground022.png": {
+      "sha": "bbe66c6f61aec060562e7e71193e9025c7568ccb",
+      "size": 492448
+    },
+    "assets/pbr/ambientcg_Ground022/Ground022_1K-JPG.blend": {
+      "sha": "5c639076c4c6533ba711d950e0e6248aabf80f3e",
+      "size": 1109636
+    },
+    "assets/pbr/ambientcg_Ground022/Ground022_1K-JPG.mtlx": {
+      "sha": "62dcd9e508e73a3b77a8b66eb2b737ae339fea13",
+      "size": 2272
+    },
+    "assets/pbr/ambientcg_Ground022/Ground022_1K-JPG.tres": {
+      "sha": "887c5ba0e3d7840d236c899ba26b8b553788cfc0",
+      "size": 1020
+    },
+    "assets/pbr/ambientcg_Ground022/Ground022_1K-JPG.usdc": {
+      "sha": "ae29d6d38e22244c5120edb7162da83a959b67c4",
+      "size": 3010
+    },
+    "assets/pbr/ambientcg_Ground022/Ground022_1K-JPG_AmbientOcclusion.jpg": {
+      "sha": "4f5711ff5e7e7593c8fbd0d7f15a179a75b86e91",
+      "size": 700774
+    },
+    "assets/pbr/ambientcg_Ground022/Ground022_1K-JPG_Color.jpg": {
+      "sha": "0ff12c385019ca9a7b9b046948bf76f42d52c5d2",
+      "size": 1746399
+    },
+    "assets/pbr/ambientcg_Ground022/Ground022_1K-JPG_Displacement.jpg": {
+      "sha": "cece2cb61d1f047b97c217f3a42d3ffdc967fcf4",
+      "size": 557776
+    },
+    "assets/pbr/ambientcg_Ground022/Ground022_1K-JPG_NormalDX.jpg": {
+      "sha": "cb95acea9cdd20cd9eee4dc503931f8e949c3274",
+      "size": 2546736
+    },
+    "assets/pbr/ambientcg_Ground022/Ground022_1K-JPG_NormalGL.jpg": {
+      "sha": "c7057ccdb618746ad7a2de37030f26c8f4dbea13",
+      "size": 2548001
+    },
+    "assets/pbr/ambientcg_Ground022/Ground022_1K-JPG_Roughness.jpg": {
+      "sha": "8bdfb55a38308bf341a59feff06093439efe564d",
+      "size": 735621
+    },
+    "assets/pbr/ambientcg_Ground031/Ground031.png": {
+      "sha": "970fd9868bb12d11128b9ab4b56643815589efa9",
+      "size": 527101
+    },
+    "assets/pbr/ambientcg_Ground031/Ground031_1K-JPG.blend": {
+      "sha": "75e2c0fd1512165d33cec87e845020a7f6d17f67",
+      "size": 1109636
+    },
+    "assets/pbr/ambientcg_Ground031/Ground031_1K-JPG.mtlx": {
+      "sha": "53edc48e723295951199081344ef85b82f0a3b83",
+      "size": 2272
+    },
+    "assets/pbr/ambientcg_Ground031/Ground031_1K-JPG.tres": {
+      "sha": "6c02a483fc5cdae979efb2d96d2c182445e20d7f",
+      "size": 1020
+    },
+    "assets/pbr/ambientcg_Ground031/Ground031_1K-JPG.usdc": {
+      "sha": "abccb8906467193dbad67eb9a605f70bb28ec7bd",
+      "size": 3009
+    },
+    "assets/pbr/ambientcg_Ground031/Ground031_1K-JPG_AmbientOcclusion.jpg": {
+      "sha": "6e76ab6738d35d1a10d2f3dfae06248a26b03731",
+      "size": 642451
+    },
+    "assets/pbr/ambientcg_Ground031/Ground031_1K-JPG_Color.jpg": {
+      "sha": "df605f56d6a1bd4e7641ac29ab4b7cf0ef8a6e20",
+      "size": 1628844
+    },
+    "assets/pbr/ambientcg_Ground031/Ground031_1K-JPG_Displacement.jpg": {
+      "sha": "856258e2cb1f111439ddbf45603c4f2391727e54",
+      "size": 633838
+    },
+    "assets/pbr/ambientcg_Ground031/Ground031_1K-JPG_NormalDX.jpg": {
+      "sha": "ef135962088f2188ce014edf9aa8a88e3fafbe9d",
+      "size": 2531228
+    },
+    "assets/pbr/ambientcg_Ground031/Ground031_1K-JPG_NormalGL.jpg": {
+      "sha": "6a013ba08e4ea1f163a5edf52d5becdff575b23c",
+      "size": 2531172
+    },
+    "assets/pbr/ambientcg_Ground031/Ground031_1K-JPG_Roughness.jpg": {
+      "sha": "0fad73ca4cf3eb95e75cbbf525de6d062ab83859",
+      "size": 711328
+    },
+    "assets/pbr/ambientcg_Ground031/README.md": {
+      "sha": "0b8f21c4e67efdfd93ee44a6fd551087d920bb25",
+      "size": 693
+    },
+    "assets/pbr/ambientcg_Ground080/Ground080.png": {
+      "sha": "9266c7efbbfb43b12d687f1f1e9b2c0031bc15fd",
+      "size": 346102
+    },
+    "assets/pbr/ambientcg_Ground080/Ground080_1K-JPG.blend": {
+      "sha": "88ea0715e88c11b8858fee9ebfe71eb5854936e2",
+      "size": 1109636
+    },
+    "assets/pbr/ambientcg_Ground080/Ground080_1K-JPG.mtlx": {
+      "sha": "b53a3e8fbe3123c105bd001bfe8310007c5eb617",
+      "size": 2272
+    },
+    "assets/pbr/ambientcg_Ground080/Ground080_1K-JPG.tres": {
+      "sha": "b4803344613fc780ff5403032e487cd00d547052",
+      "size": 1020
+    },
+    "assets/pbr/ambientcg_Ground080/Ground080_1K-JPG.usdc": {
+      "sha": "1786fa96638df5e9c6ea5c9db19b7f76a8948330",
+      "size": 3009
+    },
+    "assets/pbr/ambientcg_Ground080/Ground080_1K-JPG_AmbientOcclusion.jpg": {
+      "sha": "7c206a0706c1eb4305bf6b8b4c2f7b53dd77bef9",
+      "size": 558874
+    },
+    "assets/pbr/ambientcg_Ground080/Ground080_1K-JPG_Color.jpg": {
+      "sha": "069ef2f825ac6af9f0ad48de78af60c501b1f950",
+      "size": 1054251
+    },
+    "assets/pbr/ambientcg_Ground080/Ground080_1K-JPG_Displacement.jpg": {
+      "sha": "17be630afeec1f71c00cb769d273a2124ff1cae7",
+      "size": 325683
+    },
+    "assets/pbr/ambientcg_Ground080/Ground080_1K-JPG_NormalDX.jpg": {
+      "sha": "ef3978790d0a8f360e9431647fc7b99a40a0f536",
+      "size": 1517781
+    },
+    "assets/pbr/ambientcg_Ground080/Ground080_1K-JPG_NormalGL.jpg": {
+      "sha": "7ebf66b9630cedda97081cf05315e19949cd5fc4",
+      "size": 1513641
+    },
+    "assets/pbr/ambientcg_Ground080/Ground080_1K-JPG_Roughness.jpg": {
+      "sha": "dab80006ef49a061f45b8d8828998b9b6dec8950",
+      "size": 493875
+    },
+    "assets/pbr/ambientcg_Ground081/Ground081.png": {
+      "sha": "e439e16a3cc7323a819b6b1dfb5ed15bd277e011",
+      "size": 500819
+    },
+    "assets/pbr/ambientcg_Ground081/Ground081_1K-JPG.blend": {
+      "sha": "ed8ef1abf54fa03912d058725006e6acd14e3283",
+      "size": 1109844
+    },
+    "assets/pbr/ambientcg_Ground081/Ground081_1K-JPG.mtlx": {
+      "sha": "a39301215ef0bccbe735805cec8cf7a3839cd1af",
+      "size": 2272
+    },
+    "assets/pbr/ambientcg_Ground081/Ground081_1K-JPG.tres": {
+      "sha": "ecf8cf9936411931bf68138ade6e1341ecc759e8",
+      "size": 1020
+    },
+    "assets/pbr/ambientcg_Ground081/Ground081_1K-JPG.usdc": {
+      "sha": "002b8d8273566dff23b4e5a19378b2238fb9068f",
+      "size": 3025
+    },
+    "assets/pbr/ambientcg_Ground081/Ground081_1K-JPG_AmbientOcclusion.jpg": {
+      "sha": "5f0df0406b51402bdedbd4c578d86559bc2381e7",
+      "size": 430417
+    },
+    "assets/pbr/ambientcg_Ground081/Ground081_1K-JPG_Color.jpg": {
+      "sha": "9d769e2d4a75431f2bf7a758c0b9eb187671a188",
+      "size": 863934
+    },
+    "assets/pbr/ambientcg_Ground081/Ground081_1K-JPG_Displacement.jpg": {
+      "sha": "5c757578a444e9d4c98d850c15650e99b3917b0c",
+      "size": 281416
+    },
+    "assets/pbr/ambientcg_Ground081/Ground081_1K-JPG_NormalDX.jpg": {
+      "sha": "424c595ec4a316d52ccdbe87c09a6d0176fe1fdf",
+      "size": 1060011
+    },
+    "assets/pbr/ambientcg_Ground081/Ground081_1K-JPG_NormalGL.jpg": {
+      "sha": "d9484f476d315935beeb1564986679584d7853b5",
+      "size": 1059030
+    },
+    "assets/pbr/ambientcg_Ground081/Ground081_1K-JPG_Roughness.jpg": {
+      "sha": "41c1f286c8881280211df2b04f257b012ee4a962",
+      "size": 425754
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/manifest.json": {
+      "sha": "734f4d7b579ffd38320ee0c3e6fe698dd3308689",
+      "size": 87256
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/CrackedRedGround_AlbedoGrade_2K.png": {
+      "sha": "3ecb6cc4840f6d350adb97f934365745dbf39d9b",
+      "size": 8438160
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/CrackedRedGround_PackedNxyRoughAO_2K.png": {
+      "sha": "a29c0c85d20727f07e7071c7d531a3a05203ab9e",
+      "size": 10618542
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/DryGroundRocks_AlbedoGrade_2K.png": {
+      "sha": "92129b6b6af385ad67fbf6f507acb658a5211c36",
+      "size": 12799912
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/DryGroundRocks_PackedNxyRoughAO_2K.png": {
+      "sha": "da31be9e97bc34764bdd4c36441c3831fc3d76fa",
+      "size": 13954977
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/GravellySand_AlbedoGrade_2K.png": {
+      "sha": "c71199dbf44ed2937a36bbfb174e7e7d1362cf23",
+      "size": 12169987
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/GravellySand_PackedNxyRoughAO_2K.png": {
+      "sha": "e6aedfac0b7e09f1ed350b8168f8bdf30a05cc44",
+      "size": 13405301
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/MudCrackedDryRiverbed002_AlbedoGrade_2K.png": {
+      "sha": "3e3d478ec7e2c415e7a914f8e4182412672cef76",
+      "size": 10288646
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/MudCrackedDryRiverbed002_PackedNxyRoughAO_2K.png": {
+      "sha": "0b7f6bfabca590662622cc9ef52fe82100b205d5",
+      "size": 12930796
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/RedLateriteSoilStones_AlbedoGrade_2K.png": {
+      "sha": "aa17dcb54915e8de0a6f78cf3dc082e2f72c723a",
+      "size": 10752567
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/RedLateriteSoilStones_PackedNxyRoughAO_2K.png": {
+      "sha": "fc0d6d29179a0611a7a25f6618f00b9357531656",
+      "size": 13779292
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/Rock029_AlbedoGrade_2K.png": {
+      "sha": "9b9cbdcf4abeac5a1c2119fb2a96acdf457be700",
+      "size": 9120147
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/Rock029_PackedNxyRoughAO_2K.png": {
+      "sha": "59702a3c62c6b00ac3829b169392487885f49f98",
+      "size": 13040611
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/Rock061_AlbedoGrade_2K.png": {
+      "sha": "09b6cd6f12f461b6610f083dcbed34169fe644db",
+      "size": 7082318
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/Rock061_PackedNxyRoughAO_2K.png": {
+      "sha": "8fb1c24ca7357aa2bdc16e5538708d3446121ac6",
+      "size": 9943244
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/RockBoulderCracked_AlbedoGrade_2K.png": {
+      "sha": "0660537dfa07be4bd06bf12697305fbb554c7a5e",
+      "size": 9100939
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/RockBoulderCracked_PackedNxyRoughAO_2K.png": {
+      "sha": "b21c0ae9ed26d23e0dda8314e39a14dca0adfa2f",
+      "size": 9810914
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/RockFace03_AlbedoGrade_2K.png": {
+      "sha": "40863d317f5cbc5d871ac4d565bb55fd6a39edcf",
+      "size": 9757118
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/RockFace03_PackedNxyRoughAO_2K.png": {
+      "sha": "2072b86d4ea59d6ae03e51646053358035bd5b3e",
+      "size": 11204002
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/RockFace_AlbedoGrade_2K.png": {
+      "sha": "c425ca450487684cfccbf8889f3e181187c701eb",
+      "size": 8692719
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/RockFace_PackedNxyRoughAO_2K.png": {
+      "sha": "0888832208f5a449514a641a09290323eeeb498f",
+      "size": 9250450
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/RocksGround02_AlbedoGrade_2K.png": {
+      "sha": "26842c14409cd5c3841443338dc5776976f12602",
+      "size": 11301100
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/RocksGround02_PackedNxyRoughAO_2K.png": {
+      "sha": "1f7838d52d269229c3cc8dbbff8711473789eef8",
+      "size": 13121205
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/RockyTrail02_AlbedoGrade_2K.png": {
+      "sha": "f1c8cb87c5e56e1720264444b55c58e7906613e2",
+      "size": 10296713
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/RockyTrail02_PackedNxyRoughAO_2K.png": {
+      "sha": "c1fd28e85877d70f6660924573e60dfef63769a8",
+      "size": 13269682
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/RockyTrail_AlbedoGrade_2K.png": {
+      "sha": "ad8a5e5906aa004dc910719949a196821eec4299",
+      "size": 11092158
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/RockyTrail_PackedNxyRoughAO_2K.png": {
+      "sha": "e21c9df90addf0c04ee4c5cee45282f30911248b",
+      "size": 12930354
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/SandyGravel02_AlbedoGrade_2K.png": {
+      "sha": "1638662041df5094190cb1fc698b99a02036dae2",
+      "size": 11595132
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/SandyGravel02_PackedNxyRoughAO_2K.png": {
+      "sha": "3318aae99ddd2346285b2ab014c4f0eed07d4dac",
+      "size": 12948027
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/SouthwestGroundV3_AlbedoHeight_14x2K_UASTC.ktx2": {
+      "sha": "d3577d8322e03ce507641fd06abdc88c1f73b0bb",
+      "size": 71062959
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/SouthwestGroundV3_PackedNxyRoughAO_14x2K_UASTC.ktx2": {
+      "sha": "d0bf51a1a0803035621b15e6b2b713658b1cf6c5",
+      "size": 75057198
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/CrackedRedGround_AlbedoHeight_1K.png": {
+      "sha": "b6bc9ee8e79b741d259b33d0ef0c6408bf709d5b",
+      "size": 2263236
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/CrackedRedGround_PackedNxyRoughAO_1K.png": {
+      "sha": "2c74c2b85ef890a0c4277e91874790166d37fe47",
+      "size": 2879773
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/DryGroundRocks_AlbedoHeight_1K.png": {
+      "sha": "7825580440ba6ea793c8ae7757d5e7a921c76322",
+      "size": 3277670
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/DryGroundRocks_PackedNxyRoughAO_1K.png": {
+      "sha": "5a822b8cac6fc2cce763d9716a47358cec5fbc7e",
+      "size": 3551769
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/GravellySand_AlbedoHeight_1K.png": {
+      "sha": "abe3f6400b5722ff8c39878d380620a4c40d5b9a",
+      "size": 3113498
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/GravellySand_PackedNxyRoughAO_1K.png": {
+      "sha": "01f9f3d5bb39445c419e1e3916a9cfce8a9d0227",
+      "size": 3398368
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/MudCrackedDryRiverbed002_AlbedoHeight_1K.png": {
+      "sha": "b5597cc72dea80fca51d219f7b15c7d77dcfcfb8",
+      "size": 2593310
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/MudCrackedDryRiverbed002_PackedNxyRoughAO_1K.png": {
+      "sha": "b7fc82485599ec647faf6e1e2bc29f7b53953453",
+      "size": 3281780
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/RedLateriteSoilStones_AlbedoHeight_1K.png": {
+      "sha": "0f584b605d9325ea1ba23fa99fc9cddda9096d24",
+      "size": 2948783
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/RedLateriteSoilStones_PackedNxyRoughAO_1K.png": {
+      "sha": "5873ae2fc5724c06f0fa303a3b325a3654626fa2",
+      "size": 3701920
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/Rock029_AlbedoHeight_1K.png": {
+      "sha": "3aaeeec6da8221b8e1a3353a85401aba9ab4a550",
+      "size": 2507595
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/Rock029_PackedNxyRoughAO_1K.png": {
+      "sha": "449a40647cdf1beccce0780b9d279cded6e90611",
+      "size": 3295577
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/Rock061_AlbedoHeight_1K.png": {
+      "sha": "bb25c4991b1f95d6240212a59d14c242dba537f3",
+      "size": 1965771
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/Rock061_PackedNxyRoughAO_1K.png": {
+      "sha": "40a05f2085703ebc2ea3f62534f4c6786642dbd0",
+      "size": 2664255
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/RockBoulderCracked_AlbedoHeight_1K.png": {
+      "sha": "7945bfc1894e7d402b809233b000665f230c8618",
+      "size": 2389579
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/RockBoulderCracked_PackedNxyRoughAO_1K.png": {
+      "sha": "5049df92f4db1a60d6b3d488aceebee37510ac59",
+      "size": 2553964
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/RockFace03_AlbedoHeight_1K.png": {
+      "sha": "a47e7114d726d4a0656976debf602e8f40e79922",
+      "size": 2547604
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/RockFace03_PackedNxyRoughAO_1K.png": {
+      "sha": "c7a69180a9d91aacbb11325a63eea5285e84b4f9",
+      "size": 2985305
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/RockFace_AlbedoHeight_1K.png": {
+      "sha": "7a8f0a5efc036cf19bc5cabf1374387c20bb02d8",
+      "size": 2291846
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/RockFace_PackedNxyRoughAO_1K.png": {
+      "sha": "c0802cf0c4c26cb6638ebc3afa1da108ed6bcbac",
+      "size": 2623785
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/RocksGround02_AlbedoHeight_1K.png": {
+      "sha": "a0e1d51b5f5767bc7df0c649a5602084b7504708",
+      "size": 3090489
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/RocksGround02_PackedNxyRoughAO_1K.png": {
+      "sha": "f4be59e74128e6478cdf76f8fae1e36d56d650f8",
+      "size": 3462498
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/RockyTrail02_AlbedoHeight_1K.png": {
+      "sha": "541eb937b4ffa790355c987f34a3dc9d90d60866",
+      "size": 2722934
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/RockyTrail02_PackedNxyRoughAO_1K.png": {
+      "sha": "ee027d65304d21140b63aca225d8753c00403c51",
+      "size": 3496401
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/RockyTrail_AlbedoHeight_1K.png": {
+      "sha": "44a61a69a573f620efee05b41ee9ba94f48bda1e",
+      "size": 2928797
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/RockyTrail_PackedNxyRoughAO_1K.png": {
+      "sha": "2666dd00330465d2457270957c20821033fb2b70",
+      "size": 3435927
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/SandyGravel02_AlbedoHeight_1K.png": {
+      "sha": "7b4e67f838d9c88769381d8ddf05cbfa6a412011",
+      "size": 2906158
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/SandyGravel02_PackedNxyRoughAO_1K.png": {
+      "sha": "919adb66c163f4fbd2279be7bec06cf34f972264",
+      "size": 3187717
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/fallback_1k/manifest.json": {
+      "sha": "894ae127d1715a3e204aec8030b7d25e3ace3a55",
+      "size": 18349
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/preview_512/README.md": {
+      "sha": "3c66e175748cadaa46c47c1e7f1394f9e231165c",
+      "size": 950
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/preview_512/SouthwestGroundV3_AlbedoHeight_14x512_UASTC.ktx2": {
+      "sha": "1bc09f84ebbfe459ab1f9ae88968af2a668dce5e",
+      "size": 4506552
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/preview_512/SouthwestGroundV3_PackedNxyRoughAO_14x512_UASTC.ktx2": {
+      "sha": "c6aac7102dc3f2cfde434c78e27509642c492cd8",
+      "size": 4697527
+    },
+    "assets/pbr/eanpa_southwest_ground_v3/runtime/southwest-ground-v3-ktx2-manifest.json": {
+      "sha": "e158b15dec7e5a3ef52e66803be9b1157a7d1e28",
+      "size": 21254
+    },
+    "assets/pbr/polyhaven_cliff_side/cliff_side_ao_1k.jpg": {
+      "sha": "27d640dfd0e072bb6f643ea0369e4431c077094c",
+      "size": 412993
+    },
+    "assets/pbr/polyhaven_cliff_side/cliff_side_diff_1k.jpg": {
+      "sha": "6ff04861ed182d33a1081759188b18c66a01f540",
+      "size": 859756
+    },
+    "assets/pbr/polyhaven_cliff_side/cliff_side_disp_1k.jpg": {
+      "sha": "3ec9b5e17bfb9ccc95c6fd9a7da1cf21a14b9a4d",
+      "size": 210785
+    },
+    "assets/pbr/polyhaven_cliff_side/cliff_side_nor_gl_1k.jpg": {
+      "sha": "69f15cb686cb656673708e66204a16c37d7d96ce",
+      "size": 1007837
+    },
+    "assets/pbr/polyhaven_cliff_side/cliff_side_rough_1k.jpg": {
+      "sha": "57179e78e446c65fbebce738c784d3046ec01ea4",
+      "size": 422579
+    },
+    "assets/pbr/polyhaven_gravelly_sand/gravelly_sand_ao_1k.jpg": {
+      "sha": "0bcf506ac0a1baace662f200907a40fbc7511f86",
+      "size": 886101
+    },
+    "assets/pbr/polyhaven_gravelly_sand/gravelly_sand_diff_1k.jpg": {
+      "sha": "ef1c853e1e5914fbe21fa60d33a7d1805b114681",
+      "size": 1062525
+    },
+    "assets/pbr/polyhaven_gravelly_sand/gravelly_sand_disp_1k.jpg": {
+      "sha": "f212f928ec520783281822019f1d8d928e8719c0",
+      "size": 389673
+    },
+    "assets/pbr/polyhaven_gravelly_sand/gravelly_sand_nor_gl_1k.jpg": {
+      "sha": "b03bff2691763decdac723398a2b34793f7eb971",
+      "size": 1387739
+    },
+    "assets/pbr/polyhaven_gravelly_sand/gravelly_sand_rough_1k.jpg": {
+      "sha": "259b71815c3e4b7ae333f0bf86612fbff60f5c26",
+      "size": 419895
+    },
+    "assets/pbr/polyhaven_rock_face/rock_face_ao_1k.jpg": {
+      "sha": "99157cecec850677135a2bed753f29119b36417d",
+      "size": 501528
+    },
+    "assets/pbr/polyhaven_rock_face/rock_face_diff_1k.jpg": {
+      "sha": "21f7d1fab43f5c0930caf09a7b4d373d3645d0cc",
+      "size": 732721
+    },
+    "assets/pbr/polyhaven_rock_face/rock_face_disp_1k.jpg": {
+      "sha": "7c30ca337d790f66df0bd0125f5dc4a580745a2c",
+      "size": 304037
+    },
+    "assets/pbr/polyhaven_rock_face/rock_face_nor_gl_1k.jpg": {
+      "sha": "e5bade4de50dc9f664254c810352092ec91b0ae1",
+      "size": 1139857
+    },
+    "assets/pbr/polyhaven_rock_face/rock_face_rough_1k.jpg": {
+      "sha": "ec238f65e22463cf49fc6176b2ea80870ce89db3",
+      "size": 224371
+    },
+    "assets/pbr/polyhaven_sandy_gravel_02/sandy_gravel_02_ao_1k.jpg": {
+      "sha": "6383fefca1ef4ba58aaeabbd73de6bacce9a8c40",
+      "size": 880161
+    },
+    "assets/pbr/polyhaven_sandy_gravel_02/sandy_gravel_02_diff_1k.jpg": {
+      "sha": "27a49d67ea0159b72974d1f569349dcec84ab1fd",
+      "size": 947222
+    },
+    "assets/pbr/polyhaven_sandy_gravel_02/sandy_gravel_02_disp_1k.jpg": {
+      "sha": "cf86eb3aa7d1ef86a6cc237f457c555e70833530",
+      "size": 472813
+    },
+    "assets/pbr/polyhaven_sandy_gravel_02/sandy_gravel_02_nor_gl_1k.jpg": {
+      "sha": "df7b257facff30df2d6c31113a951e8a11c5fa8d",
+      "size": 1185078
+    },
+    "assets/pbr/polyhaven_sandy_gravel_02/sandy_gravel_02_rough_1k.jpg": {
+      "sha": "74d5e48cfc5c2147330167b0fefcd74e03eb88bc",
+      "size": 382424
+    },
+    "assets/pbr/polyhaven_worn_rock_natural_01/worn_rock_natural_01_ao_1k.jpg": {
+      "sha": "edc723b0be59a0341b39475bbe24d958865784b1",
+      "size": 386864
+    },
+    "assets/pbr/polyhaven_worn_rock_natural_01/worn_rock_natural_01_diff_1k.jpg": {
+      "sha": "eed396dd6a91e83e32631237d3e8f1722ee9dc72",
+      "size": 854615
+    },
+    "assets/pbr/polyhaven_worn_rock_natural_01/worn_rock_natural_01_disp_1k.jpg": {
+      "sha": "f49106e738527c45695c5977485d93466fd7cd4e",
+      "size": 254097
+    },
+    "assets/pbr/polyhaven_worn_rock_natural_01/worn_rock_natural_01_nor_gl_1k.jpg": {
+      "sha": "8bd25152ab0e2b219ce217ae6d39be36b15b7fa0",
+      "size": 910654
+    },
+    "assets/pbr/polyhaven_worn_rock_natural_01/worn_rock_natural_01_rough_1k.jpg": {
+      "sha": "a61400bd36686c3e0973f6a94ee3b1ad8b55ebbd",
+      "size": 541768
+    },
+    "assets/pbr/sandstone_blocks_05/ATTRIBUTION.md": {
+      "sha": "35fd71e4ceca4e8a5c849f22964ced26b89c46b7",
+      "size": 527
+    },
+    "assets/pbr/sandstone_blocks_05/sandstone_blocks_05_ao_1k.jpg": {
+      "sha": "a1557f70d4ff6df7d62118a4b43d11cb431ef065",
+      "size": 456460
+    },
+    "assets/pbr/sandstone_blocks_05/sandstone_blocks_05_diff_1k.jpg": {
+      "sha": "5323bf3dfd8b99d1f74fcbbbecd167b4ca5b537c",
+      "size": 635678
+    },
+    "assets/pbr/sandstone_blocks_05/sandstone_blocks_05_disp_1k.jpg": {
+      "sha": "307ffa094ee82587436f1acc95f3859f7799e675",
+      "size": 177085
+    },
+    "assets/pbr/sandstone_blocks_05/sandstone_blocks_05_nor_gl_1k.jpg": {
+      "sha": "0effce7791aa7b8f84a0f0362802a0858eff7a31",
+      "size": 1224895
+    },
+    "assets/pbr/sandstone_blocks_05/sandstone_blocks_05_rough_1k.jpg": {
+      "sha": "0703cf565c186e1315b53c94b615ae63a2d52acd",
+      "size": 216626
+    },
+    "assets/pbr/terrain_atlas/README.md": {
+      "sha": "1034c2c97c9f6a258cd9a9d0a31f34f570fbaa1f",
+      "size": 572
+    },
+    "assets/pbr/terrain_atlas/terrain_albedo_atlas.jpg": {
+      "sha": "622433c4a482235542df999a8efe701f73b150ec",
+      "size": 1426886
+    },
+    "assets/pbr/terrain_atlas/terrain_ao_atlas.jpg": {
+      "sha": "9002e1628aab638d7f0db10f627a69c4e015710e",
+      "size": 1317422
+    },
+    "assets/pbr/terrain_atlas/terrain_displacement_atlas.jpg": {
+      "sha": "ccae13c39717c96506f9fac756e411f5f6fb958d",
+      "size": 514615
+    },
+    "assets/pbr/terrain_atlas/terrain_normal_atlas.jpg": {
+      "sha": "e200b7b9dfbc9ec10f18faf5b9888eceb8898df4",
+      "size": 2025100
+    },
+    "assets/pbr/terrain_atlas/terrain_roughness_atlas.jpg": {
+      "sha": "26ab3c6372e8b7b205469d61102784b5a9ef6182",
+      "size": 938547
+    },
+    "assets/player/Aletheia_Chrome_1p_arms_hinge_seams.json": {
+      "sha": "fe45070f645c7d36b1ba107b7d7ba690e6cfa3a1",
+      "size": 6583097
+    },
+    "assets/player/Aletheia_Chrome_1p_arms_skin_zones.json": {
+      "sha": "62cd9982c53426a42cd4b63e62d1af1b6f79fb48",
+      "size": 641661
+    },
+    "assets/player/rig_reference/DRILLIMPACT_CC0_SOURCE.md": {
+      "sha": "838ad6b66faf84d28870adcd52d7c85789691637",
+      "size": 1093
+    },
+    "assets/player/rig_reference/Drillimpact_PSX_First_Person_Arms_CC0.glb": {
+      "sha": "f19d2c82373789fd4363298c9fca021a49ec25b0",
+      "size": 1099832
+    },
+    "assets/player/runtime/Aletheia_Chrome_1p_arms_viewmodel.glb": {
+      "sha": "23252141381fad167c411176d08b1f7f47abb5c8",
+      "size": 32190564
+    },
+    "assets/player/runtime/Aletheia_Chrome_1p_arms_viewmodel_topology.json": {
+      "sha": "3515c2a36d2a581aa93b5b77ca3f4806ebec68fc",
+      "size": 1625025
+    },
+    "assets/player/runtime/Aletheia_Chrome_Viewmodel_BaseColor_4K.png": {
+      "sha": "74ba1ca993f447528c264a67473efc38ddfda78f",
+      "size": 20800111
+    },
+    "assets/player/runtime/Aletheia_Chrome_Viewmodel_MetallicRoughness_2K.png": {
+      "sha": "e13f519be190766184f8e72b6f02479b1b245ae2",
+      "size": 2692184
+    },
+    "assets/player/runtime/Aletheia_Chrome_Viewmodel_Normal_2K.png": {
+      "sha": "27c8ccb64979b67f507269bacd90dbc33b6fd491",
+      "size": 5577286
+    },
+    "assets/player/runtime/Aletheia_Viewmodel_BaseColor_4K.png": {
+      "sha": "56d7fe657c65badc9b7719a7165c2d2429a6c981",
+      "size": 21877537
+    },
+    "assets/player/runtime/Aletheia_Viewmodel_MetallicRoughness_2K.png": {
+      "sha": "30553695a797d208af7cc26bc99256e82c8a99b3",
+      "size": 2900488
+    },
+    "assets/player/runtime/Aletheia_Viewmodel_Normal_2K.png": {
+      "sha": "cdf58844aa5817114387da3e64b3efc223216400",
+      "size": 5878576
+    },
+    "assets/player/runtime/First_Person_Aletheia_Arms_Hands_viewmodel.glb": {
+      "sha": "6bd36de2239ed141dcafb480b3e1d4b778eabab0",
+      "size": 33046128
+    },
+    "assets/player/runtime/README.md": {
+      "sha": "a71393cd27e6e4123670dc6fd6cbe7bbc0a7fc6e",
+      "size": 3913
+    },
+    "assets/player/runtime/first_person_viewmodel_manifest.json": {
+      "sha": "78b23e106c3561fc13b8da6788c144a612914af5",
+      "size": 1449211
+    },
+    "assets/ringworld/RINGWORLDskyelement.glb": {
+      "sha": "b833061f7ad88e4669cdc4b0bec9701655277e04",
+      "size": 4049408
+    },
+    "assets/ringworld/alien_planet_or_moon.png": {
+      "sha": "49296fcc132e09f16fced509de5a794630ec49b9",
+      "size": 3507174
+    },
+    "assets/ringworld/ring_albedo_v4.png": {
+      "sha": "e0d7b2d39be8c3b4cf186ca8b1390c4c5d808819",
+      "size": 9059070
+    },
+    "assets/ringworld/ring_band_ao.png": {
+      "sha": "c6cebbcffc09cec3005ebf0b08830f9e82c705fc",
+      "size": 438023
+    },
+    "assets/ringworld/ring_band_height.png": {
+      "sha": "9b8ac0092576b17e29240267bd87800ab14b80ef",
+      "size": 402595
+    },
+    "assets/ringworld/ring_band_normal_v2.png": {
+      "sha": "0712fa32ecf5653f9fe777c808ac30f5a8a4cc7a",
+      "size": 1102317
+    },
+    "assets/ringworld/ring_relief_v3.bin.gz": {
+      "sha": "4afc13f8274fe7273a2737bd8d951077689a83af",
+      "size": 6277959
+    },
+    "assets/ringworld/ring_relief_v3.json": {
+      "sha": "e2823614e349a564a49a7754d9c7add4643782ca",
+      "size": 598
+    },
+    "assets/ringworld/ring_relief_v4.bin.gz": {
+      "sha": "17bdda4d1d1a5e72ed3d68f33ef1e3f154367404",
+      "size": 10241123
+    },
+    "assets/ringworld/ring_relief_v4.json": {
+      "sha": "18120e2d89b0b550e602e7a11c987de01c508aae",
+      "size": 720
+    },
+    "assets/ringworld/ringworldlandmask.png": {
+      "sha": "1d58004a353ca6988c9a3c777e453e64a466aea2",
+      "size": 48455
+    },
+    "assets/ringworld/solarpanel/SolarPanel001_1K-JPG_Color.jpg": {
+      "sha": "0088f720f0f61b5d6d93f269ab06dcd23f24b6fb",
+      "size": 1447947
+    },
+    "assets/ringworld/solarpanel/SolarPanel001_1K-JPG_Metalness.jpg": {
+      "sha": "677f105edfeb73f7883fa093fdde3e7cc0a1fd3e",
+      "size": 660204
+    },
+    "assets/ringworld/solarpanel/SolarPanel001_1K-JPG_NormalGL.jpg": {
+      "sha": "966350de9a6bc09b64d0cdaef7eda30314ca0a44",
+      "size": 620257
+    },
+    "assets/ringworld/solarpanel/SolarPanel001_1K-JPG_Roughness.jpg": {
+      "sha": "76f53cdd064d8fbeddcaedd6c4484428337a1762",
+      "size": 560320
+    },
+    "assets/starmap_tycho_4k.jpg": {
+      "sha": "9520af72bce47f95e8e75e7d87647783ee5ec78e",
+      "size": 3009146
+    },
+    "assets/temple/ATTRIBUTION.md": {
+      "sha": "fcaaedc14a9535e91edbff761363ebcd625431e3",
+      "size": 465
+    },
+    "assets/temple/decals/README.md": {
+      "sha": "48ef4e93cbe88c6ff51731594f310c70adfa9fd6",
+      "size": 1417
+    },
+    "assets/temple/decals/fastener_recessed_rgba.png": {
+      "sha": "ba4ba7886192397bfc8921cdbe4ba742d7d7fda1",
+      "size": 444760
+    },
+    "assets/temple/decals/fastener_recessed_source.png": {
+      "sha": "3a4c0d3b7e6be90ba17f57c6212adea244b66c4d",
+      "size": 1229358
+    },
+    "assets/temple/decals/panel_fastener_chromakey-v1.png": {
+      "sha": "0a09a4914bb7f7232bced41fa2a7a5e1775de92d",
+      "size": 1609196
+    },
+    "assets/temple/decals/panel_fastener_decal-v1.png": {
+      "sha": "c66bcdb62cb2a612c17d368b07770aa0e537e9d5",
+      "size": 995082
+    },
+    "assets/temple/desert_sandstone_albedo.png": {
+      "sha": "b32a4cd1b33326b3ab2cf888bb563c5038181a98",
+      "size": 2150787
+    },
+    "assets/temple/desert_sandstone_normal.png": {
+      "sha": "046d91a9f8de3ae3098be40c0a7b85e203a7c9ee",
+      "size": 1808723
+    },
+    "assets/temple/desert_sandstone_roughness.png": {
+      "sha": "c5e96c8ddc7316afa1beb4985d5bf17dbd3d2f90",
+      "size": 2142987
+    },
+    "assets/temple/eanpa_ziggurat_area_editable.blend": {
+      "sha": "8d1f6095e98e8f5dff1fcaa9e67397840f9dd0d8",
+      "size": 17647169
+    },
+    "assets/temple/eanpa_ziggurat_area_editable.blend1": {
+      "sha": "fb5ddd1f39f3f497d2b92b290534db0bb79f2628",
+      "size": 17645993
+    },
+    "assets/temple/eanpa_ziggurat_area_integrated_v2.blend": {
+      "sha": "32e984b4f57502f95c99c446635c5e8737c39505",
+      "size": 21779192
+    },
+    "assets/temple/eanpa_ziggurat_area_integrated_v2.blend1": {
+      "sha": "da5f1df66b89f1a424bbc2a370e0a9bd61a95725",
+      "size": 21947860
+    },
+    "assets/temple/inanna_orb.glb": {
+      "sha": "906e9f499abcec331e0d854840aa7937742a59bc",
+      "size": 4596764
+    },
+    "assets/temple/materials/PROVENANCE.md": {
+      "sha": "f29da2fa46f7befa5c3d5d4a9073a19f62eeb468",
+      "size": 1152
+    },
+    "assets/temple/materials/ambientcg_metal010/Metal010.png": {
+      "sha": "fc72e6924d7796ea132c514e2050a8e3e19e235f",
+      "size": 256710
+    },
+    "assets/temple/materials/ambientcg_metal010/Metal010_1K-JPG.blend": {
+      "sha": "ca530d06d07a69a17323fb9d2c445837577dc168",
+      "size": 1109796
+    },
+    "assets/temple/materials/ambientcg_metal010/Metal010_1K-JPG.mtlx": {
+      "sha": "e08adc22bd8feafdd284a9eda7b4d9b17c2fc06d",
+      "size": 2595
+    },
+    "assets/temple/materials/ambientcg_metal010/Metal010_1K-JPG.tres": {
+      "sha": "e95bc37a4f8a0162d6a824a9221e894af5b9efc8",
+      "size": 1003
+    },
+    "assets/temple/materials/ambientcg_metal010/Metal010_1K-JPG.usdc": {
+      "sha": "eb3ec7e135898950e5f77f6f35a9b9b6c6e6ff7d",
+      "size": 3004
+    },
+    "assets/temple/materials/ambientcg_metal010/Metal010_1K-JPG_Color.jpg": {
+      "sha": "1a2501c588982c294b5723ae1e76d6e71fd7c310",
+      "size": 884918
+    },
+    "assets/temple/materials/ambientcg_metal010/Metal010_1K-JPG_Displacement.jpg": {
+      "sha": "d410fda8952a0f14c72bc813a22759dc6112274a",
+      "size": 703293
+    },
+    "assets/temple/materials/ambientcg_metal010/Metal010_1K-JPG_Metalness.jpg": {
+      "sha": "2eca564d8f582c3444a744d05afb8d56b22f2d5e",
+      "size": 4257
+    },
+    "assets/temple/materials/ambientcg_metal010/Metal010_1K-JPG_NormalDX.jpg": {
+      "sha": "aefc242e466c9c17d387a52db078ea55b100bd7f",
+      "size": 821171
+    },
+    "assets/temple/materials/ambientcg_metal010/Metal010_1K-JPG_NormalGL.jpg": {
+      "sha": "44b6763a1d44ab4fab51978cc163dc526cfc26e9",
+      "size": 820647
+    },
+    "assets/temple/materials/ambientcg_metal010/Metal010_1K-JPG_Roughness.jpg": {
+      "sha": "3f4de46eff799205397ededccdee66c3f75bf5fc",
+      "size": 544196
+    },
+    "assets/temple/materials/ambientcg_metal010/README.md": {
+      "sha": "113c29ec30088ce39d34b0d3fdc4ccfdda8b5420",
+      "size": 686
+    },
+    "assets/temple/materials/carnelian_tiles_diff.png": {
+      "sha": "8742f2208539f2ffa45e89815bca0d133fad8f56",
+      "size": 2415312
+    },
+    "assets/temple/materials/carnelian_tiles_height.png": {
+      "sha": "679b14eebf6c445a5eed2bb30f305761c33a86ca",
+      "size": 834842
+    },
+    "assets/temple/materials/carnelian_tiles_normal.png": {
+      "sha": "674f13e5884863258b07c87310f93cbdc8e3c0be",
+      "size": 2845031
+    },
+    "assets/temple/materials/carnelian_tiles_rough.png": {
+      "sha": "5ebd0bc9d646cb7a0eff589a4973b8f06fb33312",
+      "size": 2874297
+    },
+    "assets/temple/materials/lapis_tiles_diff.png": {
+      "sha": "2c9e0272d5c1730773509be6105902d2b36b3e59",
+      "size": 3159930
+    },
+    "assets/temple/materials/lapis_tiles_height.png": {
+      "sha": "ffacb26a6bd9f62842db97e9e2d2c9aa07f54a18",
+      "size": 883309
+    },
+    "assets/temple/materials/lapis_tiles_normal.png": {
+      "sha": "fcd79f11eba688caf2e57c744d2964525b122c1b",
+      "size": 2813036
+    },
+    "assets/temple/materials/lapis_tiles_rough.png": {
+      "sha": "d7a29a72b9ad203c9ce4d89cc785dc69c82ac203",
+      "size": 2884278
+    },
+    "assets/temple/references/README.md": {
+      "sha": "2eb8b318fda08f9fe2929deb5cac6f4261d935af",
+      "size": 784
+    },
+    "assets/temple/references/ziggurat-scifi-architectural-reference-v1.png": {
+      "sha": "7751feef69b4f6ff34d9d186b8e732ad19f94b17",
+      "size": 3023216
+    },
+    "assets/temple/ziggurat_architecture.blend": {
+      "sha": "604ba3c1cf3331cee7ea713121c046c438823e59",
+      "size": 4682456
+    },
+    "assets/temple/ziggurat_architecture.blend1": {
+      "sha": "de1613785b7252727094603fa217032f67dc1feb",
+      "size": 4681272
+    },
+    "assets/temple/ziggurat_architecture.glb": {
+      "sha": "bbed71027327bfb0c6427a88baa5327349699faa",
+      "size": 5164292
+    },
+    "assets/temple/ziggurat_architecture_integrated_v2.blend": {
+      "sha": "0dda28f8be711f0e6d95ff7e967fc2285a4b2e60",
+      "size": 4682452
+    },
+    "assets/temple/ziggurat_architecture_integrated_v2.blend1": {
+      "sha": "403ccee52b6c45420cadc7f06382b4ca682d7c37",
+      "size": 4681269
+    },
+    "assets/temple/ziggurat_architecture_reference.svg": {
+      "sha": "2922744f8bfeced959be4f1efe27d78bb5fd2915",
+      "size": 6434
+    },
+    "assets/terrain/Desert_Cliff_Mesa_High_runtime_2k.glb": {
+      "sha": "bddaaea48b120db2823987b2d12dc86ca83766c1",
+      "size": 16748520
+    },
+    "assets/terrain/Desert_Cliff_Mesa_High_runtime_2k_lods.glb": {
+      "sha": "262d7c8d678340226836dbe52c0fbdd94a0b4bb9",
+      "size": 17418524
+    },
+    "assets/terrain/Desert_Cliff_Wide_Mesa_Low_runtime_2k.glb": {
+      "sha": "c3e93cb1325910474143d9b6f30b0384780c087e",
+      "size": 13691992
+    },
+    "assets/terrain/Desert_Cliff_Wide_Mesa_Low_runtime_2k_lods.glb": {
+      "sha": "726083b38c6b1802eb6021e7b6456093d2359904",
+      "size": 14039596
+    },
+    "assets/terrain/Desert_rock_chunks_12_pieces_runtime_2k.glb": {
+      "sha": "9b463cfbeaa7c26a9f71b62e3d40d198ed74c6e2",
+      "size": 17840300
+    },
+    "assets/terrain/Desert_rock_chunks_12_pieces_runtime_2k_lods.glb": {
+      "sha": "8fff79d53adcc6a962b2a568e09d4f636f342ba4",
+      "size": 18707644
+    },
+    "assets/terrain/README.md": {
+      "sha": "79ecb94c4f38f1ffecb3ff6fe799ece48fa8e7a3",
+      "size": 6890
+    },
+    "assets/terrain/authored_escarpments_v1.blend": {
+      "sha": "a56d21daf869cb0b42743a3ce346f3faf7ecb96b",
+      "size": 5288519
+    },
+    "assets/terrain/authored_escarpments_v1.glb": {
+      "sha": "4e192dc0568d8669b8ff544b72d4b0b900cc6960",
+      "size": 4369308
+    },
+    "assets/terrain/authored_escarpments_v1.json": {
+      "sha": "c2d38688a6418ab6266e3d323c4826a999fc2d69",
+      "size": 8791
+    },
+    "assets/terrain/baked/eanpa_terrain_v1_height.f32": {
+      "sha": "2eacf75bf049b42eb50d5fb8aed9cbc17d71205f",
+      "size": 16777216
+    },
+    "assets/terrain/baked/eanpa_terrain_v1_height.png": {
+      "sha": "2254422f553f9bf6c2da3dd1452f0e92b09bb41a",
+      "size": 7890557
+    },
+    "assets/terrain/baked/eanpa_terrain_v1_hillshade_preview.png": {
+      "sha": "5c7a370ad6210c309b51e8cfe71d4504688d1f1f",
+      "size": 5702772
+    },
+    "assets/terrain/baked/eanpa_terrain_v1_material.png": {
+      "sha": "c86db9c165c9fcddc6c26c596ed14ed04b922838",
+      "size": 14380058
+    },
+    "assets/terrain/baked/eanpa_terrain_v1_meta.json": {
+      "sha": "07172ea3dae906bd0df78358aae8543f8fb9367c",
+      "size": 801
+    },
+    "assets/terrain/desert_cliff_runtime_2k.json": {
+      "sha": "cde47ef2d402af796cb2def12c74879fde6d7633",
+      "size": 2684
+    },
+    "assets/terrain/desert_cliff_runtime_lods.json": {
+      "sha": "771b2e139e80f32e80d7da36707871c18400a25b",
+      "size": 5214
+    },
+    "assets/terrain/desert_rock_chunks_runtime_2k.json": {
+      "sha": "0af82631b08c3c9f8a8491f0d969221a2779c694",
+      "size": 1498
+    },
+    "assets/terrain/desert_rock_chunks_runtime_lods.json": {
+      "sha": "9c88e9c076fc6b0ce4e5ae07d1c387567b683e62",
+      "size": 32365
+    },
+    "assets/terrain/masks/seedthree_blend_brush.png": {
+      "sha": "87935e01b90c1fa705929eeac8cdbd4e5f2fc34e",
+      "size": 645918
+    },
+    "assets/terrain/nuclear_crater_heightmap.png": {
+      "sha": "18d385669e585adb6fa92b9d09687a06fe9ba2c7",
+      "size": 1202122
+    },
+    "assets/terrain/painted_escarpment_height_source_v1.png": {
+      "sha": "439f7dea7fa4252db42662414841bee0061fbc3e",
+      "size": 2401176
+    },
+    "assets/terrain/painted_escarpment_height_v1.json": {
+      "sha": "4e13c4012ef3f214375dfbb5557b50383bce13af",
+      "size": 1159
+    },
+    "assets/terrain/painted_escarpment_height_v1.png": {
+      "sha": "2f1520fc070fcd1d51a92178d0cdbae91378df4e",
+      "size": 909441
+    },
+    "assets/vegetation/ATTRIBUTION.md": {
+      "sha": "9d17dafea99bacf3428900dca472f6e79bc3e8a3",
+      "size": 2096
+    },
+    "assets/vegetation/desert_vegetation_layout_v1.json": {
+      "sha": "aae8a111607587aa29e52efc8265da859b29c804",
+      "size": 71118
+    },
+    "assets/vegetation/joshuaTree_seed555.glb": {
+      "sha": "08c390078731216a3d2f6931f017645b53779af2",
+      "size": 25496444
+    },
+    "assets/vegetation/materials/saguaro_skin_clean_albedo.png": {
+      "sha": "d8f9a8dbaa03d837bfc4adffade854c59b89a0d3",
+      "size": 1906401
+    },
+    "assets/vegetation/materials/saguaro_skin_clean_normal.png": {
+      "sha": "2b403040004a65878a0444b8a488865ed9e9327b",
+      "size": 2865879
+    },
+    "assets/vegetation/materials/saguaro_skin_clean_roughness.png": {
+      "sha": "673417c2bf8dad8b7a6a3f23498df0516dcdc40d",
+      "size": 306856
+    },
+    "assets/vegetation/materials/saguaro_spines_translucency.png": {
+      "sha": "f37d67bac0f9a9c177a850d77c18172aff541956",
+      "size": 133249
+    },
+    "assets/vegetation/materials/yucca_rosette_dry_albedo.png": {
+      "sha": "a2fcd2f638eb00be4e8d08dd130044e99fda4e03",
+      "size": 1240973
+    },
+    "assets/vegetation/materials/yucca_rosette_dryest_albedo.png": {
+      "sha": "403a3f329bb8767ead2b57956d161fa6f4e55ee5",
+      "size": 1094922
+    },
+    "assets/vegetation/materials/yucca_rosette_translucency.png": {
+      "sha": "73edc52bf6a8815a3e04394d620197598fe5f6a5",
+      "size": 1427799
+    },
+    "assets/vegetation/saguaro_seed555.glb": {
+      "sha": "9c415ffc16efc3238f30ad9bbf718fb73e589eec",
+      "size": 11704164
+    },
+    "assets/vegetation/seed555-exports.json": {
+      "sha": "2a139dada6f6d824784f39aacfff926adf4007be",
+      "size": 2875
+    },
+    "assets/weather/README.md": {
+      "sha": "fbe6ccec73c2608b747983dde9f5dbd654e16146",
+      "size": 913
+    },
+    "assets/weather/cirrus_ice_trails.json": {
+      "sha": "68ea9280f31c1eb092995563b9d167e9d9420ee6",
+      "size": 240
+    },
+    "assets/weather/cirrus_ice_trails.png": {
+      "sha": "6c166de2b640a7c46dfe6893286889f9745f2396",
+      "size": 471139
+    },
+    "assets/weather/rain_streak.png": {
+      "sha": "3a244fe4699779305dc0e626f98c3e8eac2560bd",
+      "size": 24932
+    },
+    "assets/weather/trace_06.png": {
+      "sha": "54125eea64682ca0e130e965aa98a84df49963bc",
+      "size": 36247
+    },
+    "engine/RAIN.md": {
+      "sha": "fdb78d7a34c9ec0d2fea235ac7a578d9f3b3005d",
+      "size": 8102
+    },
+    "engine/asteroid_moon.js": {
+      "sha": "b58ad2537dd86e5122f4ef58fe040599be8df31e",
+      "size": 42506
+    },
+    "engine/cached_cloud_display.js": {
+      "sha": "351048a2de978eb4a1962966402c04cefa3a69fa",
+      "size": 14947
+    },
+    "engine/cloud_motion.js": {
+      "sha": "9e03457735e311a65f5611868570e55606604c91",
+      "size": 686
+    },
+    "engine/cloud_shadow_map.js": {
+      "sha": "4471c5326d960232b46b464d0e25f06ec5a16381",
+      "size": 7474
+    },
+    "engine/cloud_uniform_snapshot.js": {
+      "sha": "5d3e48a68408875f8d085d184a7e69666967b626",
+      "size": 1566
+    },
+    "engine/fragment_motion.js": {
+      "sha": "4b319829fd29979056c7d17b0d96537c230ff628",
+      "size": 3887
+    },
+    "engine/impact_smoke.js": {
+      "sha": "175c682eb44cd6f8708cb73251cad811cdf1ee98",
+      "size": 2091
+    },
+    "engine/quality_presets.js": {
+      "sha": "e8a75b7a9b35a3236df2619aaf8838eb674bd848",
+      "size": 2540
+    },
+    "engine/rain_accumulation_field.js": {
+      "sha": "be2a5ae396c6476864164ba14f570ff70ed637e5",
+      "size": 6444
+    },
+    "engine/rain_surface_field.js": {
+      "sha": "04421377653737db62def4ade924bfd66f605f26",
+      "size": 13575
+    },
+    "engine/redgiant.js": {
+      "sha": "6b8d104dd696d2c5f4fdb6f0117025be2a30d338",
+      "size": 23601
+    },
+    "engine/ring_cloud_field.js": {
+      "sha": "e9a3d0642c0f6edfd48248eed5e95d3af15323ad",
+      "size": 3376
+    },
+    "engine/ring_eclipse.js": {
+      "sha": "12fffcfc7f8a58b3513a3cf321b135b135bc1c2c",
+      "size": 2873
+    },
+    "engine/ring_terrain_geometry.js": {
+      "sha": "246e5c27ba30eaaae000a9ee9ff4aafc3f2f23ec",
+      "size": 6270
+    },
+    "engine/ringworld.js": {
+      "sha": "02eaa9ef896b13d048f51bdf1c52d06315fd36bc",
+      "size": 101248
+    },
+    "engine/sky_noise.js": {
+      "sha": "f52f7b50e59fcdfd617b9307a75debd8f770eb15",
+      "size": 1691
+    },
+    "engine/sky_system.js": {
+      "sha": "62e6280b25776f689ff4b63c0f0416f5517ea9c7",
+      "size": 182902
+    },
+    "engine/weather_listener.js": {
+      "sha": "8315bb1b780e9cbaad2d5eb0288fa1018f384998",
+      "size": 2518
+    },
+    "engine/weather_system.js": {
+      "sha": "d0d87bc777542341ef6221cf72c228a26b3216df",
+      "size": 138343
+    },
+    "index.html": {
+      "sha": "84c4e468d6cfb88b82921b245928577127fa8e62",
+      "size": 6842
+    },
+    "qa/sky-fixture.html": {
+      "sha": "4ed6cae112dabbd024d35f6dba79bd4580984033",
+      "size": 937
+    },
+    "qa/sky-fixture.mjs": {
+      "sha": "06c60db8eae582d4675bcccddc54d424a26f31cf",
+      "size": 9082
+    },
+    "src/ambient_occlusion.js": {
+      "sha": "1636f575b2531674308ed71e3743c27495af03f9",
+      "size": 4394
+    },
+    "src/asset_blob.js": {
+      "sha": "ed3806b768fd986405efcc56bb31917760e5e62f",
+      "size": 757
+    },
+    "src/asset_preload.js": {
+      "sha": "21969c0ddec77dd8dc38f0fbcb016be79557777d",
+      "size": 1153
+    },
+    "src/audio_loop.js": {
+      "sha": "466d54d66bf877090c1992dd8d27b1cf7d98b174",
+      "size": 1141
+    },
+    "src/audio_system.js": {
+      "sha": "7f5cdd85967db9c1c603ce425b1bc83e375adfb5",
+      "size": 43018
+    },
+    "src/cloudgraph.js": {
+      "sha": "e5a8abfbec4e2f0f0e2bc2ddc7e8ab26561935ee",
+      "size": 12215
+    },
+    "src/cloudspatial.js": {
+      "sha": "a9aef6a989d41e9c9ecda52e51b8c269709bd275",
+      "size": 11547
+    },
+    "src/desert_dressing.js": {
+      "sha": "6a18d8b73411b07035c2587b1a4166dbfb6403ba",
+      "size": 12527
+    },
+    "src/first_person_viewmodel.js": {
+      "sha": "fe14643355ab25f8e75d8edbfc100df2a3b02f7e",
+      "size": 17991
+    },
+    "src/frame_metrics.js": {
+      "sha": "9160d4fe1c4695b3c6aa619c9763641650a3fd36",
+      "size": 2998
+    },
+    "src/local_reflection_probe.js": {
+      "sha": "3576596763842ae2a7d4ee4f9b366e1532b65134",
+      "size": 10362
+    },
+    "src/main.js": {
+      "sha": "88430cedb4612fbb79b48c98af8792b2ecb18e59",
+      "size": 92188
+    },
+    "src/materials/eanpa_layer_meta.js": {
+      "sha": "c1a92a66622b5a4e3dfd02b06fa91a3cb1315f08",
+      "size": 1893
+    },
+    "src/materials/layer_kernel.js": {
+      "sha": "3ec539b4eac3bbdad3aa6f881678185aca06e9bf",
+      "size": 20852
+    },
+    "src/materials/noise.js": {
+      "sha": "42c769ed787650f300e29f60136228926f1c8ca5",
+      "size": 4793
+    },
+    "src/materials/ops.js": {
+      "sha": "3021d84dd7f0181d0a6429106bb96e3077e4048a",
+      "size": 8356
+    },
+    "src/materials/phacelle.js": {
+      "sha": "bb50a98ab03028e962655f20d27e6d4988fb73a4",
+      "size": 14811
+    },
+    "src/materials/texture_base.js": {
+      "sha": "532c7797b9e6e558246c80d151fa0a2fd1709f58",
+      "size": 10706
+    },
+    "src/materials/triplanar.js": {
+      "sha": "72ec46913a2f84e4e41f25e5ac2abbc30af8c682",
+      "size": 8836
+    },
+    "src/mojave_flora.js": {
+      "sha": "2f723c29f735aa08d27a5c0518d1c7ced45d6e4f",
+      "size": 69760
+    },
+    "src/movement_step.js": {
+      "sha": "5aa8b292e658a09e7ff059d120aa7347a460b990",
+      "size": 5541
+    },
+    "src/native_reflection_pipeline.js": {
+      "sha": "8bef3ae6c562535a9ee85bbdedb88840fa144a88",
+      "size": 16303
+    },
+    "src/parallax_occlusion.js": {
+      "sha": "9a75bdb6037ffaef9742dc4ad85820c29b103508",
+      "size": 21435
+    },
+    "src/progressive_textures.js": {
+      "sha": "b4b255d86e5a63a7a4ff6909c21e126632b89224",
+      "size": 2160
+    },
+    "src/rebuild_resource_cache.js": {
+      "sha": "6d32ca11f3c5eb63de114fa75ad2f3ce74cc130b",
+      "size": 3265
+    },
+    "src/reflection_environment.js": {
+      "sha": "364ff300184d60a054446b4d50b062fd070b71fb",
+      "size": 1893
+    },
+    "src/reflection_geometry.js": {
+      "sha": "1d583235548575b16e62ccca7aa4ce6ca9596f74",
+      "size": 5139
+    },
+    "src/reflection_pipeline.js": {
+      "sha": "153bb35bc21ab1c524e25d2f623e9e1ba9477a41",
+      "size": 44849
+    },
+    "src/reflection_receiver_id.js": {
+      "sha": "fba1f9d2eec67cd521327049a9b511acf54ea6a8",
+      "size": 726
+    },
+    "src/ring_relief.js": {
+      "sha": "02d8c22de385745175d2342c3c8da5f2c520a209",
+      "size": 3836
+    },
+    "src/ringsky.js": {
+      "sha": "6fd9fb536c2e81ecc753fce5b4c5123f04371193",
+      "size": 9233
+    },
+    "src/screen_space_trace.js": {
+      "sha": "6489dc0661e17a8b618735282f7d40da55d21a6c",
+      "size": 10824
+    },
+    "src/shadow_material_cache.js": {
+      "sha": "c839826cb7b83ff41536b09da834c63339714b31",
+      "size": 3546
+    },
+    "src/shadow_refresh.js": {
+      "sha": "66bf58d3cb29df387f4ff19c0b5726616e34faaf",
+      "size": 1085
+    },
+    "src/shieldworld.js": {
+      "sha": "a5047f3b022323ab79ad7c6217785af7ac87e473",
+      "size": 10229
+    },
+    "src/sky_geometry_layer.js": {
+      "sha": "d5b6fdb974966712935044af0069f81c28c2c363",
+      "size": 5479
+    },
+    "src/static_instances.js": {
+      "sha": "08d931d99dcb48059ca4302ab11d2581e058bfad",
+      "size": 2562
+    },
+    "src/temple.js": {
+      "sha": "b33b0ff24627e033fcba02044457078739d4fa5b",
+      "size": 27965
+    },
+    "src/temple_real.js": {
+      "sha": "f66b1dae7a254194d7a157a3680f953548ee6649",
+      "size": 105887
+    },
+    "src/terrain.js": {
+      "sha": "c2043aaa99329f72f83bcee7c234bb6d6eb6e59c",
+      "size": 20728
+    },
+    "src/terrain_real.js": {
+      "sha": "669ebba31d6aa1a0775bd620b6bcd0646c95e235",
+      "size": 165286
+    },
+    "src/terrain_real.rock-role-patch.js": {
+      "sha": "8e8a58212c01c8f40fc2fb7e1c8e4d3ce70da8ec",
+      "size": 148185
+    },
+    "src/vegetation.js": {
+      "sha": "9295e7570d1535e47e5c767c86e74928cb8d7d5e",
+      "size": 50240
+    },
+    "src/vegetation_collision.js": {
+      "sha": "068d200633e36e7fa6e926ce69695a5cf92d8453",
+      "size": 24651
+    },
+    "src/vendor/n8ao/BlueNoise.js": {
+      "sha": "d734c2d0cb84a048c70cd176ab57395c366ecf11",
+      "size": 87892
+    },
+    "src/vendor/n8ao/LICENSE": {
+      "sha": "721ba754c16f8d69686782d7a62d6dd53a01e35f",
+      "size": 6393
+    },
+    "src/vendor/n8ao/N8AONode.js": {
+      "sha": "67f804a8f41b469b1f4ee6d76d7d1fa6c0df1371",
+      "size": 57880
+    },
+    "src/vendor/n8ao/NOTICE.md": {
+      "sha": "daf2120c22863b2ecd78a0e7ce39b9b96d210be3",
+      "size": 1087
+    },
+    "src/vendor/n8ao/VENDORED.md": {
+      "sha": "16dedda6aa61e6bc229ddc5b66bef8541d58fc05",
+      "size": 1418
+    },
+    "src/vendor/n8ao/createN8AOScenePass.js": {
+      "sha": "d8fd4b63f2fd62ad810f226d02eadc38cbb9d403",
+      "size": 751
+    },
+    "src/vendor/n8ao/index.js": {
+      "sha": "af65634e16e49c8631ed487b459527eeb815355b",
+      "size": 300
+    },
+    "src/vendor/n8ao/math.js": {
+      "sha": "86ce7723b3a426971c30c33ddc62773e79f341d0",
+      "size": 2820
+    },
+    "src/visible_emission.js": {
+      "sha": "12fd22ff0fb8f0dd2c12bff678bf152c826065a8",
+      "size": 895
+    },
+    "src/weathersky.js": {
+      "sha": "e518e00756153f834991f1a562ac51ba3afda98b",
+      "size": 18512
+    },
+    "vendor/three/EANPA_PATCHES.md": {
+      "sha": "1ca25de42752db657bb85c35722e2af58077d7f9",
+      "size": 5228
+    },
+    "vendor/three/LICENSE": {
+      "sha": "8ada2a5f982916b0ba4b7a0aa7de347587e745d7",
+      "size": 1081
+    },
+    "vendor/three/UPSTREAM.json": {
+      "sha": "479b6a123da9a8a271d0aa6d001da4ab20f6c225",
+      "size": 5252
+    },
+    "vendor/three/addons/controls/OrbitControls.js": {
+      "sha": "3b49ec2db3aae21cc7c9fa1df38d2c703e28b324",
+      "size": 40755
+    },
+    "vendor/three/addons/libs/basis/basis_transcoder.js": {
+      "sha": "6f02a4ac8504ea07512bd1106e7fe98012aecd6a",
+      "size": 57529
+    },
+    "vendor/three/addons/libs/basis/basis_transcoder.wasm": {
+      "sha": "bc64682561438128604ac550da774f8cc6617460",
+      "size": 527333
+    },
+    "vendor/three/addons/libs/ktx-parse.module.js": {
+      "sha": "74d2808ed59b389d4cf1fc87adbea8ff3b95c1c0",
+      "size": 19932
+    },
+    "vendor/three/addons/libs/zstddec.module.js": {
+      "sha": "ed19f91162d2afaa5d058c67a2f6ed074ba8c197",
+      "size": 39754
+    },
+    "vendor/three/addons/loaders/GLTFLoader.js": {
+      "sha": "cd95b20593264ba8b503f8152484c456be64b1af",
+      "size": 117570
+    },
+    "vendor/three/addons/loaders/KTX2Loader.js": {
+      "sha": "8290fec102631913ebbaf17cd88c6078a48e712c",
+      "size": 36567
+    },
+    "vendor/three/addons/math/ColorSpaces.js": {
+      "sha": "1f588fe0a58f3d82c62c32b3e954ab76744a1ac0",
+      "size": 4290
+    },
+    "vendor/three/addons/tsl/display/BloomNode.js": {
+      "sha": "5fe20f10211d211be44c4a6d43358a00687b98fd",
+      "size": 17242
+    },
+    "vendor/three/addons/tsl/display/FXAANode.js": {
+      "sha": "5f17d8c685f317d914fcd9073812d64aff38b835",
+      "size": 9450
+    },
+    "vendor/three/addons/tsl/display/ImportanceSampledEnvironment.js": {
+      "sha": "8094959b5a83a7f7e64e33a5abe6859024691ff5",
+      "size": 16477
+    },
+    "vendor/three/addons/tsl/display/SSRNode.js": {
+      "sha": "0f90b96566256ac6fee3346875138f926d699b23",
+      "size": 42095
+    },
+    "vendor/three/addons/tsl/display/boxBlur.js": {
+      "sha": "c1a601c1eac8064742c73bfda679a8bd7cced5b1",
+      "size": 2748
+    },
+    "vendor/three/addons/tsl/utils/RNoise.js": {
+      "sha": "d5ddee5b8351d2d4d84694c093c8d5cbb14006b1",
+      "size": 1499
+    },
+    "vendor/three/addons/tsl/utils/SpecularHelpers.js": {
+      "sha": "71c7046c078a4c7f637f63cd66fe8dff335cf85d",
+      "size": 12043
+    },
+    "vendor/three/addons/utils/BufferGeometryUtils.js": {
+      "sha": "a167e11b0558954a00960dc3cad00ead6476fbe7",
+      "size": 37712
+    },
+    "vendor/three/addons/utils/SkeletonUtils.js": {
+      "sha": "836c2e2bf2be3c5c5fd6b65ed260f84b3d589258",
+      "size": 11535
+    },
+    "vendor/three/addons/utils/WorkerPool.js": {
+      "sha": "9d76566b42f1e3ceea8aef056561c088426a88e9",
+      "size": 3110
+    },
+    "vendor/three/three.core.js": {
+      "sha": "0a1d6cb9ef3cabc97a50bd02394c85e8d1c513c2",
+      "size": 1458113
+    },
+    "vendor/three/three.tsl.js": {
+      "sha": "1d39a29b8a2c2252c1ff11d3513fdbe1cab159e0",
+      "size": 36982
+    },
+    "vendor/three/three.webgpu.js": {
+      "sha": "f466692818047607ae3758a9c9cfa4520dfde69c",
+      "size": 2289183
+    }
+  }
+}

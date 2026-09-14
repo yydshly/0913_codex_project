@@ -1,0 +1,209 @@
+{
+  "date": "2026-09-14T05:56:32.546Z",
+  "checks": {
+    "rain": {
+      "startupSeconds": 9.49,
+      "resourceMiB": 10.04,
+      "resourceFiles": 46,
+      "completedFrames": 2965,
+      "lastFPS": 51,
+      "weather": "rain",
+      "time": 15.5,
+      "budget": "balanced",
+      "stay": "arrival",
+      "view": "rural",
+      "audio": {
+        "enabled": true,
+        "context": "running",
+        "loading": false,
+        "loaded": true,
+        "rain": 0.698,
+        "shelter": 0,
+        "rms": 0.01119,
+        "thunderScheduled": 0,
+        "thunderPlayed": 0,
+        "pending": 0,
+        "listenerSource": "GPU rain cell and surface exposure",
+        "volume": 0.25,
+        "focus": "all",
+        "blocked": false,
+        "activeThunder": 0,
+        "source": "CC0 natural rain/thunder + quiet synthesized wind"
+      },
+      "errors": [],
+      "observations": [
+        {
+          "at": "2026-09-14T05:54:36.109Z",
+          "simulationSeconds": 0.05,
+          "action": "ready",
+          "detail": "live weather engine; procedural courtyard"
+        },
+        {
+          "at": "2026-09-14T05:54:36.110Z",
+          "simulationSeconds": 0.05,
+          "action": "view",
+          "detail": "entrance"
+        },
+        {
+          "at": "2026-09-14T05:54:36.110Z",
+          "simulationSeconds": 0.05,
+          "action": "guest-stop",
+          "detail": "arrival"
+        },
+        {
+          "at": "2026-09-14T05:55:03.370Z",
+          "simulationSeconds": 27.29,
+          "action": "view",
+          "detail": "rural"
+        },
+        {
+          "at": "2026-09-14T05:55:03.370Z",
+          "simulationSeconds": 27.29,
+          "action": "rain-inspection",
+          "detail": "earth"
+        },
+        {
+          "at": "2026-09-14T05:55:03.912Z",
+          "simulationSeconds": 27.74,
+          "action": "audio-loaded",
+          "detail": {
+            "source": "CC0 natural rain and thunder",
+            "files": 2
+          }
+        },
+        {
+          "at": "2026-09-14T05:55:03.912Z",
+          "simulationSeconds": 27.74,
+          "action": "audio",
+          "detail": true
+        },
+        {
+          "at": "2026-09-14T05:55:49.459Z",
+          "simulationSeconds": 73.19,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        }
+      ]
+    },
+    "lightning": {
+      "startupSeconds": 9.49,
+      "resourceMiB": 10.04,
+      "resourceFiles": 46,
+      "completedFrames": 4452,
+      "lastFPS": 49,
+      "weather": "storm",
+      "time": 17,
+      "budget": "balanced",
+      "stay": "arrival",
+      "view": "lightning",
+      "audio": {
+        "enabled": true,
+        "context": "running",
+        "loading": false,
+        "loaded": true,
+        "rain": 1,
+        "shelter": 0,
+        "rms": 0.03036,
+        "thunderScheduled": 2,
+        "thunderPlayed": 2,
+        "pending": 0,
+        "listenerSource": "GPU rain cell and surface exposure",
+        "volume": 0.25,
+        "focus": "all",
+        "blocked": false,
+        "activeThunder": 1,
+        "source": "CC0 natural rain/thunder + quiet synthesized wind"
+      },
+      "errors": [],
+      "observations": [
+        {
+          "at": "2026-09-14T05:55:03.912Z",
+          "simulationSeconds": 27.74,
+          "action": "audio-loaded",
+          "detail": {
+            "source": "CC0 natural rain and thunder",
+            "files": 2
+          }
+        },
+        {
+          "at": "2026-09-14T05:55:03.912Z",
+          "simulationSeconds": 27.74,
+          "action": "audio",
+          "detail": true
+        },
+        {
+          "at": "2026-09-14T05:55:49.459Z",
+          "simulationSeconds": 73.19,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        },
+        {
+          "at": "2026-09-14T05:55:50.068Z",
+          "simulationSeconds": 73.51,
+          "action": "view",
+          "detail": "lightning"
+        },
+        {
+          "at": "2026-09-14T05:55:50.069Z",
+          "simulationSeconds": 73.51,
+          "action": "rain-inspection",
+          "detail": "lightning"
+        },
+        {
+          "at": "2026-09-14T05:56:02.758Z",
+          "simulationSeconds": 86.21,
+          "action": "guided-lightning-trigger",
+          "detail": true
+        },
+        {
+          "at": "2026-09-14T05:56:03.340Z",
+          "simulationSeconds": 86.79,
+          "action": "lightning",
+          "detail": "local impact"
+        },
+        {
+          "at": "2026-09-14T05:56:03.341Z",
+          "simulationSeconds": 86.79,
+          "action": "thunder-scheduled",
+          "detail": {
+            "distanceMeters": 45,
+            "delaySeconds": 0.13
+          }
+        },
+        {
+          "at": "2026-09-14T05:56:03.484Z",
+          "simulationSeconds": 86.94,
+          "action": "thunder-played",
+          "detail": {
+            "distanceMeters": 45,
+            "delaySeconds": 0.13
+          }
+        },
+        {
+          "at": "2026-09-14T05:56:27.315Z",
+          "simulationSeconds": 110.77,
+          "action": "thunder-scheduled",
+          "detail": {
+            "distanceMeters": 350.3,
+            "delaySeconds": 1.02
+          }
+        },
+        {
+          "at": "2026-09-14T05:56:28.342Z",
+          "simulationSeconds": 111.8,
+          "action": "thunder-played",
+          "detail": {
+            "distanceMeters": 350.3,
+            "delaySeconds": 1.02
+          }
+        },
+        {
+          "at": "2026-09-14T05:56:32.312Z",
+          "simulationSeconds": 115.75,
+          "action": "journal",
+          "detail": "opened; rendering suspended"
+        }
+      ]
+    }
+  }
+}

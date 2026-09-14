@@ -1,0 +1,682 @@
+{
+  "night": {
+    "startupSeconds": 26.68,
+    "resourceMiB": 9.67,
+    "resourceFiles": 47,
+    "completedFrames": 1453,
+    "lastFPS": 50,
+    "weather": "rain",
+    "time": 23,
+    "budget": "balanced",
+    "stay": "tea",
+    "view": "rainporch",
+    "lighting": {
+      "mode": "on",
+      "brightness": 0.7,
+      "tea": true,
+      "path": true,
+      "rooms": true
+    },
+    "lightOutput": {
+      "mode": "on",
+      "brightness": 0.7,
+      "targets": {
+        "tea": 0.7,
+        "path": 0.7,
+        "rooms": 0.7
+      },
+      "levels": {
+        "tea": 0.6999999999999996,
+        "path": 0.6999999999999996,
+        "rooms": 0.6999999999999996
+      },
+      "teaIntensity": 59.499999999999964,
+      "pathIntensity": 9.799999999999995,
+      "roomIntensity": 4.899999999999998,
+      "shadowLights": 0
+    },
+    "layers": {
+      "roofWater": 0.695,
+      "activeDrops": 15,
+      "impactEvents": 344,
+      "fogDensity": 0.0038,
+      "detailEnabled": true,
+      "groundRain": {
+        "rain": 0.698,
+        "falling": 153,
+        "contacts": 60,
+        "puddleFill": 0.463,
+        "impacts": 7109,
+        "region": "open courtyard x -5.15..2.15, z 1.7..11.5"
+      },
+      "distanceEnabled": true
+    },
+    "audio": {
+      "enabled": false,
+      "context": "uninitialized",
+      "loading": false,
+      "loaded": false,
+      "rain": 0.698,
+      "shelter": 1,
+      "rms": 0,
+      "thunderScheduled": 0,
+      "thunderPlayed": 0,
+      "pending": 0,
+      "detailPlayed": 0,
+      "detailByKind": {
+        "stone": 0,
+        "earth": 0,
+        "roof": 0
+      },
+      "listenerSource": "GPU rain cell and surface exposure",
+      "volume": 0.25,
+      "detailVolume": 0.55,
+      "focus": "all",
+      "blocked": false,
+      "activeDetails": 0,
+      "activeThunder": 0,
+      "source": "CC0 rain/thunder + filtered leaves, quiet wind and synthesized impact details"
+    },
+    "errors": [],
+    "observations": [
+      {
+        "at": "2026-09-14T07:18:17.980Z",
+        "simulationSeconds": 0.05,
+        "action": "ready",
+        "detail": "live weather engine; procedural courtyard"
+      },
+      {
+        "at": "2026-09-14T07:18:17.981Z",
+        "simulationSeconds": 0.05,
+        "action": "view",
+        "detail": "shelter"
+      },
+      {
+        "at": "2026-09-14T07:18:17.981Z",
+        "simulationSeconds": 0.05,
+        "action": "guest-stop",
+        "detail": "tea"
+      },
+      {
+        "at": "2026-09-14T07:18:17.981Z",
+        "simulationSeconds": 0.05,
+        "action": "view",
+        "detail": "rainporch"
+      },
+      {
+        "at": "2026-09-14T07:18:18.130Z",
+        "simulationSeconds": 0.18,
+        "action": "time",
+        "detail": 23
+      },
+      {
+        "at": "2026-09-14T07:18:18.900Z",
+        "simulationSeconds": 0.75,
+        "action": "lighting-mode",
+        "detail": "on"
+      },
+      {
+        "at": "2026-09-14T07:18:45.646Z",
+        "simulationSeconds": 27.49,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      }
+    ]
+  },
+  "day": {
+    "startupSeconds": 26.68,
+    "resourceMiB": 9.67,
+    "resourceFiles": 47,
+    "completedFrames": 2480,
+    "lastFPS": 58,
+    "weather": "rain",
+    "time": 15.5,
+    "budget": "balanced",
+    "stay": "tea",
+    "view": "puddle",
+    "lighting": {
+      "mode": "on",
+      "brightness": 0.7,
+      "tea": true,
+      "path": true,
+      "rooms": true
+    },
+    "lightOutput": {
+      "mode": "on",
+      "brightness": 0.7,
+      "targets": {
+        "tea": 0.7,
+        "path": 0.7,
+        "rooms": 0.7
+      },
+      "levels": {
+        "tea": 0.6999999999999996,
+        "path": 0.6999999999999996,
+        "rooms": 0.6999999999999996
+      },
+      "teaIntensity": 59.499999999999964,
+      "pathIntensity": 9.799999999999995,
+      "roomIntensity": 4.899999999999998,
+      "shadowLights": 0
+    },
+    "layers": {
+      "roofWater": 0.698,
+      "activeDrops": 15,
+      "impactEvents": 705,
+      "fogDensity": 0.0038,
+      "detailEnabled": true,
+      "groundRain": {
+        "rain": 0.698,
+        "falling": 153,
+        "contacts": 66,
+        "puddleFill": 0.615,
+        "impacts": 13846,
+        "region": "open courtyard x -5.15..2.15, z 1.7..11.5"
+      },
+      "distanceEnabled": true
+    },
+    "audio": {
+      "enabled": false,
+      "context": "uninitialized",
+      "loading": false,
+      "loaded": false,
+      "rain": 0.698,
+      "shelter": 0,
+      "rms": 0,
+      "thunderScheduled": 0,
+      "thunderPlayed": 0,
+      "pending": 0,
+      "detailPlayed": 0,
+      "detailByKind": {
+        "stone": 0,
+        "earth": 0,
+        "roof": 0
+      },
+      "listenerSource": "GPU rain cell and surface exposure",
+      "volume": 0.25,
+      "detailVolume": 0.55,
+      "focus": "all",
+      "blocked": false,
+      "activeDetails": 0,
+      "activeThunder": 0,
+      "source": "CC0 rain/thunder + filtered leaves, quiet wind and synthesized impact details"
+    },
+    "errors": [],
+    "observations": [
+      {
+        "at": "2026-09-14T07:18:17.980Z",
+        "simulationSeconds": 0.05,
+        "action": "ready",
+        "detail": "live weather engine; procedural courtyard"
+      },
+      {
+        "at": "2026-09-14T07:18:17.981Z",
+        "simulationSeconds": 0.05,
+        "action": "view",
+        "detail": "shelter"
+      },
+      {
+        "at": "2026-09-14T07:18:17.981Z",
+        "simulationSeconds": 0.05,
+        "action": "guest-stop",
+        "detail": "tea"
+      },
+      {
+        "at": "2026-09-14T07:18:17.981Z",
+        "simulationSeconds": 0.05,
+        "action": "view",
+        "detail": "rainporch"
+      },
+      {
+        "at": "2026-09-14T07:18:18.130Z",
+        "simulationSeconds": 0.18,
+        "action": "time",
+        "detail": 23
+      },
+      {
+        "at": "2026-09-14T07:18:18.900Z",
+        "simulationSeconds": 0.75,
+        "action": "lighting-mode",
+        "detail": "on"
+      },
+      {
+        "at": "2026-09-14T07:18:45.646Z",
+        "simulationSeconds": 27.49,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T07:18:46.520Z",
+        "simulationSeconds": 28.01,
+        "action": "time",
+        "detail": 15.5
+      },
+      {
+        "at": "2026-09-14T07:18:46.815Z",
+        "simulationSeconds": 28.3,
+        "action": "view",
+        "detail": "puddle"
+      },
+      {
+        "at": "2026-09-14T07:19:04.696Z",
+        "simulationSeconds": 46.17,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      }
+    ]
+  },
+  "stopped": {
+    "startupSeconds": 26.68,
+    "resourceMiB": 9.67,
+    "resourceFiles": 47,
+    "completedFrames": 4558,
+    "lastFPS": 54,
+    "weather": "clear",
+    "time": 15.5,
+    "budget": "balanced",
+    "stay": "tea",
+    "view": "puddle",
+    "lighting": {
+      "mode": "on",
+      "brightness": 0.7,
+      "tea": true,
+      "path": true,
+      "rooms": true
+    },
+    "lightOutput": {
+      "mode": "on",
+      "brightness": 0.7,
+      "targets": {
+        "tea": 0.7,
+        "path": 0.7,
+        "rooms": 0.7
+      },
+      "levels": {
+        "tea": 0.6999999999999996,
+        "path": 0.6999999999999996,
+        "rooms": 0.6999999999999996
+      },
+      "teaIntensity": 59.499999999999964,
+      "pathIntensity": 9.799999999999995,
+      "roomIntensity": 4.899999999999998,
+      "shadowLights": 0
+    },
+    "layers": {
+      "roofWater": 0.039,
+      "activeDrops": 0,
+      "impactEvents": 1000,
+      "fogDensity": 0.0018,
+      "detailEnabled": true,
+      "groundRain": {
+        "rain": 0,
+        "falling": 0,
+        "contacts": 0,
+        "puddleFill": 0.441,
+        "impacts": 14927,
+        "region": "open courtyard x -5.15..2.15, z 1.7..11.5"
+      },
+      "distanceEnabled": true
+    },
+    "audio": {
+      "enabled": false,
+      "context": "uninitialized",
+      "loading": false,
+      "loaded": false,
+      "rain": 0,
+      "shelter": 0,
+      "rms": 0,
+      "thunderScheduled": 0,
+      "thunderPlayed": 0,
+      "pending": 0,
+      "detailPlayed": 0,
+      "detailByKind": {
+        "stone": 0,
+        "earth": 0,
+        "roof": 0
+      },
+      "listenerSource": "GPU rain cell and surface exposure",
+      "volume": 0.25,
+      "detailVolume": 0.55,
+      "focus": "all",
+      "blocked": false,
+      "activeDetails": 0,
+      "activeThunder": 0,
+      "source": "CC0 rain/thunder + filtered leaves, quiet wind and synthesized impact details"
+    },
+    "errors": [],
+    "observations": [
+      {
+        "at": "2026-09-14T07:18:17.980Z",
+        "simulationSeconds": 0.05,
+        "action": "ready",
+        "detail": "live weather engine; procedural courtyard"
+      },
+      {
+        "at": "2026-09-14T07:18:17.981Z",
+        "simulationSeconds": 0.05,
+        "action": "view",
+        "detail": "shelter"
+      },
+      {
+        "at": "2026-09-14T07:18:17.981Z",
+        "simulationSeconds": 0.05,
+        "action": "guest-stop",
+        "detail": "tea"
+      },
+      {
+        "at": "2026-09-14T07:18:17.981Z",
+        "simulationSeconds": 0.05,
+        "action": "view",
+        "detail": "rainporch"
+      },
+      {
+        "at": "2026-09-14T07:18:18.130Z",
+        "simulationSeconds": 0.18,
+        "action": "time",
+        "detail": 23
+      },
+      {
+        "at": "2026-09-14T07:18:18.900Z",
+        "simulationSeconds": 0.75,
+        "action": "lighting-mode",
+        "detail": "on"
+      },
+      {
+        "at": "2026-09-14T07:18:45.646Z",
+        "simulationSeconds": 27.49,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T07:18:46.520Z",
+        "simulationSeconds": 28.01,
+        "action": "time",
+        "detail": 15.5
+      },
+      {
+        "at": "2026-09-14T07:18:46.815Z",
+        "simulationSeconds": 28.3,
+        "action": "view",
+        "detail": "puddle"
+      },
+      {
+        "at": "2026-09-14T07:19:04.696Z",
+        "simulationSeconds": 46.17,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T07:19:05.369Z",
+        "simulationSeconds": 46.49,
+        "action": "weather",
+        "detail": "clear"
+      },
+      {
+        "at": "2026-09-14T07:19:42.805Z",
+        "simulationSeconds": 83.93,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      }
+    ]
+  },
+  "finalDay": {
+    "startupSeconds": 26.26,
+    "resourceMiB": 9.67,
+    "resourceFiles": 47,
+    "completedFrames": 2021,
+    "lastFPS": 53,
+    "weather": "rain",
+    "time": 15.5,
+    "budget": "balanced",
+    "stay": "tea",
+    "view": "puddle",
+    "lighting": {
+      "mode": "on",
+      "brightness": 0.7,
+      "tea": true,
+      "path": true,
+      "rooms": true
+    },
+    "lightOutput": {
+      "mode": "on",
+      "brightness": 0.7,
+      "targets": {
+        "tea": 0.7,
+        "path": 0.7,
+        "rooms": 0.7
+      },
+      "levels": {
+        "tea": 0.6999999999999996,
+        "path": 0.6999999999999996,
+        "rooms": 0.6999999999999996
+      },
+      "teaIntensity": 59.499999999999964,
+      "pathIntensity": 9.799999999999995,
+      "roomIntensity": 4.899999999999998,
+      "shadowLights": 0
+    },
+    "layers": {
+      "roofWater": 0.698,
+      "activeDrops": 16,
+      "impactEvents": 530,
+      "fogDensity": 0.0038,
+      "detailEnabled": true,
+      "groundRain": {
+        "rain": 0.698,
+        "falling": 152,
+        "contacts": 75,
+        "puddleFill": 0.56,
+        "impacts": 10563,
+        "region": "open courtyard x -5.15..2.15, z 1.7..11.5"
+      },
+      "distanceEnabled": true
+    },
+    "audio": {
+      "enabled": false,
+      "context": "uninitialized",
+      "loading": false,
+      "loaded": false,
+      "rain": 0.698,
+      "shelter": 0,
+      "rms": 0,
+      "thunderScheduled": 0,
+      "thunderPlayed": 0,
+      "pending": 0,
+      "detailPlayed": 0,
+      "detailByKind": {
+        "stone": 0,
+        "earth": 0,
+        "roof": 0
+      },
+      "listenerSource": "GPU rain cell and surface exposure",
+      "volume": 0.25,
+      "detailVolume": 0.55,
+      "focus": "all",
+      "blocked": false,
+      "activeDetails": 0,
+      "activeThunder": 0,
+      "source": "CC0 rain/thunder + filtered leaves, quiet wind and synthesized impact details"
+    },
+    "errors": [],
+    "observations": [
+      {
+        "at": "2026-09-14T07:20:09.921Z",
+        "simulationSeconds": 0.05,
+        "action": "ready",
+        "detail": "live weather engine; procedural courtyard"
+      },
+      {
+        "at": "2026-09-14T07:20:09.922Z",
+        "simulationSeconds": 0.05,
+        "action": "view",
+        "detail": "shelter"
+      },
+      {
+        "at": "2026-09-14T07:20:09.922Z",
+        "simulationSeconds": 0.05,
+        "action": "guest-stop",
+        "detail": "tea"
+      },
+      {
+        "at": "2026-09-14T07:20:09.922Z",
+        "simulationSeconds": 0.05,
+        "action": "view",
+        "detail": "rainporch"
+      },
+      {
+        "at": "2026-09-14T07:20:17.125Z",
+        "simulationSeconds": 6.86,
+        "action": "view",
+        "detail": "puddle"
+      },
+      {
+        "at": "2026-09-14T07:20:17.420Z",
+        "simulationSeconds": 7.15,
+        "action": "lighting-mode",
+        "detail": "on"
+      },
+      {
+        "at": "2026-09-14T07:20:47.348Z",
+        "simulationSeconds": 37.08,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      }
+    ]
+  },
+  "finalNight": {
+    "startupSeconds": 26.26,
+    "resourceMiB": 9.67,
+    "resourceFiles": 47,
+    "completedFrames": 3102,
+    "lastFPS": 51,
+    "weather": "rain",
+    "time": 23,
+    "budget": "balanced",
+    "stay": "tea",
+    "view": "puddle",
+    "lighting": {
+      "mode": "on",
+      "brightness": 0.7,
+      "tea": true,
+      "path": true,
+      "rooms": true
+    },
+    "lightOutput": {
+      "mode": "on",
+      "brightness": 0.7,
+      "targets": {
+        "tea": 0.7,
+        "path": 0.7,
+        "rooms": 0.7
+      },
+      "levels": {
+        "tea": 0.6999999999999996,
+        "path": 0.6999999999999996,
+        "rooms": 0.6999999999999996
+      },
+      "teaIntensity": 59.499999999999964,
+      "pathIntensity": 9.799999999999995,
+      "roomIntensity": 4.899999999999998,
+      "shadowLights": 0
+    },
+    "layers": {
+      "roofWater": 0.698,
+      "activeDrops": 17,
+      "impactEvents": 907,
+      "fogDensity": 0.0038,
+      "detailEnabled": true,
+      "groundRain": {
+        "rain": 0.698,
+        "falling": 149,
+        "contacts": 85,
+        "puddleFill": 0.651,
+        "impacts": 17621,
+        "region": "open courtyard x -5.15..2.15, z 1.7..11.5"
+      },
+      "distanceEnabled": true
+    },
+    "audio": {
+      "enabled": false,
+      "context": "uninitialized",
+      "loading": false,
+      "loaded": false,
+      "rain": 0.698,
+      "shelter": 0,
+      "rms": 0,
+      "thunderScheduled": 0,
+      "thunderPlayed": 0,
+      "pending": 0,
+      "detailPlayed": 0,
+      "detailByKind": {
+        "stone": 0,
+        "earth": 0,
+        "roof": 0
+      },
+      "listenerSource": "GPU rain cell and surface exposure",
+      "volume": 0.25,
+      "detailVolume": 0.55,
+      "focus": "all",
+      "blocked": false,
+      "activeDetails": 0,
+      "activeThunder": 0,
+      "source": "CC0 rain/thunder + filtered leaves, quiet wind and synthesized impact details"
+    },
+    "errors": [],
+    "observations": [
+      {
+        "at": "2026-09-14T07:20:09.921Z",
+        "simulationSeconds": 0.05,
+        "action": "ready",
+        "detail": "live weather engine; procedural courtyard"
+      },
+      {
+        "at": "2026-09-14T07:20:09.922Z",
+        "simulationSeconds": 0.05,
+        "action": "view",
+        "detail": "shelter"
+      },
+      {
+        "at": "2026-09-14T07:20:09.922Z",
+        "simulationSeconds": 0.05,
+        "action": "guest-stop",
+        "detail": "tea"
+      },
+      {
+        "at": "2026-09-14T07:20:09.922Z",
+        "simulationSeconds": 0.05,
+        "action": "view",
+        "detail": "rainporch"
+      },
+      {
+        "at": "2026-09-14T07:20:17.125Z",
+        "simulationSeconds": 6.86,
+        "action": "view",
+        "detail": "puddle"
+      },
+      {
+        "at": "2026-09-14T07:20:17.420Z",
+        "simulationSeconds": 7.15,
+        "action": "lighting-mode",
+        "detail": "on"
+      },
+      {
+        "at": "2026-09-14T07:20:47.348Z",
+        "simulationSeconds": 37.08,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T07:20:48.473Z",
+        "simulationSeconds": 37.88,
+        "action": "time",
+        "detail": 23
+      },
+      {
+        "at": "2026-09-14T07:21:07.207Z",
+        "simulationSeconds": 56.62,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      }
+    ]
+  }
+}

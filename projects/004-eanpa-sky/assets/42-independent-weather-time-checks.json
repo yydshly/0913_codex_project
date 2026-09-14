@@ -1,0 +1,242 @@
+{
+  "nightRain": "降雨 · 湿润地面 · 23:00 · 已就绪",
+  "nightClear": "无云晴天 · 23:00 · 过渡中 · 12 秒",
+  "nightStorm": "雷暴 · 23:00 · 过渡中 · 12 秒",
+  "dawnStorm": "雷暴 · 06:30 · 过渡中 · 12 秒",
+  "dawnStormReport": {
+    "startupSeconds": 18.88,
+    "resourceMiB": 9.66,
+    "resourceFiles": 45,
+    "completedFrames": 4222,
+    "lastFPS": 20,
+    "weather": "storm",
+    "time": 6.5,
+    "budget": "balanced",
+    "stay": "tea",
+    "view": "rainporch",
+    "layers": {
+      "roofWater": 1,
+      "activeDrops": 19,
+      "impactEvents": 1399,
+      "fogDensity": 0.0046,
+      "detailEnabled": true,
+      "distanceEnabled": true
+    },
+    "audio": {
+      "enabled": false,
+      "context": "uninitialized",
+      "loading": false,
+      "loaded": false,
+      "rain": 1,
+      "shelter": 1,
+      "rms": 0,
+      "thunderScheduled": 0,
+      "thunderPlayed": 0,
+      "pending": 0,
+      "detailPlayed": 0,
+      "detailByKind": {
+        "stone": 0,
+        "earth": 0,
+        "roof": 0
+      },
+      "listenerSource": "GPU rain cell and surface exposure",
+      "volume": 0.25,
+      "detailVolume": 0.55,
+      "focus": "all",
+      "blocked": false,
+      "activeDetails": 0,
+      "activeThunder": 0,
+      "source": "CC0 rain/thunder + filtered leaves, quiet wind and synthesized impact details"
+    },
+    "errors": [],
+    "observations": [
+      {
+        "at": "2026-09-14T06:36:35.175Z",
+        "simulationSeconds": 0.05,
+        "action": "ready",
+        "detail": "live weather engine; procedural courtyard"
+      },
+      {
+        "at": "2026-09-14T06:36:35.177Z",
+        "simulationSeconds": 0.05,
+        "action": "view",
+        "detail": "shelter"
+      },
+      {
+        "at": "2026-09-14T06:36:35.177Z",
+        "simulationSeconds": 0.05,
+        "action": "guest-stop",
+        "detail": "tea"
+      },
+      {
+        "at": "2026-09-14T06:36:35.177Z",
+        "simulationSeconds": 0.05,
+        "action": "view",
+        "detail": "rainporch"
+      },
+      {
+        "at": "2026-09-14T06:36:42.190Z",
+        "simulationSeconds": 6.96,
+        "action": "time",
+        "detail": 23
+      },
+      {
+        "at": "2026-09-14T06:36:51.472Z",
+        "simulationSeconds": 16.22,
+        "action": "weather",
+        "detail": "clear"
+      },
+      {
+        "at": "2026-09-14T06:36:51.981Z",
+        "simulationSeconds": 16.74,
+        "action": "weather",
+        "detail": "storm"
+      },
+      {
+        "at": "2026-09-14T06:36:52.468Z",
+        "simulationSeconds": 17.21,
+        "action": "time",
+        "detail": 6.5
+      },
+      {
+        "at": "2026-09-14T06:37:57.178Z",
+        "simulationSeconds": 81.93,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      }
+    ]
+  },
+  "rainActionPreservesTime": "降雨 · 湿润地面 · 06:30 · 过渡中 · 12 秒",
+  "nightRainReport": {
+    "startupSeconds": 18.88,
+    "resourceMiB": 9.66,
+    "resourceFiles": 45,
+    "completedFrames": 5771,
+    "lastFPS": 57,
+    "weather": "rain",
+    "time": 23,
+    "budget": "balanced",
+    "stay": "tea",
+    "view": "rainporch",
+    "layers": {
+      "roofWater": 0.744,
+      "activeDrops": 22,
+      "impactEvents": 1966,
+      "fogDensity": 0.0038,
+      "detailEnabled": true,
+      "distanceEnabled": true
+    },
+    "audio": {
+      "enabled": false,
+      "context": "uninitialized",
+      "loading": false,
+      "loaded": false,
+      "rain": 0.698,
+      "shelter": 1,
+      "rms": 0,
+      "thunderScheduled": 0,
+      "thunderPlayed": 0,
+      "pending": 0,
+      "detailPlayed": 0,
+      "detailByKind": {
+        "stone": 0,
+        "earth": 0,
+        "roof": 0
+      },
+      "listenerSource": "GPU rain cell and surface exposure",
+      "volume": 0.25,
+      "detailVolume": 0.55,
+      "focus": "all",
+      "blocked": false,
+      "activeDetails": 0,
+      "activeThunder": 0,
+      "source": "CC0 rain/thunder + filtered leaves, quiet wind and synthesized impact details"
+    },
+    "errors": [],
+    "observations": [
+      {
+        "at": "2026-09-14T06:36:35.177Z",
+        "simulationSeconds": 0.05,
+        "action": "guest-stop",
+        "detail": "tea"
+      },
+      {
+        "at": "2026-09-14T06:36:35.177Z",
+        "simulationSeconds": 0.05,
+        "action": "view",
+        "detail": "rainporch"
+      },
+      {
+        "at": "2026-09-14T06:36:42.190Z",
+        "simulationSeconds": 6.96,
+        "action": "time",
+        "detail": 23
+      },
+      {
+        "at": "2026-09-14T06:36:51.472Z",
+        "simulationSeconds": 16.22,
+        "action": "weather",
+        "detail": "clear"
+      },
+      {
+        "at": "2026-09-14T06:36:51.981Z",
+        "simulationSeconds": 16.74,
+        "action": "weather",
+        "detail": "storm"
+      },
+      {
+        "at": "2026-09-14T06:36:52.468Z",
+        "simulationSeconds": 17.21,
+        "action": "time",
+        "detail": 6.5
+      },
+      {
+        "at": "2026-09-14T06:37:57.178Z",
+        "simulationSeconds": 81.93,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      },
+      {
+        "at": "2026-09-14T06:37:57.846Z",
+        "simulationSeconds": 82.24,
+        "action": "view",
+        "detail": "rural"
+      },
+      {
+        "at": "2026-09-14T06:37:57.846Z",
+        "simulationSeconds": 82.24,
+        "action": "rain-inspection",
+        "detail": "earth"
+      },
+      {
+        "at": "2026-09-14T06:37:57.847Z",
+        "simulationSeconds": 82.24,
+        "action": "view",
+        "detail": "rainporch"
+      },
+      {
+        "at": "2026-09-14T06:37:58.215Z",
+        "simulationSeconds": 82.6,
+        "action": "time",
+        "detail": 23
+      },
+      {
+        "at": "2026-09-14T06:38:26.869Z",
+        "simulationSeconds": 111.26,
+        "action": "journal",
+        "detail": "opened; rendering suspended"
+      }
+    ]
+  },
+  "cycleAfterWeatherAX": [
+    "\t\t\t\t\t99 checkbox (settable, integer) Description: 自动昼夜（120 秒一日）, Value: 1, ID: cycle",
+    "\t\t\t\t\t100 text 自动昼夜（120 秒一日）"
+  ],
+  "manualTimeAX": [
+    "\t\t\t119 text 阴天 · 23:00 · 已就绪",
+    "\t\t\t\t122 text 23:00",
+    "\t\t\t\t\t99 checkbox (settable, integer) Description: 自动昼夜（120 秒一日）, Value: 0, ID: cycle"
+  ],
+  "detailWeatherAtNight": "降雨 · 湿润地面 · 23:00 · 过渡中 · 12 秒",
+  "consoleErrors": []
+}
