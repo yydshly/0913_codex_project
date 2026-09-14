@@ -1,0 +1,15 @@
+{
+  "name": "emberfall-arpg",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node preview.mjs",
+    "build": "node build.mjs",
+    "test": "node --test game-state.test.mjs",
+    "test:journey": "node chapter-playthrough.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

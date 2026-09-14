@@ -1,0 +1,12 @@
+import {mkdir,copyFile,cp} from 'node:fs/promises';
+import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+const here=new URL('.',import.meta.url),dist=new URL('dist/',here);
+await mkdir(dist,{recursive:true});
+for(const name of ['index.html','style.css','game.js','game-state.mjs','art.js','chapter.js','maps.mjs','equipment.mjs','dungeon.js'])await copyFile(new URL(name,here),new URL(name,dist));
+await cp(new URL('vendor/',here),new URL('vendor/',dist),{recursive:true});
+const python=process.env.RESEARCH_PYTHON || (process.platform==='win32'?'python':'python3');
+const research=spawnSync(python,[fileURLToPath(new URL('build-research.py',here)),fileURLToPath(new URL('research/',dist))],{stdio:'inherit'});
+if(research.error)throw research.error;
+if(research.status!==0)throw new Error('Research build failed. Install app/requirements-research.txt with Python first.');
+console.log('Built Emberfall static game and research archive.');

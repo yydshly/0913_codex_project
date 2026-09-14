@@ -21,6 +21,7 @@
 | 002 | [Dunhuang Aura](projects/002-dunhuang-aura/README.md) | 敦煌美术风格与出图流程说明书；可复用配色、构图、提示词和修图要求，未新增绘图能力，质量与效率增益未验证 | [govin-ai/dunhuang-aura-skill](https://github.com/govin-ai/dunhuang-aura-skill) | 已总结 | [研究结论与参考价值](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/) |
 | 003 | [Mountain Railway Diorama · 白鹭河谷](projects/003-mountain-railway-diorama/README.md) | 从原作研究到可调场景：三种构图、四季光线、风与植被联动、三种水流与方案保存/比较；附实景、能力边界和开发记录 | [iamtechartist/mountain-railway-diorama](https://github.com/iamtechartist/mountain-railway-diorama) | 已总结 | [研究分析](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/) · [实际场景](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html) · [开发过程](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/dev-log.html) |
 | 005 | [Stick & Steel](projects/005-stick-steel/README.md) | 人物表演与物理交互底座：视频创作、游戏展示及后续 Skill 路线 | [Genex 原作](https://genex.games/stick-steel) | 已复现 | [研究导览](https://yydshly.github.io/0913_codex_project/005-stick-steel/) · [人物演示](https://yydshly.github.io/0913_codex_project/005-stick-steel/demo/?view=characters) |
+| 006 | [游戏效果、交互与教学体验](projects/006-emberfall-arpg/README.md) | 从 ARPG 效果参考与可玩实践，理解情绪、实时反馈和物理教学；附三图导览与完整研究 | 用户提供截图，原作 URL 待核实 | 研究中 | — |
 | 007 | [Mini Moto — Pine Ridge Park](projects/007-mini-moto-park/README.md) | 迷你越野摩托公园；已定位并体验原作，参考赛道与比赛联动、跟随镜头和车手能力；源码许可待核实 | [作者原帖](https://x.com/chrisjdimarco/status/2098919328368197682) | 已总结 | — |
 | 010 | [Mini Moto 赛车游戏参考与实践总结](projects/010-mini-moto-comparison/README.md) | 赛车类游戏参考：核心为场景构建与赛车手能力构建；保留基础竞速和驾驶演示，后续按项目需求开发 | [作者原作](https://mini-moto-park.chipchaunceytheonlyone.chatgpt.site/) | 已总结 | [网页研究与比赛](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/) · [自由驾驶练习](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/ride.html) |
 <!-- PROJECT_INDEX_END -->
@@ -67,6 +68,18 @@
 *2026-09-14 本地实时渲染截图；选择性复用上游 MIT 模块，新增人物与故事编排。研究导览与互动演示已发布至 GitHub Pages。*
 
 [在线效果导览](https://yydshly.github.io/0913_codex_project/005-stick-steel/) · [配音故事](https://yydshly.github.io/0913_codex_project/005-stick-steel/demo/?view=stories) · [研究说明](projects/005-stick-steel/README.md) · [当前能力](projects/005-stick-steel/capabilities.md) · [后续开发与 Skill](projects/005-stick-steel/next-steps.md) · [本地运行](projects/005-stick-steel/app/README.md) · [验证记录](projects/005-stick-steel/notes.md) · [上游原作](https://genex.games/stick-steel)
+
+### 006 · 游戏效果、交互与教学体验
+
+从暗黑 ARPG 的视觉效果出发，经过可玩场景与教学工坊，进一步探索物理驱动的自由实验。**我们的理解：**画面吸引、交互反馈和规律理解需要分别成立；以情绪价值为主要驱动，让游戏与教学场景产生可探索、可比较的体验。
+
+| 原来的效果 · 用户参考 | 我们实现的效果 · 可玩 ARPG | 物理驱动 · 交互与教学尝试 |
+| :--- | :--- | :--- |
+| [![006 原始 ARPG 参考：营地、火光与探索氛围](projects/006-emberfall-arpg/assets/reference-arpg.png)](projects/006-emberfall-arpg/research-summary.md) | [![006 本地 ARPG 实现：营地、任务与操作](projects/006-emberfall-arpg/assets/03-chapter-camp.png)](projects/006-emberfall-arpg/game-design.md) | [![006 杠杆实验台实际渲染：A/B 装置和曲线](projects/006-emberfall-arpg/assets/10-lever-lab-comparison.png)](projects/006-emberfall-arpg/physics-lab.md) |
+
+*左图为用户参考，原作与许可待核实；中图为实际浏览器画面；右图为 Godot 原生渲染。三图呈现研究推进，不是同一场景画质比较。杠杆实验台为当前样件，学习效果待验证，尚未网络发布。*
+
+[先读我们的理解](projects/006-emberfall-arpg/research-summary.md) · [项目与三图介绍](projects/006-emberfall-arpg/README.md) · [研究网页本地运行](projects/006-emberfall-arpg/app/README.md#研究汇总网页) · [游戏实现](projects/006-emberfall-arpg/game-design.md) · [物理体验](projects/006-emberfall-arpg/physics-lab.md) · [实际验证](projects/006-emberfall-arpg/notes.md)
 
 ### 007 · Mini Moto — Pine Ridge Park
 
