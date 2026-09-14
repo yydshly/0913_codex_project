@@ -1,0 +1,2 @@
+# Sealed snapshots are byte-exact archives; do not normalize line endings.
+snapshots/** -text

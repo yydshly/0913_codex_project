@@ -97,3 +97,10 @@ GitHub Pages 托管静态网页；联网排行榜、账户和持久化后端需�
 除持续更新目录外，`scripts/build-003-archive.mjs` 从不可变提交 `9948ae93a61ef9d38eeacb6183f8521b9f9d141c` 提取 003 项目，以归档内构建脚本生成 `site/003-mountain-railway-diorama/archives/v23/`。全站构建自动包含此目录，后续发布不会遗漏它。Actions 获取完整仓库历史；缺少固定对象或任何运行模块校验不一致时构建失败。
 
 历史源码不重复提交到当前目录。仅在生成的 HTML 中增加归档身份、返回导航并适配开发记录锚点；场景模块、材质、默认参数及历史研究内容来自固定提交。`archive-version.json` 记录来源、适配项与 20 个运行模块校验。下载版标签和 Release 附件保持不变。
+
+
+## 008 道路、地表与树木能力导览
+
+发布使用本仓库既有 GitHub Actions / GitHub Pages，路径为 `008-terrain-motion-lab/`。目录首选入口为 `capabilities.html`，包含项目意义、实际图片与操作引导、全部 8 个当前页面以及 3 个历史快照。源码位于项目 `app/`，由项目独立构建脚本生成静态文件，统一构建时复制到 `site/008-terrain-motion-lab/`。
+
+发布前执行 008 的 62 项测试、素材校验、全站静态链接检查。快照保持原始文件与校验清单，历史文档中的本地状态描述属于当时记录。实际部署结果另记于 [008 发布记录](../projects/008-terrain-motion-lab/publishing.md)。

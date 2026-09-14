@@ -16,6 +16,8 @@
 
 - [007 · Mini Moto — Pine Ridge Park](007-mini-moto-park/README.md)：已定位截图原作并体验自主比赛、头盔镜头和驾驶权切换，整理地形联动、车手能力与模拟引擎参考；公开源码许可待核实，未本地复现。
 
+- [008 · 山地巡游实验室](008-terrain-motion-lab/README.md)：沉淀道路、地表、树木的素材、生成与表现能力；三图导览、参数演示及三份历史快照。当前为独立原型，优先完善自然效果与稳定复用。[能力清单](008-terrain-motion-lab/CAPABILITIES.md) · [效果记录](008-terrain-motion-lab/effect-log.md)。
+
 - [010 · Mini Moto 赛车游戏参考与实践总结](010-mini-moto-comparison/README.md)：赛车类游戏参考，核心是场景构建和赛车手能力构建。保留四车比赛与发卡弯驾驶原型，研究已总结，后续按具体项目需求开发；当前不是成熟赛车框架。 [网页研究与比赛](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/) · [自由驾驶练习](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/ride.html)。
 
 新增编号取现有项目目录的最大编号加一；既有编号保持稳定。

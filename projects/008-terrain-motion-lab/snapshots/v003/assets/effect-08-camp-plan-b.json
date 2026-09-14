@@ -1,0 +1,56 @@
+{
+  "ready": true,
+  "error": null,
+  "siteId": "songlan-demo-site-01",
+  "planId": "B",
+  "brief": {
+    "groups": 4,
+    "gap": 4
+  },
+  "pitchId": "west-back",
+  "hour": 15,
+  "view": "overview",
+  "walking": false,
+  "progress": 0,
+  "trees": 341,
+  "metrics": {
+    "capacity": 4,
+    "added": 2,
+    "newPitchArea": 72,
+    "gap": 9.6,
+    "walkMean": 39.6,
+    "walkMax": 46.6,
+    "pathLength": 73.6,
+    "capacityPass": true,
+    "gapPass": true,
+    "pass": true
+  },
+  "recommendation": {
+    "plan": "B",
+    "text": "B 满足当前接待数量和间距要求；A 的最近帐篷间距不足。"
+  },
+  "route": [
+    [
+      -16,
+      16
+    ],
+    [
+      0,
+      16
+    ],
+    [
+      0,
+      -5.6
+    ],
+    [
+      -9,
+      -5.6
+    ]
+  ],
+  "walker": {
+    "x": -16,
+    "z": 16,
+    "heading": 1.5707963267948966
+  },
+  "geometry": 217
+}

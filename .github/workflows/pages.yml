@@ -49,6 +49,12 @@ jobs:
           npm run test:audio --prefix projects/005-stick-steel/app/client
       - name: Verify weather and courtyard rules
         run: node --test projects/004-eanpa-sky/app/lab/*.test.mjs
+      - name: Verify terrain, surface, forest and immutable snapshots
+        run: |
+          npm test --prefix projects/008-terrain-motion-lab/app
+          node projects/008-terrain-motion-lab/app/snapshot.mjs verify v001
+          node projects/008-terrain-motion-lab/app/snapshot.mjs verify v002
+          node projects/008-terrain-motion-lab/app/snapshot.mjs verify v003
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Install 006 research document renderer
@@ -58,6 +64,7 @@ jobs:
       - name: Check published resources and navigation
         run: |
           node scripts/check-site.mjs
+          npm run check --prefix projects/008-terrain-motion-lab/app
           node projects/005-stick-steel/app/check.mjs
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4

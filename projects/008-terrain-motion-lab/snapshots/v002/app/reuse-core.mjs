@@ -1,0 +1,27 @@
+// Both scenes consume this same generator and recipe schema.
+export const recipes=Object.freeze({
+ dry:{name:'干燥土路',asset:'brown_mud_dry',tint:'#d3c2a7',roughness:.9,normal:.7,tileMeters:2.2},
+ wet:{name:'雨后土路',asset:'brown_mud_dry',tint:'#777169',roughness:.25,normal:.8,tileMeters:2.2},
+ meadow:{name:'草地步道',asset:'aerial_grass_rock',tint:'#c7d1a4',roughness:.95,normal:1,tileMeters:2.2}
+});
+export const reuseDefaults=()=>({width:2.4,recipe:'dry',rightRoute:'winding',wire:false,paused:false,treeScale:1,treeDensity:250,treePattern:'uniform',hillHeight:1,hillX:6});
+export function validateReuse(c){if(!c||typeof c!=='object'||Array.isArray(c))throw Error('需要配置对象');for(const [k,v] of Object.entries(c)){if(['treeScale','treeDensity','hillHeight','hillX'].includes(k)){const r={treeScale:[.5,2],treeDensity:[0,600],hillHeight:[0,3],hillX:[-8,8]}[k];if(typeof v!=='number'||!Number.isFinite(v)||v<r[0]||v>r[1]||(k==='treeDensity'&&!Number.isInteger(v)))throw Error('树木或地形参数超出范围');}else if(k==='treePattern'){if(!['uniform','clustered'].includes(v))throw Error('未知树林分布');}else if(k==='width'){if(typeof v!=='number'||!Number.isFinite(v)||v<1.2||v>4)throw Error('道路宽度需在 1.2～4 米之间');}else if(k==='recipe'){if(!Object.hasOwn(recipes,v))throw Error('未知配方');}else if(k==='rightRoute'){if(!['winding','direct'].includes(v))throw Error('未知路线');}else if(['wire','paused'].includes(k)){if(typeof v!=='boolean')throw Error('开关格式无效');}else throw Error('未知参数');}return c;}
+export function serializeReuse(c){validateReuse(c);return JSON.stringify({version:2,settings:{...reuseDefaults(),...c},recipeDefinition:recipes[c.recipe]},null,2);}
+export function restoreReuse(raw){const d=JSON.parse(raw),legacy=['width','recipe','rightRoute','wire','paused'];if(![1,2].includes(d?.version)||!d.settings)throw Error('方案格式不兼容');const keys=d.version===1?legacy:Object.keys(reuseDefaults());if(Object.keys(d.settings).length!==keys.length||keys.some(k=>!(k in d.settings)))throw Error('方案字段不完整');return{...reuseDefaults(),...validateReuse(d.settings)};}
+// World units are metres. Multi-scale relief is illustrative, not surveyed elevation.
+export const pineDimensions=Object.freeze({height:6.4,radius:2.1});
+export function relief(x,z){return .24*Math.sin(x*.37+Math.sin(z*.21))*Math.cos(z*.29)+.09*Math.sin(x*1.13+z*.76)+.035*Math.sin(x*3.2-z*2.7);}
+export function generateTerrain({scene,hillHeight=1,hillX=6}){validateReuse({hillHeight,hillX});if(!['lake','mountain'].includes(scene))throw Error('未知场景');return(x,z)=>scene==='lake'?.15+hillHeight*(.28*Math.sin(x*.2)*Math.cos(z*.25)+.6*Math.exp(-((x-hillX)**2+(z+3)**2)/20)+relief(x,z)*.5):.4+hillHeight*(2.7*Math.exp(-((x-hillX)**2+(z+2)**2)/35)+1.3*Math.exp(-((x+6)**2+(z-5)**2)/30)+relief(x,z));}
+export function scatterTrees(road,{treeScale=1,treeDensity=250,treePattern='uniform'}={}){validateReuse({treeScale,treeDensity,treePattern});const places=[];let seed=41;const rand=()=>((seed=(Math.imul(seed,1664525)+1013904223)>>>0)/4294967296);for(let i=0;i<treeDensity;i++){let x=(rand()-.5)*46,z=(rand()-.5)*44;const scale=(.65+rand()*.5)*treeScale;if(treePattern==='clustered'){const c=i%3;x=x*.55+[-10,10,0][c];z=z*.55+[-9,6,15][c];}const clearance=pineDimensions.radius*scale+.3;if(road.nearest(x,z).distance<road.width/2+clearance||road.scene==='lake'&&Math.hypot(x/5.8,z/4.5)<1)continue;if(places.some(p=>Math.hypot(x-p.x,z-p.z)<(scale+p.scale)*1.5))continue;places.push({x,z,y:road.terrain(x,z),scale,clearance});}return places;}
+export function generateRoute({scene,route='winding',width,hillHeight=1,hillX=6}){
+ validateReuse({width,rightRoute:route});if(!['lake','mountain'].includes(scene))throw Error('未知场景');
+ const closed=scene==='lake',N=240,points=[],lengths=[0];
+ const rawHeight=generateTerrain({scene,hillHeight,hillX});
+ for(let i=0;i<=N;i++){const u=i/N;const x=closed?9*Math.cos(u*Math.PI*2):route==='winding'?4.5*Math.sin(u*Math.PI*2):-5+10*u;const z=closed?7.5*Math.sin(u*Math.PI*2):-10+20*u;points.push({x,z,y:rawHeight(x,z)+.12});if(i)lengths.push(lengths[i-1]+Math.hypot(x-points[i-1].x,z-points[i-1].z));}
+ const length=lengths[N];
+ function sample(distance,lane=0){const s=closed?((distance%length)+length)%length:Math.max(0,Math.min(length,distance));let lo=0,hi=N;while(hi-lo>1){const m=(lo+hi)>>1;if(lengths[m]>s)hi=m;else lo=m;}const a=points[lo],b=points[hi],t=(s-lengths[lo])/(lengths[hi]-lengths[lo]),dx=b.x-a.x,dz=b.z-a.z,n=Math.hypot(dx,dz);return{x:a.x+dx*t+dz/n*lane,y:a.y+(b.y-a.y)*t,z:a.z+dz*t-dx/n*lane,heading:Math.atan2(dx,dz)};}
+ function nearest(x,z){let best={distance:Infinity,y:0};for(let i=0;i<N;i++){const a=points[i],b=points[i+1],dx=b.x-a.x,dz=b.z-a.z,t=Math.max(0,Math.min(1,((x-a.x)*dx+(z-a.z)*dz)/(dx*dx+dz*dz))),d=Math.hypot(x-a.x-dx*t,z-a.z-dz*t);if(d<best.distance)best={distance:d,y:a.y+(b.y-a.y)*t};}return best;}
+ function terrain(x,z){const n=nearest(x,z);const t=Math.max(0,Math.min(1,(n.distance-width/2)/1.4)),smooth=t*t*(3-2*t);const h=(n.y-.04)*(1-smooth)+rawHeight(x,z)*smooth;return scene==='lake'?h-Math.max(0,1-Math.hypot(x/5,z/3.8))*1.1:h;}
+ const positions=[],uvs=[],indices=[];for(let i=0;i<=N;i++)for(const lane of [-width/2,width/2]){const p=sample(lengths[i],lane);positions.push(p.x,p.y,p.z);uvs.push(lengths[i],lane);}for(let i=0;i<N;i++){const a=i*2;indices.push(a,a+2,a+1,a+1,a+2,a+3);}
+ return{scene,route,width,hillHeight,hillX,closed,length,points,positions,uvs,indices,sample,nearest,terrain};
+}

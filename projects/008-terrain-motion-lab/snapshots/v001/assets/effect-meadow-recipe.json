@@ -1,0 +1,13 @@
+{
+  "kind": "songlan-outdoor",
+  "version": 2,
+  "recipe": {
+    "campX": 10,
+    "campZ": 8,
+    "summitX": 12,
+    "summitZ": -16,
+    "ascent": 8,
+    "roadBend": 3,
+    "environment": "meadow"
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "version": "environment-01",
+  "date": "2026-09-14",
+  "sourceRevision": "本地工作区，未提交；以 sourceSha256 标识本轮实现",
+  "sourceSha256": {
+    "app.mjs": "24460d5aafa269d772b328cddc5697f98f016ddb6dcc170b1729af0eaf9170b2",
+    "build.mjs": "ba7112309fc1142fed7664780ce760ff4e23507cc51e79e876edb70b6a42de9b",
+    "check.mjs": "f66d7c20cc4bb2cc1ee8079194e1ddea9007dc4f57cf11bfed022ebb95ae0eca",
+    "environment-core.mjs": "334212259e1a20920b68824c887989fb6e3c191d6e4da9c37f3936323a9e487d",
+    "environment-render.mjs": "4b0a8de17a6535b2dc06e76c89af6e7a296eca625b996dd0d0ac6b861beb1845",
+    "forest-core.mjs": "d673dd94a21efed05361737a117572c98ed9812ef9b1b6c2343c0c53311d4c9f",
+    "forest-render.mjs": "5758fb69bb5516b03e7b63f3db766645ce8aff7fdcb7f69a67667b2772675d1b",
+    "landscape-surface.mjs": "3b56f9dccd102aece0322d9fc80b9c83394cd647ffad545e25eff9a970ed24b6",
+    "model.mjs": "8a7e644f58189419b3af14bc315c28d335be8fe2574fd451212680fa95e2d8e8",
+    "nature-render.mjs": "3c7496fbc213201cff223580998eddfdd1346039bd47d3f2e8af0a1ca09c53c3",
+    "outdoor-actors.mjs": "b980dbdf7bd960f81ba38a139aace29b5a8fefbf20ff6d4a9bf46b7494815c4c",
+    "outdoor-core.mjs": "11062b27b3fe3badf4d84b62595b54bcc3bb59f256a27a022a9b96842cc46f90",
+    "outdoor-details.mjs": "7d6cbb10d6d6b4a5149fcc2a07c182b7b2406f5890af2302aa87ed50303d010e",
+    "outdoor-editor.mjs": "8c1e8a3653646649df2b2ed51b628104964bea004062560d35f43d642538029b",
+    "outdoor-recipe.mjs": "3743d1819eb85105454301f0639e767f819442b6d9f592cea0258d2b0d74d556",
+    "outdoor.mjs": "fcef067a15e2b3357ef2f6bacd9521fdf354bc2f11cdabf32ef0de59fed462a4",
+    "reuse-core.mjs": "8731b3680ce3b393d0661e2698da4e3c8150bfafca63d831c10ef6d917422f8b",
+    "reuse-lab.mjs": "5fb62a26624e125c79b08a36fbfa58469e1fec4c62f0706c27969dc10891a93d",
+    "scene.mjs": "89b9ab98234b012b663488a6a807c198bb5e3bb9728fa44ff5120303a2c26770",
+    "serve.mjs": "ad00d7b4202bd96cebe5a331b9cda5404ac1b23f2dd363c2b8ac7792290befd8",
+    "surface-lab.mjs": "2bec8c7bc62134461557b566111180882a6810b4947e2f0761387c212c1b1333",
+    "surface-model.mjs": "45dc53111084ee565f7fc7fd647b516010b17d259a703f3132dfab83cc343e12"
+  },
+  "captures": [
+    {
+      "id": "effect-01-forest",
+      "screenshot": "effect-01-forest.png",
+      "state": "effect-01-forest.json",
+      "recipe": {
+        "campX": 10,
+        "campZ": 8,
+        "summitX": 12,
+        "summitZ": -16,
+        "ascent": 8,
+        "roadBend": 3,
+        "environment": "forest"
+      },
+      "progress": 0.47,
+      "camera": "follow",
+      "light": "day",
+      "ready": true,
+      "renderError": null,
+      "groundCover": {
+        "environment": "forest",
+        "grassClumps": 9455,
+        "shrubs": 1112,
+        "rocks": 606,
+        "extent": 216
+      },
+      "trees": 1930,
+      "memory": {
+        "geometries": 195,
+        "textures": 24
+      }
+    },
+    {
+      "id": "effect-02-meadow",
+      "screenshot": "effect-02-meadow.png",
+      "state": "effect-02-meadow.json",
+      "recipe": {
+        "campX": 10,
+        "campZ": 8,
+        "summitX": 12,
+        "summitZ": -16,
+        "ascent": 8,
+        "roadBend": 3,
+        "environment": "meadow"
+      },
+      "progress": 0.47,
+      "camera": "follow",
+      "light": "day",
+      "ready": true,
+      "renderError": null,
+      "groundCover": {
+        "environment": "meadow",
+        "grassClumps": 14458,
+        "shrubs": 510,
+        "rocks": 334,
+        "extent": 216
+      },
+      "trees": 1000,
+      "memory": {
+        "geometries": 195,
+        "textures": 24
+      }
+    },
+    {
+      "id": "effect-03-alpine",
+      "screenshot": "effect-03-alpine.png",
+      "state": "effect-03-alpine.json",
+      "recipe": {
+        "campX": 10,
+        "campZ": 8,
+        "summitX": 12,
+        "summitZ": -16,
+        "ascent": 8,
+        "roadBend": 3,
+        "environment": "alpine"
+      },
+      "progress": 0.47,
+      "camera": "follow",
+      "light": "day",
+      "ready": true,
+      "renderError": null,
+      "groundCover": {
+        "environment": "alpine",
+        "grassClumps": 2081,
+        "shrubs": 517,
+        "rocks": 2516,
+        "extent": 216
+      },
+      "trees": 393,
+      "memory": {
+        "geometries": 195,
+        "textures": 24
+      }
+    },
+    {
+      "id": "effect-04-valley",
+      "screenshot": "effect-04-valley.png",
+      "state": "effect-04-valley.json",
+      "recipe": {
+        "campX": 10,
+        "campZ": 8,
+        "summitX": 12,
+        "summitZ": -16,
+        "ascent": 8,
+        "roadBend": 3,
+        "environment": "forest"
+      },
+      "progress": 0.47,
+      "camera": "overview",
+      "light": "day",
+      "ready": true,
+      "renderError": null,
+      "groundCover": {
+        "environment": "forest",
+        "grassClumps": 9455,
+        "shrubs": 1112,
+        "rocks": 606,
+        "extent": 216
+      },
+      "trees": 1930,
+      "memory": {
+        "geometries": 195,
+        "textures": 24
+      }
+    },
+    {
+      "id": "effect-05-dawn",
+      "screenshot": "effect-05-dawn.png",
+      "state": "effect-05-dawn.json",
+      "recipe": {
+        "campX": 10,
+        "campZ": 8,
+        "summitX": 12,
+        "summitZ": -16,
+        "ascent": 8,
+        "roadBend": 3,
+        "environment": "forest"
+      },
+      "progress": 0.97,
+      "camera": "follow",
+      "light": "auto",
+      "ready": true,
+      "renderError": null,
+      "groundCover": {
+        "environment": "forest",
+        "grassClumps": 9455,
+        "shrubs": 1112,
+        "rocks": 606,
+        "extent": 216
+      },
+      "trees": 1930,
+      "memory": {
+        "geometries": 197,
+        "textures": 24
+      }
+    }
+  ],
+  "verification": {
+    "automatedTests": 55,
+    "passed": 55,
+    "visualChecks": [
+      "same-layout forest/meadow/alpine noon camp",
+      "forest overview",
+      "forest dawn summit"
+    ],
+    "notMeasured": [
+      "target-device benchmark",
+      "photorealism target comparison"
+    ],
+    "build": "passed: 5 pages, 19 application modules",
+    "check": "passed: 102 references; 9 ground + 4 vegetation maps; 9.27 MiB",
+    "recordImagesLoaded": 5
+  }
+}

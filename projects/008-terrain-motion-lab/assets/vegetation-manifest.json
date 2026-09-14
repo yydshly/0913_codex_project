@@ -1,0 +1,42 @@
+[
+  {
+    "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_tree_01/pine_tree_01_twig_diff_1k.jpg",
+    "bytes": 510932,
+    "source": "https://polyhaven.com/a/pine_tree_01",
+    "md5": "b6e5f4e8c228c275e5ff75cb165c2e1f",
+    "license": "CC0",
+    "date": "2026-09-14",
+    "version": "待核实",
+    "file": "pine_tree_01_twig_diff_1k.jpg"
+  },
+  {
+    "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_tree_01/pine_tree_01_twig_alpha_1k.png",
+    "bytes": 351928,
+    "source": "https://polyhaven.com/a/pine_tree_01",
+    "md5": "641911a5a3f543911dad04ebb26e7bca",
+    "license": "CC0",
+    "date": "2026-09-14",
+    "version": "待核实",
+    "file": "pine_tree_01_twig_alpha_1k.png"
+  },
+  {
+    "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_tree_01/pine_tree_01_bark_diff_1k.jpg",
+    "bytes": 725265,
+    "source": "https://polyhaven.com/a/pine_tree_01",
+    "md5": "7d3a558ed614c7e75594c7be3bf80311",
+    "license": "CC0",
+    "date": "2026-09-14",
+    "version": "待核实",
+    "file": "pine_tree_01_bark_diff_1k.jpg"
+  },
+  {
+    "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_tree_01/pine_tree_01_bark_nor_gl_1k.jpg",
+    "bytes": 1016849,
+    "source": "https://polyhaven.com/a/pine_tree_01",
+    "md5": "bb6e3a6eea777d992cef48fabfdc538c",
+    "license": "CC0",
+    "date": "2026-09-14",
+    "version": "待核实",
+    "file": "pine_tree_01_bark_nor_gl_1k.jpg"
+  }
+]

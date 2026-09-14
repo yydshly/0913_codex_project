@@ -1,0 +1,465 @@
+{
+  "id": "v002",
+  "createdAt": "2026-09-14T12:57:02.268Z",
+  "status": "sealed",
+  "gitHead": "b1fe77bfccfeeb6cd93dbc4e737c9773c22286bd",
+  "gitNote": "工作区归档，包含未提交实现；Git HEAD 不是本快照的完整源码版本",
+  "entry": "app/outdoor.html",
+  "entrySourceSha256": "65e5d51ad43d0c867452494b487fda94fe99d39986b467e0a7f306e6f642d849",
+  "replay": {
+    "recipe": {
+      "campX": 10,
+      "campZ": 8,
+      "summitX": 12,
+      "summitZ": -16,
+      "ascent": 8,
+      "roadBend": 3,
+      "environment": "forest"
+    },
+    "progress": 0.97,
+    "camera": "follow",
+    "light": "auto"
+  },
+  "files": {
+    "README.md": {
+      "bytes": 24489,
+      "sha256": "e85b7406109d49067bd2d61c8c62420bc04daa40bef2a60230a7cec7aba30dcc"
+    },
+    "SNAPSHOT.md": {
+      "bytes": 646,
+      "sha256": "165e0df879793ea4f9fcbc026c1043f6633c291f649d9e4972a2ca0488a8557e"
+    },
+    "app/README.md": {
+      "bytes": 12209,
+      "sha256": "15e35647e4c5c748f2ee04d6edea64710970e3ae1cd0efe61edad7cf92355da7"
+    },
+    "app/app.mjs": {
+      "bytes": 32582,
+      "sha256": "24460d5aafa269d772b328cddc5697f98f016ddb6dcc170b1729af0eaf9170b2"
+    },
+    "app/build.mjs": {
+      "bytes": 1321,
+      "sha256": "a1d5dcb70bec5d99fecc760a201242eb01486d90092ac3ef81d589fe0527294b"
+    },
+    "app/check.mjs": {
+      "bytes": 2797,
+      "sha256": "6468ae17401011e635323b274f4dd5dc41753fac98c513005dfe443433163959"
+    },
+    "app/environment-core.mjs": {
+      "bytes": 3003,
+      "sha256": "334212259e1a20920b68824c887989fb6e3c191d6e4da9c37f3936323a9e487d"
+    },
+    "app/environment-render.mjs": {
+      "bytes": 3195,
+      "sha256": "8a64891d1cf5911b0f34f3bfc1fe8c4d04ebcb55800ce9a541f9dc9710a8979f"
+    },
+    "app/environment.test.mjs": {
+      "bytes": 2453,
+      "sha256": "ea6e0ff258d406cdc5530363d49a381c438a0e564beae6064f49804206c1aa1e"
+    },
+    "app/foliage-shading.mjs": {
+      "bytes": 3347,
+      "sha256": "95c43515d293365e8109fa696699f85b0bbc7d557aaf6c9e2df83c2c8a747db0"
+    },
+    "app/forest-core.mjs": {
+      "bytes": 3554,
+      "sha256": "d673dd94a21efed05361737a117572c98ed9812ef9b1b6c2343c0c53311d4c9f"
+    },
+    "app/forest-render.mjs": {
+      "bytes": 5896,
+      "sha256": "30d3b2c5c50320d3146378b3d12a644fbb72b0020c43b989a623647f44c02256"
+    },
+    "app/forest.test.mjs": {
+      "bytes": 2318,
+      "sha256": "709a90ac14f4372dd5d28e293562eab531beab8acd4fa46b205885e9e1bd867d"
+    },
+    "app/index.html": {
+      "bytes": 10266,
+      "sha256": "79d7d7509c00ef253a1fe124f387ef3b99f0c25cf8396de35ad9f3ee72264a97"
+    },
+    "app/landscape-surface.mjs": {
+      "bytes": 3991,
+      "sha256": "3b56f9dccd102aece0322d9fc80b9c83394cd647ffad545e25eff9a970ed24b6"
+    },
+    "app/materials.html": {
+      "bytes": 7456,
+      "sha256": "00c3edd559af5d316977329ea9df267144b182445347343579d6700b88ed3449"
+    },
+    "app/model.mjs": {
+      "bytes": 11523,
+      "sha256": "8a7e644f58189419b3af14bc315c28d335be8fe2574fd451212680fa95e2d8e8"
+    },
+    "app/model.test.mjs": {
+      "bytes": 6880,
+      "sha256": "1fb08bf9e52fcab4714ab56738dcc73ce44f84fc7f8080625f8392cee139c6ee"
+    },
+    "app/nature-render.mjs": {
+      "bytes": 8324,
+      "sha256": "b100fbc8613060ff7ff1fa7a3d19f792539f3e9d941e68a6220d1fabe1063e4c"
+    },
+    "app/outdoor-actors.mjs": {
+      "bytes": 8376,
+      "sha256": "b980dbdf7bd960f81ba38a139aace29b5a8fefbf20ff6d4a9bf46b7494815c4c"
+    },
+    "app/outdoor-core.mjs": {
+      "bytes": 11535,
+      "sha256": "11062b27b3fe3badf4d84b62595b54bcc3bb59f256a27a022a9b96842cc46f90"
+    },
+    "app/outdoor-details.mjs": {
+      "bytes": 4687,
+      "sha256": "7d6cbb10d6d6b4a5149fcc2a07c182b7b2406f5890af2302aa87ed50303d010e"
+    },
+    "app/outdoor-editor.mjs": {
+      "bytes": 9771,
+      "sha256": "fc0166d8c99f1d92e232778231ff2a82fc3f3bcecf5cadb91737fce8655cf25a"
+    },
+    "app/outdoor-recipe.mjs": {
+      "bytes": 1923,
+      "sha256": "3743d1819eb85105454301f0639e767f819442b6d9f592cea0258d2b0d74d556"
+    },
+    "app/outdoor.css": {
+      "bytes": 13904,
+      "sha256": "a29550cc0a5c6fbf82db45083c49da8f350c8a2b939fc605abd511dd3e8755a7"
+    },
+    "app/outdoor.html": {
+      "bytes": 13441,
+      "sha256": "13d4c7b24c9a97be877b7eb56bf6cb64fae12d326bfb549ec28dfa46363bfd1a"
+    },
+    "app/outdoor.mjs": {
+      "bytes": 31465,
+      "sha256": "d356c79ae6760a5d9ccb709e095bbb5d6e44bb1098e685be4fe26b256487fab4"
+    },
+    "app/outdoor.test.mjs": {
+      "bytes": 12965,
+      "sha256": "5c34e19f6541fcca6109c861e359219e27c53373bea00e0afb8de9c412a7b54d"
+    },
+    "app/package.json": {
+      "bytes": 305,
+      "sha256": "88f9c706a4b6019761b4246c2d37327b526dda714645355041a36b0c6a98a5b4"
+    },
+    "app/reuse-core.mjs": {
+      "bytes": 5609,
+      "sha256": "8731b3680ce3b393d0661e2698da4e3c8150bfafca63d831c10ef6d917422f8b"
+    },
+    "app/reuse-lab.html": {
+      "bytes": 11834,
+      "sha256": "d6c15c23083b74c4536c7e6842c3587eb3c89c2ae05e03b6476dd0f85c8de140"
+    },
+    "app/reuse-lab.mjs": {
+      "bytes": 17123,
+      "sha256": "5fb62a26624e125c79b08a36fbfa58469e1fec4c62f0706c27969dc10891a93d"
+    },
+    "app/reuse.test.mjs": {
+      "bytes": 4769,
+      "sha256": "2db122e0615a4e9605c0ac79f502bcf956469b337c5bc705253c1189b22a8d60"
+    },
+    "app/scene.mjs": {
+      "bytes": 28522,
+      "sha256": "89b9ab98234b012b663488a6a807c198bb5e3bb9728fa44ff5120303a2c26770"
+    },
+    "app/serve.mjs": {
+      "bytes": 1163,
+      "sha256": "ad00d7b4202bd96cebe5a331b9cda5404ac1b23f2dd363c2b8ac7792290befd8"
+    },
+    "app/snapshot.mjs": {
+      "bytes": 6803,
+      "sha256": "610f1c39c2bb47f26f87dcbdd4c0e7a39e6eeeb2a384daabcc7a3a665ef739f6"
+    },
+    "app/snapshot.test.mjs": {
+      "bytes": 1692,
+      "sha256": "74b2bf55b1c0d7c1ceb3d69bc11fb72a3000ea1ef9756837d6f81208fc61b68d"
+    },
+    "app/styles.css": {
+      "bytes": 15718,
+      "sha256": "e2034f3d42d0fc6f5e565d39736bde114db18c527331f4df169b00bd4da6f073"
+    },
+    "app/surface-lab.css": {
+      "bytes": 4362,
+      "sha256": "8504fb3b37613c021527470621608ac93680c2cc5a216ca2c526a1bf1e778676"
+    },
+    "app/surface-lab.html": {
+      "bytes": 7080,
+      "sha256": "91c8207c55bf2aafd34ad6efa92f2c89236b1f87baa513df9cc8a2b8d3268c12"
+    },
+    "app/surface-lab.mjs": {
+      "bytes": 15269,
+      "sha256": "2bec8c7bc62134461557b566111180882a6810b4947e2f0761387c212c1b1333"
+    },
+    "app/surface-model.mjs": {
+      "bytes": 3545,
+      "sha256": "45dc53111084ee565f7fc7fd647b516010b17d259a703f3132dfab83cc343e12"
+    },
+    "app/surface.test.mjs": {
+      "bytes": 1306,
+      "sha256": "6cd1ece09d5cd2bd657f96dc24b3c79bd699218af4d90f25ac5a1b3a59f2e310"
+    },
+    "app/vendor/OrbitControls.js": {
+      "bytes": 42467,
+      "sha256": "32f65512ad637a6698af1c290ecd59b33dbe7a996e5520483854222f2783df31"
+    },
+    "app/vendor/THREE-LICENSE.txt": {
+      "bytes": 1102,
+      "sha256": "5d5dad8147523d59bc15cca838ae0bdaae7075230ec49132c551a1d18e7b3412"
+    },
+    "app/vendor/three.core.js": {
+      "bytes": 1503065,
+      "sha256": "a6cae1d9be22c0f637fa214f20cb9c0c9a3efeafcceb6e2e546e6a62cc04db1e"
+    },
+    "app/vendor/three.module.js": {
+      "bytes": 669763,
+      "sha256": "15a6b51a6a4902fd1d7b6bfc3a307864cb05c7459c3b476805127aea2d3cb2c1"
+    },
+    "app/versions.html": {
+      "bytes": 303,
+      "sha256": "b7e57eee3fc546f87ea8debb5fb15dd8591aa81ce0f2ac279defbb042534c1d7"
+    },
+    "assets/README.md": {
+      "bytes": 4422,
+      "sha256": "c1658654cc21198d4e151e0d6a11151c3fddc4dff9ff085f56dbe26b643cb19a"
+    },
+    "assets/effect-01-before.png": {
+      "bytes": 91804,
+      "sha256": "f11194a8232d434bbb84df5fd0776635d4c6037efee331e47c82d446a2e01b10"
+    },
+    "assets/effect-01-forest.json": {
+      "bytes": 3340,
+      "sha256": "22ff4318e1c60f7c05e23ed3851cb300fa2e7b9dcf39723ba86162068dc9eefb"
+    },
+    "assets/effect-01-forest.png": {
+      "bytes": 109152,
+      "sha256": "68fa2896c8b4cea4381bcdaa357041b6b1ac3d53d35124b3832defa5d1e47605"
+    },
+    "assets/effect-02-meadow.json": {
+      "bytes": 3336,
+      "sha256": "ea68d1752e86817ef57389f096312c2e682576204702042b56a700c1721637aa"
+    },
+    "assets/effect-02-meadow.png": {
+      "bytes": 108940,
+      "sha256": "2810f2c3768e001ac99faebb8609b0ce523b8f9c4570e046eec79adf22e7574e"
+    },
+    "assets/effect-03-alpine-initial.json": {
+      "bytes": 3334,
+      "sha256": "65050cfe654d772dd9640f1a47ad2bbeb8d8c7c6fe315401c94df3327a548568"
+    },
+    "assets/effect-03-alpine-initial.png": {
+      "bytes": 120090,
+      "sha256": "1faef803b55d8ac86eaca101a30a4b632172bde2362e9a48a51c57f6e8aff25f"
+    },
+    "assets/effect-03-alpine.json": {
+      "bytes": 3336,
+      "sha256": "4a7e6a3cf03420cb05d74fa3ca2078b5d535bcd805a98ff1c89307ccdeed9dc4"
+    },
+    "assets/effect-03-alpine.png": {
+      "bytes": 118580,
+      "sha256": "afdd18c35a77368af96748a90478f070b263f73ea1f4e7172e81cd121a20979e"
+    },
+    "assets/effect-04-valley.json": {
+      "bytes": 3366,
+      "sha256": "3b509fb4f008c1374552350091b98e213234c6bff35f7a63dc152add12752a3b"
+    },
+    "assets/effect-04-valley.png": {
+      "bytes": 116166,
+      "sha256": "dd5b84a62b149de8539fa8daf1792e1d65ef2d7ca21e0f1db048ff99ac91a46d"
+    },
+    "assets/effect-05-dawn.json": {
+      "bytes": 3437,
+      "sha256": "17a3d769cdc12a354dea5e7599695ebe5238432f68c35c3d7a2490aa453fde52"
+    },
+    "assets/effect-05-dawn.png": {
+      "bytes": 97039,
+      "sha256": "0a9f0f592ed5573f210c5d938d9388e6448cd02c4b2f1ea7e712102d11007d37"
+    },
+    "assets/effect-06-crown-after.json": {
+      "bytes": 2892,
+      "sha256": "1add09e734722458583aa9cb185d1ed9a6b3a67f954eafb3f31f5f168f27b1ab"
+    },
+    "assets/effect-06-crown-after.png": {
+      "bytes": 88983,
+      "sha256": "63bfb7181b17ac8ac9cfd42ffd748ee1d69d222f47b056beb67566347942b24e"
+    },
+    "assets/effect-06-v001-before.png": {
+      "bytes": 108337,
+      "sha256": "69651a19ad161643fe5308787ed86f3146a950e7f80dc67bc19b306868cb2890"
+    },
+    "assets/effect-07-ground-after.png": {
+      "bytes": 102964,
+      "sha256": "138e1895c8fba74cf66b031e4024cb63ab12e4aa9fb6a2e0b8a5d8b2f30e446a"
+    },
+    "assets/effect-alpine-recipe.json": {
+      "bytes": 202,
+      "sha256": "9bb3e78dd7b94ba7a504175d23bd60e73994a452cb8522d701a8f7c81a4205df"
+    },
+    "assets/effect-baseline-state.json": {
+      "bytes": 3153,
+      "sha256": "7c973d840ec39af55c57602a723958d1ce9cda8685520c01c9ea21777e40d690"
+    },
+    "assets/effect-forest-recipe.json": {
+      "bytes": 202,
+      "sha256": "0ae5ca3c8fd6944639b927b1c2decc1a59dfc30cf103630594feb732722c53f0"
+    },
+    "assets/effect-meadow-recipe.json": {
+      "bytes": 202,
+      "sha256": "960f5d8355540da749f2443ed8c23944a2fd2f02b2a0f2c632734fe6d2b41675"
+    },
+    "assets/effect-record-manifest.json": {
+      "bytes": 6342,
+      "sha256": "ba7d4996a8dd59320105f15c11842a89980d95249e2994a9d4b7d32e237b2566"
+    },
+    "assets/forest-morning-light.png": {
+      "bytes": 82831,
+      "sha256": "40f04b0595837830f573048453a4d12fac96f924d83a696a84178fd502626d15"
+    },
+    "assets/forest-valley.png": {
+      "bytes": 96688,
+      "sha256": "cea27355ab4290ece65875ffbe6be6a26052b25631da7db1fce6005133c061bf"
+    },
+    "assets/layout-regenerated.png": {
+      "bytes": 116689,
+      "sha256": "77fde10ddc32f26e9db9c69814f680d4da7a29665ca55aebe7333b9793a02f3e"
+    },
+    "assets/layout-workbench.png": {
+      "bytes": 60816,
+      "sha256": "12835964b1f6409bbae78e02066af22f040a7a20b1a6659758151977bed8edf9"
+    },
+    "assets/natural-ground-view.png": {
+      "bytes": 114201,
+      "sha256": "03d2c564dfb10c81fa39cd647f67183b921549b2c2756e371e719176def20834"
+    },
+    "assets/nature-after.png": {
+      "bytes": 65668,
+      "sha256": "75a28b5b170e4f0a53dea515b1d1f4db8cbbd18d5f93a54a397fb95e8f9a0885"
+    },
+    "assets/nature-before.png": {
+      "bytes": 67003,
+      "sha256": "fda1feb37c10c19313e3e2daff735130d155f019ee650612b7f38f47d05e4602"
+    },
+    "assets/outdoor-camp.png": {
+      "bytes": 80100,
+      "sha256": "d93eabbf9d9901c1ba211209b4714d4f659daf1338e03fa3e8f4219de64b37cd"
+    },
+    "assets/outdoor-layout.png": {
+      "bytes": 82347,
+      "sha256": "788a950156aeb85883ba5a6e69e0af29dc7d8534d9e8716eb1dacfe4ade7614e"
+    },
+    "assets/outdoor-refined.png": {
+      "bytes": 78353,
+      "sha256": "dc2cab0a3b2dd6434722bea0852e7ea4a5131141ce3aed14231abe709bc3a799"
+    },
+    "assets/outdoor-sunrise.png": {
+      "bytes": 58309,
+      "sha256": "e668b8927fb1ac3763e581a9c254febcc59a9dbfac141b5cd9cf65adee76e5cc"
+    },
+    "assets/reference-mini-moto.png": {
+      "bytes": 140253,
+      "sha256": "ab40088f476ffd0becce4904c043bfa8e845d033b8aace916d9944b0a382525b"
+    },
+    "assets/reuse-after.png": {
+      "bytes": 62697,
+      "sha256": "0b9d4cbc483c541f83033223207532e2bb0f27b3ac19c70aa19fece2e9d68ccc"
+    },
+    "assets/reuse-before.png": {
+      "bytes": 62695,
+      "sha256": "caecb7091c8c9dfe6d1fd59154bbafa1e5b48040c045c6c45442ddcaf161b10a"
+    },
+    "assets/shadows-evening.png": {
+      "bytes": 73791,
+      "sha256": "066928296a474a98f35f8b57aca866d7b6afc112f7dbbbff66f3f459bbdf5585"
+    },
+    "assets/shadows-noon.png": {
+      "bytes": 114828,
+      "sha256": "35098e35d568060e7709ac1e0952a8f5bb71a117a07b2a376d3c1bd39e07c397"
+    },
+    "assets/snapshot-v001-replay.json": {
+      "bytes": 3442,
+      "sha256": "81a429ca52327409d18d4462aab77168e2cf458c6305971c49332e71a48d95f3"
+    },
+    "assets/snapshot-v001-state.json": {
+      "bytes": 3436,
+      "sha256": "a66edfec445ca5bbfde7395b65a6baf647e0343f3645a851aa1805e159389c69"
+    },
+    "assets/sunrise-facing.png": {
+      "bytes": 87363,
+      "sha256": "63ce469918aa299e6c572f5051a4580210dad5e7fa83af4e002ded32a405e1a1"
+    },
+    "assets/sunrise-reveal.png": {
+      "bytes": 80331,
+      "sha256": "97444e7f16043fc5096d55b07a7f5daede74544b9a85e18a91a2a292f54f94c2"
+    },
+    "assets/texture-manifest.json": {
+      "bytes": 3636,
+      "sha256": "51b23a9c032312c015bc836ac91ec4072544dca4881b83f259301ab37be246f1"
+    },
+    "assets/textures/aerial_grass_rock_diff_1k.jpg": {
+      "bytes": 666655,
+      "sha256": "57b8041bfe0d0f01430e4dbaad45e7ddddf0a9fc97317f90dbc51f7b0d9e1b5d"
+    },
+    "assets/textures/aerial_grass_rock_nor_gl_1k.jpg": {
+      "bytes": 904956,
+      "sha256": "1aa3e23bff453f152e089b9f83aa36b4901651e019f7e2ca01d5331a9bbbda78"
+    },
+    "assets/textures/aerial_grass_rock_rough_1k.jpg": {
+      "bytes": 362214,
+      "sha256": "b9f3f76aba74007f708333c0dbe73c52eb83ea0c4187a13e2e994f888a25114a"
+    },
+    "assets/textures/brown_mud_dry_diff_1k.jpg": {
+      "bytes": 920456,
+      "sha256": "a56281b644de614787340f3db45e28d2f72ec32fc19a442f99002bae0ab11398"
+    },
+    "assets/textures/brown_mud_dry_nor_gl_1k.jpg": {
+      "bytes": 1539092,
+      "sha256": "4dd82ecb3e810d4de49d34c7d6cc30152129434a58b3bd786bc9952bc8874877"
+    },
+    "assets/textures/brown_mud_dry_rough_1k.jpg": {
+      "bytes": 390385,
+      "sha256": "31fb99629f533924b1150a7dac8d9432de85450bb45cda5033e3eb723f8dda04"
+    },
+    "assets/textures/rock_2_diff_1k.jpg": {
+      "bytes": 828020,
+      "sha256": "80c75f42ceec91a3511eb398bc4b60ce705eb5c3bcca7d83c9147ada298f2bae"
+    },
+    "assets/textures/rock_2_nor_gl_1k.jpg": {
+      "bytes": 1241241,
+      "sha256": "362076d8e9a74f54fdbe18df5d9f5b4a86a29b0e369aaa6999d7ee47a92252b5"
+    },
+    "assets/textures/rock_2_rough_1k.jpg": {
+      "bytes": 266988,
+      "sha256": "656331ea030fc70f8dce98cfe1f5ee489ce2ceba488f58d087ac97d4f42d0718"
+    },
+    "assets/trail-grounded.png": {
+      "bytes": 104453,
+      "sha256": "014674d96a30774ba0f7f6471194827dc62b402693a3f7a69208afbc4f8c80fc"
+    },
+    "assets/vegetation-manifest.json": {
+      "bytes": 1500,
+      "sha256": "72672f76e39d072ed2435d2fe67aa9b257cbfbbaf9923e64d79c73974c119cf9"
+    },
+    "assets/vegetation/pine_tree_01_bark_diff_1k.jpg": {
+      "bytes": 725265,
+      "sha256": "5c76836b01c3536fa0e24207b67bf4f3315b53ebe2b4ecc6f08dfcf3f8d74929"
+    },
+    "assets/vegetation/pine_tree_01_bark_nor_gl_1k.jpg": {
+      "bytes": 1016849,
+      "sha256": "05c46455531781b6cf18cae0648cf627f60ee942adaa8bcbfd1592fc2506a9e0"
+    },
+    "assets/vegetation/pine_tree_01_twig_alpha_1k.png": {
+      "bytes": 351928,
+      "sha256": "6f91aa99f2c27108d6f817f874954aa7df8bfbb4dea2673e9322555a6ae79d99"
+    },
+    "assets/vegetation/pine_tree_01_twig_diff_1k.jpg": {
+      "bytes": 510932,
+      "sha256": "e649f0f9bc74d1af5f1a45eaf2fe7a29adaaddfab251f746b983da301e4b80e1"
+    },
+    "effect-log.md": {
+      "bytes": 5878,
+      "sha256": "6a955efb290c35dea76f5ee9bf4d2c8b5f81ffb1dafa32ad42eede6399c4f9ae"
+    },
+    "notes.md": {
+      "bytes": 31277,
+      "sha256": "655d5abe7377838c30283feb17024556d91f3d3d8c3d1da28eb65f7dffab3590"
+    },
+    "replay.json": {
+      "bytes": 2892,
+      "sha256": "1add09e734722458583aa9cb185d1ed9a6b3a67f954eafb3f31f5f168f27b1ab"
+    }
+  }
+}

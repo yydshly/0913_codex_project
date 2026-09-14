@@ -1,0 +1,166 @@
+{
+  "groundCover": {
+    "environment": "forest",
+    "grassClumps": 9455,
+    "shrubs": 1112,
+    "rocks": 606,
+    "extent": 216
+  },
+  "layout": {
+    "busy": false,
+    "draft": {
+      "campX": 10,
+      "campZ": 8,
+      "summitX": 12,
+      "summitZ": -16,
+      "ascent": 8,
+      "roadBend": 3,
+      "environment": "forest"
+    },
+    "applied": {
+      "campX": 10,
+      "campZ": 8,
+      "summitX": 12,
+      "summitZ": -16,
+      "ascent": 8,
+      "roadBend": 3,
+      "environment": "forest"
+    },
+    "dirty": false,
+    "report": {
+      "valid": true,
+      "errors": [],
+      "separation": 10.600022310710141,
+      "campClearance": 7,
+      "maxTrailGrade": 0.2720855424694828,
+      "driveLength": 39.5650344598576,
+      "trailLength": 44.102306543339616,
+      "ascent": 8
+    },
+    "lastChange": {
+      "before": {
+        "valid": true,
+        "errors": [],
+        "separation": 10.600022310710141,
+        "campClearance": 7,
+        "maxTrailGrade": 0.2720855424694828,
+        "driveLength": 39.5650344598576,
+        "trailLength": 44.102306543339616,
+        "ascent": 8,
+        "trees": 1000
+      },
+      "after": {
+        "valid": true,
+        "errors": [],
+        "separation": 10.600022310710141,
+        "campClearance": 7,
+        "maxTrailGrade": 0.2720855424694828,
+        "driveLength": 39.5650344598576,
+        "trailLength": 44.102306543339616,
+        "ascent": 8,
+        "trees": 1930
+      }
+    }
+  },
+  "recipe": {
+    "campX": 10,
+    "campZ": 8,
+    "summitX": 12,
+    "summitZ": -16,
+    "ascent": 8,
+    "roadBend": 3,
+    "environment": "forest"
+  },
+  "geometryMemory": {
+    "geometries": 195,
+    "textures": 24
+  },
+  "ready": true,
+  "renderError": null,
+  "progress": 0.47,
+  "playing": false,
+  "camera": "follow",
+  "light": "day",
+  "chapter": "camp",
+  "action": "营地休息，等待天色变暗",
+  "nightFade": 0,
+  "trees": 1930,
+  "forest": {
+    "detailed": 161,
+    "distant": 1769,
+    "chunks": 196,
+    "total": 1930,
+    "atlasCount": 3,
+    "shadowTrees": 1930
+  },
+  "forestExtent": 224,
+  "measuredFps": 107,
+  "driveLength": 39.5650344598576,
+  "trailLength": 44.102306543339616,
+  "car": {
+    "x": 3,
+    "y": 0.7867610202708506,
+    "z": 8
+  },
+  "summit": {
+    "x": 12,
+    "z": -16,
+    "y": 8.8
+  },
+  "camp": {
+    "x": 10,
+    "z": 8,
+    "y": 0.8
+  },
+  "ascent": 8,
+  "solarDirection": {
+    "x": -0.5689016431977411,
+    "y": 0.8195010613515441,
+    "z": -0.06905744572892117
+  },
+  "time": {
+    "brightness": 1,
+    "elevation": 1.43,
+    "duskMix": 0.6,
+    "isDusk": false,
+    "azimuth": -1.45,
+    "minute": 750,
+    "clock": "12:30",
+    "day": 1,
+    "dawnMix": 0,
+    "dawnPhase": 0
+  },
+  "shadow": {
+    "visible": true,
+    "direction": {
+      "x": 0.9927129910375886,
+      "z": 0.1205027693673666
+    },
+    "flatLength": 4.475524475524476
+  },
+  "sunShadowMapSize": 4096,
+  "sunShadowActive": true,
+  "hiker": {
+    "heading": 1.4410937896389842,
+    "forward": {
+      "x": 0.9916004111862217,
+      "z": 0.1293391840677684
+    },
+    "visible": true,
+    "x": 10.3,
+    "y": 0.8,
+    "z": 4.300000000000001
+  },
+  "sunVisible": true,
+  "sunScreen": [
+    8.388348358523576,
+    -27.950810886777813,
+    1.011749841072251
+  ],
+  "viewPosition": [
+    14.2,
+    5.3,
+    12.700000000000003
+  ],
+  "triangles": 7022299
+}

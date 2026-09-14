@@ -1,0 +1,156 @@
+{
+  "layout": {
+    "busy": false,
+    "draft": {
+      "campX": 5,
+      "campZ": 8,
+      "summitX": 12,
+      "summitZ": -19,
+      "ascent": 12,
+      "roadBend": 3
+    },
+    "applied": {
+      "campX": 10,
+      "campZ": 8,
+      "summitX": 12,
+      "summitZ": -16,
+      "ascent": 8,
+      "roadBend": 3
+    },
+    "dirty": true,
+    "report": {
+      "valid": true,
+      "errors": [],
+      "separation": 10.600087695484454,
+      "campClearance": 7,
+      "maxTrailGrade": 0.39364000698352947,
+      "driveLength": 35.579674827863066,
+      "trailLength": 45.725535211550365,
+      "ascent": 12
+    },
+    "lastChange": {
+      "before": {
+        "valid": true,
+        "errors": [],
+        "separation": 10.600354439617114,
+        "campClearance": 7,
+        "maxTrailGrade": 0.38418484647897655,
+        "driveLength": 34.778079130876684,
+        "trailLength": 50.75512524429335,
+        "ascent": 13,
+        "trees": 1922
+      },
+      "after": {
+        "valid": true,
+        "errors": [],
+        "separation": 10.600022310710141,
+        "campClearance": 7,
+        "maxTrailGrade": 0.2720855424694828,
+        "driveLength": 39.5650344598576,
+        "trailLength": 44.102306543339616,
+        "ascent": 8,
+        "trees": 1930
+      }
+    }
+  },
+  "recipe": {
+    "campX": 10,
+    "campZ": 8,
+    "summitX": 12,
+    "summitZ": -16,
+    "ascent": 8,
+    "roadBend": 3
+  },
+  "geometryMemory": {
+    "geometries": 198,
+    "textures": 20
+  },
+  "ready": true,
+  "renderError": null,
+  "progress": 1,
+  "playing": false,
+  "camera": "free",
+  "light": "auto",
+  "chapter": "sunrise",
+  "action": "晨光铺开 · 山谷渐渐明亮",
+  "nightFade": 0,
+  "trees": 1930,
+  "forest": {
+    "detailed": 190,
+    "distant": 1740,
+    "chunks": 196,
+    "total": 1930,
+    "atlasCount": 3,
+    "shadowTrees": 1930
+  },
+  "forestExtent": 224,
+  "measuredFps": 82,
+  "driveLength": 39.5650344598576,
+  "trailLength": 44.102306543339616,
+  "car": {
+    "x": 3,
+    "y": 0.7867610202708506,
+    "z": 8
+  },
+  "summit": {
+    "x": 12,
+    "z": -16,
+    "y": 8.8
+  },
+  "camp": {
+    "x": 10,
+    "z": 8,
+    "y": 0.8
+  },
+  "ascent": 8,
+  "solarDirection": {
+    "x": 0.40954406950684913,
+    "y": 0.1866606458232702,
+    "z": -0.892990178239721
+  },
+  "time": {
+    "brightness": 0.85,
+    "elevation": 0.19,
+    "duskMix": 0,
+    "isDusk": false,
+    "azimuth": -5.8531853071795865,
+    "minute": 1850,
+    "clock": "06:50",
+    "day": 2,
+    "dawnMix": 1,
+    "dawnPhase": 1
+  },
+  "shadow": {
+    "visible": true,
+    "direction": {
+      "x": -0.4168708024292107,
+      "z": 0.9089657496748852
+    },
+    "flatLength": 33.68421052631579
+  },
+  "sunShadowMapSize": 4096,
+  "sunShadowActive": true,
+  "hiker": {
+    "heading": -3.5715926535897937,
+    "forward": {
+      "x": 0.4168708024292112,
+      "z": -0.908965749674885
+    },
+    "visible": true,
+    "x": 12,
+    "y": 8.97,
+    "z": -16
+  },
+  "sunVisible": true,
+  "sunScreen": [
+    -0.06371902308731957,
+    0.2805764846830135,
+    0.9995105866212407
+  ],
+  "viewPosition": [
+    -1.6138447561433544,
+    10.303740098347323,
+    7.913201400882315
+  ],
+  "triangles": 2837684
+}
