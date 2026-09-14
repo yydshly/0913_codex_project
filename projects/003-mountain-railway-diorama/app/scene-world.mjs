@@ -31,17 +31,32 @@ export function createSpatial(settings={}){
   const hills=landformHeight(composition,x,z);
   let h=1.7+config.relief*hills;
   h+=(Math.sin(x*.27+z*.18)*Math.cos(z*.24)+Math.sin(x*.85+z*.2)*.12)*.48*config.relief;
-  const d=Math.abs(x-riverX(z)),shore=halfWidth(z)*(layout?1:1-.10*naturalFallZone(fallContext,z));
+  const lateral=x-riverX(z),d=Math.abs(lateral),side=lateral<0?-1:1;
+  const fallZone=layout?0:naturalFallZone(fallContext,z);
+  // Opposite banks narrow at different places; leave the central channel open.
+  const inlet=.12+.06*Math.sin(z*.65+side*1.7)+.018*Math.sin(z*1.4-side);
+  const shore=halfWidth(z)*(1-inlet*fallZone);
   const surface=layout?1.05+effectiveDrop*(1-smooth(waterStyle.start,waterStyle.end,z+waterLaneShift(x-riverX(z))))-.002*Math.max(0,z+2):waterSurface(x,z);
-  const bank=THREE.MathUtils.lerp(Math.max(h,surface+.38),h,smooth(shore+1.2,shore+5,d));
+  // The rendered water extends to nominal width + 1.2, even where the inlet
+  // narrows. Keep that complete edge inside land before relaxing to low terrain.
+  const bank=THREE.MathUtils.lerp(Math.max(h,surface+.38),h,smooth(halfWidth(z)+1.2,Math.max(halfWidth(z)+1.3,shore+5),d));
   h=layout?THREE.MathUtils.lerp(surface-1.15,h,smooth(shore*.88,shore+3.8,d)):THREE.MathUtils.lerp(surface-1.15,bank,smooth(shore*.82,shore+1.2,d));
   const near=closest(x,z);
   if(!layout){
    const bankDistance=d-shore,run=Math.max(0,bankDistance);
-   const shoulder=1.05+effectiveDrop*(1-smooth(-10,3,z));
-   const terrace=Math.max(surface+.12,THREE.MathUtils.lerp(surface,shoulder,smooth(0,4,run)))+.14+run*.20+run*run*.025;
+   const shoulder=1.05+effectiveDrop*(1-smooth(-10+side*1.3,-1+side*1.3,z));
+   // Low, staggered shelves join the lip to the pool instead of a rounded wall.
+   // These are continuous terrain heights, so water masks and roots follow them.
+   const strata=run+.32*Math.sin(z*.8+side*2)+.16*Math.sin(z*1.6-side);
+   const shelves=.32*smooth(.3,1.1,strata)+.48*smooth(2.0,2.9,strata)+.6*smooth(4.0,5.2,strata);
+   const terrace=Math.max(surface+.12,THREE.MathUtils.lerp(surface,shoulder,smooth(0,5,run)))+.14+run*.08+shelves;
    const local=naturalFallZone(fallContext,z)*smooth(4.3,8,near.distance)*smooth(-.1,.7,bankDistance)*(1-smooth(3,9,bankDistance));
    h=THREE.MathUtils.lerp(h,Math.min(h,terrace),local);
+   // Weather the bank itself, rather than covering a smooth wall with stones.
+   // Fade out inside the wet channel, at the outer shoulder and near the rails.
+   const weathering=fallZone*smooth(4.3,8,near.distance)*smooth(0,.9,bankDistance)*(1-smooth(3.5,7,bankDistance))*smooth(.16,.5,h-surface);
+   const ledge=.24*Math.sin(h*5.5+z*.45+side)+.16*Math.sin(z*1.8+run*.7+side*2);
+   h=THREE.MathUtils.lerp(h,Math.max(surface+.16,h+ledge),weathering);
   }
   if(!bridge(near.p)){
    const grade=near.p.y-.3,original=h;
@@ -69,9 +84,9 @@ export function box(parent,material,size,pos){const o=mesh(new THREE.BoxGeometry
 export function beam(parent,material,a,b,width=.18,depth=width){const o=mesh(new THREE.BoxGeometry(width,a.distanceTo(b),depth),material,parent);o.position.copy(a).add(b).multiplyScalar(.5);o.quaternion.setFromUnitVectors(V(0,1,0),b.clone().sub(a).normalize());return o}
 export function labelTexture(text,bg='#ede3bd',fg='#173c37'){const canvas=document.createElement('canvas');canvas.width=512;canvas.height=160;const ctx=canvas.getContext('2d');ctx.fillStyle=bg;ctx.fillRect(0,0,512,160);ctx.fillStyle=fg;ctx.textAlign='center';ctx.font='bold 75px serif';ctx.fillText(text,256,110);return new THREE.CanvasTexture(canvas)}
 export function createFoundation(scene,world){
- const group=new THREE.Group();group.name='01 地形与轨道';scene.add(group);const R=120,A=300,positions=[],zones=[],variations=[],slopeRegions=[],wetness=[],riverDepth=[],indices=[];
- for(let r=0;r<=R;r++)for(let j=0;j<A;j++){const a=j/A*Math.PI*2,radius=r/R*world.edge(a),x=Math.cos(a)*49*radius,z=Math.sin(a)*35*radius,y=world.height(x,z);positions.push(x,y,z);const slope=Math.hypot(world.height(x+.3,z)-world.height(x-.3,z),world.height(x,z+.3)-world.height(x,z-.3)),shore=Math.abs(x-world.riverX(z))-world.halfWidth(z);const region=groundZones(world,x,z,slope,shore,y);zones.push(...region.weights);variations.push(region.variation);slopeRegions.push(region.slopeRegion);const aboveWater=y-world.waterSurface(x,z),wet=(1-smooth(.02,.95,aboveWater))*(1-smooth(1.2,3,shore));wetness.push(wet);riverDepth.push(shore<1.2?-aboveWater:-1);if(r<R){const k=r*A+j,n=r*A+(j+1)%A;indices.push(k,n,k+A,n,n+A,k+A)}}
- const terrain=new THREE.BufferGeometry();terrain.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));terrain.setAttribute('aGroundZones',new THREE.Float32BufferAttribute(zones,4));terrain.setAttribute('aGroundVariation',new THREE.Float32BufferAttribute(variations,1));terrain.setAttribute('aSlopeRegion',new THREE.Float32BufferAttribute(slopeRegions,1));terrain.setAttribute('aBankWet',new THREE.Float32BufferAttribute(wetness,1));terrain.setAttribute('aRiverDepth',new THREE.Float32BufferAttribute(riverDepth,1));terrain.setIndex(indices);terrain.computeVertexNormals();const surface=mat('#ffffff');surface.userData.seasonKind='terrain';mesh(terrain,surface,group);
+ const group=new THREE.Group();group.name='01 地形与轨道';scene.add(group);const R=120,A=300,positions=[],zones=[],variations=[],slopeRegions=[],fallBanks=[],wetness=[],riverDepth=[],indices=[];
+ for(let r=0;r<=R;r++)for(let j=0;j<A;j++){const a=j/A*Math.PI*2,radius=r/R*world.edge(a),x=Math.cos(a)*49*radius,z=Math.sin(a)*35*radius,y=world.height(x,z);positions.push(x,y,z);const slope=Math.hypot(world.height(x+.3,z)-world.height(x-.3,z),world.height(x,z+.3)-world.height(x,z-.3)),shore=Math.abs(x-world.riverX(z))-world.halfWidth(z);const region=groundZones(world,x,z,slope,shore,y);zones.push(...region.weights);variations.push(region.variation);slopeRegions.push(region.slopeRegion);fallBanks.push(region.fallBank);const aboveWater=y-world.waterSurface(x,z),wet=(1-smooth(.02,.95,aboveWater))*(1-smooth(1.2,3,shore));wetness.push(wet);riverDepth.push(shore<1.2?-aboveWater:-1);if(r<R){const k=r*A+j,n=r*A+(j+1)%A;indices.push(k,n,k+A,n,n+A,k+A)}}
+ const terrain=new THREE.BufferGeometry();terrain.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));terrain.setAttribute('aGroundZones',new THREE.Float32BufferAttribute(zones,4));terrain.setAttribute('aGroundVariation',new THREE.Float32BufferAttribute(variations,1));terrain.setAttribute('aSlopeRegion',new THREE.Float32BufferAttribute(slopeRegions,1));terrain.setAttribute('aFallBank',new THREE.Float32BufferAttribute(fallBanks,1));terrain.setAttribute('aBankWet',new THREE.Float32BufferAttribute(wetness,1));terrain.setAttribute('aRiverDepth',new THREE.Float32BufferAttribute(riverDepth,1));terrain.setIndex(indices);terrain.computeVertexNormals();const surface=mat('#ffffff');surface.userData.seasonKind='terrain';mesh(terrain,surface,group);
  const wallPos=[],wallIdx=[];for(let i=0;i<=A;i++){const a=i/A*Math.PI*2,r=world.edge(a),x=Math.cos(a)*49*r,z=Math.sin(a)*35*r;wallPos.push(x,world.height(x,z),z,x,-5.2,z);if(i<A){const k=i*2;wallIdx.push(k,k+2,k+1,k+1,k+2,k+3)}}const wall=new THREE.BufferGeometry();wall.setAttribute('position',new THREE.Float32BufferAttribute(wallPos,3));wall.setIndex(wallIdx);wall.computeVertexNormals();mesh(wall,mat('#4b574f'),group);const bottom=mesh(new THREE.CylinderGeometry(1,1,1,144),mat('#293d3a'),group);bottom.scale.set(49,.65,35);bottom.position.y=-5.5;
  const rail=mat('#b9bbb0',.26,.8),wood=mat('#544735'),ballast=mat('#81857e'),bridgeMat=mat('#b76034',.43,.55);const railCurves=[];
  for(const offset of[-.67,.67]){const pts=Array.from({length:501},(_,i)=>{const u=i/500,p=world.curve.getPointAt(u%1),t=world.curve.getTangentAt(u%1),n=V(t.z,0,-t.x).normalize();return p.addScaledVector(n,offset).add(V(0,.1,0))});railCurves.push(new THREE.CatmullRomCurve3(pts,false));mesh(new THREE.TubeGeometry(railCurves.at(-1),800,.075,5,false),rail,group);}

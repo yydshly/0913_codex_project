@@ -13,22 +13,27 @@ export function blendSeason(current,target,dt){const k=1-Math.exp(-Math.max(0,dt
 export function bindSeasonSurface(material,shared){
  if(material.userData.seasonOwn)return;
  const original=material.onBeforeCompile,key=material.customProgramCacheKey(),terrain=material.userData.seasonKind==='terrain';
- material.customProgramCacheKey=()=>key+`-season-surface-v20-upland-${terrain}`;
+ material.customProgramCacheKey=()=>key+`-season-surface-v23-bank-${terrain}`;
  material.onBeforeCompile=function(shader,...args){
   original.call(this,shader,...args);shader.uniforms.uSeason=shared.season;if(terrain){shader.uniforms.uReflectPass=shared.reflectionPass;shader.uniforms.uGroundWet=shared.wet||{value:0};}
-  shader.vertexShader=(terrain?'attribute float aBankWet,aRiverDepth,aGroundVariation,aSlopeRegion;attribute vec4 aGroundZones;varying vec4 vGroundZones;varying float vGroundVariation,vBankWet,vRiverDepth,vSlopeRegion;\n':'')+'varying vec3 vSeasonWorld;\n'+shader.vertexShader.replace('#include <worldpos_vertex>',`#include <worldpos_vertex>
+  shader.vertexShader=(terrain?'attribute float aBankWet,aRiverDepth,aGroundVariation,aSlopeRegion,aFallBank;attribute vec4 aGroundZones;varying vec4 vGroundZones;varying float vGroundVariation,vBankWet,vRiverDepth,vSlopeRegion,vFallBank;\n':'')+'varying vec3 vSeasonWorld;\n'+shader.vertexShader.replace('#include <worldpos_vertex>',`#include <worldpos_vertex>
    vec4 seasonalPosition=vec4(transformed,1.);
    #ifdef USE_INSTANCING
    seasonalPosition=instanceMatrix*seasonalPosition;
    #endif
-   vSeasonWorld=(modelMatrix*seasonalPosition).xyz;${terrain?'vBankWet=aBankWet;vRiverDepth=aRiverDepth;vGroundZones=aGroundZones;vGroundVariation=aGroundVariation;vSlopeRegion=aSlopeRegion;':''}
+   vSeasonWorld=(modelMatrix*seasonalPosition).xyz;${terrain?'vBankWet=aBankWet;vRiverDepth=aRiverDepth;vGroundZones=aGroundZones;vGroundVariation=aGroundVariation;vSlopeRegion=aSlopeRegion;vFallBank=aFallBank;':''}
   `);
-  shader.fragmentShader=(terrain?'uniform float uReflectPass,uGroundWet;varying vec4 vGroundZones;varying float vGroundVariation,vBankWet,vRiverDepth,vSlopeRegion;\n':'')+'uniform vec4 uSeason;varying vec3 vSeasonWorld;\n'+(terrain?groundTextureShader:'')+shader.fragmentShader.replace('#include <normal_fragment_maps>',`#include <normal_fragment_maps>
+  shader.fragmentShader=(terrain?'uniform float uReflectPass,uGroundWet;varying vec4 vGroundZones;varying float vGroundVariation,vBankWet,vRiverDepth,vSlopeRegion,vFallBank;\n':'')+'uniform vec4 uSeason;varying vec3 vSeasonWorld;\n'+(terrain?groundTextureShader:'')+shader.fragmentShader.replace('#include <normal_fragment_maps>',`#include <normal_fragment_maps>
    float grain=${terrain?'sin(vSeasonWorld.x*.65+vSeasonWorld.z*.47)*sin(vSeasonWorld.z*.51-vSeasonWorld.x*.34)':'sin(vSeasonWorld.x*12.3+vSeasonWorld.z*7.7)*sin(vSeasonWorld.z*13.1-vSeasonWorld.x*9.4)'};
+   ${terrain?`// Blend toward the actual triangle face only on the exposed fall bank.
+   vec3 bankFace=normalize(cross(dFdx(vViewPosition),dFdy(vViewPosition)));
+   normal=normalize(mix(normal,bankFace,vFallBank*.68));`:''}
    float upward=clamp(inverseTransformDirection(normal,viewMatrix).y,0.,1.);
    ${terrain?`if(uReflectPass>.5 && vRiverDepth>0.)discard;
    ${groundShader}
    ${groundTextureColour}
+   float bankLayer=floorNoise(vec2(vSeasonWorld.x*.65+vSeasonWorld.z*.4,vSeasonWorld.y*2.3+floorNoise(vSeasonWorld.xz*.7)*.8));
+   diffuseColor.rgb*=mix(1.,.67+bankLayer*.43,vFallBank*vGroundZones.w);
    diffuseColor.rgb*=1.-uGroundWet*.12;
    diffuseColor.rgb*=mix(vec3(1.),vec3(.80,.86,.83),vBankWet);
    roughnessFactor=mix(roughnessFactor,.46,vBankWet);`:''}

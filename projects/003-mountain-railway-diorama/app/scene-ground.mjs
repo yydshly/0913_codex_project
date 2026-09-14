@@ -55,7 +55,9 @@ export function groundZones(world,x,z,slope,shore,y){
  const wood=floorCover*.9*(1-rock);
  const soilAvailable=Math.min(soil*(1-floorCover*.85),Math.max(0,1-rock-wood));
  const meadow=Math.max(0,1-rock-soilAvailable-wood);
- return {weights:[meadow,wood,soilAvailable,rock],variation:.96+(broad*(1-field.amount)+field.tone*field.amount)*.08,slopeRegion:field.amount};
+ // The exposed fall shoulders need the same weathered rock scale as dry slopes.
+ // Keep it on actual sloping banks; seasonal snow still overlays this material.
+ return {weights:[meadow,wood,soilAvailable,rock],variation:.96+(broad*(1-field.amount)+field.tone*field.amount)*.08,slopeRegion:Math.max(field.amount,fallBank*.9),fallBank};
 }
 export function groundColour(seasonWeights,zones,variation=1){
  const residual=smooth(.972,1.028,variation)*.42;

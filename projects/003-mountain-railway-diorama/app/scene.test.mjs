@@ -482,3 +482,24 @@ test('实际水网格与变形跌口共用落点偏移和河床深度',async()=>
  }
  g.dispose();
 });
+
+test('岸坡收束在编辑边界组合中保留湿河心、干外缘与连续接缝',()=>{
+ for(const composition of ['ridge','marsh','classic'])for(const relief of [.15,1.8])for(const width of [3,11])for(const bend of [0,7])for(const fall of [1,6]){
+  const w=createSpatial({composition,relief,width,bend,fall,waterMode:'continuous'});
+  for(let z=-12;z<=4;z+=1){
+   for(const u of [-.65,0,.65]){
+    const x=w.riverX(z)+u*w.halfWidth(z);
+    if(w.closest(x,z).distance>4.3)assert.ok(w.height(x,z)<w.waterSurface(x,z),'极端地形仍保留湿河心');
+   }
+   for(const side of [-1,1]){
+    const x=w.riverX(z)+side*(w.halfWidth(z)+1.2);
+    if(w.closest(x,z).distance>4.3)assert.ok(w.height(x,z)>w.waterSurface(x,z),'水网格外缘应藏在岸内');
+    for(const shift of [0,2,5]){
+     const px=x+side*shift,h=w.height(px,z);
+     assert.ok(Number.isFinite(h));
+     assert.ok(Math.abs(w.height(px,z+.001)-h)<.05,'局部坡面不产生跳变接缝');
+    }
+   }
+  }
+ }
+});

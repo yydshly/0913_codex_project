@@ -367,3 +367,9 @@
 | `scene-v22-continuous.jpg` | 秋季连续跌水 · 独立预览近景 | 1280×720 |
 | `scene-v22-stream.jpg` | 秋季浅滩缓流 · 独立预览近景 | 1280×720 |
 | `scene-v22-overview.jpg` | 秋季连续跌水 · 全景 | 1280×720 |
+
+## V23 · 河流跌口与岸坡的局部衔接
+
+2026-09-14，本地浏览器实际渲染，全部 1280×720，JPEG 原始截图，无生成图。`scene-v23-before.jpg` 为本轮修改前的当前版本；`scene-v23-after.jpg` 为相同层峦溪谷、秋季推荐黄昏、连续跌水默认值、水流近景。镜头一致但动画帧不同。
+
+其余文件：`scene-v23-spring.jpg`（春季连续跌水 · 推荐光线）；`scene-v23-summer.jpg`（夏季连续跌水 · 推荐光线）；`scene-v23-winter.jpg`（冬季连续跌水 · 覆雪）；`scene-v23-night.jpg`（冬季连续跌水 · 手动夜景）；`scene-v23-stream.jpg`（秋季浅滩缓流）；`scene-v23-rocky.jpg`（秋季岩间分流）；`scene-v23-overview.jpg`（秋季连续跌水 · 全景）；`scene-v23-boundary.jpg`（低地形、宽河、高落差 · 边界检查）。边界图参数：起伏 0.15、半宽 11 m、弯曲 0 m、落差 6 m，其余默认。季节图保持水流近景，概览使用河谷全景。
