@@ -428,3 +428,16 @@
 - [浅湾夜间](scene-v26-night-fish.jpg)
 
 鱼处于水面以下，平缓水面透明混合显露河床；截图不代表真实光学、水生态模拟或性能测量。
+
+## V27 · 岸边睡莲与蜻蜓
+
+2026-09-15 在本地构建网页通过浏览器采集六张 1280 × 720 实景，未进行图像生成或后期修改。构图、四季、水流与开关参数见 [截图记录](scene-v27-checks.json)。记录中的数量为季节状态下的可用模型数，关闭总开关后整个组不显示。
+
+- [夏日睡莲与蜻蜓](scene-v27-summer-lilies.jpg)
+- [秋季浮叶](scene-v27-autumn-lilies.jpg)
+- [冬季休眠](scene-v27-winter-rest.jpg)
+- [浅湾春雨](scene-v27-spring-rain.jpg)
+- [岩间分流夜景](scene-v27-night-rocky.jpg)
+- [隐藏水面生物](scene-v27-hidden.jpg)
+
+这些画面仅验证所列代表状态，不代表真实生态、浮力模拟或性能测试。

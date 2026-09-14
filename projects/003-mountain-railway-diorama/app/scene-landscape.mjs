@@ -4,6 +4,7 @@ import {createVegetation} from './scene-vegetation.mjs';
 import {createRiverRocks} from './scene-rocks.mjs';
 import {createWater} from './scene-water.mjs';
 import {createWildlife} from './scene-wildlife.mjs';
+import {createAquatic} from './scene-aquatic.mjs';
 import {createFish} from './scene-fish.mjs';
 import {createStation} from './scene-station.mjs';
 export function createLandscape(scene,world,shared){
@@ -43,12 +44,12 @@ export function createLandscape(scene,world,shared){
  const waterSystem=createWater(group,world,shared);
  const stationTarget=station.target;
  const wildlife=createWildlife(group,world,shared);
- const fish=createFish(group,world,shared);
+ const fish=createFish(group,world,shared),aquatic=createAquatic(group,world,shared);
  // A waterside observation deck gives the station a different destination.
  const deck=V(world.riverX(15)-world.halfWidth(15)-1,world.waterLevel(15)+.65,15);
  for(let i=0;i<25;i++)box(group,wood,[3,.12,.19],[deck.x,deck.y,deck.z+i*.22-2.7]);
  for(const z of[-2.6,2.6])for(const x of[-1.3,1.3]){box(group,wood,[.14,2,.14],[deck.x+x,deck.y-.5,deck.z+z]);}
- return{group,wildlife,fish,...vegetation,stationTarget,lights,reflect:waterSystem.reflect,dispose:waterSystem.dispose,update(time,night){station.update(night);waterSystem.update(time,night);wildlife.update(time,night);fish.update(time,night);}};
+ return{group,wildlife,fish,aquatic,...vegetation,stationTarget,lights,reflect:waterSystem.reflect,dispose:waterSystem.dispose,update(time,night){station.update(night);waterSystem.update(time,night);wildlife.update(time,night);fish.update(time,night);aquatic.update(time,night);}};
 }
 
 // Project each outcrop onto the terrain so its lower shell is buried.

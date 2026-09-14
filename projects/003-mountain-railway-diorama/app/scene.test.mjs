@@ -1,3 +1,6 @@
+import {createRiverRocks} from './scene-rocks.mjs';
+import {aquaticSites,createAquatic} from './scene-aquatic.mjs';
+import {duckPoint} from './scene-wildlife.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';
 import * as THREE from './vendor/three.module.js';
 import {createSpatial,createFoundation,terrainPresets} from './scene-world.mjs';import {createService,stageDefinitions} from './scene-service.mjs';
@@ -602,4 +605,27 @@ test('岸坡收束在编辑边界组合中保留湿河心、干外缘与连续�
    }
   }
  }
+});
+
+test('浮叶在三构图三水流宽窄河道中避让岸石、跌水、铁路和鸭群路线',()=>{
+ for(const composition of ['ridge','marsh','classic'])for(const waterMode of ['continuous','stream','rocky'])for(const width of [3,11]){
+  const w=createSpatial({composition,waterMode,width,bend:7,relief:1.8,fall:6});w.riverRocks=createRiverRocks(w);
+  const sites=aquaticSites(w);assert.ok(sites.length>0);assert.deepEqual(sites,aquaticSites(w));
+  for(const p of sites){
+   assert.ok(p.z-p.r>w.waterStyle.end+3);
+   for(let k=0;k<24;k++){const a=k*Math.PI/12,x=p.x+Math.cos(a)*p.r,z=p.z+Math.sin(a)*p.r;assert.ok(w.waterSurface(x,z)-w.height(x,z)>.15);assert.ok(w.closest(x,z).distance>3);}
+   for(let k=0;k<128;k++){const d=duckPoint(w,k*Math.PI/64);assert.ok(Math.hypot(p.x-d.x,p.z-d.z)>p.r+.9);}
+   for(const r of w.riverRocks)assert.ok(Math.hypot(p.x-r.x,p.z-r.z)>Math.max(r.rx,r.rz)+p.r+.24);
+  }
+ }
+});
+test('睡莲随季节休眠恢复，雨夜收花并抑制蜻蜓，暂停不改变姿态',()=>{
+ const shared={time:{value:0},night:{value:0},season:{value:new THREE.Vector4(0,1,0,0)},rain:{value:0},wind:{value:.45},gust:{value:.6}};
+ const w=createSpatial(),a=createAquatic(new THREE.Group(),w,shared);
+ assert.ok(a.stats.leaves>0);assert.ok(a.stats.flowers>0);assert.equal(a.stats.insects,2);
+ a.update(3,0);const pos=a.leaves[0].root.position.clone(),wing=a.insects[0].wings[0].pivot.rotation.z;
+ a.update(3,0);assert.ok(a.leaves[0].root.position.equals(pos));assert.equal(a.insects[0].wings[0].pivot.rotation.z,wing);
+ a.update(3,1);assert.equal(a.stats.insects,0);shared.rain.value=1;a.update(3,0);assert.equal(a.stats.insects,0);
+ shared.season.value.set(0,0,0,1);a.update(3,0);assert.deepEqual(a.stats,{leaves:0,flowers:0,insects:0});
+ shared.season.value.set(0,1,0,0);shared.rain.value=0;a.update(3,0);assert.ok(a.stats.flowers>0);assert.equal(a.stats.insects,2);
 });

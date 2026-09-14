@@ -1,0 +1,88 @@
+{
+  "date": "2026-09-15",
+  "screenshots": [
+    {
+      "image": "scene-v27-summer-lilies.jpg",
+      "composition": "ridge",
+      "view": "aquatic",
+      "season": "summer",
+      "mode": "day",
+      "water-mode": "continuous",
+      "aquatic-enabled": "true",
+      "aquatic-leaves": "25",
+      "aquatic-flowers": "12",
+      "dragonflies": "2",
+      "environment-ready": "true"
+    },
+    {
+      "image": "scene-v27-autumn-lilies.jpg",
+      "composition": "ridge",
+      "view": "aquatic",
+      "season": "autumn",
+      "mode": "evening",
+      "water-mode": "continuous",
+      "aquatic-enabled": "true",
+      "aquatic-leaves": "25",
+      "aquatic-flowers": "0",
+      "dragonflies": "1",
+      "environment-ready": "true"
+    },
+    {
+      "image": "scene-v27-winter-rest.jpg",
+      "composition": "ridge",
+      "view": "aquatic",
+      "season": "winter",
+      "mode": "day",
+      "water-mode": "continuous",
+      "aquatic-enabled": "true",
+      "aquatic-leaves": "0",
+      "aquatic-flowers": "0",
+      "dragonflies": "0",
+      "environment-ready": "true"
+    },
+    {
+      "image": "scene-v27-spring-rain.jpg",
+      "composition": "marsh",
+      "view": "aquatic",
+      "season": "spring",
+      "mode": "rain",
+      "water-mode": "stream",
+      "aquatic-enabled": "true",
+      "aquatic-leaves": "32",
+      "aquatic-flowers": "12",
+      "dragonflies": "0",
+      "environment-ready": "true"
+    },
+    {
+      "image": "scene-v27-night-rocky.jpg",
+      "composition": "classic",
+      "view": "aquatic",
+      "season": "summer",
+      "mode": "night",
+      "water-mode": "rocky",
+      "aquatic-enabled": "true",
+      "aquatic-leaves": "32",
+      "aquatic-flowers": "12",
+      "dragonflies": "0",
+      "environment-ready": "true"
+    },
+    {
+      "image": "scene-v27-hidden.jpg",
+      "composition": "ridge",
+      "view": "aquatic",
+      "season": "summer",
+      "mode": "day",
+      "water-mode": "continuous",
+      "aquatic-enabled": "false",
+      "aquatic-leaves": "25",
+      "aquatic-flowers": "12",
+      "dragonflies": "2",
+      "environment-ready": "true"
+    }
+  ],
+  "checks": [
+    "72 项自动检查通过",
+    "关闭水面生物后切换构图仍隐藏，再次近看恢复显示",
+    "浏览器未捕获错误日志"
+  ]
+}
