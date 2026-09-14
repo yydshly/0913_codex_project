@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="拆解山间铁路的生成与运行机制，通过参数实验理解地形、轨道、天气、灯光和镜头，并获得分阶段实现任务。">
+  <meta name="theme-color" content="#0c131d"><title>山间铁路 · 效果驱动分析</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到分析内容</a>
+<header class="topbar"><a class="brand" href="#"><span class="brand-icon" aria-hidden="true">山</span><span>山间铁路 <small>效果驱动分析</small></span></a><span class="edition">003 / YAMAAI</span><a class="external" href="scene.html">体验真实场景 ↗</a><a class="external" href="dev-log.html">开发记录</a><a class="external" href="https://iamtechartist.github.io/mountain-railway-diorama/" target="_blank" rel="noopener">查看原作 ↗</a></header>
+<div class="shell">
+<aside class="sidebar"><p class="eyebrow">从画面找到实现</p><nav id="modules" aria-label="能力模块"></nav><div class="sidebar-note"><span class="evidence">固定版本研究</span><p>Three.js r185<br>上游 6e8b0fb</p><p>参数实验采用教学模型，原作截图用于定位效果。</p></div></aside>
+<main id="main">
+<div class="page-heading"><div><p class="eyebrow">CAPABILITY → DRIVER → RESULT</p><h1>这个世界，如何被驱动？</h1></div><span class="chapter" id="chapter">01 / 08</span></div>
+<nav class="view-nav" aria-label="分析方式"><button data-view="anatomy" aria-current="page">能力拆解</button><button data-view="lab">参数实验</button><button data-view="recipe">实现路线</button></nav>
+<section id="anatomy" class="view">
+  <div class="analysis-grid">
+    <div class="reference"><div class="section-bar"><span>原作画面 · 点击标记定位能力</span><div class="segmented"><button data-image="evening" aria-pressed="true">黄昏</button><button data-image="night" aria-pressed="false">夜间</button></div></div><div class="image-stage"><img id="reference-image" src="../assets/01-evening-hero.jpg" alt="固定版本实测黄昏画面：山体、树林、铁路桥和瀑布"><div id="hotspots"></div></div><p class="caption" id="image-caption">本地运行截图 / 1280 × 720 / 2026.09.14 · 标记为分析注释</p><div id="dependency-map" class="dependency-map"></div></div>
+    <article class="detail"><span class="evidence">源码已核实</span><h2 id="module-title">地形与空间</h2><p id="module-summary"></p><dl class="driver-chain" id="driver-chain"></dl><button class="primary" id="try-lab">调整参数，理解因果 <span>→</span></button></article>
+  </div>
+  <div class="detail-bottom"><article><h3>从零实现这一层</h3><ol id="implementation"></ol></article><article><h3>什么会让效果失真</h3><p id="failure"></p><div class="source-row" id="source-row"></div></article></div>
+  <div class="frame-flow"><h3>这些能力怎样在一帧内连起来</h3><p>初始化只做一次：生成几何、创建材质与灯光、缓存线路、预编译 Shader。之后每一帧按下面的顺序驱动。</p><ol><li><b>01 · 读取时间</b><span>计算 dt，更新场景时间</span></li><li><b>02 · 环境插值</b><span>同步光照、风雨与湿度</span></li><li><b>03 · 更新对象</b><span>列车状态、建筑灯光、天气</span></li><li><b>04 · 组织视角</b><span>跟随 / 运镜、地形约束、LOD</span></li><li><b>05 · 绘制画面</b><span>按需阴影与反射、HDR 与 Bloom</span></li></ol><p class="caption">顺序依据 main.js。暂停时场景时间停止，但环境切换与手动观察仍可响应；暂停不等于停止整个渲染循环。</p></div>
+</section>
+<section id="lab" class="view" hidden><div class="section-bar"><div><span class="evidence amber">教学机制实验</span><h2 id="lab-title">参数怎样改变结果</h2></div><button id="reset-lab" class="quiet">重置实验</button></div><p class="intro" id="lab-intro"></p><div class="lab-grid"><div class="lab-controls" id="lab-controls"></div><div class="lab-result"><div id="lab-diagram"></div><div id="lab-readouts" class="readouts" aria-live="polite"></div><p id="lab-explanation"></p></div></div><div class="formula"><span>驱动关系</span><code id="formula"></code></div><p class="caption">实验可视化计算关系，不调用原作引擎，也不代表原作实时画面或硬件性能。</p></section>
+<section id="recipe" class="view" hidden><div class="recipe-heading"><div><span class="evidence amber">实现建议</span><h2>按可验收的阶段，做出相似效果</h2><p>先让结构和运行成立，再叠加材质、气氛与镜头。</p></div><label>目标主题 <input id="theme" value="秋日山间铁路" maxlength="60" aria-label="实现目标主题"></label></div><div id="roadmap" class="roadmap"></div><div class="recipe-grid"><article><h3 id="step-title"></h3><div id="step-detail"></div></article><article class="prompt-panel"><div class="section-bar"><h3>交给开发者或 AI 的任务</h3><button class="quiet" id="copy-prompt">复制任务</button></div><textarea id="prompt" readonly aria-label="可复制的实施任务"></textarea><p id="copy-status" role="status"></p></article></div><div class="source-note">这是本研究提出的实施顺序；不声称这些扩展已由上游实现。阶段之间保留能运行、能验证的版本。</div></section>
+<footer><span>研究对象：iamtechartist / mountain-railway-diorama</span><a href="https://github.com/iamtechartist/mountain-railway-diorama/tree/6e8b0fbb806e486d7819b6d297b92f4ecf3d258b" target="_blank" rel="noopener">固定版本源码 ↗</a><a href="../assets/upstream-LICENSE.txt">上游 MIT 许可</a></footer>
+<noscript><p>请启用 JavaScript 以切换能力和参数实验。固定版本源码入口仍可访问。</p></noscript>
+</main></div><script type="module" src="app.mjs"></script></body></html>

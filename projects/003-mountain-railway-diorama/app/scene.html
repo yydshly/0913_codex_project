@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#122b36"><meta name="description" content="白鹭河谷：可编辑地形、观察风与植被、水流共同变化的实时三维铁路景观。"><title>白鹭河谷 · 四季微缩景观</title><link rel="stylesheet" href="scene.css"><script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script></head>
+<body>
+<canvas id="world" aria-label="白鹭河谷实时三维场景，拖动旋转，滚轮缩放"></canvas>
+<header class="scene-header"><div class="identity"><span class="seal">白<br>鹭</span><div><h1>白鹭河谷</h1><p>一座河谷，四季风景</p></div></div><div class="header-actions"><button id="toggle-controls" aria-expanded="false" aria-controls="scene-control-panel">编辑场景</button><a href="dev-log.html">开发记录</a><a href="index.html">原理分析 ↗</a></div></header>
+<div id="loading" role="status">正在生成河岸、叶簇与水面…</div><div id="error" role="alert" hidden></div>
+<aside class="scene-controls" id="scene-control-panel">
+<div class="panel-title"><span>场景主题</span><button id="reset-view" title="回到全景">全景</button></div>
+<section class="composition-panel" aria-label="景观构图">
+<label class="field-label">景观构图<select id="composition"><option value="ridge" selected>层峦溪谷 · 叠岭与窄溪</option><option value="marsh">疏林浅湾 · 宽水与低岸</option><option value="classic">原有河谷 · 第九版布局</option></select></label>
+<p id="composition-note" role="status">西侧叠岭、林间留白与窄溪跌水；拱桥作为前景焦点。</p>
+<p class="control-note">各景观分别记住本次打开后的地形与水流模式；切换保留季节、光线和风力；精调继续按水流模式记忆。</p>
+</section>
+<section class="season-panel" aria-label="四季主题">
+<div class="season-buttons"><button data-season="spring" aria-pressed="false"><span>春</span>花溪</button><button data-season="summer" aria-pressed="false"><span>夏</span>浓荫</button><button data-season="autumn" aria-pressed="true"><span>秋</span>金岸</button><button data-season="winter" aria-pressed="false"><span>冬</span>初雪</button></div>
+<p id="season-note" role="status">红黄绿错落、金色草岸、低角度暖光</p>
+<label class="check"><input type="checkbox" id="season-lighting" checked>光线随季节推荐</label><p class="control-note" id="lighting-note" role="status">秋 · 金岸 / 黄昏</p>
+<label class="check"><input type="checkbox" id="season-fixed-view" checked>切换时使用同一全景机位</label>
+<div class="quality-views" aria-label="画质观察机位"><button data-quality-view="overview">河谷全景</button><button data-quality-view="wind">河岸植被</button><button data-quality-view="waterfall">水流近景</button><button data-quality-view="meadow">林间空地</button><button data-quality-view="back">山后坡地</button></div><p class="control-note">从河岸、林间空地和山后坡地检查完整景观。拖动可自由观察。</p>
+</section>
+<section class="water-mode-panel" aria-label="水流模式">
+<h2>水流模式</h2><div class="water-mode-buttons"><button data-water-mode="continuous" aria-pressed="true">连续跌水</button><button data-water-mode="stream" aria-pressed="false">浅滩缓流</button><button data-water-mode="rocky" aria-pressed="false">岩间分流</button></div>
+<p id="water-mode-note" role="status">无遮挡的完整水面，保留连贯的跌落与倒影。</p><p class="control-note">切换保留当前机位、季节与河宽。实际落差 <output id="effective-drop">3.6 m</output>。</p><button id="water-mode-focus">近看当前水流</button>
+<details class="water-tuning" open><summary>精调当前水流</summary>
+<label class="slider-label">水层厚薄 <output id="water-thickness-value">65%</output><input id="water-thickness" type="range" min="0" max="100" value="65"></label>
+<label class="slider-label">白沫量 <output id="water-foam-value">50%</output><input id="water-foam" type="range" min="0" max="100" value="50"></label>
+<label class="slider-label">水雾量 <output id="water-mist-value">45%</output><input id="water-mist" type="range" min="0" max="100" value="45"></label>
+<label class="slider-label">倒影强度 <output id="water-reflection-value">60%</output><input id="water-reflection" type="range" min="0" max="100" value="60"></label>
+<label class="slider-label">水纹强度 <output id="water-ripple-value">40%</output><input id="water-ripple" type="range" min="0" max="100" value="40"></label>
+<button id="reset-water-tuning">恢复当前模式默认</button><p class="control-note" id="water-tuning-status" role="status">各模式分别记住本次打开页面后的调节值。</p><p class="control-note">厚薄调整水色与水层观感。浅滩模式保持无跌水雾。</p>
+</details>
+</section>
+<details><summary>四季动态与氛围</summary>
+<label class="slider-label">花瓣 / 落叶 / 雪花 / 萤火 <output id="detail-amount-value">60%</output><input id="detail-amount" type="range" min="0" max="100" value="60"></label>
+<label class="slider-label">地面花瓣与落叶 <output id="ground-litter-value">60%</output><input id="ground-litter" type="range" min="0" max="100" value="60"></label>
+<label class="slider-label">雾量 <output id="fog-amount-value">100%</output><input id="fog-amount" type="range" min="0" max="200" value="100"></label>
+<div class="detail-actions"><button id="detail-focus">近看树下细节</button><button id="summer-night">看夏夜萤火</button></div>
+<p class="control-note">花瓣与落叶围绕树木飘落；萤火在夏季暮色和夜间出现。地面覆盖可独立调节。</p>
+</details>
+<details><summary>地形与布局</summary>
+<label class="field-label">场景基底<select id="terrain-preset"><option value="custom" disabled>当前景观 / 手动调整</option><option value="wetland">开阔河口 · 湿地</option><option value="canyon">岩岸溪谷 · 高落差</option><option value="islands">沙洲浅湾 · 低起伏</option></select></label>
+<label class="slider-label">地形起伏 <output id="terrain-height-value">0.75×</output><input id="terrain-height" type="range" min="0.15" max="1.8" step="0.05" value="0.75"></label>
+<label class="slider-label">河道半宽 <output id="river-width-value">8 m</output><input id="river-width" type="range" min="3" max="11" step="0.5" value="8"></label>
+<label class="slider-label">河道弯曲 <output id="river-bend-value">5 m</output><input id="river-bend" type="range" min="0" max="7" step="0.5" value="5"></label>
+<label class="slider-label">水位落差 <output id="water-drop-value">3.6 m</output><input id="water-drop" type="range" min="1" max="6" step="0.2" value="3.6"></label>
+<label class="slider-label">乔木目标数量 <output id="tree-density-value">190 棵</output><input id="tree-density" type="range" min="40" max="300" step="10" value="190"></label>
+<p id="terrain-feedback" class="control-note" role="status">修改后河岸与植被一起重建。树木避让铁路并保留间距，实际数量可能低于目标。</p>
+</details>
+<details><summary>风与水的关系</summary>
+<label class="slider-label">风力 <output id="wind-value">45%</output><input id="wind" type="range" min="0" max="100" value="45"></label>
+<label class="slider-label">风向 <output id="wind-direction-value">0°</output><input id="wind-direction" type="range" min="0" max="360" step="15" value="0"></label>
+<label class="slider-label">阵风幅度 <output id="gust-value">60%</output><input id="gust" type="range" min="0" max="100" value="60"></label>
+<label class="slider-label">水流速度 <output id="water-flow-value">1×</output><input id="water-flow" type="range" min="0" max="3" step="0.1" value="1"></label>
+<button id="wind-focus">靠近河岸观察风</button>
+<p id="wind-feedback" class="control-note">柳树更柔软，乔木较稳，芦苇摆幅最大。</p>
+<p class="control-note">风力 → 枝干弯曲 / 叶片颤动 / 芦苇倾斜 / 水纹增强；风向也改变雨丝倾斜。</p>
+</details>
+<details><summary>天气、列车与镜头</summary>
+<fieldset id="environment-controls"><legend>环境</legend><div class="mode-buttons"><button data-mode="day" aria-pressed="true">白天</button><button data-mode="evening" aria-pressed="false">黄昏</button><button data-mode="rain" aria-pressed="false">雨景</button><button data-mode="night" aria-pressed="false">夜间</button></div></fieldset>
+<label class="slider-label">列车速度 <output id="speed-value">1×</output><input id="train-speed" type="range" min="0.4" max="2" step="0.1" value="1"></label>
+<label class="slider-label">雨量 <output id="rain-value">0%</output><input id="rain" type="range" min="0" max="100" value="0"></label>
+<fieldset id="camera-controls"><legend>观景位置</legend><select id="camera-view" aria-label="观景位置"><option value="overview">全景</option><option value="free">自由观察</option><option value="bridge">浅色拱桥</option><option value="station">白鹭河站</option><option value="waterfall">河口与跌水</option><option value="wind">河岸树木</option><option value="meadow">林间空地</option><option value="back">山后坡地</option><option value="train">跟随列车</option></select><label class="check"><input id="auto-camera" type="checkbox">自动观景镜头</label></fieldset>
+<div class="playback"><button id="pause" aria-pressed="false">暂停场景</button><label class="check"><input id="wireframe" type="checkbox">查看网格</label></div>
+<p class="control-note" id="control-note">参数作用于当前三维场景。</p>
+</details>
+</aside>
+<div class="scene-status"><span class="route-name">EGRET ESTUARY / 03</span><span id="journey">列车正在沿河岸行驶</span><span class="drag-hint">拖动旋转 · 滚轮缩放</span></div>
+<section class="build-panel" aria-label="分阶段搭建"><div class="build-caption"><div><span id="step-count">STEP 05 / 05</span><h2 id="step-title">完整河谷</h2><p id="step-description"></p></div><div class="build-actions"><button id="show-complete" hidden>查看完整效果 ↗</button><button id="toggle-steps" aria-expanded="false">展开五步搭建</button></div></div><nav id="stages" aria-label="搭建步骤"></nav><div class="step-actions"><span id="step-added"></span><div><button id="previous">上一步</button><button id="next" disabled>已完成搭建</button></div></div></section>
+<script type="module" src="scene.mjs"></script></body></html>
