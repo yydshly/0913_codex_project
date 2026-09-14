@@ -19,7 +19,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | 001 | [PaperRoute](projects/001-paperroute/README.md) | 浏览器 3D 送报、障碍反馈与七日进程；AI 辅助常规迭代案例，可复用技术价值有限 | [PaperRoute 官网](https://www.paperroute.lol/) | 已总结 | [研究汇总](https://yydshly.github.io/0913_codex_project/001-paperroute/research.html) · [研究原型](https://yydshly.github.io/0913_codex_project/001-paperroute/) |
 | 002 | [Dunhuang Aura](projects/002-dunhuang-aura/README.md) | 敦煌美术风格与出图流程说明书；可复用配色、构图、提示词和修图要求，未新增绘图能力，质量与效率增益未验证 | [govin-ai/dunhuang-aura-skill](https://github.com/govin-ai/dunhuang-aura-skill) | 已总结 | [研究结论与参考价值](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/) |
-| 003 | [Mountain Railway Diorama](projects/003-mountain-railway-diorama/README.md) | 山间铁路微缩景观研究；“白鹭河谷”四季微缩景观，新增花瓣、落叶、夏夜萤火，支持地形编辑、风与植被联动、溪谷与浅湾构图、树冠与冬季枝形、地表分区配色、短草与树下落叶、空地与山后细节、连续坡脚与贴坡露岩、铁路净空与水石遮挡、跌水流纹与落点同步、四季光线匹配和三种水流模式，附原理分析 | [iamtechartist/mountain-railway-diorama](https://github.com/iamtechartist/mountain-railway-diorama) | 已总结 | — |
+| 003 | [Mountain Railway Diorama · 白鹭河谷](projects/003-mountain-railway-diorama/README.md) | 从原作研究到可调场景：三种构图、四季光线、风与植被联动、三种水流；附实景、能力边界和开发记录 | [iamtechartist/mountain-railway-diorama](https://github.com/iamtechartist/mountain-railway-diorama) | 已总结 | — |
 <!-- PROJECT_INDEX_END -->
 
 进度：`待研究` → `研究中` → `已复现` → `已总结`；暂时停止的项目标为 `暂缓`。演示未上线时填写 `—`。
@@ -45,15 +45,15 @@
 *本次依据上游规则调用 imagegen 生成，1983 × 793，约 5:2。子项目另附香氛广告、中文标题封面和删除飘带的修图对照；未做同模型有无 Skill 的评测。*
 
 [在线研究结论](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/) · [完整研究](projects/002-dunhuang-aura/README.md) · [实验与延伸设计](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/studio.html#generation-note) · [原始仓库](https://github.com/govin-ai/dunhuang-aura-skill)
-### 003 · Mountain Railway Diorama
+### 003 · Mountain Railway Diorama / 白鹭河谷
 
-研究程序化几何、路径运动、Shader、灯光和运镜如何协同。**新增实践：**以景区观景展示为用途，重建“白鹭河谷”，直接编辑地形与河道，比较四季树冠、地表、水体和光照，并观察风的联动；提供连续跌水、浅滩缓流、岩间分流三种水体模式，支持水层、白沫、水雾、倒影和水纹独立精调，新增层峦溪谷、疏林浅湾构图及四季光线匹配，保留原有河谷、固定观察机位与开发记录；保留五步搭建与原理分析。已修复岸石侵入轨道及固定水束与实际石块不匹配的问题，补充跌水加速流纹、小幅起伏与白沫落点同步。
+研究山间铁路微缩景观，并独立重建可调地形的“白鹭河谷”。**可以看什么：**三种构图、春夏秋冬、风与植被联动，以及连续跌水、浅滩缓流、岩间分流。**研究价值：**观察地形、植被、水体与光照如何共同构成场景；当前仍是风格化原型，尚无方案存档、自由绘轨或真实流体模拟。
 
-![003 白鹭河谷第十五版：山后连续坡脚与贴坡露岩](projects/003-mountain-railway-diorama/assets/scene-v15-ridge-back-summer.jpg)
+[![003 白鹭河谷当前实景：秋季溪谷、环线列车、拱桥与连续跌水](projects/003-mountain-railway-diorama/assets/b1-review-overview.jpg)](projects/003-mountain-railway-diorama/README.md)
 
-*2026-09-14 本研究独立重建场景的本地截图；原作截图与版本证据见子项目，网页尚未部署。*
+*本研究独立重建的 V17 基线实景，2026-09-14 本地浏览器截图；点击图片进入研究与效果导览。*
 
-[能力基线](projects/003-mountain-railway-diorama/capabilities.md) · [完整研究](projects/003-mountain-railway-diorama/README.md) · [真实场景与分析页运行说明](projects/003-mountain-railway-diorama/app/README.md) · [开发与优化记录](projects/003-mountain-railway-diorama/development-log.md) · [技术与验证记录](projects/003-mountain-railway-diorama/notes.md) · [扩展方向](projects/003-mountain-railway-diorama/extensions.md) · [上游官方演示](https://iamtechartist.github.io/mountain-railway-diorama/) · [原始仓库](https://github.com/iamtechartist/mountain-railway-diorama)
+[看效果与操作导览](projects/003-mountain-railway-diorama/README.md) · [查当前能力](projects/003-mountain-railway-diorama/capabilities.md) · [本地运行](projects/003-mountain-railway-diorama/app/README.md) · [开发记录](projects/003-mountain-railway-diorama/development-log.md) · [后续路线](projects/003-mountain-railway-diorama/next-steps.md) · [上游原作演示](https://iamtechartist.github.io/mountain-railway-diorama/)
 
 <!-- PROJECT_PREVIEWS_END -->
 
