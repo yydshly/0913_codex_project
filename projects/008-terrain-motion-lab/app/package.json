@@ -1,1 +1,12 @@
-{"name":"terrain-motion-lab","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"node serve.mjs","build":"node build.mjs","test":"node --test model.test.mjs surface.test.mjs outdoor.test.mjs forest.test.mjs reuse.test.mjs environment.test.mjs snapshot.test.mjs camp-plan.test.mjs","check":"node check.mjs"}}
+{
+  "name": "terrain-motion-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node serve.mjs",
+    "build": "node build.mjs",
+    "test": "node --test model.test.mjs surface.test.mjs outdoor.test.mjs forest.test.mjs reuse.test.mjs environment.test.mjs snapshot.test.mjs camp-plan.test.mjs asset-loader.test.mjs",
+    "check": "node check.mjs"
+  }
+}

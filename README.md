@@ -24,7 +24,7 @@
 | 005 | [Stick & Steel](projects/005-stick-steel/README.md) | 火柴人游戏效果构建；后续以 Skill 制作游戏效果视频或同类风格游戏 | [Genex 原作](https://genex.games/stick-steel) | 已复现 | [研究导览](https://yydshly.github.io/0913_codex_project/005-stick-steel/) · [游戏效果](https://yydshly.github.io/0913_codex_project/005-stick-steel/demo/?view=capabilities) |
 | 006 | [游戏效果、交互与教学体验](projects/006-emberfall-arpg/README.md) | 从 ARPG 效果参考与可玩实践，理解情绪、实时反馈和物理教学；附三图导览与完整研究 | 用户提供截图，原作 URL 待核实 | 研究中 | [研究导览](https://yydshly.github.io/0913_codex_project/006-emberfall-arpg/research/) · [试玩 ARPG](https://yydshly.github.io/0913_codex_project/006-emberfall-arpg/) |
 | 007 | [Mini Moto — Pine Ridge Park](projects/007-mini-moto-park/README.md) | 迷你越野摩托公园；已定位并体验原作，参考赛道与比赛联动、跟随镜头和车手能力；源码许可待核实 | [作者原帖](https://x.com/chrisjdimarco/status/2098919328368197682) | 已总结 | — |
-| 008 | [山地巡游实验室](projects/008-terrain-motion-lab/README.md) | 沉淀道路、地表、树木的素材、生成规则与表现能力；三图操作导览、共享组件和三份可运行快照 | [参考原作](https://mini-moto-park.chipchaunceytheonlyone.chatgpt.site/) | 已总结 · 原型持续打磨 | [能力与图片导览](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/capabilities.html) · [山林效果](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/outdoor.html?layout=valley&view=sunrise#stage) |
+| 008 | [山地巡游实验室](projects/008-terrain-motion-lab/README.md) | 沉淀道路、地表、树木的素材、生成规则与表现能力；三图操作导览、共享组件、加载反馈和三份可运行快照 | [参考原作](https://mini-moto-park.chipchaunceytheonlyone.chatgpt.site/) | 已总结 · 原型持续打磨 | [能力与图片导览](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/capabilities.html) · [山林效果](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/outdoor.html?layout=valley&view=sunrise#stage) |
 | 009 | [城景工坊 · 城市景点汇总 Skill](projects/009-city-landmark-map/README.md) | 汇总城市及周边景点，以图鉴展示特色、介绍与大体位置；后期需要优化实现 | [YouMind相关线索](https://youmind.com/skills/yhbukK6TtKX0t9) · 原版本待核实 | 研究原型 · 待优化 | [实际演示导览](https://yydshly.github.io/0913_codex_project/009-city-landmark-map/archive.html) |
 | 010 | [Mini Moto 赛车游戏参考与实践总结](projects/010-mini-moto-comparison/README.md) | 赛车类游戏参考：核心为场景构建与赛车手能力构建；保留基础竞速和驾驶演示，后续按项目需求开发 | [作者原作](https://mini-moto-park.chipchaunceytheonlyone.chatgpt.site/) | 已总结 | [网页研究与比赛](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/) · [自由驾驶练习](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/ride.html) |
 <!-- PROJECT_INDEX_END -->
@@ -106,7 +106,7 @@
 
 ### 008 · 道路、地表与树木能力沉淀
 
-**项目意义：积累可复用的自然环境构建能力。** 道路贴合地形，地表组合泥土、草岩与地被，树木从单株分枝到成片分布并参与受光。巡游与营地用于操作、对照与复用验证；当前已有共享模块，尚非成熟 SDK，真实感与性能基准仍需完善。
+**项目意义：积累可复用的自然环境构建能力。** 道路贴合地形，地表组合泥土、草岩与地被，树木从单株分枝到成片分布并参与受光。巡游与营地用于操作、对照与复用验证；户外页提供加载进度、有限重试与错误提示。当前已有共享模块，尚非成熟 SDK，真实感与性能基准仍需完善。
 
 [![008 实际道路近景：松林、泥土路面与坡面草地，点击查看三图效果导览](projects/008-terrain-motion-lab/assets/natural-ground-view.png)](https://yydshly.github.io/0913_codex_project/008-terrain-motion-lab/capabilities.html#effect-guide)
 

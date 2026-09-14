@@ -72,3 +72,5 @@
 `capabilities-effect-guide.png`：2026-09-14 三图操作导览实际浏览器截图，记录图片、观察点、操作提示与沉淀内容的网页布局。
 
 `published-sunrise.png`：2026-09-14 GitHub Pages 公网版本实际截图，低坡营地、97% 自动晨光，未美化。`published-resource-check.json` 保存首轮上线后 32 个资源的 HTTP 状态、大小与 SHA-256。
+
+`loading-failure-check.png`：2026-09-15 本地测试服务器故意对依赖返回 503 后，浏览器显示加载失败、重试按钮和错误详情的实际截图；用于验证错误反馈，不代表捕获了用户的公网故障。
