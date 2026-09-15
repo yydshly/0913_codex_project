@@ -1,0 +1,32 @@
+[
+  {
+    "file": "01-overview.jpg",
+    "bytes": 70799,
+    "sha256": "5637d7a35c92694212411b9c157b494f6384224436c1bafe0ab4cadc1b2ab2d8"
+  },
+  {
+    "file": "02-station-open.jpg",
+    "bytes": 74488,
+    "sha256": "68fe7cde6ec35bcc0b42c3a9bc8c8d28baa6437f1d9ac46a0f1e847850223476"
+  },
+  {
+    "file": "03-station-closed.jpg",
+    "bytes": 74293,
+    "sha256": "e21dd811e2285204f9e352d85dfe0a1d2cb7f9429074bdbc4ea8067f722c3990"
+  },
+  {
+    "file": "04-bridge.jpg",
+    "bytes": 110007,
+    "sha256": "9e786db8a689555c41a8a70ad544ee91f94ee1cea79c1842bdfa60cd5125a7ca"
+  },
+  {
+    "file": "05-river-spring.jpg",
+    "bytes": 95042,
+    "sha256": "51795351990f5e866da343d781516f972ba772307aa40c4f8628a826a8e37cf8"
+  },
+  {
+    "file": "06-river-autumn.jpg",
+    "bytes": 93046,
+    "sha256": "c7b099f3943ecca0d3a682b60a1bbed8bb62954f65ef8cad32fc93e76427e5d4"
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "date": "2026-09-15",
+  "source": "http://127.0.0.1:8412/webgl-lab.html",
+  "kind": "independent WebGL 2 teaching scene; not upstream screenshots",
+  "images": [
+    {
+      "file": "01-step-0.jpg",
+      "width": 1265,
+      "height": 712,
+      "sha256": "b6072fc9c2270aa99635fae87092921765b0badb0834fc1a51b66d994f1aa2d8"
+    },
+    {
+      "file": "02-step-1.jpg",
+      "width": 1265,
+      "height": 712,
+      "sha256": "7e1e4a1355bf0f9db716b82dc4a53400511c26b7b2dc6fa0fd5cf1bce9fa84d3"
+    },
+    {
+      "file": "03-step-2.jpg",
+      "width": 1265,
+      "height": 712,
+      "sha256": "f91d56c3b77eebff1800b9a55b5ecb42a45d4b38c5cb0f8ca5aa3587f8e98670"
+    },
+    {
+      "file": "04-step-3.jpg",
+      "width": 1265,
+      "height": 712,
+      "sha256": "0a242a1f67220555b051a96dbb60a498f1b16e38e0955855c8bf15370eee13ae"
+    },
+    {
+      "file": "05-step-4.jpg",
+      "width": 1265,
+      "height": 712,
+      "sha256": "70eb440f4689c67c7bdb5c39daf906fd4fe5c9eaed2b3d18fafafcb3fc8d4701"
+    },
+    {
+      "file": "06-step-5.jpg",
+      "width": 1265,
+      "height": 712,
+      "sha256": "c2692e28a0c882ec04f999a8b4c2002e51cf3c20332ae0d143ffaa93eb80c470"
+    },
+    {
+      "file": "07-step-6.jpg",
+      "width": 1265,
+      "height": 712,
+      "sha256": "e9890999976ac7b097a2013255649fe5ac82f5fab72e1a806e3c25b6fbba29e7"
+    },
+    {
+      "file": "08-shadow-depth.jpg",
+      "width": 1265,
+      "height": 712,
+      "sha256": "cea29afc8e135fb5186be786a145878a3613e9fd93cc093bd3f5a574f52384f9"
+    },
+    {
+      "file": "09-normals.jpg",
+      "width": 1265,
+      "height": 712,
+      "sha256": "80918b3d17a569de3603aa33f628846cf0c7b33bb8fbee9bd6d829fc45346635"
+    },
+    {
+      "file": "10-night-closeup.jpg",
+      "width": 1265,
+      "height": 712,
+      "sha256": "0f4087cf111025418c3de43808f7bd2c280f942eb7008fe4d2b03b70044520ae"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "date": "2026-09-15",
+  "kind": "actual-local-browser-captures",
+  "files": [
+    {
+      "file": "01-custom-station.jpg",
+      "width": 782,
+      "height": 881,
+      "format": "JPEG",
+      "bytes": 88638,
+      "sha256": "508f5d1699a3abed0453760af92c3d00f3bd288d942d45edc4ddaecacea3d374"
+    },
+    {
+      "file": "02-custom-wood.jpg",
+      "width": 782,
+      "height": 881,
+      "format": "JPEG",
+      "bytes": 80818,
+      "sha256": "d849ae903bdfb854e4fd70875874ac25f5abbb45eb7e936debf94db2db8b685d"
+    },
+    {
+      "file": "03-custom-metal.jpg",
+      "width": 782,
+      "height": 881,
+      "format": "JPEG",
+      "bytes": 94866,
+      "sha256": "2fdab689995b2874076984ad7f0e918363d7cf304c0471ee6a76e8eaea2aeab8"
+    },
+    {
+      "file": "04-custom-night.jpg",
+      "width": 782,
+      "height": 881,
+      "format": "JPEG",
+      "bytes": 77084,
+      "sha256": "83f0ca50414e797bf93e466d79eae9af438d1fa26897fac4eb09532187499061"
+    },
+    {
+      "file": "05-custom-lens.jpg",
+      "width": 782,
+      "height": 881,
+      "format": "JPEG",
+      "bytes": 64200,
+      "sha256": "c99655eff58beabfbb4f222faf4e80e5d1979a65fcc5ed952538e6df2f671cf6"
+    },
+    {
+      "file": "06-standard-station.jpg",
+      "width": 782,
+      "height": 881,
+      "format": "JPEG",
+      "bytes": 88884,
+      "sha256": "bb26ed8bc2faec5e39d0a0c17f28583d23b991eef3ac8c2025ac7cfc5d2afda2"
+    },
+    {
+      "file": "07-standard-wood.jpg",
+      "width": 782,
+      "height": 881,
+      "format": "JPEG",
+      "bytes": 80291,
+      "sha256": "e0130482a28ad1e081d1d9a21d7d1f5b0c67b81ebb82b7af965c3f3fe9bba3d0"
+    },
+    {
+      "file": "08-standard-metal.jpg",
+      "width": 782,
+      "height": 881,
+      "format": "JPEG",
+      "bytes": 94089,
+      "sha256": "8323b9ad831d4ab29eb8f89a7bc65a90e4a87a6811fd9250917211428cb134d6"
+    },
+    {
+      "file": "09-standard-night.jpg",
+      "width": 782,
+      "height": 881,
+      "format": "JPEG",
+      "bytes": 76876,
+      "sha256": "57297418baf9c948770225eabb31d68c010099edc66ebda17f54c18cd5d977e9"
+    },
+    {
+      "file": "10-standard-lens.jpg",
+      "width": 782,
+      "height": 881,
+      "format": "JPEG",
+      "bytes": 63318,
+      "sha256": "b67ca04119bda08cd42c4bcecf84e54945773e2aadcce7284e0d1df7ffdc4200"
+    }
+  ]
+}

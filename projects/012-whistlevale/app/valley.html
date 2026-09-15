@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="白鹭河谷的参观样板：走近车站、拱桥与河岸，揭开屋顶观察站房内部。"><title>白鹭河谷 · 一座车站的日常</title><link rel="stylesheet" href="valley.css"></head>
+<body>
+<header class="topbar"><a href="./#railway" class="back">← 作品馆</a><span class="collection">地方与生活 / 展品 01</span><a class="original" href="https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html" target="_blank" rel="noopener">完整创作版 ↗</a></header>
+<main>
+<section class="intro"><div><p class="eyebrow">EGRET VALLEY · A LITTLE WORLD</p><h1>一座车站的日常</h1></div><p>沿着铁路，认识一片河谷。<br><span>白鹭河谷 · 虚构微缩景观</span></p></section>
+<section class="stage" aria-label="白鹭河谷三维展品">
+<iframe id="scene" title="白鹭河谷实时场景，可拖动旋转和缩放" src="valley-runtime/scene.html"></iframe>
+<div id="loading" role="status"><span class="loading-dot"></span><strong>正在展开河谷</strong><p>第一次打开需要生成树木、河岸与站房。</p></div>
+<div id="failure" hidden role="alert"><h2>场景暂时没有打开</h2><p id="failure-note">可以重新加载，或先阅读下方的三个看点。</p><button id="retry">重新打开</button><a href="assets/railway.png" target="_blank">查看场景图片 ↗</a></div>
+<div class="view-tools"><button id="overview" disabled>全景</button><button id="pause" disabled aria-pressed="false">暂停</button></div>
+<span class="gesture">拖动环顾 · 滚轮或双指缩放</span>
+</section>
+<nav class="stops" aria-label="三个看点">
+<button data-stop="station" aria-pressed="false"><span>01</span><div>河谷车站<small>看看站房里的生活</small></div></button>
+<button data-stop="bridge" aria-pressed="false"><span>02</span><div>跨河拱桥<small>铁路如何连接两岸</small></div></button>
+<button data-stop="river" aria-pressed="false"><span>03</span><div>层叠河岸<small>水流与植物的层次</small></div></button>
+</nav>
+<section class="story" aria-labelledby="story-title"><div class="story-copy"><p class="eyebrow" id="story-kicker">先认识整体</p><h2 id="story-title">山、水与铁路，围绕车站展开。</h2><p id="story-text">先看看整片河谷，再选择一个看点。铁路沿河岸转弯，经过拱桥和车站；树木与水面之间留出了活动空间。</p><p class="detail" id="story-detail">这是可以自由观察的实时场景。三个看点会带你到不同的位置，随时可以回到全景。</p></div>
+<div class="interaction"><p class="eyebrow">亲自看一看</p><button id="roof" class="primary" disabled aria-pressed="false">揭开屋顶，看看站房 <span>↗</span></button><p id="action-note">镜头会来到站房上方；再点一次可合上屋顶。</p><div class="season-control" aria-label="同机位季节比较"><span>同一机位</span><button data-season="spring" aria-pressed="true" disabled>春日</button><button data-season="autumn" aria-pressed="false" disabled>秋日</button></div></div>
+</section>
+<footer><p id="status" role="status" aria-live="polite">参观准备中。</p><details><summary>关于这件作品</summary><p>主体复用本仓库 003 白鹭河谷的程序化场景；012 为其新增观看顺序与参观界面。这里展示虚构景观，不能用作真实地点介绍或导航。</p><p>揭顶用于观察候车室与值班室的结构。人物目前未进入站房；已有行为是简化的场景模拟。</p><p>来源：本仓库 Mountain Railway Diorama 研究与独立扩展。<a href="https://github.com/yydshly/0913_codex_project/tree/main/projects/003-mountain-railway-diorama" target="_blank" rel="noopener">项目资料 ↗</a> · <a href="valley-runtime/source-manifest.json" target="_blank">本地场景版本记录</a></p></details></footer>
+</main><noscript>请启用 JavaScript 体验场景。<a href="assets/railway.png">查看白鹭河谷图片</a></noscript><script type="module" src="valley.mjs"></script></body></html>

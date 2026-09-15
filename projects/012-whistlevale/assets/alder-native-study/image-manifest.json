@@ -1,0 +1,55 @@
+{
+  "captureDate": "2026-09-15",
+  "upstreamCommitStudied": "f3d769e8ea54d2f5a47d12f27773541b484c6302",
+  "liveDeploymentCommit": "unverified",
+  "images": [
+    {
+      "file": "01-native-overview.jpg",
+      "width": 797,
+      "height": 898,
+      "format": "JPEG",
+      "sha256": "6d52280d835db918e6bf7d4572082c7da0daa645ee76418cc057680f13476270",
+      "sourceUrl": "https://whistlevale.com/?room=valley"
+    },
+    {
+      "file": "02-native-locomotive.jpg",
+      "width": 797,
+      "height": 898,
+      "format": "JPEG",
+      "sha256": "f5b3bd29675bda0b11adb76ecc5c6ce5900ccf03e2fc6b24c8a2ef56c5e3ffe5",
+      "sourceUrl": "https://whistlevale.com/?room=valley"
+    },
+    {
+      "file": "03-native-cutaway.jpg",
+      "width": 797,
+      "height": 898,
+      "format": "JPEG",
+      "sha256": "6299f6fd3f9ac4f6cb92621ebef79746a371bf77fe7c723a05806da6cf9c5f2f",
+      "sourceUrl": "https://whistlevale.com/?room=valley"
+    },
+    {
+      "file": "04-native-night.jpg",
+      "width": 797,
+      "height": 898,
+      "format": "JPEG",
+      "sha256": "331bf398692ad05e13aa83d4a1b24eab1975554ae4e4fdce0c7daf3a474a4ce0",
+      "sourceUrl": "https://whistlevale.com/?room=valley"
+    },
+    {
+      "file": "05-ours-overview.jpg",
+      "width": 782,
+      "height": 881,
+      "format": "JPEG",
+      "sha256": "a2ab67d4f705817d236bed587e6c7c01d3b64ce06833fa43eeb203db5419e276",
+      "sourceUrl": "http://127.0.0.1:8412/valley.html"
+    },
+    {
+      "file": "06-ours-station.jpg",
+      "width": 782,
+      "height": 881,
+      "format": "JPEG",
+      "sha256": "7ab31f46f14138fb94f5a1b351b634190ab2e8d246755909411386bf3d8da7d3",
+      "sourceUrl": "http://127.0.0.1:8412/valley.html"
+    }
+  ]
+}

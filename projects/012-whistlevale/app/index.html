@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#202f2e"><meta name="description" content="在我们的三维作品馆中，从六个展台进入山水、天气、自然环境、驾驶、城市图鉴与界面体验。"><title>我们的作品馆 · 012</title><link rel="stylesheet" href="gallery.css"><script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script></head>
+<body>
+<header class="masthead"><a class="identity" href="#" id="brand"><span class="brand-mark" aria-hidden="true">展</span><span>我们的作品馆<small>THE WORKS GALLERY / 012</small></span></a><div class="header-note"><a href="research.html">双图研究导览 ↗</a> · <a href="webgl-lab.html">WebGL 2：从代码到画面 ↗</a></div><button class="text-button" id="overview">俯瞰全馆 <span aria-hidden="true">↗</span></button></header>
+<main class="gallery-layout" id="railway">
+  <section class="hall" aria-label="三维展馆"><div id="canvas-host"></div><div id="labels" aria-label="展台位置"></div>
+    <div class="hall-heading"><span class="eyebrow">常设展 / COLLECTION 01</span><h1>六件作品，<br>六种看世界的方式。</h1><p id="hall-caption">点击展台近看，或从下方选择作品。</p></div>
+    <div class="load-card" id="loading" role="status"><span class="loader-ring" aria-hidden="true"></span><span>正在布置展馆…</span></div>
+    <div id="fallback" hidden><h2>以目录继续参观</h2><p>当前浏览器未能打开三维展馆。仍可从下方选择作品、查看效果并进入体验。</p><button id="retry" class="text-button">重新打开</button></div>
+    <div class="hall-footer"><span><span class="legend-line"></span>山水与天气 · 地形与运动 · 图鉴与界面</span><span class="gesture">拖动环顾 / 滚轮缩放</span></div>
+  </section>
+  <aside class="exhibit-panel" aria-labelledby="exhibit-title"><div class="panel-meta"><span id="zone">山水与天气</span><span id="project">展品 003</span></div><div class="panel-title"><span class="eyebrow" id="exhibit-en">VALLEY IN SEASONS</span><h2 id="exhibit-title">白鹭河谷</h2><p id="summary">一列小火车，穿过不断变化的四季。</p></div>
+    <figure id="cover"><img id="cover-image" src="assets/railway.png" alt="白鹭河谷 V38 春季实际场景"><figcaption id="caption">003 · V38 春季实际效果</figcaption></figure>
+    <div class="capabilities"><h3>这件作品能做什么</h3><ul id="skills"><li>三种地形构图与四季切换</li><li>列车、站房和人物生活</li><li>水流、植被与动物活动</li></ul></div>
+    <div class="try-note"><span>进去试一试</span><p id="try">先选一个季节，再近看车站或动物。</p></div>
+    <div class="panel-actions"><button class="primary" id="enter">进入作品 <span aria-hidden="true">↗</span></button><a id="research" target="_blank" rel="noopener" href="https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/guide.html">阅读研究记录</a></div>
+    <details class="source"><summary>来源与能力边界</summary><p id="source"></p><p id="boundary"></p><p>展台上的缩景用于辨认主题；展台画面使用注明来源的效果图。进入作品后可体验原有完整页面。</p></details>
+  </aside>
+</main>
+<nav class="collection-nav" aria-label="作品目录"><div class="nav-label"><span>常设作品</span><small>SELECT A WORK</small></div><div id="exhibit-nav" class="exhibit-nav"></div><div class="nav-arrows"><button id="prev" aria-label="上一件作品">←</button><button id="next" aria-label="下一件作品">→</button></div></nav>
+<dialog id="experience" aria-labelledby="experience-title"><div class="experience-header"><button id="close-experience" class="text-button">← 返回展馆</button><h2 id="experience-title"></h2><a id="open-alone" target="_blank" rel="noopener">单独打开 ↗</a></div><div class="experience-tip"><span id="experience-status" role="status">正在打开作品页面…</span><span>使用作品内的控制；返回时会关闭该场景。</span></div><div id="frame-host"></div></dialog>
+<p class="sr-only" id="announce" aria-live="polite"></p>
+<noscript><p class="noscript">启用 JavaScript 可参观三维展馆。也可<a href="https://yydshly.github.io/0913_codex_project/">打开已有作品目录</a>。</p></noscript>
+<script type="module" src="gallery.mjs"></script></body></html>

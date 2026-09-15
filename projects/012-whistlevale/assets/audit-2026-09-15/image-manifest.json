@@ -1,0 +1,26 @@
+[
+  {
+    "file": "01-overview.jpg",
+    "width": 782,
+    "height": 881,
+    "sha256": "822c48244b2a5cf3e4c2f127417d0b935fa54a6c41ece6d4f83a3e8df6033f32"
+  },
+  {
+    "file": "02-exhibit.jpg",
+    "width": 782,
+    "height": 881,
+    "sha256": "46bcb29fae5eb047162a4eafdaee1b6802609de18b08fb1bcea545d20708a6f1"
+  },
+  {
+    "file": "03-open-work.jpg",
+    "width": 797,
+    "height": 898,
+    "sha256": "62dfa227414a1f95decc24aab6350c43381190b34138b9175da14a2677140a3e"
+  },
+  {
+    "file": "04-return.jpg",
+    "width": 782,
+    "height": 881,
+    "sha256": "690fe171215049a06dba3babf9fc0f390b1893312cd9dd8a545edd5b687048c9"
+  }
+]

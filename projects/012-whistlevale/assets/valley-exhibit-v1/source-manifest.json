@@ -1,0 +1,259 @@
+{
+  "source": "projects/003-mountain-railway-diorama/app",
+  "version": "working-tree snapshot; hashes identify exact files",
+  "purpose": "012 visitor exhibit; audio not enabled",
+  "files": [
+    {
+      "file": "scene.mjs",
+      "sourceSha256": "58a2ef2645fa37933235e58c5f9a84b34c7d6d967cb1d290a0e185a63d03405b",
+      "outputSha256": "da5f1dbca33238e7d934d6a73dfe21a56475e052d9f6664dd2bb14c87d978d58",
+      "transform": "Center camera in dedicated viewing area and use immediate camera movement for reduced-motion visitors."
+    },
+    {
+      "file": "scene.css",
+      "sourceSha256": "e9d4962ab577efdb8fa741805e6e16d21df675d122676035b0eb5e768aa82b17",
+      "outputSha256": "e9d4962ab577efdb8fa741805e6e16d21df675d122676035b0eb5e768aa82b17",
+      "transform": null
+    },
+    {
+      "file": "scene.html",
+      "sourceSha256": "019541975a2eba230af307d7f1d41cfff48c18dec9e485eb9f347fc60b544305",
+      "outputSha256": "c5570d2a0530c7ad2a9dde7c4def96165229f783168ca59fd852fd0620f4d4fd",
+      "transform": "Hide editing and legacy overlays; retain canvas, loading and error UI."
+    },
+    {
+      "file": "vendor/three.module.js",
+      "sourceSha256": "15a6b51a6a4902fd1d7b6bfc3a307864cb05c7459c3b476805127aea2d3cb2c1",
+      "outputSha256": "15a6b51a6a4902fd1d7b6bfc3a307864cb05c7459c3b476805127aea2d3cb2c1",
+      "transform": null
+    },
+    {
+      "file": "vendor/OrbitControls.js",
+      "sourceSha256": "32f65512ad637a6698af1c290ecd59b33dbe7a996e5520483854222f2783df31",
+      "outputSha256": "32f65512ad637a6698af1c290ecd59b33dbe7a996e5520483854222f2783df31",
+      "transform": null
+    },
+    {
+      "file": "scene-world.mjs",
+      "sourceSha256": "79e7d8640dd867ca8c2f0e22504fff80a5c35ee664177867fd53d27ed82ae985",
+      "outputSha256": "79e7d8640dd867ca8c2f0e22504fff80a5c35ee664177867fd53d27ed82ae985",
+      "transform": null
+    },
+    {
+      "file": "scene-boarding.mjs",
+      "sourceSha256": "14ac7078f974794660def5500ef340f449b537eb647b79c9516f4a6275384b2e",
+      "outputSha256": "14ac7078f974794660def5500ef340f449b537eb647b79c9516f4a6275384b2e",
+      "transform": null
+    },
+    {
+      "file": "scene-audio.mjs",
+      "sourceSha256": "250b80b6eaf1fcd07e13c736fa86c2fc908215e67ded0c8e0fd123d1790a6861",
+      "outputSha256": "250b80b6eaf1fcd07e13c736fa86c2fc908215e67ded0c8e0fd123d1790a6861",
+      "transform": null
+    },
+    {
+      "file": "scene-train.mjs",
+      "sourceSha256": "e5a5babee26054a0c61c54e3a91f7983c527d03eaff65697855f2acc76f9c850",
+      "outputSha256": "e5a5babee26054a0c61c54e3a91f7983c527d03eaff65697855f2acc76f9c850",
+      "transform": null
+    },
+    {
+      "file": "scene-landscape.mjs",
+      "sourceSha256": "3bbe6793d3d525d8857e6780436373e00cc7bb65adeda8a2fab15a7564bcbead",
+      "outputSha256": "3bbe6793d3d525d8857e6780436373e00cc7bb65adeda8a2fab15a7564bcbead",
+      "transform": null
+    },
+    {
+      "file": "scene-atmosphere.mjs",
+      "sourceSha256": "4367b2597e4c76da582faec90c79fe52a5666183c5fbe8612f9f9638a426813d",
+      "outputSha256": "4367b2597e4c76da582faec90c79fe52a5666183c5fbe8612f9f9638a426813d",
+      "transform": null
+    },
+    {
+      "file": "scene-vegetation.mjs",
+      "sourceSha256": "f9c7213af36024bad5618b5fd9585777378641d1b81198e64bdace6232a77735",
+      "outputSha256": "f9c7213af36024bad5618b5fd9585777378641d1b81198e64bdace6232a77735",
+      "transform": null
+    },
+    {
+      "file": "scene-seasons.mjs",
+      "sourceSha256": "c4bcdbc752a2b36e04ca260bc22a18260a8f88db98d51de396ab8adf03045110",
+      "outputSha256": "c4bcdbc752a2b36e04ca260bc22a18260a8f88db98d51de396ab8adf03045110",
+      "transform": null
+    },
+    {
+      "file": "scene-details.mjs",
+      "sourceSha256": "3b431e02bba3fa12f567e2caa316947abefdcbd911324665668cdc09438ef3bf",
+      "outputSha256": "3b431e02bba3fa12f567e2caa316947abefdcbd911324665668cdc09438ef3bf",
+      "transform": null
+    },
+    {
+      "file": "scene-service.mjs",
+      "sourceSha256": "5cf723ff7f1c5f36b4472c73b9d4f7f806fe8cade8010a75e6cf2c75941521b0",
+      "outputSha256": "5cf723ff7f1c5f36b4472c73b9d4f7f806fe8cade8010a75e6cf2c75941521b0",
+      "transform": null
+    },
+    {
+      "file": "scene-regions.mjs",
+      "sourceSha256": "caec99f540f526b8d5da49e96de54710a01888b3abb3b7f4d9edf93bbc472652",
+      "outputSha256": "caec99f540f526b8d5da49e96de54710a01888b3abb3b7f4d9edf93bbc472652",
+      "transform": null
+    },
+    {
+      "file": "scene-composition.mjs",
+      "sourceSha256": "4f990ff94d2a0f75752fefe57bd0b999876467b0b04ceaebf997e6c0232e811c",
+      "outputSha256": "4f990ff94d2a0f75752fefe57bd0b999876467b0b04ceaebf997e6c0232e811c",
+      "transform": null
+    },
+    {
+      "file": "scene-water-modes.mjs",
+      "sourceSha256": "844ef89af6eb783d30b44d3a513bac93376f71955b891fdf153f9752c157620b",
+      "outputSha256": "844ef89af6eb783d30b44d3a513bac93376f71955b891fdf153f9752c157620b",
+      "transform": null
+    },
+    {
+      "file": "scene-plans.mjs",
+      "sourceSha256": "6e6daf33c6d80a1b704d33671a3ed454593870c149a7e18e688879de4e881664",
+      "outputSha256": "6e6daf33c6d80a1b704d33671a3ed454593870c149a7e18e688879de4e881664",
+      "transform": null
+    },
+    {
+      "file": "scene-plans-ui.mjs",
+      "sourceSha256": "a8af506ba76101f99087a9e383a2370067ff6bda17576b6faca10a199fceb940",
+      "outputSha256": "a8af506ba76101f99087a9e383a2370067ff6bda17576b6faca10a199fceb940",
+      "transform": null
+    },
+    {
+      "file": "vendor/three.core.js",
+      "sourceSha256": "a6cae1d9be22c0f637fa214f20cb9c0c9a3efeafcceb6e2e546e6a62cc04db1e",
+      "outputSha256": "a6cae1d9be22c0f637fa214f20cb9c0c9a3efeafcceb6e2e546e6a62cc04db1e",
+      "transform": null
+    },
+    {
+      "file": "scene-ground.mjs",
+      "sourceSha256": "93f52ebc27176c142816004aa637d92e0bdda14e2fbce98bed61dec87d4bee85",
+      "outputSha256": "93f52ebc27176c142816004aa637d92e0bdda14e2fbce98bed61dec87d4bee85",
+      "transform": null
+    },
+    {
+      "file": "scene-cab.mjs",
+      "sourceSha256": "e3985cc3f1f0effc3857060008720ea8a02c76349a1d7118dd19f0ccbb54140a",
+      "outputSha256": "e3985cc3f1f0effc3857060008720ea8a02c76349a1d7118dd19f0ccbb54140a",
+      "transform": null
+    },
+    {
+      "file": "scene-station-layout.mjs",
+      "sourceSha256": "b2dc1766d8f5ee549acf1e5ced804d052b1dd6debc930394e85dfbbf9d718f72",
+      "outputSha256": "b2dc1766d8f5ee549acf1e5ced804d052b1dd6debc930394e85dfbbf9d718f72",
+      "transform": null
+    },
+    {
+      "file": "scene-rabbits.mjs",
+      "sourceSha256": "a18a7f02878aa63c5986fd0fd9f47647d69c43973158f97c60b4c36adddf9826",
+      "outputSha256": "a18a7f02878aa63c5986fd0fd9f47647d69c43973158f97c60b4c36adddf9826",
+      "transform": null
+    },
+    {
+      "file": "scene-butterflies.mjs",
+      "sourceSha256": "ed1a81d1a4249c8afec15cd8ac4a0be179ad4d772475522af94f34570dc716eb",
+      "outputSha256": "ed1a81d1a4249c8afec15cd8ac4a0be179ad4d772475522af94f34570dc716eb",
+      "transform": null
+    },
+    {
+      "file": "scene-people.mjs",
+      "sourceSha256": "6edd81600d88c83d82864b1cb9e59d622ceffb27e253bd8688bda1744f3be100",
+      "outputSha256": "6edd81600d88c83d82864b1cb9e59d622ceffb27e253bd8688bda1744f3be100",
+      "transform": null
+    },
+    {
+      "file": "scene-rocks.mjs",
+      "sourceSha256": "7648bfb0aa423fd2f7d2c31acab54d42e7d8331e074957c871cf0a2657a79eb7",
+      "outputSha256": "7648bfb0aa423fd2f7d2c31acab54d42e7d8331e074957c871cf0a2657a79eb7",
+      "transform": null
+    },
+    {
+      "file": "scene-water.mjs",
+      "sourceSha256": "dbb85d3cb02089924d4abf8510b056a9506508692309914d481b8a2c7d9c3fc6",
+      "outputSha256": "dbb85d3cb02089924d4abf8510b056a9506508692309914d481b8a2c7d9c3fc6",
+      "transform": null
+    },
+    {
+      "file": "scene-animal-behavior.mjs",
+      "sourceSha256": "d0391f80547bbf3f535071dec925b8ad665b30b4ac0abcb87fa9b7ed49783640",
+      "outputSha256": "d0391f80547bbf3f535071dec925b8ad665b30b4ac0abcb87fa9b7ed49783640",
+      "transform": null
+    },
+    {
+      "file": "scene-wildlife.mjs",
+      "sourceSha256": "a1fb5842e04989000a63d8e3a6b19c3796fd05df1e74f9379d391f292c3633d1",
+      "outputSha256": "a1fb5842e04989000a63d8e3a6b19c3796fd05df1e74f9379d391f292c3633d1",
+      "transform": null
+    },
+    {
+      "file": "scene-aquatic.mjs",
+      "sourceSha256": "2e5194a729e2a59f2b7eb57ebdf69b58d4ac3fb88f9f726fe909799610b6e50b",
+      "outputSha256": "2e5194a729e2a59f2b7eb57ebdf69b58d4ac3fb88f9f726fe909799610b6e50b",
+      "transform": null
+    },
+    {
+      "file": "scene-fish.mjs",
+      "sourceSha256": "918a5ea3b32e3cb6a18069bdb2eaac6462fd60fed5387480031f8349d46dd8a0",
+      "outputSha256": "918a5ea3b32e3cb6a18069bdb2eaac6462fd60fed5387480031f8349d46dd8a0",
+      "transform": null
+    },
+    {
+      "file": "scene-station.mjs",
+      "sourceSha256": "82aaeb9347f5ee4e3e2497efc864a7fe17f72472c7e356682f467f3eb1f5b2c5",
+      "outputSha256": "82aaeb9347f5ee4e3e2497efc864a7fe17f72472c7e356682f467f3eb1f5b2c5",
+      "transform": null
+    },
+    {
+      "file": "scene-ground-cover.mjs",
+      "sourceSha256": "024e7e2a0f391c336bf19108d8d1fe7fad2c68e603968a695a082266a5abab10",
+      "outputSha256": "024e7e2a0f391c336bf19108d8d1fe7fad2c68e603968a695a082266a5abab10",
+      "transform": null
+    },
+    {
+      "file": "scene-foliage-pattern.mjs",
+      "sourceSha256": "640842e8ed216c1fa914f16128c65ef55b18955d386d6f9a7798df30a3ee7c4a",
+      "outputSha256": "640842e8ed216c1fa914f16128c65ef55b18955d386d6f9a7798df30a3ee7c4a",
+      "transform": null
+    },
+    {
+      "file": "scene-tree-shape.mjs",
+      "sourceSha256": "13aab8be13f9b014e5caa357876fd3d144e7a46cbebeb3fcaf76f7e383a5e56e",
+      "outputSha256": "13aab8be13f9b014e5caa357876fd3d144e7a46cbebeb3fcaf76f7e383a5e56e",
+      "transform": null
+    },
+    {
+      "file": "scene-flower-ground.mjs",
+      "sourceSha256": "0389efd24f25ddb3bfc83200359293b848f7f409f285cf12c794d5e1d376ef2c",
+      "outputSha256": "0389efd24f25ddb3bfc83200359293b848f7f409f285cf12c794d5e1d376ef2c",
+      "transform": null
+    },
+    {
+      "file": "scene-ice.mjs",
+      "sourceSha256": "5ac265a727b048713c88e1c16404327656ea17c8b32271ba3f24d0d5d3fe811a",
+      "outputSha256": "5ac265a727b048713c88e1c16404327656ea17c8b32271ba3f24d0d5d3fe811a",
+      "transform": null
+    },
+    {
+      "file": "scene-cascade.mjs",
+      "sourceSha256": "59880a2a53a31fab69554e9fd31f8ec116f74cdd412e69b7f145b76413f4ba0a",
+      "outputSha256": "59880a2a53a31fab69554e9fd31f8ec116f74cdd412e69b7f145b76413f4ba0a",
+      "transform": null
+    },
+    {
+      "file": "scene-motion.mjs",
+      "sourceSha256": "3091c1b2b3dacaf848f5ffb92029a5777052519d890934e1cd3e923578c2e734",
+      "outputSha256": "3091c1b2b3dacaf848f5ffb92029a5777052519d890934e1cd3e923578c2e734",
+      "transform": null
+    },
+    {
+      "file": "scene-station-room.mjs",
+      "sourceSha256": "154b80417f86457a1ad04d9318cc8875981d68c4d34301e9bf1e5e8226efa9e2",
+      "outputSha256": "154b80417f86457a1ad04d9318cc8875981d68c4d34301e9bf1e5e8226efa9e2",
+      "transform": null
+    }
+  ]
+}

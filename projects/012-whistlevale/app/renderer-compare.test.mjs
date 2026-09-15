@@ -1,0 +1,8 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {studyFrame,modelMatrices,comparePixels} from './renderer-scene.mjs';
+import {transform} from './webgl-math.mjs';
+const state={mode:'detail',step:6,compare:false,sun:135,time:2.3,yaw:.25,pitch:.32,distance:9.5,target:[-1,1.35,.15]};
+test('shared frame preserves state and camera target lies on optical axis',()=>{const before=JSON.stringify(state);for(const [w,h] of[[720,440],[1440,900],[360,410]]){const f=studyFrame(state,w,h),target=transform(f.vp,state.target);assert.ok(Math.abs(target[0]/target[3])<1e-6);assert.ok(Math.abs(target[1]/target[3])<1e-6);assert.ok(f.focus>0);assert.deepEqual(f,studyFrame(state,w,h));}assert.equal(JSON.stringify(state),before);});
+test('both renderers receive one world, one car, four wheels with same translations',()=>{const models=modelMatrices(2.3);assert.deepEqual(models.map(v=>v[0]),['world','car','wheel','wheel','wheel','wheel']);const car=transform(models[1][1],[0,0,0]);assert.ok(Math.abs(car[0]-2.3)<1e-6);for(const [,matrix] of models.slice(2)){const wheel=transform(matrix,[0,0,0]);assert.ok(Math.abs(Math.abs(wheel[0]-car[0])-.58)<1e-6);assert.ok(Math.abs(wheel[1]-.665)<1e-6);}});
+test('pixel metric ignores alpha and exposes sparse large errors',()=>{assert.deepEqual(comparePixels(new Uint8Array([1,2,3,255]),new Uint8Array([1,2,3,0])),{pixels:1,mean:0,peak:0,overTwoPercent:0});const a=new Uint8Array([0,0,0,255,100,100,100,255]),b=new Uint8Array([3,0,0,255,102,100,100,255]);const r=comparePixels(a,b);assert.equal(r.mean,5/6);assert.equal(r.peak,3);assert.equal(r.overTwoPercent,50);assert.throws(()=>comparePixels(a,b.slice(0,4)));});

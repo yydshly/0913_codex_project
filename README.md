@@ -28,6 +28,7 @@
 | 009 | [城景工坊 · 城市景点汇总 Skill](projects/009-city-landmark-map/README.md) | 汇总城市及周边景点，以图鉴展示特色、介绍与大体位置；后期需要优化实现 | [YouMind相关线索](https://youmind.com/skills/yhbukK6TtKX0t9) · 原版本待核实 | 研究原型 · 待优化 | [实际演示导览](https://yydshly.github.io/0913_codex_project/009-city-landmark-map/archive.html) |
 | 010 | [Mini Moto 赛车游戏参考与实践总结](projects/010-mini-moto-comparison/README.md) | 赛车类游戏参考：核心为场景构建与赛车手能力构建；保留基础竞速和驾驶演示，后续按项目需求开发 | [作者原作](https://mini-moto-park.chipchaunceytheonlyone.chatgpt.site/) | 已总结 | [网页研究与比赛](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/) · [自由驾驶练习](https://yydshly.github.io/0913_codex_project/010-mini-moto-comparison/ride.html) |
 | 011 | [前端视觉实验室](projects/011-frontend-visual-lab/README.md) | 内容结构、视觉设计、动效编排、场景特效四种优化方式；64项交互、16个原版组件和V4.3实际作品场景 | [Canvas UI](https://canvasui.dev/) · [GSAP](https://gsap.com/) | 已上线 | [摘要与看图体验](https://yydshly.github.io/0913_codex_project/011-frontend-visual-lab/research.html) |
+| 012 | [Whistlevale · 展厅与精细展品](projects/012-whistlevale/README.md) | 展厅与展台的适用场景；原作及实际对照双图引导，研究精细化和 Three.js / WebGL 2 选择 | [nickfromlater/whistlevale](https://github.com/nickfromlater/whistlevale) | 已总结 · 发布准备中 | — |
 <!-- PROJECT_INDEX_END -->
 
 进度：`待研究` → `研究中` → `已复现` → `已总结`；暂时停止的项目标为 `暂缓`。演示未上线时填写 `—`。
@@ -148,6 +149,18 @@
 *2026-09-15实际浏览器截图。点击从研究进入看图体验；完整HTML变形取决于浏览器能力，截图与实时场景分别说明。*
 
 [在线摘要与看图体验](https://yydshly.github.io/0913_codex_project/011-frontend-visual-lab/research.html) · [完整实验室](https://yydshly.github.io/0913_codex_project/011-frontend-visual-lab/) · [理解摘要](projects/011-frontend-visual-lab/understanding.md) · [能力与操作](projects/011-frontend-visual-lab/README.md) · [全部优化记录](projects/011-frontend-visual-lab/portfolio-iterations.md) · [发布范围与验证](projects/011-frontend-visual-lab/publishing.md)
+
+### 012 · Whistlevale / 展厅与精细展品
+
+展厅组织整体空间与参观路径，展台呈现单件作品的效果与能力；适合研究作品收藏、旅游与陌生地方介绍、产品和文化展示。通过精细化开关与同场景对照，理解模型、材料、光照的投入，以及 Three.js 与原生 WebGL 2 的选择。
+
+| 原作演示 · 看展厅与展品 | 我们的演示 · 看精细化与技术对照 |
+| :--- | :--- |
+| [![012 原作 Alder Valley 实测：房间里的铁路沙盘、村庄与湖泊](projects/012-whistlevale/assets/01-alder-valley-overview.jpg)](https://whistlevale.com/?room=valley) | [![012 我们的实际同机位对照：Three.js 自定义算法与原生 WebGL 2 绘制精细车站](projects/012-whistlevale/assets/renderer-comparison-v1/01-custom-station.jpg)](projects/012-whistlevale/renderer-comparison.md) |
+
+*2026-09-15 实际浏览器截图；左图来自作者线上原作，右图来自本项目独立实验。两张引导图不是同一模型的画质评比；右图内部才是受控技术对照。*
+
+[完整理解](projects/012-whistlevale/understanding.md) · [项目与效果](projects/012-whistlevale/README.md) · [实测数据](projects/012-whistlevale/renderer-comparison.md) · [发布记录](projects/012-whistlevale/publishing.md)
 
 <!-- PROJECT_PREVIEWS_END -->
 

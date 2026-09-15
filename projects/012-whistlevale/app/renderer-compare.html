@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Three.js 能做到多精细？· 实际效果对照</title><link rel="stylesheet" href="webgl-lab.css"><link rel="stylesheet" href="renderer-compare.css"></head>
+<body><header><a href="index.html">← 我们的作品馆</a><a href="research.html#decision">研究摘要与选型</a><a href="webgl-lab.html#detail">回到细节拆解 →</a></header>
+<main>
+ <div class="intro"><h1>Three.js 能做到多精细？</h1><p>同一座精细车站，两套独立渲染器。先看效果，再判断哪些工作需要自定义。</p></div>
+ <section class="route-choice" aria-label="选择 Three.js 实现"><span>左侧 Three.js</span><button data-profile="standard" aria-pressed="false">① 内置材质配置</button><button data-profile="custom" aria-pressed="true">② 接入同样的算法</button><span class="reference">右侧固定：原生 WebGL 2</span></section>
+ <p id="profile-note" class="profile-note">两侧共用精细模型、着色算法、机位和摄影参数。Three.js 负责组织场景与提交绘制。</p>
+ <nav class="look-points" aria-label="观察位置"><button data-preset="station" aria-pressed="true">站房与屋檐</button><button data-preset="wood" aria-pressed="false">木纹与砖缝</button><button data-preset="train" aria-pressed="false">车漆与金属</button><button data-preset="night" aria-pressed="false">夜间灯光</button><button data-preset="lens" aria-pressed="false">微缩景深</button></nav>
+ <div class="compare-layout">
+  <section aria-label="两种技术的实时画面" class="compare-viewer">
+   <div id="compare-stage" tabindex="0" role="group" aria-label="同机位对照。拖动旋转，滚轮缩放，方向键转动。"><canvas id="three-canvas" aria-label="Three.js 独立渲染结果"></canvas><canvas id="native-canvas" aria-label="原生 WebGL 2 独立渲染结果"></canvas><div class="engine-label left" id="three-label">Three.js · 同算法自定义</div><div class="engine-label right">原生 WebGL 2</div><div id="engine-divider" aria-hidden="true"><span>↔</span></div><div id="compare-error" role="alert" hidden></div></div>
+   <label class="reveal-label" for="engine-split">拖动分界线，检查同一位置 <span id="split-output">50%</span></label><input id="engine-split" aria-label="技术对照分界线" type="range" min="0" max="100" value="50">
+   <div class="view-tools"><div role="group" aria-label="观看方式"><button data-display="split" aria-pressed="true">滑动对照</button><button data-display="three" aria-pressed="false">只看 Three.js</button><button data-display="native" aria-pressed="false">只看原生</button></div><button id="compare-reset">恢复默认</button></div>
+   <p class="small" id="compare-status" role="status">正在建立两套画面…</p>
+  </section>
+  <aside class="controls"><h2 id="observation-title">先看几何是否丢失</h2><p id="observation">观察窗框倒角、屋面接缝、站牌与铆钉。两侧使用同一组精细模型，不减少 Three.js 一侧的零件。</p>
+   <label for="compare-sun">两侧光线方向 <output id="compare-sun-value">135°</output></label><input id="compare-sun" type="range" min="0" max="360" value="135">
+   <label for="compare-night">两侧昼夜 <output id="compare-night-value">白天</output></label><input id="compare-night" type="range" min="0" max="1" value="0" step=".05">
+   <label for="compare-rough">两侧金属粗糙度 <output id="compare-rough-value">0.28</output></label><input id="compare-rough" type="range" min=".08" max=".95" value=".28" step=".01">
+   <label for="compare-lens">两侧景深强度 <output id="compare-lens-value">0.0</output></label><input id="compare-lens" type="range" min="0" max="1.8" value="0" step=".1">
+   <label for="compare-exposure">两侧曝光 <output id="compare-exposure-value">1.1</output></label><input id="compare-exposure" type="range" min=".4" max="2" value="1.1" step=".1">
+   <button id="measure-pixels" class="measure">检查当前帧差异</button><p id="pixel-result" class="small" aria-live="polite">按需读取两套 GPU 画面，比较 RGB 像素。切换参数后需要重新检查。</p>
+  </aside>
+ </div>
+ <section class="findings"><h2>哪些“现成配置”还不够？</h2><p>本页的内置配置已经提供精细模型、木纹与砖纹凹凸贴图、金属环境贴图、方向光、局部灯和阴影。它是一种实际配置，不代表 Three.js 最终能力上限。</p>
+ <div class="table-scroll"><table><thead><tr><th>效果</th><th>Three.js 内置配置</th><th>需要精确复现本实验时</th></tr></thead><tbody>
+ <tr><td>倒角、窗框、屋面接缝</td><td>精细几何可以完整显示</td><td>无需绕开框架；提供相同模型即可</td></tr>
+ <tr><td>木纹与砖缝起伏</td><td>可用颜色与凹凸贴图；本页已配置</td><td>连续程序纹理、特定高度函数需要自定义着色器</td></tr>
+ <tr><td>金属与玻璃观感</td><td>提供物理材质与环境反光；风格可能不同</td><td>复现原生版的特定反光近似，需要相同算法</td></tr>
+ <tr><td>柔影与补光</td><td>提供阴影、半球光和环境照明</td><td>指定的 5×5 滤波、补光公式需要自定义</td></tr>
+ <tr><td>微缩景深与色调</td><td>本页两侧都接入统一后处理</td><td>景深需要额外处理步骤，不能只靠模型材质</td></tr>
+ </tbody></table></div>
+ <p><strong>选型判断：</strong>若“② 接入同样的算法”能够保留目标效果，就没有因这项画质需求而放弃 Three.js 的证据。内置配置的色调差异不等于画质不足；是否更好，应以目标风格和实际需求判断。</p></section>
+ <details class="implementation"><summary>查看比较条件、实现责任与实际工作量</summary><p>两侧均为 19,168 个模型三角形，固定同一小车时刻。共享位置、法线、UV、颜色、相机矩阵、光源方向、1024 阴影尺寸、输出分辨率及摄影参数。② 还共享全部表面与阴影算法；① 使用 Three.js 的物理材质与灯光，光照公式不同，不是像素等价测试。</p><dl><dt>Three.js 当前帧调用／三角形提交</dt><dd id="three-work">—</dd><dt>原生当前帧调用／三角形提交</dt><dd id="native-work">—</dd><dt>共同画布像素</dt><dd id="compare-size">—</dd><dt>Three.js／原生颜色缓冲</dt><dd id="compare-format">—</dd></dl><p class="small">调用数包含实际阴影与后处理，缓存是否命中会改变数量。两个上下文同时渲染，不能用本页流畅度当作单独运行的性能排名；像素读取也会同步等待 GPU。本轮不报告 FPS 或开发工时优势。</p><p>② 用 Three.js 的 BufferGeometry、RawShaderMaterial、WebGLRenderTarget 和 render() 管理绘制；没有调用原生渲染器生成它的画面。GLSL 算法共享是为了检验能否移植，并非两侧显示同一张图。</p><p><a href="three-study-renderer.mjs">Three.js 实现</a> · <a href="three-standard-study.mjs">内置材质配置</a> · <a href="webgl-renderer.mjs">原生实现</a> · <a href="webgl-shaders.mjs">共享算法</a></p></details>
+ <section class="reading"><h2>来源与边界</h2><p>本仓库独立教学场景；Three.js r185（MIT，使用已有本地依赖）。参照 Whistlevale 固定源码 f3d769e8，未移植其完整作品。本页不能证明任意场景、设备都能像素相同，也未评估 WebGPU。局部灯没有投影，玻璃为不透明近似，反光不包含实际场景。</p><p><a href="https://threejs.org/docs/pages/RawShaderMaterial.html" target="_blank" rel="noopener">Three.js 自定义着色器</a> · <a href="https://threejs.org/docs/pages/MeshStandardMaterial.html" target="_blank" rel="noopener">内置物理材质与凹凸贴图</a> · <a href="https://threejs.org/docs/pages/RenderTarget.html" target="_blank" rel="noopener">渲染目标与后处理</a></p><p class="small">研究日期：2026-09-15。<a href="research.html">返回双图研究导览与摘要</a>。</p></section>
+</main><script type="module" src="renderer-compare.mjs"></script></body></html>

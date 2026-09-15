@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f4f2eb"><meta name="description" content="通过同一座小车站，逐步观察原生 WebGL 2 的几何、光照、材质、阴影、动画与微缩镜头。"><title>从三角形到小车站 · WebGL 2 实验</title><link rel="stylesheet" href="webgl-lab.css"></head>
+<body>
+<header><a href="index.html">← 我们的作品馆</a><a href="research.html">研究摘要与双图导览</a><a href="valley.html">白鹭河谷 →</a></header>
+<main id="detail">
+ <div class="intro"><h1>同一座车站，细节差在哪里？</h1><p>两侧都使用原生 WebGL 2。比较具体做法；Three.js 也能实现这些效果。</p></div>
+ <p class="small"><a href="renderer-compare.html">新增：Three.js 与原生 WebGL 2 的实际效果对照 →</a> · 当前页面仍是同一技术下的细节开关。</p>
+ <nav class="modes" aria-label="研究模式"><button data-mode="detail" aria-pressed="true">细节研究</button><button data-mode="intro" aria-pressed="false">七步入门</button><span>同一机位 · 同一时刻 · 同一曝光</span></nav>
+ <nav class="steps" id="intro-steps" aria-label="绘制过程" hidden>
+  <button id="step-0" data-step="0" aria-pressed="false"><small>01</small>三角形</button><button id="step-1" data-step="1" aria-pressed="false"><small>02</small>形体</button><button id="step-2" data-step="2" aria-pressed="false"><small>03</small>光照</button><button id="step-3" data-step="3" aria-pressed="false"><small>04</small>材质</button><button id="step-4" data-step="4" aria-pressed="false"><small>05</small>阴影</button><button id="step-5" data-step="5" aria-pressed="false"><small>06</small>动画</button><button id="step-6" data-step="6" aria-pressed="true"><small>07</small>摄影</button>
+ </nav>
+ <div class="workspace">
+  <section class="viewer" aria-label="实时实验画面">
+   <div id="detail-toolbar" class="detail-toolbar"><div role="group" aria-label="对照方式"><button data-edition="split" aria-pressed="true">滑动对照</button><button data-edition="base" aria-pressed="false">只看基础</button><button data-edition="fine" aria-pressed="false">只看精细</button></div><span id="model-count" class="small"></span></div>
+   <div class="canvas-wrap"><canvas id="webgl-canvas" aria-label="WebGL 2 小车站。可拖动旋转，也可使用下方视角按钮。" tabindex="0"></canvas><span class="view-label" id="view-label">正在建立画面…</span><div id="split-overlay" aria-hidden="true"><span class="base-label">基础</span><span class="fine-label">当前精细</span><div id="split-line"><span>↔</span></div></div><div id="error" role="alert" hidden><h2>暂时无法显示三维画面</h2><p id="error-message"></p><button id="retry">重新建立画面</button></div></div>
+   <div id="split-control"><label for="split">移动分界线 <span>左侧基础 ／ 右侧精细</span></label><input id="split" type="range" min="0" max="100" value="50" step="1" aria-label="对比分界线，左侧基础右侧精细"></div>
+   <div class="view-tools"><div><button id="overview">全景</button><button id="closeup">近看站房</button><button id="left" aria-label="向左转动视角">←</button><button id="right" aria-label="向右转动视角">→</button><button id="zoom-in" aria-label="拉近视角">＋</button><button id="zoom-out" aria-label="拉远视角">－</button></div><button id="pause" aria-pressed="false">暂停小车</button></div>
+   <div class="scene-note"><span>拖动环顾 · 滚轮缩放</span><span id="render-status" role="status">正在编译着色器</span></div>
+  </section>
+  <aside class="controls" aria-label="实验参数">
+   <div class="control-title"><h2 id="step-title">微缩摄影</h2><span id="step-number">07 / 07</span></div>
+   <p id="see">正在准备实验说明。</p>
+   <div id="detail-controls"><div class="topics" role="group" aria-label="观察重点"><button data-topic="structure" aria-pressed="true">结构</button><button data-topic="materials" aria-pressed="false">材料</button><button data-topic="lighting" aria-pressed="false">光线</button></div><fieldset><legend>精细版增加哪些实现</legend><label><input id="detail-geometry" type="checkbox" checked>结构零件 <small>倒角、窗框、接缝、站牌</small></label><label><input id="detail-materials" type="checkbox" checked>表面材料 <small>顺纹、凹凸、反光</small></label><label><input id="detail-lighting" type="checkbox" checked>柔影与补光 <small>阴影滤波、天空与地面</small></label></fieldset><button id="isolate">只比较结构</button><p class="small">关闭三项后，两侧应完全一致。滑动对照时小车固定，便于逐处观察。</p></div>
+   <button id="compare" class="compare" aria-pressed="false">去掉本步，对照</button>
+   <p id="compare-note" class="small">保留当前机位与参数，观察上一步的结果。</p>
+   <label for="sun">光线方向 <output id="sun-output">135°</output></label><input id="sun" type="range" min="0" max="360" value="135" step="1">
+   <label for="night">昼夜氛围 <output id="night-output">白天</output></label><input id="night" type="range" min="0" max="1" value="0" step="0.05">
+   <label for="roughness">车漆与金属粗糙度 <output id="roughness-output">0.28</output></label><input id="roughness" type="range" min="0.08" max="0.95" value="0.28" step="0.01">
+   <label for="lens">景深强度 <output id="lens-output">0.8</output></label><input id="lens" type="range" min="0" max="1.8" value="0.8" step="0.1">
+   <label for="exposure">曝光 <output id="exposure-output">1.1</output></label><input id="exposure" type="range" min="0.4" max="2" value="1.1" step="0.1">
+   <label for="diagnostic">观察中间结果</label><select id="diagnostic"><option value="final">最终画面</option><option value="normals">几何表面朝向（不含微凹凸）</option><option value="shadow">光源深度图（入门第 05 步起）</option></select>
+   <button id="reset" class="reset">恢复本实验默认设置</button>
+  </aside>
+ </div>
+ <section class="explanation" aria-labelledby="explanation-title">
+  <div><span class="section-label">这一层怎样产生</span><h2 id="explanation-title">从画面理解计算过程</h2><p id="change"></p><p class="try"><strong>动手观察：</strong><span id="try"></span></p></div>
+  <div><span class="section-label">与已有研究的关系</span><h3>Three.js 通常帮我们做什么</h3><p id="three"></p><h3>Whistlevale 在哪里实现</h3><p id="native"></p><a id="upstream" href="https://github.com/nickfromlater/whistlevale" target="_blank" rel="noopener">查看固定版本源码 ↗</a></div>
+ </section>
+ <details class="implementation"><summary>展开实现：从数据到像素</summary>
+  <ol class="pipeline"><li><strong>JavaScript</strong>生成几何与状态</li><li><strong>缓冲区</strong>把数据交给显卡</li><li><strong>顶点着色器</strong>变换位置</li><li><strong>光栅化</strong>覆盖屏幕片元</li><li><strong>片元着色器</strong>计算颜色与光照</li><li><strong>深度与合成</strong>决定最后显示结果</li></ol>
+  <div class="code-row"><div><h3>本步骤的简化逻辑</h3><pre><code id="code"></code></pre><a id="source-file" href="webgl-renderer.mjs">阅读本实验对应源码</a></div><div><h3>当前帧实际工作量</h3><dl><dt>绘制调用</dt><dd id="draw-calls">—</dd><dt>提交的三角形</dt><dd id="triangles">—</dd><dt>画布像素</dt><dd id="pixels">—</dd><dt>摄影缓冲</dt><dd id="buffer-format">—</dd><dt>本帧阴影图</dt><dd id="shadow-status">—</dd></dl><p class="small">包括阴影和全屏绘制。滑动对照会绘制两套画面；模型结构不同时还会重绘阴影。数值不是 FPS，也不是与 Three.js 的性能排名。</p></div></div>
+ </details>
+ <section class="reading" aria-labelledby="reading-title"><h2 id="reading-title">这次实验说明什么</h2><p>WebGL 2 提供基础绘图接口。模型、光照、阴影和镜头要由程序组织；Three.js 已经封装了其中许多通用工作。这里全部使用原生 WebGL 2，没有导入 Three.js。</p><p>小车站为独立编写的教学模型，借鉴原作的研究问题，未移植 Whistlevale 场景。小车只在直轨往返；材质使用简化光照，玻璃是不透明近似；摄影步骤实现景深与色调处理，没有泛光、真实镜头或物理铁路仿真。它展示实现过程，不代表原作最终品质。</p>
+  <h3>继续阅读</h3><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext" target="_blank" rel="noopener">MDN：WebGL 2 接口与绘制能力</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL" target="_blank" rel="noopener">MDN：法线与光照计算</a></li><li><a href="https://threejs.org/docs/pages/ShaderMaterial.html" target="_blank" rel="noopener">Three.js：自定义着色器</a></li><li><a href="https://whistlevale.com/?room=valley" target="_blank" rel="noopener">作者原作：Alder Valley</a></li></ul><p class="small">研究日期：2026-09-15。上游源码固定 f3d769e8（MIT）；线上部署版本未核实。本实验保存在 012 项目中；<a href="research.html">双图导览与研究摘要</a>。</p>
+ </section>
+</main><noscript><p>开启 JavaScript 可操作实验；仍可通过本页官方资料链接阅读实现原理。</p></noscript><script type="module" src="webgl-lab.mjs"></script>
+</body></html>

@@ -61,6 +61,10 @@ jobs:
           node projects/008-terrain-motion-lab/app/snapshot.mjs verify v003
       - name: Verify city atlas evidence and composition rules
         run: npm test --prefix projects/009-city-landmark-map/app
+      - name: Verify Whistlevale comparison and gallery
+        run: |
+          node --test projects/012-whistlevale/app/webgl-math.test.mjs projects/012-whistlevale/app/renderer-compare.test.mjs
+          node projects/012-whistlevale/app/check.mjs
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Install 006 research document renderer

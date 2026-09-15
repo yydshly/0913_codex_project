@@ -1,0 +1,57 @@
+{
+  "captured": "2026-09-15",
+  "source": "Author hosted application at whistlevale.com",
+  "sourceDeploymentCommit": "unverified",
+  "researchCommit": "f3d769e8ea54d2f5a47d12f27773541b484c6302",
+  "images": [
+    {
+      "file": "01-alder-valley-overview.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 173218,
+      "sha256": "d23216a9cc2965002f7c78275306af8e215fe3634228b61d0d836029674c92d7"
+    },
+    {
+      "file": "02-train-cutaway-controls.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 105943,
+      "sha256": "a43fef95dc8ada08abec06ac794e502e24f9abfecc06801299a1f773d9168498"
+    },
+    {
+      "file": "03-train-detail.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 100492,
+      "sha256": "d3a56b53acf8b8af76f719f2c505078a3d81b7c80bf222ab69a3bc90e0473e61"
+    },
+    {
+      "file": "04-night-cinema.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 91438,
+      "sha256": "145d2a71fafb835e4bdf8bb41c46aea4d5a16f6a0874048302eb3ec51ed7aea5"
+    },
+    {
+      "file": "05-layout-editor-plan.jpg",
+      "width": 797,
+      "height": 898,
+      "bytes": 132690,
+      "sha256": "e609aaa931032208c9cedfa8260c33c2eb58e92bb717dcc05d962dd4cd65ab87"
+    },
+    {
+      "file": "06-house-map.jpg",
+      "width": 797,
+      "height": 898,
+      "bytes": 72162,
+      "sha256": "51e10bbe6ad4a7a7ad1f65b50c124be949065c46ae99b7a4e58fc8ea6acb42bc"
+    },
+    {
+      "file": "07-grand-hall.jpg",
+      "width": 797,
+      "height": 898,
+      "bytes": 85026,
+      "sha256": "8748639691364645a1e572be0babae68226752f25361c988da860fb902141075"
+    }
+  ]
+}

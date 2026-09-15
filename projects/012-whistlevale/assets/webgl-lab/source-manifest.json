@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-15",
+  "version": "working-tree snapshot; SHA-256 identifies exact source files",
+  "upstreamReferenceCommit": "f3d769e8ea54d2f5a47d12f27773541b484c6302",
+  "files": [
+    {
+      "file": "webgl-geometry.mjs",
+      "sha256": "fc17436cf5b2c9ff8d1492e4426d4a4917faeece604daa3798c3ff977a4137c1"
+    },
+    {
+      "file": "webgl-lab.css",
+      "sha256": "71d4a450926a571fd38a7dcf8d42d576f5b6dc2b0d7ac9239f1746ac5b1d3b43"
+    },
+    {
+      "file": "webgl-lab.html",
+      "sha256": "5010bbdddf06c6f4c4485ba640ad574b249210b3f1a4d76a2c253866c67946ca"
+    },
+    {
+      "file": "webgl-lab.mjs",
+      "sha256": "9a0c30c266d812627c756118395f93f7333bd0955c2c37b5a56fa756ab7faa0a"
+    },
+    {
+      "file": "webgl-lessons.mjs",
+      "sha256": "c077701ab989f31b4aabb5a3fb823fdda4efe3101300c195fee1e3aba8078652"
+    },
+    {
+      "file": "webgl-math.mjs",
+      "sha256": "6dd614e2b161e1b492e1593f244167267ba53d665140ca4492db08e25fd3349a"
+    },
+    {
+      "file": "webgl-math.test.mjs",
+      "sha256": "1a24c57fb3a4e75173d253d782d710bb817a97edd602f2f4eadc7e9631ece6ce"
+    },
+    {
+      "file": "webgl-renderer.mjs",
+      "sha256": "e08cd02b332f3f1d272c5a8dd876224e835706ac3c28c348742ee98c0ff29867"
+    },
+    {
+      "file": "webgl-shaders.mjs",
+      "sha256": "305904d0f71331ca1c01436ed8f037f6676708d6c1af842cbcc7f96427d35c06"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-15",
+  "note": "Existing project screenshots copied byte-for-byte. Not screenshots of the new gallery.",
+  "images": [
+    {
+      "file": "railway.png",
+      "source": "projects/003-mountain-railway-diorama/assets/scene-v38-final-spring.png",
+      "bytes": 69322,
+      "sha256": "96e1131c242b3dbbe41c8a8ed1c8bbbf1962ca8e8400836e0a6137f64597409c"
+    },
+    {
+      "file": "weather.jpg",
+      "source": "projects/004-eanpa-sky/assets/35-rain-porch-full.jpg",
+      "bytes": 32276,
+      "sha256": "682666816e238283b2bc2c7d14c37d0bb11ff5b1e01d6c158c9db67f9e3a23f7"
+    },
+    {
+      "file": "nature.png",
+      "source": "projects/008-terrain-motion-lab/assets/natural-ground-view.png",
+      "bytes": 114201,
+      "sha256": "03d2c564dfb10c81fa39cd647f67183b921549b2c2756e371e719176def20834"
+    },
+    {
+      "file": "city.png",
+      "source": "projects/009-city-landmark-map/assets/demo/01-xian-demo.png",
+      "bytes": 143397,
+      "sha256": "f7ece1f0d0f90d0e3d586c77db9fc8adabeecb1774dbf06c243368ec90ee3e87"
+    },
+    {
+      "file": "visual.png",
+      "source": "projects/011-frontend-visual-lab/assets/128-weather-story-snow.png",
+      "bytes": 91905,
+      "sha256": "a3a57be7f10ea792ce66e45bfed787dece8b03130dd97a0500ee16ebf5efe0c1"
+    }
+  ]
+}

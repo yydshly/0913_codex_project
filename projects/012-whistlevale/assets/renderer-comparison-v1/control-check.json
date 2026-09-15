@@ -1,0 +1,30 @@
+{
+  "profile": "custom",
+  "preset": "train",
+  "frame": {
+    "sun": 270,
+    "night": 0.45,
+    "lens": 1.8,
+    "roughness": 0.08,
+    "exposure": 0.7,
+    "yaw": 0.48,
+    "pitch": 0.26,
+    "distance": 5.5,
+    "target": [
+      2.3,
+      1,
+      2.5
+    ],
+    "time": 2.3170698371871947
+  },
+  "difference": {
+    "pixels": 727090,
+    "mean": 0.0004556978274124707,
+    "peak": 49,
+    "overTwoPercent": 0.006051520444511683
+  },
+  "size": "1105 × 658",
+  "format": "RGBA16F / RGBA16F",
+  "threeWork": "7 / 19,169",
+  "nativeWork": "7 / 19,169"
+}

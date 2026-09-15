@@ -1,0 +1,314 @@
+{
+  "date": "2026-09-15",
+  "method": "Immediate GPU RGBA readback after each independent render; shared frozen scene state; RGB metrics ignore alpha.",
+  "cases": [
+    {
+      "profile": "custom",
+      "preset": "station",
+      "frame": {
+        "sun": 135,
+        "night": 0,
+        "lens": 0,
+        "roughness": 0.28,
+        "exposure": 1.1,
+        "yaw": 0.25,
+        "pitch": 0.32,
+        "distance": 9.5,
+        "target": [
+          -1,
+          1.35,
+          0.15
+        ],
+        "time": 2.3170698371871947
+      },
+      "difference": {
+        "pixels": 727090,
+        "mean": 0.0021308687140977503,
+        "peak": 194,
+        "overTwoPercent": 0.008252073333425024
+      },
+      "size": "1105 × 658",
+      "format": "RGBA16F / RGBA16F",
+      "threeWork": "7 / 19,169",
+      "nativeWork": "7 / 19,169"
+    },
+    {
+      "profile": "custom",
+      "preset": "wood",
+      "frame": {
+        "sun": 135,
+        "night": 0,
+        "lens": 0,
+        "roughness": 0.28,
+        "exposure": 1.1,
+        "yaw": 0.05,
+        "pitch": 0.18,
+        "distance": 6.3,
+        "target": [
+          -1.1,
+          2.05,
+          0.05
+        ],
+        "time": 2.3170698371871947
+      },
+      "difference": {
+        "pixels": 727090,
+        "mean": 0.0023710957378041235,
+        "peak": 31,
+        "overTwoPercent": 0.03864721011154052
+      },
+      "size": "1105 × 658",
+      "format": "RGBA16F / RGBA16F",
+      "threeWork": "7 / 19,169",
+      "nativeWork": "7 / 19,169"
+    },
+    {
+      "profile": "custom",
+      "preset": "train",
+      "frame": {
+        "sun": 135,
+        "night": 0,
+        "lens": 0,
+        "roughness": 0.28,
+        "exposure": 1.1,
+        "yaw": 0.48,
+        "pitch": 0.26,
+        "distance": 5.5,
+        "target": [
+          2.3,
+          1,
+          2.5
+        ],
+        "time": 2.3170698371871947
+      },
+      "difference": {
+        "pixels": 727090,
+        "mean": 0.0007523140188972479,
+        "peak": 93,
+        "overTwoPercent": 0.0030257602222558415
+      },
+      "size": "1105 × 658",
+      "format": "RGBA16F / RGBA16F",
+      "threeWork": "7 / 19,169",
+      "nativeWork": "7 / 19,169"
+    },
+    {
+      "profile": "custom",
+      "preset": "night",
+      "frame": {
+        "sun": 135,
+        "night": 1,
+        "lens": 0,
+        "roughness": 0.28,
+        "exposure": 1.1,
+        "yaw": 0.35,
+        "pitch": 0.32,
+        "distance": 9.5,
+        "target": [
+          -0.6,
+          1.3,
+          0.3
+        ],
+        "time": 2.3170698371871947
+      },
+      "difference": {
+        "pixels": 727090,
+        "mean": 0.0007293915929710673,
+        "peak": 84,
+        "overTwoPercent": 0.0050887785556120975
+      },
+      "size": "1105 × 658",
+      "format": "RGBA16F / RGBA16F",
+      "threeWork": "7 / 19,169",
+      "nativeWork": "7 / 19,169"
+    },
+    {
+      "profile": "custom",
+      "preset": "lens",
+      "frame": {
+        "sun": 135,
+        "night": 0,
+        "lens": 1.5,
+        "roughness": 0.28,
+        "exposure": 1.1,
+        "yaw": 0.55,
+        "pitch": 0.63,
+        "distance": 15,
+        "target": [
+          -0.2,
+          0.35,
+          0
+        ],
+        "time": 2.3170698371871947
+      },
+      "difference": {
+        "pixels": 727090,
+        "mean": 0.0014794133692756972,
+        "peak": 112,
+        "overTwoPercent": 0.019392372333548805
+      },
+      "size": "1105 × 658",
+      "format": "RGBA16F / RGBA16F",
+      "threeWork": "7 / 19,169",
+      "nativeWork": "7 / 19,169"
+    },
+    {
+      "profile": "standard",
+      "preset": "station",
+      "frame": {
+        "sun": 135,
+        "night": 0,
+        "lens": 0,
+        "roughness": 0.28,
+        "exposure": 1.1,
+        "yaw": 0.25,
+        "pitch": 0.32,
+        "distance": 9.5,
+        "target": [
+          -1,
+          1.35,
+          0.15
+        ],
+        "time": 2.3170698371871947
+      },
+      "difference": {
+        "pixels": 727090,
+        "mean": 15.017680067116864,
+        "peak": 201,
+        "overTwoPercent": 58.55795018498397
+      },
+      "size": "1105 × 658",
+      "format": "RGBA16F / RGBA16F",
+      "threeWork": "41 / 38,337",
+      "nativeWork": "7 / 19,169"
+    },
+    {
+      "profile": "standard",
+      "preset": "wood",
+      "frame": {
+        "sun": 135,
+        "night": 0,
+        "lens": 0,
+        "roughness": 0.28,
+        "exposure": 1.1,
+        "yaw": 0.05,
+        "pitch": 0.18,
+        "distance": 6.3,
+        "target": [
+          -1.1,
+          2.05,
+          0.05
+        ],
+        "time": 2.3170698371871947
+      },
+      "difference": {
+        "pixels": 727090,
+        "mean": 11.827607769785493,
+        "peak": 153,
+        "overTwoPercent": 62.87804810958754
+      },
+      "size": "1105 × 658",
+      "format": "RGBA16F / RGBA16F",
+      "threeWork": "41 / 38,337",
+      "nativeWork": "7 / 19,169"
+    },
+    {
+      "profile": "standard",
+      "preset": "train",
+      "frame": {
+        "sun": 135,
+        "night": 0,
+        "lens": 0,
+        "roughness": 0.28,
+        "exposure": 1.1,
+        "yaw": 0.48,
+        "pitch": 0.26,
+        "distance": 5.5,
+        "target": [
+          2.3,
+          1,
+          2.5
+        ],
+        "time": 2.3170698371871947
+      },
+      "difference": {
+        "pixels": 727090,
+        "mean": 16.47883251500273,
+        "peak": 113,
+        "overTwoPercent": 72.35486666024839
+      },
+      "size": "1105 × 658",
+      "format": "RGBA16F / RGBA16F",
+      "threeWork": "41 / 38,337",
+      "nativeWork": "7 / 19,169"
+    },
+    {
+      "profile": "standard",
+      "preset": "night",
+      "frame": {
+        "sun": 135,
+        "night": 1,
+        "lens": 0,
+        "roughness": 0.28,
+        "exposure": 1.1,
+        "yaw": 0.35,
+        "pitch": 0.32,
+        "distance": 9.5,
+        "target": [
+          -0.6,
+          1.3,
+          0.3
+        ],
+        "time": 2.3170698371871947
+      },
+      "difference": {
+        "pixels": 727090,
+        "mean": 7.926115519857698,
+        "peak": 231,
+        "overTwoPercent": 59.38439532932649
+      },
+      "size": "1105 × 658",
+      "format": "RGBA16F / RGBA16F",
+      "threeWork": "41 / 38,337",
+      "nativeWork": "7 / 19,169"
+    },
+    {
+      "profile": "standard",
+      "preset": "lens",
+      "frame": {
+        "sun": 135,
+        "night": 0,
+        "lens": 1.5,
+        "roughness": 0.28,
+        "exposure": 1.1,
+        "yaw": 0.55,
+        "pitch": 0.63,
+        "distance": 15,
+        "target": [
+          -0.2,
+          0.35,
+          0
+        ],
+        "time": 2.3170698371871947
+      },
+      "difference": {
+        "pixels": 727090,
+        "mean": 6.685211367689465,
+        "peak": 121,
+        "overTwoPercent": 31.23299729056925
+      },
+      "size": "1105 × 658",
+      "format": "RGBA16F / RGBA16F",
+      "threeWork": "41 / 38,337",
+      "nativeWork": "7 / 19,169"
+    }
+  ],
+  "logs": [
+    {
+      "level": "warn",
+      "message": "THREE.WebGLProgram: Program Info Log: (210,81-129): warning X4122: sum of 0.996094 and -2.98545e-017 cannot be represented accurately in double precision\n(209,37-61): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(210,82-106): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(209,37-61): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision\n(210,82-106): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision\n\n\n\u0000",
+      "timestamp": "2026-09-15T05:38:49.889Z",
+      "url": "http://127.0.0.1:8412/vendor/three.core.js"
+    }
+  ]
+}

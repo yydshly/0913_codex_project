@@ -1,0 +1,78 @@
+{
+  "date": "2026-09-15",
+  "kind": "actual-local-browser-captures",
+  "files": [
+    {
+      "file": "01-split.jpg",
+      "format": "JPEG",
+      "width": 782,
+      "height": 881,
+      "bytes": 88349,
+      "sha256": "2a26fd242c9a6053ff2065bb98ac96e1c96846b052218a1f3b869c1bf81bf807"
+    },
+    {
+      "file": "02-base.jpg",
+      "format": "JPEG",
+      "width": 782,
+      "height": 881,
+      "bytes": 83035,
+      "sha256": "599188fb1238dc18be2dd1fb799fe170f1328227f90f00f4c0b798b8bb36db10"
+    },
+    {
+      "file": "03-fine.jpg",
+      "format": "JPEG",
+      "width": 782,
+      "height": 881,
+      "bytes": 92382,
+      "sha256": "f1dad577a5a556edee0620513010ff9133552933d9e3d00f5835f0c6faa480a4"
+    },
+    {
+      "file": "04-structure-only.jpg",
+      "format": "JPEG",
+      "width": 782,
+      "height": 881,
+      "bytes": 89961,
+      "sha256": "caa5371bc4295f281e04e54d65dceb3742a7e31b9d506144fa9a3f18367d4774"
+    },
+    {
+      "file": "05-materials-only.jpg",
+      "format": "JPEG",
+      "width": 782,
+      "height": 881,
+      "bytes": 88282,
+      "sha256": "00340bf1d7518275310075282e6bce1d98ee3849a6f6bfaca0b2f795377586d9"
+    },
+    {
+      "file": "06-lighting-only.jpg",
+      "format": "JPEG",
+      "width": 782,
+      "height": 881,
+      "bytes": 86570,
+      "sha256": "305b546af18bb5956a4e88f9af9120d83872994271e9bccc73185260b5eb54b5"
+    },
+    {
+      "file": "07-night-lighting.jpg",
+      "format": "JPEG",
+      "width": 782,
+      "height": 881,
+      "bytes": 77774,
+      "sha256": "d428a47550cb836824e8faed3a27e62880826707bbcc3175140832408a2f692f"
+    },
+    {
+      "file": "verification-all-off.jpg",
+      "format": "JPEG",
+      "width": 473,
+      "height": 427,
+      "bytes": 33040,
+      "sha256": "5b9e280810e2514bf34db2fb9910b51a462e691574c11132b8e37dc303c3e959"
+    },
+    {
+      "file": "verification-base.jpg",
+      "format": "JPEG",
+      "width": 473,
+      "height": 427,
+      "bytes": 32941,
+      "sha256": "961c07331f1d94620955db08e560f903ee10837016f491a224cb308098b2742c"
+    }
+  ]
+}

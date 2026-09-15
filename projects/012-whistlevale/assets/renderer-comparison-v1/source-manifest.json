@@ -1,0 +1,118 @@
+{
+  "date": "2026-09-15",
+  "version": "working-tree-renderer-comparison-v1",
+  "three": "r185",
+  "upstream": "f3d769e8ea54d2f5a47d12f27773541b484c6302",
+  "files": [
+    {
+      "file": "app/build.mjs",
+      "bytes": 2279,
+      "sha256": "e8195596d63ea06525ede1b916940afd7e393684a22321c266706287e5d5eb9d"
+    },
+    {
+      "file": "app/renderer-compare.css",
+      "bytes": 3370,
+      "sha256": "9417353aca2ba7d10dc25f935ccaddf2e4f2205c079b88b152914cf1e584e4d3"
+    },
+    {
+      "file": "app/renderer-compare.html",
+      "bytes": 8181,
+      "sha256": "fefdc8bed82f3e05e0e3542c652c1d3d0b8524f763135490309b77fd0bfe995b"
+    },
+    {
+      "file": "app/renderer-compare.mjs",
+      "bytes": 9201,
+      "sha256": "cd0a346856d3500b43e2851b8c4c3cca532aba035dcc3816e9ee237280117aaf"
+    },
+    {
+      "file": "app/renderer-compare.test.mjs",
+      "bytes": 1673,
+      "sha256": "ace6ea11c0c56bc05fc48558e877e12270796bd15255d517de48328b92c8dd61"
+    },
+    {
+      "file": "app/renderer-scene.mjs",
+      "bytes": 2307,
+      "sha256": "9073f69b532ba592faba5824a46ea3f727e4601d2a693c6086b88e3bec54533c"
+    },
+    {
+      "file": "app/three-standard-study.mjs",
+      "bytes": 3969,
+      "sha256": "5753ee6c17436844b211756e193410f666b9009906e9dd58e4cb279404ad2f05"
+    },
+    {
+      "file": "app/three-study-renderer.mjs",
+      "bytes": 7956,
+      "sha256": "f36de710e7a5dce472fec19fa1374ce04fed62fcd6796e308955b7f6e225ec64"
+    },
+    {
+      "file": "app/vendor/THREE-LICENSE.txt",
+      "bytes": 1102,
+      "sha256": "5d5dad8147523d59bc15cca838ae0bdaae7075230ec49132c551a1d18e7b3412"
+    },
+    {
+      "file": "app/vendor/three.core.js",
+      "bytes": 1503065,
+      "sha256": "a6cae1d9be22c0f637fa214f20cb9c0c9a3efeafcceb6e2e546e6a62cc04db1e"
+    },
+    {
+      "file": "app/vendor/three.module.js",
+      "bytes": 669763,
+      "sha256": "15a6b51a6a4902fd1d7b6bfc3a307864cb05c7459c3b476805127aea2d3cb2c1"
+    },
+    {
+      "file": "app/webgl-comparison.mjs",
+      "bytes": 2985,
+      "sha256": "7eee228243d2da0cb050b531c8e0bd464e4ed8d6b26b89e26d1618b4803c6b2d"
+    },
+    {
+      "file": "app/webgl-detail-geometry.mjs",
+      "bytes": 5446,
+      "sha256": "3dc34517ec391da8b3e45d59ed1b9c2d7420d468f0d0d4321f7bb751cdc11733"
+    },
+    {
+      "file": "app/webgl-geometry.mjs",
+      "bytes": 8262,
+      "sha256": "4637ec6d5ed1d6cc1c1437aa790482d2ad4f1727bae3a12be3c53c73d0f00188"
+    },
+    {
+      "file": "app/webgl-lab.css",
+      "bytes": 7898,
+      "sha256": "a72563f82995120c19decb821d886eaa1056576da885a673ae3607187232a5bc"
+    },
+    {
+      "file": "app/webgl-lab.html",
+      "bytes": 9519,
+      "sha256": "9998f78382a62e5664b0e1de478c06c8076d2759034af2a7af178215bd15f338"
+    },
+    {
+      "file": "app/webgl-lab.mjs",
+      "bytes": 11517,
+      "sha256": "4b977049863db83accec98aef7a2c49fd4f22416374a28b3b6b770d25ce5e84b"
+    },
+    {
+      "file": "app/webgl-lessons.mjs",
+      "bytes": 5680,
+      "sha256": "c077701ab989f31b4aabb5a3fb823fdda4efe3101300c195fee1e3aba8078652"
+    },
+    {
+      "file": "app/webgl-math.mjs",
+      "bytes": 1573,
+      "sha256": "6dd614e2b161e1b492e1593f244167267ba53d665140ca4492db08e25fd3349a"
+    },
+    {
+      "file": "app/webgl-math.test.mjs",
+      "bytes": 4063,
+      "sha256": "1c5cca3c8b77676df2c4e20cffcf826fc1002ca2b5663ff3db020ba1b859dfe9"
+    },
+    {
+      "file": "app/webgl-renderer.mjs",
+      "bytes": 10191,
+      "sha256": "9dc8ed845b4a6401cda3650f608836373bdbadfa011bc1c6860ca1c3882bd4c3"
+    },
+    {
+      "file": "app/webgl-shaders.mjs",
+      "bytes": 7630,
+      "sha256": "b5fa54243af047fe4b006789c1f80aa4d80e0d261657e987ba46a68c705eddb1"
+    }
+  ]
+}
