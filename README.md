@@ -19,7 +19,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | 001 | [PaperRoute](projects/001-paperroute/README.md) | 浏览器 3D 送报、障碍反馈与七日进程；AI 辅助常规迭代案例，可复用技术价值有限 | [PaperRoute 官网](https://www.paperroute.lol/) | 已总结 | [研究汇总](https://yydshly.github.io/0913_codex_project/001-paperroute/research.html) · [研究原型](https://yydshly.github.io/0913_codex_project/001-paperroute/) |
 | 002 | [Dunhuang Aura](projects/002-dunhuang-aura/README.md) | 敦煌美术风格与出图流程说明书；可复用配色、构图、提示词和修图要求，未新增绘图能力，质量与效率增益未验证 | [govin-ai/dunhuang-aura-skill](https://github.com/govin-ai/dunhuang-aura-skill) | 已总结 | [研究结论与参考价值](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/) |
-| 003 | [Mountain Railway Diorama · 白鹭河谷](projects/003-mountain-railway-diorama/README.md) | 从原作研究到可调场景：三种构图、四季光线、风与植被联动、三种水流、坡地分区与方案保存/比较；包含睡莲、蜻蜓与鱼鸭；修复水色、机械游动和桥面净空；保留曲线站台、车房细节与到站近看；V38 加入冬季兔子与落脚雪印，发布包含人物和声音的完整实践版，保留站房、司机与 MiniMax 播报；附实景、能力边界和开发记录 | [iamtechartist/mountain-railway-diorama](https://github.com/iamtechartist/mountain-railway-diorama) | 已总结 | [研究分析](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/) · [实际场景](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html) · [开发过程](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/dev-log.html)  · [版本归档与原理](projects/003-mountain-railway-diorama/archive.md) |
+| 003 | [Mountain Railway Diorama · 白鹭河谷](projects/003-mountain-railway-diorama/README.md) | 可调四季场景、车站人物、动物与声音；沉淀场景创作和联动方法，附最终实景与后续产品方向 | [iamtechartist/mountain-railway-diorama](https://github.com/iamtechartist/mountain-railway-diorama) | 阶段完成 · V38 暂停迭代 | [成果导览](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/guide.html) · [研究总结](projects/003-mountain-railway-diorama/research-summary.md) · [实际场景](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html) |
 | 004 | [Eanpa Sky · 听雨山居](projects/004-eanpa-sky/README.md) | 天空与天气联动研究：晴雨昼夜、雪与冰雹、地面水迹和对应声音；实际截图、实现理解及后期扩展 | [SkyeShark/Eanpa-Sky](https://github.com/SkyeShark/Eanpa-Sky) | 已总结 | [研究摘要](https://yydshly.github.io/0913_codex_project/004-eanpa-sky/) · [实时天气演示](https://yydshly.github.io/0913_codex_project/004-eanpa-sky/lab/) |
 | 005 | [Stick & Steel](projects/005-stick-steel/README.md) | 火柴人游戏效果构建；后续以 Skill 制作游戏效果视频或同类风格游戏 | [Genex 原作](https://genex.games/stick-steel) | 已复现 | [研究导览](https://yydshly.github.io/0913_codex_project/005-stick-steel/) · [游戏效果](https://yydshly.github.io/0913_codex_project/005-stick-steel/demo/?view=capabilities) |
 | 006 | [游戏效果、交互与教学体验](projects/006-emberfall-arpg/README.md) | 从 ARPG 效果参考与可玩实践，理解情绪、实时反馈和物理教学；附三图导览与完整研究 | 用户提供截图，原作 URL 待核实 | 研究中 | [研究导览](https://yydshly.github.io/0913_codex_project/006-emberfall-arpg/research/) · [试玩 ARPG](https://yydshly.github.io/0913_codex_project/006-emberfall-arpg/) |
@@ -55,11 +55,15 @@
 [在线研究结论](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/) · [完整研究](projects/002-dunhuang-aura/README.md) · [实验与延伸设计](https://yydshly.github.io/0913_codex_project/002-dunhuang-aura/studio.html#generation-note) · [原始仓库](https://github.com/govin-ai/dunhuang-aura-skill)
 ### 003 · Mountain Railway Diorama / 白鹭河谷
 
-研究山间铁路微缩景观，并独立重建可调地形的“白鹭河谷”。**可以看什么：**三种构图、春夏秋冬、风与植被联动，以及连续跌水、浅滩缓流、岩间分流。**V38：**冬季兔子、缓转短跳与落脚雪印，保留 V36 阶段冻结、细化叶簇和花形；可重新分布的花丛与季节蝴蝶，保留站房内外、司机、MiniMax 播报和上下客流程，承接动物与四季能力，发布包含此前本地积累的 V29—V38，详见子项目发布记录。**研究价值：**观察地形、植被、水体与光照如何共同构成场景；V23 调整连续跌水岸坡并修复水网格外缘（整体自然感仍有限制），保留白沫薄片与成组消散，支持方案保存、恢复、文件迁移与同机位比较，仍未提供自由绘轨或真实流体模拟。
+从原作拆解到独立四季场景，验证地形、环境、人物动物与声音的联动。**阶段收尾于 V38**；本次增加研究总结、最终实景与可选产品方向，待具体需求再继续。
 
-[![003 白鹭河谷当前实景：秋季溪谷、环线列车、拱桥与连续跌水](projects/003-mountain-railway-diorama/assets/scene-v24-overview.jpg)](projects/003-mountain-railway-diorama/README.md)
+[![003 白鹭河谷早期引导实景：秋季溪谷、环线列车、拱桥与连续跌水](projects/003-mountain-railway-diorama/assets/scene-v24-overview.jpg)](projects/003-mountain-railway-diorama/README.md)
 
 *本研究独立重建的 V24 实景，2026-09-14 本地浏览器截图；点击图片进入研究与效果导览。*
+
+[![V38 最终春季效果：四季微缩场景的阶段成果](projects/003-mountain-railway-diorama/assets/scene-v38-final-spring.png)](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/guide.html#final-results)
+
+*上图下方新增 V38 最终实景，2026-09-15 线上采集。最新能力含冬季兔子与雪印；本次收尾补充[理解摘要](projects/003-mountain-railway-diorama/research-summary.md)，不新增场景功能。*
 
 [研究分析](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/) · [实际场景](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html) · [开发过程](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/dev-log.html) · [看效果与操作导览](projects/003-mountain-railway-diorama/README.md) · [查当前能力](projects/003-mountain-railway-diorama/capabilities.md) · [本地运行](projects/003-mountain-railway-diorama/app/README.md) · [开发记录](projects/003-mountain-railway-diorama/development-log.md) · [直接体验 V23 归档](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/archives/v23/scene.html) · [列车与站房研究](projects/003-mountain-railway-diorama/train-station-research.md) · [后续路线](projects/003-mountain-railway-diorama/next-steps.md) · [上游原作演示](https://iamtechartist.github.io/mountain-railway-diorama/)
 
