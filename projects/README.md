@@ -23,7 +23,7 @@
 
 - [011 · 前端视觉实验室](011-frontend-visual-lab/README.md)：理解内容结构、视觉设计、动效编排、场景特效四种优化方式，以我们的真实效果图进入64项交互、16个原版组件和实际作品场景。[摘要](011-frontend-visual-lab/understanding.md) · [发布记录](011-frontend-visual-lab/publishing.md)。
 
-- [012 · Whistlevale / 展厅与精细展品](012-whistlevale/README.md)：展厅组织整体空间与参观路径，展台呈现单件作品的效果与能力；适合研究作品收藏、旅游与陌生地方介绍、产品和文化展示。通过精细化开关与同场景对照，理解模型、材料、光照的投入，以及 Three.js 与原生 WebGL 2 的选择。 [完整理解](012-whistlevale/understanding.md) · [实测数据](012-whistlevale/renderer-comparison.md) · [发布记录](012-whistlevale/publishing.md)。
+- [012 · Whistlevale / 展厅与精细展品](012-whistlevale/README.md)：展厅组织整体空间与参观路径，展台呈现单件作品的效果与能力；适合研究作品收藏、旅游与陌生地方介绍、产品和文化展示。通过精细化开关与同场景对照，理解模型、材料、光照的投入，以及 Three.js 与原生 WebGL 2 的选择。 [在线双图导览](https://yydshly.github.io/0913_codex_project/012-whistlevale/research.html) · [实际技术对照](https://yydshly.github.io/0913_codex_project/012-whistlevale/renderer-compare.html) · [完整理解](012-whistlevale/understanding.md) · [实测数据](012-whistlevale/renderer-comparison.md) · [发布记录](012-whistlevale/publishing.md)。
 
 新增编号取现有项目目录的最大编号加一；既有编号保持稳定。
 

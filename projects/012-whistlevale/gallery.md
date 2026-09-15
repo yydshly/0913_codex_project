@@ -1,5 +1,7 @@
 # 我们的作品馆 · 第一版
 
+**当前入口：**[在线体验](https://yydshly.github.io/0913_codex_project/012-whistlevale/) · [理解摘要](understanding.md) · [发布验证](publishing.md)。下文保留阶段研究范围与历史记录。
+
 [本地参观入口](http://127.0.0.1:8412/) · [启动与构建](app/README.md) · [Whistlevale 原库研究](README.md)
 
 ## 构造思路

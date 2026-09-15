@@ -6,7 +6,7 @@
 
 **后续已补上[真正的 Three.js／原生 WebGL 2 技术对照](renderer-comparison.md)。** 本文左右仍是同一原生渲染器的细节开关；不要将本文图片当作两种技术的差异。第二版截图与数据保持历史记录。
 
-研究日期：2026-09-15。参照上游 [Whistlevale，f3d769e8ea54d2f5a47d12f27773541b484c6302](https://github.com/nickfromlater/whistlevale/tree/f3d769e8ea54d2f5a47d12f27773541b484c6302)，MIT；线上部署 SHA 待核实。以下均为本仓库独立编写的教学场景，不是上游模型移植。实验未公开部署，本地服务运行时可访问。
+研究日期：2026-09-15。参照上游 [Whistlevale，f3d769e8ea54d2f5a47d12f27773541b484c6302](https://github.com/nickfromlater/whistlevale/tree/f3d769e8ea54d2f5a47d12f27773541b484c6302)，MIT；线上部署 SHA 待核实。以下均为本仓库独立编写的教学场景，不是上游模型移植。现已部署，见[在线体验](https://yydshly.github.io/0913_codex_project/012-whistlevale/webgl-lab.html#detail)与[发布验证](publishing.md)。
 
 ## 1. 先按这个顺序看
 

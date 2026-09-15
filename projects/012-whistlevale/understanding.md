@@ -2,7 +2,7 @@
 
 **Whistlevale 的参考价值，是把作品放进可探索的空间，再让每件作品经得起近看。我们的研究由此从“怎样展示”深入到“怎样刻画”，最后通过真实对照判断 Three.js 与原生 WebGL 2 的分工。**
 
-[双图网页导览源码](app/research.html) · [原库完整研究](README.md) · [实际技术对照](renderer-comparison.md) · [原生实现过程](webgl2-study.md)
+[在线双图导览](https://yydshly.github.io/0913_codex_project/012-whistlevale/research.html) · [原库完整研究](README.md) · [实际技术对照](renderer-comparison.md) · [原生实现过程](webgl2-study.md)
 
 ## 一、展厅和展台各自负责什么
 

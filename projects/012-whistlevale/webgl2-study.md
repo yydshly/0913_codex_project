@@ -1,5 +1,7 @@
 # WebGL 2：从代码到小车站
 
+**当前入口：**[在线体验](https://yydshly.github.io/0913_codex_project/012-whistlevale/webgl-lab.html) · [理解摘要](understanding.md) · [发布验证](publishing.md)。下文保留阶段研究范围与历史记录。
+
 **WebGL 2 提供绘图接口；可见效果来自程序组织的几何数据、着色器、状态更新与多遍绘制。理解这一过程后，可以判断 Three.js 替我们管理了什么，也可以把 Whistlevale 的部分方法迁移到现有作品。**
 
 [打开本地实验](http://127.0.0.1:8412/webgl-lab.html) · [从第一个三角形开始](http://127.0.0.1:8412/webgl-lab.html#step-0) · [原生作品对照](native-alder-analysis.md) · [运行说明](app/README.md) · [返回项目](README.md)

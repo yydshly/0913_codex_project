@@ -10,27 +10,27 @@
 
 | 原作：空间与展品 | 我们：精细效果与技术对照 |
 | :--- | :--- |
-| [![原作实际全景：房间中的 Alder Valley 铁路与村庄沙盘](assets/01-alder-valley-overview.jpg)](https://whistlevale.com/?room=valley) | [![本项目实际同机位对照：Three.js 自定义算法与原生 WebGL 2 精细车站](assets/renderer-comparison-v1/01-custom-station.jpg)](renderer-comparison.md) |
+| [![原作实际全景：房间中的 Alder Valley 铁路与村庄沙盘](assets/01-alder-valley-overview.jpg)](https://whistlevale.com/?room=valley) | [![本项目实际同机位对照：Three.js 自定义算法与原生 WebGL 2 精细车站](assets/renderer-comparison-v1/01-custom-station.jpg)](https://yydshly.github.io/0913_codex_project/012-whistlevale/renderer-compare.html) |
 
 *两图均为 2026-09-15 实际浏览器截图；左为作者原作，右为我们的独立教学模型。两图展示研究路径，不构成原作与本项目的公平画质比较。*
 
-[完整理解摘要](understanding.md) · [双图导览源码](app/research.html) · [实际技术对照与数据](renderer-comparison.md) · [发布记录](publishing.md)
+[完整理解摘要](understanding.md) · [在线双图导览](https://yydshly.github.io/0913_codex_project/012-whistlevale/research.html) · [实际技术对照与数据](renderer-comparison.md) · [发布记录](publishing.md)
 
 ## 当前实践：我们的作品馆
 
-**技术选型实际对照：[Three.js 与原生 WebGL 2 同场景比较](renderer-comparison.md)。** [打开本地对照](http://127.0.0.1:8412/renderer-compare.html)：两套独立渲染器、五个精细看点；Three.js 内置材质和同算法自定义两种配置，附 GPU 像素差异检测。
+**技术选型实际对照：[Three.js 与原生 WebGL 2 同场景比较](renderer-comparison.md)。** [打开在线对照](https://yydshly.github.io/0913_codex_project/012-whistlevale/renderer-compare.html)：两套独立渲染器、五个精细看点；Three.js 内置材质和同算法自定义两种配置，附 GPU 像素差异检测。
 
-**WebGL 2 实现实验：[同机位细节对照](webgl-detail-study.md) · [七步入门](webgl2-study.md)。** [打开本地实验](http://127.0.0.1:8412/webgl-lab.html)：默认比较基础版与精细版，分别开关结构、材料、柔影与补光；保留七个绘制阶段及中间结果观察。
+**WebGL 2 实现实验：[同机位细节对照](webgl-detail-study.md) · [七步入门](webgl2-study.md)。** [打开在线实验](https://yydshly.github.io/0913_codex_project/012-whistlevale/webgl-lab.html)：默认比较基础版与精细版，分别开关结构、材料、柔影与补光；保留七个绘制阶段及中间结果观察。
 
 **原生作品对照：[Alder Valley 与 Nightingale 的技术和细节拆解](native-alder-analysis.md)。** 用原作近景、揭顶、夜景及我们的车站实景，比较模型、材料、灯光、镜头与生活细节；区分实际优势和不同技术取舍。
 
-**单展品样板已实现：[一座车站的日常](valley-exhibit.md)。** [本地参观](http://127.0.0.1:8412/valley.html)：完整主景、车站/拱桥/河岸三个看点、站房揭顶与春秋比较。作品馆的白鹭河谷入口已连接此样板。
+**单展品样板已实现：[一座车站的日常](valley-exhibit.md)。** [在线参观](https://yydshly.github.io/0913_codex_project/012-whistlevale/valley.html)：完整主景、车站/拱桥/河岸三个看点、站房揭顶与春秋比较。作品馆的白鹭河谷入口已连接此样板。
 
 **深入研究：[什么场景适合展厅，怎样做好具体展台](exhibit-research.md)。** 将作品收藏与陌生地方介绍分开判断，提出“地域总览 → 地点展品 → 细节体验”的方向；附 [当前展馆四步实测与问题截图](gallery-audit.md)。
 
 依据后续沟通，新增一座独立三维展馆：**山水与天气、地形与运动、图鉴与界面**三个展区，展示六件已有成果。展台结合主题缩景、实际效果图和能力说明，可进入已发布作品并返回。
 
-[打开本地展馆](http://127.0.0.1:8412/) · [整体布局与单台风格](gallery.md) · [启动与构建](app/README.md)。本地服务运行时可访问；本轮未提交或部署。以下图片与研究正文仍是 Whistlevale 原作参考，非新展馆截图。
+[打开在线展馆](https://yydshly.github.io/0913_codex_project/012-whistlevale/) · [整体布局与单台风格](gallery.md) · [启动与构建](app/README.md)。现已提交并部署，见 [发布验证记录](publishing.md)。以下图片与研究正文仍是 Whistlevale 原作参考，非新展馆截图。
 
 [第一部分：原库效果与能力](#第一部分原库效果与能力) · [第二部分：从一个场景理解](#第二部分从-alder-valley-一个场景理解) · [逐步操作与原理](scene-guide.md) · [证据与源码](notes.md) · [返回总索引](../../README.md#项目索引)
 
@@ -48,9 +48,9 @@
 | 源码版本 | [f3d769e8ea54d2f5a47d12f27773541b484c6302](https://github.com/nickfromlater/whistlevale/commit/f3d769e8ea54d2f5a47d12f27773541b484c6302)，提交时间 2026-09-13 |
 | 许可证 | 主仓库 MIT；外接作品、依赖和可选录音分别核对 |
 | 技术栈 | 原生 JavaScript、自定义 WebGL 2；部分外接展室使用随仓库提供的 Three.js |
-| 状态 | 原作线上观察与源码研究完成；新增本地独立作品展馆，未复现上游全量应用 |
+| 状态 | 原作线上观察与源码研究完成；独立作品展馆、单展品与两组实验已上线；未复现上游全量应用 |
 | 原作入口 | [作者在线展馆](https://whistlevale.com/) · [Alder Valley](https://whistlevale.com/?room=valley) |
-| 本项目演示 | [本地独立作品馆](http://127.0.0.1:8412/)；未部署公开地址，见 [运行说明](app/README.md) |
+| 本项目演示 | [在线独立作品馆](https://yydshly.github.io/0913_codex_project/012-whistlevale/)；[双图研究导览](https://yydshly.github.io/0913_codex_project/012-whistlevale/research.html)，见 [运行说明](app/README.md) |
 
 ## 第一部分：原库效果与能力
 

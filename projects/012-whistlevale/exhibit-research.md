@@ -1,5 +1,7 @@
 # 从作品展厅到地方体验：场景选择与单展台深入研究
 
+**当前入口：**[在线体验](https://yydshly.github.io/0913_codex_project/012-whistlevale/research.html) · [理解摘要](understanding.md) · [发布验证](publishing.md)。下文保留阶段研究范围与历史记录。
+
 [返回 012](README.md) · [当前作品馆](gallery.md) · [本轮实测与截图](gallery-audit.md)
 
 研究日期：2026-09-15。研究对象为首次认识陌生地方的浏览者，以及希望展示场景作品的创作者。本文区分官方资料事实、当前页面观察和设计建议；建议尚未通过用户实验验证。

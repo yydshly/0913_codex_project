@@ -4,7 +4,7 @@
 
 [打开本地实际对照](http://127.0.0.1:8412/renderer-compare.html) · [模型精细化实验](webgl-detail-study.md) · [七步入门](webgl2-study.md) · [返回项目](README.md)
 
-研究日期：2026-09-15。使用已有本地 Three.js r185，MIT，保留[许可证](app/vendor/THREE-LICENSE.txt)。教学场景独立编写，参照上游 [Whistlevale，f3d769e8ea54d2f5a47d12f27773541b484c6302](https://github.com/nickfromlater/whistlevale/tree/f3d769e8ea54d2f5a47d12f27773541b484c6302)，主仓库 MIT；上游线上部署 SHA 待核实。本实验仅本地运行，未公开部署。
+研究日期：2026-09-15。使用已有本地 Three.js r185，MIT，保留[许可证](app/vendor/THREE-LICENSE.txt)。教学场景独立编写，参照上游 [Whistlevale，f3d769e8ea54d2f5a47d12f27773541b484c6302](https://github.com/nickfromlater/whistlevale/tree/f3d769e8ea54d2f5a47d12f27773541b484c6302)，主仓库 MIT；上游线上部署 SHA 待核实。现已部署，见[在线体验](https://yydshly.github.io/0913_codex_project/012-whistlevale/renderer-compare.html)与[发布验证](publishing.md)。
 
 ## 1. 先看真正的技术对照
 
