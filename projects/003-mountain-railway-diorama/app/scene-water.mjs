@@ -1,3 +1,4 @@
+import {iceGLSL} from './scene-ice.mjs';
 import * as THREE from './vendor/three.module.js';
 import {V,mesh,random} from './scene-world.mjs';
 import {advanceWaterPhase,waterTravel,waterTravelToZ,poolFoamClusterState,waterLaneShift,foamPatchShape} from './scene-water-modes.mjs';
@@ -14,20 +15,21 @@ export function createWater(group,world,shared){
  const dividerShapes=Array.from({length:3},(_,i)=>{const r=dividers[i];return r?new THREE.Vector2(r.ry,r.rz):new THREE.Vector2(1,1);});
  const uniforms={uDividerCount:{value:dividers.length},uDividerCentres:{value:dividerCentres},uDividerShapes:{value:dividerShapes},uPhase:phase,uThickness:shared.waterThickness,uFoamAmount:shared.waterFoam,uReflection:shared.waterReflection,uRipple:shared.waterRipple,uPoolZ:{value:style.end+.5},uFallActive:{value:style.splash>0?1:0},uSplit:{value:style.split?1:0},uFoam:{value:style.foam},uFlowScale:{value:style.flowScale},uSeason:shared.season,uTime:shared.time,uWind:shared.wind,uGust:shared.gust,uWindDir:shared.windDir,uRain:shared.rain,uFlow:shared.flow,uReflect:{value:target.texture},uReflectMatrix:{value:reflectionMatrix}};
  const material=new THREE.MeshStandardMaterial({color:'#257b7d',roughness:.24,metalness:.02,side:THREE.DoubleSide,transparent:true,depthWrite:false});
- material.userData.seasonOwn=true;material.customProgramCacheKey=()=> 'wetland-water-v28-restrained-transmission';
+ material.userData.seasonOwn=true;material.customProgramCacheKey=()=> 'wetland-water-v30-shared-ice';
  material.onBeforeCompile=shader=>{
   Object.assign(shader.uniforms,uniforms);
   const noise=`float hash21(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}float noise21(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(hash21(i),hash21(i+vec2(1,0)),f.x),mix(hash21(i+vec2(0,1)),hash21(i+vec2(1,1)),f.x),f.y);}`;
-  shader.vertexShader=`uniform float uPhase;attribute vec3 aFlowNormal,aFlowTangent;attribute float aImpactShift;varying vec3 vFlowTangent;varying float vImpactShift;uniform float uTime,uWind,uGust,uFlow,uRipple;uniform vec2 uWindDir;uniform mat4 uReflectMatrix;attribute float aObstacle,aDeflect,aContactFoam,aFall,aDepth,aChannel,aTravel,aCross;varying vec2 vRiver;varying float vWaterY,vObstacle,vDeflect,vContactFoam,vFall,vDepth,vChannel,vTravel,vCross;varying vec4 vReflect;${noise}\n`+shader.vertexShader.replace('#include <begin_vertex>',`#include <begin_vertex>
+  shader.vertexShader=`uniform vec4 uSeason;${iceGLSL}uniform float uPhase;attribute vec3 aFlowNormal,aFlowTangent;attribute float aImpactShift;varying vec3 vFlowTangent;varying float vImpactShift;uniform float uTime,uWind,uGust,uFlow,uRipple;uniform vec2 uWindDir;uniform mat4 uReflectMatrix;attribute float aObstacle,aDeflect,aContactFoam,aFall,aDepth,aChannel,aTravel,aCross;varying vec2 vRiver;varying float vWaterY,vObstacle,vDeflect,vContactFoam,vFall,vDepth,vChannel,vTravel,vCross;varying vec4 vReflect;${noise}\n`+shader.vertexShader.replace('#include <begin_vertex>',`#include <begin_vertex>
    vFlowTangent=aFlowTangent;vImpactShift=aImpactShift;vObstacle=aObstacle;vDeflect=aDeflect;vContactFoam=aContactFoam;vCross=aCross;vTravel=aTravel;vRiver=uv;vFall=aFall;vDepth=aDepth;vChannel=aChannel;float force=uWind*(.72+.28*sin(uTime*.9+position.x*.09+position.z*.07))*(1.+uGust*.55*sin(uTime*1.7+position.x*.12));
-   transformed.y+=(noise21(position.xz*1.1-uWindDir*uTime*.36)-.5)*.045*uRipple*2.*(1.+force*2.)*(1.-clamp(aFall,0.,1.))*smoothstep(0.,.35,aDepth)*smoothstep(.1,.35,aObstacle);
+   float frozen=habitatIce(aDepth,aFall,uSeason.w);
+   transformed.y+=(1.-frozen)*(noise21(position.xz*1.1-uWindDir*uTime*.36)-.5)*.045*uRipple*2.*(1.+force*2.)*(1.-clamp(aFall,0.,1.))*smoothstep(0.,.35,aDepth)*smoothstep(.1,.35,aObstacle);
    float rillHeight=noise21(vec2(aCross*4.8,(aTravel-uPhase)*1.15))-.5;
-   transformed+=aFlowNormal*rillHeight*(.025+.035*clamp(aFall,0.,1.))*uRipple*2.*smoothstep(.04,.3,aDepth)*smoothstep(.1,.35,aObstacle);
+   transformed+=(1.-frozen)*aFlowNormal*rillHeight*(.025+.035*clamp(aFall,0.,1.))*uRipple*2.*smoothstep(.04,.3,aDepth)*smoothstep(.1,.35,aObstacle);
    vWaterY=transformed.y;vRiver=transformed.xz;
   `).replace('#include <worldpos_vertex>',`#include <worldpos_vertex>
    vReflect=uReflectMatrix*modelMatrix*vec4(transformed,1.);
   `);
-  shader.fragmentShader=`varying vec3 vFlowTangent;varying float vImpactShift;uniform int uDividerCount;uniform vec4 uDividerCentres[3];uniform vec2 uDividerShapes[3];uniform float uPhase,uThickness,uFoamAmount,uReflection,uRipple,uSplit,uFoam,uFlowScale,uPoolZ,uFallActive;uniform vec4 uSeason;uniform float uTime,uWind,uGust,uRain,uFlow;uniform vec2 uWindDir;uniform sampler2D uReflect;varying vec2 vRiver;varying float vWaterY,vObstacle,vDeflect,vContactFoam,vFall,vDepth,vChannel,vTravel,vCross;varying vec4 vReflect;${noise}\n`+shader.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
+  shader.fragmentShader=`${iceGLSL}varying vec3 vFlowTangent;varying float vImpactShift;uniform int uDividerCount;uniform vec4 uDividerCentres[3];uniform vec2 uDividerShapes[3];uniform float uPhase,uThickness,uFoamAmount,uReflection,uRipple,uSplit,uFoam,uFlowScale,uPoolZ,uFallActive;uniform vec4 uSeason;uniform float uTime,uWind,uGust,uRain,uFlow;uniform vec2 uWindDir;uniform sampler2D uReflect;varying vec2 vRiver;varying float vWaterY,vObstacle,vDeflect,vContactFoam,vFall,vDepth,vChannel,vTravel,vCross;varying vec4 vReflect;${noise}\n`+shader.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
    if(vDepth<=.005||vObstacle<.025)discard;
    // Exact fragment test for lip boulders; water-grid interpolation cannot leak.
    for(int solid=0;solid<3;solid++){
@@ -70,7 +72,7 @@ export function createWater(group,world,shared){
    diffuseColor.rgb*=vec3(1.)+uSeason.x*vec3(.08,.15,.04)+uSeason.z*vec3(.08,.03,-.08)+uSeason.w*vec3(.12,.13,.18);
    diffuseColor.rgb=mix(diffuseColor.rgb,vec3(.64,.77,.72),clamp(foam,0.,.95));
    diffuseColor.rgb=mix(diffuseColor.rgb,diffuseColor.rgb*vec3(.73,.88,.92),falling*uThickness*.10);
-   float ice=uSeason.w*(1.-smoothstep(.25,1.05,vDepth))*(1.-cascade);
+   float ice=habitatIce(vDepth,vFall,uSeason.w);
    diffuseColor.rgb=mix(diffuseColor.rgb,vec3(.57,.76,.81),ice*.94);
   `).replace('#include <normal_fragment_maps>',`#include <normal_fragment_maps>
    float force=uWind*(.72+.28*sin(uTime*.9+vRiver.x*.09+vRiver.y*.07))*(1.+uGust*.55*sin(uTime*1.7+vRiver.x*.12));

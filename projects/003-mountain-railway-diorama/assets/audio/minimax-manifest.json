@@ -1,0 +1,23 @@
+{
+  "provider": "MiniMax",
+  "model": "speech-2.8-hd",
+  "voice": "male-qn-qingse",
+  "generatedAt": "2026-09-14T18:23:44.497Z",
+  "source": "https://platform.minimax.cn/docs/api-reference/speech-t2a-http",
+  "clips": [
+    {
+      "id": "arrival",
+      "text": "白鹭河站到了。列车已停稳，请先下后上，留意脚下的台阶。",
+      "file": "arrival.mp3",
+      "bytes": 107700,
+      "durationMs": 6624
+    },
+    {
+      "id": "departure",
+      "text": "车门即将关闭，请站在安全线内。祝您旅途愉快。",
+      "file": "departure.mp3",
+      "bytes": 100212,
+      "durationMs": 6156
+    }
+  ]
+}

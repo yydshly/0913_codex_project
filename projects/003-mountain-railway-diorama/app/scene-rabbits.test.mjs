@@ -1,0 +1,10 @@
+import test from 'node:test';import assert from 'node:assert/strict';import * as THREE from './vendor/three.module.js';
+import{createSpatial}from './scene-world.mjs';import{rabbitHomes,rabbitSafe,createRabbitMotion,createRabbits}from './scene-rabbits.mjs';
+test('三构图雪地兔子安全落点与长期短跳，不越界、不急转',()=>{
+ for(const composition of ['ridge','marsh','classic']){const world=createSpatial({composition}),anchors=[],homes=rabbitHomes(world,anchors);assert.ok(homes.length>0);for(const h of homes){const m=createRabbitMotion(world,anchors,h,892);for(let i=0;i<2400;i++){const prior=m.position.clone(),yaw=m.yaw;m.update(.05);assert.ok(rabbitSafe(world,anchors,m.position.x,m.position.z));assert.ok(Math.hypot(m.position.x-h.x,m.position.z-h.z)<=2.801);assert.ok(m.position.y>=world.height(m.position.x,m.position.z)-1e-5);assert.ok(m.position.distanceTo(prior)<.2);assert.ok(Math.abs(Math.atan2(Math.sin(m.yaw-yaw),Math.cos(m.yaw-yaw)))<=.08);}assert.ok(m.landings>3);}}
+});
+test('雪印只在落地产生，四足对应，暂停冻结，换季清除，容量有界',()=>{
+ const world=createSpatial({composition:'ridge'}),shared={time:{value:0},season:{value:new THREE.Vector4(0,0,0,1)}},r=createRabbits(new THREE.Group(),world,shared);assert.equal(r.prints.length,0);let before=0;
+ for(let k=1;k<=3600;k++){r.update(k*.05);const total=r.actors.reduce((n,a)=>n+a.motion.landings,0);if(total>before&&r.prints.length<256){assert.equal(r.prints.length,total*4);const landed=r.actors.find(a=>a.motion.landing);if(landed){for(const paw of landed.paws){const wp=paw.mesh.getWorldPosition(new THREE.Vector3());assert.ok(r.prints.some(p=>Math.hypot(p.x-wp.x,p.z-wp.z)<1e-6));}}}before=total;assert.ok(r.prints.length<=256);}
+ assert.ok(r.stats.prints>0);const snapshot=JSON.stringify(r.prints),poses=r.actors.map(a=>a.root.position.toArray());r.update(180);assert.equal(JSON.stringify(r.prints),snapshot);assert.deepEqual(r.actors.map(a=>a.root.position.toArray()),poses);shared.season.value.set(0,1,0,0);r.update(181);assert.equal(r.stats.count,0);assert.equal(r.prints.length,0);
+});

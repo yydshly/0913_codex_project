@@ -4,11 +4,13 @@ import {fileURLToPath} from 'node:url';
 import {developmentRecords} from './development-records.mjs';
 const root=path.dirname(fileURLToPath(import.meta.url)),dist=path.join(root,'dist');
 await mkdir(path.join(dist,'assets'),{recursive:true});
-const sources=['train-station.html','archive.html','index.html','styles.css','app.mjs','model.mjs','scene.html','scene.css','scene.mjs','scene-plans.mjs','scene-plans-ui.mjs','scene-world.mjs','scene-service.mjs','scene-train.mjs','scene-station.mjs','scene-station-layout.mjs','scene-landscape.mjs','scene-wildlife.mjs','scene-fish.mjs','scene-motion.mjs','scene-aquatic.mjs','scene-atmosphere.mjs','scene-vegetation.mjs','scene-water.mjs','scene-seasons.mjs','scene-details.mjs','scene-cascade.mjs','scene-water-modes.mjs','scene-composition.mjs','scene-tree-shape.mjs','scene-ground.mjs','scene-ground-cover.mjs','scene-regions.mjs','scene-rocks.mjs','dev-log.html','dev-log.css','dev-log.mjs','development-records.mjs'];
+const sources=['guide.html','train-station.html','archive.html','index.html','styles.css','app.mjs','model.mjs','scene.html','scene.css','scene.mjs','scene-plans.mjs','scene-plans-ui.mjs','scene-world.mjs','scene-service.mjs','scene-train.mjs','scene-cab.mjs','scene-station.mjs','scene-station-room.mjs','scene-station-layout.mjs','scene-landscape.mjs','scene-wildlife.mjs','scene-fish.mjs','scene-motion.mjs','scene-animal-behavior.mjs','scene-ice.mjs','scene-people.mjs','scene-boarding.mjs','scene-audio.mjs','scene-aquatic.mjs','scene-butterflies.mjs','scene-rabbits.mjs','scene-flower-ground.mjs','scene-atmosphere.mjs','scene-vegetation.mjs','scene-foliage-pattern.mjs','scene-water.mjs','scene-seasons.mjs','scene-details.mjs','scene-cascade.mjs','scene-water-modes.mjs','scene-composition.mjs','scene-tree-shape.mjs','scene-ground.mjs','scene-ground-cover.mjs','scene-regions.mjs','scene-rocks.mjs','dev-log.html','dev-log.css','dev-log.mjs','development-records.mjs'];
 for(const file of sources){
  const text=await readFile(path.join(root,file),'utf8');
  await writeFile(path.join(dist,file),text.replaceAll('../assets/','./assets/'));
 }
+await mkdir(path.join(dist,'assets','audio'),{recursive:true});
+for(const file of ['arrival.mp3','departure.mp3','minimax-manifest.json'])await copyFile(path.join(root,'..','assets','audio',file),path.join(dist,'assets','audio',file));
 for(const file of ['01-evening-hero.jpg','02-night-hero.jpg','upstream-LICENSE.txt'])await copyFile(path.join(root,'..','assets',file),path.join(dist,'assets',file));
 await mkdir(path.join(dist,'vendor'),{recursive:true});
 for(const file of ['three.module.js','three.core.js','OrbitControls.js','THREE-LICENSE.txt'])await copyFile(path.join(root,'vendor',file),path.join(dist,'vendor',file));

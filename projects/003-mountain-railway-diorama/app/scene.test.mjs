@@ -55,7 +55,7 @@ test('实际动物模型暂停不移动，风变化不跳位置，尾迹顶点�
  shared.wind.value=1;shared.windDir.value.set(-1,0);a.update(3,0);assert.ok(a.birds[0].root.position.equals(before));
  a.update(3.02,0);assert.ok(a.birds[0].root.position.distanceTo(before)<.13);
  for(const d of a.ducks){assert.ok(d.root.children.every(o=>!o.material||o.material.userData.seasonOwn));for(const v of d.wake.geometry.attributes.position.array)assert.ok(Number.isFinite(v));}
- a.update(3.04,1);assert.equal(a.stats.birds,0);
+ a.update(3.04,1);assert.equal(a.stats.birds,a.birds.length); // 夜间原地休息或先降落，不瞬间消失。
 });
 
 test('到站观察显式停靠可重复，继续后只驶向下一圈车站',()=>{

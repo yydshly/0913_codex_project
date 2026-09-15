@@ -2,7 +2,7 @@
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#122b36"><meta name="description" content="白鹭河谷：可编辑地形、观察风与植被、水流共同变化的实时三维铁路景观。"><title>白鹭河谷 · 四季微缩景观</title><link rel="stylesheet" href="scene.css"><script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script></head>
 <body>
 <canvas id="world" aria-label="白鹭河谷实时三维场景，拖动旋转，滚轮缩放"></canvas>
-<header class="scene-header"><div class="identity"><span class="seal">白<br>鹭</span><div><h1>白鹭河谷</h1><p>一座河谷，四季风景</p></div></div><div class="header-actions"><button id="toggle-controls" aria-expanded="false" aria-controls="scene-control-panel">编辑场景</button><a href="dev-log.html">开发记录</a><a href="archive.html">研究与归档 ↗</a></div></header>
+<header class="scene-header"><div class="identity"><span class="seal">白<br>鹭</span><div><h1>白鹭河谷</h1><p>一座河谷，四季风景</p></div></div><div class="header-actions"><button id="toggle-controls" aria-expanded="false" aria-controls="scene-control-panel">编辑场景</button><a href="dev-log.html">开发记录</a><a href="guide.html">看图导览 ↗</a></div></header>
 <div id="loading" role="status">正在生成河岸、叶簇与水面…</div><div id="error" role="alert" hidden></div>
 <aside class="scene-controls" id="scene-control-panel">
 <div class="panel-title"><span>场景主题</span><button id="reset-view" title="回到全景">全景</button></div>
@@ -55,13 +55,21 @@
 <label class="slider-label">乔木目标数量 <output id="tree-density-value">190 棵</output><input id="tree-density" type="range" min="40" max="300" step="10" value="190"></label>
 <p id="terrain-feedback" class="control-note" role="status">修改后河岸与植被一起重建。树木避让铁路并保留间距，实际数量可能低于目标。</p>
 </details>
+<details open><summary>车站生活</summary>
+<label class="check"><input id="people-enabled" type="checkbox" checked>显示车站人物</label><button type="button" id="people-focus">近看站台人物</button><button type="button" id="driver-focus">近看车头与司机</button><button type="button" id="boarding-demo">演示到站上下客</button>
+<button type="button" id="station-room-focus">查看候车室与值班室</button><button type="button" id="station-rear-focus">查看站房背面与侧门</button>
+<label class="check"><input id="station-cutaway" type="checkbox">揭开站房屋顶</label><label class="check"><input id="station-doors" type="checkbox">打开站房两扇门</label>
+<p class="hint">候车室入口朝向站台；值班室侧门通往入口平台。背侧临崖不设门。揭顶只用于观察室内，人物暂未进入站房。</p>
+<p id="people-feedback" class="control-note" aria-live="off">三位乘客与一位列车员。</p><p class="control-note">列车员下车看护、乘客先下后上，人员回车并关门后发车。其余人物继续候车与入口步行。演示按钮会将列车停靠并继续运行。</p></details>
 <details open><summary>动物与栖息地</summary>
+<label class="check"><input id="rabbits-enabled" type="checkbox" checked>显示冬季兔子与雪印</label><button type="button" id="rabbits-focus">近看冬季兔子与脚印</button><p id="rabbits-feedback" class="hint" role="status"></p><p class="hint">冬季空地出现少量兔子：嗅闻、转身、短跳。落地留下脚印，约 75 秒逐渐淡去；避开铁路、水面和站房。暂停时动作与雪印时间一起停止。此为冬季生态展示，尚非全年动物活动模拟。</p>
+<label class="check"><input id="butterflies-enabled" type="checkbox" checked>显示花丛与蝴蝶</label><button type="button" id="butterflies-focus">近看花间蝴蝶</button><button type="button" id="butterflies-randomize">重新分布花丛与蝴蝶</button><p id="butterflies-feedback" class="hint" role="status"></p><p class="hint">春夏较多、秋季少量，冬季休眠；夜间、雨天或强风时落花休息。分布避开铁路、站房与水面，可随方案保存。暂停时蝴蝶也会停止。</p>
 <label class="check"><input id="wildlife-enabled" type="checkbox" checked>显示白鹭与野鸭</label>
-<div class="button-row"><button type="button" data-animal-view="wildlife">近看水边野鸭</button><button type="button" data-animal-view="birds">观察林缘白鹭</button></div>
+<div class="button-row"><button type="button" data-animal-view="wildlife">跟随野鸭游泳与上岸</button><button type="button" data-animal-view="birds">观察白鹭飞离与返回</button></div>
 <label class="check"><input id="fish-enabled" type="checkbox" checked>显示水下鱼群</label><button type="button" data-animal-view="fish">俯看水下鱼群</button><p id="fish-feedback" class="control-note">鱼群在缓水区水面下巡游；厚水层、雨天与反光会降低可见度。</p>
 <label class="check"><input id="aquatic-enabled" type="checkbox" checked>显示睡莲与蜻蜓</label><button type="button" data-animal-view="aquatic">近看岸边睡莲</button><p id="aquatic-feedback" class="control-note">浮叶生长在岸边缓水区；春夏开花、秋季转色、冬季休眠。蜻蜓在温暖少雨时活动。</p>
-<p id="wildlife-feedback" class="control-note" aria-live="off">白鹭在林缘上空盘旋，野鸭在下游缓水区活动。</p>
-<p class="control-note">夜间、雨天与冬季减少活动。风向影响白鹭迎风姿态与飞速；风力影响扑翼和野鸭起伏。展开下方风设置可对照观察。</p>
+<p id="wildlife-feedback" class="control-note" aria-live="off">白鹭会起飞、降落与停栖；野鸭会游泳、上岸和行走。</p>
+<p class="control-note">白鹭会飞离河谷，再从远处返回；镜头留在河谷等待，完整远行约两三分钟。鱼鸭转向逐渐加速和减速。初冬岸边形成薄冰，河心保留开水面：岸上野鸭休息，水中野鸭避开冰缘；鱼留在水下慢游。此处尚未模拟持续低温导致的全河封冻。</p>
 </details>
 <details><summary>风与水的关系</summary>
 <label class="slider-label">风力 <output id="wind-value">45%</output><input id="wind" type="range" min="0" max="100" value="45"></label>
@@ -73,10 +81,11 @@
 <p class="control-note">风力 → 枝干弯曲 / 叶片颤动 / 芦苇倾斜 / 水纹增强；风向也改变雨丝倾斜。</p>
 </details>
 <details><summary>天气、列车与镜头</summary>
+<details open><summary>场景声音</summary><button id="sound-toggle" type="button" aria-pressed="false">开启声音</button><label for="sound-volume">总音量 <output id="sound-volume-value">35%</output></label><input id="sound-volume" type="range" min="0" max="100" value="35"><label class="check"><input id="sound-environment" type="checkbox" checked>风、水与雨声</label><label class="check"><input id="sound-rail" type="checkbox" checked>列车与到站提示</label><label class="check"><input id="sound-voice" type="checkbox" checked>MiniMax 到站与关门播报</label><p id="sound-status" aria-live="polite">默认静音。中文到站与关门播报由 MiniMax 生成；风、水、雨与轮轨声仍为本地合成音。</p></details>
 <fieldset id="environment-controls"><legend>环境</legend><div class="mode-buttons"><button data-mode="day" aria-pressed="true">白天</button><button data-mode="evening" aria-pressed="false">黄昏</button><button data-mode="rain" aria-pressed="false">雨景</button><button data-mode="night" aria-pressed="false">夜间</button></div></fieldset>
 <label class="slider-label">列车速度 <output id="speed-value">1×</output><input id="train-speed" type="range" min="0.4" max="2" step="0.1" value="1"></label>
 <label class="slider-label">雨量 <output id="rain-value">0%</output><input id="rain" type="range" min="0" max="100" value="0"></label>
-<fieldset id="camera-controls"><legend>观景位置</legend><select id="camera-view" aria-label="观景位置"><option value="overview">全景</option><option value="free">自由观察</option><option value="bridge">浅色拱桥</option><option value="station">白鹭河站</option><option value="waterfall">河口与跌水</option><option value="wind">河岸树木</option><option value="meadow">林间空地</option><option value="back">山后坡地</option><option value="train">跟随列车</option><option value="wildlife">水边野鸭</option><option value="birds">林缘白鹭</option><option value="fish">水下鱼群</option><option value="aquatic">岸边睡莲</option></select><button id="inspect-station" type="button" title="将列车移到停靠位置并暂停，点击继续场景后恢复运行">列车到站近看</button><label class="check"><input id="auto-camera" type="checkbox">自动观景镜头</label></fieldset>
+<fieldset id="camera-controls"><legend>观景位置</legend><select id="camera-view" aria-label="观景位置"><option value="overview">全景</option><option value="free">自由观察</option><option value="bridge">浅色拱桥</option><option value="station">白鹭河站</option><option value="people">站台人物</option><option value="boarding">门口上下客</option><option value="stationRoom">站房室内</option><option value="stationRear">站房背面</option><option value="driver">驾驶室近景</option><option value="waterfall">河口与跌水</option><option value="wind">河岸树木</option><option value="meadow">林间空地</option><option value="back">山后坡地</option><option value="train">跟随列车</option><option value="wildlife">水边野鸭</option><option value="birds">林缘白鹭</option><option value="fish">水下鱼群</option><option value="rabbits">冬季兔子</option><option value="butterflies">花间蝴蝶</option><option value="aquatic">岸边睡莲</option></select><button id="inspect-station" type="button" title="将列车移到停靠位置并暂停，点击继续场景后恢复运行">列车到站近看</button><label class="check"><input id="auto-camera" type="checkbox">自动观景镜头</label></fieldset>
 <div class="playback"><button id="pause" aria-pressed="false">暂停场景</button><label class="check"><input id="wireframe" type="checkbox">查看网格</label></div>
 <p class="control-note" id="control-note">参数作用于当前三维场景。</p>
 </details>

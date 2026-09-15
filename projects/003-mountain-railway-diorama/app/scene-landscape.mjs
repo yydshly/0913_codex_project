@@ -1,8 +1,12 @@
+import {createRabbits} from './scene-rabbits.mjs';
+import {createButterflies} from './scene-butterflies.mjs';
+import {createPeople} from './scene-people.mjs';
 import * as THREE from './vendor/three.module.js';
 import {V,mat,mesh,box,beam,random,labelTexture,smooth} from './scene-world.mjs';
 import {createVegetation} from './scene-vegetation.mjs';
 import {createRiverRocks} from './scene-rocks.mjs';
 import {createWater} from './scene-water.mjs';
+import {reserveAnimalShore,shoreHabitats} from './scene-animal-behavior.mjs';
 import {createWildlife} from './scene-wildlife.mjs';
 import {createAquatic} from './scene-aquatic.mjs';
 import {createFish} from './scene-fish.mjs';
@@ -22,6 +26,9 @@ export function createLandscape(scene,world,shared){
   `);
  };
  world.riverRocks=createRiverRocks(world);
+ world.animalObstacles=[...vegetation.regionDetails.rocks.map(r=>({x:r.x,z:r.z,radius:r.scale*1.5})),...vegetation.regionDetails.shrubs.map(r=>({x:r.x,z:r.z,radius:.7}))];
+ world.animalShoreSites=shoreHabitats(world);
+ world.riverRocks=reserveAnimalShore(world.riverRocks,world.animalShoreSites);
  const riverGeo=new THREE.SphereGeometry(1,12,8);
  const rocks=new THREE.InstancedMesh(riverGeo,rockMat,world.riverRocks.length);
  world.riverRocks.forEach((r,i)=>{
@@ -40,16 +47,16 @@ export function createLandscape(scene,world,shared){
   const trunk=mesh(new THREE.CylinderGeometry(log.radius*.65,log.radius,a.distanceTo(b),7),deadwood,group);
   trunk.position.copy(a).add(b).multiplyScalar(.5);trunk.quaternion.setFromUnitVectors(V(0,1,0),b.clone().sub(a).normalize());
  }
- const station=createStation(group,world),lights=station.lights;
+ const station=createStation(group,world),lights=station.lights,people=createPeople(station,shared);
  const waterSystem=createWater(group,world,shared);
  const stationTarget=station.target;
  const wildlife=createWildlife(group,world,shared);
- const fish=createFish(group,world,shared),aquatic=createAquatic(group,world,shared);
+ const fish=createFish(group,world,shared),aquatic=createAquatic(group,world,shared),butterflies=createButterflies(group,world,shared,vegetation.anchors),rabbits=createRabbits(group,{...world,animalObstacles:[...world.animalObstacles,...vegetation.regionDetails.logs.flatMap(log=>Array.from({length:7},(_,i)=>({x:log.ends[0][0]+(log.ends[1][0]-log.ends[0][0])*i/6,z:log.ends[0][2]+(log.ends[1][2]-log.ends[0][2])*i/6,radius:log.radius+.15})))]},shared,vegetation.anchors);
  // A waterside observation deck gives the station a different destination.
  const deck=V(world.riverX(15)-world.halfWidth(15)-1,world.waterLevel(15)+.65,15);
  for(let i=0;i<25;i++)box(group,wood,[3,.12,.19],[deck.x,deck.y,deck.z+i*.22-2.7]);
  for(const z of[-2.6,2.6])for(const x of[-1.3,1.3]){box(group,wood,[.14,2,.14],[deck.x+x,deck.y-.5,deck.z+z]);}
- return{group,wildlife,fish,aquatic,...vegetation,stationTarget,lights,reflect:waterSystem.reflect,dispose:waterSystem.dispose,update(time,night){station.update(night);waterSystem.update(time,night);wildlife.update(time,night);fish.update(time,night);aquatic.update(time,night);}};
+ return{group,wildlife,fish,aquatic,butterflies,rabbits,people,station,stationLayout:station.layout,...vegetation,stationTarget,lights,reflect:waterSystem.reflect,dispose:waterSystem.dispose,update(time,night){station.update(night);people.update(time,night);waterSystem.update(time,night);wildlife.update(time,night);fish.update(time,night);aquatic.update(time,night);butterflies.update(time,night);rabbits.update(time);}};
 }
 
 // Project each outcrop onto the terrain so its lower shell is buried.

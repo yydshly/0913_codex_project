@@ -1,3 +1,21 @@
+# V36 本地阶段归档
+
+2026-09-15 · `v36-2026-09-15`。这是当前工作树快照，包含未提交修改；不是 Git 标签或远端发布。原有 V23 在线归档仍保留在下方。
+
+- 本地冻结目录：`local-archives/v36-2026-09-15/`，独立入口 `scene.html`，原理研究 `index.html`，开发记录 `dev-log.html`。
+- 源码与资源：`source/`；逐文件 SHA-256：`manifest.json`。
+- 重新运行：进入冻结目录，执行 `python -m http.server 8040`，浏览器打开 `http://127.0.0.1:8040/scene.html`。
+- 不包含环境配置、密钥、浏览器未导出的私人方案或其他子项目；本地归档目录由 Git 忽略。
+- 106 项自动检查通过。画质仍为风格化原型，树叶重复感、地面近景、人物室内活动和环境音听感尚有后续空间。未进行手机与长时间压力验收。
+
+实际归档验证：599 个文件 SHA-256 全部匹配，ZIP 完整性检查通过（42,115,519 字节）。冻结页面在本地独立地址成功生成秋季场景，环境状态就绪，控制台未发现运行错误。
+
+[本机直接查看冻结版](http://127.0.0.1:8034/local-archives/v36-2026-09-15/scene.html) · [本机 ZIP 包](local-archives/v36-2026-09-15.zip) · [ZIP 校验值](local-archives/v36-2026-09-15.zip.sha256)。这些链接仅适用于本机，未部署到 GitHub。
+
+当前能力：地形、四季、天气、风与植被、三种水流、列车司机、站房真实开口与室内、上下客、鸟鱼鸭、睡莲蜻蜓、季节蝴蝶、环境音与两段 MiniMax 播报。
+
+---
+
 # V23 版本归档与技术原理
 
 [▶ 在线体验 V23 固定归档版](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/archives/v23/scene.html) · [当前持续更新场景](https://yydshly.github.io/0913_codex_project/003-mountain-railway-diorama/scene.html)

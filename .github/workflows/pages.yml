@@ -43,7 +43,7 @@ jobs:
           node --test projects/002-dunhuang-aura/app/studio-layout.test.mjs
           python3 -m unittest discover -s projects/002-dunhuang-aura/app/validator/tests -v
       - name: Verify railway scene rules
-        run: node --test projects/003-mountain-railway-diorama/app/model.test.mjs projects/003-mountain-railway-diorama/app/scene.test.mjs projects/003-mountain-railway-diorama/app/scene-plans.test.mjs
+        run: node --test projects/003-mountain-railway-diorama/app/*.test.mjs
       - name: Verify motorcycle driving rules
         run: node --test projects/010-mini-moto-comparison/app/model.test.mjs projects/010-mini-moto-comparison/app/ride.test.mjs
       - name: Verify character, story, physics and cached audio

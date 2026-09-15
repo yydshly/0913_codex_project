@@ -3,6 +3,7 @@ import * as THREE from './vendor/three.module.js';
 import {V,mat,random} from './scene-world.mjs';
 import {createRegionDetails} from './scene-regions.mjs';
 import {createMeadowClumps} from './scene-ground-cover.mjs';
+import {foliagePattern,foliageTile,bindFoliageAtlas} from './scene-foliage-pattern.mjs';
 import {buildTreeShape,treeIdentity} from './scene-tree-shape.mjs';
 import {forestWeight} from './scene-composition.mjs';
 import {bindSeasonPlant} from './scene-seasons.mjs';
@@ -28,8 +29,14 @@ export function bindWind(material,shared,flutter=0){
  };
 }
 function foliageTexture(){
- const c=document.createElement('canvas');c.width=c.height=128;const ctx=c.getContext('2d'),r=random(106);
- for(let i=0;i<210;i++){const a=r()*Math.PI*2,rad=Math.sqrt(r())*(44+8*Math.sin(a*5)),x=64+Math.cos(a)*rad,y=64+Math.sin(a)*rad;ctx.save();ctx.translate(x,y);ctx.rotate(r()*6.28);ctx.fillStyle=`rgb(${175+r()*65},${190+r()*60},${160+r()*75})`;ctx.beginPath();ctx.ellipse(0,0,3+r()*3,1.7+r()*1.6,0,0,Math.PI*2);ctx.fill();ctx.restore();}
+ const c=document.createElement('canvas');c.width=c.height=512;const ctx=c.getContext('2d');
+ for(let tile=0;tile<4;tile++){
+  ctx.save();ctx.translate((tile%2)*256,Math.floor(tile/2)*256);ctx.scale(2,2);const pattern=foliagePattern(tile);
+  ctx.strokeStyle='rgba(132,152,114,.7)';ctx.lineWidth=.5;
+  for(const t of pattern.twigs){ctx.beginPath();ctx.moveTo(t.start.x,t.start.y);ctx.lineTo(t.end.x,t.end.y);ctx.stroke();}
+  for(const leaf of pattern.leaves){ctx.save();ctx.translate(leaf.x,leaf.y);ctx.rotate(leaf.angle);const tone=leaf.tone;ctx.fillStyle=`rgb(${Math.round(231*tone)},${Math.round(244*tone)},${Math.round(220*tone)})`;ctx.beginPath();ctx.ellipse(0,0,leaf.rx,leaf.ry,0,0,Math.PI*2);ctx.fill();ctx.restore();}
+  ctx.restore();
+ }
  const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;return t;
 }
 export function createVegetation(group,world,shared){
@@ -96,9 +103,10 @@ export function createVegetation(group,world,shared){
  const dummy=new THREE.Object3D(),up=V(0,1,0);
  function instances(geometry,material,data,place,flutter=0){
   const anchors=[],flex=[],plantTone=[],tapers=[];for(const d of data){anchors.push(...d.tree.root.toArray(),d.tree.h);flex.push(d.tree.flex);plantTone.push(d.tree.species??1,d.tree.tone??.5,d.exposure??.65);tapers.push(d.tip?d.tip/d.r:.65)}
+  geometry.setAttribute('aFoliageTile',new THREE.InstancedBufferAttribute(Float32Array.from(data,(d,i)=>foliageTile(d.tree.species??1,i)),1));
   geometry.setAttribute('aAnchor',new THREE.InstancedBufferAttribute(new Float32Array(anchors),4));geometry.setAttribute('aFlex',new THREE.InstancedBufferAttribute(new Float32Array(flex),1));geometry.setAttribute('aPlantTone',new THREE.InstancedBufferAttribute(new Float32Array(plantTone),3));geometry.setAttribute('aTaper',new THREE.InstancedBufferAttribute(new Float32Array(tapers),1));
   const m=new THREE.InstancedMesh(geometry,material,data.length);data.forEach((d,i)=>{dummy.position.set(0,0,0);dummy.rotation.set(0,0,0);dummy.scale.set(1,1,1);place(d,i);dummy.updateMatrix();m.setMatrixAt(i,dummy.matrix);const c=new THREE.Color();c.setHSL(d.tree.willow?.24:.27,.25+rng()*.22,.55+rng()*.2);if(material===leafMat)m.setColorAt(i,new THREE.Color().setScalar(.82+rng()*.18))});
-  material.userData.treeWood=material===woodMat;bindWind(material,shared,flutter);const depth=new THREE.MeshDepthMaterial({depthPacking:THREE.RGBADepthPacking,map:material.map,alphaTest:material.alphaTest,side:THREE.DoubleSide});depth.userData.treeWood=material===woodMat;bindWind(depth,shared,flutter);const kind=material===leafMat?'leaf':material===gm?'grass':material===reedMat?'reed':'wood';bindSeasonPlant(material,shared,kind);bindSeasonPlant(depth,shared,kind,true);m.customDepthMaterial=depth;m.castShadow=true;m.receiveShadow=true;m.frustumCulled=false;group.add(m);return m;
+  material.userData.treeWood=material===woodMat;bindWind(material,shared,flutter);const depth=new THREE.MeshDepthMaterial({depthPacking:THREE.RGBADepthPacking,map:material.map,alphaTest:material.alphaTest,side:THREE.DoubleSide});depth.userData.treeWood=material===woodMat;bindWind(depth,shared,flutter);if(material===leafMat){bindFoliageAtlas(material);bindFoliageAtlas(depth)}const kind=material===leafMat?'leaf':material===gm?'grass':material===reedMat?'reed':'wood';bindSeasonPlant(material,shared,kind);bindSeasonPlant(depth,shared,kind,true);m.customDepthMaterial=depth;m.castShadow=true;m.receiveShadow=true;m.frustumCulled=false;group.add(m);return m;
  }
  instances(new THREE.CylinderGeometry(1,1,1,7),woodMat,woodData,d=>{dummy.position.copy(d.a).add(d.b).multiplyScalar(.5);dummy.quaternion.setFromUnitVectors(up,d.b.clone().sub(d.a).normalize());dummy.scale.set(d.r,d.a.distanceTo(d.b),d.r)});
  instances(createCrownGeometry(),leafMat,leafData,d=>{dummy.position.copy(d.p);dummy.rotation.set(...(d.rotation||[.1,d.a,0]));dummy.scale.set(...(d.size||[d.s*.8,d.s*.65,d.s*.8]))},.045);

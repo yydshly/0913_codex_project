@@ -17,6 +17,7 @@ export function aquaticSites(world){
    const a=rand()*Math.PI*2,z=cz+Math.sin(a)*(.25+j*.12),r=.24+rand()*.2;
    const x=world.riverX(z)+side*world.halfWidth(z)*(.66+rand()*.13)+Math.cos(a)*.5;
    if(z-r<world.waterStyle.end+3)continue;
+   if((world.animalShoreSites||[]).some(s=>s.path.some(p=>Math.hypot(x-p.x,z-p.z)<r+.85)))continue;
    if(sites.some(p=>Math.hypot(x-p.x,z-p.z)<r+p.r+.08))continue;
    if(ducks.some(p=>Math.hypot(x-p.x,z-p.z)<r+.95)||fish.some(p=>Math.hypot(x-p.x,z-p.z)<r+.65))continue;
    if((world.riverRocks||[]).some(p=>Math.hypot(x-p.x,z-p.z)<Math.max(p.rx,p.rz)+r+.25))continue;

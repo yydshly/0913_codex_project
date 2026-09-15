@@ -2,6 +2,7 @@ import test from 'node:test';import assert from 'node:assert/strict';
 import {validatePlan,parsePlan,readLibrary,savePlan,PLAN_KEY} from './scene-plans.mjs';
 import {compositions} from './scene-composition.mjs';import {waterTuningDefaults} from './scene-water-modes.mjs';
 const fixture=()=>({kind:'egret-scene',schemaVersion:1,name:'秋季方案',composition:'ridge',compositions:Object.fromEntries(Object.entries(compositions).map(([id,p])=>[id,{...p.terrain,composition:id}])),waterTuning:structuredClone(waterTuningDefaults),environment:{season:'autumn',mode:'night',recommendedLight:false,fixedSeasonView:false,wind:.4,direction:105,gust:.6,flow:.8,rain:.3,fog:1.2,detail:.6,litter:.4},observation:{stage:5,speed:1,paused:true,auto:false,wireframe:false,view:'free'},camera:{position:[64,51,86],target:[-1,4,-3]}});
+test('站台人物开关和近看机位可迁移，旧方案兼容',()=>{const p=fixture();p.environment.people=false;p.observation.view='people';assert.deepEqual(parsePlan(JSON.stringify(p)),p);p.observation.view='boarding';assert.deepEqual(parsePlan(JSON.stringify(p)),p);p.observation.view='driver';assert.deepEqual(parsePlan(JSON.stringify(p)),p);p.environment.people='true';assert.throws(()=>validatePlan(p));assert.equal(Object.hasOwn(validatePlan(fixture()).environment,'people'),false);});
 test('动物开关与观察机位可迁移，旧版方案兼容，非法动物开关被拒绝',()=>{
  const old=fixture();assert.deepEqual(validatePlan(old),old);
  const p=fixture();p.environment.wildlife=false;p.observation.view='birds';assert.deepEqual(parsePlan(JSON.stringify(p)),p);
@@ -18,3 +19,9 @@ test('存储异常不改变原方案列表；损坏方案库明确失败',()=>{c
 test('达到容量后不覆盖既有内容，名称与镜头范围受约束',()=>{let writes=0;assert.throws(()=>savePlan({setItem(){writes++}},Array.from({length:40},fixture),fixture()));assert.equal(writes,0);for(const change of[p=>p.name=' ',p=>p.camera.position=[999,999,999]]){const p=fixture();change(p);assert.throws(()=>validatePlan(p))}});
 
 test('水面生物开关与观察机位可存档，旧方案不强加字段',()=>{const p=fixture();p.environment.aquatic=false;p.observation.view='aquatic';const v=parsePlan(JSON.stringify(p));assert.equal(v.environment.aquatic,false);assert.equal(v.observation.view,'aquatic');p.environment.aquatic='false';assert.throws(()=>validatePlan(p));assert.equal(Object.hasOwn(validatePlan(fixture()).environment,'aquatic'),false);});
+
+test('站房观察机位可随方案保存',()=>{for(const view of ['stationRoom','stationRear']){const p=fixture();p.observation.view=view;assert.equal(parsePlan(JSON.stringify(p)).observation.view,view);}});
+
+test('蝴蝶开关和随机种子保存恢复，旧方案保持兼容',()=>{const p=fixture();p.environment.butterflies=false;p.environment.lifeSeed=3521;p.observation.view='butterflies';assert.deepEqual(parsePlan(JSON.stringify(p)),p);for(const bad of[-1,1.5,2147483648,'42']){p.environment.lifeSeed=bad;assert.throws(()=>validatePlan(p));}assert.equal(Object.hasOwn(validatePlan(fixture()).environment,'lifeSeed'),false);});
+
+test('兔子开关与冬季近看机位保存兼容旧方案',()=>{const p=fixture();p.environment.rabbits=false;p.observation.view='rabbits';assert.deepEqual(parsePlan(JSON.stringify(p)),p);p.environment.rabbits='yes';assert.throws(()=>validatePlan(p));assert.equal(Object.hasOwn(validatePlan(fixture()).environment,'rabbits'),false);});

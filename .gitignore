@@ -43,3 +43,5 @@ upstream/
 # Local scratch work
 .tmp/
 tmp/
+
+/projects/003-mountain-railway-diorama/local-archives/
